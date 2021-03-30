@@ -1,18 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>Bytebase</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-    <h1 class="text-3xl md:text-5xl text-gray-500 text-center font-semibold mx-auto">
-      Hello, Tailwind
-    </h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>Bytebase</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="relative bg-gray-50 overflow-hidden">
+    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+      <div class="relative h-full max-w-7xl mx-auto">
+        <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404"
+          height="784" fill="none" viewBox="0 0 404 784">
+          <defs>
+            <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20"
+              patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+        </svg>
+        <svg
+          class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
+          width="404" height="784" fill="none" viewBox="0 0 404 784">
+          <defs>
+            <pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20"
+              patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="relative pt-6 pb-16 sm:pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+          <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+            <div class="flex items-center justify-between w-full md:w-auto">
+              <a href="/">
+                <span class="sr-only">Bytebase</span>
+                <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+              </a>
+              <div class="-mr-2 flex items-center md:hidden">
+                <button type="button"
+                  class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <!-- Heroicon name: outline/menu -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:flex md:space-x-10">
+            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product</a>
+
+            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
+
+            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
+
+            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
+          </div>
+          <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+            <span class="inline-flex rounded-md shadow">
+              <a href="#"
+                class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
+                Log in
+              </a>
+            </span>
+          </div>
+        </nav>
+      </div>
+
+      <!--
+        Mobile menu, show/hide based on menu open state.
+  
+        Entering: "duration-150 ease-out"
+          From: "opacity-0 scale-95"
+          To: "opacity-100 scale-100"
+        Leaving: "duration-100 ease-in"
+          From: "opacity-100 scale-100"
+          To: "opacity-0 scale-95"
+      -->
+      <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+            </div>
+            <div class="-mr-2">
+              <button type="button"
+                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3">
+            <a href="#"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+
+            <a href="#"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+
+            <a href="#"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+            <a href="#"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+          </div>
+          <a href="#"
+            class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+            Log in
+          </a>
+        </div>
+      </div>
+
+      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+        <div class="text-center">
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">Data to enrich your</span>
+            <span class="block text-indigo-600 xl:inline">online business</span>
+          </h1>
+          <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+            fugiat veniam occaecat fugiat aliqua.
+          </p>
+          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            <div class="rounded-md shadow">
+              <a href="https://demo.bytebase.com"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="mt-12 relative">
+        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          <div class="flex-1"></div>
+          <div class="flex-1 w-full bg-gray-800"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <img class="relative rounded-lg shadow-lg" src="assets/home.png" alt="App screenshot">
+        </div>
+      </div>
+      <div class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-8 px-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Author -->
+  <section class="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <svg
+        class="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+        width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+        <title id="svg-workcation">Workcation</title>
+        <defs>
+          <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+      </svg>
+
+      <div class="relative">
+        <img class="mx-auto h-8"
+          src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg"
+          alt="Workcation">
+        <blockquote class="mt-10">
+          <div class="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+            <p>
+              &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente
+              alias
+              molestiae. Numquam corrupti in laborum sed rerum et corporis.&rdquo;
+            </p>
+          </div>
+          <footer class="mt-8">
+            <div class="md:flex md:items-center md:justify-center">
+              <div class="md:flex-shrink-0">
+                <img class="mx-auto h-10 w-10 rounded-full" src="assets/tianzhou.png" alt="">
+              </div>
+              <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                <div class="text-base font-medium text-gray-900">Tianzhou Chen</div>
+
+                <svg class="hidden md:block mx-1 h-5 w-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 0h3L9 20H6l5-20z" />
+                </svg>
+
+                <div class="text-base font-medium text-gray-500">Creator of Bytebase</div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Feature -->
+  <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404"
+        height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+        <defs>
+          <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)" />
+      </svg>
+
+      <div class="relative">
+        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          A better way to send money
+        </h2>
+        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in,
+          accusamus quisquam.
+        </p>
+      </div>
+
+      <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+        <div class="relative">
+          <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+            Transfer funds world-wide
+          </h3>
+          <p class="mt-3 text-lg text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores
+            officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
+            Totam, velit.
+          </p>
+
+          <dl class="mt-10 space-y-10">
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/globe-alt -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                iste
+                dolor cupiditate blanditiis ratione.
+              </dd>
+            </div>
+
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/scale -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                iste
+                dolor cupiditate blanditiis ratione.
+              </dd>
+            </div>
+
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/lightning-bolt -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Transfers are instant</p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                iste
+                dolor cupiditate blanditiis ratione.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+          <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404"
+            fill="none" viewBox="0 0 784 404">
+            <defs>
+              <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+          </svg>
+          <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png"
+            alt="">
+        </div>
+      </div>
+
+      <svg class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784"
+        fill="none" viewBox="0 0 404 784" aria-hidden="true">
+        <defs>
+          <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
+      </svg>
+
+      <div class="relative mt-12 sm:mt-16 lg:mt-24">
+        <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div class="lg:col-start-2">
+            <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+              Always in the loop
+            </h3>
+            <p class="mt-3 text-lg text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum
+              deleniti sunt in labore nihil quod quibusdam expedita nemo.
+            </p>
+
+            <dl class="mt-10 space-y-10">
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <!-- Heroicon name: outline/annotation -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mobile notifications</p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                  iste dolor cupiditate blanditiis ratione.
+                </dd>
+              </div>
+
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <!-- Heroicon name: outline/mail -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Reminder emails</p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                  iste dolor cupiditate blanditiis ratione.
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+            <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404"
+              fill="none" viewBox="0 0 784 404" aria-hidden="true">
+              <defs>
+                <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
+            </svg>
+            <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-2.png"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    This example requires Tailwind CSS v2.0+ 
+    
+    This example requires some changes to your config:
+    
+    ```
+    // tailwind.config.js
+    module.exports = {
+      // ...
+      plugins: [
+        // ...
+        require('@tailwindcss/forms'),
+      ]
+    }
+    ```
+  -->
+  <div class="bg-white">
+    <div class="relative ">
+      <div aria-hidden="true" class="hidden sm:block">
+        <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"></div>
+        <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
+          <defs>
+            <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20"
+              patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)" />
+        </svg>
+      </div>
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="relative rounded-2xl px-6 py-10 bg-indigo-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+          <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
+            <svg class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360">
+              <path class="text-indigo-500 text-opacity-40" fill="currentColor"
+                d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z" />
+              <path class="text-indigo-700 text-opacity-40" fill="currentColor"
+                d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z" />
+            </svg>
+          </div>
+          <div class="relative">
+            <div class="sm:text-center">
+              <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                Get notified when we&rsquo;re launching.
+              </h2>
+              <p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
+                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
+                pellentesque.
+              </p>
+            </div>
+            <!-- Begin Mailchimp Signup Form -->
+
+            <form
+              action="https://bytebase.us4.list-manage.com/subscribe/post?u=cfd2071d432e502e70deac36a&amp;id=80d6976805"
+              method="post" class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+              <div class="min-w-0 flex-1">
+                <label for="cta_email" class="sr-only">Email address</label>
+                <input id="cta_email" type="email" name="EMAIL"
+                  class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+                  placeholder="Enter your email">
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-3">
+                <button type="submit"
+                  class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10">Notify
+                  me</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer class="bg-white">
+  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+    <div class="flex justify-center space-x-6 md:order-2">
+      <a href="https://twitter.com/BytebaseHQ" class="text-gray-400 hover:text-gray-500">
+        <span class="sr-only">Twitter</span>
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+        </svg>
+      </a>
+
+      <a href="https://github.com/bytebase/bytebase" class="text-gray-400 hover:text-gray-500">
+        <span class="sr-only">GitHub</span>
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+            clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+    <div class="mt-8 md:mt-0 md:order-1">
+      <img class="h-8 w-auto" src="assets/logo.svg" />
+    </div>
+  </div>
+</footer>
+
 </html>
