@@ -46,38 +46,43 @@
             <div class="flex items-center justify-between w-full md:w-auto">
               <a href="/">
                 <span class="sr-only">Bytebase</span>
-                <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+                <img class="h-8 w-auto" src="/assets/logo.svg" alt="">
               </a>
             </div>
           </div>
           <div class="absolute flex items-center justify-end inset-y-0 right-0">
-            <a href="https://github.com/bytebase" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">GitHub</span>
-              <svg class="h-16 w-16 text-gray-800" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd" />
-              </svg>
+            <a href="pages/howwebuild.html" class="text-gray-700 text-xl font-semibold hover:text-gray-500">
+              How we build
             </a>
           </div>
         </nav>
       </div>
 
       <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-        <div class="text-center">
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">Data to enrich your</span>
-            <span class="block text-indigo-600 xl:inline">online business</span>
+        <div class="text-left">
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-8xl whitespace-nowrap">
+            <span class="block inline">Database Ops platform for</span>
           </h1>
-          <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+          <h1
+            class="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-8xl whitespace-nowrap">
+            <span class="block text-indigo-600 inline">DBA</span> &
+            <span class="block text-indigo-600 inline">Developer</span>
+          </h1>
+          <p class="mt-3 max-w-md text-left text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl md:max-w-4xl">
+            Bytebase offers a web-based collaboration workspace to help DBAs and application developers manage the
+            lifecycle of
+            database schemas.
           </p>
-          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+          <div class="mt-5 max-w-md sm:flex sm:justify-left md:mt-8">
             <div class="rounded-md shadow">
               <a href="https://demo.bytebase.com" target="_blank"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8">
                 Live Demo
+                <svg class="ml-2 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
               </a>
             </div>
           </div>
@@ -85,16 +90,10 @@
       </main>
 
       <div class="mt-12 relative">
-        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
-          <div class="flex-1"></div>
-          <div class="flex-1 w-full bg-gray-800"></div>
-        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <img class="relative rounded-lg shadow-lg" src="assets/home.png" alt="App screenshot">
-        </div>
-      </div>
-      <div class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-8 px-4">
+          <img class="absolute shadow-lg ml-64 z-10" style="margin-top: 32rem;" src="/assets/screenshot_task.png"
+            alt=" App screenshot">
+          <img class="relative shadow-lg -ml-16" src="/assets/screenshot_home.png" alt="App screenshot">
         </div>
       </div>
     </div>
@@ -117,21 +116,55 @@
       </svg>
 
       <div class="relative">
-        <img class="mx-auto h-8"
-          src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg"
-          alt="Workcation">
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8">
+          A Porsche without proper wheel and brake</h2>
         <blockquote class="mt-10">
-          <div class="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+          <div class="max-w-3xl mx-auto text-left text-2xl leading-9 font-medium text-gray-900">
             <p>
-              &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente
-              alias
-              molestiae. Numquam corrupti in laborum sed rerum et corporis.&rdquo;
+              &ldquo;I've spent most of my career working on database. From the <a
+                href="https://en.wikipedia.org/wiki/FileMaker" target="_blank" class="text-blue-600"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">
+                cross-platform GUI integrated precursor</a> (now we call this low-code) to the <a
+                href="https://cloud.google.com/sql" target="_blank" class="text-blue-600"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">leading
+                public cloud provider</a> and then the <a href="http://www.tpc.org/tpcc/results/tpcc_perf_results5.asp"
+                class="text-blue-600" target="_blank"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">top
+                TPC-C performer</a>.
+
+            </p>
+            <p class="mt-6">
+              While we have a plethora of commerial and open-source database engines serving billions
+              of users, our tooling around making <span class="underline inline font-semibold">reliable</span>,
+              <span class="underline inline font-semibold">consistent</span>, <span
+                class="underline inline font-semibold"></span><span
+                class="underline inline font-semibold">traceable</span>
+              application database schema changes
+              are
+              embrassing. And today many teams are still connecting to the production DB and applying changes directly.
+              Quick and dirty, until BOMB!
+            </p>
+            <p class="mt-6">
+              What's the <a href="https://about.gitlab.com" target="_blank" class="text-blue-600 font-semibold"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">GitLab</a>
+              for database instead of for code? What's the <a href="https://figma.com" target="_blank"
+                class="text-blue-600 font-semibold"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Figma</a>
+              for DBAs instead of for designers? There was no really good answer.
+            </p>
+            <p class="mt-6">
+              It's like a Porsche with a good engine, but only paired with the handy wheel and brake, can it deliver the
+              safe and pleasant driving experience. And that's what <span class="text-indigo-600 font-semibold"
+                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Bytebase</span>
+              tries to achieve, to pair the database engine with the proper wheel and brake to improve the development
+              velocity and experience.
+              &rdquo;
             </p>
           </div>
           <footer class="mt-8">
             <div class="md:flex md:items-center md:justify-center">
               <div class="md:flex-shrink-0">
-                <img class="mx-auto h-10 w-10 rounded-full" src="assets/tianzhou.png" alt="">
+                <img class="mx-auto h-10 w-10 rounded-full" src="/assets/tianzhou.png" alt="">
               </div>
               <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
                 <div class="text-base font-medium text-gray-900">Tianzhou Chen</div>
@@ -152,7 +185,7 @@
 
 
   <!-- Feature -->
-  <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+  <div class="py-16 bg-gray-50 overflow-hidden ">
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404"
         height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
@@ -166,81 +199,93 @@
       </svg>
 
       <div class="relative">
-        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          A better way to send money
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8">
+          A complete rethink to deliver experience
         </h2>
-        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in,
-          accusamus quisquam.
+        <p class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
+          From the data modeling, to the tech stack, system architecture and then the final user interface. Bytebase is
+          engineered from the ground up to deliver a transforming user experience to the DBAs and Developers.
         </p>
       </div>
 
       <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
         <div class="relative">
           <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-            Transfer funds world-wide
+            Modern collaborative dev tool
           </h3>
           <p class="mt-3 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores
-            officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
-            Totam, velit.
+            The productivity and dev tools landscape is experiencing a paradigm shift. Bytebases aspires to tools like
+            <a href="https://figma.com" target="_blank" class="text-blue-600"
+              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Figma</a>,
+            <a href="https://linear.app" target="_blank" class="text-blue-600"
+              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Linear</a>,
+            <a href="https://notion.so" target="_blank" class="text-blue-600"
+              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Notion</a>.
+            <a href="https://about.gitlab.com" target="_blank" class="text-blue-600"
+              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">GitLab</a>.
+            Beyond providing the domain specific feature set, it focuses on clarity, speed, collaboration,
+            inter-connectivity and external extensibility.
           </p>
 
           <dl class="mt-10 space-y-10">
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/globe-alt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                    </path>
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Environment, Instance, Database, Data
+                  source and Task</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste
-                dolor cupiditate blanditiis ratione.
+                The first big four (Big 4) are the essential concepts to model the database management domain, while
+                task
+                is the container to bring collaboration, history, integration together.
               </dd>
             </div>
 
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/scale -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Usability</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste
-                dolor cupiditate blanditiis ratione.
+                As a professional tool for managing application's most critical asset - transactional database schema,
+                Bytebase thinks deeply to surface the relevant info, design the proper ergonomics.
+                Conducting schema changes is always scary, we want to eliminate the risk of misfire caused by the <a
+                  href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
+                  target="_blank" class="text-blue-600 font-semibold"
+                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">confusing
+                  interface</a>.
               </dd>
             </div>
 
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/lightning-bolt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                    </path>
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Transfers are instant</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Extensibility</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste
-                dolor cupiditate blanditiis ratione.
+                Being one of the infrastructure toolkit, Bytebase will provide hooks to integrate with existing IM,
+                CI/CD, issue tracking, monitoring, login systems.
               </dd>
             </div>
           </dl>
@@ -257,8 +302,7 @@
             </defs>
             <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
           </svg>
-          <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png"
-            alt="">
+          <img class="relative mx-auto" width="480" src="/assets/othertools.svg" alt="">
         </div>
       </div>
 
@@ -277,47 +321,85 @@
         <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div class="lg:col-start-2">
             <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              Always in the loop
+              Curated tech stack
             </h3>
             <p class="mt-3 text-lg text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum
-              deleniti sunt in labore nihil quod quibusdam expedita nemo.
+              Vue + TypeScript + Tailwind CSS + Golang + SQLite. As a professional tool, Bytebase tries to be pragmatic.
+              And because Bytebase plans to be open sourced, it favors technologies with simplicity and being
+              opinionated to deliver an accessible and cohesive experience to easily learn, use and build the product.
+              We don't want people to waste time figuring out how to deploy or arguing the better coding styles.
             </p>
 
             <dl class="mt-10 space-y-10">
               <div class="relative">
                 <dt>
                   <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <!-- Heroicon name: outline/annotation -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" aria-hidden="true">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                      </path>
                     </svg>
                   </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mobile notifications</p>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Vue + Tailwind CSS</p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                  iste dolor cupiditate blanditiis ratione.
+                  <a href="https://v3.vuejs.org/" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Vue</a>
+                  is a progressive framework and <a href="https://tailwindcss.com" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Tailwind
+                    CSS</a> is a utility-first CSS framework. Together with the
+                  build tool <a href="https://vitejs.dev/" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Vite</a>
+                  and <a href="https://typescriptlang.org/" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">TypeScript</a>,
+                  they offer a significantly improved frontend development experience.
                 </dd>
               </div>
 
               <div class="relative">
                 <dt>
                   <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <!-- Heroicon name: outline/mail -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" aria-hidden="true">
+
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                     </svg>
                   </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Reminder emails</p>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Golang</p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                  iste dolor cupiditate blanditiis ratione.
+                  <a href="https://golang.org/" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">Golang's</a>
+                  static linking + web embedding allows Bytebase to deliver a binary with single-line command to
+                  launch both the frontend and backend without requiring extra dependency (no docker, docker-compose,
+                  kubernetes). And we never need to debate the coding style.
+                </dd>
+              </div>
+
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                      </path>
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">SQLite</p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                  <a href="https://sqlite.com/" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">SQLite</a>
+                  is a small, fast, reliable, ACID compliant library. SQLite's performance is suffice for control
+                  plane application like Bytebase which doesn't need a fully-fleged RDBMS to scale. SQLite allows
+                  Bytebase to be fully self-contained, it also brings the benefit of reduced binary size, much smaller
+                  footprint, easy end-to-end testing. We can also use <a
+                    href="https://github.com/benbjohnson/litestream" target="_blank" class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;">lightstream</a>
+                  for disaster recovery.
                 </dd>
               </div>
             </dl>
@@ -334,8 +416,7 @@
               </defs>
               <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
             </svg>
-            <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-2.png"
-              alt="">
+            <img class="relative mx-auto" width="490" src="/assets/techstack.svg" alt="">
           </div>
         </div>
       </div>
@@ -383,14 +464,20 @@
                 d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z" />
             </svg>
           </div>
+          <svg class="absolute mt-28 h-48 w-48 text-gray-100" fill="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd" />
+          </svg>
           <div class="relative">
             <div class="sm:text-center">
               <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                Get notified when we&rsquo;re launching.
+                It will be open sourced. Get notified when we&rsquo;re releasing.
               </h2>
               <p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                pellentesque.
+                We plan to release the first open source version late June, with a single-line command to deploy without
+                requiring any extra dependency.
               </p>
             </div>
             <!-- Begin Mailchimp Signup Form -->
@@ -421,6 +508,9 @@
 <footer class="bg-white">
   <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
     <div class="flex justify-center space-x-6 md:order-2">
+      <a href="mailto:support@bytebase.com" target="_blank" class="text-gray-400 hover:text-gray-500">
+        Email
+      </a>
       <a href="https://twitter.com/BytebaseHQ" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">Twitter</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -439,7 +529,7 @@
       </a>
     </div>
     <div class="mt-8 md:mt-0 md:order-1">
-      <img class="h-6 w-auto" src="assets/logo.svg" />
+      <img class="h-6 w-auto" src="/assets/logo.svg" />
     </div>
   </div>
 </footer>
