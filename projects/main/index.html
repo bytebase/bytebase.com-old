@@ -8,8 +8,15 @@
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   <link rel="stylesheet" href="/style.css" />
   <script async defer data-domain="bytebase.com" src="https://stats.bytebase.com/js/index.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <title>Bytebase</title>
 </head>
+
+<script>
+  function postTrackingEvent(name) {
+    plausible(name)
+  }
+</script>
 
 <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
   <!-- This example requires Tailwind CSS v2.0+ -->
@@ -76,7 +83,7 @@
           </p>
           <div class="mt-5 max-w-md sm:flex sm:justify-left md:mt-8">
             <div class="rounded-md shadow">
-              <a href="https://demo.bytebase.com" target="_blank"
+              <a href="https://demo.bytebase.com" target="_blank" onClick="postTrackingEvent('demo1')"
                 class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8">
                 Live Demo
                 <svg class="ml-2 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -426,7 +433,7 @@
   </div>
 
   <div class="flex py-8 rounded-md justify-center shadow">
-    <a href="https://demo.bytebase.com" target="_blank"
+    <a href="https://demo.bytebase.com" target="_blank" onClick="postTrackingEvent('demo2')"
       class="w-46 flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8">
       Live Demo
       <svg class="ml-2 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
