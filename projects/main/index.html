@@ -58,9 +58,27 @@
               </a>
             </div>
           </div>
-          <div class="absolute flex items-center justify-end inset-y-0 right-0">
-            <a href="pages/howwebuild.html" class="text-gray-700 text-lg md:text-xl font-semibold hover:text-gray-500">
+          <div class="flex items-center justify-between space-x-4 divide-x-4">
+            <a href="https://demo.bytebase.com" target="_blank"
+              class="text-gray-700 text-lg md:text-xl font-semibold hover:text-gray-500">
+              Live demo
+            </a>
+            <a href="https://docs.bytebase.com" target="_blank"
+              class="pl-4 text-gray-700 text-lg md:text-xl font-semibold hover:text-gray-500">
+              Docs
+            </a>
+            <a href="pages/howwebuild.html"
+              class="pl-4 text-gray-700 text-lg md:text-xl font-semibold hover:text-gray-500">
               How we build
+            </a>
+          </div>
+          <div class="absolute flex items-center justify-end inset-y-0 right-0 mt-6">
+            <a href="https://github.com/bytebase/bytebase" class="hover:opacity-80">
+              <svg class=" h-12 w-12 md:h-24 md:w-24" fill="#4f46e5" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd" />
+              </svg>
             </a>
           </div>
         </nav>
@@ -68,24 +86,34 @@
 
       <main class="mt-16 mx-auto max-w-7xl px-4">
         <div class="text-left">
-          <h1 class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-8xl whitespace-nowrap">
-            <span class="inline">GitLab for <span class="text-indigo-600 inline">Database</span></span>
+          <h1 class="tracking-tight font-bold text-gray-600 text-2xl md:text-4xl lg:text-4xl whitespace-nowrap">
+            <span class="inline">Zero-config, dependency-free, web-based</span>
+          </h1>
+          <h1
+            class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-6xl whitespace-nowrap">
+            <span class="inline">Database schema change</span>
+          </h1>
+          <h1 class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-6xl whitespace-nowrap">
+            <span class="inline">and version control</span>
           </h1>
           <p
             class="tracking-tight mt-3 max-w-md text-left text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl md:max-w-5xl">
             Bytebase offers a web-based collaboration workspace to help <span class="text-indigo-600 inline">DBAs</span>
             and <span class="text-indigo-600 inline">Developers</span> manage the
-            lifecycle of application schemas.
+            lifecycle of application database schemas.
           </p>
           <div class="mt-5 max-w-md sm:flex sm:justify-left md:mt-8">
             <div class="rounded-md shadow">
-              <a href="https://demo.bytebase.com" target="_blank" onClick="postTrackingEvent('demo1')"
+              <a href="https://github.com/bytebase/bytebase#installation" target="_blank"
+                onClick="postTrackingEvent('deploy1')"
                 class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8">
-                Live Demo
+                Deploy in 15 seconds
                 <svg class="ml-2 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0">
+                  </path>
                 </svg>
               </a>
             </div>
@@ -430,18 +458,20 @@
   </div>
 
   <div class="flex py-8 rounded-md justify-center shadow">
-    <a href="https://demo.bytebase.com" target="_blank" onClick="postTrackingEvent('demo2')"
+    <a href="https://github.com/bytebase/bytebase#installation" target="_blank" onClick="postTrackingEvent('deploy2')"
       class="w-46 flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8">
-      Live Demo
+      Deploy in 15 seconds
       <svg class="ml-2 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0">
+        </path>
       </svg>
     </a>
   </div>
 
-  <div class="bg-white">
+  <!-- <div class="bg-white">
     <div class="relative ">
       <div aria-hidden="true" class="hidden sm:block">
         <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"></div>
@@ -475,14 +505,9 @@
           <div class="relative">
             <div class="sm:text-center">
               <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                It will be open sourced. Get notified when we&rsquo;re releasing.
+                Subscribe to hear more from us
               </h2>
-              <p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
-                We plan to release the first open source version late June, with a single-line command to deploy without
-                requiring any extra dependency.
-              </p>
             </div>
-            <!-- Begin Mailchimp Signup Form -->
 
             <form
               action="https://bytebase.us4.list-manage.com/subscribe/post?u=cfd2071d432e502e70deac36a&amp;id=80d6976805"
@@ -495,8 +520,8 @@
               </div>
               <div class="mt-4 sm:mt-0 sm:ml-3">
                 <button type="submit" onClick="postTrackingEvent('newsletter')"
-                  class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10">Notify
-                  me</button>
+                  class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10">Subscribe
+                </button>
               </div>
             </form>
 
@@ -504,7 +529,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </body>
 
 <footer class="bg-white">
@@ -524,7 +549,7 @@
         </svg>
       </a>
 
-      <a href="https://github.com/bytebase" class="text-gray-400 hover:text-gray-500">
+      <a href="https://github.com//bytebase/bytebase" class="text-gray-400 hover:text-gray-500">
         <span class="sr-only">GitHub</span>
         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path fill-rule="evenodd"
