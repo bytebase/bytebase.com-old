@@ -5,7 +5,7 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        pages: resolve(__dirname, "pages/howwebuild.html"),
+        pages: resolve(__dirname, "pages/about.html"),
       },
     },
   },
