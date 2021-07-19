@@ -4,7 +4,9 @@
       <h1
         class="tracking-tight font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl"
       >
-        <span class="inline">Zero-config, dependency-free, web-based</span>
+        <span class="inline"
+          >Open-source, zero-config, dependency-free, web-based</span
+        >
       </h1>
       <h1
         class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
