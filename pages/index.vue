@@ -2,17 +2,17 @@
   <div>
     <div class="items-center text-center">
       <h1
-        class="tracking-tight font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl whitespace-nowrap"
+        class="tracking-tight font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl"
       >
         <span class="inline">Zero-config, dependency-free, web-based</span>
       </h1>
       <h1
-        class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl whitespace-nowrap"
+        class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
       >
         <span class="inline">Database schema change</span>
       </h1>
       <h1
-        class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl whitespace-nowrap"
+        class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
       >
         <span class="inline">and version control</span>
       </h1>
@@ -997,6 +997,6 @@ export default defineComponent({
     };
 
     return { track };
-  }
+  },
 });
 </script>
