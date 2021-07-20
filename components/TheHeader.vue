@@ -83,6 +83,6 @@ export default defineComponent({
     };
 
     return { track };
-  }
+  },
 });
 </script>

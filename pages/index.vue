@@ -45,7 +45,8 @@
           >
             Deploy now in 5 seconds
             <svg
-              class="ml-2 w-8 h-8"
+              class="ml-2 w-8 h-8 animate-bounce"
+              style="animation: bounce 1s infinite;"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -897,7 +898,7 @@
       >
         Deploy now in 5 seconds
         <svg
-          class="ml-2 w-8 h-8"
+          class="ml-2 w-8 h-8 animate-bounce"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
