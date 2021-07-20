@@ -5,7 +5,7 @@
         class="tracking-tight font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl"
       >
         <span class="inline"
-          >Open-source, zero-config, dependency-free, web-based</span
+          >Open source, zero-config, dependency-free, web-based</span
         >
       </h1>
       <h1
