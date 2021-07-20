@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-gray-50 overflow-hidden">
+  <div class="relative overflow-hidden">
     <TheHeader />
     <main class="mt-16 mx-auto px-4">
       <Nuxt />
@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: "DefaultLayout"
+  name: "DefaultLayout",
 };
 </script>
