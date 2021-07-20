@@ -9,7 +9,7 @@
                             we build</span>
                     </h1>
                     <blockquote class="mt-10">
-                        <div class="max-w-5xl mx-auto text-left text-2xl leading-9 font-medium text-gray-900">
+                        <div class="max-w-5xl mx-auto text-left text-2xl leading-9 text-gray-900">
                             <p class="mt-6">
                                 While we have a plethora of commerial and open-source database engines serving
                                 billions
@@ -62,57 +62,11 @@
             </div>
         </section>
 
-        <div class="relative overflow-hidden mt-10">
-            <div class="relative px-4 sm:px-6 lg:px-8">
-                <div class="text-lg max-w-5xl mx-auto">
-                    <h1>
-                        <span
-                            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase">How
-                            we build</span>
-                    </h1>
-                    <span
-                        class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Deliver
-                        experience</span>
-                    <p class="mt-4 text-xl text-gray-500 leading-8">"Don't deliver a product, deliver an
-                        experience." - Anonymous</p>
-                    <p class="mt-4 text-xl text-gray-800 leading-8">Like visiting Disneyland or a local Apple store,
-                        we want our product to deliver a pleasant experience. Dealing with database is already
-                        a stressful task, we try to make our tool to feel handy and never get in the way of people
-                        doing their job.
-                    </p>
-                    <span
-                        class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Be
-                        pragmatic</span>
-
-                    <p class="mt-4 text-xl text-gray-500 leading-8">"Real artists ship." - Steve Jobs</p>
-                    <p class="mt-4 text-xl text-gray-800 leading-8">
-                        In order to deliver the ultimate database ops platform, we have to ship relentlessly. That
-                        doesn't mean we will cut corners to downgrade the experience, but as a professional tool, we
-                        believe experience depends
-                        more on usability than esthetic. We will spend more time to improve speed than perfecting
-                        the pixel, we will follow conventional patterns instead of inventing our own.</p>
-                    <span
-                        class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Stay
-                        curious</span>
-                    <p class="mt-4 text-xl text-gray-500 leading-8">"Living things tend to change unrecognizably as
-                        they grow. Who would deduce the dragonfly from the larva, the iris from
-                        the bud, the lawyer from the infant? Flora or fauna, we are all shapeshifters and magical
-                        reinventors. Life is really a plural noun, a caravan of selves." - Diane Ackerman</p>
-                    <p class="mt-4 text-xl text-gray-800 leading-8">
-                        The database industry is still dominated by the relational model introduced in 1970. On the
-                        other hand, the productivity and dev tools landscape is experiencing a paradigm shift, tools
-                        are aggressively embracing web-based technology, which unleashes many new possibilties. We
-                        are always on the lookout for novel interaction patterns from our productivity and dev tools
-                        peers and see if any can be applied to the database tooling.</p>
-                </div>
-            </div>
-        </div>
-
         <div class="bg-white">
             <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                 <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                     <div class="space-y-5 sm:space-y-4">
-                        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Team</h2>
+                        <h2 id="team" class="text-3xl font-extrabold tracking-tight sm:text-4xl">Team</h2>
                     </div>
                     <div class="lg:col-span-2">
                         <ul

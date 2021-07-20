@@ -1,0 +1,256 @@
+<template>
+  <div class="overflow-hidden">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <section class="bg-white overflow-hidden">
+      <div
+        class="relative max-w-5xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20"
+      >
+        <div class="relative lg:flex lg:items-center">
+          <div class="relative lg:ml-10">
+            <svg
+              class="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-indigo-200 opacity-50"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 144 144"
+              aria-hidden="true"
+            >
+              <path
+                stroke-width="2"
+                d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z"
+              />
+            </svg>
+            <blockquote class="relative">
+              <div class="text-3xl leading-9 font-medium text-gray-900">
+                <p>
+                  We value crafts and we care what you have built in the past
+                  instead of where you have worked and studied.
+                </p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="relative px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-5xl mx-auto">
+        <h1>
+          <span
+            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
+            >How we build</span
+          >
+        </h1>
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Deliver experience</span
+        >
+        <p class="mt-4 text-xl text-gray-500 leading-8">
+          "Don't deliver a product, deliver an experience." - Anonymous
+        </p>
+        <p class="mt-4 text-xl text-gray-800 leading-8">
+          Like visiting Disneyland or a local Apple store, we want our product
+          to deliver a pleasant experience. Dealing with database is already a
+          stressful task, we try to make our tool to feel handy and never get in
+          the way of people doing their job.
+        </p>
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Be pragmatic</span
+        >
+
+        <p class="mt-4 text-xl text-gray-500 leading-8">
+          "Real artists ship." - Steve Jobs
+        </p>
+        <p class="mt-4 text-xl text-gray-800 leading-8">
+          In order to deliver the ultimate database ops platform, we have to
+          ship relentlessly. That doesn't mean we will cut corners to downgrade
+          the experience, but as a professional tool, we believe experience
+          depends more on usability than esthetic. We will spend more time to
+          improve speed than perfecting the pixel, we will follow conventional
+          patterns instead of inventing our own.
+        </p>
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Stay curious</span
+        >
+        <p class="mt-4 text-xl text-gray-500 leading-8">
+          "Living things tend to change unrecognizably as they grow. Who would
+          deduce the dragonfly from the larva, the iris from the bud, the lawyer
+          from the infant? Flora or fauna, we are all shapeshifters and magical
+          reinventors. Life is really a plural noun, a caravan of selves." -
+          Diane Ackerman
+        </p>
+        <p class="mt-4 text-xl text-gray-800 leading-8">
+          The database industry is still dominated by the relational model
+          introduced in 1970. On the other hand, the productivity and dev tools
+          landscape is experiencing a paradigm shift, tools are aggressively
+          embracing web-based technology, which unleashes many new possibilties.
+          We are always on the lookout for novel interaction patterns from our
+          productivity and dev tools peers and see if any can be applied to the
+          database tooling.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 relative px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-5xl mx-auto">
+        <h1>
+          <span
+            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
+            >What we offer</span
+          >
+        </h1>
+        <span
+          class="mt-8 block text-3xl text-center leading-8 tracking-tight text-gray-900"
+          >Top salary and equity on the market</span
+        >
+        <span
+          class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
+          >Work remotely</span
+        >
+        <span
+          class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
+          >Allowance to set up your home office</span
+        >
+        <span
+          class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
+          >3 weeks paid vacation</span
+        >
+        <span
+          class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
+          >An elite team</span
+        >
+      </div>
+    </div>
+
+    <div class="mt-16  relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-prose mx-auto">
+        <h1>
+          <span
+            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
+            >Jobs</span
+          >
+          <span
+            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >Lead Frontend Engineer (China)</span
+          >
+        </h1>
+        <p class="mt-8 text-xl text-gray-500 leading-8">
+          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
+          backend uses Golang + SQLite. You will lead the frontend development
+          to craft the industry best UX for the database tooling sector.
+        </p>
+        <ul class="mt-6 space-y-4">
+          <li class="flex items-center space-x-3">
+            <!-- Heroicon name: solid/check -->
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="text-xl text-gray-800"
+              >Solid computer science background and frontend development
+              experience</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Heroicon name: solid/check -->
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="text-xl text-gray-800"
+              >Read and written English skills (verbal skill is desired but not
+              required)</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Heroicon name: solid/check -->
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="text-xl text-gray-800">Write readable code</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <!-- Heroicon name: solid/check -->
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="text-xl text-gray-800">Good sense of UX</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+              ></path>
+            </svg>
+            <span class="text-xl text-gray-800">Attention to detail</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <svg
+              class="flex-shrink-0 h-8 w-8 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+              ></path>
+            </svg>
+            <span class="text-xl text-gray-800">Curiosity</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

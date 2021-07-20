@@ -664,7 +664,7 @@
           </div>
         </div>
 
-        <div class="relative mt-12 sm:mt-16 lg:mt-24">
+        <div id="techstack" class="relative mt-12 sm:mt-16 lg:mt-24">
           <div
             class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center"
           >

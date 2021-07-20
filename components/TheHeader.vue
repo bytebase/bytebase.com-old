@@ -48,6 +48,20 @@
           >
             About
           </NuxtLink>
+          <NuxtLink
+            to="/jobs"
+            @click.native="track('page.jobs')"
+            class="hidden sm:flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+          >
+            Jobs 🧲
+          </NuxtLink>
+          <NuxtLink
+            to="/jobs"
+            @click.native="track('page.jobs')"
+            class="sm:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+          >
+            Jobs
+          </NuxtLink>
           <a
             href="https://github.com/bytebase/bytebase?ref=bytebase.com"
             target="_blank"
