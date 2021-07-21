@@ -138,8 +138,8 @@
         <p class="mt-8 text-xl text-gray-500 leading-8">
           Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
           backend uses Golang + SQLite. You will lead the frontend development
-          and collabrate with the backend and product team to craft the industry
-          best UX for the database tooling sector.
+          and collabrate with the backend and product team to craft the
+          industry-leading database tool.
         </p>
         <ul class="mt-6 space-y-4">
           <li class="flex items-center space-x-3">
