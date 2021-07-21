@@ -20,16 +20,30 @@
             href="https://demo.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('demo.header')"
-            class="text-blue-600 text-base md:text-xl  font-semibold"
+            class="text-blue-600 text-base md:text-xl font-semibold"
             style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
           >
             Demo
           </a>
+          <NuxtLink
+            to="/about"
+            @click.native="track('page.about')"
+            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline"
+          >
+            About
+          </NuxtLink>
+          <NuxtLink
+            to="/jobs"
+            @click.native="track('page.jobs')"
+            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+          >
+            Jobs 🧲
+          </NuxtLink>
           <a
             href="https://docs.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('doc.header')"
-            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+            class="pl-2 flex md:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
           >
             Docs
           </a>
@@ -37,48 +51,51 @@
             href="https://blog.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('blog.header')"
-            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+            class="flex md:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
           >
             Blog
           </a>
-          <NuxtLink
-            to="/about"
-            @click.native="track('page.about')"
-            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            About
-          </NuxtLink>
-          <NuxtLink
-            to="/jobs"
-            @click.native="track('page.jobs')"
-            class="hidden sm:flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            Jobs 🧲
-          </NuxtLink>
-          <NuxtLink
-            to="/jobs"
-            @click.native="track('page.jobs')"
-            class="sm:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            Jobs
-          </NuxtLink>
           <a
             href="https://github.com/bytebase/bytebase?ref=bytebase.com"
             target="_blank"
             @click="track('github.header')"
-            class="md:hidden border-none rounded-full hover:opacity-80"
+            class="flex-shrink-0 md:hidden border-none rounded-full hover:opacity-80"
           >
-            <img class="h-8 w-auto" src="~/assets/logo.png" alt="" />
+            <img class="h-8 w-auto" src="~/assets/github_logo.png" alt="" />
           </a>
         </div>
-        <a
-          href="https://github.com/bytebase/bytebase?ref=bytebase.com"
-          target="_blank"
-          @click="track('github.header')"
-          class="hidden md:flex absolute items-center justify-end right-0 mt-2 border-none rounded-full hover:opacity-80"
+        <div
+          class="hidden md:flex absolute items-center justify-end right-0 space-x-4"
         >
-          <img class="md:h-16 lg:h-20 w-auto" src="~/assets/logo.png" alt="" />
-        </a>
+          <a
+            href="https://docs.bytebase.com?ref=bytebase.com"
+            target="_blank"
+            @click="track('doc.header')"
+            class="flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+          >
+            Docs
+          </a>
+          <a
+            href="https://blog.bytebase.com?ref=bytebase.com"
+            target="_blank"
+            @click="track('blog.header')"
+            class="flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+          >
+            Blog
+          </a>
+          <a
+            href="https://github.com/bytebase/bytebase?ref=bytebase.com"
+            target="_blank"
+            @click="track('github.header')"
+            class="right-0 border-none rounded-full hover:opacity-80"
+          >
+            <img
+              class="md:h-8 lg:h-12 w-auto"
+              src="~/assets/github_logo.png"
+              alt=""
+            />
+          </a>
+        </div>
       </nav>
     </div>
   </header>

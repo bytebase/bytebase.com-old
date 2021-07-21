@@ -138,7 +138,8 @@
         <p class="mt-8 text-xl text-gray-500 leading-8">
           Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
           backend uses Golang + SQLite. You will lead the frontend development
-          to craft the industry best UX for the database tooling sector.
+          and collabrate with the backend and product team to craft the industry
+          best UX for the database tooling sector.
         </p>
         <ul class="mt-6 space-y-4">
           <li class="flex items-center space-x-3">
@@ -267,6 +268,29 @@
             <span class="text-xl text-gray-800">Curiosity</span>
           </li>
         </ul>
+        <div class="flex py-4 justify-center">
+          <a
+            href="mailto:tz@bytebase.com?subject=Hi, I am interested in Bytebase 'Lead Frontend Engineer' position&body=Hello Tianzhou,%0D%0A%0D%0A"
+            target="_blank"
+            class="w-46 flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
+          >
+            I am interested
+            <svg
+              class="ml-2 w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+              ></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>

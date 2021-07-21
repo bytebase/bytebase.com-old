@@ -22,6 +22,10 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
   },
 
+  router: {
+    linkExactActiveClass: "underline",
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
