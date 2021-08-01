@@ -18,7 +18,7 @@
       >
         <span class="inline">and version control for teams</span>
       </h1>
-      <p
+      <h2
         class="tracking-tight mt-3 text-center max-w-4xl mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl"
       >
         Bytebase offers a web-based collaboration workspace to help
@@ -34,7 +34,7 @@
           >Developers</span
         >
         manage the lifecycle of application database schemas.
-      </p>
+      </h2>
       <div class="mt-5 sm:flex sm:justify-center md:mt-8">
         <div class="rounded-md shadow">
           <a
@@ -91,11 +91,11 @@
         >
           Safer and faster database migration
         </h2>
-        <p
+        <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
           Industry first cloud-native database CI/CD solution
-        </p>
+        </h2>
         <div class="mt-12">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div class="pt-6">
@@ -326,16 +326,16 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
-        <p
+        <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
           SQL review and version control
-        </p>
-        <p class="mt-4 max-w-3xl text-left text-xl text-gray-500 lg:mx-auto">
+        </h2>
+        <h3 class="mt-4 max-w-3xl text-left text-xl text-gray-500 lg:mx-auto">
           Ease the most stressful and dangerous change process in the
           application development cycle. Bytebase supports 2 most typical schema
           change workflow. Team can choose whatever fits the best.
-        </p>
+        </h3>
       </div>
     </div>
 
@@ -375,12 +375,12 @@
                 >
                   UI workflow
                 </h2>
-                <p class="mt-4 text-lg text-gray-500">
+                <h3 class="mt-4 text-lg text-gray-500">
                   Classic SQL Review workflow where the developer submits a SQL
                   review ticket directly from Bytebase and waits for the
                   assigned DBA or peer developer to review. Bytebase applies the
                   SQL change after review approved.
-                </p>
+                </h3>
               </div>
             </div>
           </div>
@@ -431,14 +431,14 @@
                 >
                   Version control workflow
                 </h2>
-                <p class="mt-4 text-lg text-gray-500">
+                <h3 class="mt-4 text-lg text-gray-500">
                   Database migration scripts are stored in a git repository. To
                   make schema changes, a developer would create a migration
                   script and submit for review in the corresponding VCS such as
                   GitLab. After the script is approved and merged into the
                   configured branch, Bytebase will automatically kicks off the
                   task to apply the new schema change.
-                </p>
+                </h3>
                 <div class="mt-6">
                   <a
                     href="https://docs.bytebase.com/features/version-control?ref=bytebase.com"
@@ -474,12 +474,12 @@
           >
             A complete rethink to deliver experience
           </h2>
-          <p class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
+          <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
             From the data modeling, to the tech stack, system architecture and
             then the final user interface, Bytebase is engineered from the
             ground up to deliver a transforming user experience to the DBAs and
             Developers.
-          </p>
+          </h3>
         </div>
 
         <div

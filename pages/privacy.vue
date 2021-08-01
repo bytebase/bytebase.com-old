@@ -22,9 +22,9 @@
             bytebase.com (the “Site”).
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
             PERSONAL INFORMATION WE COLLECT
-          </p>
+          </h2>
 
           <p>
             When you visit the Site, we automatically collect certain
@@ -77,9 +77,9 @@
             are talking both about Device Information and Order Information.
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
             HOW DO WE USE YOUR PERSONAL INFORMATION
-          </p>
+          </h2>
 
           <p>
             We use the Order Information that we collect generally to fulfill
@@ -101,9 +101,9 @@
             advertising campaigns).
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
             SHARING YOUR PERSONAL INFORMATION
-          </p>
+          </h2>
 
           <p>
             We share your Personal Information with third parties to help us use
@@ -128,13 +128,15 @@
             or to otherwise protect our rights.
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
             DO NOT TRACK
-          </p>
+          </h2>
           Please note that we do not alter our Site’s data collection and use
           practices when we see a Do Not Track signal from your browser.
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">YOUR RIGHTS</p>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
+            YOUR RIGHTS
+          </h2>
           If you are a European resident, you have the right to access personal
           information we hold about you and to ask that your personal
           information be corrected, updated, or deleted. If you would like to
@@ -146,7 +148,9 @@
           Additionally, please note that your information will be transferred
           outside of Europe, including to the United States and China.
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">DATA RETENTION</p>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
+            DATA RETENTION
+          </h2>
 
           <p>
             When you place an order through the Site, we will maintain your
@@ -154,7 +158,9 @@
             delete this information.
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">CHANGES</p>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
+            CHANGES
+          </h2>
 
           <p>
             We may update this privacy policy from time to time in order to
@@ -162,7 +168,9 @@
             operational, legal or regulatory reasons.
           </p>
 
-          <p class="pt-4 text-2xl text-gray-900 font-bold">CONTACT US</p>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
+            CONTACT US
+          </h2>
           <p>
             For more information about our privacy practices, if you have
             questions, or if you would like to make a complaint, please contact
