@@ -26,18 +26,11 @@
             Demo
           </a>
           <NuxtLink
-            to="/about"
-            @click.native="track('page.about')"
-            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline"
-          >
-            About
-          </NuxtLink>
-          <NuxtLink
             to="/jobs"
             @click.native="track('page.jobs')"
             class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
           >
-            Jobs 🧲
+            We're Hiring 🧲
           </NuxtLink>
           <a
             href="https://docs.bytebase.com?ref=bytebase.com"

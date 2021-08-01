@@ -16,7 +16,7 @@
       <h1
         class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
       >
-        <span class="inline">and version control</span>
+        <span class="inline">and version control for teams</span>
       </h1>
       <p
         class="tracking-tight mt-3 text-center max-w-4xl mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl"
