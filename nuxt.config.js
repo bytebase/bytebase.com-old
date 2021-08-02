@@ -15,7 +15,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Open source, zero-config, dependency-free, web-based database schema change and version control for Developers and DBAs",
+          "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
       },
       { name: "format-detection", content: "telephone=no" },
     ],

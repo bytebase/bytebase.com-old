@@ -295,3 +295,26 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  head: {},
+  setup() {
+    useMeta({
+      title: "Jobs",
+      meta: [
+        {
+          hid: "jobs",
+          name: "jobs",
+          content:
+            "We value crafts and we care what you have built in the past instead of where you have worked and studied",
+        },
+      ],
+    });
+
+    return;
+  },
+});
+</script>

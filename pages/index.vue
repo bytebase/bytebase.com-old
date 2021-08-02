@@ -920,16 +920,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
+  head: {},
   setup() {
     const track = (name: string) => {
       trackEvent(name);
     };
+
+    useMeta({
+      title: "Bytebase",
+      meta: [
+        {
+          hid: "bytebase",
+          name: "bytebase",
+          content:
+            "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
+        },
+      ],
+    });
 
     return { track };
   },

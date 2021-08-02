@@ -139,3 +139,29 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import Plausible from "plausible-tracker";
+
+const { trackEvent } = Plausible();
+
+export default defineComponent({
+  head: {},
+  setup() {
+    const track = (name: string) => {
+      trackEvent(name);
+    };
+
+    useMeta({ title: 'About Us', meta: [
+        {
+            hid: "about",
+            name: "about",
+            content: "Built by the engineers behind Google Cloud SQL"
+        }
+    ] })
+
+    return { track };
+  },
+});
+</script>
