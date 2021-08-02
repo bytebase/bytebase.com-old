@@ -42,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/composition-api/module",
+    "@nuxtjs/google-analytics",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -53,5 +54,9 @@ export default {
   plausible: {
     // see configuration section
     domain: "bytebase.com",
+  },
+
+  googleAnalytics: {
+    id: "UA-202806916-1",
   },
 };
