@@ -18,7 +18,7 @@
       >
         <span class="inline">and version control for teams</span>
       </h1>
-      <h2
+      <h1
         class="tracking-tight mt-3 text-center max-w-4xl mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl"
       >
         Bytebase offers a web-based collaboration workspace to help
@@ -34,7 +34,7 @@
           >Developers</span
         >
         manage the lifecycle of application database schemas.
-      </h2>
+      </h1>
       <div class="mt-5 sm:flex sm:justify-center md:mt-8">
         <div class="rounded-md shadow">
           <a
