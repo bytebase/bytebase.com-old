@@ -7,19 +7,18 @@
         <span
           class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl"
         >
-          <span class="block text-gray-900">GitLab + Bytebase</span>
-          <span class="block text-indigo-600">Database-as-Code</span>
+          <span class="block text-gray-900">phpMyAdmin + Bytebase</span>
         </span>
       </h1>
       <h2
         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
       >
-        Bytebase integrates with GitLab to allow team to manage database
-        migration scripts in the GitLab repository. Migration pipeline is
-        triggered on observing new migration script push event,
+        Bytebase allows team to configure an external SQL console such as
+        phpMyAdmin. When configured, Bytebase will surface the console link on
+        the relevant database and table UI.
         <a
           class="text-blue-700"
-          href="https://docs.bytebase.com/features/version-control"
+          href="https://docs.bytebase.com/settings/external-sql-console"
           target="__blank"
           >view detailed guide</a
         >.
@@ -34,7 +33,11 @@
       class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
     >
       <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-        <img class="w-full" src="~/assets/bytebase_and_gitlab.webp" alt="" />
+        <img
+          class="w-full"
+          src="~/assets/bytebase_and_phpmyadmin.webp"
+          alt=""
+        />
       </div>
     </div>
   </div>

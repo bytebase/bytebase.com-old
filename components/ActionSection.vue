@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 sm:flex sm:justify-center md:mt-8">
+  <div class="mt-5 sm:flex md:mt-8">
     <div class="rounded-md shadow">
       <a
         href="https://github.com/bytebase/bytebase#installation"

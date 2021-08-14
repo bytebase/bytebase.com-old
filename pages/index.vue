@@ -35,7 +35,7 @@
         >
         manage the lifecycle of application database schemas.
       </h1>
-      <ActionSection :eventName="'deploy.main'" />
+      <ActionSection class="sm:justify-center" :eventName="'deploy.main'" />
     </div>
 
     <div class="mt-12 relative">
@@ -637,7 +637,7 @@
         </div>
       </div>
     </div>
-    <ActionSection :eventName="'deploy.footer'" />
+    <ActionSection class="sm:justify-center" :eventName="'deploy.footer'" />
   </div>
 </template>
 

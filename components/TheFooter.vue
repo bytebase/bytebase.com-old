@@ -144,7 +144,7 @@
                 </li>
                 <li>
                   <NuxtLink
-                    to="/integration/phpMyAdmin"
+                    to="/integration/phpmyadmin"
                     class="text-base text-gray-500 hover:text-gray-900"
                   >
                     phpMyAdmin
