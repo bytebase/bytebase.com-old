@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <footer class="bg-white" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="space-y-8 xl:col-span-1">
           <img class="h-10" src="~/assets/logo.svg" alt="Bytebase" />
@@ -65,10 +65,6 @@
                 ></path>
               </svg>
             </a>
-
-            <p class="text-base text-gray-400 xl:text-center">
-              &copy; 2021 Bytebase
-            </p>
           </div>
         </div>
         <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -111,6 +107,57 @@
               <h3
                 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
               >
+                Integrations
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <NuxtLink
+                    to="/integration/gitlab"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    GitLab
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/slack"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Slack
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/discord"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Discord
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/teams"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Teams
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/phpMyAdmin"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    phpMyAdmin
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3
+                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+              >
                 Resources
               </h3>
               <ul class="mt-4 space-y-4">
@@ -145,9 +192,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
+
+            <div class="mt-12 md:mt-0">
               <h3
                 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
               >
@@ -183,25 +229,18 @@
                 </li>
               </ul>
             </div>
-            <div class="mt-12 md:mt-0">
-              <h3
-                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-              >
-                Legal
-              </h3>
-              <ul class="mt-4 space-y-4">
-                <li>
-                  <NuxtLink
-                    to="/privacy"
-                    class="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Privacy
-                  </NuxtLink>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
+      </div>
+      <div
+        class="mt-4 flex justify-center space-x-4 border-t py-4 text-base text-gray-500 hover:text-gray-900"
+      >
+        <p class="text-base text-gray-400 xl:text-center">
+          &copy; 2021 Bytebase
+        </p>
+        <NuxtLink to="/privacy">
+          Privacy
+        </NuxtLink>
       </div>
     </div>
   </footer>
