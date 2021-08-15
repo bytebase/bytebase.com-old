@@ -1,10 +1,10 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="bg-white" aria-labelledby="footer-heading">
+  <footer class="bg-white pb-8" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <div class="space-y-8 xl:col-span-1">
+        <div class="space-y-6 xl:col-span-1">
           <img class="h-10" src="~/assets/logo.svg" alt="Bytebase" />
           <div class="flex space-x-6">
             <a
@@ -65,6 +65,15 @@
                 ></path>
               </svg>
             </a>
+
+            <p class="text-base text-gray-400 xl:text-center">
+              &copy; 2021 Bytebase
+            </p>
+          </div>
+          <div class="text-base text-gray-500 hover:text-gray-900">
+            <NuxtLink to="/privacy">
+              Privacy Policy
+            </NuxtLink>
           </div>
         </div>
         <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -231,16 +240,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="mt-4 flex justify-center space-x-4 border-t py-4 text-base text-gray-500 hover:text-gray-900"
-      >
-        <p class="text-base text-gray-400 xl:text-center">
-          &copy; 2021 Bytebase
-        </p>
-        <NuxtLink to="/privacy">
-          Privacy
-        </NuxtLink>
       </div>
     </div>
   </footer>
