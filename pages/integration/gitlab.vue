@@ -21,7 +21,7 @@
           class="text-blue-700"
           href="https://docs.bytebase.com/features/version-control"
           target="__blank"
-          >view detailed guide</a
+          >View detailed guide</a
         >.
       </h2>
       <div
