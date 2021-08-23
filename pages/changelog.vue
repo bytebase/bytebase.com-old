@@ -4,19 +4,19 @@
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto space-y-16">
           <div>
-            <div>
+            <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 19, 2021</span
               >
-              <h1
+              <a
                 href="#release-040"
                 id="release-040"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.4.0
-              </h1>
-            </div>
+              </a>
+            </h1>
             <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
@@ -107,19 +107,19 @@
           </div>
 
           <div>
-            <div>
+            <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 02, 2021</span
               >
-              <h1
+              <a
                 href="#release-030"
                 id="release-030"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.3.0
-              </h1>
-            </div>
+              </a>
+            </h1>
             <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
@@ -187,19 +187,19 @@
           </div>
 
           <div>
-            <div>
+            <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >July 26, 2021</span
               >
-              <h1
+              <a
                 href="#release-022"
                 id="release-022"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.2.2
-              </h1>
-            </div>
+              </a>
+            </h1>
             <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
@@ -277,19 +277,19 @@
           </div>
 
           <div>
-            <div>
+            <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >July 19, 2021</span
               >
-              <h1
+              <a
                 href="#release-020"
                 id="release-020"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.2.0
-              </h1>
-            </div>
+              </a>
+            </h1>
             <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
@@ -353,19 +353,19 @@
           </div>
 
           <div>
-            <div>
+            <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >July 12, 2021</span
               >
-              <h1
+              <a
                 href="#release-020"
                 id="release-020"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.1.0
-              </h1>
-            </div>
+              </a>
+            </h1>
             <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               For fresh installation, follow
               <a
