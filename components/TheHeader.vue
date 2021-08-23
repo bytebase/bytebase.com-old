@@ -26,6 +26,13 @@
             Demo
           </a>
           <NuxtLink
+            to="/changelog"
+            @click.native="track('page.changelog')"
+            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+          >
+            Changelog
+          </NuxtLink>
+          <NuxtLink
             to="/jobs"
             @click.native="track('page.jobs')"
             class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"

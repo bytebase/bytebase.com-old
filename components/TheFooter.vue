@@ -211,6 +211,15 @@
                     Blog
                   </a>
                 </li>
+
+                <li>
+                  <NuxtLink
+                    to="/changelog"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Changelog
+                  </NuxtLink>
+                </li>
               </ul>
             </div>
 
