@@ -16,7 +16,7 @@
                 >Bytebase 0.4.0</a
               >
             </h1>
-            <h2 class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -118,7 +118,7 @@
                 >Bytebase 0.3.0</a
               >
             </h1>
-            <h2 class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -197,7 +197,7 @@
                 >Bytebase 0.2.2</a
               >
             </h1>
-            <h2 class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -286,7 +286,7 @@
                 >Bytebase 0.2.0</a
               >
             </h1>
-            <h2 class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
