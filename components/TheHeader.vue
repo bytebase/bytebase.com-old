@@ -27,33 +27,46 @@
           </a>
           <NuxtLink
             to="/changelog"
-            @click.native="track('page.changelog')"
+            @click.native="track('changelog.header')"
             class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Changelog
           </NuxtLink>
           <NuxtLink
-            to="/jobs"
-            @click.native="track('page.jobs')"
+            to="/blog"
+            @click.native="track('blog.header')"
             class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
           >
-            We're Hiring 🧲
+            Blog
+          </NuxtLink>
+          <NuxtLink
+            to="/jobs"
+            @click.native="track('job.header')"
+            class="text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+          >
+            Jobs🔥
           </NuxtLink>
           <a
             href="https://docs.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('doc.header')"
-            class="pl-2 flex md:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
+            class="flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
           >
             Docs
-          </a>
-          <a
-            href="https://blog.bytebase.com?ref=bytebase.com"
-            target="_blank"
-            @click="track('blog.header')"
-            class="flex md:hidden text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            Blog
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              ></path>
+            </svg>
           </a>
           <a
             href="https://github.com/bytebase/bytebase?ref=bytebase.com"
@@ -68,32 +81,12 @@
           class="hidden md:flex absolute items-center justify-end right-0 space-x-4"
         >
           <a
-            href="https://docs.bytebase.com?ref=bytebase.com"
-            target="_blank"
-            @click="track('doc.header')"
-            class="flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            Docs
-          </a>
-          <a
-            href="https://blog.bytebase.com?ref=bytebase.com"
-            target="_blank"
-            @click="track('blog.header')"
-            class="flex text-gray-700 text-base md:text-xl font-semibold hover:text-gray-500"
-          >
-            Blog
-          </a>
-          <a
             href="https://github.com/bytebase/bytebase?ref=bytebase.com"
             target="_blank"
             @click="track('github.header')"
             class="right-0 border-none rounded-full hover:opacity-80"
           >
-            <img
-              class="md:h-8 lg:h-12 w-auto"
-              src="~/assets/github_logo.png"
-              alt=""
-            />
+            <img class="h-16 w-auto" src="~/assets/github_logo.png" alt="" />
           </a>
         </div>
       </nav>

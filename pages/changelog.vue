@@ -347,6 +347,35 @@
               </ul>
             </h2>
           </div>
+
+          <div>
+            <div>
+              <span
+                class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                >July 12, 2021</span
+              >
+              <h1
+                href="#release-020"
+                id="release-020"
+                class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
+              >
+                Bytebase 0.1.0
+              </h1>
+            </div>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+              For fresh installation, follow
+              <a
+                href="https://github.com/bytebase/bytebase#installation"
+                target="__blank"
+                >https://github.com/bytebase/bytebase#installation</a
+              >.
+              <p>
+                We released our first open source version on GitHub. Please
+                checkout our
+                <NuxtLink to="/blog/announce-bytebase">launch post</NuxtLink>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -354,10 +383,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   layout: "changelog",
-  setup() {},
+  head: {},
+  setup() {
+    const { title } = useMeta();
+    title.value = "Changelog";
+  },
 });
 </script>
