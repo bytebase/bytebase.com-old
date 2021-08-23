@@ -16,10 +16,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  head: {},
   layout: "usecase",
-  setup() {},
+  setup() {
+    const { title } = useMeta();
+    title.value = "Bytebase for DBA";
+  },
 });
 </script>

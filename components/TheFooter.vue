@@ -159,6 +159,30 @@
                     phpMyAdmin
                   </NuxtLink>
                 </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/dingtalk"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    DingTalk (钉钉)
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/feishu"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Feishu (飞书)
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/integration/wecom"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    WeCom (企业微信)
+                  </NuxtLink>
+                </li>
               </ul>
             </div>
           </div>

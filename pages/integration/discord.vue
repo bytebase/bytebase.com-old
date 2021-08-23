@@ -34,10 +34,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, useMeta } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  head: {},
   layout: "integration",
-  setup() {},
+  setup() {
+    const { title } = useMeta();
+    title.value = "Integration with Discord";
+  },
 });
 </script>
