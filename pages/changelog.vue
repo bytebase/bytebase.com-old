@@ -4,19 +4,20 @@
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto space-y-16">
           <div>
-            <h1>
+            <div>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 19, 2021</span
               >
-              <a
+              <h1
                 href="#release-040"
                 id="release-040"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
-                >Bytebase 0.4.0</a
               >
-            </h1>
-            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+                Bytebase 0.4.0
+              </h1>
+            </div>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -36,7 +37,7 @@
                   and we will assist you to perform the manual upgrade.
                 </li>
               </ul>
-              <h3>🐞 Important Bug Fixes</h3>
+              <h2>🐞 Important Bug Fixes</h2>
               <ul role="list">
                 <li>
                   <strong>MySQL 5.7 compatibility</strong> - In the previous
@@ -44,7 +45,7 @@
                   because it used a MySQL 8.0 only feature.
                 </li>
               </ul>
-              <h3>🚀 New Features</h3>
+              <h2>🚀 New Features</h2>
               <ul role="list">
                 <li>
                   <strong
@@ -92,7 +93,7 @@
                   </ul>
                 </li>
               </ul>
-              <h3>🎠 Community</h3>
+              <h2>🎠 Community</h2>
               <ul role="list">
                 <li>
                   Thanks @zhj-hx for providing feedback and helping us
@@ -102,23 +103,24 @@
                   Thanks @iczc for the PR.
                 </li>
               </ul>
-            </h2>
+            </div>
           </div>
 
           <div>
-            <h1>
+            <div>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 02, 2021</span
               >
-              <a
+              <h1
                 href="#release-030"
                 id="release-030"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
-                >Bytebase 0.3.0</a
               >
-            </h1>
-            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+                Bytebase 0.3.0
+              </h1>
+            </div>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -138,7 +140,7 @@
                   and we will assist you to perform the manual upgrade.
                 </li>
               </ul>
-              <h3>🚀 New Features</h3>
+              <h2>🚀 New Features</h2>
               <ul role="list">
                 <li>
                   <strong
@@ -166,7 +168,7 @@
                   to an certain instance.
                 </li>
               </ul>
-              <h3>🎠 Community</h3>
+              <h2>🎠 Community</h2>
               <ul role="list">
                 <li>
                   We received our first customer review. Thanks @barretlee for
@@ -181,23 +183,24 @@
                   500 stars over the week.
                 </li>
               </ul>
-            </h2>
+            </div>
           </div>
 
           <div>
-            <h1>
+            <div>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >July 26, 2021</span
               >
-              <a
+              <h1
                 href="#release-022"
                 id="release-022"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
-                >Bytebase 0.2.2</a
               >
-            </h1>
-            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+                Bytebase 0.2.2
+              </h1>
+            </div>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -217,7 +220,7 @@
                   and we will assist you to perform the manual upgrade.
                 </li>
               </ul>
-              <h3>🐞 Important Bug Fixes</h3>
+              <h2>🐞 Important Bug Fixes</h2>
               <ul role="list">
                 <li>
                   <strong>MySQL connection leak</strong> - In the previous
@@ -226,7 +229,7 @@
                   which will cause MySQL connection pool exhaustation.
                 </li>
               </ul>
-              <h3>🚀 New Features</h3>
+              <h2>🚀 New Features</h2>
               <ul role="list">
                 <li>
                   <strong
@@ -253,13 +256,13 @@
                   view the complete migration history.
                 </li>
               </ul>
-              <h3>🎄 Experience Enhancement</h3>
+              <h2>🎄 Experience Enhancement</h2>
               <ul role="list">
                 <li>
                   Added new 403, 404 page
                 </li>
               </ul>
-              <h3>🎠 Community</h3>
+              <h2>🎠 Community</h2>
               <ul role="list">
                 <li>
                   We launched our English blog, checkout our
@@ -270,23 +273,24 @@
                   >.
                 </li>
               </ul>
-            </h2>
+            </div>
           </div>
 
           <div>
-            <h1>
+            <div>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >July 19, 2021</span
               >
-              <a
+              <h1
                 href="#release-020"
                 id="release-020"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
-                >Bytebase 0.2.0</a
               >
-            </h1>
-            <h2 class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+                Bytebase 0.2.0
+              </h1>
+            </div>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -306,7 +310,7 @@
                   and we will assist you to perform the manual upgrade.
                 </li>
               </ul>
-              <h3>🚀 New Features</h3>
+              <h2>🚀 New Features</h2>
               <ul role="list">
                 <li>
                   <strong>Migration history</strong> - Added the migration
@@ -320,7 +324,7 @@
                   columns and indexes.
                 </li>
               </ul>
-              <h3>🎄 Experience Enhancement</h3>
+              <h2>🎄 Experience Enhancement</h2>
               <ul role="list">
                 <li>
                   Added button to referesh the repository list when configuring
@@ -335,7 +339,7 @@
                   >.
                 </li>
               </ul>
-              <h3>🎠 Community</h3>
+              <h2>🎠 Community</h2>
               <ul role="list">
                 <li>
                   In the first week after we open sourced Bytebase on GitHub, we
@@ -345,7 +349,7 @@
                   how to improve the MySQL setup guide.
                 </li>
               </ul>
-            </h2>
+            </div>
           </div>
 
           <div>
