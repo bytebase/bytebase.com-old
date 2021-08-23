@@ -106,11 +106,11 @@
         >
         <span
           class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
-          >Work remotely</span
+          >Work remotely (Beijing timezone GMT+8)</span
         >
         <span
           class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
-          >Allowance to set up your home office</span
+          >Stipend to set up your home office</span
         >
         <span
           class="mt-4 block text-3xl text-center leading-8 tracking-tight text-gray-900"
@@ -139,8 +139,38 @@
           Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
           backend uses Golang + SQLite. You will lead the frontend development
           and collabrate with the backend and product team to craft the
-          industry-leading database tool.
+          industry-leading database tool. Some of the problems you will be
+          working on:
         </p>
+        <div class="prose prose-lg">
+          <ol>
+            <li>
+              Evolve the frontend architecture and define the boundary and
+              interface with the backend.
+            </li>
+            <li>
+              Build the industry best vue-based SQL console and editor.
+            </li>
+            <li>
+              Maintain and improve our vue-based UI component library
+              <a
+                href="https://github.com/bytebase/bytebase/tree/main/frontend/src/bbkit"
+                target="__blank"
+                >bbkit</a
+              >.
+            </li>
+            <li>
+              Build the UI code generator.
+            </li>
+          </ol>
+        </div>
+
+        <h1>
+          <span
+            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900"
+            >What we are looking for</span
+          >
+        </h1>
         <ul class="mt-6 space-y-4">
           <li class="flex items-center space-x-3">
             <!-- Heroicon name: solid/check -->
