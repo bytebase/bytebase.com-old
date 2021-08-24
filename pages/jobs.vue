@@ -143,7 +143,7 @@
           working on:
         </p>
         <div class="prose prose-xl">
-          <ol>
+          <ul>
             <li>
               Evolve the frontend architecture and define the boundary and
               interface with the backend.
@@ -162,7 +162,7 @@
             <li>
               Generate UI console based on database schema.
             </li>
-          </ol>
+          </ul>
         </div>
 
         <h1>
