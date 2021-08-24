@@ -160,7 +160,7 @@
               >.
             </li>
             <li>
-              Build the UI code generator.
+              Generate UI console based on database schema.
             </li>
           </ol>
         </div>
