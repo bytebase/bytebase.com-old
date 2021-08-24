@@ -7,7 +7,7 @@
         Database Schema Design
       </span>
       <h1>
-        Primary Key - UUID or Auto Increment Integer/Sequence?
+        Choose Primary Key - UUID or Auto Increment Integer?
       </h1>
     </div>
     <span
@@ -231,7 +231,7 @@ import { defineComponent } from "@nuxtjs/composition-api";
 export default defineComponent({
   layout: "blog",
   head: {
-    title: "Primary Key - UUID or Auto Increment Integer",
+    title: "Choose Primary Key - UUID or Auto Increment Integer",
     meta: [
       {
         hid: "Primary Key",

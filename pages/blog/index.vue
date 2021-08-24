@@ -106,18 +106,17 @@
                 </span>
               </div>
               <NuxtLink
-                to="/blog/primary-key-uuid-or-auto-increment"
+                to="/blog/choose-primary-key-uuid-or-auto-increment"
                 class="block mt-4"
               >
                 <p class="text-xl font-semibold text-gray-900">
-                  Primary Key - UUID vs Auto Increment Integer/Sequence, Which
-                  is Better?
+                  Choose Primary Key - UUID vs Auto Increment Integer?
                 </p>
                 <p class="mt-3 text-base text-gray-500">
-                  Choosing which primary key type to use can have a cascading
-                  effect down the road. And it's always hard or totally
+                  Choosing which primary key type to use can have a
+                  consequential effect down the road. And it's the one almost
                   impossible to switch later. We list Pros and Cons between
-                  these 2 most common appoaches.
+                  these 2 appoaches and give our recommendation.
                 </p>
               </NuxtLink>
               <div class="mt-6 flex items-center">
