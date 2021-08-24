@@ -655,11 +655,13 @@ export default defineComponent({
     };
 
     useMeta({
-      title: "Bytebase",
+      title:
+        "Bytebase | Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
       meta: [
         {
           hid: "bytebase",
-          name: "bytebase",
+          name:
+            "bytebase | Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
           content:
             "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
         },
