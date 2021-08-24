@@ -142,7 +142,7 @@
           industry-leading database tool. Some of the problems you will be
           working on:
         </p>
-        <div class="prose prose-lg">
+        <div class="prose prose-xl">
           <ol>
             <li>
               Evolve the frontend architecture and define the boundary and
