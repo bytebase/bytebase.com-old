@@ -27,9 +27,7 @@
             </h2>
           </div>
           <div class="mt-12">
-            <div
-              class="flex flex-col col-span-3 rounded-lg shadow-lg overflow-hidden"
-            >
+            <div class="flex flex-col col-span-3 border p-4 overflow-hidden">
               <NuxtLink to="/blog/announce-bytebase" class="flex-shrink-0">
                 <img
                   class="w-full object-cover"
