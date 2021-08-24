@@ -1,6 +1,11 @@
 <template>
   <div class="py-16 overflow-hidden">
     <div class="prose prose-xl mx-auto">
+      <span
+        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800"
+      >
+        New Release
+      </span>
       <img
         class="w-full object-cover"
         src="~/assets/blog/LogoText.png"

@@ -1,6 +1,11 @@
 <template>
   <div class="py-16 overflow-hidden">
     <div class="prose prose-xl mx-auto">
+      <span
+        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
+      >
+        Database Schema Design
+      </span>
       <h1>
         Primary Key - UUID or Auto Increment Integer/Sequence?
       </h1>
