@@ -41,14 +41,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  head: {},
-  layout: "integration",
-  setup() {
-    const { title } = useMeta();
-    title.value = "Integration with GitLab";
+  head: {
+    title: "Integration with GitLab",
+    meta: [
+      {
+        hid: "Integration with GitLab",
+        name: "Integration with GitLab",
+        content:
+          "Bytebase integrates with GitLab to allow team to manage database migration scripts in the GitLab repository. Migration pipeline is triggered on observing new migration script push event.",
+      },
+    ],
   },
+  layout: "integration",
+  setup() {},
 });
 </script>

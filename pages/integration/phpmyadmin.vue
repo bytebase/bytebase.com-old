@@ -44,14 +44,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  head: {},
-  layout: "integration",
-  setup() {
-    const { title } = useMeta();
-    title.value = "Integration with phpMyAdmin";
+  head: {
+    title: "Integration with phpMyAdmin",
+    meta: [
+      {
+        hid: "Integration with phpMyAdmin",
+        name: "Integration with phpMyAdmin",
+        content:
+          "Bytebase allows team to configure an external SQL console such as phpMyAdmin. When configured, Bytebase will surface the console link on the relevant database and table UI.",
+      },
+    ],
   },
+  layout: "integration",
+  setup() {},
 });
 </script>

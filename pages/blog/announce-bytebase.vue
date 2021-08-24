@@ -373,14 +373,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   layout: "blog",
-  head: {},
-  setup() {
-    const { title } = useMeta();
-    title.value = "Announcing Bytebase";
+  head: {
+    title: "Announcing Bytebase",
+    meta: [
+      {
+        hid: "Announcing Bytebase",
+        name: "Announcing Bytebase",
+        content:
+          "Announcing Bytebase - Open source, web-based, zero-config, dependency-free database schema change and version control tool for Developer and DBA",
+      },
+    ],
   },
+  setup() {},
 });
 </script>

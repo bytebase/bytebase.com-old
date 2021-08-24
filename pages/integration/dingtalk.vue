@@ -34,14 +34,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  head: {},
-  layout: "integration",
-  setup() {
-    const { title } = useMeta();
-    title.value = "Integration with DingTalk";
+  head: {
+    title: "Integration with DingTalk",
+    meta: [
+      {
+        hid: "Integration with DingTalk",
+        name: "Integration with DingTalk",
+        content:
+          "Bytebase supports webhook to post database schema related events to the configured DingTalk group. Those webhook events are specifically customized for DingTalk in order to display the optimal format.",
+      },
+    ],
   },
+  layout: "integration",
+  setup() {},
 });
 </script>

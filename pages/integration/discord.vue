@@ -34,14 +34,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  head: {},
-  layout: "integration",
-  setup() {
-    const { title } = useMeta();
-    title.value = "Integration with Discord";
+  head: {
+    title: "Integration with Discord",
+    meta: [
+      {
+        hid: "Integration with Discord",
+        name: "Integration with Discord",
+        content:
+          "Bytebase supports webhook to post database schema related events to the configured Discord channel. Those webhook events are specifically customized for Discord in order to display the optimal format.",
+      },
+    ],
   },
+  layout: "integration",
+  setup() {},
 });
 </script>

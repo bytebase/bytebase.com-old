@@ -181,3 +181,21 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  head: {
+    title: "Bytebase Privacy Policy",
+    meta: [
+      {
+        hid: "Bytebase Privacy Policy",
+        name: "Bytebase Privacy Policy",
+        content: "Bytebase Privacy Policy",
+      },
+    ],
+  },
+  setup() {},
+});
+</script>

@@ -34,14 +34,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  head: {},
-  layout: "integration",
-  setup() {
-    const { title } = useMeta();
-    title.value = "Integration with Slack";
+  head: {
+    title: "Integration with Slack",
+    meta: [
+      {
+        hid: "Integration with Slack",
+        name: "Integration with Slack",
+        content:
+          "Bytebase supports webhook to post database schema related events to the configured Slack channel. Those webhook events are specifically customized for Slack in order to display the optimal format.",
+      },
+    ],
   },
+  layout: "integration",
+  setup() {},
 });
 </script>

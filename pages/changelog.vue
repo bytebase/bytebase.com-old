@@ -387,14 +387,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   layout: "changelog",
-  head: {},
-  setup() {
-    const { title } = useMeta();
-    title.value = "Changelog";
+  head: {
+    title: "Bytebase Changelog",
+    meta: [
+      {
+        hid: "Bytebase Changelog",
+        name: "Bytebase Changelog",
+        content: "New features and enhancements to Bytebase.",
+      },
+    ],
   },
+  setup() {},
 });
 </script>
