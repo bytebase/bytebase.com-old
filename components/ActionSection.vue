@@ -7,7 +7,7 @@
         @click="track()"
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
       >
-        Deploy now in 5 seconds
+        {{ actionSentence }}
         <svg
           class="ml-2 w-8 h-8 animate-bounce"
           style="animation: bounce 1s infinite;"
@@ -32,24 +32,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { computed, defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
   props: {
-    eventName: {
+    moduleName: {
       required: true,
       type: String,
     },
   },
   setup(props) {
     const track = () => {
-      trackEvent(props.eventName);
+      trackEvent(props.moduleName);
     };
 
-    return { track };
+    const actionSentence = computed(() => {
+      if (
+        props.moduleName == "deploy.main" ||
+        props.moduleName == "deploy.footer"
+      ) {
+        return "Deploy now in 5 seconds";
+      }
+      return "Deploy Bytebase in 5 seconds";
+    });
+
+    return { track, actionSentence };
   },
 });
 </script>
