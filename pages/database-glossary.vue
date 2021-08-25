@@ -141,8 +141,9 @@
             📕 Database Glossary
           </h1>
           <h2 class="mt-4 text-base text-gray-500">
-            Compile the most comprehensive database glossary list on the
-            internet.
+            A handy database glossary reference on the internet. We cover
+            general database, MySQL, PostgreSQL as well as Bytebase specific
+            topic.
           </h2>
           <div class="text-right">
             <a
@@ -383,8 +384,30 @@ const ALPHA_LIST: AlphaItem[] = [
       {
         name: "ACID",
         description:
-          "ACID stands for Atomicity, Consistency, Isolation, Durability",
+          "ACID stands for Atomicity, Consistency, Isolation, Durability. These are the key properties of a database transaction to guarantee correctness even (unexpected) failure occurs.",
         reference: "https://en.wikipedia.org/wiki/ACID",
+        tagList: ["General"],
+      },
+      {
+        name: "Atomicity",
+        description:
+          "A in ACID, the property to guarantee all state mutation in a transaction either all happen or none happen (all or nothing).",
+        reference: "https://en.wikipedia.org/wiki/Atomicity_(database_systems)",
+        tagList: ["General"],
+      },
+      {
+        name: "Audit log / Audit trail",
+        description: `A set of chronological records providing documentary evidence of a series of database activities.
+          User activities such as login attempt, DDL operations are often captured. For DML operations, due to its large volume and
+          impact on performance, is normally not captured.`,
+        reference: "https://en.wikipedia.org/wiki/Atomicity_(database_systems)",
+        tagList: ["General"],
+      },
+      {
+        name: "Autonomous database",
+        description:
+          "A shinny concept declaring the database can operate without DBA involvement (self-driving), which sounds a bit optimistic like the auto industry.",
+        reference: "",
         tagList: ["General"],
       },
     ],
@@ -393,13 +416,213 @@ const ALPHA_LIST: AlphaItem[] = [
     letter: "B",
     list: [
       {
-        name: "B-Tree",
+        name: "B+ tree",
+        description: `The fundamental data structure used in all major database systems storing the data. 
+        B+ tree has a large fanout, which reduces the number of I/O operations to find the element.`,
+        reference: "https://en.wikipedia.org/wiki/B%2B_tree",
+        tagList: ["General"],
+      },
+      {
+        name: "Backup",
+        description: ``,
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Bloom filter",
+        description: `A space-efficient probabilistic data structure commonly used by the query engine to eliminate
+        unnecessary I/O or remote data fetch.`,
+        reference: "https://en.wikipedia.org/wiki/Bloom_filter",
+        tagList: ["General"],
+      },
+      {
+        name: "Buffer pool / Buffer cache",
+        description: `A consecutive memory area to cache table and index data in memory to avoid I/O operations.
+        The buffer pool consists of many pages of same size (normally between 4K ~ 16K bytes), and normally a 
+        variation of LRU (Least Recently Used) strategy is used to swap buffer pages.`,
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "C",
+    list: [
+      {
+        name: "Catalog",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Checkpoint",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Column",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Commit",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Consistency",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Constraint",
+        description: `A space-efficient probabilistic data structure commonly used by the query engine to eliminate
+        unnecessary I/O or remote data fetch.`,
+        reference: "https://en.wikipedia.org/wiki/Bloom_filter",
+        tagList: ["General"],
+      },
+      {
+        name: "Cost-based optimization (CBO)",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Crash recovery",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "D",
+    list: [
+      {
+        name: "Data source",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Data source name (DSN)",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Data definition language (DDL)",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Data manipulation language (DML)",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Database",
+        description: ``,
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Database instance",
+        description: ``,
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Database-as-code",
+        description: ``,
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Deadlock",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Durability",
+        description: ``,
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "E",
+    list: [
+      {
+        name: "Encryption at rest (EAR)",
         description: "",
         reference: "",
         tagList: ["General"],
       },
       {
-        name: "Bloom filter",
+        name: "Encryption in transit",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Engine / Database engine",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Environment",
+        description: "",
+        reference: "",
+        tagList: ["Bytebase"],
+      },
+    ],
+  },
+  {
+    letter: "F",
+    list: [
+      {
+        name: "Failover",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Foreign data wrapper",
+        description: "",
+        reference: "",
+        tagList: ["PostgreSQL"],
+      },
+      {
+        name: "Foreign key",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "H",
+    list: [
+      {
+        name: "Hierarchical model",
+        description: `A data model in which the data are organized into a tree-like structure.
+        This is the first model used in database system from IBM. But it lost popularity to the relational model.
+        `,
+        reference: "https://en.wikipedia.org/wiki/Hierarchical_database_model",
+        tagList: ["General"],
+      },
+      {
+        name: "HTAP (Hybrid transactional/analytical processing)",
         description: "",
         reference: "",
         tagList: ["General"],
@@ -410,7 +633,101 @@ const ALPHA_LIST: AlphaItem[] = [
     letter: "I",
     list: [
       {
+        name: "Index",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
         name: "InnoDB",
+        description: `
+        `,
+        reference: "",
+        tagList: ["MySQL"],
+      },
+      {
+        name: "Isolation",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "J",
+    list: [
+      {
+        name: "JDBC",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Join",
+        description: `
+        `,
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "K",
+    list: [
+      {
+        name: "Key",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "L",
+    list: [
+      {
+        name: "Lock",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "LRU",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "M",
+    list: [
+      {
+        name: " Merge sort / Filesort",
+        description: "",
+        reference: "",
+        tagList: ["General", "MySQL"],
+      },
+      {
+        name: "Migration (database engine)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Migration (schema change)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "MMVC (Multi-version concurrency control)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "MySQL",
         description: "",
         reference: "",
         tagList: ["MySQL"],
@@ -418,12 +735,276 @@ const ALPHA_LIST: AlphaItem[] = [
     ],
   },
   {
+    letter: "N",
+    list: [
+      {
+        name: "Normalization",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "NewSQL",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "NoSQL",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "O",
+    list: [
+      {
+        name: "Optimizer",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "ODBC",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "OLAP (Online analytical processing)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "OLTP (Online transaction processing)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
     letter: "P",
     list: [
+      {
+        name: "Page",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Point-in-time-recovery (PITR)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
       {
         name: "PostGIS",
         description: "",
         reference: "https://postgis.net/",
+        tagList: ["PostgreSQL"],
+      },
+      {
+        name: "PostgreSQL",
+        description:
+          "A battle tested, well-engineered, multi-model, open source relational database. The only regret is its naming story.",
+        reference: "https://www.postgresql.org/",
+        tagList: ["PostgreSQL"],
+      },
+      {
+        name: "Primary key",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Project",
+        description: "",
+        reference: "",
+        tagList: ["Bytebase"],
+      },
+    ],
+  },
+  {
+    letter: "Q",
+    list: [
+      {
+        name: "Query",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "R",
+    list: [
+      {
+        name: "Redo log",
+        description: "See Write-ahead log",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Referential integrity",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Replication",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Restore",
+        description: ``,
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Result set",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Rollback",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "S",
+    list: [
+      {
+        name: "Schema",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Server / Database server",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "SQL",
+        description: "A better language than PHP.",
+        reference: "https://en.wikipedia.org/wiki/SQL",
+        tagList: ["General"],
+      },
+      {
+        name: "SQL review",
+        description: "",
+        reference: "",
+        tagList: ["General", "Bytebase"],
+      },
+      {
+        name: "Storage engine",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Stored procedure",
+        description:
+          "A subroutine coded and executed on the database directly. Looks handy, but always turns out to be a headache.",
+        reference: "https://en.wikipedia.org/wiki/Stored_procedure",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "T",
+    list: [
+      {
+        name: "Table",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Transaction",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Trigger",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "U",
+    list: [
+      {
+        name: "User-defined function (UDF)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Undo log",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "V",
+    list: [
+      {
+        name: "Vacuum",
+        description: "",
+        reference: "",
+        tagList: ["PostgreSQL"],
+      },
+      {
+        name: "View",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "W",
+    list: [
+      {
+        name: "Write-ahead log (WAL)",
+        description: "",
+        reference: "https://en.wikipedia.org/wiki/Write-ahead_logging",
+        tagList: ["General"],
+      },
+      {
+        name: "Undo log",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+    ],
+  },
+  {
+    letter: "X",
+    list: [
+      {
+        name: "XID",
+        description:
+          "The transaction ID and can cause database outage if not monitoring its wraparound status carefully.",
+        reference:
+          "https://www.2ndquadrant.com/en/blog/around-world-two-billion-transactions/",
         tagList: ["PostgreSQL"],
       },
     ],
