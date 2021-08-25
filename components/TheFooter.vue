@@ -259,6 +259,16 @@
                     Changelog
                   </NuxtLink>
                 </li>
+
+                <li>
+                  <NuxtLink
+                    to="/database-glossary"
+                    @click="track('glossary.footer')"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Database Glossary
+                  </NuxtLink>
+                </li>
               </ul>
             </div>
 

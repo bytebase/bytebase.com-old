@@ -46,6 +46,13 @@
             Blog
           </NuxtLink>
           <NuxtLink
+            to="/database-glossary"
+            @click.native="track('glossary.header')"
+            class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+          >
+            Glossary
+          </NuxtLink>
+          <NuxtLink
             to="/jobs"
             @click.native="track('job.header')"
             class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
