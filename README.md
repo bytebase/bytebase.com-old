@@ -2,8 +2,6 @@
 
 ### 🧲 We are looking for an experienced frontend engineer to lead Bytebase frontend development. Check out our [jobs page](https://bytebase.com/jobs).
 
-&nbsp;
-
 This is the source code for Bytebase.com.
 
 ## Quick contribution
