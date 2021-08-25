@@ -41,7 +41,7 @@
           class="ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-6 flex flex-col overflow-y-auto"
         >
           <div class="px-4 flex items-center justify-between">
-            <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+            <div class="text-lg font-medium text-gray-900">Filters</div>
             <button
               type="button"
               class="-mr-2 w-10 h-10 p-2 flex items-center justify-center text-gray-400 hover:text-gray-500"
@@ -141,9 +141,8 @@
             📕 Database Glossary
           </h1>
           <h2 class="mt-4 text-base text-gray-500">
-            A handy database glossary reference on the internet. We cover
-            general database, MySQL, PostgreSQL as well as Bytebase specific
-            topic.
+            A handy database reference on the internet. We cover general
+            database, MySQL, PostgreSQL as well as Bytebase specific topics.
           </h2>
           <div class="text-right">
             <a
@@ -157,8 +156,6 @@
 
         <div class="pt-12 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
           <aside>
-            <h2 class="sr-only">Filters</h2>
-
             <!-- Mobile filter dialog toggle, controls the 'mobileFilterDialogOpen' state. -->
             <button
               type="button"
