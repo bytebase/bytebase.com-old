@@ -208,6 +208,11 @@
                         />
                         <label class="ml-3 items-center text-sm text-gray-600">
                           {{ filter.name }}
+                          <span
+                            class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
+                          >
+                            {{ tagItemCount(filter.value) }}
+                          </span>
                         </label>
                       </div>
                     </div>
@@ -300,11 +305,11 @@
                   <p class="mt-4 text-gray-600">
                     {{ glossary.description }}
                   </p>
-                  <div v-if="glossary.reference" class="mt-2">
+                  <div v-if="glossary.reference" class="flex justify-end mt-2">
                     <a
                       :href="glossary.reference"
                       target="__blank"
-                      class="flex items-center text-indigo-600 hover:underline"
+                      class="flex items-center text-blue-600 hover:underline"
                       >Reference
                       <svg
                         class="w-4 h-4"
@@ -334,7 +339,7 @@
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
 
-type Tag = "General" | "Bytebase" | "MySQL" | "PostgreSQL";
+type Tag = "All" | "General" | "Bytebase" | "MySQL" | "PostgreSQL";
 
 type FilterItem = {
   value: Tag;
@@ -1037,6 +1042,18 @@ export default defineComponent({
       return name.toLowerCase().replaceAll(" ", "-");
     };
 
+    const tagItemCount = (tag: Tag): number => {
+      let count = 0;
+      for (const alpha of ALPHA_LIST) {
+        for (const glossary of alpha.list) {
+          if (tag == "All" || glossary.tagList.includes(tag)) {
+            count++;
+          }
+        }
+      }
+      return count;
+    };
+
     const filteredAlphaList = computed(() => {
       const filterTagList: Tag[] = [];
       for (const filter of state.filterList) {
@@ -1072,6 +1089,7 @@ export default defineComponent({
 
     return {
       state,
+      tagItemCount,
       glossaryAnchor,
       filteredAlphaList,
     };
