@@ -43,7 +43,7 @@
                   <span
                     class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800"
                   >
-                    New Release
+                    Announcement
                   </span>
                   <div class="block mt-2">
                     <p class="text-xl font-semibold text-gray-900">
