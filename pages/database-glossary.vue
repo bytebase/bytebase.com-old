@@ -408,7 +408,7 @@ const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Autonomous database",
         description:
-          "A shinny concept declaring the database can operate without DBA involvement (self-driving), which sounds a bit optimistic like the auto industry.",
+          "A shinny concept declaring the database can operate without DBA involvement, which sounds a bit optimistic like the self-driving technology in auto industry.",
         reference: "",
         tagList: ["General"],
       },
@@ -419,29 +419,33 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "B+ tree",
-        description: `The fundamental data structure used in all major database systems storing the data. 
-        B+ tree has a large fanout, which reduces the number of I/O operations to find the element.`,
+        description: `The fundamental data structure used in all major database systems storing the data.
+        B+ tree is a variation of B tree, both have a very large fanout to store links to the data page, which
+        greatly reduces the number of I/O operations to find the desired data. Unlike B tree which stores data
+        on the non-leaf node. B+ tree only stores data on the leaf node, which gives it a even large fanout to store links.`,
         reference: "https://en.wikipedia.org/wiki/B%2B_tree",
         tagList: ["General"],
       },
       {
         name: "Backup",
-        description: ``,
-        reference: "",
+        description: `A copy of data taken and may be used to restore after a data loss event. Bytebase supports both the manual (on-demand)
+        and the automatic per-database backup.`,
+        reference:
+          "https://docs.bytebase.com/use-bytebase/backup-restore-database",
         tagList: ["General", "Bytebase"],
       },
       {
         name: "Bloom filter",
-        description: `A space-efficient probabilistic data structure commonly used by the query engine to eliminate
-        unnecessary I/O or remote data fetch.`,
+        description: `A space-efficient probabilistic data structure commonly used by the query engine to greatly reduce
+        I/O operations or remote data fetch in the case of distributed environment.`,
         reference: "https://en.wikipedia.org/wiki/Bloom_filter",
         tagList: ["General"],
       },
       {
         name: "Buffer pool / Buffer cache",
         description: `A consecutive memory area to cache table and index data in memory to avoid I/O operations.
-        The buffer pool consists of many pages of same size (normally between 4K ~ 16K bytes), and normally a 
-        variation of LRU (Least Recently Used) strategy is used to swap buffer pages.`,
+        The buffer pool consists of many pages of same size (normal values are 4K, 8K, 16K bytes), and a variation of 
+        LRU (Least Recently Used) strategy is often used to swap buffer pages.`,
         reference: "",
         tagList: ["General"],
       },
@@ -451,52 +455,69 @@ const ALPHA_LIST: AlphaItem[] = [
     letter: "C",
     list: [
       {
-        name: "Catalog",
-        description: ``,
-        reference: "",
+        name: "Catalog (Database Catalog)",
+        description: `Records the metadata of the database, which are stored in the so-called System Table. The metadata 
+        includes the database name, table name, database users and their permissions, etc.`,
+        reference: "https://en.wikipedia.org/wiki/Database_catalog",
         tagList: ["General"],
       },
       {
         name: "Checkpoint",
-        description: ``,
-        reference: "",
+        description: `The original idea comes from the ARIES paper (see reference). For performance reason, database
+        does not persist modified data to disk after every committed change, instead, it periodically issues checkpoint which persists
+        the changes in batch. It's called checkpoint because when database crahes and then starts again for crash recovery, the
+        recovery process only needs to recover the committed changes after the latest checkpoint because the checkpoint
+        guarantees any commits before that checkpoint have been persisted already. Checkpoint is still a heavy operation and
+        may impact database performance.
+        `,
+        reference: "https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf",
         tagList: ["General"],
       },
       {
         name: "Column",
-        description: ``,
-        reference: "",
+        description: `A set of data values of a particular type, one value for each row of the database. Column can also have constraints such
+        as non-emptiness, having a certain prefix and etc.`,
+        reference: "https://en.wikipedia.org/wiki/Column_(database)",
         tagList: ["General"],
       },
       {
         name: "Commit",
-        description: ``,
-        reference: "",
+        description: `Commit marks the end of a transaction, persisting all mutations from that transaction. For performance reason, database
+        does not perist the change to data file directly upon commit, rather, it persists the change to a commit log also called write-ahead log.
+        Later on, database will do a checkpoint to persist those changes from write-ahead log to the data file in batch.`,
+        reference: "https://en.wikipedia.org/wiki/Commit_(data_management)",
         tagList: ["General"],
       },
       {
         name: "Consistency",
-        description: ``,
-        reference: "",
+        description: ` "C in ACID, database defines a set of constraints, the consistency property guarantees the same invariants before and after the transaction.`,
+        reference:
+          "https://en.wikipedia.org/wiki/Consistency_(database_systems)",
         tagList: ["General"],
       },
       {
         name: "Constraint",
-        description: `A space-efficient probabilistic data structure commonly used by the query engine to eliminate
-        unnecessary I/O or remote data fetch.`,
-        reference: "https://en.wikipedia.org/wiki/Bloom_filter",
+        description: `Specific requriement that must be met by the value stored in the database. Typical constraints are NOT NULL constraint, UNIQUE constraint and etc.`,
+        reference: "https://en.wikipedia.org/wiki/Check_constraint",
         tagList: ["General"],
       },
       {
         name: "Cost-based optimization (CBO)",
-        description: ``,
+        description: `A optimization strategy used by the query enigne to pick a query plan to execute the SQL statment based on the 
+        cost estimate. It's  the strategy used by all mainstream databases. It's predecessor is Rule-based optimization (RBO). The
+        advantage of CBO is it's more adaptive than the hard-coded RBO since it's based on the actual context, the number of estimated
+        rows to be fetched, the cost  of each fetch, the index to be used and etc. Because there are quite a few factors to consider,
+        and it's prohibitive expensive to explore all permutations, thus the database often finds the best plan among a subset of 
+        all possible plans.`,
         reference: "",
         tagList: ["General"],
       },
       {
         name: "Crash recovery",
-        description: ``,
-        reference: "",
+        description: `A process running upon database startup if the database is not shutdown properly (crash, power failure).
+        The process restores the database to the consistent state by rolling back incomplete transactions and completing committed
+        transactions. All mainstream database use the same crash recovery mechanism described in the ARIES paper (see reference).`,
+        reference: "https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf",
         tagList: ["General"],
       },
     ],
@@ -506,56 +527,74 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Data source",
-        description: ``,
-        reference: "",
+        description: `A connection set up to a database from a database instance. There could be multiple data sources for the same
+        database. e.g. one for read-only connection, and one for read-write connection.`,
+        reference: "https://en.wikipedia.org/wiki/Datasource",
         tagList: ["General"],
       },
       {
         name: "Data source name (DSN)",
-        description: ``,
-        reference: "",
+        description: `A string describing the data source. This is the one used by the database driver code to establish the connection
+        to the database. The format is a variation of <driver>://<username>:<password>@<host>:<port>/<database> depending on the specific
+        driver implementation.`,
+        reference: "https://en.wikipedia.org/wiki/Data_source_name",
         tagList: ["General"],
       },
       {
         name: "Data definition language (DDL)",
-        description: ``,
-        reference: "",
+        description: `The statement to change the structure (schema) of the database such as CREATE, ALTER, DROP statements.`,
+        reference: "https://en.wikipedia.org/wiki/Data_definition_language",
         tagList: ["General"],
       },
       {
         name: "Data manipulation language (DML)",
-        description: ``,
-        reference: "",
+        description: `The statement to query or change the data of the database such as SELECT, INSERT, UPDATE, DELETE statements.`,
+        reference: "https://en.wikipedia.org/wiki/Data_manipulation_language",
         tagList: ["General"],
       },
       {
         name: "Database",
-        description: ``,
-        reference: "",
+        description: `A logic collection of schema objects like tables, stored procedures, triggers, users. A database is the one created
+        by 'CREATE DATABASE'. Bytebase also has a database concept which is a 1:1 mapping to this database definition. Database in
+        Bytebase always belongs to a single project.`,
+        reference: "https://docs.bytebase.com/concepts/data-model#database",
         tagList: ["General", "Bytebase"],
       },
       {
         name: "Database instance",
-        description: ``,
-        reference: "",
+        description: `The complete running environment providing the database service. This is usually denoted by a host:port pointing
+        to the running instance. When people talk about MySQL/PostgreSQL instance, they usually refer to the database instance. A single
+        database instance can host many databases. Bytebase has an instance concept which is a 1:1 mapping to this instance definition.
+        Instance in Bytebase always belongs to a particular environment. Bytebase also stores the database schema migration history on
+        the instance itself.`,
+        reference:
+          "https://docs.bytebase.com/concepts/data-model#database-instance",
         tagList: ["General", "Bytebase"],
       },
       {
         name: "Database-as-code",
-        description: ``,
-        reference: "",
+        description: `A workflow to store database schema changes as a series of schema migration scripts in the version control system (VCS).
+        Whenever new script committed to the VCS, a process will kickoff automatically to start the process of applying the script to the database.
+        Thus the database schema change is managed in a very similar fashion as code. This workflow is considerred superior than the classic
+        UI based SQL review workflow. However, it requires a bit more setup and engineering discipline. Bytebase supports this workflow and helps
+        ease the onboarding and ongoing management of using this workflow.`,
+        reference: "https://docs.bytebase.com/features/version-control",
         tagList: ["General", "Bytebase"],
       },
       {
         name: "Deadlock",
-        description: ``,
+        description: `A situation in which multiple transactions are waiting for one another to give up locks. Transaction may acquire locks when
+        it's accessing a resource, if one transaction accesses resource A and then B, another transaction accesses resource B and then A, they may
+        hold lock on A and B respectively while waiting for each other to release another lock, thus a deadlock occurs. Database has a deadlock
+        detection algorithm to find such situation and would abort one of the transactions to resolve the deadlock.`,
         reference: "",
         tagList: ["General"],
       },
       {
         name: "Durability",
-        description: ``,
-        reference: "",
+        description: `D in ACID, the property to guarantee the changes after the successful transaction commit will survive permanently.`,
+        reference:
+          "https://en.wikipedia.org/wiki/Durability_(database_systems)",
         tagList: ["General"],
       },
     ],
@@ -597,6 +636,12 @@ const ALPHA_LIST: AlphaItem[] = [
         description: "",
         reference: "",
         tagList: ["General"],
+      },
+      {
+        name: "Filesort",
+        description: "",
+        reference: "",
+        tagList: ["General", "MySQL"],
       },
       {
         name: "Foreign data wrapper",
@@ -674,17 +719,6 @@ const ALPHA_LIST: AlphaItem[] = [
     ],
   },
   {
-    letter: "K",
-    list: [
-      {
-        name: "Key",
-        description: "",
-        reference: "",
-        tagList: ["General"],
-      },
-    ],
-  },
-  {
     letter: "L",
     list: [
       {
@@ -704,12 +738,6 @@ const ALPHA_LIST: AlphaItem[] = [
   {
     letter: "M",
     list: [
-      {
-        name: " Merge sort / Filesort",
-        description: "",
-        reference: "",
-        tagList: ["General", "MySQL"],
-      },
       {
         name: "Migration (database engine)",
         description: "",
@@ -898,6 +926,12 @@ const ALPHA_LIST: AlphaItem[] = [
         tagList: ["General"],
       },
       {
+        name: "Sharding",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
         name: "SQL",
         description: "A better language than PHP.",
         reference: "https://en.wikipedia.org/wiki/SQL",
@@ -988,12 +1022,6 @@ const ALPHA_LIST: AlphaItem[] = [
         name: "Write-ahead log (WAL)",
         description: "",
         reference: "https://en.wikipedia.org/wiki/Write-ahead_logging",
-        tagList: ["General"],
-      },
-      {
-        name: "Undo log",
-        description: "",
-        reference: "",
         tagList: ["General"],
       },
     ],
