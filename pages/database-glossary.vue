@@ -444,7 +444,7 @@ const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Buffer pool / Buffer cache",
         description: `A consecutive memory area to cache table and index data in memory to avoid I/O operations.
-        The buffer pool consists of many pages of same size (normal values are 4K, 8K, 16K bytes), and a variation of 
+        The buffer pool consists of many pages of same size (normal values are 4K, 8K, 16K bytes), and a variation of
         LRU (Least Recently Used) strategy is often used to swap buffer pages.`,
         reference: "",
         tagList: ["General"],
@@ -456,7 +456,7 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Catalog (Database Catalog)",
-        description: `Records the metadata of the database, which are stored in the so-called System Table. The metadata 
+        description: `Records the metadata of the database, which are stored in the so-called System Table. The metadata
         includes the database name, table name, database users and their permissions, etc.`,
         reference: "https://en.wikipedia.org/wiki/Database_catalog",
         tagList: ["General"],
@@ -503,11 +503,11 @@ const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Cost-based optimization (CBO)",
-        description: `A optimization strategy used by the query enigne to pick a query plan to execute the SQL statment based on the 
+        description: `A optimization strategy used by the query enigne to pick a query plan to execute the SQL statment based on the
         cost estimate. It's  the strategy used by all mainstream databases. It's predecessor is Rule-based optimization (RBO). The
         advantage of CBO is it's more adaptive than the hard-coded RBO since it's based on the actual context, the number of estimated
         rows to be fetched, the cost  of each fetch, the index to be used and etc. Because there are quite a few factors to consider,
-        and it's prohibitive expensive to explore all permutations, thus the database often finds the best plan among a subset of 
+        and it's prohibitive expensive to explore all permutations, thus the database often finds the best plan among a subset of
         all possible plans.`,
         reference: "",
         tagList: ["General"],
@@ -604,26 +604,38 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Encryption at rest (EAR)",
-        description: "",
-        reference: "",
+        description: `Database stores data in its own format on the disk. While the data looks obscure to the humans, it can be de-obfuscated
+        and altered with some effort. This poses a risk if malicious user has direct access to the disk, which can bypass the database
+        ACL system to access and alter the data. EAR is the method to encrypt the data on disk (at rest) using an encryption key, which makes
+        this attack impossible. Data is encrypted right before writing to the disk and decrypted right after reading from the disk.
+        `,
+        reference: "https://en.wikipedia.org/wiki/Data_at_rest",
         tagList: ["General"],
       },
       {
         name: "Encryption in transit",
-        description: "",
-        reference: "",
+        description: `Client normally accesss database server over a public or untrusted network, to prevents eavesdropping and man-in-the-middle
+        attack, database client and server would first establish a secure connection by agreeing on the encrytion algorithm and ephemeral encryption
+        key to use, then client and server can securely exchange the messages with each other.`,
+        reference: "https://en.wikipedia.org/wiki/Data_in_transit",
         tagList: ["General"],
       },
       {
         name: "Engine / Database engine",
-        description: "",
-        reference: "",
+        description: `Sometimes, this refers to the database type like MySQL, PostgreSQL. Sometimes, especially when we are talking
+        about a specific database, this refers to the underlying storage engine which manages the transaction and data storage layer
+        (e.g. Both InnoDB and MyISAM are a database engine of MySQL). The storage engine is one of the 3 core subsystems in a tranditional
+        database management system. The other 2 are the query engine and the server layer (managing ACL, client connections/sessions).
+        The storage engine would expose an API for other subsystems (mainly the query engine) to interact with it. Storage engine can operate
+        can also be a standlone component, in which case, it's used as a library (e.g. Berkeley DB).`,
+        reference: "https://en.wikipedia.org/wiki/Database_engine",
         tagList: ["General"],
       },
       {
         name: "Environment",
-        description: "",
-        reference: "",
+        description: `A top level model in Bytebase to model after various environments in the development pipeline such as test, staging, prod.
+        A bytebase database instance always belong to a single environment. Bytebase owner and DBA can also configure approval policies on the environment.`,
+        reference: "https://docs.bytebase.com/concepts/data-model#environment",
         tagList: ["Bytebase"],
       },
     ],
@@ -633,26 +645,35 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Failover",
-        description: "",
-        reference: "",
+        description: `An operation to switch to a secondary database instance when the primary database instance fails. That secondary instance
+        is commonly known as standby, failover replica. The key metrics to evaluate the failover are RPO (Recovery Point Objective) and
+        RTO (Recovery Time Objective).`,
+        reference: "https://en.wikipedia.org/wiki/Failover",
         tagList: ["General"],
       },
       {
-        name: "Filesort",
-        description: "",
-        reference: "",
+        name: "Filesort / External merge sort",
+        description: `When performing sorting operations for ORDER BY, GROUP BY and there is no sufficient memory to sort all data at once,
+        database will partition the data, sort them batch by batch and write the intermediate sorting results to disk. Since it involves
+        heavy I/O operations, it will drastically impact query performance.`,
+        reference: "https://dev.mysql.com/doc/internals/en/filesort.html",
         tagList: ["General", "MySQL"],
       },
       {
         name: "Foreign data wrapper",
-        description: "",
-        reference: "",
+        description: `A PostgreSQL specific feature to allow it access external data sources such as CSV file, MySQL database and etc.
+        Besides, unlike MySQL, PostgreSQL does not natively support accessing different databases in a single statement, to achieve the
+        similar result, user can also setup a PostgreSQL database as a foreign data source.`,
+        reference:
+          "https://www.postgresql.org/docs/current/ddl-foreign-data.html",
         tagList: ["PostgreSQL"],
       },
       {
         name: "Foreign key",
-        description: "",
-        reference: "",
+        description: `A set of attributes in a table that refers to the primary key of another table. The foreign key links 2 tables and
+        often establishes the referential integrity rules between 2 tables. (e.g a typical referential rule is a particular row can't be
+        removed if the row id is referenced in any foreign tables.).`,
+        reference: "https://en.wikipedia.org/wiki/Foreign_key",
         tagList: ["General"],
       },
     ],
@@ -670,8 +691,15 @@ const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "HTAP (Hybrid transactional/analytical processing)",
-        description: "",
-        reference: "",
+        description: `A new term coined recently to combine the transactional and analytical power into a single system.
+        Trandtionally, transactional and analytical processing are handled by different systems, which causes the headache
+        of maintanining 2 separate systems as well as duplicating the data and managing the pipeline to copy the data
+        from the online transactional system to the analytical system. HTAP gains popularity because it eliminates the
+        duplicate system and data, making near real-time analytic possible. On the other hand, the challenge still remains
+        as how to efficiently handle both transactional and analytical workload in the same system, and how to prevent analytical
+        workload interfering with online transactional processing.`,
+        reference:
+          "https://en.wikipedia.org/wiki/Hybrid_transactional/analytical_processing",
         tagList: ["General"],
       },
     ],
@@ -681,21 +709,28 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Index",
-        description: "",
-        reference: "",
+        description: `A data structure greatly improves the speed of data retrieval. Like the physical book index, the index
+        helps quickly locate a particular value or a range of values (finding a needle in a haystack). While good for boosting
+        query performance, index brings the overhead of updating the index entry whenever underlying data changes. Thus adding
+        /removing index is a balanced art and should be evaluated carefully.
+        maintaining index `,
+        reference: "https://en.wikipedia.org/wiki/Database_index",
         tagList: ["General"],
       },
       {
         name: "InnoDB",
-        description: `
+        description: `A well-engineered storage engine which is now the default storage engined used by MySQL. It's a performant
+        storage engine providing the standard ACID-compliant transaction features. Inno stands for "Innovation", InnoDB is the
+        lesser hero underpinning the many web services and saving huge amount of DBA headaches.
         `,
-        reference: "",
+        reference: "https://en.wikipedia.org/wiki/InnoDB",
         tagList: ["MySQL"],
       },
       {
         name: "Isolation",
-        description: "",
-        reference: "",
+        description: `I in ACID, the property defines the behavior of how concurent transactions sees changes from each other.
+        ANSI/ISO SQL defines 4 isolation levels in the order of ascending strictness: Read uncommitted, Read committed, Repeatable reads, Serializable.`,
+        reference: "https://en.wikipedia.org/wiki/Isolation_(database_systems)",
         tagList: ["General"],
       },
     ],
@@ -705,15 +740,17 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "JDBC",
-        description: "",
-        reference: "",
+        description: `Java Database Connectivity (JDBC) defines a standard API for Java to access database. Different database venders
+        implements the JDBC API so that Java programs can call the same standard API to access different databases.`,
+        reference: "https://en.wikipedia.org/wiki/Java_Database_Connectivity",
         tagList: ["General"],
       },
       {
         name: "Join",
-        description: `
+        description: `An opereator in relational algebra to combine columns from multiple tables into a single table. Query
+        engines usually fulfills the join request using one of the Nested-loop join, Merge join, Hash join methods.
         `,
-        reference: "",
+        reference: "https://en.wikipedia.org/wiki/Join_(SQL)",
         tagList: ["General"],
       },
     ],
@@ -791,7 +828,7 @@ const ALPHA_LIST: AlphaItem[] = [
     letter: "O",
     list: [
       {
-        name: "Optimizer",
+        name: "Optimizer / Query optimizer",
         description: "",
         reference: "",
         tagList: ["General"],
@@ -885,6 +922,12 @@ const ALPHA_LIST: AlphaItem[] = [
         tagList: ["General"],
       },
       {
+        name: "Relational model",
+        description: "See Write-ahead log",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
         name: "Replication",
         description: "",
         reference: "",
@@ -904,6 +947,18 @@ const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Rollback",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "RPO (Recovery Point Objective)",
+        description: "",
+        reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "RTO (Recovery Time Objective)",
         description: "",
         reference: "",
         tagList: ["General"],
