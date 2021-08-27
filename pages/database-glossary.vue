@@ -462,6 +462,13 @@ const ALPHA_LIST: AlphaItem[] = [
         tagList: ["General"],
       },
       {
+        name: "Change data capture (CDC)",
+        description: `A process to record the data changes. It's often used to copy the data to a different system such as
+        warehouse or a different database system in the process of migration.`,
+        reference: "https://en.wikipedia.org/wiki/Change_data_capture",
+        tagList: ["General"],
+      },
+      {
         name: "Checkpoint",
         description: `The original idea comes from the ARIES paper (see reference). For performance reason, database
         does not persist modified data to disk after every committed change, instead, it periodically issues checkpoint which persists
@@ -690,6 +697,13 @@ const ALPHA_LIST: AlphaItem[] = [
         tagList: ["General"],
       },
       {
+        name: "Hint",
+        description: `A hint to advice the query optimizer to use a particular optimization strategy which would be
+        otherwise ignored. Query optimizer usually follows the hint if specified.`,
+        reference: "https://en.wikipedia.org/wiki/Hint_(SQL)",
+        tagList: ["General"],
+      },
+      {
         name: "HTAP (Hybrid transactional/analytical processing)",
         description: `A new term coined recently to combine the transactional and analytical power into a single system.
         Trandtionally, transactional and analytical processing are handled by different systems, which causes the headache
@@ -733,6 +747,14 @@ const ALPHA_LIST: AlphaItem[] = [
         reference: "https://en.wikipedia.org/wiki/Isolation_(database_systems)",
         tagList: ["General"],
       },
+      {
+        name: "Issue",
+        description: `Issue is a Bytebase concept, each issue represents a specific collaboration activity between Developer and
+        DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
+        An issue always belong to a Bytebase Project.`,
+        reference: "https://docs.bytebase.com/concepts/data-model#issue",
+        tagList: ["General"],
+      },
     ],
   },
   {
@@ -760,14 +782,19 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Lock",
-        description: "",
-        reference: "",
+        description: `A technique to prevent simultaneous access to data in a database to prevent inconsisten results. Modern
+        databases all implement the granular row-level locking for performance reason. But some operations like altering the 
+        schema would still require table-level locking, which would block the normal online processing. That's the reason such
+        operations are performed during non-business hours to reduce impact.`,
+        reference: "https://en.wikipedia.org/wiki/Record_locking",
         tagList: ["General"],
       },
       {
-        name: "LRU",
-        description: "",
-        reference: "",
+        name: "LRU (Least Recently Used)",
+        description: `The algorithm used by database engines to swap the buffer pool pages. Different database engines use
+        a different variation of LRU algorithms.`,
+        reference:
+          "https://en.wikipedia.org/wiki/Page_replacement_algorithm#Least_recently_used",
         tagList: ["General"],
       },
     ],
@@ -776,27 +803,43 @@ const ALPHA_LIST: AlphaItem[] = [
     letter: "M",
     list: [
       {
-        name: "Migration (database engine)",
-        description: "",
+        name: "Migration (database system)",
+        description: `The process of migrating the entire database from one system to another (e.g. From MySQL to PostgreSQL or vice versa).
+        The process usually consists of 3 phase, 1) baseline phase 2) catchup phase 3) switchover phase. In the baseline phase, team creates
+        a data dump from the source database system and loads it into the target database system. 2) In the catchup phase, team configures a
+        change-data-capture (CDC) pipeline to stream the ongoing changes to the target database. 3) In the switchover phase, team cuts off
+        the traffic to the original database, wait for target database to catch up all new changes from the source database, and then redirect
+        the traffic to the target database. If executely carefully, the downtime would be limited to the blackout period in the switchover phase.
+        `,
         reference: "",
         tagList: ["General"],
       },
       {
         name: "Migration (schema change)",
-        description: "",
-        reference: "",
-        tagList: ["General"],
+        description: `The process of making changes to the database schema. The process is both dangerous and hard to fix. Performing a
+        successful schema migration requires coordination between developers, DBAs and the operating environment. Bytebase is a product
+        built specifically for addressing the challenges involved in this database schema change process. It supports the 2 most common
+        change workflows, 1) Classic UI-based SQL review workflow and 2) Version control based workflow (database-as-code).`,
+        reference: "https://docs.bytebase.com/concepts/schema-change-workflow",
+        tagList: ["General", "Bytebase"],
       },
       {
-        name: "MMVC (Multi-version concurrency control)",
-        description: "",
-        reference: "",
+        name: "MVCC (Multi-version concurrency control)",
+        description: `A method used to achieve both performant concurrent access and strict isolation level. The idea is to
+        give each transaction a unique versioned view of the data, thus each transaction can operate on their own. Only at
+        the commit phase, the database system will perform the resolution, the conflict might arise at this point and may
+        cause the transaction to abort. However, the assumption is such scenario is less likely to happen and that's why
+        MVCC is referred as optimistic concurrency control. A classic saying for MVCC, "Reads do not block Writes, writes
+        do not block Reads".`,
+        reference:
+          "https://en.wikipedia.org/wiki/Multiversion_concurrency_control",
         tagList: ["General"],
       },
       {
         name: "MySQL",
-        description: "",
-        reference: "",
+        description:
+          "A pragmatic, performant database secretly supporting a majority of internet services.",
+        reference: "https://www.mysql.com/",
         tagList: ["MySQL"],
       },
     ],
@@ -806,20 +849,27 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Normalization",
-        description: "",
-        reference: "",
+        description: `A process of designing a database schema in accordance with a series of so-called normal forms. The design
+          requires skillful balance among data redudancy, data integrity, performance and etc.`,
+        reference: "https://en.wikipedia.org/wiki/Database_normalization",
         tagList: ["General"],
       },
       {
         name: "NewSQL",
-        description: "",
-        reference: "",
+        description: `A class of relational database management systems that seek to provide the scalability of NoSQL systems for 
+          online transaction processing (OLTP) workloads while maintaining the ACID guarantees of a traditional database system. This
+          emerges from the NoSQL movement which advocates scalability over classic ACID guarantees. And only after hard learned lessons,
+          people realize the merits of the old wisdom and add ACID to the NoSQL, thus resulting in NewSQL.
+          `,
+        reference: "https://en.wikipedia.org/wiki/NewSQL",
         tagList: ["General"],
       },
       {
         name: "NoSQL",
-        description: "",
-        reference: "",
+        description: `A class of database management systems does not provide SQL like interface or does not employ relational
+        model. A key difference from the relational database group is NoSQL does not enforce schema (schemaless). Notable 
+        NoSQL are Redis, MongoDB, AWS DynamoDB`,
+        reference: "https://en.wikipedia.org/wiki/NoSQL",
         tagList: ["General"],
       },
     ],
@@ -829,26 +879,37 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Optimizer / Query optimizer",
-        description: "",
-        reference: "",
+        description: `A key subsytem in relational database to determine the efficient way to execute a given query in a timely fashion.
+          It tranforms an input SQL query into an executable query plan. Most mainstream databases use the cost-based optimizer (CBO) which
+          determines the best query by calculating the cost of many factors such I/O speed, number of rows to be accessed etc. Because
+          the cost is an estimate, and also the plan needs to be generated in a timely fashion, thus the optimizer can not permutate all
+          possible plans and pick the optimal plan.`,
+        reference: "https://en.wikipedia.org/wiki/Query_optimization",
         tagList: ["General"],
       },
       {
-        name: "ODBC",
-        description: "",
-        reference: "",
+        name: "ODBC (Open Database Connectivity)",
+        description: `A standard API for accessing database management systems. Its current usage is more limited to Microsoft ecosystems
+        beause other programming environments employ different but similar standard API (like JDBC for Java, database/sql for Golang).
+        `,
+        reference: "https://en.wikipedia.org/wiki/Open_Database_Connectivity",
         tagList: ["General"],
       },
       {
         name: "OLAP (Online analytical processing)",
-        description: "",
+        description: `A process specializing in handling multi-dimensional analytical queries efficiently. This is often used
+        in database warehouse, business intelligence. Traditionally, a specialized system is built for this type of processing. But
+        nowadays, many systems try to combine the OLAP and OLTP power into a single system known as HTAP (Hybrid transactional/analytical processing).`,
         reference: "",
         tagList: ["General"],
       },
       {
         name: "OLTP (Online transaction processing)",
-        description: "",
-        reference: "",
+        description: `A process specializing in online transaction processing. It's optimized for serving requests in milliseconds
+        for hundreds of thousands customers concurrently, while conforming ACID transaction properties. Nowadays, more OLTP system evolves to
+        handle OLAP, which becomes a HTAP system.`,
+        reference:
+          "https://en.wikipedia.org/wiki/Online_transaction_processing",
         tagList: ["General"],
       },
     ],
@@ -858,19 +919,26 @@ const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Page",
-        description: "",
+        description: `Both on disk and in memory, database data is stored as a consecutive byte blocks with same size. Each block is
+        called a page. Normal page size are 4KB, 8KB, 16KB bytes. Data I/O operation is performed on the unit of pages. Most of the time,
+        database can't hold all data in the memory, thus it employs a buffer pool to maintain a list of active pages based on LRU. The
+        buffer pool swaps the pages continously based on the access pattern, a process known as page-in, page-out.`,
         reference: "",
         tagList: ["General"],
       },
       {
         name: "Point-in-time-recovery (PITR)",
-        description: "",
-        reference: "",
+        description: `A process to restore the database state to a particular point in time. This is often achieved by first restoring 
+        the database using a base backup (baselining) and then replaying the change-data-capature (CDC) logs up to the desired point in
+        time.`,
+        reference: "https://en.wikipedia.org/wiki/Point-in-time_recovery",
         tagList: ["General"],
       },
       {
         name: "PostGIS",
-        description: "",
+        description: `An open source PostgreSQL plugin providing sophisticated geo-spatial operations. It leverages the PostgreSQL
+        extensibilities to offer a native geo-spatial processing experience. It's one of the features setting PostgreSQL apart from
+        other database systems.`,
         reference: "https://postgis.net/",
         tagList: ["PostgreSQL"],
       },
@@ -883,14 +951,17 @@ const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Primary key",
-        description: "",
-        reference: "",
+        description: `A set of columns that uniquely identifies a row in a table. It could be a single column such as UUID or a set
+        of columns. Many database systems requires user to specify the primary key in the table schema, for those not specified, an
+        internal primary key is always created since the primary key is required to identify and address a particular row.`,
+        reference: "https://en.wikipedia.org/wiki/Primary_key",
         tagList: ["General"],
       },
       {
         name: "Project",
-        description: "",
-        reference: "",
+        description: `Project is a Bytebase top-level model and is a logic unit to model a team effort. It's similar to the project
+        concept in other dev tools such as Jira, GitLab. Project is the container to group logically related Databases,  Issues and Users together.`,
+        reference: "https://docs.bytebase.com/concepts/data-model#project",
         tagList: ["Bytebase"],
       },
     ],
@@ -902,6 +973,12 @@ const ALPHA_LIST: AlphaItem[] = [
         name: "Query",
         description: "",
         reference: "",
+        tagList: ["General"],
+      },
+      {
+        name: "Query Plan",
+        description: "",
+        reference: "https://en.wikipedia.org/wiki/Query_plan",
         tagList: ["General"],
       },
     ],
