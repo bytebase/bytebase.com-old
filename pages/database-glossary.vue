@@ -335,7 +335,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
-import { Tag } from "./glossaryTypes";
+import { AlphaItem, Glosssary, Tag } from "./glossaryTypes";
 import { ALPHA_LIST } from "./glossary";
 
 type FilterItem = {
