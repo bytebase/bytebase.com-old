@@ -137,7 +137,9 @@
 
       <main class="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="border-b border-gray-200 pb-4">
-          <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">
+          <h1
+            class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900"
+          >
             📕 Database Glossary
           </h1>
           <h2 class="mt-4 text-base text-gray-500">
