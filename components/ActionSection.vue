@@ -5,7 +5,7 @@
         href="https://github.com/bytebase/bytebase#installation"
         target="_blank"
         @click="track()"
-        class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
+        class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
       >
         {{ actionSentence }}
         <svg

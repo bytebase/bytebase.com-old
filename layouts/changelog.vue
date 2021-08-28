@@ -1,7 +1,7 @@
 <template>
   <div class="relative overflow-hidden">
     <TheHeader />
-    <main class="mt-16 mx-auto px-4">
+    <main class="mt-8 sm:mt-16 mx-auto px-4">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2

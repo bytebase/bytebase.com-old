@@ -1,14 +1,24 @@
 <template>
   <header class="relative pt-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="sm:hidden flex items-center justify-between w-full sm:w-auto">
+      <div
+        class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
+      >
         <NuxtLink to="/">
           <span class="sr-only">Bytebase</span>
           <img class="h-6 sm:h-8 w-auto" src="~/assets/logo.svg" alt="" />
         </NuxtLink>
+        <a
+          href="https://github.com/bytebase/bytebase?ref=bytebase.com"
+          target="_blank"
+          @click="track('github.header')"
+          class="flex-shrink-0 sm:hidden border-none rounded-full hover:opacity-80"
+        >
+          <img class="h-8 w-auto" src="~/assets/github_logo.png" alt="" />
+        </a>
       </div>
       <nav
-        class="relative flex items-center justify-between sm:h-10 sm:justify-center space-x-2"
+        class="relative flex items-center justify-between sm:h-10 sm:justify-center"
         aria-label="Global"
       >
         <div
@@ -21,12 +31,14 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="flex items-center justify-between space-x-2 sm:space-x-8">
+        <div
+          class="flex items-center justify-between text-sm sm:text-xl font-semibold space-x-2 sm:space-x-8"
+        >
           <a
             href="https://demo.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('demo.header')"
-            class="text-blue-600 text-base sm:text-xl font-semibold"
+            class="text-blue-600"
             style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
           >
             Demo
@@ -34,28 +46,28 @@
           <NuxtLink
             to="/changelog"
             @click.native="track('changelog.header')"
-            class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Changelog
           </NuxtLink>
           <NuxtLink
             to="/blog"
             @click.native="track('blog.header')"
-            class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Blog
           </NuxtLink>
           <NuxtLink
             to="/database-glossary"
             @click.native="track('glossary.header')"
-            class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Glossary
           </NuxtLink>
           <NuxtLink
             to="/jobs"
             @click.native="track('job.header')"
-            class="text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500 hover:underline whitespace-nowrap"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Jobs🔥
           </NuxtLink>
@@ -63,7 +75,7 @@
             href="https://docs.bytebase.com?ref=bytebase.com"
             target="_blank"
             @click="track('doc.header')"
-            class="flex text-gray-700 text-base sm:text-xl font-semibold hover:text-gray-500"
+            class="flex text-gray-700 hover:text-gray-500"
           >
             Docs
             <svg
@@ -80,14 +92,6 @@
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               ></path>
             </svg>
-          </a>
-          <a
-            href="https://github.com/bytebase/bytebase?ref=bytebase.com"
-            target="_blank"
-            @click="track('github.header')"
-            class="flex-shrink-0 sm:hidden border-none rounded-full hover:opacity-80"
-          >
-            <img class="h-8 w-auto" src="~/assets/github_logo.png" alt="" />
           </a>
         </div>
         <div
