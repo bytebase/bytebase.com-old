@@ -22,7 +22,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Audit log / Audit trail",
         description: `A set of chronological records providing documentary evidence of a series of database activities.
           User activities such as login attempt, DDL operations are often captured. For DML operations, due to its large volume and
-          impact on performance, is normally not captured.`,
+          impact on performance, is normally sampled or not captured at all.`,
         reference: "https://en.wikipedia.org/wiki/Atomicity_(database_systems)",
         tagList: ["General"],
       },
@@ -40,9 +40,10 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "B+ tree",
         description: `The fundamental data structure used in all major database systems storing the data.
-        B+ tree is a variation of B tree, both have a very large fanout to store links to the data page, which
+        B+ tree is a variation of B tree, both have a very large fanout to store indexes to the data page, which
         greatly reduces the number of I/O operations to find the desired data. Unlike B tree which stores data
-        on the non-leaf node. B+ tree only stores data on the leaf node, which gives it a even large fanout to store links.`,
+        on both leaf and non-leaf node. B+ tree only stores data on the leaf node and index data on the non-leaf node, 
+        which gives B+ tree a even large fanout on the intermediate non-leaf index node.`,
         reference: "https://en.wikipedia.org/wiki/B%2B_tree",
         tagList: ["General"],
       },
@@ -57,7 +58,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Bloom filter",
         description: `A space-efficient probabilistic data structure commonly used by the query engine to greatly reduce
-        I/O operations or remote data fetch in the case of distributed environment.`,
+        I/O operations or remote data fetch involving distributed query.`,
         reference: "https://en.wikipedia.org/wiki/Bloom_filter",
         tagList: ["General"],
       },
@@ -65,7 +66,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Buffer pool / Buffer cache",
         description: `A consecutive memory area to cache table and index data in memory to avoid I/O operations.
         The buffer pool consists of many pages of same size (normal values are 4K, 8K, 16K bytes), and a variation of
-        LRU (Least Recently Used) strategy is often used to swap buffer pages.`,
+        LRU (Least Recently Used) replacement strategy is often used to swap buffer pages.`,
         tagList: ["General"],
       },
     ],
