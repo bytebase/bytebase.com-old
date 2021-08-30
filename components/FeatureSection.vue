@@ -59,7 +59,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                   ></path>
                 </svg>
               </span>
@@ -104,6 +104,40 @@
             <p class="mt-5 text-base text-gray-500">
               Support multi-stage, multi-environment schema change in a single
               pipeline.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6">
+        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+          <div class="-mt-6">
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+              Backup and Restore
+            </h3>
+            <p class="mt-5 text-base text-gray-500">
+              Per-database automatic and manual backup. Restore to new database
+              with the entire restored chain history.
             </p>
           </div>
         </div>
@@ -172,40 +206,6 @@
             <p class="mt-5 text-base text-gray-500">
               Retire instead of destroying. Prevent breaking the system
               accidentally while keeping it manageable.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-          <div class="-mt-6">
-            <div>
-              <span
-                class="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  ></path>
-                </svg>
-              </span>
-            </div>
-            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Plug-and-Play
-            </h3>
-            <p class="mt-5 text-base text-gray-500">
-              Zero-config, dependency free, operational friendly, deploy in 5
-              seconds.
             </p>
           </div>
         </div>
