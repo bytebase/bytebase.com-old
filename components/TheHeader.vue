@@ -9,13 +9,14 @@
           <img class="h-6 sm:h-8 w-auto" src="~/assets/logo.svg" alt="" />
         </NuxtLink>
         <a
-          href="https://github.com/bytebase/bytebase?ref=bytebase.com"
-          target="_blank"
-          @click="track('github.header')"
-          class="flex-shrink-0 sm:hidden border-none rounded-full hover:opacity-80"
+          class="github-button"
+          href="https://github.com/bytebase/bytebase"
+          data-color-scheme="no-preference: light; light: light; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star bytebase/bytebase on GitHub"
+          >Star</a
         >
-          <img class="h-8 w-auto" src="~/assets/github_logo.png" alt="" />
-        </a>
       </div>
       <nav
         class="relative flex items-center justify-between sm:h-10 sm:justify-center"
@@ -94,17 +95,18 @@
             </svg>
           </a>
         </div>
-        <div
-          class="hidden sm:flex absolute items-center justify-end right-0 space-x-4"
-        >
+        <div class="hidden sm:flex absolute items-center justify-end right-0">
+          <img class="-mt-8 h-10 w-auto" src="~/assets/starus.png" alt="" />
+          <!-- Place this tag where you want the button to render. -->
           <a
-            href="https://github.com/bytebase/bytebase?ref=bytebase.com"
-            target="_blank"
-            @click="track('github.header')"
-            class="right-0 border-none rounded-full hover:opacity-80"
+            class="github-button"
+            href="https://github.com/bytebase/bytebase"
+            data-color-scheme="no-preference: light; light: light; dark: dark;"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star bytebase/bytebase on GitHub"
+            >Star</a
           >
-            <img class="h-16 w-auto" src="~/assets/github_logo.png" alt="" />
-          </a>
         </div>
       </nav>
     </div>
