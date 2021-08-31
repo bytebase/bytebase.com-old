@@ -7,6 +7,96 @@
             <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                >Aug 31, 2021</span
+              >
+              <a
+                href="#release-030"
+                id="release-030"
+                class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
+              >
+                Bytebase 0.4.1
+              </a>
+            </h1>
+            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+              Update instruction
+              <ul class="mt-4 text-lg space-y-2">
+                <li>
+                  For fresh installation, follow
+                  <a
+                    href="https://github.com/bytebase/bytebase#installation"
+                    target="__blank"
+                    >https://github.com/bytebase/bytebase#installation</a
+                  >.
+                </li>
+                <li>
+                  If you upgrade from 0.4.0, you dont't need to do anything. If
+                  you upgrade from veresion before 0.4.0, then it requires
+                  manual schema change, please contact
+                  <a href="mailto:support@bytebase.com" target="__blank"
+                    >support@bytebase.com</a
+                  >
+                  and we will assist you to perform the manual upgrade.
+                </li>
+              </ul>
+              <h2>🚀 New Features</h2>
+              <ul role="list">
+                <li>
+                  <strong
+                    >SQL rollback (<a
+                      href="https://docs.bytebase.com/use-bytebase/sql-review-interface/rollback-sql"
+                      target="__blank"
+                      >detailed guide</a
+                    >)</strong
+                  >
+                  - User can now create rollback issue from the original closed
+                  issue easily via the UI.
+                </li>
+              </ul>
+              <h2>🎄 Experience Enhancement</h2>
+              <ul role="list">
+                <li>
+                  Taking backup in a single transaction to make the backup
+                  consistent.
+                </li>
+                <li>
+                  Add alter schema button on the database detail page.
+                </li>
+                <li>
+                  Add button to allow quickly applying SQL statements to other
+                  pipeline stages.
+                </li>
+                <li>
+                  Hide project quick action list for non-project member.
+                </li>
+                <li>
+                  Optimize database table list.
+                </li>
+              </ul>
+              <h2>🎠 Community</h2>
+              <ul role="list">
+                <li>
+                  We have reworked our changelog and blog site to build directly
+                  on bytebase.com. This should offer a better browsing
+                  experience for our users.
+                </li>
+                <li>
+                  We published our first technical post on database schema
+                  design
+                  <a
+                    href="http://localhost:57306/blog/choose-primary-key-uuid-or-auto-increment"
+                    target="__blank"
+                    >Choose Primary Key - UUID or Auto Increment Integer?</a
+                  >
+                  Go check it out.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h1>
+              <span
+                class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 19, 2021</span
               >
               <a
