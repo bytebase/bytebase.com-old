@@ -15,9 +15,12 @@
           Open source, web-based, zero-config, dependency-free database schema
           change and version control tool for Developer and DBA.
         </h2>
+        <div class="mt-8">
+          <SubscribeSection />
+        </div>
       </div>
 
-      <div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="bg-white py-12">
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
           <div
             class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
@@ -100,7 +103,7 @@
         </div>
       </div>
 
-      <div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="bg-white py-12">
         <div
           class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl"
         >

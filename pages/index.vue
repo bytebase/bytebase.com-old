@@ -215,7 +215,7 @@
       </div>
     </div>
 
-    <div class="py-16 overflow-hidden ">
+    <div class="pt-16 overflow-hidden ">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
@@ -638,6 +638,9 @@
       </div>
     </div>
     <ActionSection class="sm:justify-center" :moduleName="'deploy.footer'" />
+    <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <SubscribeSection />
+    </div>
   </div>
 </template>
 
