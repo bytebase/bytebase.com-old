@@ -35,7 +35,7 @@
                 class="flex-shrink-0"
               >
                 <img
-                  class="h-48 w-full object-cover"
+                  class="h-60 w-full object-cover"
                   :src="post.feature_image"
                   :alt="post.feature_image_alt"
                 />
