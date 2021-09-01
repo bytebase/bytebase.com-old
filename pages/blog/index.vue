@@ -19,40 +19,50 @@
 
       <div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
-          <div>
-            <h2
-              class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
-            >
-              Featured
-            </h2>
+          <div
+            class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+          >
+            Featured
           </div>
-          <div class="mt-12">
-            <div class="flex flex-col col-span-3 border p-4 overflow-hidden">
-              <NuxtLink to="/blog/announce-bytebase" class="flex-shrink-0">
+          <div class="mt-12 space-y-6">
+            <div
+              v-for="(post, index) in featuredPosts"
+              :key="index"
+              class="flex flex-col col-span-3 border overflow-hidden"
+            >
+              <NuxtLink
+                :to="{ path: `blog/${post.slug}` }"
+                class="flex-shrink-0"
+              >
                 <img
-                  class="w-full object-cover"
-                  src="~/assets/blog/LogoText.png"
-                  alt=""
+                  class="h-48 w-full object-cover"
+                  :src="post.feature_image"
+                  :alt="post.feature_image_alt"
                 />
               </NuxtLink>
               <NuxtLink
-                to="/blog/announce-bytebase"
+                :to="{ path: `blog/${post.slug}` }"
                 class="flex-1 bg-white p-6 flex flex-col justify-between"
               >
                 <div class="flex-1">
-                  <span
-                    class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800"
+                  <div
+                    v-for="(tag, tagIndex) in post.tags"
+                    :key="tagIndex"
+                    class="inline-flex"
                   >
-                    Announcement
-                  </span>
+                    <span
+                      class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
+                      :class="getTagStyle(tag.name)"
+                    >
+                      {{ tag.name }}
+                    </span>
+                  </div>
                   <div class="block mt-2">
                     <p class="text-xl font-semibold text-gray-900">
-                      Announcing Bytebase
+                      {{ post.title }}
                     </p>
                     <p class="mt-3 text-base text-gray-500">
-                      Open source, web-based, zero-config, dependency-free
-                      database schema change and version control tool for
-                      Developer and DBA.
+                      {{ post.excerpt }}
                     </p>
                   </div>
                 </div>
@@ -60,18 +70,27 @@
                   <div class="flex-shrink-0">
                     <img
                       class="h-10 w-10 rounded-full"
-                      src="~/assets/avatar/tianzhou.webp"
+                      :src="post.authors[0].profile_image"
                       alt=""
                     />
                   </div>
                   <div class="ml-3">
                     <p class="text-sm font-medium text-gray-900">
-                      Tianzhou Chen
+                      {{ post.authors[0].name }}
                     </p>
                     <div class="flex space-x-1 text-sm text-gray-500">
-                      <time datetime="2021-07-12">
-                        Jul 12, 2021
+                      <time :datetime="post.published_at">
+                        {{
+                          new Date(post.published_at).toLocaleString(
+                            "default",
+                            { year: "numeric", month: "short", day: "numeric" }
+                          )
+                        }}
                       </time>
+                      <span aria-hidden="true">
+                        &middot;
+                      </span>
+                      <span> {{ post.reading_time }} min read </span>
                     </div>
                   </div>
                 </div>
@@ -85,54 +104,82 @@
         <div
           class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl"
         >
-          <div>
-            <h2
-              class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
-            >
-              Recent publications
-            </h2>
-          </div>
+          <h2
+            class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+          >
+            Recent publications
+          </h2>
           <div
             class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12"
           >
-            <div>
-              <div>
-                <span
-                  class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
-                >
-                  Database Schema Design
-                </span>
-              </div>
+            <div
+              v-for="(post, index) in posts"
+              :key="index"
+              class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+            >
               <NuxtLink
-                to="/blog/choose-primary-key-uuid-or-auto-increment"
-                class="block mt-4"
+                :to="{ path: `blog/${post.slug}` }"
+                class="flex-shrink-0"
               >
-                <p class="text-xl font-semibold text-gray-900">
-                  Choose Primary Key - UUID vs Auto Increment Integer?
-                </p>
-                <p class="mt-3 text-base text-gray-500">
-                  Choosing which primary key type to use can have a
-                  consequential effect down the road. And it's the one almost
-                  impossible to switch later. We list Pros and Cons between
-                  these 2 appoaches and give our recommendation.
-                </p>
+                <img
+                  class="h-48 w-full object-cover"
+                  :src="post.feature_image"
+                  :alt="post.feature_image_alt"
+                />
               </NuxtLink>
-              <div class="mt-6 flex items-center">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-10 w-10 rounded-full"
-                    src="~/assets/avatar/tianzhou.webp"
-                    alt=""
-                  />
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div
+                    v-for="(tag, tagIndex) in post.tags"
+                    :key="tagIndex"
+                    class="inline-flex"
+                  >
+                    <span
+                      class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
+                      :class="getTagStyle(tag.name)"
+                    >
+                      {{ tag.name }}
+                    </span>
+                  </div>
+                  <NuxtLink
+                    :to="{ path: `blog/${post.slug}` }"
+                    class="block mt-2"
+                  >
+                    <p class="text-xl font-semibold text-gray-900">
+                      {{ post.title }}
+                    </p>
+                    <p class="mt-3 text-base text-gray-500 ">
+                      {{ post.excerpt }}
+                    </p>
+                  </NuxtLink>
                 </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">
-                    Tianzhou Chen
-                  </p>
-                  <div class="flex space-x-1 text-sm text-gray-500">
-                    <time datetime="2021-08-24">
-                      Aug 24, 2021
-                    </time>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <span class="sr-only">{{ post.authors[0].name }}</span>
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      :src="post.authors[0].profile_image"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      {{ post.authors[0].name }}
+                    </p>
+                    <div class="flex space-x-1 text-sm text-gray-500">
+                      <time :datetime="post.published_at">
+                        {{
+                          new Date(post.published_at).toLocaleString(
+                            "default",
+                            { year: "numeric", month: "short", day: "numeric" }
+                          )
+                        }}
+                      </time>
+                      <span aria-hidden="true">
+                        &middot;
+                      </span>
+                      <span> {{ post.reading_time }} min read </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -145,19 +192,41 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
+import { PostTag, tagStyle } from "./util";
+import { getPosts } from "../../api/posts";
 
-export default defineComponent({
-  head: {
-    title: "Blog",
-    meta: [
-      {
-        hid: "Bytebase Blog",
-        name: "Bytebase Blog",
-        content: "Bytebase Blog",
-      },
-    ],
+export default {
+  head() {
+    return {
+      title: "Blog",
+      meta: [
+        {
+          hid: "Bytebase Blog",
+          name: "Bytebase Blog",
+          content: "Bytebase Blog",
+        },
+      ],
+    };
   },
-  setup() {},
-});
+  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
+  async asyncData() {
+    const list = (await getPosts()) as PostsOrPages;
+    const featuredPosts: PostOrPage[] = [];
+    const posts: PostOrPage[] = [];
+    for (const post of list) {
+      if (post.featured) {
+        featuredPosts.push(post);
+      } else {
+        posts.push(post);
+      }
+    }
+    return { posts, featuredPosts };
+  },
+  methods: {
+    getTagStyle(tag: PostTag): string {
+      return tagStyle(tag);
+    },
+  },
+};
 </script>
