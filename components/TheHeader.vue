@@ -1,5 +1,6 @@
 <template>
   <header class="relative pt-6">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
