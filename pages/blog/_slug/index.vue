@@ -44,12 +44,17 @@
         <span> {{ post.reading_time }} min read </span>
       </div></span
     >
-    <main
+    <div
       class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
       v-html="post.html"
     >
       {{ post.html }}
-    </main>
+    </div>
+
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <SubscribeSection :moduleName="'subscribe.blog-detail'" />
+    </div>
+    <ActionSection class="sm:justify-center" :moduleName="'deploy.blog'" />
   </main>
 </template>
 
@@ -58,9 +63,6 @@ import { PostTag, tagStyle } from "../util";
 import { getSinglePost } from "../../../api/posts";
 
 export default {
-  layout() {
-    return "blog";
-  },
   head() {
     return {
       title: (this as any).post.title,

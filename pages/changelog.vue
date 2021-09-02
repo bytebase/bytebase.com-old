@@ -1,7 +1,20 @@
 <template>
   <div class="max-w-7xl mx-auto">
-    <div class="relative py-16 bg-white overflow-hidden">
+    <div class="relative bg-white overflow-hidden">
       <div class="relative px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          Changelog
+        </h2>
+        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
+          New features and enhancements to Bytebase.
+        </p>
+
+        <div class="my-8 max-w-xl mx-auto lg:max-w-7xl">
+          <SubscribeSection :moduleName="'subscribe.changelog'" />
+        </div>
+
         <div class="text-lg mx-auto space-y-16">
           <div>
             <h1>
@@ -492,7 +505,6 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  layout: "changelog",
   head: {
     title: "Bytebase Changelog",
     meta: [
