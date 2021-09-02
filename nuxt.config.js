@@ -63,6 +63,10 @@ export default {
     config: {
       plugins: [tailwindTypography],
     },
+    purge: {
+      // "bg-", "text-" are used by tag
+      safelist: [/^bg-/, /^text-/],
+    },
   },
 
   plausible: {
