@@ -32,6 +32,7 @@ export default {
 
   router: {
     linkExactActiveClass: "underline",
+    linkActiveClass: "underline",
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
