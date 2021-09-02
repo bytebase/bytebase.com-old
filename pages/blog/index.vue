@@ -220,9 +220,8 @@ export default {
     for (const post of list) {
       if (post.featured) {
         featuredPosts.push(post);
-      } else {
-        posts.push(post);
       }
+      posts.push(post);
     }
     return { posts, featuredPosts };
   },
