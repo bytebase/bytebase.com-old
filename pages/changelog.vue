@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto">
     <div class="relative py-16 bg-white overflow-hidden">
       <div class="relative px-4 sm:px-6 lg:px-8">
-        <div class="text-lg max-w-prose mx-auto space-y-16">
+        <div class="text-lg mx-auto space-y-16">
           <div>
             <h1>
               <span
@@ -17,7 +17,9 @@
                 Bytebase 0.4.1
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -107,7 +109,9 @@
                 Bytebase 0.4.0
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -210,7 +214,9 @@
                 Bytebase 0.3.0
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -290,7 +296,9 @@
                 Bytebase 0.2.2
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -380,7 +388,9 @@
                 Bytebase 0.2.0
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               Update instruction
               <ul class="mt-4 text-lg space-y-2">
                 <li>
@@ -456,7 +466,9 @@
                 Bytebase 0.1.0
               </a>
             </h1>
-            <div class="mt-6 prose prose-indigo prose-xl text-gray-500 mx-auto">
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
               For fresh installation, follow
               <a
                 href="https://github.com/bytebase/bytebase#installation"
