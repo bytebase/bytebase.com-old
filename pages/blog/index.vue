@@ -16,7 +16,7 @@
           change and version control tool for Developer and DBA.
         </h2>
         <div class="mt-8">
-          <SubscribeSection />
+          <SubscribeSection :moduleName="'subscribe.blog'" />
         </div>
       </div>
 

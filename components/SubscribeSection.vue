@@ -5,12 +5,13 @@
         Never miss a thing
       </h2>
       <p class="mt-3 max-w-3xl text-lg text-gray-500">
-        Product updates and everything about database.
+        Learn product updates and everything about database.
       </p>
     </div>
     <div class="mt-8 lg:mt-0 lg:ml-8">
       <a
-        href="https://bytebase.ghost.io/#/portal/signup"
+        href="https://newsletter.bytebase.com/#/portal/signup"
+        @click="track()"
         class="w-full flex items-center justify-center py-3 px-5 border border-transparent text-xl rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         Subscribe
@@ -18,3 +19,26 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "@nuxtjs/composition-api";
+import Plausible from "plausible-tracker";
+
+const { trackEvent } = Plausible();
+
+export default defineComponent({
+  props: {
+    moduleName: {
+      required: true,
+      type: String,
+    },
+  },
+  setup(props) {
+    const track = () => {
+      trackEvent(props.moduleName);
+    };
+
+    return { track };
+  },
+});
+</script>
