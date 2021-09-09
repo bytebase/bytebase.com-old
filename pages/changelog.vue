@@ -20,6 +20,137 @@
             <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                >Sep 9, 2021</span
+              >
+              <a
+                href="#release-041"
+                id="release-030"
+                class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
+              >
+                Bytebase 0.5.0
+              </a>
+            </h1>
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
+              Update instruction
+              <ul class="mt-4 text-lg space-y-2">
+                <li>
+                  For fresh installation, follow
+                  <a
+                    href="https://github.com/bytebase/bytebase#installation"
+                    target="__blank"
+                    >https://github.com/bytebase/bytebase#installation</a
+                  >.
+                </li>
+                <li>
+                  If you upgrade from previous veresion, then it requires manual
+                  schema change, please contact
+                  <a href="mailto:support@bytebase.com" target="__blank"
+                    >support@bytebase.com</a
+                  >
+                  and we will assist you to perform the manual upgrade.
+                </li>
+              </ul>
+              <h2>🐞 Important Bug Fixes</h2>
+              <ul role="list">
+                <li>
+                  <strong>MySQL 5.7 compatibility</strong> - In the previous
+                  version, Bytebase couldn't sync the migration history properly
+                  because it used a MySQL 8.0 only feature.
+                </li>
+              </ul>
+              <h2>🚀 New Features</h2>
+              <ul role="list">
+                <li>
+                  <strong>Project level activities</strong>
+                  <ul class="mt-4 text-lg space-y-2">
+                    <li>Database ownership transfer</li>
+                    <li>Membership change</li>
+                    <li>Version Control Workflow based push event</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Version Control Workflow enhancement</strong>
+                  <ul class="mt-4 text-lg space-y-2">
+                    <li>
+                      Allow user to specify the migration file path template.
+                      <a
+                        href="https://docs.bytebase.com/use-bytebase/vcs-integration/organize-repository-files#file-path-template"
+                        target="__blank"
+                        >Detailed guide</a
+                      >
+                    </li>
+                    <li>
+                      Allow user to specify the schema path template.
+                      <strong
+                        >This is useful to let repository always keep a complete
+                        schema of the corresponding database.</strong
+                      >
+                      <a
+                        href="https://docs.bytebase.com/use-bytebase/vcs-integration/organize-repository-files#schema-path-template"
+                        target="__blank"
+                        >Detailed guide</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong
+                    >Record schema snapshot in every migration history
+                    record</strong
+                  >
+                </li>
+                <li>
+                  <strong
+                    >A dedicated page for individual migration history</strong
+                  >
+                  - display applied migration statement as well as the schema
+                  snapshot after the migration.
+                </li>
+              </ul>
+              <h2>🎄 Enhancement</h2>
+              <ul role="list">
+                <li>
+                  Make task scheduler run task asynchronously.
+                </li>
+                <li>
+                  For database creation task, add database and its creation
+                  state (pending or created) to the issue sidebar.
+                </li>
+                <li>
+                  For database schema update task, show indication if it's a
+                  baseline migration.
+                </li>
+                <li>Add schema version link to the backup table row.</li>
+              </ul>
+              <h2>🎠 Community</h2>
+              <ul role="list">
+                <li>
+                  Thanks
+                  <a href="https://github.com/chenliang" target="__blank"
+                    >@chenliang</a
+                  >
+                  for providing a detailed bug report for MySQL compatibility
+                  issue and even suggesting the fix.
+                </li>
+                <li>
+                  Thanks
+                  <a href="https://github.com/yaohui-wyh" target="__blank"
+                    >@yaohui-wyh</a
+                  >
+                  for the contribution.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h1>
+              <span
+                class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Aug 31, 2021</span
               >
               <a
