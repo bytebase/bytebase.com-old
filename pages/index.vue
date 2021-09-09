@@ -658,7 +658,7 @@ export default defineComponent({
     };
 
     useMeta({
-      title: "Bytebase | Open source, web-based db schema change for teams",
+      title: "Bytebase | Open source web-based db schema change for team",
       meta: [
         {
           hid: "bytebase",
