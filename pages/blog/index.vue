@@ -221,7 +221,10 @@ export default {
       if (post.featured) {
         featuredPosts.push(post);
       }
-      posts.push(post);
+      // Do not include Changelog in the blog page
+      if (post.tags?.findIndex((item) => item.name == "Changelog") == -1) {
+        posts.push(post);
+      }
     }
     return { posts, featuredPosts };
   },
