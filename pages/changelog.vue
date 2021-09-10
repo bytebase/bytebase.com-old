@@ -23,8 +23,8 @@
                 >Sep 9, 2021</span
               >
               <a
-                href="#release-041"
-                id="release-030"
+                href="#release-050"
+                id="release-050"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.5.0
@@ -155,7 +155,7 @@
               >
               <a
                 href="#release-041"
-                id="release-030"
+                id="release-041"
                 class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
               >
                 Bytebase 0.4.1
