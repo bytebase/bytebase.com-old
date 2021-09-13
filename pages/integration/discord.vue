@@ -20,7 +20,7 @@
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
       >
-        <ActionSection :moduleName="'deploy.integration'" />
+        <ActionSection :moduleName="'integration'" />
       </div>
     </div>
     <div

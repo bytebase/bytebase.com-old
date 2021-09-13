@@ -36,15 +36,6 @@
         <div
           class="flex items-center justify-between text-sm sm:text-xl font-semibold space-x-2 sm:space-x-8"
         >
-          <a
-            href="https://demo.bytebase.com?ref=bytebase.com"
-            target="_blank"
-            @click="track('demo.header')"
-            class="text-blue-600"
-            style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-          >
-            Demo
-          </a>
           <NuxtLink
             to="/changelog"
             @click.native="track('changelog.header')"
