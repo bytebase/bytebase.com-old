@@ -83,12 +83,13 @@
       <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div class="space-y-5 sm:space-y-4">
-            <h2
+            <a
               id="team"
-              class="text-3xl font-extrabold tracking-tight sm:text-4xl"
+              href="#team"
+              class="text-3xl font-extrabold tracking-tight sm:text-4xl hover:underline"
             >
               Team
-            </h2>
+            </a>
           </div>
           <div class="lg:col-span-2">
             <ul

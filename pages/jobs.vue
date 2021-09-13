@@ -24,6 +24,16 @@
                 <p>
                   We value crafts and we care what you have built in the past
                   instead of where you have worked and studied.
+                  <NuxtLink
+                    to="/about#team"
+                    @click.native="track('about.job')"
+                    class="text-blue-600"
+                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  >
+                    Our team
+                  </NuxtLink>
+                  have built products managing one of the largest database
+                  fleets, supporting one of the largest developer organization.
                 </p>
               </div>
             </blockquote>
@@ -347,6 +357,9 @@
 
 <script lang="ts">
 import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import Plausible from "plausible-tracker";
+
+const { trackEvent } = Plausible();
 
 export default defineComponent({
   head: {},
@@ -363,7 +376,11 @@ export default defineComponent({
       ],
     });
 
-    return;
+    const track = (name: string) => {
+      trackEvent(name);
+    };
+
+    return { track };
   },
 });
 </script>
