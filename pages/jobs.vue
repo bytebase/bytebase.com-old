@@ -33,7 +33,7 @@
                     Our team
                   </NuxtLink>
                   have built products managing one of the largest database
-                  fleets, supporting one of the largest developer organization.
+                  fleets, supporting one of the largest developer organizations.
                 </p>
               </div>
             </blockquote>
