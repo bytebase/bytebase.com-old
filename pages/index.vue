@@ -178,7 +178,7 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Version control workflow
+                  Version control workflow #GitOps
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
                   Database migration scripts are stored in a git repository. To
