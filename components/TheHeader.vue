@@ -55,7 +55,7 @@
             @click.native="track('glossary.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
-            Glossary
+            DB Glossary
           </NuxtLink>
           <NuxtLink
             to="/jobs"
