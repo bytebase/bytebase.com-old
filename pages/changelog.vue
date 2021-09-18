@@ -20,6 +20,106 @@
             <h1>
               <span
                 class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
+                >Sep 18, 2021</span
+              >
+              <a
+                href="#release-060"
+                id="release-060"
+                class="mt-2 block text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl hover:underline"
+              >
+                Bytebase 0.6.0
+              </a>
+            </h1>
+            <div
+              class="mt-6 prose max-w-none prose-indigo prose-xl text-gray-500 mx-auto"
+            >
+              Update instruction
+              <ul class="mt-4 text-lg space-y-2">
+                <li>
+                  For fresh installation, follow
+                  <a
+                    href="https://github.com/bytebase/bytebase#installation"
+                    target="__blank"
+                    >https://github.com/bytebase/bytebase#installation</a
+                  >.
+                </li>
+                <li>
+                  If you upgrade from previous veresion, then it requires manual
+                  schema change, please contact
+                  <a href="mailto:support@bytebase.com" target="__blank"
+                    >support@bytebase.com</a
+                  >
+                  and we will assist you to perform the manual upgrade.
+                </li>
+              </ul>
+              <h2>🚀 New Features</h2>
+              <ul role="list">
+                <li>
+                  <strong
+                    >Support
+                    <a href="https://pingcap.com/" target="__blank">TiDB</a>.
+                  </strong>
+                  TiDB is an open-source, cloud-native, distributed SQL database
+                  for elastic scale and real-time analytics.
+                </li>
+
+                <li>
+                  <strong>Add task check to gate schema change</strong>
+                  <ul class="mt-4 text-lg space-y-2">
+                    <li>
+                      This works similar as
+                      <a
+                        href="https://docs.github.com/en/github/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks"
+                        target="__blank"
+                        >GitHub merge request check</a
+                      >. The schema change only proceeds if all check pass.
+                    </li>
+                    <li>
+                      In this initial launch, we enforce 2 checks, db connection
+                      check and syntax check for the schema change task. We plan
+                      to add more checks like advanced SQL analyzer in the
+                      future.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2>🎄 Enhancement</h2>
+              <ul role="list">
+                <li>
+                  Show VCS push event info in the migration history detail page.
+                </li>
+                <li>
+                  Improve UX for configuring the instance connection.
+                </li>
+                <li>
+                  Improve UX for transferring database between projects.
+                </li>
+                <li>
+                  Create dedicated migration history tab for a particular
+                  database.
+                </li>
+                <li>
+                  Add baseline migration history record upon creating the
+                  database.
+                </li>
+              </ul>
+              <h2>🎠 Community</h2>
+              <ul role="list">
+                <li>
+                  A special thanks to
+                  <a href="https://github.com/pingcap/parser" target="__blank"
+                    >TiDB's open source compatible MySQL parser</a
+                  >. It saves us a lot of effort to implement our syntax
+                  checker.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h1>
+              <span
+                class="block text-base text-indigo-600 font-semibold tracking-wide uppercase"
                 >Sep 9, 2021</span
               >
               <a
