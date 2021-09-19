@@ -3,7 +3,7 @@
   <footer class="bg-white pb-8" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
-      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <div class="xl:grid xl:grid-cols-4 xl:gap-8">
         <div class="xl:col-span-1 space-y-4">
           <img class="h-10" src="~/assets/logo.svg" alt="Bytebase" />
           <div class="flex space-x-6">
@@ -76,8 +76,8 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-          <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-3">
+          <div class="md:grid md:grid-cols-3 md:gap-8">
             <div>
               <h3
                 class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
@@ -107,6 +107,32 @@
                     class="text-base text-gray-500 hover:text-gray-900"
                   >
                     For DBA
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-12 md:mt-0">
+              <h3
+                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+              >
+                Databases
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <NuxtLink
+                    to="/database/mysql"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    MySQL
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/database/tidb"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    TiDB
                   </NuxtLink>
                 </li>
               </ul>

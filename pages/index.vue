@@ -65,7 +65,8 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first cloud-native database CI/CD solution
+          Industry first cloud-native database CI/CD solution built for team
+          collaboration
         </h2>
         <div class="mt-12">
           <FeatureSection />
