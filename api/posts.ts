@@ -1,4 +1,5 @@
 import GhostContentAPI, {
+  Params,
   PostOrPage,
   PostsOrPages,
 } from "@tryghost/content-api";
@@ -10,16 +11,18 @@ const api = new GhostContentAPI({
   version: "v3",
 });
 
-export async function getPosts(): Promise<PostsOrPages | void> {
-  return await api.posts
-    .browse({
-      limit: "all",
-      include: ["tags", "authors"],
-      order: "published_at DESC",
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+export async function getPosts(page?: number): Promise<PostsOrPages | void> {
+  const params: Params = {
+    limit: "all",
+    include: ["tags", "authors"],
+    order: "published_at DESC",
+  };
+  if (page) {
+    params.page = page;
+  }
+  return await api.posts.browse(params).catch((err) => {
+    console.error(err);
+  });
 }
 
 export async function getSinglePost(

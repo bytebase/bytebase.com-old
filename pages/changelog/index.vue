@@ -1,0 +1,127 @@
+<template>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="relative bg-gray-50 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
+    <div class="absolute inset-0">
+      <div class="bg-white h-1/3 sm:h-2/3"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto">
+      <div class="text-center">
+        <h1
+          class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+        >
+          Bytebase Changelog
+        </h1>
+        <h2 class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+          Open source, web-based, zero-config, dependency-free database schema
+          change and version control tool for Developer and DBA.
+        </h2>
+        <div class="mt-8">
+          <SubscribeSection :moduleName="'subscribe.changelog'" />
+        </div>
+      </div>
+
+      <div class="py-12">
+        <div class="relative max-w-lg mx-auto lg:max-w-7xl">
+          <div class="mt-12 space-y-12">
+            <div
+              v-for="(post, index) in posts"
+              :key="index"
+              class="flex flex-col col-span-3 overflow-hidden"
+            >
+              <NuxtLink
+                :to="{ path: `changelog/${post.slug}` }"
+                class="flex-1 flex flex-col justify-between"
+              >
+                <div
+                  class="pt-6 prose prose-xl md:prose-2xl mx-auto text-center hover:underline"
+                >
+                  <h1>{{ post.title }}</h1>
+                </div>
+                <span
+                  class="pt-4 flex flex-row items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
+                >
+                  <div class="ml-2 flex space-x-1 text-gray-500">
+                    <time :datetime="post.published_at">
+                      {{
+                        new Date(post.published_at).toLocaleString("default", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })
+                      }}
+                    </time>
+                    <span aria-hidden="true">
+                      &middot;
+                    </span>
+                    <span> {{ post.reading_time }} min read </span>
+                  </div></span
+                >
+              </NuxtLink>
+              <NuxtLink
+                v-if="post.feature_image"
+                :to="{ path: `changelog/${post.slug}` }"
+                class="flex-shrink-0 py-6"
+              >
+                <div class="flex justify-center items-center">
+                  <img
+                    class="object-cover"
+                    :src="post.feature_image"
+                    :alt="post.feature_image_alt"
+                  />
+                </div>
+              </NuxtLink>
+              <div
+                class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
+                v-html="post.html"
+              >
+                {{ post.html }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="!lastPage" class="py-12">
+        <NuxtLink
+          :to="{ path: `changelog?page=${page + 1}` }"
+          class="text-xl text-indigo-600"
+          >Next page</NuxtLink
+        >
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
+import { getPosts } from "../../api/posts";
+
+export default {
+  head() {
+    return {
+      title: "Changelog",
+      meta: [
+        {
+          hid: "Bytebase Changelog",
+          name: "Bytebase Changelog",
+          content: "Bytebase Changelog",
+        },
+      ],
+    };
+  },
+  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
+  async asyncData({ params }) {
+    const page = parseInt(params.page) ? parseInt(params.page) : 1;
+    const list = (await getPosts(page)) as PostsOrPages;
+    const posts: PostOrPage[] = [];
+    for (const post of list) {
+      if (post.tags?.find((item) => item.name == "Changelog")) {
+        posts.push(post);
+      }
+    }
+    const lastPage =
+      posts.length == 0 || posts[posts.length - 1].title == "Bytebase 0.1.0";
+
+    return { posts, page, lastPage };
+  },
+};
+</script>
