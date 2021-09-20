@@ -20,9 +20,9 @@
         </div>
       </div>
 
-      <div class="py-12">
+      <div>
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
-          <div class="mt-12 space-y-12">
+          <div class="mt-12 space-y-20">
             <div
               v-for="(post, index) in posts"
               :key="index"
@@ -87,7 +87,10 @@
           >Next page</NuxtLink
         >
       </div>
-      <ActionSection class="sm:justify-center" :moduleName="'changelog'" />
+      <ActionSection
+        class="pt-12 sm:justify-center"
+        :moduleName="'changelog'"
+      />
     </div>
   </div>
 </template>
