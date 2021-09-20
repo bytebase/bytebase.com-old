@@ -109,7 +109,7 @@ export default {
     };
   },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
-  async asyncData({ params }) {
+  async asyncData({ params }: any) {
     const page = parseInt(params.page) ? parseInt(params.page) : 1;
     const list = (await getPosts(page)) as PostsOrPages;
     const posts: PostOrPage[] = [];
