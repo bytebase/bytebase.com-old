@@ -51,10 +51,7 @@
       {{ post.html }}
     </div>
 
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <SubscribeSection :moduleName="'subscribe.blog-detail'" />
-    </div>
-    <ActionSection class="sm:justify-center" :moduleName="'blog'" />
+    <ActionSection class="sm:justify-center" :moduleName="'blog-detail'" />
   </main>
 </template>
 

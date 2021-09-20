@@ -190,6 +190,8 @@
           </div>
         </div>
       </div>
+
+      <ActionSection class="sm:justify-center" :moduleName="'blog'" />
     </div>
   </div>
 </template>

@@ -87,6 +87,7 @@
           >Next page</NuxtLink
         >
       </div>
+      <ActionSection class="sm:justify-center" :moduleName="'changelog'" />
     </div>
   </div>
 </template>
