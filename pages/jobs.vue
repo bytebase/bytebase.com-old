@@ -32,7 +32,7 @@
                   >
                     Our team
                   </NuxtLink>
-                  have built products managing one of the largest database
+                  have built products managing one of the world largest database
                   fleets, supporting one of the largest developer organizations.
                 </p>
               </div>
@@ -51,7 +51,7 @@
           >
         </h1>
         <span
-          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-pink-700"
           >Deliver experience</span
         >
         <p class="mt-4 text-xl text-gray-500 leading-8">
@@ -64,7 +64,7 @@
           the way of people doing their job.
         </p>
         <span
-          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-600"
           >Be pragmatic</span
         >
 
@@ -80,7 +80,7 @@
           patterns instead of inventing our own.
         </p>
         <span
-          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-700"
           >Stay curious</span
         >
         <p class="mt-4 text-xl text-gray-500 leading-8">

@@ -16,7 +16,13 @@
       <h1
         class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
       >
-        <span class="inline">and version control for teams</span>
+        <span class="inline"
+          >and version control for
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >teams</span
+          ></span
+        >
       </h1>
       <h1
         class="tracking-tight mt-3 text-center max-w-4xl mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl"
@@ -66,7 +72,10 @@
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
           Industry first cloud-native database CI/CD solution built for team
-          collaboration
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >collaboration
+          </span>
         </h2>
         <div class="mt-12">
           <FeatureSection />
@@ -222,7 +231,11 @@
           <h2
             class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8"
           >
-            A complete rethink to deliver experience
+            A complete rethink to deliver
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+              >experience</span
+            >
           </h2>
           <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
             From the data modeling, to the tech stack, system architecture and
