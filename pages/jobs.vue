@@ -133,18 +133,18 @@
       </div>
     </div>
 
-    <div class="mt-16  relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mt-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-lg max-w-prose mx-auto">
         <h1>
           <span
             class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
             >Jobs</span
           >
-          <span
-            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-            >Lead Frontend Engineer (China)</span
-          >
         </h1>
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Lead Frontend Engineer (China)</span
+        >
         <p class="mt-8 text-xl text-gray-500 leading-8">
           Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
           backend uses Golang + SQLite. You will lead the frontend development
@@ -171,6 +171,40 @@
             </li>
             <li>
               Generate UI console based on database schema.
+            </li>
+          </ul>
+        </div>
+
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Full Stack Engineer (China)</span
+        >
+        <p class="mt-8 text-xl text-gray-500 leading-8">
+          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
+          backend uses Golang + SQLite. As a full stack engineer, you will own
+          feature end-to-end. Some of the problems you will be working on:
+        </p>
+        <div class="prose prose-xl">
+          <ul>
+            <li>
+              Build the state-of-the-art SQL query advisor.
+            </li>
+            <li>
+              Advanced schema change engine for supporting complex scenarios
+              like online DDL, customer multitenancy.
+            </li>
+            <li>
+              Easy-to-use comprehensive backup and restore solution for
+              supported database types.
+            </li>
+            <li>
+              Build up the
+              <a
+                href="https://github.com/bytebase/bytebase/tree/main/plugin"
+                target="__blank"
+                >plugin architecture</a
+              >
+              to gradually evolve the product into a platform.
             </li>
           </ul>
         </div>
