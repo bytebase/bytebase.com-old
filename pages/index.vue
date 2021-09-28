@@ -43,11 +43,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex items-center flex-row ml-4 space-x-4">
+                <div
+                  class="flex items-center flex-row sm:ml-8 space-x-4 text-sm sm:text-lg"
+                >
                   <NuxtLink
                     to="/changelog"
                     @click.native="track('changelog.header')"
-                    class="font-medium text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
                   >
                     Changelog
                   </NuxtLink>
@@ -62,7 +64,7 @@
                     href="https://docs.bytebase.com?ref=bytebase.com"
                     target="_blank"
                     @click="track('doc.header')"
-                    class="flex text-gray-700 hover:text-gray-500"
+                    class="flex text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
                   >
                     Docs
                     <svg
