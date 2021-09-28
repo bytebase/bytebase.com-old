@@ -1,47 +1,178 @@
 <template>
   <div>
-    <div class="items-center text-center">
-      <h1
-        class="tracking-tight font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl"
-      >
-        <span class="inline"
-          >Open source, web-based, zero-config, dependency-free</span
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="relative bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <div
+          class="relative pb-8 bg-white sm:pb-16 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
         >
-      </h1>
-      <h1
-        class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
+          <svg
+            class="hidden lg:block absolute right-0 inset-y-0 h-full w-4 text-white transform translate-x-1/2"
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <polygon points="50,0 100,0 50,100 0,100" />
+          </svg>
+
+          <div>
+            <div class="relative pt-6 px-4">
+              <nav
+                class="relative flex items-center justify-between sm:h-10 lg:justify-start"
+                aria-label="Global"
+              >
+                <div
+                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                >
+                  <div
+                    class="flex items-center justify-between w-full md:w-auto"
+                  >
+                    <div
+                      class="flex items-center justify-between w-full sm:w-auto"
+                    >
+                      <NuxtLink to="/">
+                        <span class="sr-only">Bytebase</span>
+                        <img
+                          class="h-6 sm:h-8 w-auto"
+                          src="~/assets/logo.svg"
+                          alt=""
+                        />
+                      </NuxtLink>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center flex-row ml-4 space-x-4">
+                  <NuxtLink
+                    to="/changelog"
+                    @click.native="track('changelog.header')"
+                    class="font-medium text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                  >
+                    Changelog
+                  </NuxtLink>
+                  <NuxtLink
+                    to="/blog"
+                    @click.native="track('blog.header')"
+                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                  >
+                    Blog
+                  </NuxtLink>
+                  <a
+                    href="https://docs.bytebase.com?ref=bytebase.com"
+                    target="_blank"
+                    @click="track('doc.header')"
+                    class="flex text-gray-700 hover:text-gray-500"
+                  >
+                    Docs
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="flex items-center lg:hidden">
+                    <!-- Place this tag where you want the button to render. -->
+                    <a
+                      class="github-button"
+                      href="https://github.com/bytebase/bytebase"
+                      data-color-scheme="no-preference: light; light: light; dark: dark;"
+                      data-size="large"
+                      data-show-count="true"
+                      aria-label="Star bytebase/bytebase on GitHub"
+                      >Star</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="hidden lg:flex absolute items-center justify-end right-0"
+                >
+                  <img
+                    class="-mt-8 h-10 w-auto"
+                    src="~/assets/starus.png"
+                    alt=""
+                  />
+                  <!-- Place this tag where you want the button to render. -->
+                  <a
+                    class="github-button"
+                    href="https://github.com/bytebase/bytebase"
+                    data-color-scheme="no-preference: light; light: light; dark: dark;"
+                    data-size="large"
+                    data-show-count="true"
+                    aria-label="Star bytebase/bytebase on GitHub"
+                    >Star</a
+                  >
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <div class="mt-8 mx-auto max-w-7xl px-4 lg:mt-20">
+            <div class="sm:text-center lg:text-left">
+              <NuxtLink
+                to="/jobs"
+                @click.native="track('job.main')"
+                class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 hover:opacity-80"
+              >
+                We're hiring
+              </NuxtLink>
+              <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
+                <span class="inline">Open source, web-based, zero-config</span>
+              </h2>
+              <h1
+                class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+              >
+                <span class="block xl:inline"
+                  >Database schema change and version control for</span
+                >
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                  >teams</span
+                >
+              </h1>
+              <h2
+                class="tracking-tight mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0"
+              >
+                Bytebase offers a web-based collaboration workspace to help
+                <span
+                  class="text-blue-600"
+                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  >DBAs</span
+                >
+                and
+                <span
+                  class="text-blue-600"
+                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  >Developers</span
+                >
+                manage the lifecycle of application database schemas.
+              </h2>
+              <ActionSection
+                class="justify-center lg:justify-start"
+                :moduleName="'main'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
       >
-        <span class="inline">Database schema change</span>
-      </h1>
-      <h1
-        class="tracking-tight font-extrabold text-gray-900 text-4xl md:text-6xl lg:text-7xl"
-      >
-        <span class="inline"
-          >and version control for
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >teams</span
-          ></span
-        >
-      </h1>
-      <h1
-        class="tracking-tight mt-3 text-center max-w-4xl mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-2xl lg:text-3xl"
-      >
-        Bytebase offers a web-based collaboration workspace to help
-        <span
-          class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-          >DBAs</span
-        >
-        and
-        <span
-          class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-          >Developers</span
-        >
-        manage the lifecycle of application database schemas.
-      </h1>
-      <ActionSection class="sm:justify-center" :moduleName="'main'" />
+        <img
+          class="h-56 object-contain sm:h-72 lg:w-full lg:h-full"
+          src="~/assets/illustration/main.webp"
+          alt=""
+        />
+      </div>
     </div>
 
     <div class="mt-12 relative">
@@ -666,6 +797,7 @@ const { trackEvent } = Plausible();
 
 export default defineComponent({
   head: {},
+  layout: "main",
   setup() {
     const track = (name: string) => {
       trackEvent(name);

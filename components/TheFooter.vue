@@ -66,14 +66,23 @@
               </svg>
             </a>
 
-            <p class="text-base text-gray-400 xl:text-center">
-              &copy; 2021 Bytebase
+            <p
+              class="flex items-center text-sm text-gray-500 hover:text-gray-900"
+            >
+              <NuxtLink to="/privacy">
+                Privacy Policy
+              </NuxtLink>
             </p>
           </div>
-          <div class="text-sm text-gray-500 hover:text-gray-900">
-            <NuxtLink to="/privacy">
-              Privacy Policy
-            </NuxtLink>
+          <div class="">
+            <img
+              style="width: 16rem;"
+              src="~/assets/illustration/main.webp"
+              alt=""
+            />
+          </div>
+          <div class="text-sm text-gray-500">
+            &copy; 2021 Bytebase
           </div>
         </div>
         <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-3">
