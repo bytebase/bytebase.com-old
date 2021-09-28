@@ -4,9 +4,7 @@
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <div
-          class="relative pb-8 bg-white sm:pb-16 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
-        >
+        <div class="relative pb-8 bg-white lg:max-w-2xl lg:w-full">
           <svg
             class="hidden lg:block absolute right-0 inset-y-0 h-full w-4 text-white transform translate-x-1/2"
             fill="currentColor"
@@ -96,7 +94,7 @@
                   </div>
                 </div>
                 <div
-                  class="hidden lg:flex absolute items-center justify-end right-0"
+                  class="z-10 hidden lg:flex absolute items-center justify-end right-0"
                 >
                   <img
                     class="-mt-8 h-10 w-auto"
@@ -134,11 +132,11 @@
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
                 <span class="block xl:inline"
-                  >Database schema change and version control for</span
-                >
-                <span
-                  class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                  >teams</span
+                  >Database schema change and version control for
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                    >teams</span
+                  ></span
                 >
               </h1>
               <h2
@@ -166,18 +164,16 @@
           </div>
         </div>
       </div>
-      <div
-        class="flex justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-      >
+      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:w-2/3">
         <img
-          class="h-56 object-contain sm:h-72 md:h-96 lg:w-full lg:h-full"
+          class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="~/assets/illustration/main.webp"
           alt=""
         />
       </div>
     </div>
 
-    <div class="mt-12 relative">
+    <div class="mt-8 mg:mt-0 relative">
       <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6">
         <img
           class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-96"
