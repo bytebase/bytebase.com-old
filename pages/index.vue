@@ -164,7 +164,9 @@
           </div>
         </div>
       </div>
-      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:w-2/3">
+      <div
+        class="flex justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:w-2/3"
+      >
         <img
           class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="~/assets/illustration/main.webp"
