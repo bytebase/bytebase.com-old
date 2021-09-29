@@ -4,17 +4,7 @@
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <div class="relative pb-8 bg-white lg:max-w-2xl lg:w-full">
-          <svg
-            class="hidden lg:block absolute right-0 inset-y-0 h-full w-4 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <polygon points="50,0 100,0 50,100 0,100" />
-          </svg>
-
+        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
           <div>
             <div class="relative pt-6 px-4">
               <nav
@@ -165,7 +155,7 @@
         </div>
       </div>
       <div
-        class="flex justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:w-2/3"
+        class="flex justify-center lg:absolute lg:inset-y-0 lg:-right-24 lg:w-2/3 xl:right-0"
       >
         <img
           class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
