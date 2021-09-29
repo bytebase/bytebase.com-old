@@ -2,8 +2,11 @@
   <div class="overflow-hidden">
     <!-- This example requires Tailwind CSS v2.0+ -->
     <section class="bg-white overflow-hidden">
+      <div class="flex justify-center">
+        <img class="h-96" src="~/assets/illustration/job.webp" alt="" />
+      </div>
       <div
-        class="relative max-w-5xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20"
+        class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20"
       >
         <div class="relative lg:flex lg:items-center">
           <div class="relative lg:ml-10">
@@ -361,7 +364,7 @@
             >
           </li>
         </ul>
-        <div class="flex py-4 justify-center">
+        <div class="flex pt-8 pb-4 justify-center">
           <a
             href="mailto:tz@bytebase.com?subject=Hi, I am interested in Bytebase 'Lead Frontend Engineer' position&body=Hello Tianzhou,%0D%0A%0D%0A"
             target="_blank"
