@@ -121,7 +121,7 @@
               <NuxtLink
                 to="/jobs"
                 @click.native="track('job.main')"
-                class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 hover:opacity-80"
+                class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
               >
                 We're hiring
               </NuxtLink>
