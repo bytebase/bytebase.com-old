@@ -806,7 +806,7 @@ export default defineComponent({
         {
           hid: "og:image",
           property: "og:image",
-          content: `/_nuxt/assets/logo.svg`,
+          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo.svg`,
         },
       ],
     });

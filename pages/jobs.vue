@@ -413,7 +413,7 @@ export default defineComponent({
         {
           hid: "og:image",
           property: "og:image",
-          content: `/_nuxt/assets/illustration/main.webp`,
+          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/illustration/main.webp`,
         },
       ],
     });
