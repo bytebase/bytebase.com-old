@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 sm:flex md:mt-8">
+  <div class="my-5 sm:flex md:my-8">
     <div
       class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center rounded-md whitespace-nowrap"
     >
