@@ -80,7 +80,7 @@
     </section>
 
     <div class="bg-white">
-      <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      <div class="mx-auto pt-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:pt-24">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div class="space-y-5 sm:space-y-4">
             <a
