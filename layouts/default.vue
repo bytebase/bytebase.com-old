@@ -1,7 +1,7 @@
 <template>
   <div class="relative overflow-hidden">
     <TheHeader />
-    <main class="mt-8 sm:mt-16 mx-auto px-4">
+    <main class="mt-8 mx-auto">
       <Nuxt />
     </main>
     <TheFooter />

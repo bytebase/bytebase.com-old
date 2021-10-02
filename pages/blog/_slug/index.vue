@@ -1,11 +1,11 @@
 <template>
   <main class="overflow-hidden space-y-8">
-    <div class="prose prose-xl md:prose-2xl mx-auto">
-      <img
-        class="w-full object-cover"
-        :src="post.feature_image"
-        :alt="post.feature_image_alt"
-      />
+    <img
+      class="hidden sm:block sm:h-96 w-full object-scale-down"
+      :src="post.feature_image"
+      :alt="post.feature_image_alt"
+    />
+    <div class="prose prose-xl md:prose-2xl mx-auto px-4">
       <div
         v-for="(tag, tagIndex) in post.tags"
         :key="tagIndex"
