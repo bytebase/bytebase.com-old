@@ -1,17 +1,17 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative bg-gray-50 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
+  <div class="relative bg-white px-4 sm:px-6 lg:px-8 py-8">
     <div class="absolute inset-0">
-      <div class="bg-white h-1/3 sm:h-2/3"></div>
+      <div class="h-1/3 sm:h-2/3"></div>
     </div>
     <div class="relative max-w-7xl mx-auto">
       <div class="text-center">
         <h1
-          class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+          class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
         >
           Bytebase Blog
         </h1>
-        <h2 class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+        <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
           Open source, web-based, zero-config, dependency-free database schema
           change and version control tool for Developer and DBA.
         </h2>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="bg-white py-12">
+      <div class="py-12">
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
           <div
             class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
@@ -45,7 +45,7 @@
               </NuxtLink>
               <NuxtLink
                 :to="{ path: `blog/${post.slug}` }"
-                class="flex-1 bg-white p-6 flex flex-col justify-between"
+                class="flex-1 p-6 flex flex-col justify-between"
               >
                 <div class="flex-1">
                   <div
@@ -103,7 +103,7 @@
         </div>
       </div>
 
-      <div class="bg-white py-12">
+      <div class="py-12">
         <div
           class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl"
         >
@@ -113,7 +113,7 @@
             Recent publications
           </h2>
           <div
-            class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12"
+            class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-12"
           >
             <div
               v-for="(post, index) in posts"
@@ -191,7 +191,9 @@
         </div>
       </div>
 
-      <ActionSection class="sm:justify-center" :moduleName="'blog'" />
+      <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+        <ActionSection class="sm:justify-center" :moduleName="'blog'" />
+      </div>
     </div>
   </div>
 </template>

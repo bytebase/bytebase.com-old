@@ -35,7 +35,12 @@
       {{ post.html }}
     </div>
 
-    <ActionSection class="sm:justify-center" :moduleName="'changelog-detail'" />
+    <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
+      <ActionSection
+        class="sm:justify-center"
+        :moduleName="'changelog-detail'"
+      />
+    </div>
   </main>
 </template>
 

@@ -1,17 +1,17 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative bg-gray-50 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
+  <div class="relative bg-white px-4 sm:px-6 lg:px-8 py-8">
     <div class="absolute inset-0">
       <div class="bg-white h-1/3 sm:h-2/3"></div>
     </div>
     <div class="relative max-w-7xl mx-auto">
       <div class="text-center">
         <h1
-          class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+          class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
         >
           Bytebase Changelog
         </h1>
-        <h2 class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+        <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
           Open source, web-based, zero-config, dependency-free database schema
           change and version control tool for Developer and DBA.
         </h2>
@@ -87,10 +87,11 @@
           >Next page</NuxtLink
         >
       </div>
-      <ActionSection
-        class="pt-12 sm:justify-center"
-        :moduleName="'changelog'"
-      />
+      <div
+        class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl"
+      >
+        <ActionSection class="sm:justify-center" :moduleName="'changelog'" />
+      </div>
     </div>
   </div>
 </template>
