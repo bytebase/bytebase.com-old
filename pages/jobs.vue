@@ -1,5 +1,9 @@
 <template>
   <div class="overflow-hidden">
+    <head>
+      <meta property="og:image" content="~/assets/illustration/main.webp" />
+    </head>
+
     <!-- This example requires Tailwind CSS v2.0+ -->
     <section class="bg-white overflow-hidden">
       <div
@@ -366,7 +370,7 @@
         </ul>
         <div class="flex pt-8 pb-4 justify-center">
           <a
-            href="mailto:tz@bytebase.com?subject=Hi, I am interested in Bytebase 'Lead Frontend Engineer' position&body=Hello Tianzhou,%0D%0A%0D%0A"
+            href="mailto:hr@bytebase.com?subject=Hi, I am interested in Bytebase 'Lead Frontend Engineer' position&body=Hello Bytebase,%0D%0A%0D%0A"
             target="_blank"
             class="w-46 flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
           >
