@@ -803,6 +803,11 @@ export default defineComponent({
           content:
             "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
         },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `/_nuxt/assets/logo.svg`,
+        },
       ],
     });
 

@@ -1,9 +1,5 @@
 <template>
   <div class="overflow-hidden">
-    <head>
-      <meta property="og:image" content="~/assets/illustration/main.webp" />
-    </head>
-
     <!-- This example requires Tailwind CSS v2.0+ -->
     <section class="bg-white overflow-hidden">
       <div
@@ -413,6 +409,11 @@ export default defineComponent({
           name: "jobs",
           content:
             "We value crafts and we care what you have built in the past instead of where you have worked and studied",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `/_nuxt/assets/illustration/main.webp`,
         },
       ],
     });
