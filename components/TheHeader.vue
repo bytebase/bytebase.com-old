@@ -97,6 +97,7 @@
             data-size="large"
             data-show-count="true"
             aria-label="Star bytebase/bytebase on GitHub"
+            @click="track('github.header')"
             >Star</a
           >
         </div>
