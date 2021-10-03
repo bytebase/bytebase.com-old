@@ -107,15 +107,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, useContext } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
   setup() {
+    const { $ga } = useContext() as any;
+
     const track = (name: string) => {
       trackEvent(name);
+
+      const parts = name.split(".");
+      $ga.event({
+        eventCategory: parts[0],
+        eventLabe: parts[1],
+      });
     };
 
     return { track };
