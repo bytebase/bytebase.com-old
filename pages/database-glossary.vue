@@ -250,7 +250,11 @@
           <!-- Glossary grid -->
           <div class="mt-6 lg:mt-0 lg:col-span-2 xl:col-span-3">
             <div class="relative bg-white overflow-hidden space-y-6">
-              <div v-for="(alphaItem, index) in filteredAlphaList" :key="index">
+              <div
+                v-for="(alphaItem, index) in filteredAlphaList"
+                :key="index"
+                class="mx-2"
+              >
                 <a
                   :href="`#${alphaItem.letter}`"
                   :id="alphaItem.letter"

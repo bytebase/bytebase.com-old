@@ -251,6 +251,7 @@
               <div
                 v-for="(category, categoryIndex) in filteredCategoryList"
                 :key="categoryIndex"
+                class="mx-2"
               >
                 <a
                   :href="`#${category.hash}`"

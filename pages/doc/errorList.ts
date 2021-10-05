@@ -1,5 +1,6 @@
 import { ErrorCategory } from "./errorTypes";
 
+// List should be kept in sync with https://github.com/bytebase/bytebase/blob/main/frontend/src/types/errorList.ts
 export const ERROR_LIST: ErrorCategory[] = [
   {
     name: "General",
