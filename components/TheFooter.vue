@@ -220,6 +220,15 @@
                 Database Glossary
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink
+                to="/doc/error"
+                @click="track('errordoc.footer')"
+                class="text-base text-gray-500 hover:text-gray-900"
+              >
+                Error code
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
