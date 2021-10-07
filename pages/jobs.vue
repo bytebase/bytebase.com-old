@@ -407,8 +407,7 @@ export default defineComponent({
         {
           hid: "jobs",
           name: "jobs",
-          content:
-            "We value crafts and we care what you have built in the past instead of where you have worked and studied",
+          content: "Currently open positions in Bytebase",
         },
         {
           hid: "og:image",
