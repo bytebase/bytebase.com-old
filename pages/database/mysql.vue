@@ -44,9 +44,9 @@ export default defineComponent({
     title: "Manage MySQL schema with Bytebase",
     meta: [
       {
-        hid: "Manage MySQL schema with Bytebase",
-        name: "Manage MySQL schema with Bytebase",
-        content: "Bytebase supports managing MySQL database schema.",
+        hid: "Version control your MySQL database schema",
+        name: "Version control your PostgreSQL database schema",
+        content: "Version control your PostgreSQL database schema",
       },
     ],
   },

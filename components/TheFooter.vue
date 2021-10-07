@@ -55,6 +55,14 @@
             </li>
             <li>
               <NuxtLink
+                to="/database/postgres"
+                class="text-base text-gray-500 hover:text-gray-900"
+              >
+                PostgreSQL
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
                 to="/database/tidb"
                 class="text-base text-gray-500 hover:text-gray-900"
               >
