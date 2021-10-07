@@ -146,6 +146,14 @@
                 >
                 manage the lifecycle of application database schemas.
               </h2>
+              <div
+                class="mt-6 flex flex-row space-x-8 justify-center lg:justify-start h-12"
+              >
+                <img src="~/assets/logo/db-mysql.png" />
+                <img src="~/assets/logo/db-postgres.png" />
+                <img src="~/assets/logo/db-tidb.png" />
+                <img src="~/assets/logo/gitlab-logo.svg" />
+              </div>
               <ActionSection
                 class="justify-center lg:justify-start"
                 :moduleName="'main'"
