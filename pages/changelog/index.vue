@@ -73,9 +73,7 @@
               <div
                 class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
                 v-html="post.html"
-              >
-                {{ post.html }}
-              </div>
+              ></div>
             </div>
           </div>
         </div>
