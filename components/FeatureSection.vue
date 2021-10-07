@@ -35,8 +35,8 @@
             </h3>
             <p class="mt-5 text-base text-gray-500">
               A dedicated review workflow and UI for Developers and DBAs to
-              collaborate on schema changes. Assisted with automatic backward
-              compatibility, syntax checks.
+              collaborate on schema changes. Assisted by built-in advisor such
+              as backward compatibility checks.
             </p>
           </div>
         </div>
