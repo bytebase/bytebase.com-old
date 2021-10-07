@@ -34,8 +34,9 @@
               SQL Review
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Classic workflow where developer submits a SQL review ticket for
-              DBA to review.
+              A dedicated review workflow and UI for Developers and DBAs to
+              collaborate on schema changes. Assisted with automatic backward
+              compatibility, syntax checks.
             </p>
           </div>
         </div>
@@ -104,6 +105,108 @@
             <p class="mt-5 text-base text-gray-500">
               Support multi-stage, multi-environment schema change in a single
               pipeline.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6">
+        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+          <div class="-mt-6">
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+              Migration History
+            </h3>
+            <p class="mt-5 text-base text-gray-500">
+              Bookkeeping the full migration history with side-by-side diff
+              comparison between versions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6">
+        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+          <div class="-mt-6">
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+              Anomaly Center
+            </h3>
+            <p class="mt-5 text-base text-gray-500">
+              Periodically scan all managed instances and databases and provide
+              user a holistic view to see all anomalies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6">
+        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+          <div class="-mt-6">
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+              Drift Detection
+            </h3>
+            <p class="mt-5 text-base text-gray-500">
+              Automatically detects schema drift by comparing the recorded
+              schema and actual schema. Catch any unexpected schema changes.
             </p>
           </div>
         </div>
