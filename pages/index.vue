@@ -32,21 +32,21 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex-row sm:ml-8 space-x-4 text-sm sm:text-lg"
+                  class="flex items-center flex-row sm:ml-8 space-x-4 text-sm sm:text-lg font-semibold"
                 >
-                  <NuxtLink
-                    to="/changelog"
-                    @click.native="track('changelog.header')"
-                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                  >
-                    Changelog
-                  </NuxtLink>
                   <NuxtLink
                     to="/blog"
                     @click.native="track('blog.header')"
                     class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
                   >
                     Blog
+                  </NuxtLink>
+                  <NuxtLink
+                    to="/changelog"
+                    @click.native="track('changelog.header')"
+                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
+                  >
+                    Changelog
                   </NuxtLink>
                   <a
                     href="https://docs.bytebase.com?ref=bytebase.com"

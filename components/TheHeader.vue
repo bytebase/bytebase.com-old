@@ -37,18 +37,18 @@
           class="flex items-center justify-between text-sm sm:text-xl font-semibold space-x-2 sm:space-x-8"
         >
           <NuxtLink
-            to="/changelog"
-            @click.native="track('changelog.header')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-          >
-            Changelog
-          </NuxtLink>
-          <NuxtLink
             to="/blog"
             @click.native="track('blog.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
           >
             Blog
+          </NuxtLink>
+          <NuxtLink
+            to="/changelog"
+            @click.native="track('changelog.header')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+          >
+            Changelog
           </NuxtLink>
           <NuxtLink
             to="/jobs"
