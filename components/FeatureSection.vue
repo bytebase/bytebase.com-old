@@ -239,8 +239,9 @@
               Backup and Restore
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Per-database automatic and manual backup. Restore to new database
-              with the entire restored chain history.
+              Per-database automatic and manual backup. Environment specific
+              backup schedule policy. Restore to new database with the entire
+              restored migration history chain.
             </p>
           </div>
         </div>
