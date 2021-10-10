@@ -4,7 +4,7 @@ import {
   databaseFeatureList,
   databaseVCSList,
   databaseWebhookList,
-} from "./common/type";
+} from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
 
 function glossaryRouteList() {

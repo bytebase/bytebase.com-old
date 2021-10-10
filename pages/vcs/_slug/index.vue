@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts">
-import { databaseVCSForSlug } from "../../../common/type";
+import { databaseVCSForSlug } from "../../../common/matrix";
 
 export default {
   head() {

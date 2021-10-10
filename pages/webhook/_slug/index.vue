@@ -72,7 +72,7 @@
 </template>
 
 <script lang="ts">
-import { databaseWebhookForSlug } from "../../../common/type";
+import { databaseWebhookForSlug } from "../../../common/matrix";
 
 export default {
   head() {

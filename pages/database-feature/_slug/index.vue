@@ -59,7 +59,7 @@
 </template>
 
 <script lang="ts">
-import { databaseFeatureForSlug } from "../../../common/type";
+import { databaseFeatureForSlug } from "../../../common/matrix";
 
 export default {
   head() {
