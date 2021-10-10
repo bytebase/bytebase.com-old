@@ -1,6 +1,10 @@
 import tailwindTypography from "@tailwindcss/typography";
 import slug from "slug";
-import { databaseFeatureList, databaseVCSList } from "./common/type";
+import {
+  databaseFeatureList,
+  databaseVCSList,
+  databaseWebhookList,
+} from "./common/type";
 import { ALPHA_LIST } from "./common/glossary";
 
 function glossaryRouteList() {
@@ -25,6 +29,14 @@ function databaseVCSRouteList() {
   const list = [];
   for (const feature of databaseVCSList()) {
     list.push(`vcs/${feature.slug}`);
+  }
+  return list;
+}
+
+function webhookRouteList() {
+  const list = [];
+  for (const webhook of databaseWebhookList()) {
+    list.push(`webhook/${webhook.slug}`);
   }
   return list;
 }
@@ -61,7 +73,8 @@ export default {
   generate: {
     routes: glossaryRouteList()
       .concat(databaseFeatureRouteList())
-      .concat(databaseVCSRouteList()),
+      .concat(databaseVCSRouteList())
+      .concat(webhookRouteList()),
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

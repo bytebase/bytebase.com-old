@@ -149,3 +149,41 @@ export function databaseVCSForSlug(theSlug: string): DatabaseVCS {
     vcs: "",
   };
 }
+
+export type DatabaseWebhook = {
+  slug: string;
+  database: string;
+  vcs: string;
+  webhook: string;
+};
+
+export function databaseWebhookList(): DatabaseWebhook[] {
+  const list: DatabaseWebhook[] = [];
+  for (const database of databaseList) {
+    for (const vcs of vcsList) {
+      for (const im of imList) {
+        list.push({
+          slug: slug([database, vcs, im].join("-")),
+          database,
+          vcs,
+          webhook: im,
+        });
+      }
+    }
+  }
+  return list;
+}
+
+export function databaseWebhookForSlug(theSlug: string): DatabaseWebhook {
+  for (const item of databaseWebhookList()) {
+    if (theSlug == item.slug) {
+      return item;
+    }
+  }
+  return {
+    slug: "unknown",
+    database: "",
+    vcs: "",
+    webhook: "",
+  };
+}
