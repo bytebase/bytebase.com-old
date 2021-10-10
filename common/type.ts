@@ -116,3 +116,36 @@ export function databaseFeatureForSlug(theSlug: string): DatabaseFeature {
     feature: "",
   };
 }
+
+export type DatabaseVCS = {
+  slug: string;
+  database: string;
+  vcs: string;
+};
+
+export function databaseVCSList(): DatabaseVCS[] {
+  const list: DatabaseVCS[] = [];
+  for (const database of databaseList) {
+    for (const vcs of vcsList) {
+      list.push({
+        slug: slug([database, vcs].join("-")),
+        database,
+        vcs,
+      });
+    }
+  }
+  return list;
+}
+
+export function databaseVCSForSlug(theSlug: string): DatabaseVCS {
+  for (const item of databaseVCSList()) {
+    if (theSlug == item.slug) {
+      return item;
+    }
+  }
+  return {
+    slug: "unknown",
+    database: "",
+    vcs: "",
+  };
+}
