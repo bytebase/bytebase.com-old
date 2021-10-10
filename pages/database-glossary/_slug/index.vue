@@ -63,6 +63,13 @@ export default {
   head() {
     return {
       title: `What is ${(this as any).glossary.name}`,
+      meta: [
+        {
+          hid: (this as any).glossary.name,
+          name: (this as any).glossary.name,
+          content: `Glossary for ${(this as any).glossary.name}`,
+        },
+      ],
     };
   },
   async asyncData({ params }: any) {

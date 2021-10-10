@@ -1,4 +1,16 @@
 import tailwindTypography from "@tailwindcss/typography";
+import slug from "slug";
+import { ALPHA_LIST } from "./pages/database-glossary/glossary";
+
+function glossaryRouteList() {
+  const list = [];
+  for (const alpha of ALPHA_LIST) {
+    for (const glossary of alpha.list) {
+      list.push(`database-glossary/${slug(glossary.name)}`);
+    }
+  }
+  return list;
+}
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -27,6 +39,10 @@ export default {
   router: {
     linkExactActiveClass: "underline",
     linkActiveClass: "underline",
+  },
+
+  generate: {
+    routes: glossaryRouteList(),
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

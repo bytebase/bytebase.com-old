@@ -1,4 +1,4 @@
-import { slugify } from "../util";
+import slug from "slug";
 import { AlphaItem, Glossary } from "./glossaryTypes";
 
 export const ALPHA_LIST: AlphaItem[] = [
@@ -836,10 +836,10 @@ export const ALPHA_LIST: AlphaItem[] = [
   },
 ];
 
-export function glossaryForSlug(slug: string): Glossary {
+export function glossaryForSlug(theSlug: string): Glossary {
   for (const alpha of ALPHA_LIST) {
     for (const glossary of alpha.list) {
-      if (slug == slugify(glossary.name)) {
+      if (theSlug == slug(glossary.name)) {
         return glossary;
       }
     }

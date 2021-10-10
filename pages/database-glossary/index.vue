@@ -123,7 +123,7 @@
                   class="pt-2 px-4"
                 >
                   <a
-                    :href="`#${slugify(glossary.name)}`"
+                    :href="`#${slug(glossary.name)}`"
                     class="text-sm text-gray-600 hover:underline"
                   >
                     {{ glossary.name }}
@@ -235,7 +235,7 @@
                       class="pt-2"
                     >
                       <a
-                        :href="`#${slugify(glossary.name)}`"
+                        :href="`#${slug(glossary.name)}`"
                         class="flex items-center text-sm text-gray-600 hover:underline"
                       >
                         {{ glossary.name }}
@@ -270,8 +270,8 @@
                 >
                   <div class="flex items-center space-x-4">
                     <a
-                      :href="`#${slugify(glossary.name)}`"
-                      :id="slugify(glossary.name)"
+                      :href="`#${slug(glossary.name)}`"
+                      :id="slug(glossary.name)"
                       class="text-xl text-gray-800 font-semibold hover:underline"
                       >{{ glossary.name }}</a
                     >
@@ -326,10 +326,10 @@
 
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
+import slug from "slug";
 import { AlphaItem, Glossary, Tag } from "./glossaryTypes";
 import { ALPHA_LIST } from "./glossary";
 import { tagStyle } from "./util";
-import { slugify } from "../util";
 
 type FilterItem = {
   value: Tag;
@@ -428,7 +428,7 @@ export default defineComponent({
     });
 
     return {
-      slugify,
+      slug,
       state,
       tagItemCount,
       filteredAlphaList,
