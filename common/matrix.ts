@@ -54,6 +54,14 @@ export const softwareList: string[] = [
   "AliCloud",
 ];
 
+export const alternativeList: string[] = [
+  "Liquibase",
+  "Flyway",
+  "golang-migrate",
+  "SQLAlchemy",
+  "Active Record Migrations",
+];
+
 export type DatabaseFeature = {
   slug: string;
   database: string;
@@ -193,5 +201,40 @@ export function databaseSoftwareForSlug(theSlug: string): DatabaseSoftware {
     database: "",
     feature: "",
     software: "",
+  };
+}
+
+export type DatabaseAlternative = {
+  slug: string;
+  database: string;
+  alternative: string;
+};
+
+export function databaseAlternativeList(): DatabaseAlternative[] {
+  const list: DatabaseAlternative[] = [];
+  for (const alternative of alternativeList) {
+    for (const database of databaseList) {
+      list.push({
+        slug: slug([alternative, database].join("-")),
+        database,
+        alternative,
+      });
+    }
+  }
+  return list;
+}
+
+export function databaseAlternativeForSlug(
+  theSlug: string
+): DatabaseAlternative {
+  for (const item of databaseAlternativeList()) {
+    if (theSlug == item.slug) {
+      return item;
+    }
+  }
+  return {
+    slug: "unknown",
+    database: "",
+    alternative: "",
   };
 }

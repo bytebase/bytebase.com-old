@@ -4,12 +4,8 @@
       <h1
         class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        {{ databaseSoftware.software }}
-        {{ databaseSoftware.feature }} for
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-700"
-          >{{ databaseSoftware.database }}</span
-        >
+        Manage {{ databaseAlternative.database }} schema -
+        {{ databaseAlternative.alternative }} vs Bytebase
       </h1>
       <div class="mt-8 flex text-center justify-center">
         <img
@@ -19,11 +15,24 @@
         />
       </div>
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-        Bytebase is an
+        Unlike {{ databaseAlternative.alternative }}, Bytebase is an
         <a href="https://github.com/bytebase/bytebase" target="__blank"
           >open source</a
-        >, web-based database schema change and version control tool for teams.
-        It offers a web-based collaboration workspace to help
+        >,
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-red-700"
+          >web-based</span
+        >
+        database schema change and version control tool for
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-red-700"
+          >teams</span
+        >. It offers a web-based
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-red-700"
+          >collaboration</span
+        >
+        workspace to help
         <span
           class="text-blue-600"
           style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
@@ -51,7 +60,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'software-detail'"
+          :moduleName="'compare-detail'"
         />
       </div>
     </div>
@@ -59,13 +68,13 @@
 </template>
 
 <script lang="ts">
-import { databaseSoftwareForSlug } from "../../../common/matrix";
+import { databaseAlternativeForSlug } from "../../../common/matrix";
 
 export default {
   head() {
-    const title = `${(this as any).databaseSoftware.software} ${
-      (this as any).databaseSoftware.feature
-    } for ${(this as any).databaseSoftware.database}`;
+    const title = `Manage ${
+      (this as any).databaseAlternative.database
+    } schema - ${(this as any).databaseAlternative.database} vs Bytebase`;
     return {
       title: title,
       meta: [
@@ -75,25 +84,20 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseSoftware.feature,
-          name: (this as any).databaseSoftware.feature,
-          content: (this as any).databaseSoftware.feature,
+          hid: (this as any).databaseAlternative.database,
+          name: (this as any).databaseAlternative.database,
+          content: (this as any).databaseAlternative.database,
         },
         {
-          hid: (this as any).databaseSoftware.database,
-          name: (this as any).databaseSoftware.database,
-          content: (this as any).databaseSoftware.database,
-        },
-        {
-          hid: (this as any).databaseSoftware.software,
-          name: (this as any).databaseSoftware.software,
-          content: (this as any).databaseSoftware.software,
+          hid: (this as any).databaseAlternative.alternative,
+          name: (this as any).databaseAlternative.alternative,
+          content: (this as any).databaseAlternative.alternative,
         },
       ],
     };
   },
   async asyncData({ params }: any) {
-    return { databaseSoftware: databaseSoftwareForSlug(params.slug) };
+    return { databaseAlternative: databaseAlternativeForSlug(params.slug) };
   },
   methods: {},
 };
