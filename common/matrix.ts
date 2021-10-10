@@ -16,8 +16,11 @@ export const imList: string[] = [
 export const featureList: string[] = [
   "SQL review",
   "Schema drift detection",
+  "Schema change",
+  "Schema migration",
   "Database schema evolution",
   "Backward compatible schema change",
+  "Database migration",
   "Database schema change",
   "Database schema migration",
   "DDL",
@@ -29,6 +32,26 @@ export const featureList: string[] = [
   "Database continous integration",
   "Database continous delivery",
   "GitOps",
+];
+
+export const softwareList: string[] = [
+  "Java",
+  "Python",
+  "Go",
+  "Golang",
+  "C++",
+  "C#",
+  "PHP",
+  "Ruby",
+  "Perl",
+  "Rust",
+  "DigitalOcean",
+  "AWS",
+  "RDS",
+  "Cloud SQL",
+  "Google Cloud",
+  "Azure",
+  "AliCloud",
 ];
 
 export type DatabaseFeature = {
@@ -132,5 +155,43 @@ export function databaseWebhookForSlug(theSlug: string): DatabaseWebhook {
     database: "",
     vcs: "",
     webhook: "",
+  };
+}
+
+export type DatabaseSoftware = {
+  slug: string;
+  database: string;
+  feature: string;
+  software: string;
+};
+
+export function databaseSoftwareList(): DatabaseSoftware[] {
+  const list: DatabaseSoftware[] = [];
+  for (const database of databaseList) {
+    for (const feature of featureList) {
+      for (const software of softwareList) {
+        list.push({
+          slug: slug([software, database, feature].join("-")),
+          database,
+          feature,
+          software,
+        });
+      }
+    }
+  }
+  return list;
+}
+
+export function databaseSoftwareForSlug(theSlug: string): DatabaseSoftware {
+  for (const item of databaseSoftwareList()) {
+    if (theSlug == item.slug) {
+      return item;
+    }
+  }
+  return {
+    slug: "unknown",
+    database: "",
+    feature: "",
+    software: "",
   };
 }

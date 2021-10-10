@@ -4,6 +4,7 @@ import {
   databaseFeatureList,
   databaseVCSList,
   databaseWebhookList,
+  databaseSoftwareList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
 
@@ -41,6 +42,14 @@ function webhookRouteList() {
   return list;
 }
 
+function softwareRouteList() {
+  const list = [];
+  for (const software of databaseSoftwareList()) {
+    list.push(`software/${software.slug}`);
+  }
+  return list;
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -74,7 +83,8 @@ export default {
     routes: glossaryRouteList()
       .concat(databaseFeatureRouteList())
       .concat(databaseVCSRouteList())
-      .concat(webhookRouteList()),
+      .concat(webhookRouteList())
+      .concat(softwareRouteList()),
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
