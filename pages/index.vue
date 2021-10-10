@@ -176,7 +176,7 @@
           alt=" App screenshot"
         />
         <img
-          class="order-1 relative shadow-lg -ml-2 lg:mb-48"
+          class="order-1 relative shadow-md -ml-2 lg:mb-48"
           src="~/assets/screenshot_home.webp"
           alt="App screenshot"
         />
