@@ -59,6 +59,7 @@ export const alternativeList: string[] = [
   "Flyway",
   "golang-migrate",
   "SQLAlchemy",
+  "Django Migrations",
   "Active Record Migrations",
 ];
 
