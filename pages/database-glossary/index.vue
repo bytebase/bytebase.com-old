@@ -280,26 +280,8 @@
                       :key="tagIndex"
                     >
                       <span
-                        v-if="tag == 'General'"
-                        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-800"
-                      >
-                        {{ tag }}
-                      </span>
-                      <span
-                        v-if="tag == 'Bytebase'"
-                        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"
-                      >
-                        {{ tag }}
-                      </span>
-                      <span
-                        v-if="tag == 'MySQL'"
-                        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800"
-                      >
-                        {{ tag }}
-                      </span>
-                      <span
-                        v-if="tag == 'PostgreSQL'"
-                        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800"
+                        class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+                        :class="tagStyle(tag)"
                       >
                         {{ tag }}
                       </span>
@@ -343,6 +325,7 @@
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
 import { AlphaItem, Glosssary, Tag } from "./glossaryTypes";
 import { ALPHA_LIST } from "./glossary";
+import { tagStyle } from "./util";
 
 type FilterItem = {
   value: Tag;
@@ -449,6 +432,7 @@ export default defineComponent({
       tagItemCount,
       glossaryAnchor,
       filteredAlphaList,
+      tagStyle,
     };
   },
 });
