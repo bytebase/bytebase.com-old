@@ -111,7 +111,7 @@
           </h2>
           <div class="text-right">
             <a
-              href="https://github.com/bytebase/bytebase.com/edit/main/pages/doc/errorList.ts"
+              href="https://github.com/bytebase/bytebase.com/edit/main/common/errorList.ts"
               target="__blank"
               class="text-sm text-blue-600 hover:underline"
               >Suggest changes on GitHub</a
@@ -217,7 +217,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "@nuxtjs/composition-api";
-import { ERROR_LIST } from "./errorList";
+import { ERROR_LIST } from "../../common/errorList";
 
 interface LocalState {
   showSidebar: false;
