@@ -123,7 +123,7 @@
                   class="pt-2 px-4"
                 >
                   <a
-                    :href="`#${glossaryAnchor(glossary.name)}`"
+                    :href="`#${slugify(glossary.name)}`"
                     class="text-sm text-gray-600 hover:underline"
                   >
                     {{ glossary.name }}
@@ -235,7 +235,7 @@
                       class="pt-2"
                     >
                       <a
-                        :href="`#${glossaryAnchor(glossary.name)}`"
+                        :href="`#${slugify(glossary.name)}`"
                         class="flex items-center text-sm text-gray-600 hover:underline"
                       >
                         {{ glossary.name }}
@@ -270,8 +270,8 @@
                 >
                   <div class="flex items-center space-x-4">
                     <a
-                      :href="`#${glossaryAnchor(glossary.name)}`"
-                      :id="glossaryAnchor(glossary.name)"
+                      :href="`#${slugify(glossary.name)}`"
+                      :id="slugify(glossary.name)"
                       class="text-xl text-gray-800 font-semibold hover:underline"
                       >{{ glossary.name }}</a
                     >
@@ -326,9 +326,10 @@
 
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
-import { AlphaItem, Glosssary, Tag } from "./glossaryTypes";
+import { AlphaItem, Glossary, Tag } from "./glossaryTypes";
 import { ALPHA_LIST } from "./glossary";
 import { tagStyle } from "./util";
+import { slugify } from "../util";
 
 type FilterItem = {
   value: Tag;
@@ -381,10 +382,6 @@ export default defineComponent({
       showSidebar: false,
     });
 
-    const glossaryAnchor = (name: string): string => {
-      return name.toLowerCase().replaceAll(" ", "-");
-    };
-
     const tagItemCount = (tag: Tag): number => {
       let count = 0;
       for (const alpha of ALPHA_LIST) {
@@ -408,7 +405,7 @@ export default defineComponent({
       if (filterTagList.length > 0) {
         const list: AlphaItem[] = [];
         for (const alpha of ALPHA_LIST) {
-          const glossaryList: Glosssary[] = [];
+          const glossaryList: Glossary[] = [];
           for (const glossary of alpha.list) {
             for (const tag of glossary.tagList) {
               if (filterTagList.includes(tag)) {
@@ -431,9 +428,9 @@ export default defineComponent({
     });
 
     return {
+      slugify,
       state,
       tagItemCount,
-      glossaryAnchor,
       filteredAlphaList,
       tagStyle,
     };

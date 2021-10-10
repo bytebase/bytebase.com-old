@@ -1,7 +1,9 @@
-export type BlogTag = "General" | "Bytebase" | "MySQL" | "PostgreSQL";
+import { Tag } from "./glossaryTypes";
 
-export function tagStyle(tag: BlogTag): string {
+export function tagStyle(tag: Tag): string {
   switch (tag) {
+    case "All":
+      return "";
     case "General":
       return "bg-gray-200 text-gray-800";
     case "Bytebase":

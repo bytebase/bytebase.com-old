@@ -1,6 +1,6 @@
 export type Tag = "All" | "General" | "Bytebase" | "MySQL" | "PostgreSQL";
 
-export type Glosssary = {
+export type Glossary = {
   name: string;
   description: string;
   reference?: string;
@@ -9,5 +9,5 @@ export type Glosssary = {
 
 export type AlphaItem = {
   letter: string;
-  list: Glosssary[];
+  list: Glossary[];
 };
