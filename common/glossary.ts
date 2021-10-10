@@ -1,5 +1,5 @@
 import slug from "slug";
-import { AlphaItem, Glossary } from "./glossaryTypes";
+import { AlphaItem, Glossary } from "./type";
 
 export const ALPHA_LIST: AlphaItem[] = [
   {

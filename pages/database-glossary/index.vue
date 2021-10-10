@@ -281,7 +281,7 @@
                     >
                       <span
                         class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
-                        :class="tagStyle(tag)"
+                        :class="glossaryTagStyle(tag)"
                       >
                         {{ tag }}
                       </span>
@@ -327,12 +327,11 @@
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
 import slug from "slug";
-import { AlphaItem, Glossary, Tag } from "./glossaryTypes";
-import { ALPHA_LIST } from "./glossary";
-import { tagStyle } from "./util";
+import { AlphaItem, Glossary, GlossaryTag, glossaryTagStyle } from "../../common/type";
+import { ALPHA_LIST } from "../../common/glossary";
 
 type FilterItem = {
-  value: Tag;
+  value: GlossaryTag;
   name: string;
   checked: boolean;
 };
@@ -382,7 +381,7 @@ export default defineComponent({
       showSidebar: false,
     });
 
-    const tagItemCount = (tag: Tag): number => {
+    const tagItemCount = (tag: GlossaryTag): number => {
       let count = 0;
       for (const alpha of ALPHA_LIST) {
         for (const glossary of alpha.list) {
@@ -395,7 +394,7 @@ export default defineComponent({
     };
 
     const filteredAlphaList = computed(() => {
-      const filterTagList: Tag[] = [];
+      const filterTagList: GlossaryTag[] = [];
       for (const filter of state.filterList) {
         if (filter.checked) {
           filterTagList.push(filter.value);
@@ -432,7 +431,7 @@ export default defineComponent({
       state,
       tagItemCount,
       filteredAlphaList,
-      tagStyle,
+      glossaryTagStyle,
     };
   },
 });

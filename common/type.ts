@@ -1,0 +1,47 @@
+export type PostTag =
+  | "Announcement"
+  | "Database Schema Design"
+  | "Getting Started"
+  | "Insights";
+
+export function postTagStyle(tag: PostTag): string {
+  switch (tag) {
+    case "Announcement":
+      return "bg-indigo-100 text-indigo-800";
+    case "Database Schema Design":
+      return "bg-pink-100 text-pink-800";
+    case "Getting Started":
+      return "bg-green-100 text-green-800";
+    case "Insights":
+      return "bg-yellow-100 text-yellow-800";
+  }
+}
+
+export type GlossaryTag = "All" | "General" | "Bytebase" | "MySQL" | "PostgreSQL";
+
+export type Glossary = {
+  name: string;
+  description: string;
+  reference?: string;
+  tagList: GlossaryTag[];
+};
+
+export type AlphaItem = {
+  letter: string;
+  list: Glossary[];
+};
+
+export function glossaryTagStyle(tag: GlossaryTag): string {
+  switch (tag) {
+    case "All":
+      return "";
+    case "General":
+      return "bg-gray-200 text-gray-800";
+    case "Bytebase":
+      return "bg-indigo-100 text-indigo-800";
+    case "MySQL":
+      return "bg-green-100 text-green-800";
+    case "PostgreSQL":
+      return "bg-yellow-100 text-yellow-800";
+  }
+}

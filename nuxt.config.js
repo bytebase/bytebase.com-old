@@ -1,6 +1,6 @@
 import tailwindTypography from "@tailwindcss/typography";
 import slug from "slug";
-import { ALPHA_LIST } from "./pages/database-glossary/glossary";
+import { ALPHA_LIST } from "./common/glossary";
 
 function glossaryRouteList() {
   const list = [];

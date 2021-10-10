@@ -200,7 +200,7 @@
 
 <script lang="ts">
 import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
-import { PostTag, tagStyle } from "./util";
+import { PostTag, postTagStyle } from "../../common/type";
 import { getPosts } from "../../api/posts";
 
 export default {
@@ -234,7 +234,7 @@ export default {
   },
   methods: {
     getTagStyle(tag: PostTag): string {
-      return tagStyle(tag);
+      return postTagStyle(tag);
     },
   },
 };

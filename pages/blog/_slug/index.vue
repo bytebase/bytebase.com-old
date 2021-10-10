@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { PostTag, tagStyle } from "../util";
+import { PostTag, postTagStyle } from "../../../common/type";
 import { getSinglePost } from "../../../api/posts";
 
 export default {
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     getTagStyle(tag: PostTag): string {
-      return tagStyle(tag);
+      return postTagStyle(tag);
     },
   },
 };

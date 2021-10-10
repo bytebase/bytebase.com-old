@@ -55,9 +55,8 @@
 </template>
 
 <script lang="ts">
-import { tagStyle } from "../util";
-import { Tag } from "../glossaryTypes";
-import { glossaryForSlug } from "../glossary";
+import { glossaryTagStyle, GlossaryTag } from "../../../common/type";
+import { glossaryForSlug } from "../../../common/glossary";
 
 export default {
   head() {
@@ -76,8 +75,8 @@ export default {
     return { glossary: glossaryForSlug(params.slug) };
   },
   methods: {
-    getTagStyle(tag: Tag): string {
-      return tagStyle(tag);
+    getTagStyle(tag: GlossaryTag): string {
+      return glossaryTagStyle(tag);
     },
   },
 };
