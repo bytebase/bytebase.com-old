@@ -48,7 +48,7 @@
       </h2>
       <FeatureSection />
       <div class="border mt-8">
-        <ActionSection class="sm:justify-center" :moduleName="'blog-detail'" />
+        <ActionSection class="sm:justify-center" :moduleName="'glossary-detail'" />
       </div>
     </div>
   </main>

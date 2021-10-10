@@ -1,5 +1,6 @@
 import tailwindTypography from "@tailwindcss/typography";
 import slug from "slug";
+import { databaseFeatureList } from "./common/type";
 import { ALPHA_LIST } from "./common/glossary";
 
 function glossaryRouteList() {
@@ -10,6 +11,14 @@ function glossaryRouteList() {
     }
   }
   return list;
+}
+
+function databaseFeatureRouteList() {
+  const list = [];
+  for (const feature of databaseFeatureList()) {
+    list.push(`database-feature/${feature.slug}`);
+  }
+  return list
 }
 
 export default {
@@ -42,7 +51,7 @@ export default {
   },
 
   generate: {
-    routes: glossaryRouteList(),
+    routes: glossaryRouteList().concat(databaseFeatureRouteList()),
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

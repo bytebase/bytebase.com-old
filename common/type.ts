@@ -1,3 +1,5 @@
+import slug from "slug";
+
 export type PostTag =
   | "Announcement"
   | "Database Schema Design"
@@ -17,7 +19,12 @@ export function postTagStyle(tag: PostTag): string {
   }
 }
 
-export type GlossaryTag = "All" | "General" | "Bytebase" | "MySQL" | "PostgreSQL";
+export type GlossaryTag =
+  | "All"
+  | "General"
+  | "Bytebase"
+  | "MySQL"
+  | "PostgreSQL";
 
 export type Glossary = {
   name: string;
@@ -44,4 +51,68 @@ export function glossaryTagStyle(tag: GlossaryTag): string {
     case "PostgreSQL":
       return "bg-yellow-100 text-yellow-800";
   }
+}
+
+export const databaseList: string[] = ["MySQL", "PostgreSQL", "TiDB"];
+
+export const vcsList: string[] = ["GitLab"];
+
+export const imList: string[] = [
+  "Slack",
+  "Discord",
+  "Teams",
+  "DingTalk(钉钉)",
+  "Feishu(飞书)",
+  "WeCom(企业微信)",
+];
+
+export const featureList: string[] = [
+  "SQL review",
+  "Schema drift detection",
+  "Database schema evolution",
+  "Backward compatible schema change",
+  "Database schema change",
+  "Database schema migration",
+  "DDL",
+  "Backup and restore",
+  "Database-as-Code",
+  "Database CI",
+  "Database CD",
+  "Database CI/CD",
+  "Database continous integration",
+  "Database continous delivery",
+  "GitOps",
+];
+
+export type DatabaseFeature = {
+  slug: string;
+  database: string;
+  feature: string;
+};
+
+export function databaseFeatureList(): DatabaseFeature[] {
+  const list: DatabaseFeature[] = [];
+  for (const database of databaseList) {
+    for (const feature of featureList) {
+      list.push({
+        slug: slug([database, feature].join("-")),
+        database,
+        feature,
+      });
+    }
+  }
+  return list;
+}
+
+export function databaseFeatureForSlug(theSlug: string): DatabaseFeature {
+  for (const item of databaseFeatureList()) {
+    if (theSlug == item.slug) {
+      return item;
+    }
+  }
+  return {
+    slug: "unknown",
+    database: "",
+    feature: "",
+  };
 }
