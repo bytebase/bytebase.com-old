@@ -52,6 +52,7 @@ export const softwareList: string[] = [
   "Google Cloud",
   "Azure",
   "AliCloud",
+  "Kubernetes",
 ];
 
 export const alternativeList: string[] = [
