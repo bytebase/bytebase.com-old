@@ -23,6 +23,7 @@ export const featureList: string[] = [
   "Database migration",
   "Database schema change",
   "Database schema migration",
+  "Database refactoring",
   "DDL",
   "Backup and restore",
   "Database-as-Code",
