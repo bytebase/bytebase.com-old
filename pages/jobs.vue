@@ -139,9 +139,11 @@
     <div class="mt-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-lg max-w-prose mx-auto">
         <h1>
-          <span
-            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
-            >Jobs</span
+          <a
+            id="jobs"
+            href="#jobs"
+            class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase hover:underline"
+            >Jobs</a
           >
         </h1>
         <span
@@ -213,9 +215,11 @@
         </div>
 
         <h1>
-          <span
-            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900"
-            >What we are looking for</span
+          <a
+            id="quality"
+            href="#quality"
+            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 hover:underline"
+            >What we are looking for</a
           >
         </h1>
         <ul class="mt-6 space-y-4">
@@ -364,9 +368,69 @@
             >
           </li>
         </ul>
+        <h1>
+          <a
+            id="interview"
+            href="#interview"
+            class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 hover:underline"
+            >Interview process</a
+          >
+        </h1>
+        <p class="mt-2 text-center text-xl text-gray-500 leading-8">
+          Most likely, all interviews will be conducted online
+        </p>
+        <ul class="mt-6 space-y-4">
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800"
+              >Step 0: Let
+              <a
+                href="mailto:hr@bytebase.com?subject=Hi, I am interested in Bytebase position&body=Hello Bytebase,%0D%0A%0D%0A"
+                target="_blank"
+                class="text-indigo-600 underline"
+                >us</a
+              >
+              know you're interested.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800">Step 1: Resume screen.</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800"
+              >Step 2: 15 ~ 30 minuntes introduction chat.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800"
+              >Step 3: Pick one of our
+              <a
+                href="https://github.com/bytebase/interview"
+                target="_blank"
+                class="text-indigo-600 underline"
+              >
+                open sourced take-home assignments</a
+              >
+              and finish in a week.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800"
+              >Step 4: 1 hour technical interview, we will discuss the take-home
+              assignment as well as other topics.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800"
+              >Step 5: Another 1 hour technical interview.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800">Step 6: Offer.</span>
+          </li>
+        </ul>
         <div class="flex pt-8 pb-4 justify-center">
           <a
-            href="mailto:hr@bytebase.com?subject=Hi, I am interested in Bytebase 'Lead Frontend Engineer' position&body=Hello Bytebase,%0D%0A%0D%0A"
+            href="mailto:hr@bytebase.com?subject=Hi, I am interested in Bytebase position&body=Hello Bytebase,%0D%0A%0D%0A"
             target="_blank"
             class="w-46 flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
           >
