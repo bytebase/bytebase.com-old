@@ -1,6 +1,11 @@
 import slug from "slug";
 
-export const databaseList: string[] = ["MySQL", "PostgreSQL", "TiDB"];
+export const databaseList: string[] = [
+  "MySQL",
+  "PostgreSQL",
+  "Postgres",
+  "TiDB",
+];
 
 export const vcsList: string[] = ["GitLab"];
 
@@ -15,23 +20,35 @@ export const imList: string[] = [
 
 export const featureList: string[] = [
   "SQL review",
+  "Syntax check",
   "Schema drift detection",
   "Schema change",
   "Schema migration",
   "Database schema evolution",
   "Backward compatible schema change",
+  "SQL migration",
   "Database migration",
+  "DB migration",
+  "Database migration tool",
   "Database schema change",
   "Database schema migration",
+  "Database version control",
+  "Database versioning",
   "Database refactoring",
-  "DDL",
-  "Backup and restore",
+  "Database change management",
+  "Database source control",
   "Database-as-Code",
-  "Database CI",
-  "Database CD",
   "Database CI/CD",
-  "Database continous integration",
-  "Database continous delivery",
+  "Database DevOps",
+  "Rename column",
+  "Alter column",
+  "Add column",
+  "Drop column",
+  "Rename table",
+  "Alter table",
+  "Add table",
+  "Drop table",
+  "Backup and restore",
   "GitOps",
 ];
 
