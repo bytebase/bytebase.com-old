@@ -4,8 +4,8 @@
       <h1
         class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        Manage {{ databaseAlternative.database }} schema -
-        {{ databaseAlternative.alternative }} vs Bytebase
+        Bytebase - {{ databaseAlternative.alternative }} alternative for
+        {{ databaseAlternative.database }} version control.
       </h1>
       <div class="mt-8 flex text-center justify-center">
         <img
@@ -72,9 +72,11 @@ import { databaseAlternativeForSlug } from "../../../common/matrix";
 
 export default {
   head() {
-    const title = `Manage ${
+    const title = `Bytebase - ${
+      (this as any).databaseAlternative.alternative
+    } alternative for ${
       (this as any).databaseAlternative.database
-    } schema - ${(this as any).databaseAlternative.database} vs Bytebase`;
+    } version control`;
     return {
       title: title,
       meta: [
