@@ -146,7 +146,7 @@
                 >
                 manage the lifecycle of application database schemas.
               </h2>
-              <div class="mt-6 justify-center lg:justify-start">
+              <div class="flex mt-6 justify-center lg:justify-start">
                 <DatabaseBar />
               </div>
               <ActionSection
