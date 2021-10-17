@@ -24,6 +24,7 @@ export const featureList: string[] = [
   "Schema drift detection",
   "Schema change",
   "Schema migration",
+  "Schema refactoring",
   "Database schema evolution",
   "Backward compatible schema change",
   "SQL migration",
