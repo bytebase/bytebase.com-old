@@ -143,8 +143,9 @@
             📕 Database Glossary
           </h1>
           <h2 class="mt-4 text-base text-gray-500">
-            A handy database term dictionary on the internet. We cover general
-            database, MySQL, PostgreSQL as well as Bytebase specific topics.
+            A complete database term dictionary on the internet. We cover
+            general database, MySQL, PostgreSQL as well as Bytebase specific
+            topics.
           </h2>
           <div class="text-right">
             <a
@@ -327,7 +328,12 @@
 <script lang="ts">
 import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
 import slug from "slug";
-import { AlphaItem, Glossary, GlossaryTag, glossaryTagStyle } from "../../common/type";
+import {
+  AlphaItem,
+  Glossary,
+  GlossaryTag,
+  glossaryTagStyle,
+} from "../../common/type";
 import { ALPHA_LIST } from "../../common/glossary";
 
 type FilterItem = {
