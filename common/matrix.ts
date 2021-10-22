@@ -3,7 +3,6 @@ import slug from "slug";
 export const databaseList: string[] = [
   "MySQL",
   "PostgreSQL",
-  "Postgres",
   "TiDB",
 ];
 
