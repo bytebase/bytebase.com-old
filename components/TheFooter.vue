@@ -69,6 +69,14 @@
                 TiDB
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink
+                to="/database/clickhouse"
+                class="text-base text-gray-500 hover:text-gray-900"
+              >
+                ClickHouse
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 

@@ -10,6 +10,9 @@
           alt=""
         />
       </div>
+      <div class="flex mt-6 justify-center">
+        <DatabaseBar />
+      </div>
       <ActionSection class="sm:justify-center" :moduleName="'usercase'" />
       <h2
         class="mt-16 text-center text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight"
