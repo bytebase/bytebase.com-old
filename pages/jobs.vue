@@ -1,9 +1,17 @@
 <template>
   <div class="overflow-hidden">
     <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="flex">
+      <img
+        class="w-full"
+        src="~/assets/illustration/about_banner.webp"
+        alt=""
+      />
+    </div>
+
     <section class="bg-white overflow-hidden">
       <div
-        class="relative max-w-5xl mx-auto pt-20 px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20"
+        class="relative max-w-5xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20"
       >
         <div class="relative lg:flex lg:items-center">
           <div class="relative lg:ml-10">
@@ -50,9 +58,6 @@
             >How we build</span
           >
         </h1>
-        <div class="flex justify-center">
-          <img class="h-96" src="~/assets/illustration/job.webp" alt="" />
-        </div>
         <span
           class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-pink-700"
           >Deliver experience</span
