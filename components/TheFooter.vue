@@ -140,7 +140,7 @@
                 to="/integration/feishu"
                 class="text-base text-gray-500 hover:text-gray-900"
               >
-                Feishu (飞书)
+                Lark (飞书)
               </NuxtLink>
             </li>
             <li>

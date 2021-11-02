@@ -14,7 +14,7 @@ export const imList: string[] = [
   "Discord",
   "Teams",
   "DingTalk(钉钉)",
-  "Feishu(飞书)",
+  "Lark(飞书)",
   "WeCom(企业微信)",
 ];
 

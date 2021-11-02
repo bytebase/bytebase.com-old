@@ -7,15 +7,15 @@
         <span
           class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl"
         >
-          <span class="block text-gray-900">Feishu (飞书) + Bytebase</span>
+          <span class="block text-gray-900">Lark (飞书) + Bytebase</span>
         </span>
       </h1>
       <h2
         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
       >
         Bytebase supports webhook to post database schema related events to the
-        configured Feishu group. Those webhook events are specifically
-        customized for Feishu in order to display the optimal format.
+        configured Lark group. Those webhook events are specifically customized
+        for Lark in order to display the optimal format.
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
@@ -38,13 +38,13 @@ import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   head: {
-    title: "Integration with Feishu",
+    title: "Integration with Lark",
     meta: [
       {
-        hid: "Integration with Feishu",
-        name: "Integration with Feishu",
+        hid: "Integration with Lark",
+        name: "Integration with Lark",
         content:
-          "Bytebase supports webhook to post database schema related events to the configured Feishu group. Those webhook events are specifically customized for Feishu in order to display the optimal format.",
+          "Bytebase supports webhook to post database schema related events to the configured Lark group. Those webhook events are specifically customized for Lark in order to display the optimal format.",
       },
     ],
   },
