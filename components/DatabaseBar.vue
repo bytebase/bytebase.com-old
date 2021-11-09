@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row space-x-4">
     <div class="flex mt-6 text-base tracking-tight text-gray-400">
-      Work with
+      With
     </div>
     <div class="flex flex-row space-x-6">
       <img class="h-12 w-12" src="~/assets/logo/db-mysql.png" alt="mysql" />
