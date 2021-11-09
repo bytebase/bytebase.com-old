@@ -67,8 +67,8 @@ const people = [
     imageUrl: "xingzhe.webp",
   },
   {
-    name: "Yaping",
-    role: "Operation Specialist",
+    name: "???",
+    role: "Special Agent",
     imageUrl: "yaping.webp",
   },
   {
