@@ -8,27 +8,34 @@
           <div>
             <div class="relative pt-6 px-4">
               <nav
-                class="relative flex items-center justify-between sm:h-10 lg:justify-start"
+                class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
                 aria-label="Global"
               >
                 <div
                   class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
                 >
                   <div
-                    class="flex items-center justify-between w-full md:w-auto"
+                    class="flex items-center justify-between w-full sm:w-auto"
                   >
-                    <div
-                      class="flex items-center justify-between w-full sm:w-auto"
+                    <NuxtLink to="/">
+                      <span class="sr-only">Bytebase</span>
+                      <img
+                        class="h-6 sm:h-8 w-auto"
+                        src="~/assets/logo.svg"
+                        alt=""
+                      />
+                    </NuxtLink>
+                  </div>
+                  <div class="flex sm:hidden">
+                    <a
+                      class="github-button"
+                      href="https://github.com/bytebase/bytebase"
+                      data-color-scheme="no-preference: light; light: light; dark: dark;"
+                      data-size="large"
+                      data-show-count="true"
+                      aria-label="Star bytebase/bytebase on GitHub"
+                      >Star</a
                     >
-                      <NuxtLink to="/">
-                        <span class="sr-only">Bytebase</span>
-                        <img
-                          class="h-6 sm:h-8 w-auto"
-                          src="~/assets/logo.svg"
-                          alt=""
-                        />
-                      </NuxtLink>
-                    </div>
                   </div>
                 </div>
                 <div
@@ -70,7 +77,7 @@
                       ></path>
                     </svg>
                   </a>
-                  <div class="flex items-center lg:hidden">
+                  <div class="items-center hidden sm:flex lg:hidden">
                     <!-- Place this tag where you want the button to render. -->
                     <a
                       class="github-button"
