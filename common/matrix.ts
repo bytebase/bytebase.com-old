@@ -4,6 +4,7 @@ export const databaseList: string[] = [
   "MySQL",
   "PostgreSQL",
   "TiDB",
+  "Snowflake",
   "ClickHouse",
 ];
 

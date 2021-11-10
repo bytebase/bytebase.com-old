@@ -71,6 +71,14 @@
             </li>
             <li>
               <NuxtLink
+                to="/database/snowflake"
+                class="text-base text-gray-500 hover:text-gray-900"
+              >
+                Snowflake
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
                 to="/database/clickhouse"
                 class="text-base text-gray-500 hover:text-gray-900"
               >
