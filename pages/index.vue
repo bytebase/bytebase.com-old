@@ -12,7 +12,7 @@
                 aria-label="Global"
               >
                 <div
-                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                  class="flex -mt-1 items-center flex-grow flex-shrink-0 lg:flex-grow-0"
                 >
                   <div
                     class="flex items-center justify-between w-full sm:w-auto"
@@ -190,7 +190,7 @@
       </div>
     </div>
 
-    <div class="relative bg-white py-16 sm:py-24 lg:py-32 mt-6 lg:mt-48">
+    <div class="relative bg-white py-16 sm:py-24 lg:py-32 mt-6 lg:mt-72">
       <div
         class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
       >
