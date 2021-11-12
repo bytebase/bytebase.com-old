@@ -284,6 +284,16 @@
             </li>
 
             <li>
+              <NuxtLink
+                to="/brand"
+                @click="track('brand.footer')"
+                class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+              >
+                Brand
+              </NuxtLink>
+            </li>
+
+            <li>
               <a
                 href="mailto:support@bytebase.com"
                 target="__blank"
@@ -345,7 +355,7 @@
         </p>
       </div>
       <div class="mt-8 lg:mt-0 md:order-1 flex flex-row items-center space-x-4">
-        <img class="h-8" src="~/assets/logo.svg" alt="Bytebase" />
+        <img class="h-8" src="~/assets/logo-full.svg" alt="Bytebase" />
         <p class="text-center text-base text-gray-400 mt-1">
           &copy; 2021 Bytebase. All rights reserved.
         </p>

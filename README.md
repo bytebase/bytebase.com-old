@@ -1,4 +1,4 @@
-# <a href="https://bytebase.com"><img alt="Bytebase" src="https://raw.githubusercontent.com/bytebase/bytebase/be87525c1228fe00cdcc3585859664bdd3167aca/frontend/src/assets/logo.svg" height="56px" /></a>
+# <a href="https://bytebase.com"><img alt="Bytebase" src="https://raw.githubusercontent.com/bytebase/bytebase/be87525c1228fe00cdcc3585859664bdd3167aca/frontend/src/assets/logo-full.svg" height="56px" /></a>
 
 ### 🧲 We are looking for an experienced frontend engineer to lead Bytebase frontend development. Check out our [jobs page](https://bytebase.com/jobs).
 

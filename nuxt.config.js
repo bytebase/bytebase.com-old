@@ -1,4 +1,5 @@
 import tailwindTypography from "@tailwindcss/typography";
+import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
 import slug from "slug";
 import {
   databaseFeatureList,
@@ -124,7 +125,7 @@ export default {
 
   tailwindcss: {
     config: {
-      plugins: [tailwindTypography],
+      plugins: [tailwindTypography, tailwindAspectRatio],
       purge: {
         // "bg-", "text-" are used by tag
         safelist: [/^bg-/, /^text-/],

@@ -7,7 +7,7 @@
       >
         <NuxtLink to="/">
           <span class="sr-only">Bytebase</span>
-          <img class="h-6 sm:h-8 w-auto" src="~/assets/logo.svg" alt="" />
+          <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
         </NuxtLink>
         <a
           class="github-button"
@@ -29,7 +29,11 @@
           <div class="flex items-center justify-between w-full sm:w-auto">
             <NuxtLink to="/">
               <span class="sr-only">Bytebase</span>
-              <img class="h-6 sm:h-8 w-auto" src="~/assets/logo.svg" alt="" />
+              <img
+                class="h-6 sm:h-8 w-auto"
+                src="~/assets/logo-full.svg"
+                alt=""
+              />
             </NuxtLink>
           </div>
         </div>

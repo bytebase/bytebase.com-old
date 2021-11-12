@@ -21,7 +21,7 @@
                       <span class="sr-only">Bytebase</span>
                       <img
                         class="h-6 sm:h-8 w-auto"
-                        src="~/assets/logo.svg"
+                        src="~/assets/logo-full.svg"
                         alt=""
                       />
                     </NuxtLink>
@@ -816,7 +816,7 @@ export default defineComponent({
         {
           hid: "og:image",
           property: "og:image",
-          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo.svg`,
+          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-full.svg`,
         },
       ],
     });
