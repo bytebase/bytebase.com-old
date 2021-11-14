@@ -1,18 +1,8 @@
 <template>
   <div class="overflow-hidden">
     <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="flex">
-      <img
-        class="w-full"
-        src="~/assets/illustration/about_banner.webp"
-        alt=""
-      />
-    </div>
-
     <section class="bg-white overflow-hidden">
-      <div
-        class="relative max-w-5xl mx-auto pt-24 px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20"
-      >
+      <div class="relative max-w-5xl mx-auto pt-24 px-12">
         <div class="relative lg:flex lg:items-center">
           <div class="relative lg:ml-10">
             <svg
@@ -46,6 +36,9 @@
               </div>
             </blockquote>
           </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="~/assets/illustration/offer.webp" alt="" />
         </div>
       </div>
     </section>

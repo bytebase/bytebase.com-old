@@ -1,7 +1,15 @@
 <template>
   <div>
     <section class="overflow-hidden">
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex">
+        <img
+          class="w-full"
+          src="~/assets/illustration/about_banner.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="relative max-w-7xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
         <div class="relative">
           <h1>
             <span
