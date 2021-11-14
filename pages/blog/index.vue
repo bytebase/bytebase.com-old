@@ -1,9 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div class="relative bg-white px-4 sm:px-6 lg:px-8 py-8">
-    <div class="absolute inset-0">
-      <div class="h-1/3 sm:h-2/3"></div>
-    </div>
     <div class="relative max-w-7xl mx-auto">
       <div class="text-center">
         <h1
