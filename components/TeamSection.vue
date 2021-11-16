@@ -29,7 +29,13 @@
                 <template v-if="person.name == 'You'">
                   <NuxtLink
                     to="/jobs#jobs"
-                    class="text-2xl font-semibold text-indigo-600 hover:text-indigo-500 hover:underline whitespace-nowrap"
+                    class="
+                      text-2xl
+                      font-semibold
+                      text-indigo-600
+                      hover:text-indigo-500 hover:underline
+                      whitespace-nowrap
+                    "
                   >
                     {{ person.role }}🎢
                   </NuxtLink>
@@ -65,6 +71,11 @@ const people = [
     name: "Zhe",
     role: "Engineering Intern",
     imageUrl: "xingzhe.webp",
+  },
+  {
+    name: "Zilong",
+    role: "Engineering Intern",
+    imageUrl: "zilong.webp",
   },
   {
     name: "???",
