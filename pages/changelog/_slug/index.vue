@@ -3,7 +3,7 @@
     <div class="prose prose-xl md:prose-2xl mx-auto text-center">
       <img
         v-if="post.feature_image"
-        class="object-cover"
+        class="mx-auto object-cover"
         :src="post.feature_image"
         :alt="post.feature_image_alt"
       />

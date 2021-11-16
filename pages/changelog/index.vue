@@ -61,7 +61,7 @@
               >
                 <div class="flex justify-center items-center">
                   <img
-                    class="object-cover"
+                    class="mx-auto object-cover"
                     :src="post.feature_image"
                     :alt="post.feature_image_alt"
                   />
