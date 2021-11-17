@@ -12,7 +12,7 @@
                 aria-label="Global"
               >
                 <div
-                  class="flex -mt-1 items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
                 >
                   <div
                     class="flex items-center justify-between w-full sm:w-auto"
