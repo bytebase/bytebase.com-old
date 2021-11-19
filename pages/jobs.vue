@@ -146,14 +146,48 @@
         </h1>
         <span
           class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >Lead Frontend Engineer (China)</span
+          >Backend Engineer (China)</span
         >
         <p class="mt-8 text-xl text-gray-500 leading-8">
           Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
-          backend uses Golang + SQLite. You will lead the frontend development
-          and collabrate with the backend and product team to craft the
-          industry-leading database tool. Some of the problems you will be
-          working on:
+          backend uses Golang + SQLite. As a backend engineer, you will work
+          with the frontend team to craft the industry-leading database tool.
+          Some of the problems you will be working on:
+        </p>
+        <div class="prose prose-xl">
+          <ul>
+            <li>
+              Build the state-of-the-art SQL query advisor.
+            </li>
+            <li>
+              Advanced schema change engine for supporting complex scenarios
+              like online DDL, customer multitenancy.
+            </li>
+            <li>
+              Easy-to-use comprehensive backup and restore solution for
+              supported database types.
+            </li>
+            <li>
+              Build up the
+              <a
+                href="https://github.com/bytebase/bytebase/tree/main/plugin"
+                target="__blank"
+                >plugin architecture</a
+              >
+              to gradually evolve the product into a platform.
+            </li>
+          </ul>
+        </div>
+
+        <span
+          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >Frontend Engineer (China)</span
+        >
+        <p class="mt-8 text-xl text-gray-500 leading-8">
+          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
+          backend uses Golang + SQLite. You will work with the backend and
+          product team to craft the industry-leading database tool. Some of the
+          problems you will be working on:
         </p>
         <div class="prose prose-xl">
           <ul>
@@ -180,37 +214,21 @@
 
         <span
           class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >Full Stack Engineer (China)</span
+          >Engineering Intern (Shanghai Office)</span
         >
         <p class="mt-8 text-xl text-gray-500 leading-8">
-          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
-          backend uses Golang + SQLite. As a full stack engineer, you will own
-          feature end-to-end. Some of the problems you will be working on:
+          We are hiring intern all year long. However we have limited spot
+          because we need to make sure we can allocate enough resource to mentor
+          each intern. If you are interested, please contact us from the bottom
+          button to check the availability. We will offer the top-tier
+          internship compensation, but more importantly, you will likely receive
+          one of the most comprehensive engineering training in the country.
         </p>
-        <div class="prose prose-xl">
-          <ul>
-            <li>
-              Build the state-of-the-art SQL query advisor.
-            </li>
-            <li>
-              Advanced schema change engine for supporting complex scenarios
-              like online DDL, customer multitenancy.
-            </li>
-            <li>
-              Easy-to-use comprehensive backup and restore solution for
-              supported database types.
-            </li>
-            <li>
-              Build up the
-              <a
-                href="https://github.com/bytebase/bytebase/tree/main/plugin"
-                target="__blank"
-                >plugin architecture</a
-              >
-              to gradually evolve the product into a platform.
-            </li>
-          </ul>
-        </div>
+
+        <p class="mt-8 text-xl text-gray-500 leading-8">
+          <span class="text-red-600">*</span> We require intern to commit at
+          least 3 days a week and work from our Shanghai office.
+        </p>
 
         <h1>
           <a
@@ -310,7 +328,7 @@
                 d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
               ></path>
             </svg>
-            <span class="text-xl text-gray-800">Backend experience</span>
+            <span class="text-xl text-gray-800">Full stack experience</span>
           </li>
           <li class="flex items-center space-x-3">
             <svg
