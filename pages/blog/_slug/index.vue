@@ -21,7 +21,7 @@
       <h1>{{ post.title }}</h1>
     </div>
     <span
-      class="flex flex-row items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
+      class="flex flex-row px-2 items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <img
         class="h-10 w-10 rounded-full mr-2"
@@ -45,7 +45,7 @@
       </div></span
     >
     <div
-      class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      class="prose prose-indigo prose-xl md:prose-2xl mx-auto px-4"
       v-html="post.html"
     ></div>
 
