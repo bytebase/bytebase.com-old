@@ -175,7 +175,7 @@
       </div>
     </div>
 
-    <div class="mt-8 mg:mt-0 relative">
+    <div class="mt-8 relative">
       <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6">
         <img
           class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-96"

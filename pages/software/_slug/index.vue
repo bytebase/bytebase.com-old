@@ -11,13 +11,6 @@
           >{{ databaseSoftware.database }}</span
         >
       </h1>
-      <div class="mt-8 flex text-center justify-center">
-        <img
-          class="object-contain h-96 md:h-144"
-          src="~/assets/illustration/main.webp"
-          alt=""
-        />
-      </div>
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
         Bytebase is an
         <a href="https://github.com/bytebase/bytebase" target="__blank"
@@ -42,8 +35,17 @@
       <div class="flex mt-6 justify-center">
         <DatabaseBar />
       </div>
+      <div class="mt-8">
+        <ActionSection
+          class="sm:justify-center"
+          :moduleName="'feature-detail'"
+        />
+      </div>
+      <div class="mt-8 relative">
+        <ScreenshotSection />
+      </div>
       <h2
-        class="mt-16 text-center text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight"
+        class="mt-16 lg:mt-56 text-center text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight"
       >
         Features
       </h2>
