@@ -18,10 +18,10 @@
           role="list"
           class="mx-auto space-y-8 sm:grid grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-4 lg:max-w-5xl"
         >
-          <li v-for="person in people" :key="person.name">
+          <li v-for="person in shuffleList" :key="person.name">
             <img
               class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-              :src="require(`~/assets/people/${person.imageUrl}`)"
+              :src="person.imageUrl"
               alt=""
             />
             <div class="space-y-2">
@@ -100,45 +100,53 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, onMounted, ref } from "@nuxtjs/composition-api";
+
+import { shuffle } from '@/utils/index';
 
 const people = [
   {
     name: "Tianzhou",
     role: "Founder",
-    imageUrl: "tianzhou.webp",
+    imageUrl: require(`~/assets/people/tianzhou.webp`),
   },
   {
     name: "Ningjing",
     role: "Community Manager",
-    imageUrl: "ningjing.webp",
+    imageUrl: require(`~/assets/people/ningjing.webp`),
   },
   {
     name: "Zhe",
     role: "Engineering Intern",
-    imageUrl: "xingzhe.webp",
+    imageUrl: require(`~/assets/people/xingzhe.webp`),
   },
   {
     name: "Zilong",
     role: "Engineering Intern",
-    imageUrl: "zilong.webp",
+    imageUrl: require(`~/assets/people/zilong.webp`),
   },
   {
     name: "Ji",
     role: "Engineer",
-    imageUrl: "ji.webp",
+    imageUrl: require(`~/assets/people/ji.webp`),
   },
   {
     name: "???",
     role: "Special Agent",
-    imageUrl: "yaping.webp",
+    imageUrl: require(`~/assets/people/yaping.webp`),
   },
   {
-    name: "You",
-    role: "Join us",
-    imageUrl: "wantyou.webp",
+    name: "Yunwei",
+    role: "Engineer",
+    imageUrl: require(`~/assets/people/yunwei.webp`),
   },
 ];
+
+const YOU = {
+  name: "You",
+  role: "Join us",
+  imageUrl: require(`~/assets/people/wantyou.webp`),
+}
 
 const backer = [
   {
@@ -156,14 +164,12 @@ const backer = [
 export default defineComponent({
   props: {},
   setup(props) {
-    // TODO: Shuffle seems to mess up with require used by the <img :src="..." />
-    // for (let i = people.length - 1; i > 0; i--) {
-    //   const j = Math.floor(Math.random() * (i + 1));
-    //   const temp = people[i];
-    //   people[i] = people[j];
-    //   people[j] = temp;
-    // }
-    return { people, backer };
+    const shuffleList = ref(people)
+    onMounted(() => {
+      shuffleList.value = shuffle(people)
+      shuffleList.value.push(YOU)
+    })
+    return { shuffleList, backer };
   },
 });
 </script>
