@@ -125,7 +125,7 @@ const people = [
   },
   {
     name: "Ji",
-    role: "Senior Frontend Engineer",
+    role: "Engineer",
     imageUrl: "ji.webp",
   },
   {
