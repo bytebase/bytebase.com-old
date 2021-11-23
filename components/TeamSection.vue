@@ -124,6 +124,11 @@ const people = [
     imageUrl: "zilong.webp",
   },
   {
+    name: "Ji",
+    role: "Senior Frontend Engineer",
+    imageUrl: "ji.webp",
+  },
+  {
     name: "???",
     role: "Special Agent",
     imageUrl: "yaping.webp",
