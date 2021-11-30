@@ -171,7 +171,7 @@
           <ul class="mt-4 space-y-4">
             <li>
               <a
-                href="https://github.com//bytebase/bytebase"
+                href="https://github.com/bytebase/bytebase"
                 target="__blank"
                 class="flex flex-row space-x-2 text-base text-gray-500 hover:text-gray-900"
               >
@@ -329,7 +329,7 @@
         </a>
 
         <a
-          href="https://github.com//bytebase/bytebase"
+          href="https://github.com/bytebase/bytebase"
           target="__blank"
           class="text-gray-400 hover:text-gray-500"
         >
