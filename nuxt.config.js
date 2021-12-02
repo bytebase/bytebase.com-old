@@ -152,6 +152,6 @@ export default {
   },
 
   googleAnalytics: {
-    id: "UA-202806916-1",
+    id: "G-4BZ4JH7449",
   },
 };
