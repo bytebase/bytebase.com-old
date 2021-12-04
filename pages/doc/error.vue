@@ -104,7 +104,7 @@
           <h1
             class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900"
           >
-            🐞 Bytebase error codes
+            🐞 Bytebase Error Codes
           </h1>
           <h2 class="mt-4 text-base text-gray-500">
             Documentation for all error codes emitted by Bytebase.
