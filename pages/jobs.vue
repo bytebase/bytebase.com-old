@@ -311,7 +311,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <span class="text-xl text-gray-800">Good sense of UX</span>
+            <span class="text-xl text-gray-800">Product aptitude</span>
           </li>
           <li class="flex items-center space-x-3">
             <svg
