@@ -9,6 +9,7 @@ import {
   databaseAlternativeList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
+import { getPosts } from "./api/posts";
 
 function glossaryRouteList() {
   const list = [];
@@ -90,12 +91,25 @@ export default {
   },
 
   generate: {
-    routes: glossaryRouteList()
-      .concat(databaseFeatureRouteList())
-      .concat(databaseVCSRouteList())
-      .concat(webhookRouteList())
-      .concat(softwareRouteList())
-      .concat(compareRouteList()),
+    routes: async () => {
+      const postRoutelist = [];
+      const postList = await getPosts();
+      for (const post of postList) {
+        if (post.tags?.find((item) => item.name == "Changelog")) {
+          postRoutelist.push(`changelog/${post.slug}`);
+        } else {
+          postRoutelist.push(`blog/${post.slug}`);
+        }
+      }
+
+      return postRoutelist
+        .concat(glossaryRouteList())
+        .concat(databaseFeatureRouteList())
+        .concat(databaseVCSRouteList())
+        .concat(webhookRouteList())
+        .concat(softwareRouteList())
+        .concat(compareRouteList());
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -153,5 +167,10 @@ export default {
 
   googleAnalytics: {
     id: "UA-202806916-1",
+  },
+
+  sitemap: {
+    hostname: "https://bytebase.com",
+    gzip: true,
   },
 };
