@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.24.7",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/typography": "^0.4.1",
     "@tryghost/content-api": "^1.5.13",
