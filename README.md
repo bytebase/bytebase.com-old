@@ -2,7 +2,29 @@
 
 ### 🧲 We are hiring. Check out our [jobs page](https://bytebase.com/jobs).
 
-This is the source code for Bytebase.com.
+This is the source code for Bytebase.com. Our website is hosted on [Render](render.com).
+
+## How the website is built
+
+The website has static pages and blog/changelog/newsletter. We use [Ghost](https://bytebase.ghost.io/) as our headless CMS for blog/changelog/newsletter. The entire site is generated with the static pages and then been published online. During the generation process, we will call [Ghost content API](https://ghost.org/docs/content-api/) to fetch the post info in order to generate the blog/changelog static pages.
+
+### How to create a blog post
+
+1. Edit the post on Ghost.
+
+2. Assign a tag, one can choose from [Announcement, Education]
+
+3. Create the post.
+
+4. Visit render.com to manually deploy the site, which will trigger the process to regenerate the entire static page list. We need to manually do this because render is not aware of the new post appeared on Ghost.
+
+### How to create a changelog
+
+Very similar to how to create a blog post, execpt taht one needs to assign the "Changelog" tag to the post.
+
+### How to create/update other static pages.
+
+Just create/update the page and push to the repo. Render can observe the change in this case, generate and redeploy the entire site.
 
 ## Quick contribution
 
