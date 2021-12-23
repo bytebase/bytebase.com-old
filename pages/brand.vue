@@ -86,6 +86,11 @@
         src="~/assets/illustration/about_banner.webp"
         alt=""
       />
+      <img
+        class="sm:col-span-2"
+        src="~/assets/illustration/allyourbase.webp"
+        alt=""
+      />
     </div>
   </div>
 </template>
