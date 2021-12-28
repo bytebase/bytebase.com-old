@@ -202,10 +202,11 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first database CI/CD solution for team
+          Industry first database CI/CD solution for
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >collaboration
+          >
+            team collaboration
           </span>
         </h2>
         <div class="mt-12">
