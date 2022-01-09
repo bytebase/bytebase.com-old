@@ -137,7 +137,7 @@
               Migration History
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Bookkeeping the full migration history with side-by-side diff
+              Record the full migration history with side-by-side diff
               comparison between versions.
             </p>
           </div>
@@ -205,8 +205,8 @@
               Drift Detection
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Automatically detects schema drift by comparing the recorded
-              schema and actual schema. Catch any unexpected schema changes.
+              Automatically detect schema drift by comparing the recorded schema
+              and actual schema. Catch any unexpected schema changes.
             </p>
           </div>
         </div>
