@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MainBanner class="mb-2" />
     <!-- This example requires Tailwind CSS v2.0+ -->
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto">
@@ -793,6 +794,7 @@
 <script lang="ts">
 import { defineComponent, useMeta } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import MainBanner from "~/components/MainBanner.vue";
 
 const { trackEvent } = Plausible();
 
@@ -803,7 +805,6 @@ export default defineComponent({
     const track = (name: string) => {
       trackEvent(name);
     };
-
     useMeta({
       title: "Bytebase | Open source web-based db schema change for team",
       meta: [
@@ -821,8 +822,8 @@ export default defineComponent({
         },
       ],
     });
-
     return { track };
   },
+  components: { MainBanner },
 });
 </script>
