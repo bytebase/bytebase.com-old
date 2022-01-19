@@ -85,6 +85,11 @@ const people = [
     imageUrl: require(`~/assets/people/tianzhou.webp`),
   },
   {
+    name: "Danny",
+    role: "CTO",
+    imageUrl: require(`~/assets/people/danny.webp`),
+  },
+  {
     name: "Ningjing",
     role: "Community Manager",
     imageUrl: require(`~/assets/people/ningjing.webp`),
