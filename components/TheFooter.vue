@@ -286,16 +286,16 @@
       </div>
       <div class="mt-8 lg:mt-0 md:order-1 flex flex-row items-center space-x-4">
         <img class="h-8" src="~/assets/logo-full.svg" alt="Bytebase" />
-        <p
-          class="text-center text-base text-gray-400 mt-1"
-        >&copy; 2021 Bytebase. All rights reserved.</p>
+        <p class="text-center text-base text-gray-400 mt-1">
+          &copy; {{ year }} Bytebase. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { computed, defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -306,7 +306,11 @@ export default defineComponent({
       trackEvent(name);
     };
 
-    return { track };
+    const year = computed(() => {
+      return new Date().getFullYear();
+    });
+
+    return { track, year };
   },
 });
 </script>
