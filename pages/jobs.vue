@@ -441,7 +441,12 @@
             >
           </li>
           <li class="flex items-center space-x-3">
-            <span class="text-xl text-gray-800">Step 6: Offer.</span>
+            <span class="text-xl text-gray-800"
+              >Step 6: Technical writing assignment.</span
+            >
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-xl text-gray-800">Step 7: Offer.</span>
           </li>
         </ul>
         <div class="flex pt-8 pb-4 justify-center">
