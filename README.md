@@ -2,7 +2,7 @@
 
 ### 🧲 We are hiring. Check out our [jobs page](https://bytebase.com/jobs).
 
-This is the source code for Bytebase.com. Our website is hosted on [Render](render.com).
+This is the source code for Bytebase.com. Our website is hosted on [Render](https://render.com).
 
 ## How the website is built
 
