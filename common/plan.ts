@@ -28,7 +28,7 @@ export const FEATURE_SECTIONS = [
       "Schema change",
       "Migration history",
       "SQL Editor",
-      "Database backup/restore",
+      "Database backup / restore",
       "Archiving",
       "SQL check",
       "Anomaly detection",
@@ -48,7 +48,7 @@ export const FEATURE_SECTIONS = [
   },
   {
     id: "Admin & Security",
-    features: ["Activity Log", "RBAC"],
+    features: ["RBAC (Owner, DBA, Developer role)", "Activity Log"],
   },
 ];
 
@@ -105,7 +105,7 @@ const TEAM_PLAN: Plan = {
     { id: "Schema change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
-    { id: "Database backup/restore" },
+    { id: "Database backup / restore" },
     { id: "Archiving" },
     {
       id: "SQL check",
@@ -146,7 +146,7 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "Schema change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
-    { id: "Database backup/restore" },
+    { id: "Database backup / restore" },
     { id: "Archiving" },
     {
       id: "SQL check",
@@ -172,7 +172,7 @@ const ENTERPRISE_PLAN: Plan = {
 };
 
 export const PLANS: Plan[] = [
-    FREE_PLAN,
-    TEAM_PLAN,
-    ENTERPRISE_PLAN,
+  FREE_PLAN,
+  TEAM_PLAN,
+  ENTERPRISE_PLAN,
 ];
