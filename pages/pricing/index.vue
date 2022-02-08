@@ -1,22 +1,15 @@
 <template>
-  <div class="bg-gray-50">
-    <div class="relative bg-indigo-600">
-      <!-- Overlapping background -->
-      <div
-        aria-hidden="true"
-        class="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block"
-      />
-
-      <div
-        class="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8"
-      >
-        <h1
-          class="text-4xl font-extrabold tracking-tight text-white sm:text-6xl"
+  <div class>
+    <div class="relative">
+      <div class="relative max-w-2xl mx-auto px-4 py-8 text-center sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2
+          class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          <span class="block lg:inline">Industry first database CI/CD solution for team collaboration </span>
-          <!-- <br />
-          <span class="block lg:inline">for companies and developers</span> -->
-        </h1>
+          Industry first database CI/CD solution for
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+          >team collaboration</span>
+        </h2>
       </div>
 
       <h2 class="sr-only">Plans</h2>
@@ -48,9 +41,7 @@
                   plan.featured ? 'text-indigo-600' : 'text-white',
                   'text-sm font-semibold uppercase tracking-wide',
                 ]"
-              >
-                {{ plan.title }}
-              </h3>
+              >{{ plan.title }}</h3>
               <img
                 :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
                 class="hidden lg:block w-2/3 m-auto"
@@ -63,9 +54,7 @@
                       plan.featured ? 'text-indigo-600' : 'text-white',
                       'text-4xl font-extrabold tracking-tight',
                     ]"
-                  >
-                    {{ plan.unitPrice }}
-                  </p>
+                  >{{ plan.unitPrice }}</p>
                 </div>
                 <button
                   :class="[
@@ -75,9 +64,7 @@
                     'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium',
                   ]"
                   @click="onButtonClick(plan)"
-                >
-                  {{ plan.buttonText }}
-                </button>
+                >{{ plan.buttonText }}</button>
               </div>
             </div>
             <h4 class="sr-only">Features</h4>
@@ -107,9 +94,7 @@
                     plan.featured ? 'text-gray-600' : 'text-white',
                     'ml-3 text-sm font-medium',
                   ]"
-                >
-                  {{ feature }}
-                </span>
+                >{{ feature }}</span>
               </li>
             </ul>
           </div>
@@ -122,11 +107,7 @@
       <h2 id="mobile-comparison-heading" class="sr-only">Feature comparison</h2>
 
       <div class="max-w-2xl mx-auto py-16 px-4 space-y-16 sm:px-6">
-        <div
-          v-for="(plan, index) in plans"
-          :key="index"
-          class="border-t border-gray-200"
-        >
+        <div v-for="(plan, index) in plans" :key="index" class="border-t border-gray-200">
           <div
             :class="[
               plan.featured ? 'border-indigo-600' : 'border-transparent',
@@ -138,23 +119,16 @@
                 plan.featured ? 'text-indigo-600' : 'text-gray-900',
                 'text-sm font-bold',
               ]"
-            >
-              {{ plan.title }}
-            </h3>
+            >{{ plan.title }}</h3>
             <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
           </div>
 
           <div v-for="section in sections" :key="section.title">
-            <h4 class="mt-10 text-sm font-bold text-gray-900">
-              {{ section.title }}
-            </h4>
+            <h4 class="mt-10 text-sm font-bold text-gray-900">{{ section.title }}</h4>
 
             <div class="mt-6 relative">
               <!-- Fake card background -->
-              <div
-                aria-hidden="true"
-                class="hidden absolute inset-0 pointer-events-none sm:block"
-              >
+              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
                 <div
                   :class="[
                     plan.featured ? 'shadow-md' : 'shadow',
@@ -177,12 +151,8 @@
                     :key="feature.title"
                     class="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
                   >
-                    <dt class="pr-4 text-sm font-medium text-gray-600">
-                      {{ feature.title }}
-                    </dt>
-                    <dd
-                      class="flex items-center justify-end sm:px-4 sm:justify-center"
-                    >
+                    <dt class="pr-4 text-sm font-medium text-gray-600">{{ feature.title }}</dt>
+                    <dd class="flex items-center justify-end sm:px-4 sm:justify-center">
                       <span
                         v-if="typeof feature.tiers[index].value === 'string'"
                         :class="[
@@ -191,22 +161,19 @@
                             : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                        >{{ feature.tiers[index].value }}</span
-                      >
+                      >{{ feature.tiers[index].value }}</span>
                       <template v-else>
                         <CheckIcon
                           v-if="feature.tiers[index].value === true"
                           class="mx-auto h-5 w-5 text-indigo-600"
                           aria-hidden="true"
                         />
-                        <XIcon
-                          v-else
-                          class="mx-auto h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        />
-                        <span class="sr-only">{{
-                          feature.tiers[index].value === true ? "Yes" : "No"
-                        }}</span>
+                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <span class="sr-only">
+                          {{
+                            feature.tiers[index].value === true ? "Yes" : "No"
+                          }}
+                        </span>
                       </template>
                     </dd>
                   </div>
@@ -214,10 +181,7 @@
               </div>
 
               <!-- Fake card border -->
-              <div
-                aria-hidden="true"
-                class="hidden absolute inset-0 pointer-events-none sm:block"
-              >
+              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
                 <div
                   :class="[
                     plan.featured
@@ -260,24 +224,17 @@
                   plan.featured ? 'text-indigo-600' : 'text-gray-900',
                   'text-sm font-bold',
                 ]"
-              >
-                {{ plan.title }}
-              </p>
+              >{{ plan.title }}</p>
               <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
             </div>
           </div>
         </div>
 
         <div v-for="section in sections" :key="section.title">
-          <h3 class="text-xl font-bold text-gray-900 text-left my-5">
-            {{ section.title }}
-          </h3>
+          <h3 class="text-xl font-bold text-gray-900 text-left my-5">{{ section.title }}</h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
-            <div
-              class="absolute inset-0 flex items-stretch pointer-events-none"
-              aria-hidden="true"
-            >
+            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
               <div class="w-1/4 pr-4" />
               <div class="w-1/4 px-4">
                 <div class="w-full h-full bg-white rounded-lg shadow" />
@@ -291,9 +248,7 @@
             </div>
 
             <table class="relative w-full">
-              <caption class="sr-only">
-                Business feature comparison
-              </caption>
+              <caption class="sr-only">Business feature comparison</caption>
               <thead>
                 <tr class="text-left">
                   <th scope="col">
@@ -309,9 +264,7 @@
                   <th
                     scope="row"
                     class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
-                  >
-                    {{ feature.title }}
-                  </th>
+                  >{{ feature.title }}</th>
                   <td
                     v-for="(tier, tierIdx) in feature.tiers"
                     :key="tierIdx"
@@ -327,23 +280,19 @@
                           tier.featured ? 'text-indigo-600' : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                      >
-                        {{ tier.value }}
-                      </span>
+                      >{{ tier.value }}</span>
                       <template v-else>
                         <CheckIcon
                           v-if="tier.value === true"
                           class="mx-auto h-5 w-5 text-indigo-600"
                           aria-hidden="true"
                         />
-                        <XIcon
-                          v-else
-                          class="mx-auto h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        />
-                        <span class="sr-only">{{
-                          tier.value === true ? "Yes" : "No"
-                        }}</span>
+                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <span class="sr-only">
+                          {{
+                            tier.value === true ? "Yes" : "No"
+                          }}
+                        </span>
                       </template>
                     </span>
                   </td>
@@ -352,25 +301,16 @@
             </table>
 
             <!-- Fake card borders -->
-            <div
-              class="absolute inset-0 flex items-stretch pointer-events-none"
-              aria-hidden="true"
-            >
+            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
               <div class="w-1/4 pr-4" />
               <div class="w-1/4 px-4">
-                <div
-                  class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5"
-                />
+                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
               </div>
               <div class="w-1/4 px-4">
-                <div
-                  class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100"
-                />
+                <div class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
               </div>
               <div class="w-1/4 pl-4">
-                <div
-                  class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5"
-                />
+                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
               </div>
             </div>
           </div>
