@@ -223,6 +223,14 @@
 
             <li>
               <NuxtLink
+                to="/pricing"
+                @click="track('pricing.footer')"
+                class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+              >Pricing</NuxtLink>
+            </li>
+
+            <li>
+              <NuxtLink
                 to="/jobs"
                 @click="track('job.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
