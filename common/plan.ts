@@ -119,7 +119,7 @@ const TEAM_PLAN: Plan = {
     { id: "IM integration" },
     { id: "Inbox notification" },
     { id: "Activity Log" },
-    { id: "RBAC" },
+    { id: "RBAC (Owner, DBA, Developer role)" },
   ],
   mainFeatures: [
     "Everything in free plan",
@@ -161,7 +161,7 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "IM integration" },
     { id: "Inbox notification" },
     { id: "Activity Log" },
-    { id: "RBAC" },
+    { id: "RBAC (Owner, DBA, Developer role)" },
   ],
   mainFeatures: [
     "Everything in team plan",
