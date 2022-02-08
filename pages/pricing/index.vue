@@ -52,7 +52,7 @@
                 {{ plan.title }}
               </h3>
               <img
-                :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.png`)"
+                :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
 
