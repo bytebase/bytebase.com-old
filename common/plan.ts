@@ -13,6 +13,7 @@ export interface Plan {
   unitPrice: string;
   trialPrice: number;
   pricePerInstancePerMonth: number;
+  priceDescription: string;
   // Plan desc and feature
   title: string;
   description: string;
@@ -22,33 +23,34 @@ export interface Plan {
 
 export const FEATURE_SECTIONS = [
   {
-    id: "Database Management",
+    id: "Database Development",
     features: [
       "Instance",
-      "Schema change",
+      "Schema and data change",
       "Migration history",
       "SQL Editor",
       "Database backup / restore",
       "Archiving",
       "SQL check",
       "Anomaly detection",
+      "Scheduled change at specific time",
       "Review and backup policy",
-      "Multi-Region / Multi-Tenancy",
+      "Multi-Region / Multi-Tenancy deployment",
     ],
   },
   {
     id: "Collaboration",
     features: [
       "UI based SQL review",
-      "GitOps workflow",
-      "SQL review commenting",
+      "VCS workflow #GitOps",
+      "Shareable query link",
       "IM integration",
       "Inbox notification",
     ],
   },
   {
     id: "Admin & Security",
-    features: ["RBAC (Owner, DBA, Developer role)", "Activity Log"],
+    features: ["Activity log", "RBAC (Owner, DBA, Developer role)", "Login with GitLab account"],
   },
 ];
 
@@ -59,31 +61,32 @@ const FREE_PLAN: Plan = {
   unitPrice: "0",
   trialPrice: 0,
   pricePerInstancePerMonth: 0,
+  priceDescription: "Up to 5",
   // Plan desc and feature
   title: "Free",
   description: "Personal project or small team, no DBA",
   features: [
     { id: "Instance", content: "Up to 5" },
-    { id: "Schema change" },
+    { id: "Schema and data change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
-    { id: "Database backup/restore" },
+    { id: "Database backup / restore" },
     { id: "Archiving" },
-    { id: "SQL check", content: "Basic" },
-    { id: "Anomaly detection", content: "Basic" },
+    { id: "SQL check", content: "Basic", tooltip: "Syntax check, connection check" },
+    { id: "Anomaly detection", content: "Basic", tooltip: "Connection failure, missing backup" },
     { id: "UI based SQL review" },
+    { id: "VCS workflow #GitOps" },
     { id: "GitOps workflow" },
-    { id: "SQL review commenting" },
+    { id: "Shareable query link" },
     { id: "IM integration" },
     { id: "Inbox notification" },
-    { id: "Activity Log" },
-    { id: "UI based SQL review" },
+    { id: "Activity log" },
   ],
   mainFeatures: [
     "Community support",
-    "Basic SQL check",
-    "Basic anomaly detection",
-    "GitLab integration #GitOps",
+    "Schema and data change review workflow",
+    "SQL Editor",
+    "Database backup / restore",
     "IM integration (e.g. Slack, Discord and etc)",
   ],
 };
@@ -96,12 +99,13 @@ const TEAM_PLAN: Plan = {
   unitPrice: "1740",
   trialPrice: 7,
   pricePerInstancePerMonth: 29,
+  priceDescription: "5 minimum, billed annually",
   // Plan desc and feature
   title: "Team",
-  description: "Medium size team, has dedicated DBA or TL with management needs",
+  description: "Medium size team, has dedicated DBA or TL for engineering velocity",
   features: [
     { id: "Instance", content: "5 ~ unlimited" },
-    { id: "Schema change" },
+    { id: "Schema and data change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
     { id: "Database backup / restore" },
@@ -109,46 +113,49 @@ const TEAM_PLAN: Plan = {
     {
       id: "SQL check",
       content: "Advanced",
-      tooltip: "e.g. Backward compatibility check"
+      tooltip: "Basic + Backward compatibility check"
     },
     {
       id: "Anomaly detection",
       content: "Advanced",
-      tooltip: "e.g. Drift detection"
+      tooltip: "Basic + Drift detection"
     },
+    { id: "Scheduled change at specific time" },
     { id: "Review and backup policy" },
     { id: "UI based SQL review" },
-    { id: "GitOps workflow" },
-    { id: "SQL review commenting" },
+    { id: "VCS workflow #GitOps" },
+    { id: "Shareable query link" },
     { id: "IM integration" },
     { id: "Inbox notification" },
-    { id: "Activity Log" },
+    { id: "Activity log" },
     { id: "RBAC (Owner, DBA, Developer role)" },
+    { id: "Login with GitLab account" },
   ],
   mainFeatures: [
+    "Email support",
     "Everything in free plan",
-    "Priority support",
-    "DBA and Developer roles",
-    "Advanced SQL check",
-    "Advanced anomaly detection",
+    "Owner, DBA and Developer roles",
+    "GitLab login",
+    "Advanced SQL check and anomaly detection",
     "Review and backup policy",
   ],
 };
 
 const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
-  label: "Contact us",
+  label: "Early access",
   type: PlanType.ENTERPRISE,
   trialDays: 7,
   unitPrice: "11940",
   trialPrice: 0,
   pricePerInstancePerMonth: 199,
+  priceDescription: "Customized, billed annually",
   // Plan desc and feature
   title: "Enterprise",
-  description: "Large organization, has dedicated DBA group",
+  description: "Large organization, has dedicated DBA group to manage database fleet",
   features: [
     { id: "Instance", content: "Customized" },
-    { id: "Schema change" },
+    { id: "Schema and data change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
     { id: "Database backup / restore" },
@@ -156,29 +163,30 @@ const ENTERPRISE_PLAN: Plan = {
     {
       id: "SQL check",
       content: "Advanced",
-      tooltip: "e.g. Backward compatibility check"
+      tooltip: "Basic + Backward compatibility check"
     },
     {
       id: "Anomaly detection",
       content: "Advanced",
-      tooltip: "e.g. Drift detection"
+      tooltip: "Basic + Drift detection"
     },
+    { id: "Scheduled change at specific time" },
     { id: "Review and backup policy" },
-    { id: "Multi-Region / Multi-Tenancy" },
+    { id: "Multi-Region / Multi-Tenancy deployment" },
     { id: "UI based SQL review" },
-    { id: "GitOps workflow" },
-    { id: "SQL review commenting" },
+    { id: "VCS workflow #GitOps" },
+    { id: "Shareable query link" },
     { id: "IM integration" },
     { id: "Inbox notification" },
-    { id: "Activity Log" },
+    { id: "Activity log" },
     { id: "RBAC (Owner, DBA, Developer role)" },
+    { id: "Login with GitLab account" },
   ],
   mainFeatures: [
+    "SLA support",
     "Everything in team plan",
-    "Priority support",
-    "Customized instances",
-    "Multi-Region / Multi-Tenancy",
-    "SLA with dedicated support",
+    "Multi-Region / Multi-Tenancy deployment",
+    "More to come...",
   ],
 };
 

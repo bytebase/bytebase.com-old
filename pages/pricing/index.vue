@@ -8,7 +8,7 @@
           Industry first database CI/CD solution for
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-          >team collaboration</span>
+          >DBA & Developer collaboration</span>
         </h2>
       </div>
 
@@ -40,15 +40,11 @@
               <div class="flex items-center h-7">
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
-                >
-                  {{ plan.title }}
-                </h2>
+                >{{ plan.title }}</h2>
                 <span
                   v-if="plan.label"
-                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
-                >
-                  {{ plan.label }}
-                </span>
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
+                >{{ plan.label }}</span>
               </div>
               <img
                 :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
@@ -58,15 +54,13 @@
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28">
                   <div class="mt-3 flex items-baseline">
-                    <p class="text-4xl font-extrabold tracking-tight">
-                      ${{ plan.pricePerInstancePerMonth }}
-                    </p>
-                    <p class="text-xl">/month</p>
+                    <p
+                      class="text-4xl font-extrabold tracking-tight"
+                    >${{ plan.pricePerInstancePerMonth }}</p>
+                    <p class="text-xl">&nbsp;/&nbsp;month</p>
                   </div>
                   <p class="text-gray-400">Per instance</p>
-                  <p v-if="plan.featured" class="text-gray-400">
-                    5 minimum, billed annually
-                  </p>
+                  <p class="text-gray-400">{{ plan.priceDescription }}</p>
                 </div>
                 <button
                   :class="[
@@ -89,20 +83,16 @@
                 :key="index"
                 class="py-3 flex items-center"
               >
-                <CheckIcon
-                  class="text-indigo-500 w-5 h-5 flex-shrink-0"
-                  aria-hidden="true"
-                />
-                <span
-                  class="text-gray-600 ml-3 text-sm font-medium"
-                >{{ feature }}</span>
+                <CheckIcon class="text-indigo-500 w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                <span class="text-gray-600 ml-3 text-sm font-medium">{{ feature }}</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
-        You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
+        You can upgrade, downgrade, or
+        <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp;your subscription anytime. No hidden charges.
       </div>
     </div>
 
@@ -184,7 +174,7 @@
                         <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
                         <span class="sr-only">
                           {{
-                            feature.tiers[index].value === true ? "Yes" : "No"
+                          feature.tiers[index].value === true ? "Yes" : "No"
                           }}
                         </span>
                       </template>
@@ -241,10 +231,8 @@
                 >{{ plan.title }}</p>
                 <span
                   v-if="plan.label"
-                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
-                >
-                  {{ plan.label }}
-                </span>
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
+                >{{ plan.label }}</span>
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
               <button
@@ -320,11 +308,11 @@
                         <XIcon v-else class="mx-auto h-5 w-5" aria-hidden="true" />
                         <span class="sr-only">
                           {{
-                            tier.value === true ? "Yes" : "No"
+                          tier.value === true ? "Yes" : "No"
                           }}
                         </span>
                       </template>
-                       <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
+                      <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
                         <QuestinIcon class="h-5 w-5" />
                         <!-- class="h-5 w-5" -->
                         <span class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
@@ -358,11 +346,11 @@
             >{{ plan.buttonText }}</button>
           </div>
         </div>
-
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
+      You can upgrade, downgrade, or
+      <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp; your subscription anytime. No hidden charges.
     </div>
   </div>
 </template>
@@ -458,7 +446,7 @@ export default defineComponent({
           "mailto:support@bytebase.com?subject=Request for enterprise plan"
         );
       } else {
-        window.open("https://docs.bytebase.com/", "__blank");
+        window.open("https://github.com/bytebase/bytebase#installation", "__blank");
       }
     },
   },
