@@ -44,10 +44,10 @@
                   {{ plan.title }}
                 </h2>
                 <span
-                  v-if="plan.version"
+                  v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
                 >
-                  {{ plan.version }}
+                  {{ plan.label }}
                 </span>
               </div>
               <img
@@ -59,10 +59,11 @@
                 <div class="mt-3 flex items-baseline">
                   <p
                     class="text-4xl font-extrabold tracking-tight"
-                  >{{ plan.unitPrice }}</p>
+                  >${{ plan.pricePerInstancePerMonth }}</p>
+                  <p class="text-xl">/instance/month</p>
                 </div>
                 <p :class="plan.featured ? '' : 'opacity-0 disabled'">
-                  {{ `$${plan.pricePerInstancePerMonth}/instance/month` }}
+                  from {{ plan.unitPrice }}
                 </p>
                 <button
                   :class="[
@@ -97,8 +98,8 @@
           </div>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto px-4 py-4 text-right text-gray-400">
-        You can upgrade, downgrade, or cancel your subscription anytime. No contracts, no hidden charges.
+      <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
+        You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
       </div>
     </div>
 
@@ -210,7 +211,7 @@
     <section aria-labelledby="comparison-heading" class="hidden lg:block">
       <h2 id="comparison-heading" class="sr-only">Feature comparison</h2>
 
-      <div class="max-w-7xl mx-auto pt-16 px-8">
+      <div class="max-w-7xl mx-auto px-8">
         <div class="w-full border-t border-gray-200 flex items-stretch">
           <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
           <div
@@ -236,10 +237,10 @@
                   ]"
                 >{{ plan.title }}</p>
                 <span
-                  v-if="plan.version"
+                  v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
                 >
-                  {{ plan.version }}
+                  {{ plan.label }}
                 </span>
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
@@ -263,13 +264,13 @@
             <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
               <div class="w-1/4 pr-4" />
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg shadow" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg shadow-md" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
               <div class="w-1/4 pl-4">
-                <div class="w-full h-full bg-white rounded-lg shadow" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
             </div>
 
@@ -296,50 +297,40 @@
                     :key="tierIdx"
                     :class="[
                       tierIdx === feature.tiers.length - 1 ? 'pl-4' : 'px-4',
+                      tier.featured ? 'text-indigo-600' : 'text-gray-900',
                       'relative w-1/4 py-0 text-center',
                     ]"
                   >
-                    <span class="relative w-full h-full py-3 tooltip-wrapper">
+                    <span class="w-full h-full py-3 flex justify-center">
                       <span
                         v-if="typeof tier.value === 'string'"
                         :class="[
-                          tier.featured ? 'text-indigo-600' : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
                       >{{ tier.value }}</span>
                       <template v-else>
                         <CheckIcon
                           v-if="tier.value === true"
-                          class="mx-auto h-5 w-5 text-indigo-600"
+                          class="mx-auto h-5 w-5"
                           aria-hidden="true"
                         />
-                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <XIcon v-else class="mx-auto h-5 w-5" aria-hidden="true" />
                         <span class="sr-only">
                           {{
                             tier.value === true ? "Yes" : "No"
                           }}
                         </span>
                       </template>
-                      <span v-if="tier.tooltip" class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
+                       <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
+                        <QuestinIcon class="h-5 w-5" />
+                        <!-- class="h-5 w-5" -->
+                        <span class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
+                      </span>
                     </span>
                   </td>
                 </tr>
               </tbody>
             </table>
-
-            <!-- Fake card borders -->
-            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
-              <div class="w-1/4 pr-4" />
-              <div class="w-1/4 px-4">
-                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-              </div>
-              <div class="w-1/4 px-4">
-                <div class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
-              </div>
-              <div class="w-1/4 pl-4">
-                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -368,7 +359,7 @@
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      You can upgrade, downgrade, or cancel your subscription anytime. No contracts, no hidden charges.
+      You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
     </div>
   </div>
 </template>
@@ -378,6 +369,7 @@ import { defineComponent } from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue"
 import CheckIcon from "../../components/CheckIcon.vue"
+import QuestinIcon from "../../components/QuestinIcon.vue"
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -401,6 +393,7 @@ interface LocalFeatureSection {
 export default defineComponent({
   components: {
     CheckIcon,
+    QuestinIcon,
     XIcon,
   },
   setup() {

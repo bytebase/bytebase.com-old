@@ -7,7 +7,7 @@ export enum PlanType {
 
 export interface Plan {
   // Plan meta data
-  version?: string;
+  label?: string;
   type: PlanType;
   trialDays: number;
   unitPrice: string;
@@ -90,7 +90,7 @@ const FREE_PLAN: Plan = {
 
 const TEAM_PLAN: Plan = {
   // Plan meta data
-  version: "Beta",
+  label: "Beta",
   type: PlanType.TEAM,
   trialDays: 7,
   unitPrice: "1740",
@@ -137,12 +137,12 @@ const TEAM_PLAN: Plan = {
 
 const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
-  version: "Beta",
+  label: "Contact us",
   type: PlanType.ENTERPRISE,
   trialDays: 7,
-  unitPrice: "0",
+  unitPrice: "11940",
   trialPrice: 0,
-  pricePerInstancePerMonth: 29,
+  pricePerInstancePerMonth: 199,
   // Plan desc and feature
   title: "Enterprise",
   description: "Large organization, has dedicated DBA group",
