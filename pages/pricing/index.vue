@@ -97,6 +97,9 @@
           </div>
         </div>
       </div>
+      <div class="max-w-7xl mx-auto px-4 py-4 text-right text-gray-400">
+        You can upgrade, downgrade, or cancel your subscription anytime. No contracts, no hidden charges.
+      </div>
     </div>
 
     <!-- Feature comparison (up to lg) -->
@@ -207,7 +210,7 @@
     <section aria-labelledby="comparison-heading" class="hidden lg:block">
       <h2 id="comparison-heading" class="sr-only">Feature comparison</h2>
 
-      <div class="max-w-7xl mx-auto py-24 px-8">
+      <div class="max-w-7xl mx-auto pt-16 px-8">
         <div class="w-full border-t border-gray-200 flex items-stretch">
           <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
           <div
@@ -364,6 +367,9 @@
 
       </div>
     </section>
+    <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
+      You can upgrade, downgrade, or cancel your subscription anytime. No contracts, no hidden charges.
+    </div>
   </div>
 </template>
 
