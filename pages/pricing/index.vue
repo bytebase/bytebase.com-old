@@ -21,7 +21,7 @@
         <!-- Decorative background -->
         <div
           aria-hidden="true"
-          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
+          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-white ring-2 ring-indigo-700 rounded-lg lg:block"
         />
 
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
@@ -29,18 +29,16 @@
             v-for="plan in plans"
             :key="plan.title"
             :class="[
+              'bg-white',
               plan.featured
-                ? 'bg-white ring-2 ring-indigo-700 shadow-md'
-                : 'bg-indigo-700 lg:bg-transparent',
+                ? 'ring-2 ring-indigo-700 shadow-md'
+                : 'lg:bg-transparent',
               'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12',
             ]"
           >
             <div>
               <h3
-                :class="[
-                  plan.featured ? 'text-indigo-600' : 'text-white',
-                  'text-sm font-semibold uppercase tracking-wide',
-                ]"
+                class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
               >{{ plan.title }}</h3>
               <img
                 :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
@@ -50,18 +48,15 @@
               <div class="flex flex-col items-center">
                 <div class="mt-3 flex items-baseline">
                   <p
-                    :class="[
-                      plan.featured ? 'text-indigo-600' : 'text-white',
-                      'text-4xl font-extrabold tracking-tight',
-                    ]"
+                    class="text-4xl font-extrabold tracking-tight"
                   >{{ plan.unitPrice }}</p>
                 </div>
                 <button
                   :class="[
                     plan.featured
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium',
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                      : 'ring-2 ring-indigo-600',
+                    'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
                   ]"
                   @click="onButtonClick(plan)"
                 >{{ plan.buttonText }}</button>
@@ -70,12 +65,7 @@
             <h4 class="sr-only">Features</h4>
             <ul
               role="list"
-              :class="[
-                plan.featured
-                  ? 'border-gray-200 divide-gray-200'
-                  : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
-                'mt-7 border-t divide-y lg:border-t-0',
-              ]"
+              class="border-gray-200 divide-gray-200 mt-7 border-t divide-y lg:border-t-0"
             >
               <li
                 v-for="(feature, index) in plan.mainFeatures"
@@ -83,17 +73,11 @@
                 class="py-3 flex items-center"
               >
                 <CheckIcon
-                  :class="[
-                    plan.featured ? 'text-indigo-500' : 'text-indigo-200',
-                    'w-5 h-5 flex-shrink-0',
-                  ]"
+                  class="text-indigo-500 w-5 h-5 flex-shrink-0"
                   aria-hidden="true"
                 />
                 <span
-                  :class="[
-                    plan.featured ? 'text-gray-600' : 'text-white',
-                    'ml-3 text-sm font-medium',
-                  ]"
+                  class="text-gray-600 ml-3 text-sm font-medium"
                 >{{ feature }}</span>
               </li>
             </ul>

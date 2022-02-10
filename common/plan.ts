@@ -81,7 +81,6 @@ const FREE_PLAN: Plan = {
     { id: "UI based SQL review" },
   ],
   mainFeatures: [
-    "Up to 5 instances",
     "Basic SQL check",
     "Basic anomaly detection",
     "GitLab integration #GitOps",
