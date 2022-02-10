@@ -278,7 +278,7 @@
                       'relative w-1/4 py-0 text-center',
                     ]"
                   >
-                    <span class="relative w-full h-full py-3">
+                    <span class="relative w-full h-full py-3 tooltip-wrapper">
                       <span
                         v-if="typeof tier.value === 'string'"
                         :class="[
@@ -299,6 +299,7 @@
                           }}
                         </span>
                       </template>
+                      <span v-if="tier.tooltip" class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
                     </span>
                   </td>
                 </tr>
@@ -364,6 +365,7 @@ interface LocalFeature {
   tiers: {
     value: boolean | string;
     featured?: boolean;
+    tooltip?: string;
   }[];
 }
 
@@ -412,6 +414,7 @@ export default defineComponent({
             return {
               value,
               featured: p.featured,
+              tooltip: supportFeature?.tooltip
             };
           }),
         })),
@@ -441,3 +444,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.tooltip-wrapper {
+  @apply relative;
+}
+
+.tooltip {
+  @apply invisible absolute -mt-8 ml-2 px-2 py-1 rounded bg-black bg-opacity-75 text-white;
+}
+
+.tooltip-wrapper:hover .tooltip {
+  @apply visible z-50;
+}
+</style>

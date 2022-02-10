@@ -15,7 +15,7 @@ export interface Plan {
   // Plan desc and feature
   title: string;
   description: string;
-  features: { id: string; content?: string }[];
+  features: { id: string; content?: string, tooltip?: string }[];
   mainFeatures: string[];
 }
 
@@ -106,9 +106,14 @@ const TEAM_PLAN: Plan = {
     { id: "Archiving" },
     {
       id: "SQL check",
-      content: "Advanced (e.g. Backward compatibility check)",
+      content: "Advanced",
+      tooltip: "e.g. Backward compatibility check"
     },
-    { id: "Anomaly detection", content: "Advanced (e.g. Drift detection)" },
+    {
+      id: "Anomaly detection",
+      content: "Advanced",
+      tooltip: "e.g. Drift detection"
+    },
     { id: "Review and backup policy" },
     { id: "UI based SQL review" },
     { id: "GitOps workflow" },
@@ -147,9 +152,14 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "Archiving" },
     {
       id: "SQL check",
-      content: "Advanced (e.g. Backward compatibility check)",
+      content: "Advanced",
+      tooltip: "e.g. Backward compatibility check"
     },
-    { id: "Anomaly detection", content: "Advanced (e.g. Drift detection)" },
+    {
+      id: "Anomaly detection",
+      content: "Advanced",
+      tooltip: "e.g. Drift detection"
+    },
     { id: "Review and backup policy" },
     { id: "Multi-Region / Multi-Tenancy" },
     { id: "UI based SQL review" },
