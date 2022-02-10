@@ -37,9 +37,19 @@
             ]"
           >
             <div>
-              <h3
-                class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
-              >{{ plan.title }}</h3>
+              <div class="flex items-center h-7">
+                <h2
+                  class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
+                >
+                  {{ plan.title }}
+                </h2>
+                <span
+                  v-if="plan.version"
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
+                >
+                  {{ plan.version }}
+                </span>
+              </div>
               <img
                 :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
                 class="hidden lg:block w-2/3 m-auto"
@@ -215,12 +225,20 @@
                 'py-6 border-t-2',
               ]"
             >
-              <p
-                :class="[
-                  plan.featured ? 'text-indigo-600' : 'text-gray-900',
-                  'text-sm font-bold',
-                ]"
-              >{{ plan.title }}</p>
+              <div class="flex items-center h-7">
+                <p
+                  :class="[
+                    plan.featured ? 'text-indigo-600' : 'text-gray-900',
+                    'text-sm font-bold',
+                  ]"
+                >{{ plan.title }}</p>
+                <span
+                  v-if="plan.version"
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
+                >
+                  {{ plan.version }}
+                </span>
+              </div>
               <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
               <button
                 :class="[
