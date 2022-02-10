@@ -56,15 +56,18 @@
               />
 
               <div class="flex flex-col items-center">
-                <div class="mt-3 flex items-baseline">
-                  <p
-                    class="text-4xl font-extrabold tracking-tight"
-                  >${{ plan.pricePerInstancePerMonth }}</p>
-                  <p class="text-xl">/instance/month</p>
+                <div class="flex flex-col items-center h-28">
+                  <div class="mt-3 flex items-baseline">
+                    <p class="text-4xl font-extrabold tracking-tight">
+                      ${{ plan.pricePerInstancePerMonth }}
+                    </p>
+                    <p class="text-xl">/month</p>
+                  </div>
+                  <p class="text-gray-400">Per instance</p>
+                  <p v-if="plan.featured" class="text-gray-400">
+                    5 minimum, billed annually
+                  </p>
                 </div>
-                <p :class="plan.featured ? '' : 'opacity-0 disabled'">
-                  from {{ plan.unitPrice }}
-                </p>
                 <button
                   :class="[
                     plan.featured

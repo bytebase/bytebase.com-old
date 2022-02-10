@@ -100,7 +100,7 @@ const TEAM_PLAN: Plan = {
   title: "Team",
   description: "Medium size team, has dedicated DBA or TL with management needs",
   features: [
-    { id: "Instance", content: "Customized" },
+    { id: "Instance", content: "5 ~ unlimited" },
     { id: "Schema change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
