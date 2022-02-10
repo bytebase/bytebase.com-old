@@ -11,7 +11,6 @@ export interface Plan {
   trialDays: number;
   unitPrice: string;
   trialPrice: number;
-  freeInstanceCount: number;
   pricePerInstancePerMonth: number;
   // Plan desc and feature
   title: string;
@@ -58,7 +57,6 @@ const FREE_PLAN: Plan = {
   trialDays: 0,
   unitPrice: "0",
   trialPrice: 0,
-  freeInstanceCount: 1,
   pricePerInstancePerMonth: 0,
   // Plan desc and feature
   title: "Free",
@@ -81,6 +79,7 @@ const FREE_PLAN: Plan = {
     { id: "UI based SQL review" },
   ],
   mainFeatures: [
+    "Community support",
     "Basic SQL check",
     "Basic anomaly detection",
     "GitLab integration #GitOps",
@@ -94,7 +93,6 @@ const TEAM_PLAN: Plan = {
   trialDays: 7,
   unitPrice: "1740",
   trialPrice: 7,
-  freeInstanceCount: 5,
   pricePerInstancePerMonth: 29,
   // Plan desc and feature
   title: "Team",
@@ -122,6 +120,7 @@ const TEAM_PLAN: Plan = {
   ],
   mainFeatures: [
     "Everything in free plan",
+    "Priority support",
     "DBA and Developer roles",
     "Advanced SQL check",
     "Advanced anomaly detection",
@@ -135,7 +134,6 @@ const ENTERPRISE_PLAN: Plan = {
   trialDays: 7,
   unitPrice: "0",
   trialPrice: 0,
-  freeInstanceCount: 5,
   pricePerInstancePerMonth: 29,
   // Plan desc and feature
   title: "Enterprise",
@@ -164,6 +162,7 @@ const ENTERPRISE_PLAN: Plan = {
   ],
   mainFeatures: [
     "Everything in team plan",
+    "Priority support",
     "Customized instances",
     "Multi-Region / Multi-Tenancy",
     "SLA with dedicated support",

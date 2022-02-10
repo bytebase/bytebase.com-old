@@ -51,12 +51,15 @@
                     class="text-4xl font-extrabold tracking-tight"
                   >{{ plan.unitPrice }}</p>
                 </div>
+                <p :class="plan.featured ? '' : 'opacity-0 disabled'">
+                  {{ `$${plan.pricePerInstancePerMonth}/instance/month` }}
+                </p>
                 <button
                   :class="[
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                       : 'ring-2 ring-indigo-600',
-                    'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+                    'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm lg:text-xl font-medium'
                   ]"
                   @click="onButtonClick(plan)"
                 >{{ plan.buttonText }}</button>
@@ -224,7 +227,7 @@
                   plan.featured
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                     : 'ring-2 ring-indigo-600',
-                  'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+                  'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm font-medium'
                 ]"
                 @click="onButtonClick(plan)"
               >{{ plan.buttonText }}</button>
@@ -333,7 +336,7 @@
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
-                'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+                'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm font-medium'
               ]"
               @click="onButtonClick(plan)"
             >{{ plan.buttonText }}</button>
