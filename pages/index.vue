@@ -12,19 +12,11 @@
                 class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
                 aria-label="Global"
               >
-                <div
-                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
-                >
-                  <div
-                    class="flex items-center justify-between w-full sm:w-auto"
-                  >
+                <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                  <div class="flex items-center justify-between w-full sm:w-auto">
                     <NuxtLink to="/">
                       <span class="sr-only">Bytebase</span>
-                      <img
-                        class="h-6 sm:h-8 w-auto"
-                        src="~/assets/logo-full.svg"
-                        alt=""
-                      />
+                      <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt />
                     </NuxtLink>
                   </div>
                   <div class="flex sm:hidden">
@@ -35,8 +27,7 @@
                       data-size="large"
                       data-show-count="true"
                       aria-label="Star bytebase/bytebase on GitHub"
-                      >Star</a
-                    >
+                    >Star</a>
                   </div>
                 </div>
                 <div
@@ -46,16 +37,12 @@
                     to="/blog"
                     @click.native="track('blog.header')"
                     class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-                  >
-                    Blog
-                  </NuxtLink>
+                  >Blog</NuxtLink>
                   <NuxtLink
                     to="/changelog"
                     @click.native="track('changelog.header')"
                     class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                  >
-                    Changelog
-                  </NuxtLink>
+                  >Changelog</NuxtLink>
                   <a
                     href="https://docs.bytebase.com?ref=bytebase.com"
                     target="_blank"
@@ -75,7 +62,7 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      ></path>
+                      />
                     </svg>
                   </a>
                   <div class="items-center hidden sm:flex lg:hidden">
@@ -87,18 +74,11 @@
                       data-size="large"
                       data-show-count="true"
                       aria-label="Star bytebase/bytebase on GitHub"
-                      >Star</a
-                    >
+                    >Star</a>
                   </div>
                 </div>
-                <div
-                  class="z-10 hidden lg:flex absolute items-center justify-end right-0"
-                >
-                  <img
-                    class="-mt-8 h-10 w-auto"
-                    src="~/assets/starus.png"
-                    alt=""
-                  />
+                <div class="z-10 hidden lg:flex absolute items-center justify-end right-0">
+                  <img class="-mt-8 h-10 w-auto" src="~/assets/starus.png" alt />
                   <!-- Place this tag where you want the button to render. -->
                   <a
                     class="github-button"
@@ -107,8 +87,7 @@
                     data-size="large"
                     data-show-count="true"
                     aria-label="Star bytebase/bytebase on GitHub"
-                    >Star</a
-                  >
+                  >Star</a>
                 </div>
               </nav>
             </div>
@@ -120,22 +99,19 @@
                 to="/jobs"
                 @click.native="track('job.main')"
                 class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
-              >
-                We're hiring
-              </NuxtLink>
+              >We're hiring</NuxtLink>
               <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
                 <span class="inline">Open source, web-based, zero-config</span>
               </h2>
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                <span class="block xl:inline"
-                  >Database schema change and version control for
+                <span class="block xl:inline">
+                  Database schema change and version control for
                   <span
                     class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >teams</span
-                  ></span
-                >
+                  >teams</span>
+                </span>
               </h1>
               <h2
                 class="tracking-tight mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0"
@@ -144,34 +120,27 @@
                 <span
                   class="text-blue-600"
                   style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                  >DBAs</span
-                >
+                >DBAs</span>
                 and
                 <span
                   class="text-blue-600"
                   style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                  >Developers</span
-                >
+                >Developers</span>
                 manage the lifecycle of application database schemas.
               </h2>
               <div class="flex mt-6 justify-center lg:justify-start">
                 <DatabaseBar />
               </div>
-              <ActionSection
-                class="justify-center lg:justify-start"
-                :moduleName="'main'"
-              />
+              <ActionSection class="justify-center lg:justify-start" :moduleName="'main'" />
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="flex justify-center lg:absolute lg:inset-y-0 lg:-right-24 lg:w-2/3 xl:right-0"
-      >
+      <div class="flex justify-center lg:absolute lg:inset-y-0 lg:-right-24 lg:w-2/3 xl:right-0">
         <img
           class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="~/assets/illustration/main.webp"
-          alt=""
+          alt
         />
       </div>
     </div>
@@ -192,23 +161,17 @@
     </div>
 
     <div class="relative bg-white py-16 sm:py-24 lg:py-32 mt-6 lg:mt-72">
-      <div
-        class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
-      >
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2
           class="text-base sm:text-2xl font-semibold tracking-wider text-indigo-600 uppercase"
-        >
-          Safer and faster database migration
-        </h2>
+        >Safer and faster database migration</h2>
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
           Industry first database CI/CD solution for
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-          >
-            team collaboration
-          </span>
+          >DBA & Developer collaboration</span>
         </h2>
         <div class="mt-12">
           <FeatureSection />
@@ -220,9 +183,7 @@
       <div class="lg:text-center">
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
-        >
-          SQL review and version control
-        </h2>
+        >SQL review and version control</h2>
         <h3 class="mt-4 max-w-3xl text-left text-xl text-gray-500 lg:mx-auto">
           Ease the most stressful and dangerous change process in the
           application development cycle. Bytebase supports 2 most typical schema
@@ -236,14 +197,10 @@
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
-          <div
-            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0"
-          >
+          <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
             <div>
               <div>
-                <span
-                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
-                >
+                <span class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
                   <!-- Heroicon name: outline/inbox -->
                   <svg
                     class="w-6 h-6 text-white"
@@ -257,16 +214,12 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                    ></path>
+                    />
                   </svg>
                 </span>
               </div>
               <div class="mt-6">
-                <h2
-                  class="text-3xl font-extrabold tracking-tight text-gray-900"
-                >
-                  UI workflow
-                </h2>
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">UI workflow</h2>
                 <h3 class="mt-4 text-lg text-gray-500">
                   Classic SQL Review workflow where the developer submits a SQL
                   review ticket directly from Bytebase and waits for the
@@ -277,9 +230,7 @@
             </div>
           </div>
           <div class="mt-12 sm:mt-16 lg:mt-0">
-            <div
-              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
-            >
+            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~/assets/sqlreview.webp"
@@ -298,9 +249,7 @@
           >
             <div>
               <div>
-                <span
-                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
-                >
+                <span class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -313,16 +262,14 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    ></path>
+                    />
                   </svg>
                 </span>
               </div>
               <div class="mt-6">
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
-                >
-                  Version control workflow #GitOps
-                </h2>
+                >Version control workflow #GitOps</h2>
                 <h3 class="mt-4 text-lg text-gray-500">
                   Database migration scripts are stored in a git repository. To
                   make schema changes, a developer would create a migration
@@ -336,17 +283,13 @@
                     href="https://docs.bytebase.com/features/version-control?ref=bytebase.com"
                     @click="track('doc.version-control')"
                     class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
-                  >
-                    See Guide
-                  </a>
+                  >See Guide</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-            <div
-              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
-            >
+            <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~/assets/versioncontrol.webp"
@@ -358,7 +301,7 @@
       </div>
     </div>
 
-    <div class="pt-16 overflow-hidden ">
+    <div class="pt-16 overflow-hidden">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
@@ -367,8 +310,7 @@
             A complete rethink to deliver
             <span
               class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-              >experience</span
-            >
+            >experience</span>
           </h2>
           <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
             From the data modeling, to the tech stack, system architecture and
@@ -378,15 +320,11 @@
           </h3>
         </div>
 
-        <div
-          class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
-        >
+        <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div class="relative">
             <h3
               class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
-            >
-              Modern collaborative dev tool
-            </h3>
+            >Modern collaborative dev tool</h3>
             <p class="mt-3 text-lg text-gray-500">
               Bytebase aspires to tools like
               <a
@@ -394,22 +332,19 @@
                 target="_blank"
                 class="text-blue-600"
                 style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                >Figma</a
-              >,
+              >Figma</a>,
               <a
                 href="https://about.gitlab.com"
                 target="_blank"
                 class="text-blue-600"
                 style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                >GitLab</a
-              >,
+              >GitLab</a>,
               <a
                 href="https://www.terraform.io/"
                 target="_blank"
                 class="text-blue-600"
                 style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                >Terraform</a
-              >. We want to be the most favorable tool among Developers and DBAs
+              >Terraform</a>. We want to be the most favorable tool among Developers and DBAs
               for managing database schemas.
             </p>
 
@@ -431,12 +366,10 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                      ></path>
+                      />
                     </svg>
                   </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Plug-and-Play
-                  </p>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Plug-and-Play</p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
                   Bytebase provides a comprehensive web console requiring zero
@@ -462,12 +395,10 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                      ></path>
+                      />
                     </svg>
                   </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Usability
-                  </p>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Usability</p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
                   As a professional tool for managing application's most
@@ -480,8 +411,7 @@
                     target="_blank"
                     class="text-blue-600 font-semibold"
                     style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                    >confusing interface</a
-                  >.
+                  >confusing interface</a>.
                 </dd>
               </div>
 
@@ -502,12 +432,10 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-                      ></path>
+                      />
                     </svg>
                   </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Extensibility
-                  </p>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Extensibility</p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
                   Being one of the infrastructure toolkit, Bytebase will provide
@@ -535,41 +463,21 @@
                   height="20"
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect
-                    x="0"
-                    y="0"
-                    width="4"
-                    height="4"
-                    class="text-gray-200"
-                    fill="currentColor"
-                  />
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                 </pattern>
               </defs>
-              <rect
-                width="784"
-                height="404"
-                fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-              />
+              <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
             </svg>
-            <img
-              class="relative mx-auto"
-              width="480"
-              src="~/assets/othertools.svg"
-              alt=""
-            />
+            <img class="relative mx-auto" width="480" src="~/assets/othertools.svg" alt />
           </div>
         </div>
 
         <div id="techstack" class="relative mt-12 sm:mt-16 lg:mt-24">
-          <div
-            class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center"
-          >
+          <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div class="lg:col-start-2">
               <h3
                 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
-              >
-                Curated tech stack
-              </h3>
+              >Curated tech stack</h3>
               <p class="mt-3 text-lg text-gray-500">
                 Vue + TypeScript + Tailwind CSS + Golang + SQLite. As a
                 professional tool, Bytebase tries to be pragmatic. And because
@@ -598,14 +506,10 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                        ></path>
+                        />
                       </svg>
                     </div>
-                    <p
-                      class="ml-16 text-lg leading-6 font-medium text-gray-900"
-                    >
-                      Vue + Tailwind CSS
-                    </p>
+                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Vue + Tailwind CSS</p>
                   </dt>
                   <dd class="mt-2 ml-16 text-base text-gray-500">
                     <a
@@ -613,16 +517,14 @@
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Vue</a
-                    >
+                    >Vue</a>
                     is a progressive framework and
                     <a
                       href="https://tailwindcss.com"
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Tailwind CSS</a
-                    >
+                    >Tailwind CSS</a>
                     is a utility-first CSS framework. Together with the build
                     tool
                     <a
@@ -630,16 +532,14 @@
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Vite</a
-                    >
+                    >Vite</a>
                     and
                     <a
                       href="https://typescriptlang.org/"
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >TypeScript</a
-                    >, they offer a significantly improved frontend development
+                    >TypeScript</a>, they offer a significantly improved frontend development
                     experience.
                   </dd>
                 </div>
@@ -661,14 +561,10 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                        ></path>
+                        />
                       </svg>
                     </div>
-                    <p
-                      class="ml-16 text-lg leading-6 font-medium text-gray-900"
-                    >
-                      Golang
-                    </p>
+                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Golang</p>
                   </dt>
                   <dd class="mt-2 ml-16 text-base text-gray-500">
                     <a
@@ -676,8 +572,7 @@
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Golang's</a
-                    >
+                    >Golang's</a>
                     static linking + embedding allows Bytebase to deliver a
                     binary with single-line command to launch both the frontend
                     and backend without requiring extra dependency (no docker,
@@ -703,14 +598,10 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                        ></path>
+                        />
                       </svg>
                     </div>
-                    <p
-                      class="ml-16 text-lg leading-6 font-medium text-gray-900"
-                    >
-                      SQLite
-                    </p>
+                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">SQLite</p>
                   </dt>
                   <dd class="mt-2 ml-16 text-base text-gray-500">
                     <a
@@ -718,8 +609,7 @@
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >SQLite</a
-                    >
+                    >SQLite</a>
                     is a small, fast, reliable, ACID compliant library. SQLite's
                     performance is suffice for control plane application like
                     Bytebase which doesn't need a fully-fleged RDBMS to scale.
@@ -731,8 +621,7 @@
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Litestream</a
-                    >
+                    >Litestream</a>
                     for disaster recovery.
                   </dd>
                 </div>
@@ -767,18 +656,9 @@
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width="784"
-                  height="404"
-                  fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
-                />
+                <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
               </svg>
-              <img
-                class="relative mx-auto"
-                width="490"
-                src="~/assets/techstack.svg"
-                alt=""
-              />
+              <img class="relative mx-auto" width="490" src="~/assets/techstack.svg" alt />
             </div>
           </div>
         </div>
