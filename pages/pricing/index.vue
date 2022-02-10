@@ -105,6 +105,15 @@
               ]"
             >{{ plan.title }}</h3>
             <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <button
+              :class="[
+                plan.featured
+                  ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                  : 'ring-2 ring-indigo-600',
+                'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+              ]"
+              @click="onButtonClick(plan)"
+            >{{ plan.buttonText }}</button>
           </div>
 
           <div v-for="section in sections" :key="section.title">
@@ -209,7 +218,16 @@
                   'text-sm font-bold',
                 ]"
               >{{ plan.title }}</p>
-              <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+              <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
+              <button
+                :class="[
+                  plan.featured
+                    ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                    : 'ring-2 ring-indigo-600',
+                  'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+                ]"
+                @click="onButtonClick(plan)"
+              >{{ plan.buttonText }}</button>
             </div>
           </div>
         </div>
@@ -299,6 +317,29 @@
             </div>
           </div>
         </div>
+
+        <div class="flex">
+          <div class="w-1/4 pr-4"></div>
+          <div
+            v-for="(plan, planIndex) in plans"
+            :key="plan.title"
+            :class="[
+              planIndex === plans.length - 1 ? 'pl-4' : 'px-4',
+              'relative w-1/4 py-0 text-center',
+            ]"
+          >
+            <button
+              :class="[
+                plan.featured
+                  ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                  : 'ring-2 ring-indigo-600',
+                'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+              ]"
+              @click="onButtonClick(plan)"
+            >{{ plan.buttonText }}</button>
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
