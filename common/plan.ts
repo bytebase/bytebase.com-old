@@ -7,16 +7,16 @@ export enum PlanType {
 
 export interface Plan {
   // Plan meta data
+  label?: string;
   type: PlanType;
   trialDays: number;
   unitPrice: string;
   trialPrice: number;
-  freeInstanceCount: number;
   pricePerInstancePerMonth: number;
   // Plan desc and feature
   title: string;
   description: string;
-  features: { id: string; content?: string }[];
+  features: { id: string; content?: string, tooltip?: string }[];
   mainFeatures: string[];
 }
 
@@ -58,7 +58,6 @@ const FREE_PLAN: Plan = {
   trialDays: 0,
   unitPrice: "0",
   trialPrice: 0,
-  freeInstanceCount: 1,
   pricePerInstancePerMonth: 0,
   // Plan desc and feature
   title: "Free",
@@ -81,7 +80,7 @@ const FREE_PLAN: Plan = {
     { id: "UI based SQL review" },
   ],
   mainFeatures: [
-    "Up to 5 instances",
+    "Community support",
     "Basic SQL check",
     "Basic anomaly detection",
     "GitLab integration #GitOps",
@@ -91,17 +90,17 @@ const FREE_PLAN: Plan = {
 
 const TEAM_PLAN: Plan = {
   // Plan meta data
+  label: "Beta",
   type: PlanType.TEAM,
   trialDays: 7,
   unitPrice: "1740",
   trialPrice: 7,
-  freeInstanceCount: 5,
   pricePerInstancePerMonth: 29,
   // Plan desc and feature
   title: "Team",
   description: "Medium size team, has dedicated DBA or TL with management needs",
   features: [
-    { id: "Instance", content: "Customized" },
+    { id: "Instance", content: "5 ~ unlimited" },
     { id: "Schema change" },
     { id: "Migration history" },
     { id: "SQL Editor" },
@@ -109,9 +108,14 @@ const TEAM_PLAN: Plan = {
     { id: "Archiving" },
     {
       id: "SQL check",
-      content: "Advanced (e.g. Backward compatibility check)",
+      content: "Advanced",
+      tooltip: "e.g. Backward compatibility check"
     },
-    { id: "Anomaly detection", content: "Advanced (e.g. Drift detection)" },
+    {
+      id: "Anomaly detection",
+      content: "Advanced",
+      tooltip: "e.g. Drift detection"
+    },
     { id: "Review and backup policy" },
     { id: "UI based SQL review" },
     { id: "GitOps workflow" },
@@ -123,6 +127,7 @@ const TEAM_PLAN: Plan = {
   ],
   mainFeatures: [
     "Everything in free plan",
+    "Priority support",
     "DBA and Developer roles",
     "Advanced SQL check",
     "Advanced anomaly detection",
@@ -132,12 +137,12 @@ const TEAM_PLAN: Plan = {
 
 const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
+  label: "Contact us",
   type: PlanType.ENTERPRISE,
   trialDays: 7,
-  unitPrice: "0",
+  unitPrice: "11940",
   trialPrice: 0,
-  freeInstanceCount: 5,
-  pricePerInstancePerMonth: 29,
+  pricePerInstancePerMonth: 199,
   // Plan desc and feature
   title: "Enterprise",
   description: "Large organization, has dedicated DBA group",
@@ -150,9 +155,14 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "Archiving" },
     {
       id: "SQL check",
-      content: "Advanced (e.g. Backward compatibility check)",
+      content: "Advanced",
+      tooltip: "e.g. Backward compatibility check"
     },
-    { id: "Anomaly detection", content: "Advanced (e.g. Drift detection)" },
+    {
+      id: "Anomaly detection",
+      content: "Advanced",
+      tooltip: "e.g. Drift detection"
+    },
     { id: "Review and backup policy" },
     { id: "Multi-Region / Multi-Tenancy" },
     { id: "UI based SQL review" },
@@ -165,6 +175,7 @@ const ENTERPRISE_PLAN: Plan = {
   ],
   mainFeatures: [
     "Everything in team plan",
+    "Priority support",
     "Customized instances",
     "Multi-Region / Multi-Tenancy",
     "SLA with dedicated support",

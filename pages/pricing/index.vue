@@ -21,7 +21,7 @@
         <!-- Decorative background -->
         <div
           aria-hidden="true"
-          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
+          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-white ring-2 ring-indigo-700 rounded-lg lg:block"
         />
 
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
@@ -29,39 +29,51 @@
             v-for="plan in plans"
             :key="plan.title"
             :class="[
+              'bg-white',
               plan.featured
-                ? 'bg-white ring-2 ring-indigo-700 shadow-md'
-                : 'bg-indigo-700 lg:bg-transparent',
+                ? 'ring-2 ring-indigo-700 shadow-md'
+                : 'lg:bg-transparent',
               'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12',
             ]"
           >
             <div>
-              <h3
-                :class="[
-                  plan.featured ? 'text-indigo-600' : 'text-white',
-                  'text-sm font-semibold uppercase tracking-wide',
-                ]"
-              >{{ plan.title }}</h3>
+              <div class="flex items-center h-7">
+                <h2
+                  class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
+                >
+                  {{ plan.title }}
+                </h2>
+                <span
+                  v-if="plan.label"
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
+                >
+                  {{ plan.label }}
+                </span>
+              </div>
               <img
                 :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
 
               <div class="flex flex-col items-center">
-                <div class="mt-3 flex items-baseline">
-                  <p
-                    :class="[
-                      plan.featured ? 'text-indigo-600' : 'text-white',
-                      'text-4xl font-extrabold tracking-tight',
-                    ]"
-                  >{{ plan.unitPrice }}</p>
+                <div class="flex flex-col items-center h-28">
+                  <div class="mt-3 flex items-baseline">
+                    <p class="text-4xl font-extrabold tracking-tight">
+                      ${{ plan.pricePerInstancePerMonth }}
+                    </p>
+                    <p class="text-xl">/month</p>
+                  </div>
+                  <p class="text-gray-400">Per instance</p>
+                  <p v-if="plan.featured" class="text-gray-400">
+                    5 minimum, billed annually
+                  </p>
                 </div>
                 <button
                   :class="[
                     plan.featured
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium',
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                      : 'ring-2 ring-indigo-600',
+                    'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm lg:text-xl font-medium'
                   ]"
                   @click="onButtonClick(plan)"
                 >{{ plan.buttonText }}</button>
@@ -70,12 +82,7 @@
             <h4 class="sr-only">Features</h4>
             <ul
               role="list"
-              :class="[
-                plan.featured
-                  ? 'border-gray-200 divide-gray-200'
-                  : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
-                'mt-7 border-t divide-y lg:border-t-0',
-              ]"
+              class="border-gray-200 divide-gray-200 mt-7 border-t divide-y lg:border-t-0"
             >
               <li
                 v-for="(feature, index) in plan.mainFeatures"
@@ -83,22 +90,19 @@
                 class="py-3 flex items-center"
               >
                 <CheckIcon
-                  :class="[
-                    plan.featured ? 'text-indigo-500' : 'text-indigo-200',
-                    'w-5 h-5 flex-shrink-0',
-                  ]"
+                  class="text-indigo-500 w-5 h-5 flex-shrink-0"
                   aria-hidden="true"
                 />
                 <span
-                  :class="[
-                    plan.featured ? 'text-gray-600' : 'text-white',
-                    'ml-3 text-sm font-medium',
-                  ]"
+                  class="text-gray-600 ml-3 text-sm font-medium"
                 >{{ feature }}</span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
+        You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
       </div>
     </div>
 
@@ -121,6 +125,15 @@
               ]"
             >{{ plan.title }}</h3>
             <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <button
+              :class="[
+                plan.featured
+                  ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                  : 'ring-2 ring-indigo-600',
+                'mt-6 w-full inline-block py-2 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+              ]"
+              @click="onButtonClick(plan)"
+            >{{ plan.buttonText }}</button>
           </div>
 
           <div v-for="section in sections" :key="section.title">
@@ -201,7 +214,7 @@
     <section aria-labelledby="comparison-heading" class="hidden lg:block">
       <h2 id="comparison-heading" class="sr-only">Feature comparison</h2>
 
-      <div class="max-w-7xl mx-auto py-24 px-8">
+      <div class="max-w-7xl mx-auto px-8">
         <div class="w-full border-t border-gray-200 flex items-stretch">
           <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
           <div
@@ -219,13 +232,30 @@
                 'py-6 border-t-2',
               ]"
             >
-              <p
+              <div class="flex items-center h-7">
+                <p
+                  :class="[
+                    plan.featured ? 'text-indigo-600' : 'text-gray-900',
+                    'text-sm font-bold',
+                  ]"
+                >{{ plan.title }}</p>
+                <span
+                  v-if="plan.label"
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-sm bg-indigo-100 text-indigo-800"
+                >
+                  {{ plan.label }}
+                </span>
+              </div>
+              <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
+              <button
                 :class="[
-                  plan.featured ? 'text-indigo-600' : 'text-gray-900',
-                  'text-sm font-bold',
+                  plan.featured
+                    ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                    : 'ring-2 ring-indigo-600',
+                  'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm font-medium'
                 ]"
-              >{{ plan.title }}</p>
-              <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+                @click="onButtonClick(plan)"
+              >{{ plan.buttonText }}</button>
             </div>
           </div>
         </div>
@@ -237,13 +267,13 @@
             <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
               <div class="w-1/4 pr-4" />
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg shadow" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg shadow-md" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
               <div class="w-1/4 pl-4">
-                <div class="w-full h-full bg-white rounded-lg shadow" />
+                <div class="w-full h-full bg-white rounded-lg" />
               </div>
             </div>
 
@@ -270,53 +300,70 @@
                     :key="tierIdx"
                     :class="[
                       tierIdx === feature.tiers.length - 1 ? 'pl-4' : 'px-4',
+                      tier.featured ? 'text-indigo-600' : 'text-gray-900',
                       'relative w-1/4 py-0 text-center',
                     ]"
                   >
-                    <span class="relative w-full h-full py-3">
+                    <span class="w-full h-full py-3 flex justify-center">
                       <span
                         v-if="typeof tier.value === 'string'"
                         :class="[
-                          tier.featured ? 'text-indigo-600' : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
                       >{{ tier.value }}</span>
                       <template v-else>
                         <CheckIcon
                           v-if="tier.value === true"
-                          class="mx-auto h-5 w-5 text-indigo-600"
+                          class="mx-auto h-5 w-5"
                           aria-hidden="true"
                         />
-                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <XIcon v-else class="mx-auto h-5 w-5" aria-hidden="true" />
                         <span class="sr-only">
                           {{
                             tier.value === true ? "Yes" : "No"
                           }}
                         </span>
                       </template>
+                       <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
+                        <QuestinIcon class="h-5 w-5" />
+                        <!-- class="h-5 w-5" -->
+                        <span class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
+                      </span>
                     </span>
                   </td>
                 </tr>
               </tbody>
             </table>
-
-            <!-- Fake card borders -->
-            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
-              <div class="w-1/4 pr-4" />
-              <div class="w-1/4 px-4">
-                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-              </div>
-              <div class="w-1/4 px-4">
-                <div class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
-              </div>
-              <div class="w-1/4 pl-4">
-                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-              </div>
-            </div>
           </div>
         </div>
+
+        <div class="flex">
+          <div class="w-1/4 pr-4"></div>
+          <div
+            v-for="(plan, planIndex) in plans"
+            :key="plan.title"
+            :class="[
+              planIndex === plans.length - 1 ? 'pl-4' : 'px-4',
+              'relative w-1/4 py-0 text-center',
+            ]"
+          >
+            <button
+              :class="[
+                plan.featured
+                  ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
+                  : 'ring-2 ring-indigo-600',
+                'mt-6 w-full inline-block py-4 px-8 rounded-md shadow-sm text-center text-sm font-medium'
+              ]"
+              @click="onButtonClick(plan)"
+            >{{ plan.buttonText }}</button>
+          </div>
+        </div>
+
       </div>
     </section>
+    <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
+      You can upgrade, downgrade, or cancel your subscription anytime. No hidden charges.
+    </div>
   </div>
 </template>
 
@@ -325,6 +372,7 @@ import { defineComponent } from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue"
 import CheckIcon from "../../components/CheckIcon.vue"
+import QuestinIcon from "../../components/QuestinIcon.vue"
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -336,6 +384,7 @@ interface LocalFeature {
   tiers: {
     value: boolean | string;
     featured?: boolean;
+    tooltip?: string;
   }[];
 }
 
@@ -347,6 +396,7 @@ interface LocalFeatureSection {
 export default defineComponent({
   components: {
     CheckIcon,
+    QuestinIcon,
     XIcon,
   },
   setup() {
@@ -384,6 +434,7 @@ export default defineComponent({
             return {
               value,
               featured: p.featured,
+              tooltip: supportFeature?.tooltip
             };
           }),
         })),
@@ -413,3 +464,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.tooltip-wrapper {
+  @apply relative;
+}
+
+.tooltip {
+  @apply invisible absolute -mt-8 ml-2 px-2 py-1 rounded bg-black bg-opacity-75 text-white;
+}
+
+.tooltip-wrapper:hover .tooltip {
+  @apply visible z-50;
+}
+</style>
