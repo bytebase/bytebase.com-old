@@ -3,7 +3,7 @@
     <div class="relative max-w-2xl mx-auto px-4 py-8 text-left sm:px-6 lg:max-w-7xl lg:px-8">
       <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">Refund policy</h1>
       <p class="text-2xl pt-5 leading-relaxed">
-        We try to deliever a product valuable to your business and delightful to use. If you’re ever unhappy with it for any reason, just contact our
+        We try to deliver a product valuable to your business and delightful to use. If you’re ever unhappy with it for any reason, just contact our
         <a
           href="mailto:support@bytebase.com"
           target="__blank"
