@@ -174,72 +174,6 @@
           </p>
 
           <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            2. Account terms
-          </h2>
-
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            2.1 Account Responsibility and Security.
-          </h3>
-
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            1. Generally.
-          </h4>
-
-          <p>
-            a. To register to use the Software, you must create a username and
-            password and provide us with the information requested in the
-            registration process. You must provide complete and accurate
-            information during the registration process and agree to update your
-            information to ensure it remains accurate. You are responsible for
-            (a) keeping your account credentials secure at all times and (b) not
-            disclosing your account credentials to any other person nor permit
-            anyone to access your account at any time. You must contact us
-            immediately if you believe that there was any unauthorized access to
-            your account or if your account information is lost or stolen.
-          </p>
-
-          <p>
-            b. If you’re entering into the Agreement on behalf of your
-            Organization, your Organization has administrative control of all
-            Instances tied to the Organization. You are or your Organization is
-            fully responsible for your Instance and all Content posted under it.
-          </p>
-
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            2. Age Limitation.
-          </h4>
-
-          <p>
-            a. In order to create an Instance, you must be at least eighteen
-            (18) years old and we do not permit any users under thirteen (13)
-            years old to use our Software for any purpose. If we discover that
-            an Instance is being used by a user under thirteen (13) years old,
-            we will notify you that the Instance must immediately be shut down.
-          </p>
-
-          <p>
-            b. By agreeing to these Terms, you represent and warrant to us that:
-            (a) you are at least 18 years old; (b) you have not previously been
-            suspended or removed from the platform; and (c) your registration
-            and your use of the Software is in compliance with any and all
-            applicable laws and regulations.
-          </p>
-
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            3. Security.
-          </h4>
-
-          <p>
-            You’re responsible for the security of your Instance when using our
-            Software. While we may offer tools to help you maintain your
-            Instance’s security, these are not guaranteed to work. You’re
-            responsible for all Content posted on your Instance under your user
-            account, even if you didn’t post it. We have no liability of any
-            kind for any loss or damage from your failure to secure your
-            Instance.
-          </p>
-
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
             3. Acceptable use
           </h2>
 
@@ -850,23 +784,6 @@
 
           <h3 class="pt-4 text-xl text-gray-900 font-semibold">
             13.2 By Bytebase.
-          </h3>
-
-          <p>
-            We agree to defend you and your affiliates, directors, officers,
-            employees, and contractors from and against any third-party claims,
-            proceedings, demands, and investigations and indemnify you for
-            damages, attorney’s fees, and costs arising from your use of the
-            Software or Documentation in accordance with this Agreement that
-            infringes or misappropriates such third-party’s intellectual
-            property rights, except for claims arising from (a) Your Database or
-            Content, (b) your use of the Software in violation of the Agreement,
-            or (c) any modification, combination, or development of the Software
-            not performed by us.
-          </p>
-
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            13.3 By Bytebase.
           </h3>
 
           <p>
