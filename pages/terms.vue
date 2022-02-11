@@ -5,17 +5,12 @@
         <h1>
           <span
             class="block text-5xl text-center text-gray-900 font-extrabold tracking-wide"
-            >Bytebase Terms of Service</span
-          >
+          >Bytebase Terms of Service</span>
         </h1>
         <div
           class="mt-8 max-w-5xl mx-auto text-left text-xl leading-9 text-gray-900"
-        >
-          Last modified: Feb 11, 2022
-        </div>
-        <div
-          class="mt-8 max-w-5xl mx-auto text-left text-xl leading-9 text-gray-900 space-y-4"
-        >
+        >Last modified: Feb 11, 2022</div>
+        <div class="mt-8 max-w-5xl mx-auto text-left text-xl leading-9 text-gray-900 space-y-4">
           <p>
             This Services Agreement is an agreement between Bytebase (as defined
             below) and you or the entity you represent (“you” or “your”), which
@@ -29,9 +24,7 @@
             and/or use the Software.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            1. Definitions
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">1. Definitions</h2>
 
           <p>
             <span class="font-bold">"Agreement"</span> means, collectively, the
@@ -39,9 +32,7 @@
             with any order for Software (“Order Form”) and all other applicable
             rules, policies, and procedures that we may publish from time to
             time on the Site, including but not limited to our
-            <NuxtLink class="text-indigo-600 underline" to="/privacy"
-              >Privacy Policy</NuxtLink
-            >.
+            <NuxtLink class="text-indigo-600 underline" to="/privacy">Privacy Policy</NuxtLink>.
           </p>
 
           <p>
@@ -60,8 +51,7 @@
               href="https://docs.bytebase.com"
               target="_blank"
               class="text-indigo-600 underline"
-              >https://docs.bytebase.com</a
-            >.
+            >https://docs.bytebase.com</a>.
           </p>
 
           <p>
@@ -96,7 +86,9 @@
             Software, that accesses an Instance, or that directs the use of the
             Instance. If you’re entering into the Agreement on behalf of your
             company or organization (your
-            <span class="font-bold">"Organization"</span>), you represent and
+            <span
+              class="font-bold"
+            >"Organization"</span>), you represent and
             warrant that you’re authorized to bind that company or organization
             to the Agreement and that you’ve read, understood, and agree to be
             bound by the Agreement on that company or organization’s behalf.
@@ -107,17 +99,13 @@
             that you manage via the Software.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            2. Account terms
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">2. Account terms</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            2.1 Account Responsibility and Security.
-          </h3>
+          <h3
+            class="pt-4 text-xl text-gray-900 font-semibold"
+          >2.1 Account Responsibility and Security.</h3>
 
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            1. Generally.
-          </h4>
+          <h4 class="pt-4 text-lg text-gray-900 font-semibold">1. Generally.</h4>
 
           <p>
             a. To register to use the Software, you must create a username and
@@ -139,9 +127,7 @@
             fully responsible for your Instance and all Content posted under it.
           </p>
 
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            2. Age Limitation.
-          </h4>
+          <h4 class="pt-4 text-lg text-gray-900 font-semibold">2. Age Limitation.</h4>
 
           <p>
             a. In order to create an Instance, you must be at least eighteen
@@ -154,14 +140,12 @@
           <p>
             b. By agreeing to these Terms, you represent and warrant to us that:
             (a) you are at least 18 years old; (b) you have not previously been
-            suspended or removed from the platform; and (c) your registration
+            suspended or removed from the Site; and (c) your registration
             and your use of the Software is in compliance with any and all
             applicable laws and regulations.
           </p>
 
-          <h4 class="pt-4 text-lg text-gray-900 font-semibold">
-            3. Security.
-          </h4>
+          <h4 class="pt-4 text-lg text-gray-900 font-semibold">3. Security.</h4>
 
           <p>
             You’re responsible for the security of your Instance when using our
@@ -173,13 +157,9 @@
             Instance.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            3. Acceptable use
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">3. Acceptable use</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            3.1 License from Us to You.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">3.1 License from Us to You.</h3>
 
           <p>
             The source code for our Software is publicly available at
@@ -187,18 +167,13 @@
               href="https://github.com/bytebase"
               target="_blank"
               class="text-indigo-600 underline"
-              >https://github.com/bytebase</a
-            >. Your rights to access and use that code is covered by the
+            >https://github.com/bytebase</a>. Your rights to access and use that code is covered by the
             software license in that repository.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            3.2 Restrictions.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">3.2 Restrictions.</h3>
 
-          <p>
-            You may not, and may not permit any third-party to:
-          </p>
+          <p>You may not, and may not permit any third-party to:</p>
 
           <p>
             1. redistribute, encumber, sell, rent, lease, sublicense, or
@@ -240,35 +215,31 @@
             versions older than the then- most-current release of the Software.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            3.3 Ownership; Proprietary Rights.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">3.3 Ownership; Proprietary Rights.</h3>
 
           <p>
-            The Website, Platform, and Software is owned and operated by
+            The Site, and Software are owned and operated by
             Bytebase. The visual interfaces, graphics, design, compilation,
             information, data, computer code (including source code or object
-            code), products, software, services, and all other elements ("<span
+            code), products, software, services, and all other elements ("
+            <span
               class="font-semibold"
-              >Materials</span
-            >") provided by Bytebase are protected by intellectual property and
+            >Materials</span>") provided by Bytebase are protected by intellectual property and
             other laws. All Materials are the property of Bytebase or its third
-            party licensors. You acknowledge that the Website, Platform and the
+            party licensors. You acknowledge that the Site, and the
             Software are protected by copyrights, trademarks, service marks,
             international treaties, and/or other proprietary rights and laws and
-            that all ownership and intellectual property rights in the Website,
-            Platform and the Software, and all related trade names, service
+            that all ownership and intellectual property rights in the Site,
+            and the Software, and all related trade names, service
             marks, logos, domain names do and shall, as between you and
             Bytebase, belong exclusively to Bytebase. Except as expressly
             provided herein, these Terms grant you no right, title, license, or
             interest in any intellectual property owned or licensed by Bytebase,
-            including (but not limited to) the Website, Platform, and the
+            including (but not limited to) the Site, and the
             Software.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            3.4 Ideas.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">3.4 Ideas.</h3>
 
           <p>
             You may submit comments or ideas about the Software, such as how to
@@ -281,16 +252,14 @@
             from other sources.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            3.5 Beta Software.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">3.5 Beta Software.</h3>
 
           <p>
             We may make beta and experimental products, features, and
-            Documentation available to you on an early access basis ("<span
+            Documentation available to you on an early access basis ("
+            <span
               class="font-semibold"
-              >Beta Software</span
-            >"). Beta Software is not generally available and may contain bugs,
+            >Beta Software</span>"). Beta Software is not generally available and may contain bugs,
             defects, and errors. We provide Beta Software “as is,” without
             warranties, and may discontinue the Beta Software at any time. Our
             service level agreements do not apply to Beta Software. If and when
@@ -302,22 +271,19 @@
             Software.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            4. Usage data
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">4. Usage data</h2>
 
           <p>
-            We may collect data derived from your use of the Software (“<span
+            We may collect data derived from your use of the Software (“
+            <span
               class="font-semibold"
-              >Usage Data</span
-            >”). A specific list of Usage Data that we receive from self-hosted
+            >Usage Data</span>”). A specific list of Usage Data that we receive from self-hosted
             instances is always available in our
             <a
               href="https://docs.bytebase.com/operating/telemetry"
               target="_blank"
               class="text-indigo-600 underline"
-              >Documentation</a
-            >
+            >Documentation</a>
             and in the site-admin area on your Instance. You acknowledge and
             agree that Usage Data is owned solely and exclusively by us, and
             that we may use it for any legal purpose, including for purposes of
@@ -327,16 +293,11 @@
             anonymize that information to avoid identification.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            5. Data protection
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">5. Data protection</h2>
 
           <p>
             Please read our
-            <NuxtLink class="text-indigo-600 underline" to="/privacy"
-              >Privacy Policy</NuxtLink
-            >
-            carefully for details relating to how we collect, use, and disclose
+            <NuxtLink class="text-indigo-600 underline" to="/privacy">Privacy Policy</NuxtLink>carefully for details relating to how we collect, use, and disclose
             personal information you provide to us in connection with your use
             of the Software. We have implemented, and the Software contains,
             commercially reasonable technical and organizational measures
@@ -353,13 +314,9 @@
             information to us at your own risk.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            6. Confidentiality
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">6. Confidentiality</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            6.1 Definition.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">6.1 Definition.</h3>
 
           <p>
             <span class="font-semibold">"Confidential Information"</span> means
@@ -369,13 +326,9 @@
             information or circumstances of its disclosure.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            6.2 Exclusions.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">6.2 Exclusions.</h3>
 
-          <p>
-            Confidential Information does not include any information that
-          </p>
+          <p>Confidential Information does not include any information that</p>
 
           <p>
             1. was or becomes publicly known through no fault of the receiving
@@ -398,9 +351,9 @@
             use of the other party’s Confidential Information.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            6.3 Restrictions on Use and Disclosure.
-          </h3>
+          <h3
+            class="pt-4 text-xl text-gray-900 font-semibold"
+          >6.3 Restrictions on Use and Disclosure.</h3>
 
           <p>
             Neither party will use the other party’s Confidential Information
@@ -414,7 +367,9 @@
             disclosing such Confidential Information only to its employees,
             independent contractors, consultants, and legal and financial
             advisors (collectively,
-            <span class="font-semibold">"Representatives"</span>) who (i) have a
+            <span
+              class="font-semibold"
+            >"Representatives"</span>) who (i) have a
             need to know such information, and (ii) are subject to
             confidentiality obligations at least as protective of the
             Confidential Information as the terms of this Agreement. Each party
@@ -428,25 +383,21 @@
             the termination or expiration of this Agreement.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            7. Term; Termination
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">7. Term; Termination</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            7.1 Subscription Period.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">7.1 Subscription Period.</h3>
 
           <p>
             Unless otherwise stated in an Order Form, this Agreement starts on
             the earlier of the date on which you: (a) agree to the terms and
             conditions of this Agreement; or (b) first set up an Instance and
             will continue in effect until either you or we terminate it (the
-            <span class="font-semibold">"Subscription Period"</span>).
+            <span
+              class="font-semibold"
+            >"Subscription Period"</span>).
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            7.2 Termination for Breach.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">7.2 Termination for Breach.</h3>
 
           <p>
             If a party fails to cure a material breach of the Agreement within
@@ -455,9 +406,7 @@
             (30) days. We will refund you any prepaid, unused fees.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            7.3 Termination for Convenience.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">7.3 Termination for Convenience.</h3>
 
           <p>
             Either party may terminate this Agreement, for any reason or for no
@@ -467,9 +416,7 @@
             remainder of the Subscription Period.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            7.4 Termination without Notification.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">7.4 Termination without Notification.</h3>
 
           <p>
             Bytebase reserves the right to immediately suspend your access to or
@@ -482,9 +429,7 @@
               functionality, security, integrity, or availability of the
               Software or to Bytebase’s other customers;
             </li>
-            <li>
-              b. we believe that you are violating the Agreement;
-            </li>
+            <li>b. we believe that you are violating the Agreement;</li>
             <li>
               c. we need to do so to comply with the Law or requests of
               governmental bodies; or
@@ -499,9 +444,7 @@
             </li>
           </ul>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            7.5 Effect of Termination; Survival.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">7.5 Effect of Termination; Survival.</h3>
 
           <p>
             Upon termination of this Agreement, you may no longer use the
@@ -513,21 +456,14 @@
             Agreement.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            8. Fees
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">8. Fees</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            8.1 Pricing.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">8.1 Pricing.</h3>
 
           <p>
             You are responsible for paying any applicable fees as set forth on
             our
-            <NuxtLink class="text-indigo-600 underline" to="/pricing"
-              >Pricing and Payment Terms</NuxtLink
-            >
-            or in an Order Form and applicable taxes associated with the
+            <NuxtLink class="text-indigo-600 underline" to="/pricing">Pricing and Payment Terms</NuxtLink>or in an Order Form and applicable taxes associated with the
             Software in a timely manner with a valid payment method. Unless
             otherwise stated in an Order Form, you will pay all invoices within
             thirty (30) days of receipt. You agree that we may charge for any
@@ -535,9 +471,7 @@
             current.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            8.2 Term.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">8.2 Term.</h3>
 
           <p>
             Authorization to charge your chosen payment method account will
@@ -547,9 +481,7 @@
             the applicable billing cycle.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            8.3 Responsibility for Charges.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">8.3 Responsibility for Charges.</h3>
 
           <p>
             You are responsible for all charges incurred by usage of your
@@ -562,9 +494,7 @@
             value-added taxes.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            8.4 No Refunds.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">8.4 No Refunds.</h3>
 
           <p>
             All fees and charges are earned upon receipt by us and are
@@ -572,9 +502,7 @@
             set forth herein, and/or (b) as required by applicable law.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            8.5 Renewals.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">8.5 Renewals.</h3>
 
           <p>
             Unless otherwise stated in an Order Form, your subscription will be
@@ -585,9 +513,7 @@
             subscription term.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            9. Third party services and software
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">9. Third party services and software</h2>
 
           <p>
             We do not share Your Database with third-party services, unless you
@@ -595,7 +521,9 @@
             regard to anything that is contained on or accessible through them.
             Access and use of Third Party Services is solely at your own risk.
             The Software may contain copyrighted software of our licensors
-            <span class="font-semibold">(“Third Party Software”)</span>. The
+            <span
+              class="font-semibold"
+            >(“Third Party Software”)</span>. The
             licensors retain all right, title, and interest in and to such Third
             Party Software and all copies thereof. Your use of any Third Party
             Software is subject to the terms and conditions of this Agreement,
@@ -607,9 +535,7 @@
             will govern the conflict.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            10. No warranties; disclaimer
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">10. No warranties; disclaimer</h2>
 
           <p>
             THE SOFTWARE, AND ANY OTHER SOFTWARE, APPLICATIONS, PRODUCTS, AND
@@ -623,7 +549,7 @@
             MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
             NONINFRINGEMENT. FURTHER, WE DO NOT WARRANT THAT THE SOFTWARE OR ANY
             PART THEREOF (OR YOUR ACCESS THERETO) WILL BE UNINTERRUPTED, FREE OF
-            INACCURACIES, ERRORS, BUGSERROR-FREE, OR FREE FROM VIRUSES OR OTHER
+            INACCURACIES, ERRORS, BUGS, OR FREE FROM VIRUSES OR OTHER
             HARMFUL COMPONENTS, WILL MEET YOUR REQUIREMENTS, OR THAT DEFECTS
             WILL BE CORRECTED. CERTAIN JURISDICTIONS DO NOT ALLOW LIMITATIONS ON
             IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN
@@ -632,9 +558,7 @@
             YOU MAY HAVE ADDITIONAL RIGHTS AS PROVIDED BY LAW.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            11. Limitation of liability
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">11. Limitation of liability</h2>
 
           <p>
             UNDER NO CIRCUMSTANCES WILL EITHER PARTY (OR ITS AFFILIATES,
@@ -677,9 +601,9 @@
             the bargain between you and us.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            12. Force Majeure and Exemption of Liability
-          </h2>
+          <h2
+            class="pt-4 text-2xl text-gray-900 font-semibold"
+          >12. Force Majeure and Exemption of Liability</h2>
 
           <h3 class="pt-4 text-xl text-gray-900 font-semibold">
             12.1 You understand and agree that, in the process of using the
@@ -732,9 +656,7 @@
             </li>
           </ul>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            12.2
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">12.2</h3>
 
           <p>
             In the event of a force majeure event, the obligations of the
@@ -752,22 +674,16 @@
             Agreement, either party may terminate this Agreement.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            12.3
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">12.3</h3>
 
           <p>
             In no event shall a force majeure event release you from your
             payment obligation.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            13. Indemnification
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">13. Indemnification</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            13.1 By You.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">13.1 By You.</h3>
 
           <p>
             You agree to defend us and our affiliates, directors, officers,
@@ -782,9 +698,7 @@
             your unique username, password, or other appropriate security code.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            13.2 By Bytebase.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">13.2 By Bytebase.</h3>
 
           <p>
             We agree to defend you and your affiliates, directors, officers,
@@ -799,9 +713,7 @@
             not performed by us.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            13.3 Procedure.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">13.3 Procedure.</h3>
 
           <p>
             Each party must give the other prompt written notice of any defense
@@ -814,13 +726,9 @@
             withheld, conditioned, or delayed.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            14. Modifications
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">14. Modifications</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            14.1
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">14.1</h3>
 
           <p>
             We reserve the right to change, modify, or update the Software at
@@ -835,9 +743,7 @@
             any time, in its sole discretion, with or without notice.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            14.2
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">14.2</h3>
 
           <p>
             We also reserve the right to update the Agreement (including these
@@ -854,9 +760,7 @@
             Form.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            15. Export Control
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">15. Export Control</h2>
 
           <p>
             Both parties undertake to abide by the export control laws and
@@ -872,13 +776,9 @@
             products or services.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">
-            16. Miscellaneous
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-semibold">16. Miscellaneous</h2>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.1 Governing Law and Jurisdiction.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.1 Governing Law and Jurisdiction.</h3>
 
           <p>
             This Agreement is governed by the laws of the Hong Kong Special
@@ -892,28 +792,19 @@
             out of or relating to this Agreement.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.2 Notices and Electronic Communications.
-          </h3>
+          <h3
+            class="pt-4 text-xl text-gray-900 font-semibold"
+          >16.2 Notices and Electronic Communications.</h3>
 
           <p>
-            We may provide you with (and you hereby consent to our provision of)
-            notices, including those regarding changes to our terms and
-            conditions, by email, regular mail, or postings on the Site. Notice
-            will be deemed given twenty-four hours after email is sent, unless
-            we’re notified that the email address is invalid. Notice posted on
-            the Site is deemed given five (5) days following the initial
-            posting. We reserve the right to determine the form and means of
-            providing notifications to our users, provided that you may opt out
-            of certain means of notification as described in the Agreement. We
-            are not responsible for any automatic filtering you or your network
-            provider may apply to email notifications we send to the email
-            address you provide us.
+            Any notice, request, consent, claim, demand, or other communication to be given or delivered to a party under or by reason of a provision of this Agreement shall be in writing in accordance with this Section 16.2. Bytebase may provide you with notice under this Agreement by (a) posting a notice on the Site or (b) sending a message to the email address then associated with your account. Notices provided by posting on the Site will be effective upon posting and notices provided by email will be effective when Bytebase sends out the email. You agree that any electronic communication will satisfy any applicable legal communication requirements, including that such communications be in writing. It is your responsibility to keep the email address associated with your account current. You may provide us with notice under this Agreement via email at
+            <a
+              href="mailto:support@bytebase.com"
+              class="text-indigo-600 underline"
+            >support@bytebase.com</a>.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.3 Waiver.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.3 Waiver.</h3>
 
           <p>
             Our failure to exercise or enforce any right or provision of the
@@ -922,9 +813,7 @@
             if in writing and signed by us.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.4 Severability.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.4 Severability.</h3>
 
           <p>
             If any provision of the Agreement is held to be unlawful, void, or
@@ -936,9 +825,7 @@
             agreement shall be unenforceable.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.5 Assignment.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.5 Assignment.</h3>
 
           <p>
             The Agreement and any rights and licenses granted hereunder, may not
@@ -947,9 +834,7 @@
             sale of substantially all assets.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.6 Survival.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.6 Survival.</h3>
 
           <p>
             Upon termination of the Agreement, any provision which, by its
@@ -957,9 +842,7 @@
             termination or expiration.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.7 Headings.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.7 Headings.</h3>
 
           <p>
             The heading references herein are for convenience only, do not
@@ -967,9 +850,7 @@
             or affect any of the provisions hereof.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.8 Marketing and Publicity.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.8 Marketing and Publicity.</h3>
 
           <p>
             We may freely refer to your Organization and your relationship with
@@ -980,9 +861,7 @@
             provide to us.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.9 Entire Agreement.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.9 Entire Agreement.</h3>
 
           <p>
             This, including the agreements incorporated by reference,
@@ -992,9 +871,7 @@
             the Agreement.
           </p>
 
-          <h3 class="pt-4 text-xl text-gray-900 font-semibold">
-            16.10 Disclosures.
-          </h3>
+          <h3 class="pt-4 text-xl text-gray-900 font-semibold">16.10 Disclosures.</h3>
 
           <p>
             The Software is offered by Bytebase (HongKong) Limited and can be
@@ -1002,8 +879,7 @@
             <a
               href="mailto:support@bytebase.com"
               class="text-indigo-600 underline"
-              >support@bytebase.com</a
-            >.
+            >support@bytebase.com</a>.
           </p>
         </div>
       </div>
@@ -1025,6 +901,6 @@ export default defineComponent({
       },
     ],
   },
-  setup() {},
+  setup() { },
 });
 </script>
