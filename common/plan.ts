@@ -102,7 +102,7 @@ const TEAM_PLAN: Plan = {
   priceDescription: "5 minimum, billed annually",
   // Plan desc and feature
   title: "Team",
-  description: "Medium size team, has dedicated DBA or TL for engineering velocity",
+  description: "Medium size team, with dedicated DBA or TL for engineering velocity",
   features: [
     { id: "Instance", content: "5 ~ unlimited" },
     { id: "Schema and data change" },
@@ -152,7 +152,7 @@ const ENTERPRISE_PLAN: Plan = {
   priceDescription: "Customized, billed annually",
   // Plan desc and feature
   title: "Enterprise",
-  description: "Large organization, has dedicated DBA group to manage database fleet",
+  description: "Large organization, with dedicated DBA group to manage database fleet",
   features: [
     { id: "Instance", content: "Customized" },
     { id: "Schema and data change" },
