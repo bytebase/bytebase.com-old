@@ -179,7 +179,7 @@
           class="mt-8 bg-white p-6 rounded-md shadow-xl ring-1 ring-black ring-opacity-5 order-2 relative lg:absolute  mt-6 -ml-2 lg:ml-16 xl:ml-60 lg:z-10 lg:mt-60"
         >
           <img
-            class="opacity-75 max-w-4xl"
+            class="opacity-75 sm:max-w-full lg:max-w-4xl"
             src="~/assets/screenshot_task.webp"
             alt=" App screenshot"
           />
@@ -243,7 +243,7 @@
               </h3>
             </div>
           </div>
-          <div class="relative pt-16 overflow-hidden">
+          <div class="relative pt-16 pb-8 overflow-hidden">
             <div class="relative">
               <div
                 class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
