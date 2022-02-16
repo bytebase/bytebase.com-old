@@ -197,7 +197,9 @@
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
-          <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
             <div>
               <div>
                 <span class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
@@ -245,7 +247,7 @@
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
           <div
-            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
           >
             <div>
               <div>
@@ -301,7 +303,218 @@
       </div>
     </div>
 
-    <div class="pt-16 overflow-hidden">
+    <!-- begin/SQL Editor Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2
+          class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
+        >
+          Simple, yet powerful SQL editor
+        </h2>
+        <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
+          Easy-to-use query interface to SELECT database records.
+        </h3>
+      </div>
+    </div>
+
+    <section class="relative bg-white pt-16 pb-32 overflow-hidden">
+      <!-- explore, alter the schema -->
+      <div class="relative">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <!-- Heroicon name: outline/code -->
+                  <svg class="w-6 h-6 text-white" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M5 12h14M5 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2M5 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2m-2-4h.01M17 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Explore, Alter the Schema
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Easily explore the database connection with Project-based access control, and you can select table to see the schema information.
+                  Also you can alter the schema from SQL Editor.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div
+              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~/assets/sql-editor_explore_the_schema.webp"
+                alt="Inbox user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- wirte queries effectively -->
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Write queries effectively
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Enjoy the powerful built-in text editor based on Monaco Editor, with autocomplete suggestions, format SQL, shortcuts, and more.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div
+              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~/assets/sql-editor_wirte_queries.webp"
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- never miss your sheet -->
+      <div class="relative">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <!-- Heroicon name: outline/code -->
+                  <svg class="w-6 h-6 text-white" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M5 12h14M5 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2M5 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2m-2-4h.01M17 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Never miss your sheet
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  The sheet allows you to easily find them and reuse it later, and share them with your teammates.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div
+              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~/assets/sql-editor_sheets.webp"
+                alt="Inbox user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- share with team -->
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Share sheet with teammates
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Share the sheet as a link on the SQL statement with your teammates, with sharing options easily manage the sheet permissions.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div
+              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~/assets/sql-editor_sharing.webp"
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of/SQL Editor Section -->
+
+    <div class="pt-16 overflow-hidden ">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
