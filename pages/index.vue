@@ -349,7 +349,7 @@
                   Explore the Schema
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Easily explore the database connection with Project-based access control, and you can select a table to see its schema.
+                  Explore the database record and schema guarded by the project-level access control.
                 </h3>
               </div>
             </div>
