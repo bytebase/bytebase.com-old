@@ -452,7 +452,7 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Never miss your sheets
+                  Never miss your work
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
                   The sheets allows you to easily find them and reuse it later by saving them, and share them with your teammates.
