@@ -405,7 +405,7 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Write queries effectively
+                  Smooth query editing experience
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
                   Enjoy the powerful built-in text editor based on Monaco Editor, with autocomplete suggestions, format SQL, shortcuts, and more.
