@@ -319,7 +319,7 @@
         <img
           class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
           src="../assets/sql-editor-preview.webp"
-          alt="Simple, yet powerful SQL editor"
+          alt="All-in-one SQL Editor"
         />
       </div>
     </div>
