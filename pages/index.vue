@@ -497,7 +497,7 @@
                   Share sheet with teammates
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Share the sheet as a link on the SQL statement with your teammates, with sharing options easily manage the sheet permissions.
+                  Share the sheet link with your teammates, with configurable access levels.
                 </h3>
               </div>
             </div>
