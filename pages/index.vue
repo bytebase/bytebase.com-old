@@ -315,6 +315,13 @@
           Easy-to-use query interface to SELECT database records.
         </h3>
       </div>
+      <div class="py-16">
+        <img
+          class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+          src="../assets/sql-editor-preview.webp"
+          alt="Simple, yet powerful SQL editor"
+        />
+      </div>
     </div>
 
     <section class="relative bg-white pt-16 pb-32 overflow-hidden">
@@ -331,19 +338,18 @@
                 <span
                   class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
                 >
-                  <!-- Heroicon name: outline/code -->
-                  <svg class="w-6 h-6 text-white" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M5 12h14M5 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2M5 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2m-2-4h.01M17 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                  <!-- Heroicon name: outline/database -->
+                  <svg role="img" class="iconify iconify--heroicons-outline" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                 </span>
               </div>
               <div class="mt-6">
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Explore, Alter the Schema
+                  Explore the Schema
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Easily explore the database connection with Project-based access control, and you can select table to see the schema information.
-                  Also you can alter the schema from SQL Editor.
+                  Easily explore the database connection with Project-based access control, and you can select a table to see its schema.
                 </h3>
               </div>
             </div>
@@ -353,9 +359,14 @@
               class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/sql-editor_explore_the_schema.webp"
-                alt="Inbox user interface"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_databases-search.webp"
+                alt="Explore the schema"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_databases-table-schema.webp"
+                alt="Explore the schema"
               />
             </div>
           </div>
@@ -407,16 +418,21 @@
               class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/sql-editor_wirte_queries.webp"
-                alt="Customer profile user interface"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_autocomplete.webp"
+                alt="Write queries effectively"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_format-sql.webp"
+                alt="Write queries effectively"
               />
             </div>
           </div>
         </div>
       </div>
-      <!-- never miss your sheet -->
-      <div class="relative">
+      <!-- never miss your sheets -->
+      <div class="relative mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
@@ -428,18 +444,18 @@
                 <span
                   class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
                 >
-                  <!-- Heroicon name: outline/code -->
-                  <svg class="w-6 h-6 text-white" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M5 12h14M5 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2M5 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2m-2-4h.01M17 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                  <!-- Heroicon name: outline/document-text -->
+                  <svg role="img" class="iconify iconify--heroicons-outline" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                 </span>
               </div>
               <div class="mt-6">
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Never miss your sheet
+                  Never miss your sheets
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  The sheet allows you to easily find them and reuse it later, and share them with your teammates.
+                  The sheets allows you to easily find them and reuse it later by saving them, and share them with your teammates.
                 </h3>
               </div>
             </div>
@@ -451,13 +467,13 @@
               <img
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~/assets/sql-editor_sheets.webp"
-                alt="Inbox user interface"
+                alt="Never miss your sheet"
               />
             </div>
           </div>
         </div>
       </div>
-      <!-- share with team -->
+      <!-- share sheet with teammates -->
       <div class="mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -470,20 +486,8 @@
                 <span
                   class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
                 >
-                  <svg
-                    class="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    ></path>
-                  </svg>
+                  <!-- Heroicon name: outline/share -->
+                  <svg role="img" class="iconify iconify--heroicons-outline" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 1 1 0-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 1 0 5.367-2.684a3 3 0 0 0-5.367 2.684zm0 9.316a3 3 0 1 0 5.368 2.684a3 3 0 0 0-5.368-2.684z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                 </span>
               </div>
               <div class="mt-6">
@@ -503,9 +507,14 @@
               class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/sql-editor_sharing.webp"
-                alt="Customer profile user interface"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_share-popover.webp"
+                alt="Share sheet with teammates"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_share-link-access.webp"
+                alt="Share sheet with teammates"
               />
             </div>
           </div>
