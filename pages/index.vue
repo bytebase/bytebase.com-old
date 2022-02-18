@@ -312,7 +312,7 @@
           All-in-one SQL Editor
         </h2>
         <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
-          Easy-to-use query interface to SELECT database records.
+          Inspect records, explore schema, sharing SQL scripts, and more.
         </h3>
       </div>
       <div class="py-16">
