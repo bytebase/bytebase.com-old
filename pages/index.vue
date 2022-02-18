@@ -325,7 +325,7 @@
     </div>
 
     <section class="relative bg-white pt-16 pb-32 overflow-hidden">
-      <!-- explore, alter the schema -->
+      <!-- Explore the Schema -->
       <div class="relative">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -372,7 +372,7 @@
           </div>
         </div>
       </div>
-      <!-- wirte queries effectively -->
+      <!-- Smooth query editing experience -->
       <div class="mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -431,7 +431,7 @@
           </div>
         </div>
       </div>
-      <!-- never miss your sheets -->
+      <!-- Never miss your work -->
       <div class="relative mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -465,9 +465,14 @@
               class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0  lg:max-w-none"
                 src="~/assets/sql-editor_sheets.webp"
-                alt="Never miss your sheet"
+                alt="Never miss your work"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0  lg:max-w-none"
+                src="~/assets/sql-editor_history.webp"
+                alt="Never miss your work"
               />
             </div>
           </div>
