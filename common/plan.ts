@@ -95,9 +95,9 @@ const TEAM_PLAN: Plan = {
   // Plan meta data
   label: "Beta",
   type: PlanType.TEAM,
-  trialDays: 7,
+  trialDays: 14,
   unitPrice: "1740",
-  trialPrice: 7,
+  trialPrice: 14,
   pricePerInstancePerMonth: 29,
   priceDescription: "5 minimum, billed annually",
   // Plan desc and feature
@@ -145,7 +145,7 @@ const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
   label: "Early access",
   type: PlanType.ENTERPRISE,
-  trialDays: 7,
+  trialDays: 14,
   unitPrice: "11940",
   trialPrice: 0,
   pricePerInstancePerMonth: 199,
