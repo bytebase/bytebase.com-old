@@ -455,7 +455,7 @@
                   Never miss your work
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  The sheets allows you to easily find them and reuse it later by saving them, and share them with your teammates.
+                  Save your favorite sheets and auto-record the execution history.
                 </h3>
               </div>
             </div>
