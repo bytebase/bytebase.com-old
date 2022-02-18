@@ -309,7 +309,7 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
-          Simple, yet powerful SQL editor
+          All-in-one SQL Editor
         </h2>
         <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
           Easy-to-use query interface to SELECT database records.
