@@ -93,7 +93,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Checkpoint",
         description: `The original idea comes from the ARIES paper (see reference). For performance reason, database
         does not persist modified data to disk after every committed change, instead, it periodically issues checkpoint which persists
-        the changes in batch. It's called checkpoint because when database crahes and then starts again for crash recovery, the
+        the changes in batch. It's called checkpoint because when database crashes and then starts again for crash recovery, the
         recovery process only needs to recover the committed changes after the latest checkpoint because the checkpoint
         guarantees any commits before that checkpoint have been persisted already. Checkpoint is still a heavy operation and
         may impact database performance.
@@ -111,7 +111,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Commit",
         description: `Commit marks the end of a transaction, persisting all mutations from that transaction. For performance reason, database
-        does not perist the change to data file directly upon commit, rather, it persists the change to a commit log also called write-ahead log.
+        does not persist the change to data file directly upon commit, rather, it persists the change to a commit log also called write-ahead log.
         Later on, database will do a checkpoint to persist those changes from write-ahead log to the data file in batch.`,
         reference: "https://en.wikipedia.org/wiki/Commit_(data_management)",
         tagList: ["General"],
@@ -125,13 +125,13 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Constraint",
-        description: `Specific requriement that must be met by the value stored in the database. Typical constraints are NOT NULL constraint, UNIQUE constraint and etc.`,
+        description: `Specific requirement that must be met by the value stored in the database. Typical constraints are NOT NULL constraint, UNIQUE constraint and etc.`,
         reference: "https://en.wikipedia.org/wiki/Check_constraint",
         tagList: ["General"],
       },
       {
         name: "Cost-based optimization (CBO)",
-        description: `A optimization strategy used by the query enigne to pick a query plan to execute the SQL statment based on the
+        description: `A optimization strategy used by the query engine to pick a query plan to execute the SQL statement based on the
         cost estimate. It's  the strategy used by all mainstream databases. It's predecessor is Rule-based optimization (RBO). The
         advantage of CBO is it's more adaptive than the hard-coded RBO since it's based on the actual context, the number of estimated
         rows to be fetched, the cost  of each fetch, the index to be used and etc. Because there are quite a few factors to consider,
@@ -202,7 +202,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Database-as-code",
         description: `A workflow to store database schema changes as a series of schema migration scripts in the version control system (VCS).
         Whenever new script committed to the VCS, a process will kickoff automatically to start the process of applying the script to the database.
-        Thus the database schema change is managed in a very similar fashion as code. This workflow is considerred superior than the classic
+        Thus the database schema change is managed in a very similar fashion as code. This workflow is considered superior than the classic
         UI based SQL review workflow. However, it requires a bit more setup and engineering discipline. Bytebase supports this workflow and helps
         ease the onboarding and ongoing management of using this workflow.`,
         reference: "https://docs.bytebase.com/features/version-control",
@@ -240,8 +240,8 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Encryption in transit",
-        description: `Client normally accesss database server over a public or untrusted network, to prevents eavesdropping and man-in-the-middle
-        attack, database client and server would first establish a secure connection by agreeing on the encrytion algorithm and ephemeral encryption
+        description: `Client normally accesses database server over a public or untrusted network, to prevents eavesdropping and man-in-the-middle
+        attack, database client and server would first establish a secure connection by agreeing on the encryption algorithm and ephemeral encryption
         key to use, then client and server can securely exchange the messages with each other.`,
         reference: "https://en.wikipedia.org/wiki/Data_in_transit",
         tagList: ["General"],
@@ -320,8 +320,8 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "HTAP (Hybrid transactional/analytical processing)",
         description: `A new term coined recently to combine the transactional and analytical power into a single system.
-        Trandtionally, transactional and analytical processing are handled by different systems, which causes the headache
-        of maintanining 2 separate systems as well as duplicating the data and managing the pipeline to copy the data
+        Traditionally, transactional and analytical processing are handled by different systems, which causes the headache
+        of maintaining 2 separate systems as well as duplicating the data and managing the pipeline to copy the data
         from the online transactional system to the analytical system. HTAP gains popularity because it eliminates the
         duplicate system and data, making near real-time analytic possible. On the other hand, the challenge still remains
         as how to efficiently handle both transactional and analytical workload in the same system, and how to prevent analytical
@@ -356,7 +356,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Isolation",
-        description: `I in ACID, the property defines the behavior of how concurent transactions sees changes from each other.
+        description: `I in ACID, the property defines the behavior of how concurrent transactions sees changes from each other.
         ANSI/ISO SQL defines 4 isolation levels in the order of ascending strictness: Read uncommitted, Read committed, Repeatable reads, Serializable.`,
         reference: "https://en.wikipedia.org/wiki/Isolation_(database_systems)",
         tagList: ["General"],
@@ -383,7 +383,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Join",
-        description: `An opereator in relational algebra to combine columns from multiple tables into a single table. Query
+        description: `An operator in relational algebra to combine columns from multiple tables into a single table. Query
         engines usually fulfills the join request using one of the Nested-loop join, Merge join, Hash join methods.
         `,
         reference: "https://en.wikipedia.org/wiki/Join_(SQL)",
@@ -396,7 +396,7 @@ export const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Lock",
-        description: `A technique to prevent simultaneous access to data in a database to prevent inconsisten results. Modern
+        description: `A technique to prevent simultaneous access to data in a database to prevent inconsistent results. Modern
         databases all implement the granular row-level locking for performance reason. But some operations like altering the 
         schema would still require table-level locking, which would block the normal online processing. That's the reason such
         operations are performed during non-business hours to reduce impact.`,
@@ -423,7 +423,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         a data dump from the source database system and loads it into the target database system. 2) In the catchup phase, team configures a
         change-data-capture (CDC) pipeline to stream the ongoing changes to the target database. 3) In the switchover phase, team cuts off
         the traffic to the original database, wait for target database to catch up all new changes from the source database, and then redirect
-        the traffic to the target database. If executely carefully, the downtime would be limited to the blackout period in the switchover phase.
+        the traffic to the target database. If executed carefully, the downtime would be limited to the blackout period in the switchover phase.
         `,
         tagList: ["General"],
       },
@@ -463,7 +463,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Normalization",
         description: `A process of designing a database schema in accordance with a series of so-called normal forms. The design
-          requires skillful balance among data redudancy, data integrity, performance and etc.`,
+          requires skillful balance among data redundancy, data integrity, performance and etc.`,
         reference: "https://en.wikipedia.org/wiki/Database_normalization",
         tagList: ["General"],
       },
@@ -492,8 +492,8 @@ export const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Optimizer / Query optimizer",
-        description: `A key subsytem in relational database to determine the efficient way to execute a given query in a timely fashion.
-          It tranforms an input SQL query into an executable query plan. Most mainstream databases use the cost-based optimizer (CBO) which
+        description: `A key subsystem in relational database to determine the efficient way to execute a given query in a timely fashion.
+          It transforms an input SQL query into an executable query plan. Most mainstream databases use the cost-based optimizer (CBO) which
           determines the best query by calculating the cost of many factors such I/O speed, number of rows to be accessed etc. Because
           the cost is an estimate, and also the plan needs to be generated in a timely fashion, thus the optimizer can not permutate all
           possible plans and pick the optimal plan.`,
@@ -503,7 +503,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "ODBC (Open Database Connectivity)",
         description: `A standard API for accessing database management systems. Its current usage is more limited to Microsoft ecosystems
-        beause other programming environments employ different but similar standard API (like JDBC for Java, database/sql for Golang).
+        because other programming environments employ different but similar standard API (like JDBC for Java, database/sql for Golang).
         `,
         reference: "https://en.wikipedia.org/wiki/Open_Database_Connectivity",
         tagList: ["General"],
@@ -534,13 +534,13 @@ export const ALPHA_LIST: AlphaItem[] = [
         description: `Both on disk and in memory, database data is stored as a consecutive byte blocks with same size. Each block is
         called a page. Normal page size are 4KB, 8KB, 16KB bytes. Data I/O operation is performed on the unit of pages. Most of the time,
         database can't hold all data in the memory, thus it employs a buffer pool to maintain a list of active pages based on LRU. The
-        buffer pool swaps the pages continously based on the access pattern, a process known as page-in, page-out.`,
+        buffer pool swaps the pages continuously based on the access pattern, a process known as page-in, page-out.`,
         tagList: ["General"],
       },
       {
         name: "Point-in-time-recovery (PITR)",
         description: `A process to restore the database state to a particular point in time. This is often achieved by first restoring 
-        the database using a base backup (baselining) and then replaying the change-data-capature (CDC) logs up to the desired point in
+        the database using a base backup (baselining) and then replaying the change-data-capture (CDC) logs up to the desired point in
         time.`,
         reference: "https://en.wikipedia.org/wiki/Point-in-time_recovery",
         tagList: ["General"],
@@ -582,7 +582,7 @@ export const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Query",
-        description: `A query sometimes refes to the general SQL statement or in the more narrowed case, only refers to the 
+        description: `A query sometimes refers to the general SQL statement or in the more narrowed case, only refers to the 
         SELECT SQL statement since the SELECT query requires the query optimizer to determine a performant query plan.`,
         reference: "https://en.wikipedia.org/wiki/SQL",
         tagList: ["General"],
@@ -623,8 +623,8 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Replication",
-        description: `A process the produce a reduntant copy of the primary data. The copy is also called replica.
-        The replica can be used as a hot standby to takeover traffic when the primary failes, or it can be used
+        description: `A process the produce a redundant copy of the primary data. The copy is also called replica.
+        The replica can be used as a hot standby to takeover traffic when the primary fails, or it can be used
         as a read replica to serve read traffic.`,
         reference: "https://en.wikipedia.org/wiki/Replication_(computing)",
         tagList: ["General"],
@@ -638,7 +638,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       },
       {
         name: "Rollback",
-        description: `Rollback marks the end of a transation, to discard all mutations from that transaction.
+        description: `Rollback marks the end of a transaction, to discard all mutations from that transaction.
         A rollback can be issued by the client by rollback statement, and sometimes, database engine will rollback
         the transaction to resolve deadlock or resolve the conflict due to concurrent change to the same row.
         `,
@@ -656,7 +656,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "RTO (Recovery Time Objective)",
         description: `The targeted duration of time within which the database must be restored to normal 
-        after a service disruption. It usually has a conflict interets with RPO. When the primary database fails,
+        after a service disruption. It usually has a conflict interests with RPO. When the primary database fails,
         one can wait to promote the replica to serve traffic until the replica catches up all changes (longer RTO,
         but 0 RTO) or promote the replica immediately (shorter RTO, but non-0 RTO).`,
         reference: "https://en.wikipedia.org/wiki/Disaster_recovery",
@@ -680,7 +680,7 @@ export const ALPHA_LIST: AlphaItem[] = [
       {
         name: "Server / Database server",
         description: `This sometimes refer to the entire database like MySQL, PostgreSQL. Sometimes, it refers
-        to the server subsystem in the database, which handling client connections, authenticaion/authorization,
+        to the server subsystem in the database, which handling client connections, authentication/authorization,
         user sessions and etc.`,
         tagList: ["General"],
       },
@@ -707,16 +707,16 @@ export const ALPHA_LIST: AlphaItem[] = [
         description: `The process of reviewing the SQL schema change. A typical SQL review starts when the Developer
         opens a schema change ticket, then a DBA will be assigned the ticket to review and approve/reject the change.
         If the change is approved, then it will be applied to the database by the tooling system. Bytebase has built-in
-        support for this SQL reivew workflow.`,
+        support for this SQL review workflow.`,
         reference: "https://docs.bytebase.com/features/sql-review",
         tagList: ["General", "Bytebase"],
       },
       {
         name: "Storage engine",
-        description: `The storage engine is one of the 3 core subsystems in a tranditional database management system.
+        description: `The storage engine is one of the 3 core subsystems in a traditional database management system.
         The other 2 are the query engine and the server layer (managing ACL, client connections/sessions). The storage engine
         would expose an API for other subsystems (mainly the query engine) to interact with it. Both InnoDB, MyISAM are
-        a storage engine of MySQL. Storage engine can also be a standlone component, in which case, it's used as a library (e.g. Berkeley DB).`,
+        a storage engine of MySQL. Storage engine can also be a standalone component, in which case, it's used as a library (e.g. Berkeley DB).`,
         reference: "https://en.wikipedia.org/wiki/Database_engine",
         tagList: ["General"],
       },
@@ -734,7 +734,7 @@ export const ALPHA_LIST: AlphaItem[] = [
     list: [
       {
         name: "Table",
-        description: `A collection of related data having the same structure. A table is a 2-dimentional array consisting of columns
+        description: `A collection of related data having the same structure. A table is a 2-dimensional array consisting of columns
         and rows.
         `,
         reference: "https://en.wikipedia.org/wiki/Table_(database)",
@@ -813,7 +813,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         change to the data file is batched at a later time, the storage engine just writes ahead to a log file to guarantee
         that the transaction data persists. If the database crashes in between, the recovery process will redo the changes
         recorded in the write-ahead logs to apply to the data file, that's why it's also known as redo logs. Another usage
-        for WAL is for change-data-capature (CDC) since it already records all the data changes. e.g. PostgreSQL uses WAL
+        for WAL is for change-data-capture (CDC) since it already records all the data changes. e.g. PostgreSQL uses WAL
         for logical replication.
         `,
         reference: "https://en.wikipedia.org/wiki/Write-ahead_logging",
