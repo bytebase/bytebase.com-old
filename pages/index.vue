@@ -1005,7 +1005,7 @@
                       >PostgreSQL</a
                     >
                     is the industry leading multi-model relational database. In
-                    addition to the typical transational workload, PostgreSQL
+                    addition to the typical transactional workload, PostgreSQL
                     can also handle analytical, geospatial, time series, full
                     text search and etc. This allows Bytebase to only keep a
                     single database system to fulfill all sorts of requirements.
