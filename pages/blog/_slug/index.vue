@@ -62,7 +62,7 @@ import { getSinglePost } from "../../../api/posts";
 export default {
   head() {
     return {
-      title: (this as any).post.title,
+      title: (this as any).post?.title,
     };
   },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
