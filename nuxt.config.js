@@ -88,6 +88,7 @@ export default {
   router: {
     linkExactActiveClass: "underline",
     linkActiveClass: "underline",
+    prefetchPayloads: false,
   },
 
   generate: {
