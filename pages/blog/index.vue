@@ -218,8 +218,6 @@ export default {
       if (post.featured) {
         featuredPosts.push(post);
       }
-      console.log("post slug", post.slug);
-      console.log("post title", post.title);
     }
     return { posts, featuredPosts };
   },
