@@ -1,5 +1,5 @@
 <template>
-  <main class="overflow-hidden space-y-8">
+  <main v-if="post" class="overflow-hidden space-y-8">
     <img
       class="hidden sm:block sm:h-96 w-full object-scale-down"
       :src="post.feature_image"
