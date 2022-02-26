@@ -68,6 +68,8 @@ export default {
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
+    console.log("slug", params.slug);
+    console.log("single post", post);
     return { post: post };
   },
   methods: {
