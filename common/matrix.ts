@@ -21,6 +21,7 @@ export const imList: string[] = [
 
 export const featureList: string[] = [
   "SQL review",
+  "SQL Editor",
   "Syntax check",
   "Schema drift detection",
   "Schema change",

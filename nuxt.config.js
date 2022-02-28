@@ -88,12 +88,13 @@ export default {
   router: {
     linkExactActiveClass: "underline",
     linkActiveClass: "underline",
+    prefetchPayloads: false,
   },
 
   generate: {
     routes: async () => {
       const postRoutelist = [];
-      const postList = await getPosts(["Changelog", "Announcement", "Education"]);
+      const postList = await getPosts(["Changelog", "Announcement", "Education", "Chinese"]);
       for (const post of postList) {
         if (post.tags?.find((item) => item.name == "Changelog")) {
           postRoutelist.push(`changelog/${post.slug}`);

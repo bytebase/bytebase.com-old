@@ -22,13 +22,13 @@
               class="max-w-5xl mx-auto text-left text-2xl leading-9 text-gray-900"
             >
               <p class="mt-6">
-                While we have a plethora of commerial and open-source database
+                While we have a plethora of commercial and open-source database
                 engines serving billions of users, our tooling around making
                 <span class="underline inline font-semibold">reliable</span>,
                 <span class="underline inline font-semibold">consistent</span>,
                 <span class="underline inline font-semibold"></span
                 ><span class="underline inline font-semibold">auditable</span>
-                application database schema changes are embrassing. And today
+                application database schema changes is embarrassing. And today
                 many teams are still connecting to the production DB and
                 applying changes directly. Quick and dirty, until BOMB!
               </p>
@@ -70,7 +70,7 @@
               <p class="mt-6">There was no really good answer.</p>
               <p class="mt-6">
                 It's like a Porsche with a good engine, but only paired with the
-                handy wheel and brake, can it deliver the safe and pleasant
+                handy wheel and brake, can it deliver a safe and pleasant
                 driving experience. And that's what
                 <span
                   class="text-indigo-600 font-semibold"

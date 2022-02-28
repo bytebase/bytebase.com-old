@@ -149,7 +149,7 @@
           </h2>
           <div class="text-right">
             <a
-              href="https://github.com/bytebase/bytebase.com/edit/main/pages/glossary.ts"
+              href="https://github.com/bytebase/bytebase.com/edit/main/common/glossary.ts"
               target="__blank"
               class="text-sm text-blue-600 hover:underline"
               >Suggest changes on GitHub</a

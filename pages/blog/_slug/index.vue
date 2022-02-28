@@ -1,5 +1,5 @@
 <template>
-  <main class="overflow-hidden space-y-8">
+  <main v-if="post" class="overflow-hidden space-y-8">
     <img
       class="hidden sm:block sm:h-96 w-full object-scale-down"
       :src="post.feature_image"
@@ -62,7 +62,7 @@ import { getSinglePost } from "../../../api/posts";
 export default {
   head() {
     return {
-      title: (this as any).post.title,
+      title: (this as any).post?.title,
     };
   },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.

@@ -23,7 +23,7 @@
                       <img
                         class="h-6 sm:h-8 w-auto"
                         src="~/assets/logo-full.svg"
-                        alt=""
+                        alt
                       />
                     </NuxtLink>
                   </div>
@@ -46,16 +46,14 @@
                     to="/blog"
                     @click.native="track('blog.header')"
                     class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                    >Blog</NuxtLink
                   >
-                    Blog
-                  </NuxtLink>
                   <NuxtLink
                     to="/changelog"
                     @click.native="track('changelog.header')"
                     class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
+                    >Changelog</NuxtLink
                   >
-                    Changelog
-                  </NuxtLink>
                   <a
                     href="https://docs.bytebase.com?ref=bytebase.com"
                     target="_blank"
@@ -75,7 +73,7 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      ></path>
+                      />
                     </svg>
                   </a>
                   <div class="items-center hidden sm:flex lg:hidden">
@@ -97,7 +95,7 @@
                   <img
                     class="-mt-8 h-10 w-auto"
                     src="~/assets/starus.png"
-                    alt=""
+                    alt
                   />
                   <!-- Place this tag where you want the button to render. -->
                   <a
@@ -120,22 +118,21 @@
                 to="/jobs"
                 @click.native="track('job.main')"
                 class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
+                >We're hiring</NuxtLink
               >
-                We're hiring
-              </NuxtLink>
               <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
                 <span class="inline">Open source, web-based, zero-config</span>
               </h2>
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                <span class="block xl:inline"
-                  >Database schema change and version control for
+                <span class="block xl:inline">
+                  Database schema change and version control for
                   <span
                     class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
                     >teams</span
-                  ></span
-                >
+                  >
+                </span>
               </h1>
               <h2
                 class="tracking-tight mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0"
@@ -171,7 +168,7 @@
         <img
           class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="~/assets/illustration/main.webp"
-          alt=""
+          alt
         />
       </div>
     </div>
@@ -206,9 +203,8 @@
           Industry first database CI/CD solution for
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >DBA & Developer collaboration</span
           >
-            team collaboration
-          </span>
         </h2>
         <div class="mt-12">
           <FeatureSection />
@@ -237,7 +233,7 @@
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
           <div
-            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0"
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
           >
             <div>
               <div>
@@ -257,7 +253,7 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                    ></path>
+                    />
                   </svg>
                 </span>
               </div>
@@ -294,7 +290,163 @@
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
         >
           <div
-            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Version control workflow #GitOps
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Database migration scripts are stored in a git repository. To
+                  make schema changes, a developer would create a migration
+                  script and submit for review in the corresponding VCS such as
+                  GitLab. After the script is approved and merged into the
+                  configured branch, Bytebase will automatically kicks off the
+                  task to apply the new schema change.
+                </h3>
+                <div class="mt-6">
+                  <a
+                    href="https://docs.bytebase.com/features/version-control?ref=bytebase.com"
+                    @click="track('doc.version-control')"
+                    class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                    >See Guide</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div
+              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="~/assets/versioncontrol.webp"
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- begin/SQL Editor Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2
+          class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
+        >
+          All-in-one SQL Editor
+        </h2>
+        <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
+          Inspect records, explore schema, sharing SQL scripts, and more.
+        </h3>
+      </div>
+      <div class="py-16">
+        <img
+          class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+          src="../assets/sql-editor-preview.webp"
+          alt="All-in-one SQL Editor"
+        />
+      </div>
+    </div>
+
+    <section class="relative bg-white pt-16 pb-32 overflow-hidden">
+      <!-- Explore the Schema -->
+      <div class="relative">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <!-- Heroicon name: outline/database -->
+                  <svg
+                    role="img"
+                    class="iconify iconify--heroicons-outline"
+                    width="32"
+                    height="32"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <g fill="none">
+                      <path
+                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Explore the Schema
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Explore the database record and schema guarded by the
+                  project-level access control.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div
+              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_databases-search.webp"
+                alt="Explore the schema"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_databases-table-schema.webp"
+                alt="Explore the schema"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Smooth query editing experience -->
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
           >
             <div>
               <div>
@@ -321,25 +473,11 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Version control workflow #GitOps
+                  Smooth query editing experience
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Database migration scripts are stored in a git repository. To
-                  make schema changes, a developer would create a migration
-                  script and submit for review in the corresponding VCS such as
-                  GitLab. After the script is approved and merged into the
-                  configured branch, Bytebase will automatically kicks off the
-                  task to apply the new schema change.
+                  Autocomplete suggestions, SQL format, shortcuts, and more.
                 </h3>
-                <div class="mt-6">
-                  <a
-                    href="https://docs.bytebase.com/features/version-control?ref=bytebase.com"
-                    @click="track('doc.version-control')"
-                    class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
-                  >
-                    See Guide
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -348,15 +486,151 @@
               class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/versioncontrol.webp"
-                alt="Customer profile user interface"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_autocomplete.webp"
+                alt="Write queries effectively"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_format-sql.webp"
+                alt="Write queries effectively"
               />
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- Never miss your work -->
+      <div class="relative mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <!-- Heroicon name: outline/document-text -->
+                  <svg
+                    role="img"
+                    class="iconify iconify--heroicons-outline"
+                    width="32"
+                    height="32"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <g fill="none">
+                      <path
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Never miss your work
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Save your favorite sheets and auto-record the execution
+                  history.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div
+              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0  lg:max-w-none"
+                src="~/assets/sql-editor_sheets.webp"
+                alt="Never miss your work"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0  lg:max-w-none"
+                src="~/assets/sql-editor_history.webp"
+                alt="Never miss your work"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- share sheet with teammates -->
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div>
+                <span
+                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                >
+                  <!-- Heroicon name: outline/share -->
+                  <svg
+                    role="img"
+                    class="iconify iconify--heroicons-outline"
+                    width="32"
+                    height="32"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <g fill="none">
+                      <path
+                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 1 1 0-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 1 0 5.367-2.684a3 3 0 0 0-5.367 2.684zm0 9.316a3 3 0 1 0 5.368 2.684a3 3 0 0 0-5.368-2.684z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                >
+                  Share sheet with teammates
+                </h2>
+                <h3 class="mt-4 text-lg text-gray-500">
+                  Share the sheet link with your teammates, with configurable
+                  access levels.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div
+              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            >
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/assets/sql-editor_share-popover.webp"
+                alt="Share sheet with teammates"
+              />
+              <img
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/assets/sql-editor_share-link-access.webp"
+                alt="Share sheet with teammates"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of/SQL Editor Section -->
 
     <div class="pt-16 overflow-hidden ">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -431,7 +705,7 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                      ></path>
+                      />
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
@@ -462,7 +736,7 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                      ></path>
+                      />
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
@@ -502,7 +776,7 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-                      ></path>
+                      />
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
@@ -555,7 +829,7 @@
               class="relative mx-auto"
               width="480"
               src="~/assets/othertools.svg"
-              alt=""
+              alt
             />
           </div>
         </div>
@@ -568,12 +842,22 @@
               <h3
                 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
               >
-                Curated tech stack
+                Single binary with curated tech stack
               </h3>
               <p class="mt-3 text-lg text-gray-500">
-                Vue + TypeScript + Tailwind CSS + Golang + SQLite. As a
-                professional tool, Bytebase tries to be pragmatic. And because
-                Bytebase plans to be open sourced, it favors technologies with
+                The entire app is bundled in
+                <span
+                  class="text-blue-600"
+                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  >a single binary</span
+                >
+                and started via
+                <span
+                  class="text-blue-600"
+                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  >./bytebase</span
+                >. As a professional tool, Bytebase tries to be pragmatic. And
+                because Bytebase is open sourced, it favors technologies with
                 simplicity and being opinionated to deliver an accessible and
                 cohesive experience to easily learn, use and build the product.
                 We don't want people to waste time figuring out how to deploy or
@@ -598,7 +882,7 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                        ></path>
+                        />
                       </svg>
                     </div>
                     <p
@@ -661,7 +945,7 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                        ></path>
+                        />
                       </svg>
                     </div>
                     <p
@@ -703,37 +987,28 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                        ></path>
+                        />
                       </svg>
                     </div>
                     <p
                       class="ml-16 text-lg leading-6 font-medium text-gray-900"
                     >
-                      SQLite
+                      PostgreSQL
                     </p>
                   </dt>
                   <dd class="mt-2 ml-16 text-base text-gray-500">
                     <a
-                      href="https://sqlite.com/"
+                      href="https://postgresql.org/"
                       target="_blank"
                       class="text-blue-600"
                       style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >SQLite</a
+                      >PostgreSQL</a
                     >
-                    is a small, fast, reliable, ACID compliant library. SQLite's
-                    performance is suffice for control plane application like
-                    Bytebase which doesn't need a fully-fleged RDBMS to scale.
-                    SQLite allows Bytebase to be fully self-contained, it also
-                    brings the benefit of reduced binary size, much smaller
-                    footprint, easy end-to-end testing. We can also use
-                    <a
-                      href="https://github.com/benbjohnson/litestream"
-                      target="_blank"
-                      class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-                      >Litestream</a
-                    >
-                    for disaster recovery.
+                    is the industry leading multi-model relational database. In
+                    addition to the typical transactional workload, PostgreSQL
+                    can also handle analytical, geospatial, time series, full
+                    text search and etc. This allows Bytebase to only keep a
+                    single database system to fulfill all sorts of requirements.
                   </dd>
                 </div>
               </dl>
@@ -776,8 +1051,8 @@
               <img
                 class="relative mx-auto"
                 width="490"
-                src="~/assets/techstack.svg"
-                alt=""
+                src="~/assets/techstack.webp"
+                alt
               />
             </div>
           </div>
