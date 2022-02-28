@@ -223,6 +223,13 @@ export const ALPHA_LIST: AlphaItem[] = [
           "https://en.wikipedia.org/wiki/Durability_(database_systems)",
         tagList: ["General"],
       },
+      {
+        name: "Doublewrite buffer",
+        description: `The InnoDB double write buffer helps recover from half-written pages. Whenever InnoDB flushes a page from the buffer pool, it is first written to the double write buffer. Only if the buffer is safely flushed to the disk, will InnoDB write the pages to the disk. So that when InnoDB detects the corruption from the mismatch of the checksum, it can recover from double write buffer.`,
+        reference:
+          "https://dev.mysql.com/doc/refman/8.0/en/innodb-doublewrite-buffer.html",
+        tagList: ["General"],
+      },
     ],
   },
   {
