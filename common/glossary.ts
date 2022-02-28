@@ -304,6 +304,12 @@ export const ALPHA_LIST: AlphaItem[] = [
         reference: "https://en.wikipedia.org/wiki/Foreign_key",
         tagList: ["General"],
       },
+      {
+        name: "Full-page writes",
+        description: `When full-page writes is on, the PostgreSQL server writes the entire content of each disk page to WAL during the first modification of that page after a checkpoint. This is needed because a page write that is in process during an operating system crash might be only partially completed, leading to an on-disk page that contains a mix of old and new data. The row-level change data normally stored in WAL will not be enough to completely restore such a page during post-crash recovery. Storing the full page image guarantees that the page can be correctly restored, but at the price of increasing the amount of data that must be written to WAL. The MySQL equivalent is double write buffer`,
+        reference: "https://www.postgresql.org/docs/14/runtime-config-wal.html",
+        tagList: ["PostgreSQL"],
+      },
     ],
   },
   {
