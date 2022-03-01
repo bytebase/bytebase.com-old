@@ -143,7 +143,7 @@ const people = [
     name: "Lucy",
     role: "Community Intern",
     imageUrl: require(`~/assets/people/lucy.webp`),
-    }
+  },
 ];
 
 const YOU = {
