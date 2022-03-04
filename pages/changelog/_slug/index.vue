@@ -43,11 +43,11 @@
 
     <div class="flex flex-col justify-center items-center py-10" v-if="post.authors.length > 0">
       <div class="flex">
-        <div class="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mr-5">
+        <div class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mr-5">
           <img
             :src="post.authors[0].profile_image"
             :alt="post.authors[0].profile_image"
-            class="w-20 h-20"
+            class="w-16 h-16"
           />
         </div>
         <div class="flex flex-col justify-center">
