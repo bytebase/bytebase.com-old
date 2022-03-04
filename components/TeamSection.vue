@@ -139,6 +139,16 @@ const people = [
     role: "Engineering Intern",
     imageUrl: require(`~/assets/people/qiaosheng.webp`),
   },
+  {
+    name: "Lucy",
+    role: "Community Intern",
+    imageUrl: require(`~/assets/people/lucy.webp`),
+  },
+  {
+    name: "Elon",
+    role: "Engineer",
+    imageUrl: require(`~/assets/people/elon.webp`),
+  },
 ];
 
 const YOU = {
