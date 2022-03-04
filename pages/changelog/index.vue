@@ -45,12 +45,14 @@
                     </time>
                     <span aria-hidden="true">&middot;</span>
                     <span>{{ post.reading_time }} min read</span>
-                    <img
-                      :src="post.authors[0].profile_image"
-                      :alt="post.authors[0].profile_image"
-                      class="w-6 h-6"
-                    />
-                    <span>{{ post.authors[0].name }}</span>
+                    <template v-if="post.authors.length > 0">
+                      <img
+                        :src="post.authors[0].profile_image"
+                        :alt="post.authors[0].profile_image"
+                        class="w-6 h-6"
+                      />
+                      <span>{{ post.authors[0].name }}</span>
+                    </template>
                   </div>
                 </span>
               </NuxtLink>
