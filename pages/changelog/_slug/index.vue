@@ -32,7 +32,13 @@
             :alt="post.authors[0].profile_image"
             class="w-6 h-6"
           />
-          <span>{{ post.authors[0].name }}</span>
+          <a
+            :href="post.authors[0].url"
+            target="_blank"
+            class="hover:underline"
+          >
+            {{ post.authors[0].name }}
+          </a>
         </template>
       </div></span
     >
@@ -40,34 +46,6 @@
       class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
       v-html="post.html"
     ></div>
-
-    <div class="flex flex-col justify-center items-center py-10" v-if="post.authors.length > 0">
-      <div class="flex">
-        <div class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mr-5">
-          <img
-            :src="post.authors[0].profile_image"
-            :alt="post.authors[0].profile_image"
-            class="w-16 h-16"
-          />
-        </div>
-        <div class="flex flex-col justify-center">
-          <div class="text-2xl md:text-3xl font-medium mb-3">
-            {{ post.authors[0].name }}
-          </div>
-          <a
-            :href="post.authors[0].url"
-            target="_blank"
-            class="flex items-center hover:underline"
-          >
-            VIEW ARTICLES
-            <!-- Heroicon name: outline/chevron-right -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
 
     <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
       <ActionSection
