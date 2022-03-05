@@ -33,7 +33,7 @@
                 <span
                   class="pt-4 flex flex-row items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
                 >
-                  <div class="ml-2 flex space-x-1 text-gray-500">
+                  <div class="ml-2 flex space-x-1 text-gray-500 items-center">
                     <time :datetime="post.published_at">
                       {{
                         new Date(post.published_at).toLocaleString("default", {
@@ -45,6 +45,14 @@
                     </time>
                     <span aria-hidden="true">&middot;</span>
                     <span>{{ post.reading_time }} min read</span>
+                    <template v-if="post.authors.length > 0">
+                      <img
+                        :src="post.authors[0].profile_image"
+                        :alt="post.authors[0].profile_image"
+                        class="w-6 h-6"
+                      />
+                      <span>{{ post.authors[0].name }}</span>
+                    </template>
                   </div>
                 </span>
               </NuxtLink>
@@ -80,7 +88,7 @@
 </template>
 
 <script lang="ts">
-import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
+import { PostsOrPages } from "@tryghost/content-api";
 import { getPosts } from "../../api/posts";
 
 export default {
