@@ -2,7 +2,9 @@
   <header class="relative pt-6">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto">
+      <div
+        class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
+      >
         <NuxtLink to="/">
           <span class="sr-only">Bytebase</span>
           <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt />
@@ -14,13 +16,16 @@
           data-size="large"
           data-show-count="true"
           aria-label="Star bytebase/bytebase on GitHub"
-        >Star</a>
+          >Star</a
+        >
       </div>
       <nav
         class="relative flex items-center justify-between sm:h-10 sm:justify-center"
         aria-label="Global"
       >
-        <div class="hidden sm:flex items-center flex-1 sm:absolute sm:inset-y-0 sm:left-0">
+        <div
+          class="hidden sm:flex items-center flex-1 sm:absolute sm:inset-y-0 sm:left-0"
+        >
           <div class="flex items-center justify-between w-full sm:w-auto">
             <NuxtLink to="/">
               <span class="sr-only">Bytebase</span>
@@ -32,25 +37,23 @@
           class="flex items-center justify-between text-sm sm:text-xl font-semibold space-x-2 sm:space-x-8"
         >
           <NuxtLink
-            to="/blog"
-            @click.native="track('blog.header')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-          >Blog</NuxtLink>
-          <NuxtLink
             to="/pricing"
             @click.native="track('pricing.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-          >Pricing</NuxtLink>
+            >Pricing</NuxtLink
+          >
           <NuxtLink
-            to="/jobs"
-            @click.native="track('job.header')"
+            to="/blog"
+            @click.native="track('blog.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-          >Jobs🔥</NuxtLink>
+            >Blog</NuxtLink
+          >
           <NuxtLink
             to="/changelog"
             @click.native="track('changelog.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-          >Changelog</NuxtLink>
+            >Changelog</NuxtLink
+          >
           <a
             href="https://docs.bytebase.com?ref=bytebase.com"
             target="_blank"
@@ -85,7 +88,8 @@
             data-show-count="true"
             aria-label="Star bytebase/bytebase on GitHub"
             @click="track('github.header')"
-          >Star</a>
+            >Star</a
+          >
         </div>
       </nav>
     </div>

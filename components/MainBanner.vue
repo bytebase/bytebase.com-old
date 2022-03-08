@@ -4,14 +4,11 @@
       <div class="pr-16 text-center sm:px-16">
         <p class="font-medium text-white">
           <span class="inline">
-            We raised a $3M seed led by Matrix Partners China!
+            Announce Bytebase 1.0 and our Team Plan
           </span>
           <span class="block sm:ml-2 sm:inline-block">
-            <NuxtLink
-              to="blog/announcing-our-3m-seed-round"
-              class="text-white font-bold underline"
-            >
-              Read our announcement
+            <NuxtLink to="pricing" class="text-white font-bold underline">
+              view the plan
               <span aria-hidden="true">&rarr;</span></NuxtLink
             >
           </span>
