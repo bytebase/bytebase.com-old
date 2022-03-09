@@ -499,7 +499,7 @@ export default defineComponent({
   methods: {
     onButtonClick(plan: Plan) {
       if (plan.type === PlanType.TEAM) {
-        window.open("https://hub.bytebase.com", "__blank");
+        window.open("https://hub.bytebase.com/pricing?plan=team", "__blank");
       } else if (plan.type === PlanType.ENTERPRISE) {
         window.open(
           "mailto:support@bytebase.com?subject=Request for enterprise plan"
