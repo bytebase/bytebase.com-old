@@ -271,6 +271,15 @@
 
             <li>
               <NuxtLink
+                to="/brand"
+                @click="track('brand.footer')"
+                class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                >Brand</NuxtLink
+              >
+            </li>
+
+            <li>
+              <NuxtLink
                 to="/pricing"
                 @click="track('pricing.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
@@ -283,16 +292,7 @@
                 to="/jobs"
                 @click="track('job.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
-                >Careers - We're Hiring!🔥</NuxtLink
-              >
-            </li>
-
-            <li>
-              <NuxtLink
-                to="/brand"
-                @click="track('brand.footer')"
-                class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
-                >Brand</NuxtLink
+                >Careers</NuxtLink
               >
             </li>
 

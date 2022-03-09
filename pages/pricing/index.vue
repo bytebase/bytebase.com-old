@@ -1,14 +1,17 @@
 <template>
   <div class>
     <div class="relative">
-      <div class="relative max-w-2xl mx-auto px-4 py-8 text-center sm:px-6 lg:max-w-7xl lg:px-8">
+      <div
+        class="relative max-w-2xl mx-auto px-4 py-8 text-center sm:px-6 lg:max-w-7xl lg:px-8"
+      >
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
           Industry first database CI/CD solution for
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-          >DBA & Developer collaboration</span>
+            >DBA & Developer collaboration</span
+          >
         </h2>
       </div>
 
@@ -40,23 +43,28 @@
               <div class="flex items-center h-7">
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
-                >{{ plan.title }}</h2>
+                >
+                  {{ plan.title }}
+                </h2>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                >{{ plan.label }}</span>
+                  >{{ plan.label }}</span
+                >
               </div>
               <img
-                :src="require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)"
+                :src="
+                  require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)
+                "
                 class="hidden lg:block w-2/3 m-auto"
               />
 
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28">
                   <div class="mt-3 flex items-baseline">
-                    <p
-                      class="text-4xl font-extrabold tracking-tight"
-                    >${{ plan.pricePerInstancePerMonth }}</p>
+                    <p class="text-4xl font-extrabold tracking-tight">
+                      ${{ plan.pricePerInstancePerMonth }}
+                    </p>
                     <p class="text-xl">&nbsp;/&nbsp;month</p>
                   </div>
                   <p class="text-gray-400">Per instance</p>
@@ -67,10 +75,12 @@
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                       : 'ring-2 ring-indigo-600',
-                    'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium'
+                    'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium',
                   ]"
                   @click="onButtonClick(plan)"
-                >{{ plan.buttonText }}</button>
+                >
+                  {{ plan.buttonText }}
+                </button>
               </div>
             </div>
             <h4 class="sr-only">Features</h4>
@@ -83,8 +93,13 @@
                 :key="index"
                 class="py-3 flex items-center"
               >
-                <CheckIcon class="text-indigo-500 w-5 h-5 flex-shrink-0" aria-hidden="true" />
-                <span class="text-gray-600 ml-3 text-sm font-medium">{{ feature }}</span>
+                <CheckIcon
+                  class="text-indigo-500 w-5 h-5 flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <span class="text-gray-600 ml-3 text-sm font-medium">{{
+                  feature
+                }}</span>
               </li>
             </ul>
           </div>
@@ -92,7 +107,8 @@
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
         You can upgrade, downgrade, or
-        <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp;your subscription anytime. No hidden charges.
+        <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp;your
+        subscription anytime. No hidden charges.
       </div>
     </div>
 
@@ -101,7 +117,11 @@
       <h2 id="mobile-comparison-heading" class="sr-only">Feature comparison</h2>
 
       <div class="max-w-2xl mx-auto py-16 px-4 space-y-16 sm:px-6">
-        <div v-for="(plan, index) in plans" :key="index" class="border-t border-gray-200">
+        <div
+          v-for="(plan, index) in plans"
+          :key="index"
+          class="border-t border-gray-200"
+        >
           <div
             :class="[
               plan.featured ? 'border-indigo-600' : 'border-transparent',
@@ -113,25 +133,34 @@
                 plan.featured ? 'text-indigo-600' : 'text-gray-900',
                 'text-sm font-bold',
               ]"
-            >{{ plan.title }}</h3>
+            >
+              {{ plan.title }}
+            </h3>
             <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
             <button
               :class="[
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
-                'mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium'
+                'mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium',
               ]"
               @click="onButtonClick(plan)"
-            >{{ plan.buttonText }}</button>
+            >
+              {{ plan.buttonText }}
+            </button>
           </div>
 
           <div v-for="section in sections" :key="section.title">
-            <h4 class="mt-10 text-sm font-bold text-gray-900">{{ section.title }}</h4>
+            <h4 class="mt-10 text-sm font-bold text-gray-900">
+              {{ section.title }}
+            </h4>
 
             <div class="mt-6 relative">
               <!-- Fake card background -->
-              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
+              <div
+                aria-hidden="true"
+                class="hidden absolute inset-0 pointer-events-none sm:block"
+              >
                 <div
                   :class="[
                     plan.featured ? 'shadow-md' : 'shadow',
@@ -154,8 +183,12 @@
                     :key="feature.title"
                     class="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
                   >
-                    <dt class="pr-4 text-sm font-medium text-gray-600">{{ feature.title }}</dt>
-                    <dd class="flex items-center justify-end sm:px-4 sm:justify-center">
+                    <dt class="pr-4 text-sm font-medium text-gray-600">
+                      {{ feature.title }}
+                    </dt>
+                    <dd
+                      class="flex items-center justify-end sm:px-4 sm:justify-center"
+                    >
                       <span
                         v-if="typeof feature.tiers[index].value === 'string'"
                         :class="[
@@ -164,17 +197,22 @@
                             : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                      >{{ feature.tiers[index].value }}</span>
+                        >{{ feature.tiers[index].value }}</span
+                      >
                       <template v-else>
                         <CheckIcon
                           v-if="feature.tiers[index].value === true"
                           class="mx-auto h-5 w-5 text-indigo-600"
                           aria-hidden="true"
                         />
-                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <XIcon
+                          v-else
+                          class="mx-auto h-5 w-5 text-gray-400"
+                          aria-hidden="true"
+                        />
                         <span class="sr-only">
                           {{
-                          feature.tiers[index].value === true ? "Yes" : "No"
+                            feature.tiers[index].value === true ? "Yes" : "No"
                           }}
                         </span>
                       </template>
@@ -184,7 +222,10 @@
               </div>
 
               <!-- Fake card border -->
-              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
+              <div
+                aria-hidden="true"
+                class="hidden absolute inset-0 pointer-events-none sm:block"
+              >
                 <div
                   :class="[
                     plan.featured
@@ -228,31 +269,43 @@
                     plan.featured ? 'text-indigo-600' : 'text-gray-900',
                     'text-sm font-bold',
                   ]"
-                >{{ plan.title }}</p>
+                >
+                  {{ plan.title }}
+                </p>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                >{{ plan.label }}</span>
+                  >{{ plan.label }}</span
+                >
               </div>
-              <p class="mt-2 text-sm text-gray-500 h-10">{{ plan.description }}</p>
+              <p class="mt-2 text-sm text-gray-500 h-10">
+                {{ plan.description }}
+              </p>
               <button
                 :class="[
                   plan.featured
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                     : 'ring-2 ring-indigo-600',
-                  'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium'
+                  'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
                 ]"
                 @click="onButtonClick(plan)"
-              >{{ plan.buttonText }}</button>
+              >
+                {{ plan.buttonText }}
+              </button>
             </div>
           </div>
         </div>
 
         <div v-for="section in sections" :key="section.title">
-          <h3 class="text-xl font-bold text-gray-900 text-left my-5">{{ section.title }}</h3>
+          <h3 class="text-xl font-bold text-gray-900 text-left my-5">
+            {{ section.title }}
+          </h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
-            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
+            <div
+              class="absolute inset-0 flex items-stretch pointer-events-none"
+              aria-hidden="true"
+            >
               <div class="w-1/4 pr-4" />
               <div class="w-1/4 px-4">
                 <div class="w-full h-full bg-white rounded-lg" />
@@ -266,7 +319,9 @@
             </div>
 
             <table class="relative w-full">
-              <caption class="sr-only">Business feature comparison</caption>
+              <caption class="sr-only">
+                Business feature comparison
+              </caption>
               <thead>
                 <tr class="text-left">
                   <th scope="col">
@@ -282,7 +337,9 @@
                   <th
                     scope="row"
                     class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
-                  >{{ feature.title }}</th>
+                  >
+                    {{ feature.title }}
+                  </th>
                   <td
                     v-for="(tier, tierIdx) in feature.tiers"
                     :key="tierIdx"
@@ -295,27 +352,30 @@
                     <span class="w-full h-full py-3 flex justify-center">
                       <span
                         v-if="typeof tier.value === 'string'"
-                        :class="[
-                          'text-sm font-medium',
-                        ]"
-                      >{{ tier.value }}</span>
+                        :class="['text-sm font-medium']"
+                        >{{ tier.value }}</span
+                      >
                       <template v-else>
                         <CheckIcon
                           v-if="tier.value === true"
                           class="mx-auto h-5 w-5"
                           aria-hidden="true"
                         />
-                        <XIcon v-else class="mx-auto h-5 w-5" aria-hidden="true" />
+                        <XIcon
+                          v-else
+                          class="mx-auto h-5 w-5"
+                          aria-hidden="true"
+                        />
                         <span class="sr-only">
-                          {{
-                          tier.value === true ? "Yes" : "No"
-                          }}
+                          {{ tier.value === true ? "Yes" : "No" }}
                         </span>
                       </template>
                       <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
                         <QuestinIcon class="h-5 w-5" />
                         <!-- class="h-5 w-5" -->
-                        <span class="tooltip whitespace-nowrap">{{ tier.tooltip }}</span>
+                        <span class="tooltip whitespace-nowrap">{{
+                          tier.tooltip
+                        }}</span>
                       </span>
                     </span>
                   </td>
@@ -340,17 +400,20 @@
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
-                'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium'
+                'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
               ]"
               @click="onButtonClick(plan)"
-            >{{ plan.buttonText }}</button>
+            >
+              {{ plan.buttonText }}
+            </button>
           </div>
         </div>
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
       You can upgrade, downgrade, or
-      <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp; your subscription anytime. No hidden charges.
+      <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp; your
+      subscription anytime. No hidden charges.
     </div>
   </div>
 </template>
@@ -358,9 +421,9 @@
 <script lang="ts">
 import { defineComponent } from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
-import XIcon from "../../components/XIcon.vue"
-import CheckIcon from "../../components/CheckIcon.vue"
-import QuestinIcon from "../../components/QuestinIcon.vue"
+import XIcon from "../../components/XIcon.vue";
+import CheckIcon from "../../components/CheckIcon.vue";
+import QuestinIcon from "../../components/QuestinIcon.vue";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -389,7 +452,7 @@ export default defineComponent({
   },
   setup() {
     const getButtonText = (plan: Plan): string => {
-      if (plan.type === PlanType.FREE) return "Deploy";
+      if (plan.type === PlanType.FREE) return "Deploy now";
       if (plan.type === PlanType.ENTERPRISE) return "Contact us";
       if (plan.trialDays && plan.trialPrice) {
         return `Start trial with $${plan.trialPrice} for ${plan.trialDays} days`;
@@ -397,16 +460,15 @@ export default defineComponent({
       return "Subscribe now";
     };
 
-    const plans: LocalPlan[] = PLANS
-      .map((plan) => ({
-        ...plan,
-        featured: plan.type === PlanType.TEAM,
-        buttonText: getButtonText(plan),
-        unitPrice:
-          plan.type === PlanType.ENTERPRISE
-            ? "Contact us"
-            : `$${plan.unitPrice}/year`,
-      }));
+    const plans: LocalPlan[] = PLANS.map((plan) => ({
+      ...plan,
+      featured: plan.type === PlanType.TEAM,
+      buttonText: getButtonText(plan),
+      unitPrice:
+        plan.type === PlanType.ENTERPRISE
+          ? "Contact us"
+          : `$${plan.unitPrice}/year`,
+    }));
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
       return {
         title: section.id,
@@ -422,7 +484,7 @@ export default defineComponent({
             return {
               value,
               featured: p.featured,
-              tooltip: supportFeature?.tooltip
+              tooltip: supportFeature?.tooltip,
             };
           }),
         })),
@@ -437,16 +499,16 @@ export default defineComponent({
   methods: {
     onButtonClick(plan: Plan) {
       if (plan.type === PlanType.TEAM) {
-        window.open(
-          "https://hub.bytebase.com",
-          "__blank"
-        );
+        window.open("https://hub.bytebase.com/pricing?plan=team", "__blank");
       } else if (plan.type === PlanType.ENTERPRISE) {
         window.open(
           "mailto:support@bytebase.com?subject=Request for enterprise plan"
         );
       } else {
-        window.open("https://github.com/bytebase/bytebase#installation", "__blank");
+        window.open(
+          "https://github.com/bytebase/bytebase#installation",
+          "__blank"
+        );
       }
     },
   },
