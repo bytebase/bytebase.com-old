@@ -50,7 +50,12 @@ export const FEATURE_SECTIONS = [
   },
   {
     id: "Admin & Security",
-    features: ["Activity log", "RBAC (Owner, DBA, Developer role)", "Login with GitLab account"],
+    features: [
+      "Activity log",
+      "RBAC (Owner, DBA, Developer role)",
+      "3rd party authentication & authorization",
+      "Sync project members from VCS",
+    ],
   },
 ];
 
@@ -129,7 +134,8 @@ const TEAM_PLAN: Plan = {
     { id: "Inbox notification" },
     { id: "Activity log" },
     { id: "RBAC (Owner, DBA, Developer role)" },
-    { id: "Login with GitLab account" },
+    { id: "3rd party authentication & authorization" },
+    { id: "Sync project members from VCS" },
   ],
   mainFeatures: [
     "Email support",
@@ -180,7 +186,8 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "Inbox notification" },
     { id: "Activity log" },
     { id: "RBAC (Owner, DBA, Developer role)" },
-    { id: "Login with GitLab account" },
+    { id: "3rd party authentication & authorization" },
+    { id: "Sync project members from VCS" },
   ],
   mainFeatures: [
     "SLA support",
