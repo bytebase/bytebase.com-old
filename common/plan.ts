@@ -134,8 +134,8 @@ const TEAM_PLAN: Plan = {
     { id: "Inbox notification" },
     { id: "Activity log" },
     { id: "RBAC (Owner, DBA, Developer role)" },
-    { id: "3rd party authentication & authorization" },
-    { id: "Sync project members from VCS" },
+    { id: "Login with GitLab account" },
+    { id: "Sync project membership from the linked GitLab project" },
   ],
   mainFeatures: [
     "Email support",
