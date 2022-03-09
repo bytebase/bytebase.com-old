@@ -53,8 +53,8 @@ export const FEATURE_SECTIONS = [
     features: [
       "Activity log",
       "RBAC (Owner, DBA, Developer role)",
-      "3rd party authentication & authorization",
-      "Sync project members from VCS",
+      "Login with GitLab account",
+      "Sync project membership from the linked GitLab project",
     ],
   },
 ];
