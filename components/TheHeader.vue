@@ -1,13 +1,12 @@
 <template>
   <header class="relative pt-6">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
       >
         <NuxtLink to="/">
           <span class="sr-only">Bytebase</span>
-          <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt />
+          <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
         </NuxtLink>
         <a
           class="github-button"
@@ -29,7 +28,11 @@
           <div class="flex items-center justify-between w-full sm:w-auto">
             <NuxtLink to="/">
               <span class="sr-only">Bytebase</span>
-              <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt />
+              <img
+                class="h-6 sm:h-8 w-auto"
+                src="~/assets/logo-full.svg"
+                alt=""
+              />
             </NuxtLink>
           </div>
         </div>
@@ -38,27 +41,27 @@
         >
           <NuxtLink
             to="/pricing"
-            @click.native="track('pricing.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('pricing.header')"
             >Pricing</NuxtLink
           >
           <NuxtLink
             to="/blog"
-            @click.native="track('blog.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('blog.header')"
             >Blog</NuxtLink
           >
           <NuxtLink
             to="/changelog"
-            @click.native="track('changelog.header')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('changelog.header')"
             >Changelog</NuxtLink
           >
           <a
             href="https://docs.bytebase.com?ref=bytebase.com"
             target="_blank"
-            @click="track('doc.header')"
             class="flex text-gray-700 hover:text-gray-500"
+            @click="track('doc.header')"
           >
             Docs
             <svg
@@ -78,7 +81,7 @@
           </a>
         </div>
         <div class="hidden sm:flex absolute items-center justify-end right-0">
-          <img class="-mt-8 h-10 w-auto" src="~/assets/starus.png" alt />
+          <img class="-mt-8 h-10 w-auto" src="~/assets/starus.png" alt="" />
           <!-- Place this tag where you want the button to render. -->
           <a
             class="github-button"

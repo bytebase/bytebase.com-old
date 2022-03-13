@@ -17,13 +17,13 @@
         <label for="email-address" class="sr-only">Email address</label>
         <input
           id="email-address"
+          v-model="email"
           name="email-address"
           type="email"
           autocomplete="email"
           required
           class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md"
           placeholder="Enter your email"
-          v-model="email"
         />
         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
           <button

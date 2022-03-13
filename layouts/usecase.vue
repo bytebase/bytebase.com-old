@@ -6,7 +6,10 @@
       <div class="flex mt-6 justify-center">
         <DatabaseBar />
       </div>
-      <ActionSection class="mt-16 sm:justify-center" :moduleName="'usercase'" />
+      <ActionSection
+        class="mt-16 sm:justify-center"
+        :module-name="'usercase'"
+      />
       <div class="mt-8 relative">
         <ScreenshotSection />
       </div>
@@ -25,6 +28,8 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  setup() {},
+  setup() {
+    // do nth
+  },
 });
 </script>
