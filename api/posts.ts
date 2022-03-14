@@ -11,17 +11,20 @@ const api = new GhostContentAPI({
   version: "v3",
 });
 
-export async function getPosts(tagList: string[], page?: number): Promise<PostsOrPages | void> {
+export async function getPosts(
+  tagList: string[],
+  page?: number
+): Promise<PostsOrPages | void> {
   const params: Params = {
     limit: "all",
     include: ["tags", "authors"],
     order: "published_at DESC",
-    filter: `tag:[${tagList.join(", ")}]`
+    filter: `tag:[${tagList.join(", ")}]`,
   };
   if (page) {
     params.page = page;
   }
-  return await api.posts.browse(params).catch((err) => {
+  return await api.posts.browse(params).catch(err => {
     console.error(err);
   });
 }
@@ -38,7 +41,7 @@ export async function getSinglePost(
         include: ["tags", "authors"],
       }
     )
-    .catch((err) => {
+    .catch(err => {
       console.error(err);
     });
 }

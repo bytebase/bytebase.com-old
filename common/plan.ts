@@ -1,4 +1,3 @@
-
 export enum PlanType {
   FREE = 0,
   TEAM = 1,
@@ -17,7 +16,7 @@ export interface Plan {
   // Plan desc and feature
   title: string;
   description: string;
-  features: { id: string; content?: string, tooltip?: string }[];
+  features: { id: string; content?: string; tooltip?: string }[];
   mainFeatures: string[];
 }
 
@@ -77,8 +76,16 @@ const FREE_PLAN: Plan = {
     { id: "SQL Editor" },
     { id: "Database backup / restore" },
     { id: "Archiving" },
-    { id: "SQL check", content: "Basic", tooltip: "Syntax check, connection check" },
-    { id: "Anomaly detection", content: "Basic", tooltip: "Connection failure, missing backup" },
+    {
+      id: "SQL check",
+      content: "Basic",
+      tooltip: "Syntax check, connection check",
+    },
+    {
+      id: "Anomaly detection",
+      content: "Basic",
+      tooltip: "Connection failure, missing backup",
+    },
     { id: "UI based SQL review" },
     { id: "VCS workflow #GitOps" },
     { id: "GitOps workflow" },
@@ -107,7 +114,8 @@ const TEAM_PLAN: Plan = {
   priceDescription: "5 minimum, billed annually",
   // Plan desc and feature
   title: "Team",
-  description: "Medium size team, with dedicated DBA or TL for engineering velocity",
+  description:
+    "Medium size team, with dedicated DBA or TL for engineering velocity",
   features: [
     { id: "Instance", content: "5 ~ unlimited" },
     { id: "Schema and data change" },
@@ -118,12 +126,12 @@ const TEAM_PLAN: Plan = {
     {
       id: "SQL check",
       content: "Advanced",
-      tooltip: "Basic + Backward compatibility check"
+      tooltip: "Basic + Backward compatibility check",
     },
     {
       id: "Anomaly detection",
       content: "Advanced",
-      tooltip: "Basic + Drift detection"
+      tooltip: "Basic + Drift detection",
     },
     { id: "Scheduled change at specific time" },
     { id: "Review and backup policy" },
@@ -158,7 +166,8 @@ const ENTERPRISE_PLAN: Plan = {
   priceDescription: "Customized, billed annually",
   // Plan desc and feature
   title: "Enterprise",
-  description: "Large organization, with dedicated DBA group to manage database fleet",
+  description:
+    "Large organization, with dedicated DBA group to manage database fleet",
   features: [
     { id: "Instance", content: "Customized" },
     { id: "Schema and data change" },
@@ -169,12 +178,12 @@ const ENTERPRISE_PLAN: Plan = {
     {
       id: "SQL check",
       content: "Advanced",
-      tooltip: "Basic + Backward compatibility check"
+      tooltip: "Basic + Backward compatibility check",
     },
     {
       id: "Anomaly detection",
       content: "Advanced",
-      tooltip: "Basic + Drift detection"
+      tooltip: "Basic + Drift detection",
     },
     { id: "Scheduled change at specific time" },
     { id: "Review and backup policy" },
@@ -197,8 +206,4 @@ const ENTERPRISE_PLAN: Plan = {
   ],
 };
 
-export const PLANS: Plan[] = [
-  FREE_PLAN,
-  TEAM_PLAN,
-  ENTERPRISE_PLAN,
-];
+export const PLANS: Plan[] = [FREE_PLAN, TEAM_PLAN, ENTERPRISE_PLAN];

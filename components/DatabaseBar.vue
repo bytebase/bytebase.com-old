@@ -22,7 +22,8 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  props: {},
-  setup(props) {},
+  setup() {
+    // do nth
+  },
 });
 </script>

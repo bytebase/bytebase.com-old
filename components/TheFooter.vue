@@ -195,8 +195,8 @@
             <li>
               <NuxtLink
                 to="/blog"
-                @click="track('blog.footer')"
                 class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('blog.footer')"
                 >Blog</NuxtLink
               >
             </li>
@@ -204,8 +204,8 @@
             <li>
               <NuxtLink
                 to="/changelog"
-                @click="track('changelog.footer')"
                 class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('changelog.footer')"
                 >Changelog</NuxtLink
               >
             </li>
@@ -213,16 +213,16 @@
             <li>
               <NuxtLink
                 to="/database-glossary"
-                @click="track('glossary.footer')"
                 class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('glossary.footer')"
                 >Database Glossary</NuxtLink
               >
             </li>
             <li>
               <NuxtLink
                 to="/doc/error"
-                @click="track('errordoc.footer')"
                 class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('errordoc.footer')"
                 >Error Code</NuxtLink
               >
             </li>
@@ -263,8 +263,8 @@
             <li>
               <NuxtLink
                 to="/about"
-                @click="track('about.footer')"
                 class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('about.footer')"
                 >About</NuxtLink
               >
             </li>
@@ -272,8 +272,8 @@
             <li>
               <NuxtLink
                 to="/brand"
-                @click="track('brand.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                @click="track('brand.footer')"
                 >Brand</NuxtLink
               >
             </li>
@@ -281,8 +281,8 @@
             <li>
               <NuxtLink
                 to="/pricing"
-                @click="track('pricing.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                @click="track('pricing.footer')"
                 >Pricing</NuxtLink
               >
             </li>
@@ -290,8 +290,8 @@
             <li>
               <NuxtLink
                 to="/jobs"
-                @click="track('job.footer')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                @click="track('job.footer')"
                 >Careers</NuxtLink
               >
             </li>

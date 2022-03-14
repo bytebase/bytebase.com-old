@@ -6,8 +6,8 @@
       <a
         href="https://github.com/bytebase/bytebase#installation"
         target="_blank"
-        @click="track('deploy')"
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
+        @click="track('deploy')"
       >
         {{ actionSentence }}
         <svg
@@ -31,8 +31,8 @@
       <a
         href="https://demo.bytebase.com?ref=bytebase.com"
         target="_blank"
-        @click="track('demo')"
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-2xl md:px-8"
+        @click="track('demo')"
       >
         Live demo
         <svg
