@@ -37,6 +37,18 @@ function databaseVCSRouteList() {
   return list;
 }
 
+const docsRouteList = async () => {
+  const { $content } = require("@nuxt/content");
+  const documentList = await $content("", { deep: true })
+    .sortBy("position")
+    .fetch();
+  const routeList = [];
+  for (const document of documentList) {
+    routeList.push(`docs${document.path}`);
+  }
+  return routeList;
+};
+
 function webhookRouteList() {
   const list = [];
   for (const webhook of databaseWebhookList()) {
@@ -86,9 +98,14 @@ export default {
   },
 
   router: {
-    linkExactActiveClass: "underline",
-    linkActiveClass: "underline",
+    linkActiveClass: "router-active-link underline",
+    linkExactActiveClass: "router-exact-active-link underline",
     prefetchPayloads: false,
+  },
+
+  content: {
+    dir: "docs",
+    liveEdit: false,
   },
 
   generate: {
@@ -112,6 +129,7 @@ export default {
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
+        .concat(await docsRouteList())
         .concat(webhookRouteList())
         .concat(softwareRouteList())
         .concat(compareRouteList());
@@ -119,7 +137,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/css/variables.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -138,7 +156,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["vue-plausible", "@nuxtjs/sitemap"],
+  modules: ["vue-plausible", "@nuxtjs/sitemap", "@nuxt/content"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
