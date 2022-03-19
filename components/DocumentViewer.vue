@@ -47,9 +47,9 @@
     </div>
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 mt-12 w-64 pr-4 h-auto flex-shrink-0 lg:flex flex-col justify-start items-start text-sm border-l border-gray-200 pl-4"
+      class="hidden fixed right-0 mt-12 w-64 py-2 pr-4 h-auto flex-shrink-0 lg:flex flex-col justify-start items-start text-sm border-l border-gray-200 pl-4"
     >
-      <span class="text-black mb-2 font-bold">Table of Contents</span>
+      <span class="text-black mb-2">Table of Contents</span>
       <a
         v-for="item of toc"
         :key="item.id"
