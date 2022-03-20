@@ -13,8 +13,7 @@
       <div
         v-for="document in state.documentList"
         :key="document.title"
-        class="pl-3"
-        :class="`ml-${(document.level - 1) * 4}`"
+        :class="`pl-3 ml-${(document.level - 1) * 4}`"
       >
         <NuxtLink
           :to="{ path: `/docs${document.path}` }"

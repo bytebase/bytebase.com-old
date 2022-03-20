@@ -1,4 +1,9 @@
 module.exports = {
+  purge: {
+    options: {
+      safelist: [/^ml-/],
+    },
+  },
   theme: {
     extend: {
       colors: {
