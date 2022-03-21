@@ -8,7 +8,7 @@
       <!-- Header banner in mobile view -->
       <div
         v-if="state.isMobileView"
-        class="w-full flex flex-row pl-4 py-4 border-b"
+        class="w-full h-16 pl-4 py-4 flex-shrink-0 flex flex-row justify-start items-center border-b"
       >
         <span class="flex flex-row justify-start items-center no-underline">
           <img
@@ -24,7 +24,7 @@
       </div>
       <DocsSidebar
         v-show="state.showSidebar"
-        class="-ml-100 -translate-x-full"
+        :class="state.showSidebar && state.isMobileView ? 'mobile-sidebar' : ''"
         @link-click="handleSidebarClick"
       />
       <Nuxt />
@@ -101,5 +101,8 @@ export default defineComponent({
 }
 .mobile-main-view {
   @apply flex flex-col justify-start items-start;
+}
+.mobile-sidebar {
+  height: calc(100% - 64px);
 }
 </style>

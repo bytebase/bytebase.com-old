@@ -9,7 +9,7 @@ export default {
   layout: "content",
   async asyncData({ $content, redirect }) {
     const ducoments = await $content("", { deep: true })
-      .sortBy("position")
+      .sortBy("order")
       .fetch();
 
     // Now the docs index is an empty page, redirect to first document page.

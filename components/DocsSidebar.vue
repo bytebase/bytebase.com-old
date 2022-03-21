@@ -1,29 +1,54 @@
 <template>
   <div
-    class="w-full h-full flex flex-col flex-shrink-0 py-4 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
+    class="relative w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
-    <div class="hidden sm:flex w-full flex-row pl-6 pt-2">
+    <div
+      class="hidden sm:flex w-full flex-row pl-6 py-4 border-b border-gray-200"
+    >
       <span class="flex flex-row justify-start items-center no-underline">
         <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
         <span class="ml-2 text-base">Documents</span>
         <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
     </div>
-    <div class="w-full flex flex-col mt-4">
+    <div class="w-full flex flex-col pb-4 overflow-y-auto">
       <div
         v-for="document in state.documentList"
         :key="document.title"
-        :class="`pl-3 ml-${(document.level - 1) * 4}`"
+        class="pl-3"
+        :class="`${document.level > 1 ? `ml-${(document.level - 1) * 2}` : ''}`"
         @click="handleLinkClick"
       >
         <NuxtLink
           :to="{ path: `/docs${document.path}` }"
-          class="pl-3 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent whitespace-pre hover:text-gray-700"
-          :class="`${document.level === 1 ? 'text-gray-600 mt-4' : ''}`"
+          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent whitespace-pre-wrap hover:text-gray-700"
+          :class="
+            `${document.level === 1 ? 'text-gray-600 mt-4 font-bold' : ''}`
+          "
         >
           <span>{{ document.title }}</span>
         </NuxtLink>
       </div>
+    </div>
+    <div
+      class="flex flex-col justify-start py-2 items-start bg-white border-t border-gray-200"
+    >
+      <NuxtLink
+        :to="{ path: `/docs/document-guide` }"
+        class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
+      >
+        <span class="text-lg leading-8 mr-2">✍️</span>
+        <span class="text-gray-600 hover:text-accent">Document guide</span>
+      </NuxtLink>
+      <NuxtLink
+        :to="{ path: `/` }"
+        class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
+      >
+        <span class="text-lg leading-8 mr-2">🏠</span>
+        <span class="text-gray-600 hover:text-accent">
+          Back to bytebase.com
+        </span>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -38,11 +63,15 @@ import {
 import { IContentDocument } from "@nuxt/content/types/content";
 
 interface Document extends IContentDocument {
+  hide?: boolean;
+}
+
+interface FormatedDocument extends Document {
   level: number;
 }
 
 interface State {
-  documentList: Document[];
+  documentList: FormatedDocument[];
 }
 
 export default defineComponent({
@@ -55,20 +84,22 @@ export default defineComponent({
 
     onMounted(async () => {
       const documentList = ((await $content("", { deep: true })
-        .sortBy("position")
-        .fetch()) as any) as IContentDocument[];
-      state.documentList = documentList.map(document => {
-        let level = document.path.split("/").length - 1;
-        // The `overview` file is an index file of its directory.
-        if (document.path.endsWith("/overview")) {
-          level = level - 1;
-        }
+        .sortBy("order")
+        .fetch()) as any) as Document[];
+      state.documentList = documentList
+        .filter(d => !d.hide)
+        .map(document => {
+          let level = document.path.split("/").length - 1;
+          // The `overview` file is an index file of its directory.
+          if (document.path.endsWith("/overview")) {
+            level = level - 1;
+          }
 
-        return {
-          ...document,
-          level: level,
-        };
-      });
+          return {
+            ...document,
+            level: level,
+          };
+        });
     });
 
     const handleLinkClick = () => {

@@ -19,7 +19,7 @@ export default {
     }
 
     const [prev, next] = await $content("", { deep: true })
-      .sortBy("position")
+      .sortBy("order")
       .surround(document.slug)
       .fetch();
 
