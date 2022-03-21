@@ -32,6 +32,7 @@
     </div>
     <div
       class="flex flex-col justify-start py-2 items-start bg-white border-t border-gray-200"
+      @click="handleLinkClick"
     >
       <NuxtLink
         :to="{ path: `/docs/document-guide` }"
