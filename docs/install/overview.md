@@ -1,8 +1,6 @@
 ---
-title: 🚀  Install
-description:
-slug: install
-position: 10000
+title: 🚀 Install
+order: 10000
 ---
 
 # 🚀 Install

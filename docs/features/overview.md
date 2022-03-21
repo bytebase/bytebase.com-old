@@ -1,7 +1,6 @@
 ---
-title: ✨  Features
-slug: features
-position: 20000
+title: ✨ Features
+order: 30000
 ---
 
 # ✨ Features
