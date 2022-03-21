@@ -6,10 +6,14 @@
   >
     <div class="flex flex-col justify-start items-center w-full max-w-3xl">
       <nuxt-content class="w-full py-6 markdown-body" :document="document" />
-      <div class="w-full flex flex-row justify-between items-center text-sm">
-        <span class="text-gray-600">Last updated {{ updatedTsFromNow }}</span>
+      <div
+        class="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm"
+      >
+        <span class="text-gray-600 py-1">
+          Last updated {{ updatedTsFromNow }}
+        </span>
         <a
-          class="flex flex-row justify-start items-center text-gray-600 hover:text-black"
+          class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-black"
           :href="
             `https://github.com/bytebase/bytebase.com/blob/master${filePath}`
           "
@@ -45,6 +49,7 @@
         <span v-else></span>
       </div>
     </div>
+    <!-- TOC -->
     <div
       v-show="toc.length !== 0"
       class="hidden fixed right-0 mt-12 w-64 py-2 pr-4 h-auto flex-shrink-0 lg:flex flex-col justify-start items-start text-sm border-l border-gray-200 pl-4"

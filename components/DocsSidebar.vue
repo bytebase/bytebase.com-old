@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-full h-full flex flex-col flex-shrink-0 py-4 bg-gray-50 border-r border-gray-200 overflow-y-auto"
+    class="w-full h-full flex flex-col flex-shrink-0 py-4 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
-    <div class="w-full flex flex-row pl-6 pt-2">
+    <div class="hidden sm:flex w-full flex-row pl-6 pt-2">
       <span class="flex flex-row justify-start items-center no-underline">
         <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
         <span class="ml-2 text-base">Documents</span>
@@ -14,6 +14,7 @@
         v-for="document in state.documentList"
         :key="document.title"
         :class="`pl-3 ml-${(document.level - 1) * 4}`"
+        @click="handleLinkClick"
       >
         <NuxtLink
           :to="{ path: `/docs${document.path}` }"
@@ -45,7 +46,8 @@ interface State {
 }
 
 export default defineComponent({
-  setup() {
+  emits: ["link-click"],
+  setup(_, { emit }) {
     const { $content } = useContext();
     const state = reactive<State>({
       documentList: [],
@@ -69,8 +71,13 @@ export default defineComponent({
       });
     });
 
+    const handleLinkClick = () => {
+      emit("link-click");
+    };
+
     return {
       state,
+      handleLinkClick,
     };
   },
 });
