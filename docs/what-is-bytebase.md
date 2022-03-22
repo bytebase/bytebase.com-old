@@ -7,6 +7,10 @@ order: 0
 
 ## 👋🏼 Introduction
 
+<hint-block type="info">
+Hello, 你好 👋
+</hint-block>
+
 ![Home dashboard](/docs-assets/overview.png)
 
 ![Issue view collaborating schema change](<.gitbook/assets/IssueView (1).png>)
