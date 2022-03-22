@@ -37,12 +37,12 @@
         >
           <NuxtLink
             :to="{ path: `/docs${subnode.document.path}` }"
-            class="pl-3 pr-2 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+            class="pl-3 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ subnode.document.title }}</span>
             <span
               v-if="subnode.children.length !== 0"
-              class="flex-shrink-0"
+              class="flex-shrink-0 mr-4"
               @click.capture="
                 subnode.displayChildren = !subnode.displayChildren
               "
