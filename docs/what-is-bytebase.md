@@ -7,15 +7,9 @@ order: 0
 
 ## 👋🏼 Introduction
 
-<hint-block type="info">
-Hello, 你好 👋
-</hint-block>
-
-<doc-link-block url="/docs/document-guide" title="✍️ Document Guide"></doc-link-block>
-
 ![Home dashboard](/docs-assets/overview.png)
 
-![Issue view collaborating schema change](<.gitbook/assets/IssueView (1).png>)
+![Issue view collaborating schema change](/docs-assets/issue-view-dashboard.png)
 
 Bytebase is a database schema change and version control management tool for teams. It consists of a web console and a backend. The backend has a migration core to manage database schema changes. It also integrates with VCS to enable version controlled schema management.
 
@@ -35,14 +29,14 @@ For schema management, frameworks like Ruby on Rails, Django come with built-in 
 2. There is no cohesive experience to deliver an end-to-end integration between schema management and VCS. (Like how [Terraform](https://www.terraform.io) delivers such an experience for managing cloud infrastructure).
 3. All existing tools merely serve as a building block in the large CI pipeline, mostly as a step in the entire CI pipeline. However, the tool itself doesn't gather info from the CI context and catch signals from the database instance to provide a holistic view of the schema state across all development environments, spanning all history timelines.
 
-**In short, unlike code management, there is no equivalent tool like GitLab/GitHub which provides a comprehensive solution to manage database schema, and Bytebase wants to fill this gap.**\
-\
+**In short, unlike code management, there is no equivalent tool like GitLab/GitHub which provides a comprehensive solution to manage database schema, and Bytebase wants to fill this gap.**
+
 It's like [GitLab](https://about.gitlab.com), but for managing database schema related tasks instead of code related tasks.
 
-It's like [Terraform](https://www.terraform.io), where Bytebase integrates with VCS to manage database schema, this is known as [database-as-code](features/version-control.md) which is a similar concept to Terraform's infrastructure-as-code to integrate VCS to manage cloud infrastructure.
+It's like [Terraform](https://www.terraform.io), where Bytebase integrates with VCS to manage database schema, this is known as [database-as-code](/docs/features/version-control) which is a similar concept to Terraform's infrastructure-as-code to integrate VCS to manage cloud infrastructure.
 
 ## 🎡 Build for developer experience
 
-Bytebase puts developer experience as the top design goal. It's built with a curated tech stack with no external dependency. It comes with built-in [readonly](reference/command-line.md#readonly) and [demo](reference/command-line.md#demo) mode for maintenance and illustration purpose. **After compiling the binary, one can just run `./bytebase` and it will start under 5 seconds on the lowest tier machine from any cloud provider.**&#x20;
+Bytebase puts developer experience as the top design goal. It's built with a curated tech stack with no external dependency. It comes with built-in [readonly](/docs/reference/command-line) and [demo](docs/reference/command-line.md) mode for maintenance and illustration purpose. **After compiling the binary, one can just run `./bytebase` and it will start under 5 seconds on the lowest tier machine from any cloud provider.**
 
 ![Bytebase tech stack](/docs-assets/stack.svg)

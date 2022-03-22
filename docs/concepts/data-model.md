@@ -13,18 +13,18 @@ The entire Bytebase instance runs a single workspace. Most of the time, the `Wor
 
 ## User
 
-`User` models after a subject performing the operation. Most of the time, user corresponds to a human being. Bytebase also has a special robot user named "Bytebase" (ID=1) which conducts automatic operations.&#x20;
+`User` models after a subject performing the operation. Most of the time, user corresponds to a human being. Bytebase also has a special robot user named "Bytebase" (ID=1) which conducts automatic operations.
 
 Internally, Bytebase uses term `Principal` instead of `User` because former is more accurate to describe both human user and robot user.
 
 ## Role
 
-`Role` is granted to a `User`. Bytebase has two disjoint set of roles:&#x20;
+`Role` is granted to a `User`. Bytebase has two disjoint set of roles:
 
-1. Workspace roles: `Owner`**,** `DBA`**,** `Developer`
-2. Project roles: `Owner`**,** `Developer`
+1. Workspace roles: `Owner`, `DBA`, `Developer`
+2. Project roles: `Owner`, `Developer`
 
-Check [Roles and Permissions](roles-and-permissions.md) for details.
+Check [Roles and Permissions](/docs/concepts/roles-and-permissions) for details.
 
 ## Environment
 
@@ -46,7 +46,7 @@ Most of the time, `Developers` and `DBAs` work with the `Database`.
 
 ## Project
 
-`Project` is a logic unit to model a team effort. It's similar to the project concept in other dev tools such as Jira, GitLab. `Project` is the container to group logically related `Databases`, `Issues` and `Users` together. In Bytebase, A`Database` or an`Issue` always belongs to a single `Project`. `Project` is also the peering entity with the VCS repository to setup [version control workflow](../use-bytebase/vcs-integration/link-repository.md).
+`Project` is a logic unit to model a team effort. It's similar to the project concept in other dev tools such as Jira, GitLab. `Project` is the container to group logically related `Databases`, `Issues` and `Users` together. In Bytebase, A`Database` or an`Issue` always belongs to a single `Project`. `Project` is also the peering entity with the VCS repository to setup [version control workflow](/docs/use-bytebase/vcs-integration/link-repository).
 
 Most of the time, `Developers` work with the `Project`.
 

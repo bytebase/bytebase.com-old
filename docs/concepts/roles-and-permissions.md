@@ -7,12 +7,15 @@ order: 20200
 
 Bytebase has two disjoint set of roles:
 
-1. Workspace roles: `Owner`**,** `DBA`**,** `Developer`
-2. Project roles: `Owner`**,** `Developer`
+1. Workspace roles: `Owner`, `DBA`, `Developer`
+2. Project roles: `Owner`, `Developer`
 
-> Workspace role and project role are **disjoint**, which means a Workspace Owner does not automatically assume a Project Owner. One must be granted a separate Project Owner role in order to obtain project specific permissions.&#x20;
->
-> **Except** there is a break-glass rule, the Workspace Owner can also manage Project Role. You may wonder does it defeat the purpose of having disjoint workspace and project roles? We design this way because for most of the time, the Workspace Owner does not need to deal with any particular project, so it's prudent to limit the permissions to prevent mistakes. On the other hand, it may happen the Project needs to perform emergent admin operations and all existing Project Owners are not available, then the Workspace Owner can jump in.
+<hint-block type="info">
+Workspace role and project role are <b>disjoint</b>, which means a Workspace Owner does not automatically assume a Project Owner. One must be granted a separate Project Owner role in order to obtain project specific permissions.
+<br />
+<b>Except</b> there is a break-glass rule, the Workspace Owner can also manage Project Role. You may wonder does it defeat the purpose of having disjoint workspace and project roles? We design this way because for most of the time, the Workspace Owner does not need to deal with any particular project, so it's prudent to limit the permissions to prevent mistakes. On the other hand, it may happen the Project needs to perform emergent admin operations and all existing Project Owners are not available, then the Workspace Owner can jump in.
+
+</hint-block>
 
 ## Workspace roles
 
@@ -46,7 +49,7 @@ By default, the first registered user is granted the `Owner` role, all following
 | Change any user's role                                           |           |     | ✔️    |
 | De-activate/re-activate user                                     |           |     | ✔️    |
 | Change any user's name and password                              |           |     | ✔️    |
-| Edit [external SQL console](../settings/external-sql-console.md) |           |     | ✔️    |
+| Edit [external SQL console](/docs/settings/external-sql-console) |           |     | ✔️    |
 | Manage version control system (VCS) provider                     |           |     | ✔️    |
 
 ## Project roles
@@ -54,6 +57,10 @@ By default, the first registered user is granted the `Owner` role, all following
 Any user can create project. By default, the project creator is granted the `Project Owner` role.
 
 > Project Developer does not have any additional project level permissions. It's for the sidebar to list the projects where the user is a member, as well as the databases belonged to those projects.
+
+<hint-block type="info">
+Project Developer does not have any additional project level permissions. It's for the sidebar to list the projects where the user is a member, as well as the databases belonged to those projects.
+</hint-block>
 
 | Project level permission              | Project Developer | Project Owner | Workspace Owner |
 | ------------------------------------- | ----------------- | ------------- | --------------- |

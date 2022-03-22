@@ -13,9 +13,7 @@
     >
       !
     </span>
-    <div
-      class="hint-content-container flex-grow flex flex-col justify-start items-start"
-    >
+    <div class="hint-content-container flex-grow">
       <slot></slot>
     </div>
   </div>
@@ -40,5 +38,12 @@ export default defineComponent({
 <style scoped>
 .hint-content-container {
   margin-top: 2px;
+}
+
+.hint-content-container * {
+  white-space: pre-wrap;
+}
+.hint-content-container pre {
+  @apply bg-gray-100 mt-2 text-sm;
 }
 </style>
