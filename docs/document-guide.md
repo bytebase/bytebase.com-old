@@ -1,6 +1,6 @@
 ---
 title: ✍️ Document guide
-order: 50000
+order: 999999
 hide: true
 ---
 
