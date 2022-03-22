@@ -33,9 +33,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.hint-content-container {
-  margin-top: 2px;
-}
-</style>
