@@ -11,6 +11,8 @@ order: 0
 Hello, 你好 👋
 </hint-block>
 
+<doc-link-block url="/docs/document-guide" title="✍️ Document Guide"></doc-link-block>
+
 ![Home dashboard](/docs-assets/overview.png)
 
 ![Issue view collaborating schema change](<.gitbook/assets/IssueView (1).png>)
