@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     options: {
-      safelist: [/^ml-/],
+      safelist: [/^ml-/, /^rotate-/],
     },
   },
   theme: {
