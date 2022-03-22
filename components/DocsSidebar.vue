@@ -11,7 +11,10 @@
         <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
     </div>
-    <div class="w-full flex-grow flex flex-col pb-4 overflow-y-auto">
+    <div
+      ref="sidebarElRef"
+      class="w-full flex-grow flex flex-col pb-4 overflow-y-auto"
+    >
       <!-- Render document tree. We only support 3 level folder. -->
       <!-- root node -->
       <div
@@ -60,8 +63,7 @@
             v-for="leafnode in subnode.children"
             v-show="subnode.displayChildren"
             :key="leafnode.document.path"
-            class="pl-3"
-            :class="`ml-${(leafnode.document.level - 1) * 2}`"
+            class="pl-3 ml-2"
             @click="handleLinkClick"
           >
             <NuxtLink
@@ -104,6 +106,8 @@ import {
   reactive,
   onMounted,
   defineComponent,
+  ref,
+  nextTick,
 } from "@nuxtjs/composition-api";
 import { IContentDocument } from "@nuxt/content/types/content";
 
@@ -138,6 +142,7 @@ export default defineComponent({
         displayChildren: true,
       },
     });
+    const sidebarElRef = ref<HTMLDivElement>();
 
     onMounted(async () => {
       const documentList = ((await $content("", { deep: true })
@@ -210,6 +215,18 @@ export default defineComponent({
           }
         }
       }
+
+      // Auto scroll to the active doc node.
+      nextTick(() => {
+        const anchorEl = window.document.querySelector(
+          `a[href="${pathname}"]`
+        ) as HTMLElement;
+        if (anchorEl && sidebarElRef.value) {
+          if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
+            sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
+          }
+        }
+      });
     });
 
     const handleLinkClick = () => {
@@ -219,6 +236,7 @@ export default defineComponent({
     return {
       state,
       handleLinkClick,
+      sidebarElRef,
     };
   },
 });
