@@ -1,6 +1,11 @@
+---
+title: Project Webhook
+order: 40501
+---
+
 # Project Webhook
 
-![](../../.gitbook/assets/Webhook1.png)
+![project-webhook-configure](/docs-assets/project-webhook-configure.png)
 
 ## Supported webhook endpoints
 
@@ -20,17 +25,21 @@
 
 [Official guide](https://developers.dingtalk.com/document/robots/custom-robot-access)
 
-{% hint style="info" %}
+<hint-block type="info">
+
 DingTalk allows to specify a list of keywords in the [security setting](https://developers.dingtalk.com/document/robots/customize-robot-security-settings) to protect webhook endpoint. You can add "Bytebase" to that keyword list.
-{% endhint %}
+
+</hint-block>
 
 ### Feishu（飞书）
 
 [Official guide](https://www.feishu.cn/hc/zh-CN/articles/360024984973)
 
-{% hint style="info" %}
+<hint-block type="info">
+
 DingTalk allows to specify a list of keywords in the [security setting](https://www.feishu.cn/hc/zh-CN/articles/360024984973#lineguid-RahdJr) to protect webhook endpoint. You can add "Bytebase" to that keyword list.
-{% endhint %}
+
+</hint-block>
 
 ### WeCom（企业微信）
 
