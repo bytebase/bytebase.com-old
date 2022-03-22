@@ -11,7 +11,7 @@
         <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
     </div>
-    <div class="w-full flex flex-col pb-4 overflow-y-auto">
+    <div class="w-full flex-grow flex flex-col pb-4 overflow-y-auto">
       <div
         v-for="document in state.documentList"
         :key="document.title"
@@ -31,21 +31,21 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-start py-2 items-start bg-white border-t border-gray-200"
+      class="w-full flex flex-col flex-shrink-0 justify-start py-2 items-start bg-white border-t border-gray-200"
       @click="handleLinkClick"
     >
       <NuxtLink
         :to="{ path: `/docs/document-guide` }"
         class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
       >
-        <span class="text-lg leading-8 mr-2">✍️</span>
+        <span class="text-base leading-8 mr-2">✍️</span>
         <span class="text-gray-600 hover:text-accent">Document guide</span>
       </NuxtLink>
       <NuxtLink
         :to="{ path: `/` }"
         class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
       >
-        <span class="text-lg leading-8 mr-2">🏠</span>
+        <span class="text-base leading-8 mr-2">🏠</span>
         <span class="text-gray-600 hover:text-accent">
           Back to bytebase.com
         </span>
