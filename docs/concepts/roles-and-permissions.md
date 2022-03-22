@@ -12,7 +12,7 @@ Bytebase has two disjoint set of roles:
 
 <hint-block type="info">
 
-Workspace role and project role are **disjoint**, which means a Workspace Owner does not automatically assume a Project Owner. One must be granted a separate Project Owner role in order to obtain project specific permissions.&#x20;
+Workspace role and project role are **disjoint**, which means a Workspace Owner does not automatically assume a Project Owner. One must be granted a separate Project Owner role in order to obtain project specific permissions.
 
 **Except** there is a break-glass rule, the Workspace Owner can also manage Project Role. You may wonder does it defeat the purpose of having disjoint workspace and project roles? We design this way because for most of the time, the Workspace Owner does not need to deal with any particular project, so it's prudent to limit the permissions to prevent mistakes. On the other hand, it may happen the Project needs to perform emergent admin operations and all existing Project Owners are not available, then the Workspace Owner can jump in.
 

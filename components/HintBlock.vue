@@ -39,10 +39,6 @@ export default defineComponent({
 .hint-content-container {
   margin-top: 2px;
 }
-
-.hint-content-container * {
-  white-space: pre-wrap;
-}
 .hint-content-container pre {
   @apply bg-gray-100 mt-2 text-sm;
 }

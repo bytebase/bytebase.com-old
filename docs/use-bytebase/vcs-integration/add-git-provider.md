@@ -45,7 +45,7 @@ Go to "**Settings**" from the top nav bar, and then go to "**Version Control**" 
 
 <hint-block type="warning">
 
-In this step, you need to register "Bytebase" as a [GitLab instance-wide OAuth application](https://docs.gitlab.com/ee/integration/oauth_provider.html#instance-wide-applications). This can only be done by a **GitLab instance admin.** If you are not, then you will need to ask the admin to follow [**Step 2.1** ](step-2-1-register-gitlab-instance-wide-oauth-application-performed-by-gitlab-admin)to register the application and provide its Application ID and Secret to you. Then you continue from [**Step 2.2**](step-2-2-verify-setup)
+In this step, you need to register "Bytebase" as a [GitLab instance-wide OAuth application](https://docs.gitlab.com/ee/integration/oauth_provider.html#instance-wide-applications). This can only be done by a **GitLab instance admin.** If you are not, then you will need to ask the admin to follow [**Step 2.1** ](#step-2-1-register-gitlab-instance-wide-oauth-application-performed-by-gitlab-admin)to register the application and provide its Application ID and Secret to you. Then you continue from [**Step 2.2**](#step-2-2-verify-setup)
 
 </hint-block>
 
@@ -75,7 +75,7 @@ Click "**Submit**" button after filling the info on GitLab and you will see a cr
 
 ### Step 2.2 - Verify setup
 
-Fill the **Application ID** and **Secret** onto the corresponding fields on the Bytebase setup wizard like below:&#x20;
+Fill the **Application ID** and **Secret** onto the corresponding fields on the Bytebase setup wizard like below:
 
 ![vcs-gitlab-step](/docs-assets/vcs-gitlab-step4.png)
 

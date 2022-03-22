@@ -11,7 +11,7 @@ order: 40401
 
 ![environment-configure](/docs-assets/environment-configure.png)
 
-This setting will affect projects using either [UI workflow or Version Control workflow](/docs/concepts/schema-change-workflow.md). Bytebase periodically inspects the next pending task. If the task whose environment requires manual approval, then Bytebase will wait to execute the task until someone manually approves the task. Otherwise, Bytebase will execute the task automatically.
+This setting will affect projects using either [UI workflow or Version Control workflow](/docs/concepts/schema-change-workflow). Bytebase periodically inspects the next pending task. If the task whose environment requires manual approval, then Bytebase will wait to execute the task until someone manually approves the task. Otherwise, Bytebase will execute the task automatically.
 
 ## Creating database
 
