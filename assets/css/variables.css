@@ -1,0 +1,17 @@
+:root {
+  /* indigo-600 */
+  --color-accent: #4f46e5;
+  /* indigo-300 */
+  --color-accent-disabled: #a5b4fc;
+  /* indigo-800 */
+  --color-accent-hover: #3730a3;
+  /* white */
+  --color-accent-text: #ffffff;
+
+  /* gray-900 */
+  --color-main: #18181b;
+  /* gray-700 */
+  --color-main-hover: #3f3f46;
+  /* white */
+  --color-main-text: #ffffff;
+}

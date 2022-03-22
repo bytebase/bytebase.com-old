@@ -37,6 +37,18 @@ function databaseVCSRouteList() {
   return list;
 }
 
+const docsRouteList = async () => {
+  const { $content } = require("@nuxt/content");
+  const documentList = await $content("", { deep: true })
+    .sortBy("order")
+    .fetch();
+  const routeList = [];
+  for (const document of documentList) {
+    routeList.push(`docs${document.path}`);
+  }
+  return routeList;
+};
+
 function webhookRouteList() {
   const list = [];
   for (const webhook of databaseWebhookList()) {
@@ -73,7 +85,11 @@ export default {
     },
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+      },
       {
         hid: "description",
         name: "description",
@@ -86,9 +102,14 @@ export default {
   },
 
   router: {
-    linkExactActiveClass: "underline",
-    linkActiveClass: "underline",
+    linkActiveClass: "router-active-link underline",
+    linkExactActiveClass: "router-exact-active-link underline",
     prefetchPayloads: false,
+  },
+
+  content: {
+    dir: "docs",
+    liveEdit: false,
   },
 
   generate: {
@@ -112,6 +133,7 @@ export default {
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
+        .concat(await docsRouteList())
         .concat(webhookRouteList())
         .concat(softwareRouteList())
         .concat(compareRouteList());
@@ -119,7 +141,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/css/variables.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -138,7 +160,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["vue-plausible", "@nuxtjs/sitemap"],
+  modules: ["vue-plausible", "@nuxtjs/sitemap", "@nuxt/content"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
