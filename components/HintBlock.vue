@@ -1,10 +1,10 @@
 <template>
   <div
-    class="w-full p-4 flex flex-row justify-start items-start border rounded-lg my-4 bg-gray-50"
+    class="w-full p-4 pb-1 flex flex-row justify-start items-start border rounded-lg my-4 bg-gray-50"
     :class="type === 'info' ? 'border-blue-600' : 'border-yellow-600'"
   >
     <span
-      class="text-lg w-7 h-7 leading-6 flex-shrink-0 mr-2 font-bold inline-block text-center border-2 rounded-full"
+      class="text-lg w-7 h-7 leading-6 flex-shrink-0 mr-4 font-bold inline-block text-center border-2 rounded-full"
       :class="
         type === 'info'
           ? 'text-blue-600 border-blue-600'

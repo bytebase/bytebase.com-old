@@ -23,9 +23,10 @@ It's recommended to run Bytebase application as non-root user for security reaso
 Download [source code](https://github.com/bytebase/bytebase) from GitHub, then go to the source root directory
 
 <hint-block type="info">
-If you want to build from a specific release, then find out the release tag from our <a href="https://github.com/bytebase/bytebase/releases">release</a> page, and switch to that tag such as v1.0.0:
 
-<code>git checkout tags/v1.0.0</code>
+If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.0:
+
+`$ git checkout tags/v1.0.0`
 
 </hint-block>
 
