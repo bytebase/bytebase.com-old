@@ -15,7 +15,7 @@
         <a
           class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-black"
           :href="
-            `https://github.com/bytebase/bytebase.com/blob/master${filePath}`
+            `https://github.com/bytebase/bytebase.com/blob/main${filePath}`
           "
         >
           Edit this page on GitHub
@@ -125,9 +125,20 @@ export default defineComponent({
     });
 
     onMounted(() => {
+      window.document.title = props.document?.title || "Bytebase Document";
       const hashTags = ducumentContainerRef.value?.querySelectorAll("h2,h3");
       if (hashTags && hashTags.length > 0) {
         const tagElementList = Array.from(hashTags) as HTMLElement[];
+        const hash = window.location.hash;
+        if (hash !== "#") {
+          for (const item of tagElementList) {
+            if (hash === `#${item.id}`) {
+              (item.firstChild as HTMLAnchorElement).click();
+              state.currentHashId = item.id;
+            }
+          }
+        }
+
         // Dynamic set toc item when scroll page.
         ducumentContainerRef.value?.addEventListener("scroll", () => {
           const scrollTop = ducumentContainerRef.value?.scrollTop || 0;

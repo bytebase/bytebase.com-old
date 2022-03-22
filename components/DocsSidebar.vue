@@ -16,7 +16,7 @@
       <!-- root node -->
       <div
         v-for="node in state.documentTreeRoot.children"
-        :key="node.path"
+        :key="node.document.path"
         class="pl-3"
         @click="handleLinkClick"
       >
@@ -31,7 +31,7 @@
         <div
           v-for="subnode in node.children"
           v-show="node.displayChildren"
-          :key="subnode.path"
+          :key="subnode.document.path"
           class="pl-3"
           @click="handleLinkClick"
         >
@@ -48,7 +48,7 @@
               "
             >
               <img
-                class="relative w-4 h-auto transition-all"
+                class="relative w-4 h-auto transition-all opacity-60"
                 :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
                 src="~/assets/svg/chevron-right.svg"
                 alt=""
@@ -59,7 +59,7 @@
           <div
             v-for="leafnode in subnode.children"
             v-show="subnode.displayChildren"
-            :key="leafnode.path"
+            :key="leafnode.document.path"
             class="pl-3"
             :class="`ml-${(leafnode.document.level - 1) * 2}`"
             @click="handleLinkClick"
@@ -108,7 +108,7 @@ import {
 import { IContentDocument } from "@nuxt/content/types/content";
 
 interface ContentDocument extends IContentDocument {
-  hide?: boolean;
+  order: number;
 }
 
 interface Document extends ContentDocument {
@@ -132,7 +132,7 @@ export default defineComponent({
     const { $content } = useContext();
     const state = reactive<State>({
       documentTreeRoot: {
-        path: "/",
+        path: "",
         document: null as any,
         children: [],
         displayChildren: true,
@@ -144,7 +144,7 @@ export default defineComponent({
         .sortBy("order")
         .fetch()) as any) as ContentDocument[];
       const formatedDocumentList = documentList
-        .filter(d => !d.hide)
+        .filter(d => d.order >= 0)
         .map(document => {
           let level = document.path.split("/").length - 1;
           // The `overview` file is an index file of its directory.
