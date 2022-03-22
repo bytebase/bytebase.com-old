@@ -26,7 +26,7 @@ See further details in
 
 ## Normal Migration
 
-Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/use-bytebase/vcs-integration/organize-repository-files) so that Bytebase can recognize and figure out which database the migration script applies to.
+Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
 
 ## Branch Migration
 
