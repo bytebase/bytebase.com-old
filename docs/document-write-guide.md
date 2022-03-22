@@ -1,17 +1,17 @@
 ---
-title: ✍️ Document guide
+title: ✍️ Document write guide
 order: -1
 ---
 
-# Document guide
+# ✍️ Document write guide
 
-This document mainly represent Markdown files.
+This section attempts to show the easily steps about writing a document. First, let's look at the structure.
 
 ## The structure of `.md` file
 
 ```markdown
 ---
-title: Document guide
+title: Document write guide
 order: 40100
 ---
 
@@ -20,7 +20,7 @@ order: 40100
 Write the document content right here.
 ```
 
-It's a little different from common Markdown file. We need to save its status data into the `--- xxx ---` block. The mainly useful fields are there:
+It's a little different from common Markdown file. We need to save its status data into the `--- xxx ---` block. The mainly useful fields are these:
 
 - `title` is the display text in sidebar;
 - `order` indicates the display order. It consists of a array with three two-digit numbers: `{{category}}{{subcategory}}{{document}}`. For example, [Build from Source](/docs/install/build-from-source) is `10200`.

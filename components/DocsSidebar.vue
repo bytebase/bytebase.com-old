@@ -81,11 +81,11 @@
       @click="handleLinkClick"
     >
       <NuxtLink
-        :to="{ path: `/docs/document-guide` }"
+        :to="{ path: `/docs/document-write-guide` }"
         class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
       >
         <span class="text-base leading-8 mr-2">✍️</span>
-        <span class="text-gray-600 hover:text-accent">Document guide</span>
+        <span class="text-gray-600 hover:text-accent">Write guide</span>
       </NuxtLink>
       <NuxtLink
         :to="{ path: `/` }"
