@@ -9,6 +9,8 @@ Bytebase supports both automatic and manual backup at the database level. User c
 
 When Bytebase restores the backup to a new database, it also records the original parent database as well as a branch migration history linking with the restoring process.
 
-Bytebase also supports enforcing [backup schedule policy](../use-bytebase/environment-policy/backup-schedule-policy.md) for each environment. e.g. DBA can require the database in `production` environment to have `daily` backups.
+Bytebase also supports enforcing [backup schedule policy](/docs/use-bytebase/environment-policy/backup-schedule-policy) for each environment. e.g. DBA can require the database in `production` environment to have `daily` backups.
 
 ![env-backup-configure](/docs-assets/env-backup-configure.png)
+
+<doc-link-block url="/docs/use-bytebase/backup-restore-database" title="Backup and restore database"></doc-link-block>

@@ -7,7 +7,7 @@ order: 31000
 
 Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**.
 
-For example, a software company offers medical record storage services for its customers, hospitals. Each hospital is considered as a tenant, and each tenant has to store their patient data in its own database for regulation or privacy purposes. This feature allows updating database schema for all tenants in a simple and consistent way. Other use cases include multi-location databases for supporting highly-available services where each location is a tenant.&#x20;
+For example, a software company offers medical record storage services for its customers, hospitals. Each hospital is considered as a tenant, and each tenant has to store their patient data in its own database for regulation or privacy purposes. This feature allows updating database schema for all tenants in a simple and consistent way. Other use cases include multi-location databases for supporting highly-available services where each location is a tenant.
 
 Let's take the hospital example to follow the steps below.
 
@@ -27,11 +27,11 @@ Project can be created in Tenant Mode which supports tenant database management.
 
 You need to define deployment configuration for a project in Tenant Mode before any database is created or transferred from another project. With deployment configuration in the example below, tenants will be deployed in three stages:
 
-1\) Staging Stage: all tenants in Staging environment;
+1. Staging Stage: all tenants in Staging environment;
 
-2\) Prod Stage - canary: tenant hospital1 (label Tenant=hospital1) in Prod environment;&#x20;
+2. Prod Stage - canary: tenant hospital1 (label Tenant=hospital1) in Prod environment;
 
-3\) Prod Stage: all tenants in Prod environment.&#x20;
+3. Prod Stage: all tenants in Prod environment.
 
 This provides a reliable sequence of updating schema for all tenants.
 

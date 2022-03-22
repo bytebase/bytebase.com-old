@@ -20,7 +20,7 @@ When running on docker, the  --publish {{hostport}}:{{containerport}}  and the -
 
 Bytebase will then start on http://localhost:8080 and store its data under `~/.bytebase/data` (Check [Server Startup Options](../reference/command-line.md) for other startup options).
 
-Open [http://localhost:8080](http://localhost:8080) in you browser and create the admin account. &#x20;
+Open [http://localhost:8080](http://localhost:8080) in you browser and create the admin account.
 
 <hint-block type="info">
 Bytebase has already prepared some sample data. In particular, it has created a Test environment and a Prod environment, each containing a mysql instance. To establish the connection to those instances, one quick way is to <a href="#start-a-local-mysql-server-for-testing">start a MySQL docker instance</a>

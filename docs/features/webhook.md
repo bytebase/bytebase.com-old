@@ -20,3 +20,5 @@ User can configure database-level webhooks to let Bytebase post the configured w
 ![Webhook configure panel](/docs-assets/webhook-config-panel.png)
 
 ![Integrate with Better Uptime Heartbeats](/docs-assets/webhook-integrate-example.png)
+
+<doc-link-block url="/docs/use-bytebase/webhook-integration" title="Webhook Integration"></doc-link-block>
