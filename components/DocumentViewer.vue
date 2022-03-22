@@ -154,26 +154,4 @@ export default defineComponent({
 
 <style scoped>
 @import "~/assets/css/github-markdown-style.css";
-
-.nuxt-content h2 a,
-.nuxt-content h3 a {
-  margin: auto;
-  margin-left: -20px;
-  display: none;
-}
-.nuxt-content h2 .icon-link,
-.nuxt-content h3 .icon-link {
-  background-image: url(~/assets/svg/hashtag.svg);
-  display: inline-block;
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  background-size: 16px 16px;
-  background-position: center;
-}
-
-.nuxt-content h2:hover a,
-.nuxt-content h2:hover a {
-  display: inline-block;
-}
 </style>

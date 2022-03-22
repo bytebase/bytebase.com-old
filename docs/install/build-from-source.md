@@ -22,9 +22,13 @@ It's recommended to run Bytebase application as non-root user for security reaso
 
 Download [source code](https://github.com/bytebase/bytebase) from GitHub, then go to the source root directory
 
-> If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.0:
->
-> `$ git checkout tags/v1.0.0`
+<hint-block type="info">
+
+If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.0:
+
+`$ git checkout tags/v1.0.0`
+
+</hint-block>
 
 Build the source
 
@@ -36,7 +40,7 @@ Suppose you run `scripts/build.sh foo` After build completes, run:
 
 `$ foo/bytebase --host http://localhost --port 8080`
 
-(check [Server Startup Options](../reference/command-line.md) for other startup options)
+(check [Server Startup Options](/docs/reference/command-line) for other startup options)
 
 You should see something like this in the console:
 
