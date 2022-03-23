@@ -31,7 +31,7 @@ It's a little different from a common Markdown file. We need to save its metadat
 1. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/)/[typora](https://typora.io/)
 2. Think about where the article should be displayed in sidebar.
 3. Follow the [example](#the-structure-of-md-file) to figure out the `order` value.
-4. Add the meta data block in the top of markdown file.
+4. Add the metadata block at the top of the markdown file.
 5. Insert the file into the project folder `./docs/`.
 6. Run `yarn dev` start the review server.
 7. Go to [localhost:3000/docs](http://localhost:3000/docs) and check your creation.
