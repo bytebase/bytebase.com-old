@@ -14,9 +14,7 @@
         </span>
         <a
           class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-black"
-          :href="
-            `https://github.com/bytebase/bytebase.com/blob/main${filePath}`
-          "
+          :href="`https://github.com/bytebase/bytebase.com/blob/main${filePath}`"
         >
           Edit this page on GitHub
           <img
@@ -59,11 +57,9 @@
         v-for="item of toc"
         :key="item.id"
         class="leading-6 mt-2 text-gray-500 w-full truncate whitespace-nowrap hover:text-accent"
-        :class="
-          `pl-${(item.depth - 2) * 4} ${
-            state.currentHashId === item.id ? 'text-accent' : ''
-          }`
-        "
+        :class="`pl-${(item.depth - 2) * 4} ${
+          state.currentHashId === item.id ? 'text-accent' : ''
+        }`"
         :href="`#${item.id}`"
         @click="state.currentHashId = item.id"
       >
@@ -114,7 +110,7 @@ export default defineComponent({
     const toc = computed(() => {
       // Only show h2,h3 in toc.
       return (props.document?.toc as TOC[]).filter(
-        a => a.depth >= 2 && a.depth <= 3
+        (toc) => toc.depth >= 2 && toc.depth <= 3
       );
     });
     const filePath = computed(() => {
@@ -165,4 +161,22 @@ export default defineComponent({
 
 <style scoped>
 @import "~/assets/css/github-markdown-style.css";
+
+.nuxt-content h2 > a:first-child:before,
+.nuxt-content h3 > a:first-child:before {
+  @apply text-blue-600 text-xl leading-6 font-light;
+  content: "#";
+  margin-left: -1.25rem;
+  padding-right: 0.5rem;
+  position: absolute;
+  visibility: hidden;
+}
+.nuxt-content h2 > a:first-child:before {
+  @apply leading-8;
+}
+
+.nuxt-content h2:hover a:first-child:before,
+.nuxt-content h3:hover a:first-child:before {
+  visibility: visible;
+}
 </style>

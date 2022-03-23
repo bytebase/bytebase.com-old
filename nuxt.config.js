@@ -122,7 +122,7 @@ export default {
         "Chinese",
       ]);
       for (const post of postList) {
-        if (post.tags.find(item => item.name == "Changelog")) {
+        if (post.tags.find((item) => item.name == "Changelog")) {
           postRoutelist.push(`changelog/${post.slug}`);
         } else {
           postRoutelist.push(`blog/${post.slug}`);
