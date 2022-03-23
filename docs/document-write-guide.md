@@ -29,7 +29,7 @@ It's a little different from a common Markdown file. We need to save its metadat
 ## How to write a new document?
 
 1. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/)/[typora](https://typora.io/)
-2. Think about where the article should display in sidebar.
+2. Think about where the article should be displayed in sidebar.
 3. Follow the [example](#the-structure-of-md-file) to figure out the `order` value.
 4. Add the meta data block in the top of markdown file.
 5. Insert the file into the project folder `./docs/`.
