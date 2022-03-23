@@ -15,7 +15,7 @@ title: Document write guide
 order: 40100
 ---
 
-# How to write Bytebase document?
+# How to write a document?
 
 Write the document content right here.
 ```
