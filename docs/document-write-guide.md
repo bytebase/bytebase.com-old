@@ -20,7 +20,7 @@ order: 40100
 Write the document content right here.
 ```
 
-It's a little different from common Markdown file. We need to save its status data into the `--- xxx ---` block. The mainly useful fields are these:
+It's a little different from a common Markdown file. We need to save its metadata between the `--- xxx ---` block. Typically used fields are:
 
 - `title` is the display text in sidebar;
 - `order` indicates the display order. It consists of a array with three two-digit numbers: `{{category}}{{subcategory}}{{document}}`. For example, [Build from Source](/docs/install/build-from-source) is `10200`.
