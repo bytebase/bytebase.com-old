@@ -5,7 +5,7 @@ order: -1
 
 # ✍️ Document write guide
 
-This section attempts to show the easily steps about writing a document. First, let's look at the structure.
+This section shows the steps of writing a document.
 
 ## The structure of `.md` file
 
