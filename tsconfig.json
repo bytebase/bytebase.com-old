@@ -15,7 +15,7 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@nuxt/content", "@types/node"]
+    "types": ["@nuxt/types", "@nuxt/content", "@types/node", "@pinia/nuxt"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

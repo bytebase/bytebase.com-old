@@ -3,13 +3,19 @@
     class="relative w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
     <div
-      class="hidden sm:flex w-full flex-row pl-6 py-4 border-b border-gray-200"
+      class="hidden sm:flex w-full flex-row justify-between items-center pl-6 py-4 border-b border-gray-200"
     >
       <span class="flex flex-row justify-start items-center no-underline">
         <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
         <span class="ml-2 text-base">Documents</span>
         <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
+      <img
+        class="w-5 h-auto mr-2 flex-shrink-0 opacity-60 cursor-pointer hover:opacity-100"
+        src="~/assets/svg/search.svg"
+        alt="search"
+        @click="handleSearchBtnClick"
+      />
     </div>
     <div
       ref="sidebarElRef"
@@ -110,6 +116,7 @@ import {
   nextTick,
 } from "@nuxtjs/composition-api";
 import { IContentDocument } from "@nuxt/content/types/content";
+import { useStore } from "~/store";
 
 interface ContentDocument extends IContentDocument {
   order: number;
@@ -134,6 +141,7 @@ export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
     const { $content } = useContext();
+    const store = useStore();
     const state = reactive<State>({
       documentTreeRoot: {
         path: "",
@@ -218,10 +226,14 @@ export default defineComponent({
 
       // Auto scroll to the active doc node.
       nextTick(() => {
-        const anchorEl = window.document.querySelector(
+        if (!sidebarElRef.value) {
+          return;
+        }
+
+        const anchorEl = sidebarElRef.value.querySelector(
           `a[href="${pathname}"]`
         ) as HTMLElement;
-        if (anchorEl && sidebarElRef.value) {
+        if (anchorEl) {
           if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
             sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
           }
@@ -233,10 +245,15 @@ export default defineComponent({
       emit("link-click");
     };
 
+    const handleSearchBtnClick = () => {
+      store.showSearchDialog();
+    };
+
     return {
       state,
-      handleLinkClick,
       sidebarElRef,
+      handleLinkClick,
+      handleSearchBtnClick,
     };
   },
 });
