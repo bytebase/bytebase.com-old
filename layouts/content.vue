@@ -29,11 +29,19 @@
       />
       <Nuxt />
     </main>
+    <SearchDocsDialog v-show="showSearchDialogFlag"></SearchDocsDialog>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, reactive } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  reactive,
+} from "@nuxtjs/composition-api";
+import { useStore } from "~/store";
+import SearchDocsDialog from "../components/SearchDocsDialog.vue";
 
 interface State {
   isLoading: boolean;
@@ -45,7 +53,9 @@ interface State {
 const MOBILE_VIEW_MAX_WIDTH = 640;
 
 export default defineComponent({
+  components: { SearchDocsDialog },
   setup() {
+    const store = useStore();
     const state = reactive<State>({
       isLoading: true,
       isMobileView: false,
@@ -60,10 +70,8 @@ export default defineComponent({
         state.showSidebar = true;
       }
       state.isLoading = false;
-
       window.addEventListener("resize", () => {
         const isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
-
         if (isMobileView != state.isMobileView) {
           state.isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
           if (state.isMobileView) {
@@ -89,6 +97,7 @@ export default defineComponent({
       state,
       toggleSidebar,
       handleSidebarClick,
+      showSearchDialogFlag: computed(() => store.showSearchDialogFlag),
     };
   },
 });

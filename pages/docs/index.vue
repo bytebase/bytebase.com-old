@@ -8,15 +8,16 @@
 export default {
   layout: "content",
   async asyncData({ $content, redirect }) {
-    const ducoments = await $content("", { deep: true })
+    const documentList = await $content("", { deep: true })
       .sortBy("order")
       .fetch();
 
-    // Now the docs index is an empty page, redirect to first document page.
-    redirect(`/docs${ducoments[0].path}`);
+    // Now the docs index is an empty page, show the `what-is-bytebase` document.
+    const article = documentList.find(item => item.order === 0);
+    redirect(`/docs${article.path}`);
 
     return {
-      ducoments,
+      documentList,
     };
   },
 };

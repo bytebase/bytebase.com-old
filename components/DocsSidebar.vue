@@ -3,20 +3,29 @@
     class="relative w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
     <div
-      class="hidden sm:flex w-full flex-row pl-6 py-4 border-b border-gray-200"
+      class="hidden sm:flex w-full flex-row justify-between items-center pl-6 py-4 border-b border-gray-200"
     >
       <span class="flex flex-row justify-start items-center no-underline">
         <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
         <span class="ml-2 text-base">Documents</span>
         <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
+      <img
+        class="w-5 h-auto mr-2 flex-shrink-0 opacity-60 cursor-pointer hover:opacity-100"
+        src="~/assets/svg/search.svg"
+        alt="search"
+        @click="handleSearchBtnClick"
+      />
     </div>
-    <div class="w-full flex-grow flex flex-col pb-4 overflow-y-auto">
+    <div
+      ref="sidebarElRef"
+      class="w-full flex-grow flex flex-col pb-4 overflow-y-auto"
+    >
       <!-- Render document tree. We only support 3 level folder. -->
       <!-- root node -->
       <div
         v-for="node in state.documentTreeRoot.children"
-        :key="node.path"
+        :key="node.document.path"
         class="pl-3"
         @click="handleLinkClick"
       >
@@ -31,7 +40,7 @@
         <div
           v-for="subnode in node.children"
           v-show="node.displayChildren"
-          :key="subnode.path"
+          :key="subnode.document.path"
           class="pl-3"
           @click="handleLinkClick"
         >
@@ -48,7 +57,7 @@
               "
             >
               <img
-                class="relative w-4 h-auto transition-all"
+                class="relative w-4 h-auto transition-all opacity-60"
                 :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
                 src="~/assets/svg/chevron-right.svg"
                 alt=""
@@ -59,9 +68,8 @@
           <div
             v-for="leafnode in subnode.children"
             v-show="subnode.displayChildren"
-            :key="leafnode.path"
-            class="pl-3"
-            :class="`ml-${(leafnode.document.level - 1) * 2}`"
+            :key="leafnode.document.path"
+            class="pl-3 ml-2"
             @click="handleLinkClick"
           >
             <NuxtLink
@@ -79,11 +87,11 @@
       @click="handleLinkClick"
     >
       <NuxtLink
-        :to="{ path: `/docs/document-guide` }"
+        :to="{ path: `/docs/document-write-guide` }"
         class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
       >
         <span class="text-base leading-8 mr-2">✍️</span>
-        <span class="text-gray-600 hover:text-accent">Document guide</span>
+        <span class="text-gray-600 hover:text-accent">Write guide</span>
       </NuxtLink>
       <NuxtLink
         :to="{ path: `/` }"
@@ -104,11 +112,14 @@ import {
   reactive,
   onMounted,
   defineComponent,
+  ref,
+  nextTick,
 } from "@nuxtjs/composition-api";
 import { IContentDocument } from "@nuxt/content/types/content";
+import { useStore } from "~/store";
 
 interface ContentDocument extends IContentDocument {
-  hide?: boolean;
+  order: number;
 }
 
 interface Document extends ContentDocument {
@@ -130,21 +141,23 @@ export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
     const { $content } = useContext();
+    const store = useStore();
     const state = reactive<State>({
       documentTreeRoot: {
-        path: "/",
+        path: "",
         document: null as any,
         children: [],
         displayChildren: true,
       },
     });
+    const sidebarElRef = ref<HTMLDivElement>();
 
     onMounted(async () => {
       const documentList = ((await $content("", { deep: true })
         .sortBy("order")
         .fetch()) as any) as ContentDocument[];
       const formatedDocumentList = documentList
-        .filter(d => !d.hide)
+        .filter(d => d.order >= 0)
         .map(document => {
           let level = document.path.split("/").length - 1;
           // The `overview` file is an index file of its directory.
@@ -210,15 +223,37 @@ export default defineComponent({
           }
         }
       }
+
+      // Auto scroll to the active doc node.
+      nextTick(() => {
+        if (!sidebarElRef.value) {
+          return;
+        }
+
+        const anchorEl = sidebarElRef.value.querySelector(
+          `a[href="${pathname}"]`
+        ) as HTMLElement;
+        if (anchorEl) {
+          if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
+            sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
+          }
+        }
+      });
     });
 
     const handleLinkClick = () => {
       emit("link-click");
     };
 
+    const handleSearchBtnClick = () => {
+      store.showSearchDialog();
+    };
+
     return {
       state,
+      sidebarElRef,
       handleLinkClick,
+      handleSearchBtnClick,
     };
   },
 });
