@@ -13,7 +13,7 @@ Success
 
 ### 1 - Internal error
 
-Something unexpected happened, you can open a GitHub issue or contact us.
+Something unexpected happened, you can open a [GitHub issue](https://github.com/bytebase/bytebase/issues) or [contact us](mailto:support@bytebase.com?subject=Got-internal-error).
 
 ## Database
 
@@ -27,7 +27,7 @@ A syntax error in your SQL statement.
 
 ### 103 - Statement execution error
 
-Encountered an error when executing the SQL statement. If the error doesn't provide enough context, please open a GitHub issue or contact us.
+Encountered an error when executing the SQL statement. If the error doesn't provide enough context, please open a [GitHub issue](https://github.com/bytebase/bytebase/issues) or [contact us](mailto:support@bytebase.com?subject=Got-internal-error).
 
 ## Migration
 
@@ -45,7 +45,7 @@ Bytebase observed that a higher migration version has already applied to the tar
 
 ### 204 - Missing baseline
 
-For version control (VCS) based migration, we require the database to establish a basline first. See help doc for more details.
+For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/use-bytebase/vcs-integration/create-the-first-baseline-migration) for more details.
 
 ## Backward Incompatible Migration
 
