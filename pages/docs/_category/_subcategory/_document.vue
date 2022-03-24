@@ -10,9 +10,7 @@ export default {
   layout: "content",
   async asyncData({ $content, params, redirect }) {
     const path = `/${params.category}/${params.subcategory}/${params.document}`;
-    const document = await $content(path)
-      .where({ path })
-      .fetch();
+    const document = await $content(path).where({ path }).fetch();
 
     if (!document) {
       redirect("/404");

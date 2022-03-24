@@ -13,4 +13,4 @@ Bytebase also supports enforcing [backup schedule policy](/docs/use-bytebase/env
 
 ![env-backup-configure](/docs-assets/env-backup-configure.png)
 
-<doc-link-block url="/docs/use-bytebase/backup-restore-database" title="Backup and restore database"></doc-link-block>
+<doc-link-block url="/docs/use-bytebase/backup-restore-database/overview" title="Backup and restore database"></doc-link-block>

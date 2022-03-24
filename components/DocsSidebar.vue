@@ -8,10 +8,9 @@
       <span class="flex flex-row justify-start items-center no-underline">
         <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
         <span class="ml-2 text-base">Documents</span>
-        <span class="ml-2 text-base text-gray-400">beta</span>
       </span>
       <img
-        class="w-5 h-auto mr-2 flex-shrink-0 opacity-60 cursor-pointer hover:opacity-100"
+        class="w-5 h-auto mr-3 flex-shrink-0 opacity-60 cursor-pointer hover:opacity-100"
         src="~/assets/svg/search.svg"
         alt="search"
         @click="handleSearchBtnClick"
