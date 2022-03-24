@@ -50,15 +50,17 @@
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 mt-12 w-64 py-2 pr-4 h-auto flex-shrink-0 lg:flex flex-col justify-start items-start text-sm border-l border-gray-200 pl-4"
+      class="hidden fixed right-0 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
-      <span class="text-black mb-2">Table of Contents</span>
+      <span class="text-black pb-2 pl-4 border-l border-gray-200"
+        >Table of Contents</span
+      >
       <a
         v-for="item of toc"
         :key="item.id"
-        class="leading-6 mt-2 text-gray-500 w-full truncate whitespace-nowrap hover:text-accent"
-        :class="`pl-${(item.depth - 2) * 4} ${
-          state.currentHashId === item.id ? 'text-accent' : ''
+        class="leading-7 text-gray-500 flex-shrink-0 w-full truncate whitespace-nowrap border-l border-gray-200 pl-4 hover:text-accent"
+        :class="`pl-${(item.depth - 1) * 4} ${
+          state.currentHashId === item.id ? 'text-accent border-accent' : ''
         }`"
         :href="`#${item.id}`"
         @click="state.currentHashId = item.id"

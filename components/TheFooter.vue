@@ -220,7 +220,7 @@
             </li>
             <li>
               <NuxtLink
-                to="/doc/error"
+                to="/docs/error-code"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('errordoc.footer')"
                 >Error Code</NuxtLink
