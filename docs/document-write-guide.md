@@ -26,7 +26,7 @@ It's a little different from a common Markdown file. In order not to involve cha
 - `order` indicates the display order. It is an integer representing an array of three two-digit numbers: `{{category}}{{subcategory}}{{document}}`. **We support up to three folder structure. And the sub-directory structure determines the hierarchy.**
 
   For example, [Build from Source](/docs/install/build-from-source) is `10200` which can be `[1][2][0]`. This means that it's the second in the category, the third in the subcategory and the first in the leaf.
-  ![corder-example](/docs-assets/order-example.jpg)
+  ![corder-example](/docs-assets/order-example.jpeg)
 
 ## How to write a new document?
 

@@ -52,7 +52,7 @@
             <span
               v-if="subnode.children.length !== 0"
               class="flex-shrink-0 mr-4"
-              @click.capture="
+              @click.prevent.stop="
                 subnode.displayChildren = !subnode.displayChildren
               "
             >
@@ -60,7 +60,7 @@
                 class="relative w-4 h-auto transition-all opacity-60"
                 :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
                 src="~/assets/svg/chevron-right.svg"
-                alt=""
+                alt="toggle"
               />
             </span>
           </NuxtLink>
@@ -153,12 +153,12 @@ export default defineComponent({
     const sidebarElRef = ref<HTMLDivElement>();
 
     onMounted(async () => {
-      const documentList = ((await $content("", { deep: true })
+      const documentList = (await $content("", { deep: true })
         .sortBy("order")
-        .fetch()) as any) as ContentDocument[];
+        .fetch()) as any as ContentDocument[];
       const formatedDocumentList = documentList
-        .filter(d => d.order >= 0)
-        .map(document => {
+        .filter((d) => d.order >= 0)
+        .map((document) => {
           let level = document.path.split("/").length - 1;
           // The `overview` file is an index file of its directory.
           if (document.path.endsWith("/overview")) {
@@ -190,7 +190,7 @@ export default defineComponent({
             path = document.dir;
           }
           const node = state.documentTreeRoot.children.find(
-            node => node.path === dir
+            (node) => node.path === dir
           );
           if (node) {
             node.children.push({
@@ -203,11 +203,11 @@ export default defineComponent({
         } else if (document.level === 3) {
           const parentPath = `/${document.dir.split("/")[1]}`;
           const parentNode = state.documentTreeRoot.children.find(
-            node => node.path === parentPath
+            (node) => node.path === parentPath
           );
           if (parentNode) {
             const node = parentNode.children.find(
-              node => node.path === document.dir
+              (node) => node.path === document.dir
             );
             if (node) {
               node.children.push({

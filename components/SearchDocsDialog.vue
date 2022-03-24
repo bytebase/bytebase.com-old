@@ -1,6 +1,6 @@
 <template>
   <div
-    class="search-dialog fixed top-0 left-0 bg-transparent w-screen h-screen flex flex-row justify-center items-start pt-16"
+    class="search-dialog transition-all fixed top-0 left-0 bg-transparent w-screen h-screen flex flex-row justify-center items-start pt-20"
     @click="hideSearchDialog"
   >
     <div
@@ -100,9 +100,9 @@ export default defineComponent({
     const showSearchDialogFlag = computed(() => store.showSearchDialogFlag);
 
     onMounted(async () => {
-      const data = ((await $content("", { deep: true })
+      const data = (await $content("", { deep: true })
         .sortBy("order")
-        .fetch()) as any) as ContentDocument[];
+        .fetch()) as any as ContentDocument[];
 
       for (const document of data) {
         documentList.push(document);
@@ -110,6 +110,7 @@ export default defineComponent({
 
       window.addEventListener("keydown", (event: KeyboardEvent) => {
         if (event.code === "KeyK" && (event.ctrlKey || event.metaKey)) {
+          event.preventDefault();
           store.toggleSearchDialog();
         } else if (event.code === "Escape") {
           store.hideSearchDialog();
