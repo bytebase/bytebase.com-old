@@ -56,6 +56,10 @@ export const FEATURE_SECTIONS = [
       "Sync project membership from the linked GitLab project",
     ],
   },
+  {
+    id: "Branding",
+    features: ["Customize the logo"],
+  },
 ];
 
 const FREE_PLAN: Plan = {
@@ -144,6 +148,7 @@ const TEAM_PLAN: Plan = {
     { id: "RBAC (Owner, DBA, Developer role)" },
     { id: "Login with GitLab account" },
     { id: "Sync project membership from the linked GitLab project" },
+    { id: "Customize the logo" },
   ],
   mainFeatures: [
     "Email support",
@@ -197,6 +202,7 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "RBAC (Owner, DBA, Developer role)" },
     { id: "Login with GitLab account" },
     { id: "Sync project membership from the linked GitLab project" },
+    { id: "Customize the logo" },
   ],
   mainFeatures: [
     "SLA support",
