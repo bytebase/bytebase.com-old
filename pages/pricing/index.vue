@@ -419,11 +419,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { computed, defineComponent, watch } from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue";
 import CheckIcon from "../../components/CheckIcon.vue";
 import QuestinIcon from "../../components/QuestinIcon.vue";
+import { PAGE, PRICING_EVENT, useSegment } from "../../plugin/segment";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -491,26 +492,37 @@ export default defineComponent({
       };
     });
 
-    return {
-      plans,
-      sections,
-    };
-  },
-  methods: {
-    onButtonClick(plan: Plan) {
+    const analytics = computed(() => useSegment().analytics);
+    watch(
+      () => analytics.value,
+      (segment) => {
+        segment?.page(PAGE.PRICING);
+      },
+    );
+
+    const onButtonClick = (plan: Plan) => {
       if (plan.type === PlanType.TEAM) {
+        analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
         window.open("https://hub.bytebase.com/pricing?plan=team&source=official-website", "__blank");
       } else if (plan.type === PlanType.ENTERPRISE) {
+        analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
           "mailto:support@bytebase.com?subject=Request for enterprise plan"
         );
       } else {
+        analytics.value?.track(PRICING_EVENT.FREE_PLAN_CLICK);
         window.open(
           "https://github.com/bytebase/bytebase#installation",
           "__blank"
         );
       }
-    },
+    };
+
+    return {
+      plans,
+      sections,
+      onButtonClick,
+    };
   },
 });
 </script>

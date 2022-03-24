@@ -202,4 +202,8 @@ export default {
     hostname: "https://bytebase.com",
     gzip: true,
   },
+
+  env: {
+    segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL"
+  }
 };
