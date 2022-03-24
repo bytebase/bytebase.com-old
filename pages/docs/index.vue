@@ -13,7 +13,7 @@ export default {
       .fetch();
 
     // Now the docs index is an empty page, show the `what-is-bytebase` document.
-    const article = documentList.find(item => item.order === 0);
+    const article = documentList.find((item) => item.order === 0);
     redirect(`/docs${article.path}`);
 
     return {
