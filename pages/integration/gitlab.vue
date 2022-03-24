@@ -17,17 +17,17 @@
         Bytebase integrates with GitLab to allow team to manage database
         migration scripts in the GitLab repository. Migration pipeline is
         triggered on observing new migration script push event,
-        <a
+        <NuxtLink
+          to="/docs/features/version-control"
+          target="_blank"
           class="text-blue-700"
-          href="https://docs.bytebase.com/features/version-control"
-          target="__blank"
-          >View detailed guide</a
+          >View detailed guide</NuxtLink
         >.
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
       >
-        <ActionSection :moduleName="'integration'" />
+        <ActionSection :module-name="'integration'" />
       </div>
     </div>
     <div
@@ -44,6 +44,7 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  layout: "integration",
   head: {
     title: "Integration with GitLab",
     meta: [
@@ -55,7 +56,5 @@ export default defineComponent({
       },
     ],
   },
-  layout: "integration",
-  setup() {},
 });
 </script>

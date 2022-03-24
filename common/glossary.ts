@@ -53,7 +53,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         description: `A copy of data taken and may be used to restore after a data loss event. Bytebase supports both the manual (on-demand)
         and the automatic per-database backup.`,
         reference:
-          "https://docs.bytebase.com/use-bytebase/backup-restore-database",
+          "https://bytebase.com/docs/use-bytebase/backup-restore-database",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -184,7 +184,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         description: `A logic collection of schema objects like tables, stored procedures, triggers, users. A database is the one created
         by 'CREATE DATABASE'. Bytebase also has a database concept which is a 1:1 mapping to this database definition. Database in
         Bytebase always belongs to a single project.`,
-        reference: "https://docs.bytebase.com/concepts/data-model#database",
+        reference: "https://bytebase.com/docs/concepts/data-model#database",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -195,7 +195,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         Instance in Bytebase always belongs to a particular environment. Bytebase also stores the database schema migration history on
         the instance itself.`,
         reference:
-          "https://docs.bytebase.com/concepts/data-model#database-instance",
+          "https://bytebase.com/docs/concepts/data-model#database-instance",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -205,7 +205,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         Thus the database schema change is managed in a very similar fashion as code. This workflow is considered superior than the classic
         UI based SQL review workflow. However, it requires a bit more setup and engineering discipline. Bytebase supports this workflow and helps
         ease the onboarding and ongoing management of using this workflow.`,
-        reference: "https://docs.bytebase.com/features/version-control",
+        reference: "https://bytebase.com/docs/features/version-control",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -263,7 +263,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Environment",
         description: `A top level model in Bytebase to model after various environments in the development pipeline such as test, staging, prod.
         A bytebase database instance always belong to a single environment. Bytebase owner and DBA can also configure approval policies on the environment.`,
-        reference: "https://docs.bytebase.com/concepts/data-model#environment",
+        reference: "https://bytebase.com/docs/concepts/data-model#environment",
         tagList: ["Bytebase"],
       },
     ],
@@ -379,7 +379,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         description: `Issue is a Bytebase concept, each issue represents a specific collaboration activity between Developer and
         DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
         An issue always belong to a Bytebase Project.`,
-        reference: "https://docs.bytebase.com/concepts/data-model#issue",
+        reference: "https://bytebase.com/docs/concepts/data-model#issue",
         tagList: ["General"],
       },
     ],
@@ -446,7 +446,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         successful schema migration requires coordination between developers, DBAs and the operating environment. Bytebase is a product
         built specifically for addressing the challenges involved in this database schema change process. It supports the 2 most common
         change workflows, 1) Classic UI-based SQL review workflow and 2) Version control based workflow (database-as-code).`,
-        reference: "https://docs.bytebase.com/concepts/schema-change-workflow",
+        reference: "https://bytebase.com/docs/concepts/schema-change-workflow",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -585,7 +585,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Project",
         description: `Project is a Bytebase top-level model and is a logic unit to model a team effort. It's similar to the project
         concept in other dev tools such as Jira, GitLab. Project is the container to group logically related Databases,  Issues and Users together.`,
-        reference: "https://docs.bytebase.com/concepts/data-model#project",
+        reference: "https://bytebase.com/docs/concepts/data-model#project",
         tagList: ["Bytebase"],
       },
     ],
@@ -646,7 +646,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Restore",
         description: `A process to reset the database to a state based on a backup. Bytebase supports to restore
         a backup to a new database.`,
-        reference: "https://docs.bytebase.com/features/backup-and-restore",
+        reference: "https://bytebase.com/docs/features/backup-and-restore",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -721,7 +721,7 @@ export const ALPHA_LIST: AlphaItem[] = [
         opens a schema change ticket, then a DBA will be assigned the ticket to review and approve/reject the change.
         If the change is approved, then it will be applied to the database by the tooling system. Bytebase has built-in
         support for this SQL review workflow.`,
-        reference: "https://docs.bytebase.com/features/sql-review",
+        reference: "https://bytebase.com/docs/features/sql-review",
         tagList: ["General", "Bytebase"],
       },
       {
