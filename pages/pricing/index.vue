@@ -503,7 +503,7 @@ export default defineComponent({
     const onButtonClick = (plan: Plan) => {
       if (plan.type === PlanType.TEAM) {
         analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
-        window.open("https://hub.bytebase.com/pricing?plan=team&source=official-website", "__blank");
+        window.open(`https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`, "__blank");
       } else if (plan.type === PlanType.ENTERPRISE) {
         analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
