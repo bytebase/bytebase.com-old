@@ -5,7 +5,7 @@ order: 20100
 
 # Data Model
 
-![Bytebase data model](/docs-assets/data-model_v1.png)
+![Bytebase data model](/static/docs-assets/data-model_v1.png)
 
 ## Workspace
 

@@ -137,11 +137,12 @@ export default defineComponent({
           }
         }
 
+        const pagePadding = 16;
         // Dynamic set toc item when scroll page.
         ducumentContainerRef.value?.addEventListener("scroll", () => {
           const scrollTop = ducumentContainerRef.value?.scrollTop || 0;
           for (let i = 0; i < tagElementList.length; i++) {
-            if (tagElementList[i].offsetTop > scrollTop) {
+            if (tagElementList[i].offsetTop + pagePadding > scrollTop) {
               state.currentHashId = tagElementList[i].id;
               break;
             }

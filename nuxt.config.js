@@ -1,5 +1,5 @@
-import tailwindTypography from "@tailwindcss/typography";
-import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
+import fse from "fs-extra";
+import parseurl from "parseurl";
 import slug from "slug";
 import {
   databaseFeatureList,
@@ -98,7 +98,13 @@ export default {
       },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
+    link: [
+      {
+        rel: "icon",
+        type: "image/*",
+        href: "/favicon.ico",
+      },
+    ],
   },
 
   router: {
@@ -166,29 +172,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  tailwindcss: {
-    config: {
-      plugins: [tailwindTypography, tailwindAspectRatio],
-      purge: {
-        // "bg-", "text-" are used by tag
-        safelist: [/^bg-/, /^text-/],
-      },
-      theme: {
-        extend: {
-          spacing: {
-            112: "28rem",
-            128: "32rem",
-            144: "36rem",
-            160: "40rem",
-            176: "44rem",
-            192: "48rem",
-            208: "52rem",
-          },
-        },
-      },
-    },
-  },
-
   plausible: {
     // see configuration section
     domain: "bytebase.com",
@@ -204,6 +187,45 @@ export default {
   },
 
   env: {
-    segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL"
-  }
+    segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
+  },
+
+  // Using hooks to solve static prefix problem in dev server and built.
+  hooks: {
+    // redirect /static to / in dev server.
+    render: {
+      setupMiddleware(app) {
+        app.use("/static", (req, res, next) => {
+          const desiredContextRootRegExp = new RegExp(`^/static`);
+          const _parsedUrl = Reflect.has(req, "_parsedUrl")
+            ? req._parsedUrl
+            : null;
+          const url = _parsedUrl !== null ? _parsedUrl : parseurl(req);
+          const startsWithDesired = desiredContextRootRegExp.test(url.pathname);
+          if (startsWithDesired) {
+            const pathname = url.pathname === null ? "" : url.pathname.slice(7);
+            const search = url.search === null ? "" : url.search;
+            const Location = pathname + search;
+            res.writeHead(302, {
+              Location,
+            });
+            res.end();
+          }
+          next();
+        });
+      },
+    },
+    // copy /static to /static in generation dist.
+    generate: {
+      async done() {
+        console.log("Copying static folder to ./dist/static/");
+        try {
+          await fse.copy("./static", "./dist/static");
+          console.log("Copy success!");
+        } catch (error) {
+          console.error("Copy failed, err", error);
+        }
+      },
+    },
+  },
 };

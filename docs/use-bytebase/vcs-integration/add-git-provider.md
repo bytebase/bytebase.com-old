@@ -33,11 +33,11 @@ To add GitLab EE/CE as a Git Provider, you also need to register "Bytebase" as a
 
 Go to "**Settings**" from the top nav bar, and then go to "**Version Control**" under "**Workspace**", and then click "**Add a Git provider**" button.
 
-![add-git-provider](/docs-assets/add-git-provider.png)
+![add-git-provider](/static/docs-assets/add-git-provider.png)
 
 ## Step 1 - Basic Info
 
-![add-git-provider-steps](/docs-assets/add-git-provider-steps.png)
+![add-git-provider-steps](/static/docs-assets/add-git-provider-steps.png)
 
 1. Fills in the URL where the GitLab instance is running.
 
@@ -53,15 +53,15 @@ In this step, you need to register "Bytebase" as a [GitLab instance-wide OAuth a
 
 Login the GitLab instance specified in Step 1 as an Admin user. The admin user will see a wrench icon on the top nav bar like below:
 
-![gitlab-admin-area](/docs-assets/gitlab-admin-area.png)
+![gitlab-admin-area](/static/docs-assets/gitlab-admin-area.png)
 
 Go to "**Applications**" from the sidebar and then click "**New application**" button.
 
-![vcs-gitlab-step](/docs-assets/vcs-gitlab-step1.png)
+![vcs-gitlab-step](/static/docs-assets/vcs-gitlab-step1.png)
 
 Fill in the form with the provided info on the Bytebase setup wizard.
 
-![vcs-gitlab-step](/docs-assets/vcs-gitlab-step2.png)
+![vcs-gitlab-step](/static/docs-assets/vcs-gitlab-step2.png)
 
 - Name usually is just "Bytebase". Other names are fine, as long as the GitLab admin can identify this application is for "Bytebase" later.
 - Redirect URI begins with the **host:port** where the Bytebase console is running, and followed by **/oauth/callback**. This is the URI GitLab uses to callback Bytebase during the OAuth flow.
@@ -71,13 +71,13 @@ Fill in the form with the provided info on the Bytebase setup wizard.
 
 Click "**Submit**" button after filling the info on GitLab and you will see a created application like below:
 
-![vcs-gitlab-step](/docs-assets/vcs-gitlab-step3.png)
+![vcs-gitlab-step](/static/docs-assets/vcs-gitlab-step3.png)
 
 ### Step 2.2 - Verify setup
 
 Fill the **Application ID** and **Secret** onto the corresponding fields on the Bytebase setup wizard like below:
 
-![vcs-gitlab-step](/docs-assets/vcs-gitlab-step4.png)
+![vcs-gitlab-step](/static/docs-assets/vcs-gitlab-step4.png)
 
 After you click "**Next**", Bytebase will kick off an OAuth flow to verify the setup. If you are not currently logged into the GitLab instance used in the setup. You will be prompted to login to complete the OAuth.
 
@@ -95,7 +95,7 @@ If you get an error in the OAuth popup window. Please double-check the following
 
 If everything is setup properly, you will be informed that the setup is correct. Then click "**Confirm and add**".
 
-![vcs-gitlab-step](/docs-assets/vcs-gitlab-step5.png)
+![vcs-gitlab-step](/static/docs-assets/vcs-gitlab-step5.png)
 
 Now we have successfully added a Git provider, developers can now link their Bytebase projects with one of their owned repositories from this Git provider.
 

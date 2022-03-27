@@ -11,7 +11,7 @@ Developers first submit their SQL statement for DBA to review. After review is a
 
 To facilitate this heavily used process, Bytebase has designed a comprehensive interface to unify the stage progression and the collaboration experience into a single page.
 
-![Issue detail interface](/docs-assets/issue-view-annotated.png)
+![Issue detail interface](/static/docs-assets/issue-view-annotated.png)
 
 1. Status banner highlighting the issue status.
 

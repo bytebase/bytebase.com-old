@@ -5,7 +5,7 @@ order: 40301
 
 # Backup
 
-![backup-example](/docs-assets/backup-example.png)
+![backup-example](/static/docs-assets/backup-example.png)
 
 ## Automatic weekly backup
 

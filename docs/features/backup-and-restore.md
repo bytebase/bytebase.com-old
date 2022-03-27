@@ -11,6 +11,6 @@ When Bytebase restores the backup to a new database, it also records the origina
 
 Bytebase also supports enforcing [backup schedule policy](/docs/use-bytebase/environment-policy/backup-schedule-policy) for each environment. e.g. DBA can require the database in `production` environment to have `daily` backups.
 
-![env-backup-configure](/docs-assets/env-backup-configure.png)
+![env-backup-configure](/static/docs-assets/env-backup-configure.png)
 
 <doc-link-block url="/docs/use-bytebase/backup-restore-database/overview" title="Backup and restore database"></doc-link-block>
