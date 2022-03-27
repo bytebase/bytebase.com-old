@@ -1,5 +1,4 @@
 import fse from "fs-extra";
-import parseurl from "parseurl";
 import slug from "slug";
 import {
   databaseFeatureList,
@@ -195,16 +194,11 @@ export default {
     // redirect /static to / in dev server.
     render: {
       setupMiddleware(app) {
-        app.use("/static", (req, res, next) => {
-          const parsedUrl = Reflect.has(req, "_parsedUrl")
-            ? req._parsedUrl
-            : null;
-          const url = parsedUrl !== null ? parsedUrl : parseurl(req);
-          const pathname = url.pathname === null ? "" : url.pathname.slice(7);
-          const search = url.search === null ? "" : url.search;
-          const location = pathname + search;
+        const staticPath = "/static";
+
+        app.use(staticPath, (req, res) => {
           res.writeHead(302, {
-            location,
+            location: req.originalUrl.slice(staticPath.length),
           });
           res.end();
         });
@@ -213,10 +207,10 @@ export default {
     // copy /static to ./dist/static in generation folder.
     generate: {
       async done() {
-        console.log("Copying static folder to ./dist/static/");
+        console.log("Copying ./static folder to ./dist/static/");
         try {
           await fse.copy("./static", "./dist/static");
-          console.log("Copy success!");
+          console.log("Copy succeed!");
         } catch (error) {
           console.error("Copy failed, err", error);
         }
