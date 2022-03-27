@@ -196,26 +196,21 @@ export default {
     render: {
       setupMiddleware(app) {
         app.use("/static", (req, res, next) => {
-          const desiredContextRootRegExp = new RegExp(`^/static`);
-          const _parsedUrl = Reflect.has(req, "_parsedUrl")
+          const parsedUrl = Reflect.has(req, "_parsedUrl")
             ? req._parsedUrl
             : null;
-          const url = _parsedUrl !== null ? _parsedUrl : parseurl(req);
-          const startsWithDesired = desiredContextRootRegExp.test(url.pathname);
-          if (startsWithDesired) {
-            const pathname = url.pathname === null ? "" : url.pathname.slice(7);
-            const search = url.search === null ? "" : url.search;
-            const Location = pathname + search;
-            res.writeHead(302, {
-              Location,
-            });
-            res.end();
-          }
-          next();
+          const url = parsedUrl !== null ? parsedUrl : parseurl(req);
+          const pathname = url.pathname === null ? "" : url.pathname.slice(7);
+          const search = url.search === null ? "" : url.search;
+          const location = pathname + search;
+          res.writeHead(302, {
+            location,
+          });
+          res.end();
         });
       },
     },
-    // copy /static to /static in generation dist.
+    // copy /static to ./dist/static in generation folder.
     generate: {
       async done() {
         console.log("Copying static folder to ./dist/static/");
