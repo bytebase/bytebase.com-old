@@ -20,8 +20,10 @@
     "@tryghost/content-api": "^1.5.13",
     "core-js": "^3.21.0",
     "dayjs": "^1.11.0",
+    "fs-extra": "^10.0.1",
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
+    "parseurl": "^1.3.3",
     "pinia": "^2.0.12",
     "slug": "^5.2.0",
     "vue-plausible": "^1.3.1"

@@ -7,7 +7,7 @@ order: 30300
 
 Bytebase provides automatic SQL lint to check common issues in schema change process.
 
-![sql-advisor](/docs-assets/sql-advisor.png)
+![sql-advisor](/static/docs-assets/sql-advisor.png)
 
 It currently supports following checks:
 

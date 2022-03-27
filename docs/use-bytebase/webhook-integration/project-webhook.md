@@ -5,7 +5,7 @@ order: 40501
 
 # Project Webhook
 
-![project-webhook-configure](/docs-assets/project-webhook-configure.png)
+![project-webhook-configure](/static/docs-assets/project-webhook-configure.png)
 
 ## Supported webhook endpoints
 

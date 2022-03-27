@@ -33,7 +33,7 @@ Only **Project Owner** can enable version control workflow in the project.
 
 Go to the project which you want to enable version control workflow. Choose "**Version control workflow**" and click "**Configure version control**"
 
-![prject-vcs-step](/docs-assets/prject-vcs-step1.png)
+![prject-vcs-step](/static/docs-assets/prject-vcs-step1.png)
 
 ## Step 1 - Choose Git provider
 
@@ -51,7 +51,7 @@ If you encounter error during this process, it's likely the Git provider is not 
 
 </hint-block>
 
-![prject-vcs-step](/docs-assets/prject-vcs-step2.png)
+![prject-vcs-step](/static/docs-assets/prject-vcs-step2.png)
 
 ## Step 2 - Select repository
 
@@ -63,13 +63,13 @@ For GitLab, Bytebase only lists repositories where you have at least the **Maint
 
 </hint-block>
 
-![prject-vcs-step](/docs-assets/prject-vcs-step3.png)
+![prject-vcs-step](/static/docs-assets/prject-vcs-step3.png)
 
 Select the repository you want to link to the Bytebase project.
 
 ## Step 3 - Configure deploy
 
-![prject-vcs-step](/docs-assets/prject-vcs-step4.png)
+![prject-vcs-step](/static/docs-assets/prject-vcs-step4.png)
 
 The final step allows you to configure the following settings:
 
@@ -132,6 +132,6 @@ Optional placeholders
 
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
-![prject-vcs-step](/docs-assets/prject-vcs-step5.png)
+![prject-vcs-step](/static/docs-assets/prject-vcs-step5.png)
 
 Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.

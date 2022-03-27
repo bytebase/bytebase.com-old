@@ -31,16 +31,16 @@
       </div>
       <div
         v-show="searchText !== ''"
-        class="w-full max-h-64 overflow-y-auto border-t flex flex-col justify-start items-start"
+        class="w-full max-h-64 p-2 overflow-y-auto border-t flex flex-col justify-start items-start"
       >
         <div
           v-for="document in searchDocsResult"
           :key="document.path"
-          class="w-full"
+          class="w-full h-auto"
         >
           <NuxtLink
             :to="{ path: `/docs${document.path}` }"
-            class="w-full pl-4 pr-2 py-2 block flex-shrink-0 hover:bg-gray-100"
+            class="w-full pl-4 pr-2 py-2 block rounded-md flex-shrink-0 hover:bg-gray-100"
           >
             <div
               class="w-full flex flex-col justify-start items-start"
@@ -51,7 +51,6 @@
             </div>
           </NuxtLink>
         </div>
-
         <div
           v-show="searchDocsResult.length === 0"
           class="w-full py-4 flex flex-col justify-center items-center"
