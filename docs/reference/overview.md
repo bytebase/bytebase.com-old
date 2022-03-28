@@ -1,6 +1,7 @@
 ---
 title: 📖 Reference
 order: 70000
+hide: true
 ---
 
-# 📖 Reference
+<!-- Do not show this page -->

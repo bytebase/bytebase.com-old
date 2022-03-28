@@ -17,6 +17,7 @@ export default {
     }
 
     const [prev, next] = await $content("", { deep: true })
+      .where({ hide: { $ne: true } })
       .sortBy("order")
       .surround(path)
       .fetch();

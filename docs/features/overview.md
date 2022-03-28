@@ -1,8 +1,7 @@
 ---
 title: ✨ Features
 order: 30000
+hide: true
 ---
 
-# ✨ Features
-
-This is overview page of all features.
+<!-- Do not show this page -->

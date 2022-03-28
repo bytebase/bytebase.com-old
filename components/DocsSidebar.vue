@@ -28,10 +28,15 @@
         class="pl-3"
         @click="handleLinkClick"
       >
+        <span
+          v-if="node.document.hide"
+          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          >{{ node.document.title }}</span
+        >
         <NuxtLink
+          v-else
           :to="{ path: `/docs${node.document.path}` }"
-          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-          :class="'text-gray-600 mt-4 font-bold'"
+          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
         >
           <span>{{ node.document.title }}</span>
         </NuxtLink>
@@ -119,6 +124,8 @@ import { useStore } from "~/store";
 
 interface ContentDocument extends IContentDocument {
   order: number;
+  description?: string;
+  hide?: boolean;
 }
 
 interface Document extends ContentDocument {

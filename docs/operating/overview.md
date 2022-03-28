@@ -1,6 +1,7 @@
 ---
 title: 🔧 Operating
 order: 60000
+hide: true
 ---
 
-# 🔧 Operating
+<!-- Do not show this page -->

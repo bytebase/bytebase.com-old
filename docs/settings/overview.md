@@ -1,6 +1,7 @@
 ---
 title: ⚙️ Settings
 order: 50000
+hide: true
 ---
 
-# ⚙️ Settings
+<!-- Do not show this page -->
