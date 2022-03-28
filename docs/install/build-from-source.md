@@ -7,7 +7,7 @@ order: 10200
 
 ## Prerequisite
 
-1. Install [Yarn](https://yarnpkg.com/getting-started/install), Bytebase requires Node.js >=17.0.
+1. Install [pnpm](https://pnpm.io/installation), Bytebase requires Node.js >=17.0.
 2. Install [Go](https://golang.org/dl/), Bytebaes requires Go >= 1.16
 
 ## Environment Setup

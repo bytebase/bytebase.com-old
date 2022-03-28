@@ -34,10 +34,10 @@ If you are interested in contributing, you may take a look at [our online databa
 
 ### Prerequisites
 
-- [Yarn](https://yarnpkg.com/getting-started/install)
+- [pnpm](https://pnpm.io/installation)
 
 ### Steps
 
 ```bash
-yarn && yarn dev
+pnpm i && pnpm dev
 ```

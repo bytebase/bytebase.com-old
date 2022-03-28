@@ -35,6 +35,6 @@ It's a little different from a common Markdown file. In order not to involve cha
 3. Follow the [example](#the-structure-of-md-file) to figure out the `order` value.
 4. Add the metadata block at the top of the markdown file.
 5. Refer to an existing structure, put the file under a folder of `./docs/`.
-6. Run `yarn dev` start the review server.
+6. Run `pnpm dev` start the review server.
 7. Go to [localhost:3000/docs](http://localhost:3000/docs) and check your creation.
 8. If everything is fine, create a new PR with the changes to [our repo in GitHub](https://github.com/bytebase/bytebase.com).
