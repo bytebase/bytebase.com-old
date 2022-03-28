@@ -1,6 +1,7 @@
 ---
 title: 📚 Concepts
 order: 20000
+isHeader: true
 ---
 
-# 📚 Concepts
+<!-- Do not show this page -->

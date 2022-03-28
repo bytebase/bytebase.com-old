@@ -1,6 +1,7 @@
 ---
 title: 🧭 Use Bytebase
 order: 40000
+isHeader: true
 ---
 
-# 🧭 Use Bytebase
+<!-- Do not show this page -->

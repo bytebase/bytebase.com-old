@@ -17,9 +17,15 @@ export default {
     }
 
     const [prev, next] = await $content("", { deep: true })
+      .where({ isHeader: { $ne: true } })
       .sortBy("order")
       .surround(path)
       .fetch();
+
+    if (path.endsWith("/overview")) {
+      // The first level overview document isn't clickable, redirect it to /docs.
+      redirect("/docs");
+    }
 
     return {
       document,

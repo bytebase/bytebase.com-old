@@ -39,6 +39,7 @@ function databaseVCSRouteList() {
 const docsRouteList = async () => {
   const { $content } = require("@nuxt/content");
   const documentList = await $content("", { deep: true })
+    .where({ isHeader: { $ne: true } })
     .sortBy("order")
     .fetch();
   const routeList = [];

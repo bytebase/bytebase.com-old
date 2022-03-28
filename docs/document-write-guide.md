@@ -1,5 +1,6 @@
 ---
 title: ✍️ Document write guide
+description: This section shows the steps of writing a document. It's a little different from a common Markdown file. In order not to involve changes to code files, we need to save its metadata between the `--- xxx ---`.
 order: -1
 ---
 

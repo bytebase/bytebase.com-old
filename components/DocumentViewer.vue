@@ -78,6 +78,7 @@ import {
   onMounted,
   reactive,
   ref,
+  useMeta,
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -105,6 +106,7 @@ export default defineComponent({
     next: Object,
   },
   setup(props) {
+    const meta = useMeta({});
     const state = reactive<State>({
       currentHashId: "",
     });
@@ -123,7 +125,22 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      window.document.title = props.document?.title || "Bytebase Document";
+      // Dynamicly set metadata.
+      meta.title.value = props.document?.title || "Bytebase Document";
+      meta.meta.value = [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            props.document?.description ||
+            (ducumentContainerRef.value?.textContent || "")
+              ?.replaceAll(/\r?\n/g, " ")
+              .replaceAll(/\s+/g, " ")
+              .slice(meta.title.value?.length, 128)
+              .trim() + "...",
+        },
+      ];
+
       const hashTags = ducumentContainerRef.value?.querySelectorAll("h2,h3");
       if (hashTags && hashTags.length > 0) {
         const tagElementList = Array.from(hashTags) as HTMLElement[];
@@ -159,6 +176,7 @@ export default defineComponent({
       updatedTsFromNow,
     };
   },
+  head: {},
 });
 </script>
 
