@@ -1,7 +1,7 @@
 ---
 title: ⚙️ Settings
 order: 50000
-hide: true
+isHeader: true
 ---
 
 <!-- Do not show this page -->

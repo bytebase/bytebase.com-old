@@ -29,7 +29,7 @@
         @click="handleLinkClick"
       >
         <span
-          v-if="node.document.hide"
+          v-if="node.document.isHeader"
           class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >{{ node.document.title }}</span
         >
@@ -125,7 +125,7 @@ import { useStore } from "~/store";
 interface ContentDocument extends IContentDocument {
   order: number;
   description?: string;
-  hide?: boolean;
+  isHeader?: boolean;
 }
 
 interface Document extends ContentDocument {

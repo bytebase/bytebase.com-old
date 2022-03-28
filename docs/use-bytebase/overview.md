@@ -1,7 +1,7 @@
 ---
 title: 🧭 Use Bytebase
 order: 40000
-hide: true
+isHeader: true
 ---
 
 <!-- Do not show this page -->

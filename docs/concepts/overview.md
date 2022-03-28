@@ -1,7 +1,7 @@
 ---
 title: 📚 Concepts
 order: 20000
-hide: true
+isHeader: true
 ---
 
 <!-- Do not show this page -->
