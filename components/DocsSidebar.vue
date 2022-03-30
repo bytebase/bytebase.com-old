@@ -112,41 +112,25 @@
 
 <script lang="ts">
 import {
-  useContext,
   reactive,
   onMounted,
   defineComponent,
   ref,
   nextTick,
 } from "@nuxtjs/composition-api";
-import { IContentDocument } from "@nuxt/content/types/content";
 import { useStore } from "~/store";
-
-interface ContentDocument extends IContentDocument {
-  order: number;
-  description?: string;
-  isHeader?: boolean;
-}
-
-interface Document extends ContentDocument {
-  level: number;
-}
-
-interface DocumentTreeNode {
-  path: string;
-  document: Document;
-  children: DocumentTreeNode[];
-  displayChildren: boolean;
-}
+import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
 interface State {
   documentTreeRoot: DocumentTreeNode;
 }
 
 export default defineComponent({
+  props: {
+    documentList: Array,
+  },
   emits: ["link-click"],
-  setup(_, { emit }) {
-    const { $content } = useContext();
+  setup(props, { emit }) {
     const store = useStore();
     const state = reactive<State>({
       documentTreeRoot: {
@@ -159,10 +143,7 @@ export default defineComponent({
     const sidebarElRef = ref<HTMLDivElement>();
 
     onMounted(async () => {
-      const documentList = (await $content("", { deep: true })
-        .sortBy("order")
-        .fetch()) as any as ContentDocument[];
-      const formatedDocumentList = documentList
+      const formatedDocumentList = (props.documentList as ContentDocument[])
         .filter((d) => d.order >= 0)
         .map((document) => {
           let level = document.path.split("/").length - 1;
@@ -178,10 +159,16 @@ export default defineComponent({
         })
         .sort((a, b) => a.level - b.level);
 
+      const root = {
+        path: "",
+        document: null as any,
+        children: [],
+        displayChildren: true,
+      } as DocumentTreeNode;
       const pathname = window.location.pathname;
       for (const document of formatedDocumentList) {
         if (document.level === 1) {
-          state.documentTreeRoot.children.push({
+          root.children.push({
             path: document.dir,
             document: document as Document,
             children: [],
@@ -195,9 +182,7 @@ export default defineComponent({
             dir = `/${document.dir.split("/")[1]}`;
             path = document.dir;
           }
-          const node = state.documentTreeRoot.children.find(
-            (node) => node.path === dir
-          );
+          const node = root.children.find((node) => node.path === dir);
           if (node) {
             node.children.push({
               path: path,
@@ -208,7 +193,7 @@ export default defineComponent({
           }
         } else if (document.level === 3) {
           const parentPath = `/${document.dir.split("/")[1]}`;
-          const parentNode = state.documentTreeRoot.children.find(
+          const parentNode = root.children.find(
             (node) => node.path === parentPath
           );
           if (parentNode) {
@@ -229,6 +214,8 @@ export default defineComponent({
           }
         }
       }
+
+      state.documentTreeRoot = root;
 
       // Auto scroll to the active doc node.
       nextTick(() => {

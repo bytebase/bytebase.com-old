@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-auto flex flex-col relative overflow-hidden">
     <main
-      v-show="!state.isLoading"
+      v-if="!state.isLoading"
       class="w-full h-screen"
       :class="state.isMobileView ? 'mobile-main-view' : 'normal-main-view'"
     >
@@ -24,6 +24,7 @@
       </div>
       <DocsSidebar
         v-show="state.showSidebar"
+        :document-list="state.documentList"
         :class="state.showSidebar && state.isMobileView ? 'mobile-sidebar' : ''"
         @link-click="handleSidebarClick"
       />
@@ -39,36 +40,44 @@ import {
   defineComponent,
   onMounted,
   reactive,
+  useContext,
 } from "@nuxtjs/composition-api";
 import { useStore } from "~/store";
-import SearchDocsDialog from "../components/SearchDocsDialog.vue";
+import { ContentDocument } from "~/types/docs";
 
 interface State {
   isLoading: boolean;
   isMobileView: boolean;
   showSidebar: boolean;
+  documentList: ContentDocument[];
 }
 
 // From tailwind, `sm` width is 640.
 const MOBILE_VIEW_MAX_WIDTH = 640;
 
 export default defineComponent({
-  components: { SearchDocsDialog },
   setup() {
+    const { $content } = useContext();
     const store = useStore();
     const state = reactive<State>({
       isLoading: true,
       isMobileView: false,
       showSidebar: true,
+      documentList: [],
     });
 
-    onMounted(() => {
+    onMounted(async () => {
+      state.documentList = (await $content("", { deep: true })
+        .sortBy("order")
+        .fetch()) as any as ContentDocument[];
+
       state.isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
       if (state.isMobileView) {
         state.showSidebar = false;
       } else {
         state.showSidebar = true;
       }
+
       state.isLoading = false;
       window.addEventListener("resize", () => {
         const isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
