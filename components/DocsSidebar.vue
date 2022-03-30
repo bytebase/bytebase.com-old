@@ -118,6 +118,7 @@ import {
   ref,
   nextTick,
 } from "@nuxtjs/composition-api";
+import { headerDocumentSuffix } from "~/common/const";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
@@ -149,8 +150,8 @@ export default defineComponent({
           .filter((d) => d.order >= 0)
           .map((document) => {
             let level = document.path.split("/").length - 1;
-            // The `overview` file is an index file of its directory.
-            if (document.path.endsWith("/overview")) {
+            // The header document is an index file of its directory.
+            if (document.path.endsWith(headerDocumentSuffix)) {
               level = level - 1;
             }
 
@@ -179,8 +180,8 @@ export default defineComponent({
           } else if (document.level === 2) {
             let dir = document.dir;
             let path = document.path;
-            // The `overview` file is an index file of its directory.
-            if (document.path.endsWith("/overview")) {
+            // The header document is an index file of its directory.
+            if (document.path.endsWith(headerDocumentSuffix)) {
               dir = `/${document.dir.split("/")[1]}`;
               path = document.dir;
             }
