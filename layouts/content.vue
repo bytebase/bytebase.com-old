@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-auto flex flex-col relative overflow-hidden">
     <main
-      v-if="!state.isLoading"
+      v-show="!state.isLoading"
       class="w-full h-screen"
       :class="state.isMobileView ? 'mobile-main-view' : 'normal-main-view'"
     >
