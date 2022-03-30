@@ -113,7 +113,7 @@
 <script lang="ts">
 import {
   reactive,
-  onMounted,
+  watch,
   defineComponent,
   ref,
   nextTick,
@@ -142,97 +142,107 @@ export default defineComponent({
     });
     const sidebarElRef = ref<HTMLDivElement>();
 
-    onMounted(async () => {
-      const formatedDocumentList = (props.documentList as ContentDocument[])
-        .filter((d) => d.order >= 0)
-        .map((document) => {
-          let level = document.path.split("/").length - 1;
-          // The `overview` file is an index file of its directory.
-          if (document.path.endsWith("/overview")) {
-            level = level - 1;
-          }
+    watch(
+      () => props.documentList,
+      async () => {
+        const formatedDocumentList = (props.documentList as ContentDocument[])
+          .filter((d) => d.order >= 0)
+          .map((document) => {
+            let level = document.path.split("/").length - 1;
+            // The `overview` file is an index file of its directory.
+            if (document.path.endsWith("/overview")) {
+              level = level - 1;
+            }
 
-          return {
-            ...document,
-            level: level,
-          };
-        })
-        .sort((a, b) => a.level - b.level);
+            return {
+              ...document,
+              level: level,
+            };
+          })
+          .sort((a, b) => a.level - b.level);
 
-      const root = {
-        path: "",
-        document: null as any,
-        children: [],
-        displayChildren: true,
-      } as DocumentTreeNode;
-      const pathname = window.location.pathname;
-      for (const document of formatedDocumentList) {
-        if (document.level === 1) {
-          root.children.push({
-            path: document.dir,
-            document: document as Document,
-            children: [],
-            displayChildren: true,
-          });
-        } else if (document.level === 2) {
-          let dir = document.dir;
-          let path = document.path;
-          // The `overview` file is an index file of its directory.
-          if (document.path.endsWith("/overview")) {
-            dir = `/${document.dir.split("/")[1]}`;
-            path = document.dir;
-          }
-          const node = root.children.find((node) => node.path === dir);
-          if (node) {
-            node.children.push({
-              path: path,
+        const root = {
+          path: "",
+          document: null as any,
+          children: [],
+          displayChildren: true,
+        } as DocumentTreeNode;
+        const pathname = window.location.pathname;
+        for (const document of formatedDocumentList) {
+          if (document.level === 1) {
+            root.children.push({
+              path: document.dir,
               document: document as Document,
               children: [],
-              displayChildren: false,
+              displayChildren: true,
             });
-          }
-        } else if (document.level === 3) {
-          const parentPath = `/${document.dir.split("/")[1]}`;
-          const parentNode = root.children.find(
-            (node) => node.path === parentPath
-          );
-          if (parentNode) {
-            const node = parentNode.children.find(
-              (node) => node.path === document.dir
-            );
+          } else if (document.level === 2) {
+            let dir = document.dir;
+            let path = document.path;
+            // The `overview` file is an index file of its directory.
+            if (document.path.endsWith("/overview")) {
+              dir = `/${document.dir.split("/")[1]}`;
+              path = document.dir;
+            }
+            const node = root.children.find((node) => node.path === dir);
             if (node) {
               node.children.push({
-                path: document.path,
+                path: path,
                 document: document as Document,
                 children: [],
                 displayChildren: false,
               });
-              if (pathname.includes(`/docs${document.path}`)) {
-                node.displayChildren = true;
+            }
+          } else if (document.level === 3) {
+            const parentPath = `/${document.dir.split("/")[1]}`;
+            const parentNode = root.children.find(
+              (node) => node.path === parentPath
+            );
+            if (parentNode) {
+              const node = parentNode.children.find(
+                (node) => node.path === document.dir
+              );
+              if (node) {
+                node.children.push({
+                  path: document.path,
+                  document: document as Document,
+                  children: [],
+                  displayChildren: false,
+                });
+                if (pathname.includes(`/docs${document.path}`)) {
+                  node.displayChildren = true;
+                }
               }
             }
           }
         }
-      }
 
-      state.documentTreeRoot = root;
+        state.documentTreeRoot = root;
 
-      // Auto scroll to the active doc node.
-      nextTick(() => {
-        if (!sidebarElRef.value) {
-          return;
-        }
-
-        const anchorEl = sidebarElRef.value.querySelector(
-          `a[href="${pathname}"]`
-        ) as HTMLElement;
-        if (anchorEl) {
-          if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
-            sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
+        // Auto scroll to the active doc node.
+        nextTick(() => {
+          if (!sidebarElRef.value) {
+            return;
           }
-        }
-      });
-    });
+
+          for (const anchorEl of Array.from(
+            sidebarElRef.value.querySelectorAll("a")
+          )) {
+            let href = anchorEl.getAttribute("href");
+            if (pathname.endsWith("/")) {
+              href = href + "/";
+            }
+
+            if (pathname === href) {
+              if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
+                sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
+              }
+              break;
+            }
+          }
+        });
+      }
+    );
 
     const handleLinkClick = () => {
       emit("link-click");
