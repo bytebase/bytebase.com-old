@@ -352,7 +352,7 @@
       <div class="py-16">
         <img
           class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
-          src="../assets/sql-editor-preview.webp"
+          src="~/static/docs-assets/sql-editor-preview.webp"
           alt="All-in-one SQL Editor"
         />
       </div>
@@ -412,12 +412,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/assets/sql-editor_databases-search.webp"
+                src="~/static/docs-assets/sql-editor_databases-search.webp"
                 alt="Explore the schema"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/assets/sql-editor_databases-table-schema.webp"
+                src="~/static/docs-assets/sql-editor_databases-table-schema.webp"
                 alt="Explore the schema"
               />
             </div>
@@ -471,12 +471,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/assets/sql-editor_autocomplete.webp"
+                src="~/static/docs-assets/sql-editor_autocomplete.webp"
                 alt="Write queries effectively"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/assets/sql-editor_format-sql.webp"
+                src="~/static/docs-assets/sql-editor_format-sql.webp"
                 alt="Write queries effectively"
               />
             </div>
@@ -535,13 +535,13 @@
               class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
             >
               <img
-                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0  lg:max-w-none"
-                src="~/assets/sql-editor_sheets.webp"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
+                src="~/static/docs-assets/sql-editor_sheets.webp"
                 alt="Never miss your work"
               />
               <img
-                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0  lg:max-w-none"
-                src="~/assets/sql-editor_history.webp"
+                class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
+                src="~/static/docs-assets/sql-editor_history.webp"
                 alt="Never miss your work"
               />
             </div>
@@ -601,12 +601,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/assets/sql-editor_share-popover.webp"
+                src="~/static/docs-assets/sql-editor_share-popover.webp"
                 alt="Share sheet with teammates"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/assets/sql-editor_share-link-access.webp"
+                src="~/static/docs-assets/sql-editor_share-link-access.webp"
                 alt="Share sheet with teammates"
               />
             </div>
