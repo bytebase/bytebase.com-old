@@ -1,6 +1,6 @@
 ---
 title: Tenant Database Management
-order: 31100
+order: 30300
 ---
 
 # Tenant Database Management
