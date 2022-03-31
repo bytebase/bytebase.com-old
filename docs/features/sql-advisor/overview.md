@@ -1,6 +1,6 @@
 ---
 title: SQL Advisor
-order: 30400
+order: 30500
 ---
 
 # SQL Advisor
