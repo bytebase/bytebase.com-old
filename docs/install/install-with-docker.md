@@ -5,19 +5,19 @@ order: 10100
 
 # Docker (5 seconds)
 
-**Latest release version:** [**1.0.1**](https://github.com/bytebase/bytebase/releases/tag/v1.0.1)
+**Latest release version:** [**1.0.2**](https://github.com/bytebase/bytebase/releases/tag/v1.0.2)
 
 <hint-block type="info">
 
 When running on docker, the --publish \{{hostport\}}:\{{containerport\}} and the ---port flag must be the same. Like the example below, all 3 ports are 5678: --publish 5678:5678 --port 5678
 
-`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 5678:5678 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.1 --data /var/opt/bytebase --host http://localhost --port 5678`
+`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 5678:5678 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.2 --data /var/opt/bytebase --host http://localhost --port 5678`
 
 </hint-block>
 
 ## Run on localhost:8080
 
-`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.1 --data /var/opt/bytebase --host http://localhost --port 8080`
+`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.2 --data /var/opt/bytebase --host http://localhost --port 8080`
 
 Bytebase will then start on http://localhost:8080 and store its data under `~/.bytebase/data` (Check [Server Startup Options](/docs/reference/command-line) for other startup options).
 
@@ -37,7 +37,7 @@ For production setup, you need to make sure [--host](/docs/reference/command-lin
 
 </hint-block>
 
-`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 80:80 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.1 --data /var/opt/bytebase --host https://bytebase.example.com --port 80`
+`$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 80:80 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.2 --data /var/opt/bytebase --host https://bytebase.example.com --port 80`
 
 ## Start a local MySQL server for testing
 
