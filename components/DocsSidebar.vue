@@ -21,59 +21,67 @@
       class="w-full flex-grow flex flex-col pb-4 overflow-y-auto"
     >
       <!-- Render document tree. We only support 3 level folder. -->
-      <!-- root node -->
       <div
         v-for="node in state.documentTreeRoot.children"
         :key="node.document.path"
-        class="pl-3"
-        @click="handleLinkClick"
+        class="w-full flex flex-col justify-start items-start"
       >
-        <span
-          v-if="node.document.isHeader"
-          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-          >{{ node.document.title }}</span
-        >
-        <NuxtLink
-          v-else
-          :to="{ path: `/docs${node.document.path}` }"
-          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-        >
-          <span>{{ node.document.title }}</span>
-        </NuxtLink>
-        <!-- subnode which can toggle leaf children nodes -->
+        <!-- root node -->
+        <div class="pl-3 w-full" @click="handleLinkClick">
+          <span
+            v-if="node.document.isHeader"
+            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+            >{{ node.document.title }}</span
+          >
+          <NuxtLink
+            v-else
+            :to="{ path: `/docs${node.document.path}` }"
+            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          >
+            <span>{{ node.document.title }}</span>
+          </NuxtLink>
+        </div>
         <div
           v-for="subnode in node.children"
           v-show="node.displayChildren"
           :key="subnode.document.path"
-          class="pl-3"
-          @click="handleLinkClick"
+          class="w-full flex flex-col justify-start items-start"
         >
-          <NuxtLink
-            :to="{ path: `/docs${subnode.document.path}` }"
-            class="pl-3 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          <!-- subnode which can toggle leaf children nodes -->
+          <div
+            class="pl-6 w-full"
+            @click="
+              subnode.displayChildren = !subnode.displayChildren;
+              handleLinkClick();
+            "
           >
-            <span>{{ subnode.document.title }}</span>
-            <span
-              v-if="subnode.children.length !== 0"
-              class="flex-shrink-0 mr-4"
-              @click.prevent.stop="
-                subnode.displayChildren = !subnode.displayChildren
-              "
+            <NuxtLink
+              :to="{ path: `/docs${subnode.document.path}` }"
+              class="pl-3 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
             >
-              <img
-                class="relative w-4 h-auto transition-all opacity-60"
-                :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
-                src="~/assets/svg/chevron-right.svg"
-                alt="toggle"
-              />
-            </span>
-          </NuxtLink>
+              <span>{{ subnode.document.title }}</span>
+              <span
+                v-if="subnode.children.length !== 0"
+                class="flex-shrink-0 mr-4"
+                @click.prevent.stop="
+                  subnode.displayChildren = !subnode.displayChildren
+                "
+              >
+                <img
+                  class="relative w-4 h-auto transition-all opacity-60"
+                  :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
+                  src="~/assets/svg/chevron-right.svg"
+                  alt="toggle"
+                />
+              </span>
+            </NuxtLink>
+          </div>
           <!-- leaf nodes -->
           <div
             v-for="leafnode in subnode.children"
             v-show="subnode.displayChildren"
             :key="leafnode.document.path"
-            class="pl-3 ml-2"
+            class="pl-9 w-full"
             @click="handleLinkClick"
           >
             <NuxtLink
