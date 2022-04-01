@@ -1,0 +1,185 @@
+<template>
+  <div>
+    <div
+      class="flex justify-center items-center py-4 px-2 group hover:bg-gray-50"
+      @click="state.open = !state.open"
+    >
+      <ChevronDownIcon v-if="state.open" class="w-5 h-5" />
+      <ChevronRightIcon v-else class="w-5 h-5" />
+
+      <div class="flex-1 flex flex-col ml-3">
+        <div class="flex mb-2 items-center space-x-4">
+          <h1 class="text-base font-semibold text-gray-900">{{ rule.id }}</h1>
+          <span
+            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800 font-normal"
+          >
+            {{ rule.category }}
+          </span>
+          <SchemaRuleLevelBadge :level="rule.level" />
+        </div>
+        <div class="text-sm text-gray-400">
+          {{ rule.description }}
+        </div>
+      </div>
+      <TrashIcon
+        class="w-5 h-5 mr-3 opacity-0 cursor-pointer text-red-400 group-hover:opacity-100"
+        @click="() => $emit('on-remove', rule)"
+      />
+    </div>
+
+    <div v-if="state.open" class="px-10 py-5 text-sm">
+      <div class="mb-7">
+        <p class="mb-2">level</p>
+        <div class="flex">
+          <Selecter
+            :options="levels"
+            :selected="rule.level"
+            class="w-32"
+            @on-select="(val) => $emit('on-level-change', val)"
+          />
+        </div>
+      </div>
+      <div v-if="rule.payload">
+        <div
+          v-for="[key, payload] in Object.entries(rule.payload)"
+          :key="key"
+          class="mb-7"
+        >
+          <p class="mb-2">{{ key }}</p>
+          <input
+            v-if="payload.type === 'string'"
+            v-model="state.payload[key]"
+            type="text"
+            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
+            :placeholder="payload.default"
+          />
+          <div v-else-if="payload.type === 'string[]'">
+            <div class="flex flex-wrap gap-4 mb-4">
+              <Badge
+                v-for="(val, index) in state.payload[key]"
+                :key="index"
+                :text="val"
+                @on-remove="() => removeFromList(key, val)"
+              />
+            </div>
+            <input
+              type="text"
+              pattern="[a-z]+"
+              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
+              placeholder="Input the value then press enter to add"
+              @keyup.enter="(e) => pushToList(key, e)"
+            />
+          </div>
+          <SchemaRuleTemplateBuilder
+            v-else-if="payload.type === 'template'"
+            :templates="payload.templates"
+            :value="state.payload[key]"
+            @on-change="(val) => (state.payload[key] = val)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, reactive, PropType, watch } from "@nuxtjs/composition-api";
+import ChevronRightIcon from "../Icons/ChevronRight.vue";
+import ChevronDownIcon from "../Icons/ChevronDown.vue";
+import TrashIcon from "../Icons/Trash.vue";
+import {
+  SelectedRule,
+  RuleLevel,
+  RulePayload,
+} from "../../common/schemaSystem";
+import Badge from "../Badge.vue";
+import Selecter from "../Selecter.vue";
+import SchemaRuleTemplateBuilder from "./SchemaRuleTemplateBuilder.vue";
+import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
+
+interface LocalState {
+  open: boolean;
+  payload: {
+    [val: string]: any;
+  };
+}
+
+const levels = [
+  { id: RuleLevel.Error, name: "Error" },
+  { id: RuleLevel.Warning, name: "Warning" },
+];
+
+const initStatePayload = (
+  payload: RulePayload | undefined
+): { [val: string]: any } => {
+  const target = payload || {};
+  return Object.keys(target).reduce((res, key) => {
+    res[key] = target[key].value || target[key].default;
+    return res;
+  }, {} as { [key: string]: any });
+};
+
+export default defineComponent({
+  components: {
+    Badge,
+    Selecter,
+    TrashIcon,
+    ChevronDownIcon,
+    ChevronRightIcon,
+    SchemaRuleLevelBadge,
+    SchemaRuleTemplateBuilder,
+  },
+  props: {
+    rule: {
+      required: true,
+      type: Object as PropType<SelectedRule>,
+    },
+  },
+  emits: ["on-remove", "on-payload-change", "on-level-change"],
+  setup(props, { emit }) {
+    const state = reactive<LocalState>({
+      open: false,
+      payload: initStatePayload(props.rule.payload),
+    });
+
+    watch(
+      () => state.payload,
+      (val) => emit("on-payload-change", val),
+      { deep: true }
+    );
+
+    return {
+      state,
+      levels,
+    };
+  },
+  methods: {
+    removeFromList(key: string, val: any) {
+      if (!Array.isArray(this.state.payload[key])) {
+        return;
+      }
+
+      const values: Array<any> = this.state.payload[key];
+      const index = values.indexOf(val);
+      if (index < 0) {
+        return;
+      }
+
+      this.state.payload[key] = [
+        ...values.slice(0, index),
+        ...values.slice(index + 1),
+      ];
+    },
+    pushToList(key: string, e: any) {
+      if (!Array.isArray(this.state.payload[key])) {
+        return;
+      }
+
+      const val = e.target.value.trim();
+      this.state.payload[key].push(val);
+
+      e.target.value = "";
+    },
+  },
+});
+</script>
