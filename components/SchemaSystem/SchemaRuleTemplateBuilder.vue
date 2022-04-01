@@ -17,15 +17,15 @@
           <Badge
             v-if="data.type === 'template'"
             :text="data.value"
-            @on-remove="() => onTemplateRemove(i)"
+            @remove="() => onTemplateRemove(i)"
           />
           <AutoWidthInput
             v-else
             :value="data.value"
             :max-width="state.inputMaxWidth"
             class-name="px-0 m-0 py-1 cleared-input"
-            @on-keyup="(e) => onKeyup(i, e)"
-            @on-change="(val) => onTemplateChange(i, val)"
+            @keyup="(e) => onKeyup(i, e)"
+            @change="(val) => onTemplateChange(i, val)"
           />
         </div>
         <input
@@ -153,7 +153,7 @@ export default defineComponent({
       type: Array as PropType<RuleTemplate[]>,
     },
   },
-  emits: ["on-change"],
+  emits: ["change"],
   setup(props, { emit }) {
     const templateInputs = getTemplateInputs(props.value, props.templates);
     let inputData = "";
@@ -177,7 +177,7 @@ export default defineComponent({
     watch(
       () => state.templateInputs,
       (val) => {
-        emit("on-change", `${templateInputsToString(val)}${state.inputData}`);
+        emit("change", `${templateInputsToString(val)}${state.inputData}`);
       },
       { deep: true }
     );
@@ -186,7 +186,7 @@ export default defineComponent({
       () => state.inputData,
       (val) => {
         emit(
-          "on-change",
+          "change",
           `${templateInputsToString(state.templateInputs)}${val}`
         );
       }

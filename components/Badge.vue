@@ -12,7 +12,7 @@
         'flex-shrink-0 ml-0.5 h-4 w-4 rounded-full inline-flex items-center justify-center focus:outline-none focus:text-white',
         `text-${theme}-400 hover:bg-${theme}-200 hover:text-${theme}-500 focus:bg-${theme}-500`,
       ]"
-      @click="$emit('on-remove')"
+      @click="$emit('remove')"
     >
       <svg class="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
         <path stroke-linecap="round" stroke-width="1.5" d="M1 1l6 6m0-6L1 7" />
@@ -36,6 +36,6 @@ export default defineComponent({
       default: "indigo",
     },
   },
-  emits: ["on-remove"],
+  emits: ["remove"],
 });
 </script>

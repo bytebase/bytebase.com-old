@@ -9,7 +9,7 @@
       :style="`width: ${state.width}px;`"
       :class="className"
       type="text"
-      @keyup="(e) => $emit('on-keyup', e)"
+      @keyup="(e) => $emit('keyup', e)"
     />
   </div>
 </template>
@@ -39,7 +39,7 @@ export default defineComponent({
       type: String,
     },
   },
-  emits: ["on-change", "on-keyup"],
+  emits: ["change", "keyup"],
   setup(props, { emit }) {
     const state = reactive<{ data: string; width: number }>({
       data: props.value,
@@ -53,7 +53,7 @@ export default defineComponent({
       () => state.data,
       (val) => {
         nextTick(updateWidth);
-        emit("on-change", val);
+        emit("change", val);
       }
     );
 

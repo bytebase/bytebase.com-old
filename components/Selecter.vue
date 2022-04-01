@@ -28,13 +28,13 @@ export default defineComponent({
       type: Object as PropType<SelectOption[]>,
     },
   },
-  emits: ["on-select"],
+  emits: ["select"],
   setup(props, { emit }) {
     const current = ref(props.options.find((o) => o.id === props.selected)?.id);
 
     watch(
       () => current.value,
-      (val) => emit("on-select", val)
+      (val) => emit("select", val)
     );
 
     watch(

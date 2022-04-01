@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white text-left border-1 border-gray-200 overflow-hidden sm:rounded-md"
+    class="max-w-7xl mx-auto text-left border-1 border-gray-200 overflow-hidden sm:rounded-md"
   >
     <div class="px-6 py-6">
       <Steps :steps="steps" :current-step-id="currentStepId" />
@@ -18,7 +18,7 @@
             v-if="currentStepId === 'Step 1'"
             :engines="engines"
             :active-engine-id="state.engine.id"
-            @on-select="(val) => (state.engine = val)"
+            @select="(val) => (state.engine = val)"
           />
         </transition>
         <transition appear name="slide-from-right" mode="out-in">
@@ -26,9 +26,9 @@
             v-if="currentStepId === 'Step 2'"
             :rules="rules"
             :select-rules="state.rules"
-            @on-select="onRuleSelect"
-            @on-remove="onRuleRemove"
-            @on-change="onRuleChange"
+            @select="onRuleSelect"
+            @remove="onRuleRemove"
+            @change="onRuleChange"
           />
         </transition>
         <transition appear name="slide-from-right" mode="out-in">
@@ -43,7 +43,7 @@
           <ActionButton
             v-if="state.stepIndex > 0"
             :class-names="['hover:bg-gray-200 focus:ring-gray-500', 'mr-5']"
-            @on-click="preStep"
+            @click="preStep"
           >
             Previous
           </ActionButton>
@@ -52,7 +52,7 @@
             :class-names="[
               'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
             ]"
-            @on-click="nextStep"
+            @click="nextStep"
           >
             Next: {{ steps[state.stepIndex + 1].title }}
           </ActionButton>
@@ -62,7 +62,7 @@
               'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
             ]"
             :disabled="!configuration"
-            @on-click="downConfiguration"
+            @click="downConfiguration"
           >
             Download as image
           </ActionButton>

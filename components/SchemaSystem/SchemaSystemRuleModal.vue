@@ -10,7 +10,7 @@
         <li v-for="rule in category.rules" :key="rule.id" class="bg-white">
           <div
             class="cursor-pointer relative px-2 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
-            @click="$emit('on-select', rule)"
+            @click="$emit('select', rule)"
           >
             <div class="flex-1 min-w-0">
               <div class="focus:outline-none">
@@ -43,10 +43,10 @@ export default defineComponent({
   props: {
     rules: {
       required: true,
-      type: Object as PropType<Rule[]>,
+      type: Array as PropType<Rule[]>,
     },
   },
-  emits: ["on-select"],
+  emits: ["select"],
   computed: {
     categories(): RuleCategory[] {
       const dict = this.$props.rules.reduce((dict, rule) => {

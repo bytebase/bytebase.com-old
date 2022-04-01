@@ -55,7 +55,7 @@ export default defineComponent({
   props: {
     steps: {
       required: true,
-      type: Object as PropType<Step[]>,
+      type: Array as PropType<Step[]>,
     },
     currentStepId: {
       required: true,

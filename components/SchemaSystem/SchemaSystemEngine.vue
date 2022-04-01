@@ -7,7 +7,7 @@
       :class="
         activeEngineId === engine.id ? 'border-indigo-500' : 'border-gray-300'
       "
-      @click="$emit('on-select', engine)"
+      @click="$emit('select', engine)"
     >
       <img
         :src="
@@ -41,7 +41,7 @@ export default defineComponent({
   props: {
     engines: {
       required: true,
-      type: Object as PropType<Engine[]>,
+      type: Array as PropType<Engine[]>,
     },
     activeEngineId: {
       default: "",
@@ -49,6 +49,6 @@ export default defineComponent({
       type: String,
     },
   },
-  emits: ["on-select"],
+  emits: ["select"],
 });
 </script>

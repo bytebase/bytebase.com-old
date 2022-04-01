@@ -23,7 +23,7 @@
       </div>
       <TrashIcon
         class="w-5 h-5 mr-3 opacity-0 cursor-pointer text-red-400 group-hover:opacity-100"
-        @click="() => $emit('on-remove', rule)"
+        @click="() => $emit('remove', rule)"
       />
     </div>
 
@@ -35,7 +35,7 @@
             :options="levels"
             :selected="rule.level"
             class="w-32"
-            @on-select="(val) => $emit('on-level-change', val)"
+            @select="(val) => $emit('level-change', val)"
           />
         </div>
       </div>
@@ -59,7 +59,7 @@
                 v-for="(val, index) in state.payload[key]"
                 :key="index"
                 :text="val"
-                @on-remove="() => removeFromList(key, val)"
+                @remove="() => removeFromList(key, val)"
               />
             </div>
             <input
@@ -74,7 +74,7 @@
             v-else-if="payload.type === 'template'"
             :templates="payload.templates"
             :value="state.payload[key]"
-            @on-change="(val) => (state.payload[key] = val)"
+            @change="(val) => (state.payload[key] = val)"
           />
         </div>
       </div>
@@ -135,7 +135,7 @@ export default defineComponent({
       type: Object as PropType<SelectedRule>,
     },
   },
-  emits: ["on-remove", "on-payload-change", "on-level-change"],
+  emits: ["remove", "payload-change", "level-change"],
   setup(props, { emit }) {
     const state = reactive<LocalState>({
       open: false,
@@ -144,7 +144,7 @@ export default defineComponent({
 
     watch(
       () => state.payload,
-      (val) => emit("on-payload-change", val),
+      (val) => emit("payload-change", val),
       { deep: true }
     );
 

@@ -8,9 +8,9 @@
         <li v-for="rule in selectRules" :key="rule.id" class="">
           <SchemaRuleConfig
             :rule="rule"
-            @on-remove="(val) => $emit('on-remove', val)"
-            @on-level-change="(level) => onLevelChange(rule, level)"
-            @on-payload-change="(val) => onPayloadChange(rule, val)"
+            @remove="(val) => $emit('remove', val)"
+            @level-change="(level) => onLevelChange(rule, level)"
+            @payload-change="(val) => onPayloadChange(rule, val)"
           />
         </li>
       </ul>
@@ -18,7 +18,7 @@
 
     <ActionButton
       :class-names="[
-        'bg-indigo-100 text-indigo-800 hover:bg-indigo-100',
+        'bg-indigo-100 text-indigo-800 hover:bg-indigo-200',
         'py-3 px-6 w-64',
       ]"
       @click="state.openModal = true"
@@ -30,11 +30,11 @@
     </ActionButton>
 
     <Modal
-      v-if="state.openModal"
+      :open="state.openModal"
       title="Select rule"
-      @on-close="state.openModal = false"
+      @close="state.openModal = false"
     >
-      <SchemaSystemRuleModal :rules="rules" @on-select="onRuleSelect" />
+      <SchemaSystemRuleModal :rules="rules" @select="onRuleSelect" />
     </Modal>
   </div>
 </template>
@@ -68,14 +68,14 @@ export default defineComponent({
   props: {
     rules: {
       required: true,
-      type: Object as PropType<Rule[]>,
+      type: Array as PropType<Rule[]>,
     },
     selectRules: {
       required: true,
-      type: Object as PropType<SelectedRule[]>,
+      type: Array as PropType<SelectedRule[]>,
     },
   },
-  emits: ["on-select", "on-remove", "on-change"],
+  emits: ["select", "remove", "change"],
   setup() {
     const state = reactive<LocalState>({
       openModal: false,
@@ -88,7 +88,7 @@ export default defineComponent({
   methods: {
     onRuleSelect(rule: Rule) {
       this.state.openModal = false;
-      this.$emit("on-select", rule);
+      this.$emit("select", rule);
     },
     onPayloadChange(rule: SelectedRule, data: { [val: string]: any }) {
       if (!rule.payload) {
@@ -104,10 +104,10 @@ export default defineComponent({
         }, {} as RulePayload),
       };
 
-      this.$emit("on-change", newRule);
+      this.$emit("change", newRule);
     },
     onLevelChange(rule: SelectedRule, level: RuleLevel) {
-      this.$emit("on-change", {
+      this.$emit("change", {
         ...rule,
         level,
       });

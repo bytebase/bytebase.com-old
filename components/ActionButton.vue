@@ -6,7 +6,7 @@
       disabled ? 'cursor-not-allowed' : '',
       'block py-2 px-2.5 border border-transparent rounded-md text-center text-sm font-medium',
     ]"
-    @click="onClick"
+    @click="() => $emit('click')"
   >
     <div class="flex row justify-center items-center">
       <LoadingComponent v-if="loading" class="mr-3" :theme="$props.theme" />
@@ -41,11 +41,6 @@ export default defineComponent({
       type: String,
     },
   },
-  emits: ["on-click"],
-  methods: {
-    onClick() {
-      this.$emit("on-click");
-    },
-  },
+  emits: ["click"],
 });
 </script>
