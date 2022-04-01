@@ -20,20 +20,16 @@
             :active-engine-id="state.engine.id"
             @select="(val) => (state.engine = val)"
           />
-        </transition>
-        <transition appear name="slide-from-right" mode="out-in">
           <SchemaSystemConfig
-            v-if="currentStepId === 'Step 2'"
+            v-else-if="currentStepId === 'Step 2'"
             :rules="rules"
             :select-rules="state.rules"
             @select="onRuleSelect"
             @remove="onRuleRemove"
             @change="onRuleChange"
           />
-        </transition>
-        <transition appear name="slide-from-right" mode="out-in">
           <SchemaSystemPreview
-            v-if="currentStepId === 'Step 3'"
+            v-else-if="currentStepId === 'Step 3'"
             id="preview"
             :rules="state.rules"
             :engine="state.engine"
@@ -225,7 +221,7 @@ export default defineComponent({
   transition: all 0.3s ease-in-out;
 }
 
-.slide-from-right-enter-from {
+.slide-from-right-enter {
   transform: translateX(20px);
   opacity: 0;
 }

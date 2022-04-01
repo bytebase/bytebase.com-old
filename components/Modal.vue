@@ -1,9 +1,9 @@
 <template>
-  <transition appear name="modal" mode="out-in">
+  <transition name="modal" mode="out-in">
     <div
       v-if="open"
       aria-hidden="true"
-      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-gray-100 flex items-center justify-center bg-opacity-60"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-gray-100 flex items-center justify-center bg-opacity-70"
       @click="() => $emit('close')"
     >
       <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
@@ -52,15 +52,14 @@ export default defineComponent({
 
 <style scoped>
 .modal-enter-active {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .modal-leave-active {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
-.modal-enter-from {
-  transform: scale(0.95);
+.modal-enter {
   opacity: 0;
 }
 .modal-leave-to {
