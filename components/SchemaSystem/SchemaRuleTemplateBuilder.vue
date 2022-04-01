@@ -1,17 +1,17 @@
 <template>
-  <div class="border-1 border-gray-300 rounded">
+  <div class="border border-gray-300 rounded">
     <div class="flex flex-wrap gap-4 p-3 bg-gray-50 rounded">
       <div
         v-for="template in templates"
         :key="template.id"
-        class="px-4 py-1 rounded text-sm font-sm font-normal border-1 border-gray-300 bg-gray-100 cursor-pointer tooltip-wrapper"
+        class="px-4 py-1 rounded text-sm font-sm font-normal border border-gray-300 bg-gray-100 cursor-pointer tooltip-wrapper"
         @click="() => onTemplateAdd(template)"
       >
         {{ template.id }}
         <span class="tooltip whitespace-nowrap">{{ template.tip }}</span>
       </div>
     </div>
-    <div class="p-2 border-t-1 border-gray-300">
+    <div class="p-2 border-t border-gray-300">
       <div ref="containerRef" class="flex flex-wrap items-center gap-1">
         <div v-for="(data, i) in state.templateInputs" :key="i">
           <Badge
@@ -23,7 +23,7 @@
             v-else
             :value="data.value"
             :max-width="state.inputMaxWidth"
-            class-name="px-0 m-0 py-1 cleared-input"
+            class-name="px-0 m-0 py-1 cleared-input outline-none"
             @keyup="(e) => onKeyup(i, e)"
             @change="(val) => onTemplateChange(i, val)"
           />
@@ -31,7 +31,7 @@
         <input
           ref="inputRef"
           v-model="state.inputData"
-          class="flex-1 px-0 m-0 py-1 cleared-input"
+          class="flex-1 px-0 m-0 py-1 cleared-input outline-none"
           type="text"
           @keydown.delete="onInputDataDeleteEnter"
           @keyup.delete="onInputDataDeleteLeave"

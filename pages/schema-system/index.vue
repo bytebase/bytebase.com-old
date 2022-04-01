@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-7xl mx-auto text-left border-1 border-gray-200 overflow-hidden sm:rounded-md"
+    class="max-w-7xl mx-auto text-left border border-gray-200 overflow-hidden sm:rounded-md"
   >
     <div class="px-6 py-6">
       <Steps :steps="steps" :current-step-id="currentStepId" />
