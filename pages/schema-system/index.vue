@@ -48,6 +48,7 @@
             :class-names="[
               'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
             ]"
+            :disabled="nextStepDisabled"
             @click="nextStep"
           >
             Next: {{ steps[state.stepIndex + 1].title }}
@@ -86,6 +87,7 @@ import {
   SchemaConfiguration,
   engines,
   rules,
+  PayloadType,
 } from "../../common/schemaSystem";
 
 const steps: Step[] = [
@@ -105,6 +107,41 @@ const steps: Step[] = [
     description: "Preview and download the configuration",
   },
 ];
+
+const validRule = (rule: SelectedRule): boolean => {
+  if (!rule.payload) {
+    return true;
+  }
+
+  for (const key of Object.keys(rule.payload)) {
+    const target = rule.payload[key].value;
+    // undefined value means user didn't use custom config.
+    // will use the default value for schema system.
+    if (target === undefined) {
+      continue;
+    }
+
+    switch (rule.payload[key].type) {
+      case PayloadType.String:
+        // string payload can use default value
+        continue;
+      case PayloadType.Template:
+        if (!target) {
+          return false;
+        }
+        continue;
+      case PayloadType.StringArray:
+        if (!Array.isArray(target) || !target.length) {
+          return false;
+        }
+        continue;
+      default:
+        return false;
+    }
+  }
+
+  return true;
+}
 
 interface LocalState {
   stepIndex: number;
@@ -153,8 +190,8 @@ export default defineComponent({
               id: rule.id,
               level: rule.level,
               payload: rule.payload
-                ? Object.entries(rule.payload).reduce((res, [key, val]) => {
-                    res[key] = val.value || val.default;
+                ? Object.keys(rule.payload).reduce((res, key) => {
+                    res[key] = rule.payload[key].value || rule.payload[key].default;
                     return res;
                   }, {} as { [key: string]: any })
                 : undefined,
@@ -163,6 +200,24 @@ export default defineComponent({
         },
       };
     },
+    nextStepDisabled(): boolean {
+      switch (this.state.stepIndex) {
+        case 0:
+          return !this.state.engine;
+        case 1:
+          return !this.state.rules.length || !this.validRules;
+        default:
+          return false;
+      }
+    },
+    validRules(): boolean {
+      for (const rule of this.state.rules) {
+        if (!validRule(rule)) {
+          return false;
+        }
+      }
+      return true;
+    }
   },
   methods: {
     nextStep() {

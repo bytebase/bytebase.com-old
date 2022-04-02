@@ -50,7 +50,7 @@
             v-if="payload.type === 'string'"
             v-model="state.payload[key]"
             type="text"
-            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
+            class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
             :placeholder="payload.default"
           />
           <div v-else-if="payload.type === 'string[]'">
@@ -64,8 +64,7 @@
             </div>
             <input
               type="text"
-              pattern="[a-z]+"
-              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
+              class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
               placeholder="Input the value then press enter to add"
               @keyup.enter="(e) => pushToList(key, e)"
             />
