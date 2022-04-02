@@ -1,12 +1,13 @@
 <template>
   <span
     :class="[
-      'inline-flex rounded-full items-center py-0.5 pl-2.5 pr-1 text-sm font-medium',
+      'inline-flex rounded-full items-center py-0.5 px-2.5 text-sm font-medium',
       `bg-${theme}-100 text-${theme}-800`,
     ]"
   >
     {{ text }}
     <button
+      v-if="canRemove"
       type="button"
       :class="[
         'flex-shrink-0 ml-0.5 h-4 w-4 rounded-full inline-flex items-center justify-center focus:outline-none focus:text-white',
@@ -29,6 +30,11 @@ export default defineComponent({
     text: {
       required: true,
       type: String,
+    },
+    canRemove: {
+      required: false,
+      type: Boolean,
+      default: true,
     },
     theme: {
       required: false,

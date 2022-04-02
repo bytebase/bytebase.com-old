@@ -10,6 +10,10 @@
       <div v-for="rule in category.rules" :key="rule.id" class="py-4">
         <div class="flex items-center space-x-4">
           <h3 class="text-left text-2xl">{{ rule.id }}</h3>
+          <Badge
+            :text="`DB version >= ${ rule.dbVersion }`"
+            :canRemove="false"
+          />
           <SchemaRuleLevelBadge :level="rule.level" />
         </div>
         <p class="py-2 text-gray-400">{{ rule.description }}</p>
@@ -51,6 +55,7 @@
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
 import { Engine, SelectedRule } from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
+import Badge from "../Badge.vue";
 
 interface RuleCategory {
   id: string;
@@ -59,6 +64,7 @@ interface RuleCategory {
 
 export default defineComponent({
   components: {
+    Badge,
     SchemaRuleLevelBadge,
   },
   props: {

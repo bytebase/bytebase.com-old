@@ -8,13 +8,16 @@
       <ChevronRightIcon v-else class="w-5 h-5" />
 
       <div class="flex-1 flex flex-col ml-3">
-        <div class="flex mb-2 items-center space-x-4">
+        <div class="flex mb-2 items-center space-x-2">
           <h1 class="text-base font-semibold text-gray-900">{{ rule.id }}</h1>
-          <span
-            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800 font-normal"
-          >
-            {{ rule.category }}
-          </span>
+          <Badge
+            :text="rule.category"
+            :canRemove="false"
+          />
+          <Badge
+            :text="`DB version >= ${ rule.dbVersion }`"
+            :canRemove="false"
+          />
           <SchemaRuleLevelBadge :level="rule.level" />
         </div>
         <div class="text-sm text-gray-400">

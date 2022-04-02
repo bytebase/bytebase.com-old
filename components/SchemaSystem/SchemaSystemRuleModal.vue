@@ -1,5 +1,5 @@
 <template>
-  <nav class="overflow-y-auto max-h-96" aria-label="rules">
+  <nav class="overflow-y-auto" aria-label="rules" style="max-height: 50vh;">
     <div v-for="category in categories" :key="category.id" class="relative">
       <div
         class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-2 py-1 text-base font-medium text-gray-500"
@@ -15,10 +15,14 @@
             <div class="flex-1 min-w-0">
               <div class="focus:outline-none">
                 <span class="absolute inset-0" aria-hidden="true" />
-                <p class="text-base font-medium text-gray-900">
+                <p class="text-lg font-medium text-gray-900">
                   {{ rule.id }}
+                  <Badge
+                    :text="`DB version >= ${ rule.dbVersion }`"
+                    :canRemove="false"
+                  />
                 </p>
-                <p class="text-sm text-gray-500 truncate">
+                <p class="text-sm text-gray-500 truncate mt-2">
                   {{ rule.description }}
                 </p>
               </div>
@@ -33,6 +37,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
 import { Rule } from "../../common/schemaSystem";
+import Badge from "../Badge.vue";
 
 interface RuleCategory {
   id: string;
@@ -40,6 +45,9 @@ interface RuleCategory {
 }
 
 export default defineComponent({
+  components: {
+    Badge
+  },
   props: {
     rules: {
       required: true,
