@@ -21,15 +21,10 @@ interface StringArrayPayload {
   value?: string[];
 }
 
-export interface RuleTemplate {
-  id: string;
-  tip?: string;
-}
-
 interface TemplatePayload {
   type: PayloadType.Template;
   default: string;
-  templates: RuleTemplate[];
+  templates: { id: string; tip?: string; }[];
   value?: string;
 }
 

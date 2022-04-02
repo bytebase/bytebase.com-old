@@ -41,6 +41,7 @@
   </div>
 </template>
 
+
 <script lang="ts">
 import {
   defineComponent,
@@ -51,8 +52,8 @@ import {
   PropType,
 } from "@nuxtjs/composition-api";
 import Badge from "../Badge.vue";
-import AutoWidthInput from "../AutoWidthInput.vue";
-import { RuleTemplate } from "../../common/schemaSystem";
+import AutoWidthInput from "./AutoWidthInput.vue";
+import { Template } from "./types";
 
 interface TemplateInput {
   value: string;
@@ -67,7 +68,7 @@ interface LocalState {
 
 const getTemplateInputs = (
   value: string,
-  templates: RuleTemplate[]
+  templates: Template[]
 ): TemplateInput[] => {
   let start = 0;
   let end = 0;
@@ -150,7 +151,7 @@ export default defineComponent({
     templates: {
       require: true,
       default: () => [],
-      type: Array as PropType<RuleTemplate[]>,
+      type: Array as PropType<Template[]>,
     },
   },
   emits: ["change"],
@@ -265,7 +266,7 @@ export default defineComponent({
         ...this.state.templateInputs.slice(i + 1),
       ];
     },
-    onTemplateAdd(template: RuleTemplate) {
+    onTemplateAdd(template: Template) {
       if (this.state.inputData) {
         this.state.templateInputs.push({
           value: this.state.inputData,
@@ -326,5 +327,17 @@ export default defineComponent({
 .cleared-input,
 .cleared-input:focus {
   @apply shadow-none ring-0 border-0 border-none;
+}
+
+.tooltip-wrapper {
+  @apply relative;
+}
+
+.tooltip {
+  @apply invisible absolute -mt-8 ml-2 px-2 py-1 rounded bg-black bg-opacity-75 text-white;
+}
+
+.tooltip-wrapper:hover .tooltip {
+  @apply visible z-50;
 }
 </style>

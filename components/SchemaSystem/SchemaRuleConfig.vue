@@ -72,7 +72,7 @@
               @keyup.enter="(e) => pushToList(key, e)"
             />
           </div>
-          <SchemaRuleTemplateBuilder
+          <InputWithTemplate
             v-else-if="payload.type === 'template'"
             :templates="payload.templates"
             :value="state.payload[key]"
@@ -96,8 +96,8 @@ import {
 } from "../../common/schemaSystem";
 import Badge from "../Badge.vue";
 import Selecter from "../Selecter.vue";
-import SchemaRuleTemplateBuilder from "./SchemaRuleTemplateBuilder.vue";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
+import { InputWithTemplate } from "../InputWithTemplate";
 
 interface LocalState {
   open: boolean;
@@ -129,7 +129,7 @@ export default defineComponent({
     ChevronDownIcon,
     ChevronRightIcon,
     SchemaRuleLevelBadge,
-    SchemaRuleTemplateBuilder,
+    InputWithTemplate,
   },
   props: {
     rule: {
