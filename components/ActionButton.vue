@@ -1,10 +1,11 @@
 <template>
   <button
+    type="button"
     :disabled="disabled"
+    class="block py-2 px-2.5 border border-transparent rounded-md text-center text-sm font-medium"
     :class="[
-      ...classNames,
       disabled ? 'cursor-not-allowed' : '',
-      'block py-2 px-2.5 border border-transparent rounded-md text-center text-sm font-medium',
+      ...classNames,
     ]"
     @click="() => $emit('click')"
   >
