@@ -22,7 +22,7 @@
             {{ steps[state.stepIndex].description }}
           </p>
         </div>
-        <div class="my-10 border border-gray-100"></div>
+        <div class="my-5 border border-gray-100"></div>
         <transition appear name="slide-from-right" mode="out-in">
           <SchemaSystemEngine
             v-if="currentStepId === 'Step 1'"
@@ -238,7 +238,7 @@ export default defineComponent({
       if (!node) return;
 
       domtoimage
-        .toPng(node, { bgcolor: "#fff", style: { padding: "1.5rem" } })
+        .toPng(node, { bgcolor: "#fff" })
         .then((dataUrl) => {
           var link = document.createElement("a");
           link.download = `${this.state.engine.name}-Schema-System.png`;

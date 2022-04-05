@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto px-4">
     <SchemaSystemHeader class="mt-1 text-4xl sm:text-5xl xl:text-6xl" />
-    <!-- <div>
+    <div class="my-10">
       <ActionButton
         :class-names="[
           'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
@@ -10,7 +10,7 @@
       >
         Download as image
       </ActionButton>
-    </div> -->
+    </div>
     <SchemaSystemPreview
       id="preview"
       :rules="rules"
@@ -53,7 +53,7 @@ export default defineComponent({
       if (!node) return;
 
       domtoimage
-        .toPng(node, { bgcolor: "#fff", style: { padding: "1.5rem" } })
+        .toPng(node, { bgcolor: "#fff" })
         .then((dataUrl) => {
           var link = document.createElement("a");
           link.download = `${this.engine.name}-Schema-System.png`;

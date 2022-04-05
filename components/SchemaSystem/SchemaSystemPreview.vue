@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
-    <aside class="hidden lg:block lg:col-span-1">
+  <div class="lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4 p-5">
+    <aside class="hidden mt-2 lg:block lg:col-span-1">
       <div class="space-y-6">
         <fieldset
           v-for="(category, index) in categories"
