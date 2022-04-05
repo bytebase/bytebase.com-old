@@ -1,11 +1,20 @@
 <template>
   <div
-    class="max-w-7xl mx-auto text-left border border-gray-200 overflow-hidden sm:rounded-md"
+    class="max-w-7xl mx-auto text-left overflow-hidden"
   >
+    <SchemaSystemHeader class="mt-1 text-4xl sm:text-5xl xl:text-6xl m-6" />
+    <!-- <div
+      class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl m-6"
+    >
+      <span class="text-gray-900">Bytebase</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700">
+        Schema System
+      </span>
+    </div> -->
     <div class="px-6 py-6">
       <Steps :steps="steps" :current-step-id="currentStepId" />
       <div class="flex-1 mt-10">
-        <div class="text-left mb-5">
+        <div class="text-left">
           <h1 class="text-xl font-bold">
             {{ steps[state.stepIndex].title }}
           </h1>
@@ -13,6 +22,7 @@
             {{ steps[state.stepIndex].description }}
           </p>
         </div>
+        <div class="my-10 border border-gray-100"></div>
         <transition appear name="slide-from-right" mode="out-in">
           <SchemaSystemEngine
             v-if="currentStepId === 'Step 1'"
@@ -73,6 +83,7 @@ import { defineComponent, reactive } from "@nuxtjs/composition-api";
 import domtoimage from "dom-to-image";
 import Steps, { Step } from "../../components/Steps.vue";
 import ActionButton from "../../components/ActionButton.vue";
+import SchemaSystemHeader from "../../components/SchemaSystem/SchemaSystemHeader.vue";
 import SchemaSystemEngine from "../../components/SchemaSystem/SchemaSystemEngine.vue";
 import SchemaSystemPreview from "../../components/SchemaSystem/SchemaSystemPreview.vue";
 import SchemaSystemConfig from "../../components/SchemaSystem/SchemaSystemConfig.vue";
@@ -149,6 +160,7 @@ export default defineComponent({
   components: {
     Steps,
     ActionButton,
+    SchemaSystemHeader,
     SchemaSystemEngine,
     SchemaSystemConfig,
     SchemaSystemPreview,

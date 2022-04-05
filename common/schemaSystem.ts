@@ -64,12 +64,13 @@ export interface SchemaConfiguration {
   };
 }
 
+export type EngineType = "mysql";
+
 export interface Engine {
-  id: string;
+  id: EngineType;
   name: string;
   version: string;
 }
-
 
 export const engines: Engine[] = [
   {
