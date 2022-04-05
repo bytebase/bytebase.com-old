@@ -40,4 +40,4 @@ It's like [Terraform](https://www.terraform.io), where Bytebase integrates with 
 
 Bytebase puts developer experience as the top design goal. It's built with a curated tech stack with no external dependency. It comes with built-in [readonly](/docs/reference/command-line#--readonly) and [demo](/docs/reference/command-line) mode for maintenance and illustration purpose. **After compiling the binary, one can just run `./bytebase` and it will start under 5 seconds on the lowest tier machine from any cloud provider.**
 
-![Bytebase tech stack](/static/docs-assets/stack.svg)
+![Bytebase tech stack](/static/docs-assets/techstack.webp)
