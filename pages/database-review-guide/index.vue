@@ -10,7 +10,7 @@
           >
             <span class="block text-gray-900">Bytebase</span>
             <span class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700">
-              Schema System
+              Database Review Guide
             </span>
           </span>
         </h1>
@@ -22,20 +22,10 @@
             class="text-blue-600"
             style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
           >
-            schema system
+            database review guide
           </span>
-          is a online tool to create the schema guideline for your database.
+          is a online tool to create the schema review guideline for your database.
         </h2>
-        <div
-          class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
-        >
-        <NuxtLink
-          :to="{ path: '/schema-system/new' }"
-          class="inline-flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-4"
-        >
-          Create your schema guideline
-        </NuxtLink>
-        </div>
       </div>
       <div
         class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
@@ -97,7 +87,7 @@
         </NuxtLink>
       </div>
     </div>
-    <div class="flex mt-12 justify-center">
+    <!-- <div class="flex mt-12 justify-center">
       <div class="flex flex-row space-x-4">
         <div class="flex mt-6 text-base tracking-tight text-gray-400">
           More is coming
@@ -113,22 +103,74 @@
           />
         </div>
       </div>
+    </div> -->
+    <div class="mt-12 pt-10 border-t border-gray-200">
+      <SchemaConfigurationPage
+        :rules="rules"
+        :selected-rules="state.rules"
+        :title="`Bytebase Schema System for MySQL`"
+        @add="onRuleAdd"
+        @remove="onRuleRemove"
+        @change="onRuleChange"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, reactive } from "@nuxtjs/composition-api";
 import ActionButton from "../../components/ActionButton.vue";
 import ArrowNarrowRight from "../../components/Icons/ArrowNarrowRight.vue";
+import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
+import {
+  Rule,
+  RuleLevel,
+  SelectedRule,
+  rules,
+} from "../../common/schemaSystem";
+
+interface LocalState {
+  rules: SelectedRule[];
+}
 
 export default defineComponent({
   components: {
     ActionButton,
     ArrowNarrowRight,
+    SchemaConfigurationPage,
   },
   setup() {
-    
+    const state = reactive<LocalState>({
+      rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+    });
+
+    return {
+      state,
+      rules,
+    };
   },
+  methods: {
+    onRuleAdd(rule: Rule) {
+      this.state.rules.push({
+        ...rule,
+        level: RuleLevel.Error,
+      });
+    },
+    onRuleRemove(rule: SelectedRule) {
+      const index = this.state.rules.findIndex((r) => r.id === rule.id);
+      this.state.rules = [
+        ...this.state.rules.slice(0, index),
+        ...this.state.rules.slice(index + 1),
+      ];
+    },
+    onRuleChange(rule: SelectedRule) {
+      const index = this.state.rules.findIndex((r) => r.id === rule.id);
+      this.state.rules = [
+        ...this.state.rules.slice(0, index),
+        rule,
+        ...this.state.rules.slice(index + 1),
+      ];
+    },
+  }
 })
 </script>

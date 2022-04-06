@@ -44,6 +44,12 @@ export interface SelectedRule extends Rule {
   level: RuleLevel;
 }
 
+export interface RuleCategory {
+  id: string;
+  title: string;
+  rules: SelectedRule[];
+}
+
 interface EngineRule {
   id: string;
   level: RuleLevel;

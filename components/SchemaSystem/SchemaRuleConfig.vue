@@ -1,13 +1,10 @@
 <template>
   <div>
     <div
-      class="flex justify-center items-center py-4 px-2 group hover:bg-gray-50"
+      class="flex justify-center items-center py-4 px-2"
       @click="state.open = !state.open"
     >
-      <ChevronDownIcon v-if="state.open" class="w-5 h-5" />
-      <ChevronRightIcon v-else class="w-5 h-5" />
-
-      <div class="flex-1 flex flex-col ml-3">
+      <div class="flex-1 flex flex-col">
         <div class="flex mb-2 items-center space-x-2">
           <h1 class="text-base font-semibold text-gray-900">{{ rule.id }}</h1>
           <Badge
@@ -18,19 +15,14 @@
             :text="`DB version >= ${ rule.dbVersion }`"
             :canRemove="false"
           />
-          <SchemaRuleLevelBadge :level="rule.level" />
         </div>
         <div class="text-sm text-gray-400">
           {{ rule.description }}
         </div>
       </div>
-      <TrashIcon
-        class="w-5 h-5 mr-3 opacity-0 cursor-pointer text-red-400 group-hover:opacity-100"
-        @click="() => $emit('remove', rule)"
-      />
     </div>
 
-    <div v-if="state.open" class="px-10 py-5 text-sm">
+    <div v-if="state.open" class="px-2 py-5 text-sm">
       <div class="mb-7">
         <p class="mb-2">level</p>
         <div class="flex">
@@ -86,9 +78,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, PropType, watch } from "@nuxtjs/composition-api";
-import ChevronRightIcon from "../Icons/ChevronRight.vue";
-import ChevronDownIcon from "../Icons/ChevronDown.vue";
-import TrashIcon from "../Icons/Trash.vue";
 import {
   SelectedRule,
   RuleLevel,
@@ -125,9 +114,6 @@ export default defineComponent({
   components: {
     Badge,
     Selecter,
-    TrashIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
     SchemaRuleLevelBadge,
     InputWithTemplate,
   },
@@ -137,10 +123,10 @@ export default defineComponent({
       type: Object as PropType<SelectedRule>,
     },
   },
-  emits: ["remove", "payload-change", "level-change"],
+  emits: ["payload-change", "level-change"],
   setup(props, { emit }) {
     const state = reactive<LocalState>({
-      open: false,
+      open: true,
       payload: initStatePayload(props.rule.payload),
     });
 

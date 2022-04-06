@@ -25,7 +25,7 @@ export default defineComponent({
     },
     options: {
       required: true,
-      type: Object as PropType<SelectOption[]>,
+      type: Array as PropType<SelectOption[]>,
     },
   },
   emits: ["select"],

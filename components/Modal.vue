@@ -4,9 +4,10 @@
       v-if="open"
       aria-hidden="true"
       class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-gray-100 flex items-center justify-center bg-opacity-70"
-      @click="() => $emit('close')"
     >
-      <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+      <div
+        class="relative p-4 w-full max-w-2xl h-full md:h-auto"
+      >
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg dark:bg-gray-700 shadow-2xl">
           <!-- Modal header -->
