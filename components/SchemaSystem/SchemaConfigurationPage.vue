@@ -75,7 +75,7 @@
       title="Select rule"
       @close="state.openSelectModal = false"
     >
-      <SchemaSystemRuleModal :rules="rules" @select="onRuleAdd" />
+      <SchemaSystemRules :rules="rules" @select="onRuleAdd" />
     </Modal>
     <Modal
       :open="state.openConfigModal && !!state.selectedRule"
@@ -106,7 +106,7 @@ import {
   RuleCategory
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
-import SchemaSystemRuleModal from "./SchemaSystemRuleModal.vue";
+import SchemaSystemRules from "./SchemaSystemRules.vue";
 import TrashIcon from "../Icons/Trash.vue";
 import PlusCircleIcon from "../Icons/PlusCircle.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
@@ -124,7 +124,7 @@ export default defineComponent({
     TrashIcon,
     PlusCircleIcon,
     SchemaRuleConfig,
-    SchemaSystemRuleModal,
+    SchemaSystemRules,
     SchemaSystemPreview,
   },
   props: {

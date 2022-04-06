@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4">
     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
       <div
-        class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
+        class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left flex flex-col justify-center"
       >
         <h1>
           <span
@@ -35,11 +35,11 @@
         </div>
       </div>
     </div>
-    <div class="flex gap-x-5">
+    <div class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-5">
       <div
         v-for="guideline in guidelines"
         :key="guideline.id"
-        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-3 transition-all max-w-xs flex flex-col justify-center items-start relative"
+        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-3 transition-all w-full sm:max-w-xs flex flex-col justify-center items-start relative"
         :class="state.guidelineId === guideline.id ? 'bg-gray-100' : ''"
         @click="onGuidelineChange(guideline)"
       >

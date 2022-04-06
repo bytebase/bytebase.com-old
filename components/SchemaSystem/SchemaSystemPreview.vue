@@ -11,21 +11,23 @@
       </h2>
       <div v-for="rule in category.rules" :key="rule.id" class="py-4 group"
 >
-        <div class="flex items-center space-x-4">
+        <div class="sm:flex sm:items-center sm:space-x-4">
           <h3
             class="text-left text-xl text-gray-600"
           >
             {{ rule.id }}
           </h3>
-          <Badge
-            :text="`DB version >= ${ rule.dbVersion }`"
-            :canRemove="false"
-          />
-          <SchemaRuleLevelBadge :level="rule.level" />
-          <div @click="$emit('select', rule)">
-            <Pencil
-              class="w-5 h-5 cursor-pointer opacity-0 group-hover:opacity-100"
+          <div class="mt-3 flex items-center space-x-4 sm:mt-0">
+            <Badge
+              :text="`DB version >= ${ rule.dbVersion }`"
+              :canRemove="false"
             />
+            <SchemaRuleLevelBadge :level="rule.level" />
+            <div @click="$emit('select', rule)">
+              <Pencil
+                class="w-5 h-5 cursor-pointer opacity-0 group-hover:opacity-100"
+              />
+            </div>
           </div>
         </div>
         <p class="py-2 text-gray-400">{{ rule.description }}</p>
