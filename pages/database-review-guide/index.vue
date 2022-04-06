@@ -35,61 +35,36 @@
         </div>
       </div>
     </div>
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+    <div class="flex gap-x-5">
       <div
-        class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
+        v-for="guideline in guidelines"
+        :key="guideline.id"
+        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-3 transition-all max-w-xs flex flex-col justify-center items-start relative"
+        :class="state.guidelineId === guideline.id ? 'bg-gray-100' : ''"
+        @click="onGuidelineChange(guideline)"
       >
-        <div class="relative mx-auto w-3/4 rounded-lg lg:max-w-md">
-          <img class="w-full" src="~/assets/bytebase_and_mysql.webp" alt="" />
+        <img
+          class="w-2/3"
+          :src="
+            require(`~/assets/schema-system/${guideline.id.toLowerCase()}.webp`)
+          "
+          alt=""
+        />
+        <div class="my-4">
+          <span class="font-semibold text-lg lg:text-xl">MySQL Guideline</span>
+          <span
+            class="font-semibold text-blue-600 text-lg lg:text-xl"
+            style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          >for {{ guideline.id.split("-").slice(-1)[0] }}</span>
         </div>
+        <CheckCircleIcon
+          v-if="state.guidelineId === guideline.id"
+          class="w-7 h-7 text-gray-500 absolute right-3 top-3"
+        />
       </div>
-      <div
-        class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-8 lg:text-left w-full flex md:gap-x-2 lg:gap-x-6"
-      >
-        <NuxtLink
-          :to="{ path: '/schema-system/mysql-prod' }"
-          class="bg-transparent hover:bg-gray-100 rounded-lg p-3 flex-1 transition-all"
-        >
-          <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-            <img class="w-2/3" src="~/assets/schema-system/mysql-prod.webp" alt="" />
-          </div>
-          <div class="my-4">
-            <span class="font-semibold text-lg lg:text-xl">MySQL Guideline</span>
-            <span
-              class="font-semibold text-blue-600 text-lg lg:text-xl"
-              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-            >for Prod</span>
-          </div>
-          <p>
-            Get the Bytebase schema system guideline for MySQL in production environment <ArrowNarrowRight class="w-6 h-6 inline"/>
-          </p>
-          <div>
-          </div>
-        </NuxtLink>
-        <NuxtLink
-          :to="{ path: '/schema-system/mysql-dev' }"
-          class="bg-transparent hover:bg-gray-100 rounded-lg p-3 flex-1 transition-all"
-        >
-          <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-            <img class="w-2/3" src="~/assets/schema-system/mysql-dev.webp" alt="" />
-          </div>
-          <div class="my-4">
-            <span class="font-semibold text-lg lg:text-xl">MySQL Guideline</span>
-            <span
-              class="font-semibold text-blue-600 text-lg lg:text-xl"
-              style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-            >for Dev</span>
-          </div>
-          <p>
-            Get the Bytebase schema system guideline for MySQL in development environment
-            <ArrowNarrowRight class="w-6 h-6 inline"/>
-          </p>
-        </NuxtLink>
-      </div>
-    </div>
-    <!-- <div class="flex mt-12 justify-center">
-      <div class="flex flex-row space-x-4">
-        <div class="flex mt-6 text-base tracking-tight text-gray-400">
+
+      <div class="hidden md:flex flex-1 flex-col justify-center items-center">
+        <div class="flex text-base tracking-tight text-gray-400 mb-5">
           More is coming
         </div>
         <div class="flex flex-row space-x-6">
@@ -103,12 +78,11 @@
           />
         </div>
       </div>
-    </div> -->
-    <div class="mt-12 pt-10 border-t border-gray-200">
+    </div>
+    <div class="mt-10 pt-10 border-t border-gray-200">
       <SchemaConfigurationPage
-        :rules="rules"
         :selected-rules="state.rules"
-        :title="`Bytebase Schema System for MySQL`"
+        :title="`Bytebase database review guide for MySQL`"
         @add="onRuleAdd"
         @remove="onRuleRemove"
         @change="onRuleChange"
@@ -120,7 +94,7 @@
 <script lang="ts">
 import { defineComponent, reactive } from "@nuxtjs/composition-api";
 import ActionButton from "../../components/ActionButton.vue";
-import ArrowNarrowRight from "../../components/Icons/ArrowNarrowRight.vue";
+import CheckCircleIcon from "../../components/Icons/CheckCircle.vue";
 import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
 import {
   Rule,
@@ -130,26 +104,48 @@ import {
 } from "../../common/schemaSystem";
 
 interface LocalState {
+  guidelineId: string;
   rules: SelectedRule[];
 }
+
+interface GuidelineTemplate {
+  id: string;
+  rules: SelectedRule[];
+}
+
+const guidelines: GuidelineTemplate[] = [
+  {
+    id: "mysql-prod",
+    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+  },
+  {
+    id: "mysql-dev",
+    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+  }
+];
 
 export default defineComponent({
   components: {
     ActionButton,
-    ArrowNarrowRight,
+    CheckCircleIcon,
     SchemaConfigurationPage,
   },
   setup() {
     const state = reactive<LocalState>({
-      rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+      guidelineId: guidelines[0].id,
+      rules: guidelines[0].rules,
     });
 
     return {
       state,
-      rules,
+      guidelines,
     };
   },
   methods: {
+    onGuidelineChange(guideline: GuidelineTemplate) {
+      this.state.guidelineId = guideline.id;
+      this.state.rules = [...guideline.rules];
+    },
     onRuleAdd(rule: Rule) {
       this.state.rules.push({
         ...rule,

@@ -90,6 +90,7 @@ import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
 import {
+  rules,
   Rule,
   RulePayload,
   RuleLevel,
@@ -119,10 +120,6 @@ export default defineComponent({
     SchemaSystemPreview,
   },
   props: {
-    rules: {
-      required: true,
-      type: Array as PropType<Rule[]>,
-    },
     selectedRules: {
       required: true,
       type: Array as PropType<SelectedRule[]>,
@@ -141,6 +138,7 @@ export default defineComponent({
 
     return {
       state,
+      rules,
     };
   },
   computed: {
