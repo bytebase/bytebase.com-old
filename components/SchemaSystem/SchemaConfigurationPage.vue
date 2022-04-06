@@ -1,6 +1,15 @@
 <template>
   <div>
-    <div class="flex justify-end mb-8">
+    <div class="flex justify-end mb-8 gap-x-5">
+      <ActionButton
+        v-if="ruleChanged"
+        :class-names="[
+          'bg-white hover:bg-gray-200',
+        ]"
+        @click="$emit('reset')"
+      >
+        Reset
+      </ActionButton>
       <ActionButton
         :class-names="[
           'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
@@ -18,12 +27,11 @@
             v-for="(category, index) in categories"
             :key="index"
           >
-            <a
-              :href="`#${category.id}`"
-              class="block text-sm font-medium text-gray-900 hover:underline"
+            <div
+              class="block text-sm font-medium text-gray-900"
             >
               {{ category.title }}
-            </a>
+            </div>
             <div
               v-for="(rule, ruleIndex) in category.rules"
               :key="ruleIndex"
@@ -128,8 +136,12 @@ export default defineComponent({
       required: true,
       type: String,
     },
+    ruleChanged: {
+      required: true,
+      type: Boolean,
+    },
   },
-  emits: ["add", "remove", "change"],
+  emits: ["add", "remove", "change", "reset"],
   setup() {
     const state = reactive<LocalState>({
       openSelectModal: false,

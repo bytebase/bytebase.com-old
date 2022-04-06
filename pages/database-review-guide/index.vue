@@ -82,12 +82,31 @@
     <div class="mt-10 pt-10 border-t border-gray-200">
       <SchemaConfigurationPage
         :selected-rules="state.rules"
+        :rule-changed="state.ruleChanged"
         :title="`Bytebase database review guide for MySQL`"
         @add="onRuleAdd"
         @remove="onRuleRemove"
         @change="onRuleChange"
+        @reset="onRulesReset"
       />
     </div>
+    <Modal
+      :open="state.openWarningModal"
+      title="Warning"
+      @close="state.openWarningModal = false"
+    >
+      <div>
+        Your changes will be reset.
+        <ActionButton
+          :class-names="[
+            'text-white bg-red-600 hover:bg-red-700 ml-auto mt-5',
+          ]"
+          @click="reset"
+        >
+          Reset changes
+        </ActionButton>
+      </div>
+    </Modal>
   </div>
 </template>
 
@@ -102,10 +121,13 @@ import {
   SelectedRule,
   rules,
 } from "../../common/schemaSystem";
+import Modal from "../../components/Modal.vue";
 
 interface LocalState {
   guidelineId: string;
   rules: SelectedRule[];
+  ruleChanged: boolean;
+  openWarningModal: boolean;
 }
 
 interface GuidelineTemplate {
@@ -126,6 +148,7 @@ const guidelines: GuidelineTemplate[] = [
 
 export default defineComponent({
   components: {
+    Modal,
     ActionButton,
     CheckCircleIcon,
     SchemaConfigurationPage,
@@ -134,6 +157,8 @@ export default defineComponent({
     const state = reactive<LocalState>({
       guidelineId: guidelines[0].id,
       rules: guidelines[0].rules,
+      ruleChanged: false,
+      openWarningModal: false,
     });
 
     return {
@@ -145,12 +170,14 @@ export default defineComponent({
     onGuidelineChange(guideline: GuidelineTemplate) {
       this.state.guidelineId = guideline.id;
       this.state.rules = [...guideline.rules];
+      this.state.ruleChanged = false;
     },
     onRuleAdd(rule: Rule) {
       this.state.rules.push({
         ...rule,
         level: RuleLevel.Error,
       });
+      this.state.ruleChanged = true;
     },
     onRuleRemove(rule: SelectedRule) {
       const index = this.state.rules.findIndex((r) => r.id === rule.id);
@@ -158,6 +185,7 @@ export default defineComponent({
         ...this.state.rules.slice(0, index),
         ...this.state.rules.slice(index + 1),
       ];
+      this.state.ruleChanged = true;
     },
     onRuleChange(rule: SelectedRule) {
       const index = this.state.rules.findIndex((r) => r.id === rule.id);
@@ -166,7 +194,25 @@ export default defineComponent({
         rule,
         ...this.state.rules.slice(index + 1),
       ];
+      this.state.ruleChanged = true;
     },
+    onRulesReset() {
+      if (this.state.ruleChanged) {
+        this.state.openWarningModal = true;
+        return;
+      }
+      this.reset()
+    },
+    reset() {
+      const guideline = this.guidelines.find((g) => g.id === this.state.guidelineId);
+      if (guideline) {
+        this.state.rules = [
+          ...guideline.rules
+        ];
+      }
+      this.state.ruleChanged = false;
+      this.state.openWarningModal = false;
+    }
   }
 })
 </script>
