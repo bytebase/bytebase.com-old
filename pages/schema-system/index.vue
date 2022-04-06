@@ -61,7 +61,7 @@
           class="bg-transparent hover:bg-gray-100 rounded-lg p-3 flex-1 transition-all"
         >
           <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-            <img class="w-2/3" src="~/assets/schema-system/mysql-prod.png" alt="" />
+            <img class="w-2/3" src="~/assets/schema-system/mysql-prod.webp" alt="" />
           </div>
           <div class="my-4">
             <span class="font-semibold text-lg lg:text-xl">MySQL Guideline</span>
@@ -81,7 +81,7 @@
           class="bg-transparent hover:bg-gray-100 rounded-lg p-3 flex-1 transition-all"
         >
           <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-            <img class="w-2/3" src="~/assets/schema-system/mysql-dev.png" alt="" />
+            <img class="w-2/3" src="~/assets/schema-system/mysql-dev.webp" alt="" />
           </div>
           <div class="my-4">
             <span class="font-semibold text-lg lg:text-xl">MySQL Guideline</span>

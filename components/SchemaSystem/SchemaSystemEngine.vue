@@ -11,7 +11,7 @@
     >
       <img
         :src="
-          require(`~/assets/schema-system/engine-${engine.id.toLowerCase()}.png`)
+          require(`~/assets/schema-system/engine-${engine.id.toLowerCase()}.webp`)
         "
         class="h-full"
       />
