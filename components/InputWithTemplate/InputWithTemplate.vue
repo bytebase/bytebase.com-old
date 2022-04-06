@@ -66,6 +66,8 @@ interface LocalState {
   templateInputs: TemplateInput[];
 }
 
+// getTemplateInputs will convert the string value like "abc{{template}}"
+// into TemplateInput array: [{value: "abc", type: "string"}, {value: "template", type: "template"}]
 const getTemplateInputs = (
   value: string,
   templates: Template[]
@@ -80,6 +82,8 @@ const getTemplateInputs = (
       value.slice(end, end + 2) === "}}" &&
       value.slice(start, start + 2) === "{{"
     ) {
+      // When the end pointer meet the "}}" and the start pointer is "{{"
+      // we can extract the string slice as template or normal string.
       const str = value.slice(start + 2, end);
       if (templateSet.has(str)) {
         res.push({
@@ -91,28 +95,16 @@ const getTemplateInputs = (
           value: `{{${str}}}`,
           type: "string",
         });
-        if (res.length > 1 && res[res.length - 2].type === "string") {
-          const last = res.pop();
-          if (last) {
-            res[res.length - 1].value = `${res[res.length - 1].value}${
-              last.value
-            }`;
-          }
-        }
       }
       end += 2;
       start = end;
     } else if (value.slice(end, end + 2) === "{{") {
+      // When the end pointer meet the "{{"
+      // we should reset the position of the start pointer.
       res.push({
         value: value.slice(start, end),
         type: "string",
       });
-      if (res.length > 1 && res[res.length - 2].type === "string") {
-        const last = res.pop();
-        res[res.length - 1].value = `${res[res.length - 1].value}${
-          last ? last.value : ""
-        }`;
-      }
       start = end;
       end += 2;
     } else {
@@ -127,9 +119,27 @@ const getTemplateInputs = (
     });
   }
 
-  return res;
+  // Join the adjacent string value
+  return res.reduce((result, data) => {
+    if (data.type === "template") {
+      return [...result, data];
+    }
+
+    let str = data.value;
+
+    if (result.length > 0 && result[result.length - 1].type === "string") {
+      const last = result.pop();
+      str = `${last ? last.value : ""}${str}`;
+    }
+
+    return [...result, {
+      value: str,
+      type: "string",
+    }];
+  }, [] as TemplateInput[]);
 };
 
+// templateInputsToString will convert TemplateInput array into string
 const templateInputsToString = (inputs: TemplateInput[]): string => {
   return inputs
     .map((input) =>
@@ -268,6 +278,7 @@ export default defineComponent({
     },
     onTemplateAdd(template: Template) {
       if (this.state.inputData) {
+        // If the last input contains user's input, we also need to add it
         this.state.templateInputs.push({
           value: this.state.inputData,
           type: "string",
@@ -293,24 +304,28 @@ export default defineComponent({
       if (this.state.templateInputs.length === 0) {
         return;
       }
-      if (i - 1 < 0 || i - 1 >= this.state.templateInputs.length) {
+
+      const index = i - 1;
+      if (index < 0 || index >= this.state.templateInputs.length) {
         return;
       }
 
-      const template = this.state.templateInputs[i - 1];
+      const template = this.state.templateInputs[index];
       if (template.type !== "string") {
         return;
       }
 
       if (i === this.state.templateInputs.length) {
+        // If the last value is string, we need to extract it into the last input.
         const last = this.state.templateInputs.pop();
 
         this.state.inputData = `${
           last ? last.value : ""
         }${this.state.inputData}`;
       } else if (this.state.templateInputs[i].type === "string") {
+        // Join the adjacent string value
         this.state.templateInputs = [
-          ...this.state.templateInputs.slice(0, i - 1),
+          ...this.state.templateInputs.slice(0, index),
           {
             value: `${template.value}${this.state.templateInputs[i].value}`,
             type: "string",
