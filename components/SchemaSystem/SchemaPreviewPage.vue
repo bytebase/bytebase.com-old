@@ -14,7 +14,7 @@
     <SchemaSystemPreview
       id="preview"
       :rules="rules"
-      :engine="engine"
+      :title="title"
       class="my-10"
     />
   </div>
@@ -26,10 +26,7 @@ import domtoimage from "dom-to-image";
 import SchemaSystemHeader from "./SchemaSystemHeader.vue";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
-import {
-  Engine,
-  SelectedRule,
-} from "../../common/schemaSystem";
+import { SelectedRule } from "../../common/schemaSystem";
 
 export default defineComponent({
   components: {
@@ -42,9 +39,9 @@ export default defineComponent({
       required: true,
       type: Array as PropType<SelectedRule[]>,
     },
-    engine: {
+    title: {
       required: true,
-      type: Object as PropType<Engine>,
+      type: String,
     },
   },
   methods: {
@@ -56,7 +53,7 @@ export default defineComponent({
         .toPng(node, { bgcolor: "#fff" })
         .then((dataUrl) => {
           var link = document.createElement("a");
-          link.download = `${this.engine.name}-Schema-System.png`;
+          link.download = `${this.$props.title}.png`;
           link.href = dataUrl;
           link.click();
         });

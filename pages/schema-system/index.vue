@@ -24,9 +24,7 @@
           >
             schema system
           </span>
-          is the world's most popular open source database. Bytebase supports
-          MySQL database natively to manage schema changes, backups, record
-          migration history and etc.
+          is a online tool to create the schema guideline for your database.
         </h2>
         <div
           class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"

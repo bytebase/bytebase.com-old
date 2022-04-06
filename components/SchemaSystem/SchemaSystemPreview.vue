@@ -29,7 +29,7 @@
     </aside>
     <div class="lg:mt-0 lg:col-span-2 xl:col-span-3">
       <h1 class="text-left text-3xl font-bold mb-5">
-        Bytebase Schema System for {{ engine.name }}
+        {{ title }}
       </h1>
       <div v-for="category in categories" :key="category.id" class="py-4">
         <a
@@ -108,13 +108,13 @@ export default defineComponent({
     SchemaRuleLevelBadge,
   },
   props: {
+    title: {
+      required: true,
+      type: String,
+    },
     rules: {
       required: true,
       type: Array as PropType<SelectedRule[]>,
-    },
-    engine: {
-      required: true,
-      type: Object as PropType<Engine>,
     },
   },
   setup() {

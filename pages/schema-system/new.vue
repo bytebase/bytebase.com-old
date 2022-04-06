@@ -42,6 +42,7 @@
             v-else-if="currentStepId === 'Step 3'"
             id="preview"
             :rules="state.rules"
+            :title="`Bytebase Schema System for ${ state.engine.name }`"
             :engine="state.engine"
           />
         </transition>
