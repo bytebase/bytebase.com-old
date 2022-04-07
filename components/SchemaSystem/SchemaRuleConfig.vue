@@ -81,6 +81,7 @@
 <script lang="ts">
 import { defineComponent, reactive, PropType, watch } from "@nuxtjs/composition-api";
 import {
+  levels,
   SelectedRule,
   RuleLevel,
   RulePayload,
@@ -96,12 +97,6 @@ interface LocalState {
     [val: string]: any;
   };
 }
-
-const levels = [
-  { id: RuleLevel.Error, name: "error" },
-  { id: RuleLevel.Warning, name: "warning" },
-  { id: RuleLevel.Disabled, name: "disabled" },
-];
 
 const initStatePayload = (
   payload: RulePayload | undefined

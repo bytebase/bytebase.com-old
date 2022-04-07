@@ -21,6 +21,32 @@
     </div>
     <div class="lg:grid lg:grid-cols-6 lg:gap-x-8">
       <aside class="hidden mt-2 lg:block lg:col-span-2 p-5">
+        <div class="space-y-6 mb-6 pb-6 border-b border-gray-300">
+          <h1 class="text-left text-2xl font-semibold">Filter</h1>
+          <div class="space-y-2">
+            <div
+              v-for="(filter, index) in state.filter"
+              :key="index"
+              class="flex items-center"
+            >
+              <input
+                type="checkbox"
+                :id="filter.id"
+                :value="filter.id"
+                v-model="filter.checked"
+                class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+              />
+              <label :for="filter.id" class="ml-3 items-center text-sm text-gray-600">
+                {{ filter.id }}
+                <span
+                  class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
+                >
+                  {{ filterItemCount(filter) }}
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
         <div class="space-y-6">
           <h1 class="text-left text-2xl font-semibold">Rules</h1>
           <fieldset
@@ -89,6 +115,7 @@ import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
 import {
+  levels,
   rules,
   Rule,
   RulePayload,
@@ -103,11 +130,24 @@ import PlusCircleIcon from "../Icons/PlusCircle.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 import slug from "slug";
 
+interface FilterItem {
+  id: string;
+  type: "category" | "level";
+  checked: boolean;
+}
+
 interface LocalState {
   openSelectModal: boolean;
   openConfigModal: boolean;
   selectedRule?: SelectedRule;
+  filter: FilterItem[];
 }
+
+const baseFilterOptions: FilterItem[] = levels.map((l) => ({
+  id: l.id,
+  type: "level",
+  checked: false,
+}));
 
 export default defineComponent({
   components: {
@@ -134,10 +174,19 @@ export default defineComponent({
     },
   },
   emits: ["add", "remove", "change", "reset"],
-  setup() {
+  setup(props) {
+    const filterOptions = [
+      ...baseFilterOptions,
+      ...props.selectedRules.reduce((map, rule) => {
+        map.set(rule.category, { id: rule.category, type: "category", checked: false });
+        return map;
+      }, new Map<string, FilterItem>()).values()
+    ];
+
     const state = reactive<LocalState>({
       openSelectModal: false,
       openConfigModal: false,
+      filter: filterOptions
     });
 
     return {
@@ -149,6 +198,16 @@ export default defineComponent({
   computed: {
     categories(): RuleCategory[] {
       const dict = this.$props.selectedRules.reduce((dict, rule) => {
+        // const isSelected = this.state.filter.some((filter) => {
+        //   return (
+        //     (filter.type === "level" && rule.level === filter.id && filter.checked) ||
+        //     (filter.type === "category" && rule.category === filter.id && filter.checked)
+        //   );
+        // });
+        if (!this.isFilteredRule(rule)) {
+          return dict;
+        }
+
         if (!dict[rule.category]) {
           const id = rule.category.toLowerCase();
           const title = `${id[0].toUpperCase()}${id.slice(1)}`;
@@ -166,6 +225,26 @@ export default defineComponent({
     },
   },
   methods: {
+    isFilteredRule(rule: SelectedRule): boolean {
+      if (this.state.filter.every((f) => !f.checked)) {
+        return true;
+      }
+
+      return this.state.filter.some((filter) => {
+        return (
+          (filter.type === "level" && rule.level === filter.id && filter.checked) ||
+          (filter.type === "category" && rule.category === filter.id && filter.checked)
+        );
+      });
+    },
+    filterItemCount(filter: FilterItem) {
+      return this.$props.selectedRules.filter((r) => {
+        return (
+          (filter.type === "level" && filter.id === r.level) ||
+          (filter.type === "category" && filter.id === r.category)
+        )
+      }).length;
+    },
     onRuleSelect(rule: SelectedRule) {
       this.state.selectedRule = rule;
       this.state.openConfigModal = true;

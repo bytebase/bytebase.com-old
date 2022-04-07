@@ -4,6 +4,12 @@ export enum RuleLevel {
   Warning = "warning",
 }
 
+export const levels = [
+  { id: RuleLevel.Error, name: "error" },
+  { id: RuleLevel.Warning, name: "warning" },
+  { id: RuleLevel.Disabled, name: "disabled" },
+];
+
 export enum PayloadType {
   String = "string",
   StringArray = "string[]",
