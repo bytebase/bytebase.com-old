@@ -23,16 +23,23 @@
         <p class="mb-3">level</p>
         <div class="flex gap-x-3">
           <div
-            v-for="level in levels"
-            :key="level.id"
-            class="cursor-pointer"
-            @click="changeLevel(level.id)"
+            v-for="(level, index) in levels"
+            :key="index"
+            class="flex items-center"
           >
-            <Badge
-              :text="level.name"
-              :theme="state.level === level.id ? 'indigo' : 'gray'"
-              :canRemove="false"
+            <input
+              :id="`level-${level.id}`"
+              :value="level.id"
+              type="radio"
+              :checked="level.id === state.level"
+              @input="
+                () => changeLevel(level.id)
+              "
+              class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
             />
+            <label :for="`level-${level.id}`" class="ml-2 items-center text-sm text-gray-600">
+              {{ level.id }}
+            </label>
           </div>
         </div>
       </div>
