@@ -37,7 +37,7 @@
                 class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
               />
               <label :for="filter.id" class="ml-3 items-center text-sm text-gray-600">
-                {{ filter.id }}
+                {{ filter.name }}
                 <span
                   class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
                 >
@@ -132,6 +132,7 @@ import slug from "slug";
 
 interface FilterItem {
   id: string;
+  name: string;
   type: "category" | "level";
   checked: boolean;
 }
@@ -145,6 +146,7 @@ interface LocalState {
 
 const baseFilterOptions: FilterItem[] = levels.map((l) => ({
   id: l.id,
+  name: l.name,
   type: "level",
   checked: false,
 }));
@@ -176,11 +178,16 @@ export default defineComponent({
   emits: ["add", "remove", "change", "reset"],
   setup(props) {
     const filterOptions = [
-      ...baseFilterOptions,
       ...props.selectedRules.reduce((map, rule) => {
-        map.set(rule.category, { id: rule.category, type: "category", checked: false });
+        map.set(rule.category, {
+          id: rule.category,
+          type: "category",
+          name: `${rule.category[0].toUpperCase()}${rule.category.slice(1).toLowerCase()}`,
+          checked: false
+        });
         return map;
-      }, new Map<string, FilterItem>()).values()
+      }, new Map<string, FilterItem>()).values(),
+      ...baseFilterOptions,
     ];
 
     const state = reactive<LocalState>({

@@ -56,26 +56,6 @@ export interface RuleCategory {
   rules: SelectedRule[];
 }
 
-interface EngineRule {
-  id: string;
-  level: RuleLevel;
-  payload?: {
-    [key: string]: any;
-  };
-}
-
-export interface EngineConfiguration {
-  version: string;
-  rules: EngineRule[];
-}
-
-export interface SchemaConfiguration {
-  version: string;
-  engine: {
-    [key: string]: EngineConfiguration;
-  };
-}
-
 export type EngineType = "mysql";
 
 export interface Engine {
