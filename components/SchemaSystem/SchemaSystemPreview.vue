@@ -37,24 +37,6 @@
             </div>
           </div>
         </div>
-        <div class="flex gap-x-3 py-2">
-          <div
-            v-for="(level, index) in levels"
-            :key="index"
-            class="flex items-center"
-          >
-            <input
-              :id="`level-${level.id}`"
-              :value="level.id"
-              type="radio"
-              :checked="level.id === rule.level"
-              class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-            />
-            <label :for="`level-${level.id}`" class="ml-2 items-center text-sm text-gray-600">
-              {{ level.name }}
-            </label>
-          </div>
-        </div>
         <p class="py-2 text-gray-400">{{ rule.description }}</p>
         <div v-if="rule.payload" class="mt-1">
           <ul role="list" class="space-y-4 list-disc list-inside">
@@ -92,7 +74,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
-import { levels, RuleCategory } from "../../common/schemaSystem";
+import { RuleCategory } from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import Pencil from "../Icons/Pencil.vue";
 import slug from "slug";
@@ -116,7 +98,6 @@ export default defineComponent({
   setup() {
     return {
       slug,
-      levels,
     };
   },
 });
