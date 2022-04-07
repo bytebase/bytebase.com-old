@@ -4,24 +4,21 @@
       {{ title }}
     </h1>
     <div v-for="category in categories" :key="category.id" class="py-4">
-      <h2
-        class="text-left text-2xl font-semibold"
+      <a
+        :href="`#${slug(category.id)}`"
+        class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
         {{ category.title }}
-      </h2>
-      <div v-for="rule in category.rules" :key="rule.id" class="py-4 group"
->
+      </a>
+      <div v-for="rule in category.rules" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
-          <h3
-            class="text-left text-xl text-gray-600"
+          <a
+            :href="`#${slug(rule.id)}`"
+            class="text-left text-xl text-gray-600 hover:underline"
           >
             {{ rule.id }}
-          </h3>
+          </a>
           <div class="mt-3 flex items-center space-x-4 sm:mt-0">
-            <Badge
-              :text="`DB version >= ${ rule.dbVersion }`"
-              :canRemove="false"
-            />
             <SchemaRuleLevelBadge :level="rule.level" />
             <div @click="$emit('select', rule)">
               <Pencil
@@ -69,12 +66,11 @@
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
 import { RuleCategory } from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
-import Badge from "../Badge.vue";
 import Pencil from "../Icons/Pencil.vue";
+import slug from "slug";
 
 export default defineComponent({
   components: {
-    Badge,
     Pencil,
     SchemaRuleLevelBadge,
   },
@@ -89,5 +85,8 @@ export default defineComponent({
     },
   },
   emits: ["select"],
+  setup() {
+    return { slug };
+  },
 });
 </script>

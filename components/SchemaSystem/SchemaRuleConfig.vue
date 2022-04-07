@@ -11,10 +11,6 @@
             :text="rule.category"
             :canRemove="false"
           />
-          <Badge
-            :text="`DB version >= ${ rule.dbVersion }`"
-            :canRemove="false"
-          />
         </div>
         <div class="text-sm text-gray-400">
           {{ rule.description }}

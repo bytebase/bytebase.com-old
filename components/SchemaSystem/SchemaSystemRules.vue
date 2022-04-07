@@ -17,10 +17,6 @@
                 <span class="absolute inset-0" aria-hidden="true" />
                 <p class="text-lg font-medium text-gray-900">
                   {{ rule.id }}
-                  <Badge
-                    :text="`DB version >= ${ rule.dbVersion }`"
-                    :canRemove="false"
-                  />
                 </p>
                 <p class="text-sm text-gray-500 truncate mt-2">
                   {{ rule.description }}
@@ -37,7 +33,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
 import { Rule } from "../../common/schemaSystem";
-import Badge from "../Badge.vue";
 
 interface RuleCategory {
   id: string;
@@ -45,9 +40,6 @@ interface RuleCategory {
 }
 
 export default defineComponent({
-  components: {
-    Badge
-  },
   props: {
     rules: {
       required: true,

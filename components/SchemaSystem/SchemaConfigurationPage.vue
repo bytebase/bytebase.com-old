@@ -22,7 +22,7 @@
     <div class="lg:grid lg:grid-cols-6 lg:gap-x-8">
       <aside class="hidden mt-2 lg:block lg:col-span-2 p-5">
         <div class="space-y-6">
-          <h1 class="text-left text-2xl font-semibold">Configuration</h1>
+          <h1 class="text-left text-2xl font-semibold">Rules</h1>
           <fieldset
             v-for="(category, index) in categories"
             :key="index"
@@ -51,15 +51,6 @@
               </div>
             </div>
           </fieldset>
-          <ActionButton
-            :class-names="[
-              'border text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white focus:ring-indigo-700',
-            ]"
-            @click="state.openSelectModal = true"
-          >
-            <PlusCircleIcon class="w-5 h-5" />
-            &nbsp; Add rule
-          </ActionButton>
         </div>
       </aside>
       <SchemaSystemPreview
