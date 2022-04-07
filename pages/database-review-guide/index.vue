@@ -21,7 +21,7 @@
       <div
         v-for="guideline in guidelines"
         :key="guideline.id"
-        class="cursor-pointer bg-transparent border border-gray-300 hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs"
+        class="cursor-pointer bg-transparent border border-gray-300 hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs relative"
         :class="state.guideline.id === guideline.id ? 'bg-gray-100' : ''"
         @click="onGuidelineChange(guideline)"
       >
@@ -37,6 +37,10 @@
             style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
           >{{ guideline.id.split("-").slice(-1)[0] }}</span>
         </div>
+        <CheckCircleIcon
+          v-if="state.guideline.id === guideline.id"
+          class="w-7 h-7 text-gray-500 absolute top-3 left-3"
+        />
       </div>
 
       <div
