@@ -118,7 +118,6 @@ import {
 import Modal from "../Modal.vue";
 import SchemaSystemRules from "./SchemaSystemRules.vue";
 import TrashIcon from "../Icons/Trash.vue";
-import PlusCircleIcon from "../Icons/PlusCircle.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 import slug from "slug";
 
@@ -147,7 +146,6 @@ export default defineComponent({
     Modal,
     ActionButton,
     TrashIcon,
-    PlusCircleIcon,
     SchemaRuleConfig,
     SchemaSystemRules,
     SchemaSystemPreview,
