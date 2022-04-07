@@ -1,75 +1,53 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-      <div
-        class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left flex flex-col justify-center"
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="text-center">
+      <h1
+        class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        <h1>
-          <span
-            class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl"
-          >
-            <span class="block text-gray-900">Bytebase</span>
-            <span class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700">
-              Database Review Guide
-            </span>
-          </span>
-        </h1>
-        <h2
-          class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+        Database Review Guide
+      </h1>
+      <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
+        Bytebase
+        <span
+          class="text-indigo-600"
+          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
         >
-          Bytebase
-          <span
-            class="text-blue-600"
-            style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-          >
-            database review guide
-          </span>
-          is a online tool to create the schema review guideline for your database.
-        </h2>
-      </div>
-      <div
-        class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
-      >
-        <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-          <img class="w-full" src="~/assets/illustration/instruction.webp" alt="" />
-        </div>
-      </div>
+          database review guide
+        </span>
+        is a online tool to create the schema review guideline for your database.
+      </h2>
     </div>
-    <div class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-5">
+    <div class="flex flex-col sm:flex-row justify-center items-center mt-10 gap-x-10 gap-y-10">
       <div
         v-for="guideline in guidelines"
         :key="guideline.id"
-        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-3 transition-all flex flex-col justify-center items-start relative"
-        :class="state.guideline.id === guideline.id ? 'bg-gray-100' : ''"
+        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs"
+        :class="state.guideline.id === guideline.id ? 'bg-gray-100' : 'border border-gray-300'"
         @click="onGuidelineChange(guideline)"
       >
         <img
-          class=" h-24"
+          class="h-24"
           src="~/assets/schema-system/mysql.webp"
           alt=""
         />
-        <div class="my-4">
-          <span class="font-semibold text-lg lg:text-xl">{{ guideline.engine.name }} guideline</span>
+        <div class="mt-4">
+          <span class="text-lg lg:text-xl">Guideline for</span>
           <span
-            class="font-semibold text-blue-600 text-lg lg:text-xl"
+            class="text-indigo-600 text-lg lg:text-xl"
             style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-          >for {{ guideline.id.split("-").slice(-1)[0] }}</span>
+          >{{ guideline.id.split("-").slice(-1)[0] }}</span>
         </div>
-        <CheckCircleIcon
-          v-if="state.guideline.id === guideline.id"
-          class="w-7 h-7 text-gray-500 absolute right-3 top-3"
-        />
       </div>
 
       <div
-        class=" rounded-lg p-3 w-full sm:max-w-xs flex flex-col justify-center items-start"
+        class="rounded-lg p-6 flex flex-col justify-center items-center"
       >
         <img
           class="h-24"
           src="~/assets/schema-system/postgres.webp"
           alt=""
         />
-        <div class="my-4 font-semibold text-lg lg:text-xl">
+        <div class="mt-4 text-lg lg:text-xl">
           coming soon
         </div>
       </div>
@@ -132,12 +110,12 @@ const mysql: Engine = {
 
 const guidelines: GuidelineTemplate[] = [
   {
-    id: "mysql-prod",
+    id: "MySQL-Prod",
     engine: mysql,
     rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
   },
   {
-    id: "mysql-dev",
+    id: "MySQL-Dev",
     engine: mysql,
     rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
   }

@@ -1,8 +1,16 @@
 <template>
   <div class="lg:mt-0 lg:col-span-3">
-    <h1 class="text-left text-3xl font-bold mb-5">
-      {{ title }}
-    </h1>
+    <div class="mb-5">
+      <h1 class="text-left text-3xl font-bold mb-2">
+        {{ title }}
+      </h1>
+      <p>
+        Made by
+        <a href="bytebase.com/database-review-guide" class="text-indigo-600 hover:underline">
+          bytebase.com/database-review-guide
+        </a>
+      </p>
+    </div>
     <div v-for="category in categories" :key="category.id" class="py-4">
       <a
         :href="`#${slug(category.id)}`"
