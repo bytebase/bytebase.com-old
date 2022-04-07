@@ -198,12 +198,6 @@ export default defineComponent({
   computed: {
     categories(): RuleCategory[] {
       const dict = this.$props.selectedRules.reduce((dict, rule) => {
-        // const isSelected = this.state.filter.some((filter) => {
-        //   return (
-        //     (filter.type === "level" && rule.level === filter.id && filter.checked) ||
-        //     (filter.type === "category" && rule.category === filter.id && filter.checked)
-        //   );
-        // });
         if (!this.isFilteredRule(rule)) {
           return dict;
         }
