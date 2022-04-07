@@ -2,7 +2,7 @@
   <Badge
     :text="level"
     :canRemove="false"
-    :theme="level === 'error' ? 'red' : 'yellow'"
+    :theme="theme"
   />
 </template>
 
@@ -21,5 +21,17 @@ export default defineComponent({
       type: String as PropType<RuleLevel>,
     },
   },
+  computed: {
+    theme(): string {
+      switch (this.$props.level) {
+        case RuleLevel.Error:
+          return "red";
+        case RuleLevel.Warning:
+          return "yellow";
+        default:
+          return "gray";
+      }
+    }
+  }
 });
 </script>

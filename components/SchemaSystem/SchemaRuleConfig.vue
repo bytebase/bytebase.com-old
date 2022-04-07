@@ -20,14 +20,20 @@
 
     <div v-if="state.open" class="px-2 py-5 text-sm">
       <div class="mb-7">
-        <p class="mb-2">level</p>
-        <div class="flex">
-          <Selecter
-            :options="levels"
-            :selected="rule.level"
-            class="w-32"
-            @select="(val) => $emit('level-change', val)"
-          />
+        <p class="mb-3">level</p>
+        <div class="flex gap-x-3">
+          <div
+            v-for="level in levels"
+            :key="level.id"
+            class="cursor-pointer"
+            @click="changeLevel(level.id)"
+          >
+            <Badge
+              :text="level.name"
+              :theme="state.level === level.id ? 'indigo' : 'gray'"
+              :canRemove="false"
+            />
+          </div>
         </div>
       </div>
       <div v-if="rule.payload">
@@ -36,7 +42,7 @@
           :key="key"
           class="mb-7"
         >
-          <p class="mb-2">{{ key }}</p>
+          <p class="mb-3">{{ key }}</p>
           <input
             v-if="payload.type === 'string'"
             v-model="state.payload[key]"
@@ -80,20 +86,21 @@ import {
   RulePayload,
 } from "../../common/schemaSystem";
 import Badge from "../Badge.vue";
-import Selecter from "../Selecter.vue";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import { InputWithTemplate } from "../InputWithTemplate";
 
 interface LocalState {
   open: boolean;
+  level: RuleLevel;
   payload: {
     [val: string]: any;
   };
 }
 
 const levels = [
-  { id: RuleLevel.Error, name: "Error" },
-  { id: RuleLevel.Warning, name: "Warning" },
+  { id: RuleLevel.Error, name: "error" },
+  { id: RuleLevel.Warning, name: "warning" },
+  { id: RuleLevel.Disabled, name: "disabled" },
 ];
 
 const initStatePayload = (
@@ -109,7 +116,6 @@ const initStatePayload = (
 export default defineComponent({
   components: {
     Badge,
-    Selecter,
     SchemaRuleLevelBadge,
     InputWithTemplate,
   },
@@ -123,6 +129,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const state = reactive<LocalState>({
       open: true,
+      level: props.rule.level,
       payload: initStatePayload(props.rule.payload),
     });
 
@@ -138,6 +145,10 @@ export default defineComponent({
     };
   },
   methods: {
+    changeLevel(level: RuleLevel) {
+      this.state.level = level;
+      this.$emit("level-change", level);
+    },
     removeFromList(key: string, val: any) {
       if (!Array.isArray(this.state.payload[key])) {
         return;

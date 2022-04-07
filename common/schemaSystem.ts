@@ -1,4 +1,5 @@
 export enum RuleLevel {
+  Disabled = "disabled",
   Error = "error",
   Warning = "warning",
 }
