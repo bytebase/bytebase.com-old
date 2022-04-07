@@ -37,12 +37,12 @@
               :key="ruleIndex"
               class="pt-2 flex items-center text-sm group"
             >
-              <div
-                class="text-indigo-600 hover:underline cursor-pointer"
-                @click="onRuleSelect(rule)"
+              <a
+                :href="`#${slug(rule.id)}`"
+                class="text-gray-600 hover:underline cursor-pointer"
               >
                 {{ rule.id }}
-              </div>
+              </a>
 
               <div @click="$emit('remove', rule)">
                 <TrashIcon
@@ -101,6 +101,7 @@ import SchemaSystemRules from "./SchemaSystemRules.vue";
 import TrashIcon from "../Icons/Trash.vue";
 import PlusCircleIcon from "../Icons/PlusCircle.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
+import slug from "slug";
 
 interface LocalState {
   openSelectModal: boolean;
@@ -142,6 +143,7 @@ export default defineComponent({
     return {
       state,
       rules,
+      slug,
     };
   },
   computed: {

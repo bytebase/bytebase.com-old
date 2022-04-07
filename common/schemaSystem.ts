@@ -78,13 +78,13 @@ export interface Engine {
 
 export const rules: Rule[] = [
   {
-    id: "mysql.engine.use-innodb",
+    id: "engine.use-innodb",
     category: "database",
     description: "Force to use InnoDB as database engine",
   },
   {
-    id: "mysql.table.naming-convention",
-    category: "table",
+    id: "naming.table",
+    category: "naming",
     description:
       "Limit the table name format. The default convention is snake_lower_case",
     payload: {
@@ -95,13 +95,13 @@ export const rules: Rule[] = [
     },
   },
   {
-    id: "mysql.table.require-pk",
+    id: "table.require-pk",
     category: "table",
     description: "Force to require a primary key for each table",
   },
   {
-    id: "mysql.column.naming-convention",
-    category: "column",
+    id: "naming.column",
+    category: "naming",
     description:
       "Limit the column name format. The default convention is snake_lower_case",
     payload: {
@@ -112,7 +112,7 @@ export const rules: Rule[] = [
     },
   },
   {
-    id: "mysql.column.required-columns",
+    id: "column.required",
     category: "column",
     description: "Define the required columns in each table",
     payload: {
@@ -123,13 +123,13 @@ export const rules: Rule[] = [
     },
   },
   {
-    id: "mysql.column.not-allow-null",
+    id: "column.no-null",
     category: "column",
     description: "Columns cannot allow null value",
   },
   {
-    id: "mysql.index.naming-convention",
-    category: "index",
+    id: "naming.index",
+    category: "naming",
     description: "Limit the index name format",
     payload: {
       pk: {
@@ -177,23 +177,18 @@ export const rules: Rule[] = [
     },
   },
   {
-    id: "mysql.select.no-select-all",
+    id: "query.select.no-select-all",
     category: "query",
     description: "Not allow 'SELECT *'",
   },
   {
-    id: "mysql.select.require-where",
+    id: "query.where.require",
     category: "query",
     description: "Query must contains 'WHERE' limit",
   },
   {
-    id: "mysql.where.no-left-like",
+    id: "query.where.no-leading-wildcard-like",
     category: "query",
     description: "Not allow '%x' in LIKE",
-  },
-  {
-    id: "mysql.where.no-all-like",
-    category: "query",
-    description: "Not allow '%x%' in LIKE",
   },
 ];
