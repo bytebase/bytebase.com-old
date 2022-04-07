@@ -5,9 +5,9 @@ export enum RuleLevel {
 }
 
 export const levels = [
-  { id: RuleLevel.Error, name: "error" },
-  { id: RuleLevel.Warning, name: "warning" },
-  { id: RuleLevel.Disabled, name: "disabled" },
+  { id: RuleLevel.Error, name: "Error" },
+  { id: RuleLevel.Warning, name: "Warning" },
+  { id: RuleLevel.Disabled, name: "Disabled" },
 ];
 
 export enum PayloadType {
@@ -63,11 +63,27 @@ export interface Engine {
   name: string;
 }
 
-export const rules: Rule[] = [
+export interface GuidelineTemplate {
+  id: string;
+  engine: Engine;
+  rules: SelectedRule[];
+}
+
+const mysql: Engine = {
+  id: "mysql",
+  name: "MySQL",
+};
+
+const rules: Rule[] = [
   {
     id: "engine.mysql.use-innodb",
     category: "database",
     description: "Force to use InnoDB as MySQL engine",
+  },
+  {
+    id: "table.require-pk",
+    category: "table",
+    description: "Force to require a primary key for each table",
   },
   {
     id: "naming.table",
@@ -82,11 +98,6 @@ export const rules: Rule[] = [
     },
   },
   {
-    id: "table.require-pk",
-    category: "table",
-    description: "Force to require a primary key for each table",
-  },
-  {
     id: "naming.column",
     category: "naming",
     description:
@@ -97,22 +108,6 @@ export const rules: Rule[] = [
         default: "^[a-z]+(_[a-z]+)?$",
       },
     },
-  },
-  {
-    id: "column.required",
-    category: "column",
-    description: "Define the required columns in each table",
-    payload: {
-      columns: {
-        type: PayloadType.StringArray,
-        default: ["id", "created_ts", "updated_ts", "creator_id", "updater_id"],
-      },
-    },
-  },
-  {
-    id: "column.no-null",
-    category: "column",
-    description: "Columns cannot allow null value",
   },
   {
     id: "naming.index",
@@ -164,6 +159,22 @@ export const rules: Rule[] = [
     },
   },
   {
+    id: "column.required",
+    category: "column",
+    description: "Define the required columns in each table",
+    payload: {
+      columns: {
+        type: PayloadType.StringArray,
+        default: ["id", "created_ts", "updated_ts", "creator_id", "updater_id"],
+      },
+    },
+  },
+  {
+    id: "column.no-null",
+    category: "column",
+    description: "Columns cannot allow null value",
+  },
+  {
     id: "query.select.no-select-all",
     category: "query",
     description: "Not allow 'SELECT *'",
@@ -178,4 +189,34 @@ export const rules: Rule[] = [
     category: "query",
     description: "Not allow '%x' in LIKE",
   },
+];
+
+export const guidelineTemplates: GuidelineTemplate[] = [
+  {
+    id: "MySQL-Prod",
+    engine: mysql,
+    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+  },
+  {
+    id: "MySQL-Dev",
+    engine: mysql,
+    rules: [
+      "table.require-pk",
+      "naming.table",
+      "naming.column",
+      "naming.index",
+      "column.required",
+      "column.no-null",
+    ].reduce((res, id) => {
+      const rule = rules.find((r) => r.id === id);
+      if (!rule) {
+        return res;
+      }
+      res.push({
+        ...rule,
+        level: RuleLevel.Warning,
+      });
+      return res;
+    }, [] as SelectedRule[]),
+  }
 ];

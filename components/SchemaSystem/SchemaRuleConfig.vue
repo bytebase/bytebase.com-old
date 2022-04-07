@@ -38,7 +38,7 @@
               class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
             />
             <label :for="`level-${level.id}`" class="ml-2 items-center text-sm text-gray-600">
-              {{ level.id }}
+              {{ level.name }}
             </label>
           </div>
         </div>

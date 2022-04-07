@@ -88,13 +88,6 @@
       />
     </div>
     <Modal
-      :open="state.openSelectModal"
-      title="Select rule"
-      @close="state.openSelectModal = false"
-    >
-      <SchemaSystemRules :rules="rules" @select="onRuleAdd" />
-    </Modal>
-    <Modal
       :open="state.openConfigModal && !!state.selectedRule"
       :title="state.selectedRule ? state.selectedRule.id : ''"
       @close="state.openConfigModal = false"
@@ -116,7 +109,6 @@ import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
 import {
   levels,
-  rules,
   Rule,
   RulePayload,
   RuleLevel,
@@ -138,7 +130,6 @@ interface FilterItem {
 }
 
 interface LocalState {
-  openSelectModal: boolean;
   openConfigModal: boolean;
   selectedRule?: SelectedRule;
   filter: FilterItem[];
@@ -191,14 +182,12 @@ export default defineComponent({
     ];
 
     const state = reactive<LocalState>({
-      openSelectModal: false,
       openConfigModal: false,
       filter: filterOptions
     });
 
     return {
       state,
-      rules,
       slug,
     };
   },
@@ -251,7 +240,6 @@ export default defineComponent({
       this.state.openConfigModal = true;
     },
     onRuleAdd(rule: Rule) {
-      this.state.openSelectModal = false;
       this.$emit("add", rule);
     },
     onPayloadChange(data: { [val: string]: any }) {

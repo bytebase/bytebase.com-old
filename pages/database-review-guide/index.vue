@@ -89,37 +89,13 @@ import ActionButton from "../../components/ActionButton.vue";
 import CheckCircleIcon from "../../components/Icons/CheckCircle.vue";
 import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
 import {
-  rules,
   Rule,
   RuleLevel,
   SelectedRule,
-  Engine,
+  GuidelineTemplate,
+  guidelineTemplates
 } from "../../common/schemaSystem";
 import Modal from "../../components/Modal.vue";
-
-interface GuidelineTemplate {
-  id: string;
-  engine: Engine;
-  rules: SelectedRule[];
-}
-
-const mysql: Engine = {
-  id: "mysql",
-  name: "MySQL",
-};
-
-const guidelines: GuidelineTemplate[] = [
-  {
-    id: "MySQL-Prod",
-    engine: mysql,
-    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
-  },
-  {
-    id: "MySQL-Dev",
-    engine: mysql,
-    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
-  }
-];
 
 interface LocalState {
   guideline: GuidelineTemplate;
@@ -137,15 +113,15 @@ export default defineComponent({
   },
   setup() {
     const state = reactive<LocalState>({
-      guideline: guidelines[0],
-      rules: guidelines[0].rules,
+      guideline: guidelineTemplates[0],
+      rules: guidelineTemplates[0].rules,
       ruleChanged: false,
       openWarningModal: false,
     });
 
     return {
       state,
-      guidelines,
+      guidelines: guidelineTemplates,
     };
   },
   methods: {
