@@ -21,8 +21,8 @@
       <div
         v-for="guideline in guidelines"
         :key="guideline.id"
-        class="cursor-pointer bg-transparent hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs"
-        :class="state.guideline.id === guideline.id ? 'bg-gray-100' : 'border border-gray-300'"
+        class="cursor-pointer bg-transparent border border-gray-300 hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs"
+        :class="state.guideline.id === guideline.id ? 'bg-gray-100' : ''"
         @click="onGuidelineChange(guideline)"
       >
         <img
