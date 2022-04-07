@@ -78,9 +78,9 @@ export interface Engine {
 
 export const rules: Rule[] = [
   {
-    id: "engine.use-innodb",
+    id: "engine.mysql.use-innodb",
     category: "database",
-    description: "Force to use InnoDB as database engine",
+    description: "Force to use InnoDB as MySQL engine",
   },
   {
     id: "naming.table",
