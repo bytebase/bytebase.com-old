@@ -78,7 +78,7 @@ const rules: Rule[] = [
   {
     id: "engine.mysql.use-innodb",
     category: "database",
-    description: "Force to use InnoDB as MySQL engine",
+    description: "Require InnoDB as the storage engine.",
   },
   {
     id: "table.require-pk",
