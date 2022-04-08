@@ -5,7 +5,7 @@
         {{ title }}
       </h1>
       <p>
-        Made by
+        Made from
         <a href="bytebase.com/database-review-guide" class="text-indigo-600 hover:underline">
           https://bytebase.com/database-review-guide
         </a>
