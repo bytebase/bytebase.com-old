@@ -5,9 +5,7 @@ order: 30401
 
 # Compose a Query
 
-SQL Editor allows for a smooth SQL writing experience.
-
-With features of SQL code auto-completion, code formatting and keyboard shortcuts, the editor will help you write SQL queries efficiently.
+SQL Editor supports auto-completion, code formatting, and keyboard shortcuts.
 
 ## Autocomplete Suggestions
 
