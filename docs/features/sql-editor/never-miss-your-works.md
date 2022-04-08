@@ -3,7 +3,7 @@ title: Saved Sheet and Query History
 order: 30405
 ---
 
-# Nerver miss your work
+# Saved Sheet and Query History
 
 ## Sheets
 
