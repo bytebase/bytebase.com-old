@@ -228,6 +228,7 @@ export const guidelineTemplates: GuidelineTemplate[] = [
     id: "MySQL-Dev",
     database: mysql,
     rules: [
+      "engine.mysql.use-innodb",
       "table.require-pk",
       "naming.table",
       "naming.column",
