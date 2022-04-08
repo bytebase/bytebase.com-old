@@ -201,7 +201,7 @@ const rules: Rule[] = [
   {
     id: "query.where.no-leading-wildcard-like",
     category: "query",
-    description: "Disallow leading '%' in LIKE, e.g. LIKE foo = '%bar' is not allowed.",
+    description: "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
   },
 ];
 
