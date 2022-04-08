@@ -20,6 +20,6 @@ Currently, SQL Editor supports the following auto-completions:
 
 ## Format SQL
 
-You can format SQL queries with a shortcut key `(⇧ + ⌘ + F)` to improve your codes’ readability.
+You can click the `Format` button or use a shortcut key `(⇧ + ⌘ + F)` to format SQL queries.
 
 ![Format SQL](/static/docs-assets/sql-editor_format-sql.webp)
