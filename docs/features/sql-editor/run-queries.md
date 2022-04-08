@@ -7,7 +7,7 @@ order: 30402
 
 <hint-block type="info">
 
-Please note that SQL Editor only supports running SELECT queries now. SQL will detect your SQL queries. If you are running DDL or DML change queries, it will prompt you to create issues at Console.
+Please note that SQL Editor only supports running SELECT queries now. SQL will detect your SQL queries. If you are running DDL or DML change queries, it will prompt you to create a new issue to start the SQL review process.
 
 </hint-block>
 
