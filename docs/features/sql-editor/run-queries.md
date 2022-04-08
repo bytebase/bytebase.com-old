@@ -20,11 +20,3 @@ If you have multiple SQL queries separated by semicolons, SQL Editor will only r
 ## Explain query
 
 SQL Editor provides an `Explain` button to run EXPLAIN on the selected query. You can click it or use the shortcut key `(⌘ + E)` instead of prepending EXPLAIN manually.
-
-```sql
-# Run Query
-SELECT * FROM xxx;
-
-# Explain Query
-EXPLAIN SELECT * FROM xxx;
-```
