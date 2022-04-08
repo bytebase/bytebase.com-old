@@ -79,7 +79,7 @@ const mysql: Database = {
 const ruleList: Rule[] = [
   {
     id: "engine.mysql.use-innodb",
-    category: "database",
+    category: "engine",
     database: ["mysql"],
     description: "Require InnoDB as the storage engine.",
   },
@@ -119,7 +119,7 @@ const ruleList: Rule[] = [
     id: "naming.index.pk",
     category: "naming",
     database: ["common"],
-    description: "Limit the primary key name format",
+    description: "Enforce the primary key name format.",
     payload: {
       pk: {
         type: PayloadType.Template,
@@ -141,7 +141,7 @@ const ruleList: Rule[] = [
     id: "naming.index.uk",
     category: "naming",
     database: ["common"],
-    description: "Limit the unique key name format",
+    description: "Enforce the unique key name format.",
     payload: {
       uk: {
         type: PayloadType.Template,
@@ -163,7 +163,7 @@ const ruleList: Rule[] = [
     id: "naming.index.idx",
     category: "naming",
     database: ["common"],
-    description: "Limit the index name format",
+    description: "Enforce the index name format.",
     payload: {
       idx: {
         type: PayloadType.Template,
