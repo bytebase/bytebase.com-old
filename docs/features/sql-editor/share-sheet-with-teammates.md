@@ -15,7 +15,7 @@ You can configure the sheet with one of the following access levels:
 - `Project` - Both sheet OWNER and project OWNER can read/write, and project DEVELOPER can read
 - `Public` - Sheet OWNER can read/write, and all others can read
 
-![Setup permissions](/static/docs-assets/sql-editor_share-link-access.webp)
+![Configure access](/static/docs-assets/sql-editor_share-link-access.webp)
 
 ## Copy the share link
 
