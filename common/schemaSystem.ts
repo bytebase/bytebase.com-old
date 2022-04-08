@@ -101,7 +101,7 @@ const rules: Rule[] = [
     id: "naming.column",
     category: "naming",
     description:
-      "Limit the column name format. The default convention is snake_lower_case",
+      "Enforce the column name format. Default snake_lower_case.",
     payload: {
       format: {
         type: PayloadType.String,
