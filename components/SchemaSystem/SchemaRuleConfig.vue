@@ -20,7 +20,7 @@
 
     <div v-if="state.open" class="px-2 py-5 text-sm">
       <div class="mb-7">
-        <p class="mb-3">level</p>
+        <p class="mb-3">Level</p>
         <div class="flex gap-x-3">
           <div
             v-for="(level, index) in levels"
@@ -49,7 +49,7 @@
           :key="key"
           class="mb-7"
         >
-          <p class="mb-3">{{ key }}</p>
+          <p class="mb-3">{{ `${key[0].toUpperCase()}${key.slice(1).toLowerCase()}` }}</p>
           <input
             v-if="payload.type === 'string'"
             v-model="state.payload[key]"

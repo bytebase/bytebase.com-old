@@ -13,8 +13,8 @@
     </div>
     <div v-for="category in categories" :key="category.id" class="py-4">
       <a
-        :href="`#${slug(category.id)}`"
-        :id="`${slug(category.id)}`"
+        :href="`#${slug(category.id, '-')}`"
+        :id="`${slug(category.id, '-')}`"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
         {{ category.title }}
@@ -22,8 +22,8 @@
       <div v-for="rule in category.rules" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
           <a
-            :href="`#${slug(rule.id)}`"
-            :id="`${slug(rule.id)}`"
+            :href="`#${slug(rule.id, '-')}`"
+            :id="`${slug(rule.id, '-')}`"
             class="text-left text-xl text-gray-600 hover:underline"
           >
             {{ rule.id }}

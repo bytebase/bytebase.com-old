@@ -64,7 +64,7 @@
               class="pt-2 flex items-center text-sm group"
             >
               <a
-                :href="`#${slug(rule.id)}`"
+                :href="`#${slug(rule.id, '-')}`"
                 class="text-gray-600 hover:underline cursor-pointer"
               >
                 {{ rule.id }}
