@@ -3,7 +3,7 @@ title: Writing a Query
 order: 30401
 ---
 
-# Writing a Query
+# Compose a Query
 
 SQL Editor allows for a smooth SQL writing experience.
 
