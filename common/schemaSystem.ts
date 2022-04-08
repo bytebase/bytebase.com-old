@@ -219,37 +219,82 @@ const ruleList: Rule[] = [
   },
 ];
 
+const getRuleListWithLevel = (idList: string[], level: RuleLevel): SelectedRule[] => {
+  return idList.reduce((res, id) => {
+    const rule = ruleList.find((r) => r.id === id);
+    if (!rule) {
+      return res;
+    }
+    res.push({
+      ...rule,
+      level,
+    });
+    return res;
+  }, [] as SelectedRule[]);
+}
+
 export const guidelineTemplateList: GuidelineTemplate[] = [
   {
     id: "mysql.prod",
     tag: "Prod",
     database: mysql,
-    ruleList: ruleList.map(r => ({ ...r, level: RuleLevel.Error })),
+    ruleList: [
+      ...getRuleListWithLevel(
+        [
+          "engine.mysql.use-innodb",
+          "table.require-pk",
+        ],
+        RuleLevel.Error
+      ),
+      ...getRuleListWithLevel(
+        [
+          "naming.table",
+          "naming.column",
+          "naming.index.pk",
+          "naming.index.uk",
+          "naming.index.idx",
+          "column.required",
+          "column.no-null",
+        ],
+        RuleLevel.Warning
+      ),
+      ...getRuleListWithLevel(
+        [
+          "query.select.no-select-all",
+          "query.where.require",
+          "query.where.no-leading-wildcard-like",
+        ],
+        RuleLevel.Error
+      ),
+    ],
   },
   {
     id: "mysql.dev",
     tag: "Dev",
     database: mysql,
     ruleList: [
-      "engine.mysql.use-innodb",
-      "table.require-pk",
-      "naming.table",
-      "naming.column",
-      "naming.index.pk",
-      "naming.index.uk",
-      "naming.index.idx",
-      "column.required",
-      "column.no-null",
-    ].reduce((res, id) => {
-      const rule = ruleList.find((r) => r.id === id);
-      if (!rule) {
-        return res;
-      }
-      res.push({
-        ...rule,
-        level: RuleLevel.Warning,
-      });
-      return res;
-    }, [] as SelectedRule[]),
+      ...getRuleListWithLevel(
+        [
+          "engine.mysql.use-innodb",
+          "table.require-pk",
+        ],
+        RuleLevel.Error
+      ),
+      ...getRuleListWithLevel(
+        [
+          "naming.table",
+          "naming.column",
+          "naming.index.pk",
+          "naming.index.uk",
+          "naming.index.idx",
+          "column.required",
+          "column.no-null",
+          "query.select.no-select-all",
+          "query.where.require",
+          "query.where.no-leading-wildcard-like",
+        ],
+        RuleLevel.Warning
+      ),
+    ],
   }
 ];
