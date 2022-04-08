@@ -191,7 +191,7 @@ const rules: Rule[] = [
   {
     id: "query.select.no-select-all",
     category: "query",
-    description: "Not allow 'SELECT *'",
+    description: "Disallow 'SELECT *'.",
   },
   {
     id: "query.where.require",
