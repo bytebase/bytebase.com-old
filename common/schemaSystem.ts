@@ -161,7 +161,7 @@ const rules: Rule[] = [
   {
     id: "column.required",
     category: "column",
-    description: "Define the required columns in each table",
+    description: "Enforce the required columns in each table.",
     payload: {
       columns: {
         type: PayloadType.StringArray,
