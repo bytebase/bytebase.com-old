@@ -17,6 +17,6 @@ eg: `Localhost Staging MySQL > world > city
 
 ## Table Schema
 
-Click end nodes of the tree structure to check table schemas.
+Click the leaf nodes of the tree structure to check table schemas.
 
 ![Table Schema](/static/docs-assets/sql-editor_databases-table-schema.webp)
