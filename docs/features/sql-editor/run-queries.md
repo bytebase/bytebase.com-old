@@ -13,7 +13,7 @@ Please note that SQL Editor only supports running SELECT queries now. SQL will d
 
 ## Run query
 
-Click the `Run` button or use the shortcut key `(⌘ + Enter)` to run your queries in SQL Editor.
+Click the `Run` button or use the shortcut key `(⌘ + Enter)` to run your queries in the SQL Editor.
 
 Use semicolons to separate multiple SQL queries. SQL Editor only runs the first query now.
 
