@@ -24,7 +24,7 @@
           <a
             :href="`#${rule.id.replaceAll('.', '-')}`"
             :id="rule.id.replaceAll('.', '-')"
-            class="text-left text-xl text-gray-600 hover:underline"
+            class="text-left text-xl text-gray-600 hover:underline whitespace-nowrap"
           >
             {{ rule.id }}
           </a>
