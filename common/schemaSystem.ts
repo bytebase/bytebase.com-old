@@ -110,9 +110,9 @@ const rules: Rule[] = [
     },
   },
   {
-    id: "naming.index",
+    id: "naming.index.pk",
     category: "naming",
-    description: "Limit the index name format",
+    description: "Limit the primary key name format",
     payload: {
       pk: {
         type: PayloadType.Template,
@@ -128,6 +128,13 @@ const rules: Rule[] = [
           },
         ],
       },
+    },
+  },
+  {
+    id: "naming.index.uk",
+    category: "naming",
+    description: "Limit the unique key name format",
+    payload: {
       uk: {
         type: PayloadType.Template,
         default: "^uk_{{table}}_{{columns}}$",
@@ -142,6 +149,13 @@ const rules: Rule[] = [
           },
         ],
       },
+    },
+  },
+  {
+    id: "naming.index.idx",
+    category: "naming",
+    description: "Limit the index name format",
+    payload: {
       idx: {
         type: PayloadType.Template,
         default: "^idx_{{table}}_{{columns}}$",
@@ -204,7 +218,9 @@ export const guidelineTemplates: GuidelineTemplate[] = [
       "table.require-pk",
       "naming.table",
       "naming.column",
-      "naming.index",
+      "naming.index.pk",
+      "naming.index.uk",
+      "naming.index.idx",
       "column.required",
       "column.no-null",
     ].reduce((res, id) => {

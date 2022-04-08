@@ -7,14 +7,7 @@
         Database Review Guide
       </h1>
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-        Bytebase
-        <span
-          class="text-indigo-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
-        >
-          database review guide
-        </span>
-        is a online tool to create the schema review guideline for your database.
+        An online tool for DBA to generate the database schema review / DDL guideline. Support MySQL now, PostgreSQL later.
       </h2>
     </div>
     <div class="flex flex-col sm:flex-row justify-center items-center mt-10 gap-x-10 gap-y-10">
