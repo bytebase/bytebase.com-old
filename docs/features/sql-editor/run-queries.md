@@ -19,7 +19,7 @@ If you have multiple SQL queries separated by semicolons, SQL Editor will only r
 
 ## Explain query
 
-SQL Editor provides a button next to the `Run` one to run Explain queries. You can click it or use the shortcut key `(⌘ + E)` to run Explain SQL queries instead of writing them manually.
+SQL Editor provides an `Explain` button to run EXPLAIN on the selected query. You can click it or use the shortcut key `(⌘ + E)` instead of prepending EXPLAIN manually.
 
 ```sql
 # Run Query
