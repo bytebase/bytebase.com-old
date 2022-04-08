@@ -8,7 +8,7 @@
         @click="() => onTemplateAdd(template)"
       >
         {{ template.id }}
-        <span class="tooltip whitespace-nowrap">{{ template.tip }}</span>
+        <span class="tooltip whitespace-nowrap">{{ template.description }}</span>
       </div>
     </div>
     <div class="p-2 border-t border-gray-300">

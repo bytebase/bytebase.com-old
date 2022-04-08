@@ -31,7 +31,7 @@ interface StringArrayPayload {
 interface TemplatePayload {
   type: PayloadType.Template;
   default: string;
-  templates: { id: string; tip?: string; }[];
+  templates: { id: string; description?: string; }[];
   value?: string;
 }
 
@@ -116,15 +116,15 @@ const rules: Rule[] = [
     payload: {
       pk: {
         type: PayloadType.Template,
-        default: "^pk_{{table}}_{{columns}}$",
+        default: "^pk_{{table}}_{{column_list}}$",
         templates: [
           {
             id: "table",
-            tip: "The table name",
+            description: "The table name",
           },
           {
-            id: "columns",
-            tip: "Index column names, joined by _",
+            id: "column_list",
+            description: "Index column names, joined by _",
           },
         ],
       },
@@ -137,15 +137,15 @@ const rules: Rule[] = [
     payload: {
       uk: {
         type: PayloadType.Template,
-        default: "^uk_{{table}}_{{columns}}$",
+        default: "^uk_{{table}}_{{column_list}}$",
         templates: [
           {
             id: "table",
-            tip: "The table name",
+            description: "The table name",
           },
           {
-            id: "columns",
-            tip: "Index column names, joined by _",
+            id: "column_list",
+            description: "Index column names, joined by _",
           },
         ],
       },
@@ -158,15 +158,15 @@ const rules: Rule[] = [
     payload: {
       idx: {
         type: PayloadType.Template,
-        default: "^idx_{{table}}_{{columns}}$",
+        default: "^idx_{{table}}_{{column_list}}$",
         templates: [
           {
             id: "table",
-            tip: "The table name",
+            description: "The table name",
           },
           {
-            id: "columns",
-            tip: "Index column names, joined by _",
+            id: "column_list",
+            description: "Index column names, joined by _",
           },
         ],
       },

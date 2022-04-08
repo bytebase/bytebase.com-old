@@ -1,4 +1,4 @@
 export interface Template {
   id: string;
-  tip?: string;
+  description?: string;
 }
