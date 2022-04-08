@@ -413,12 +413,12 @@
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_databases-search.webp"
-                alt="Explore the schema"
+                alt="Explore the Schema"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_databases-table-schema.webp"
-                alt="Explore the schema"
+                alt="Explore the Schema"
               />
             </div>
           </div>
@@ -472,18 +472,18 @@
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_autocomplete.webp"
-                alt="Write queries effectively"
+                alt="Smooth query editing experience"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_format-sql.webp"
-                alt="Write queries effectively"
+                alt="Smooth query editing experience"
               />
             </div>
           </div>
         </div>
       </div>
-      <!-- Never miss your work -->
+      <!-- Never Miss your Work -->
       <div class="relative mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -537,18 +537,18 @@
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_sheets.webp"
-                alt="Never miss your work"
+                alt="Never Miss your Work"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_history.webp"
-                alt="Never miss your work"
+                alt="Never Miss your Work"
               />
             </div>
           </div>
         </div>
       </div>
-      <!-- share sheet with teammates -->
+      <!-- Share Sheet with Teammates -->
       <div class="mt-24">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -602,12 +602,12 @@
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_share-popover.webp"
-                alt="Share sheet with teammates"
+                alt="Share Sheet with Teammates"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
                 src="~/static/docs-assets/sql-editor_share-link-access.webp"
-                alt="Share sheet with teammates"
+                alt="Share Sheet with Teammates"
               />
             </div>
           </div>
