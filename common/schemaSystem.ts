@@ -196,7 +196,7 @@ const rules: Rule[] = [
   {
     id: "query.where.require",
     category: "query",
-    description: "Query must contains 'WHERE' limit",
+    description: "Require 'WHERE' clause.",
   },
   {
     id: "query.where.no-leading-wildcard-like",
