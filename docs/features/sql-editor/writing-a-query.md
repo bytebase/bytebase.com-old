@@ -7,7 +7,7 @@ order: 30401
 
 SQL Editor supports auto-completion, code formatting, and keyboard shortcuts.
 
-## Autocomplete Suggestions
+## Auto-completion
 
 SQL Editor provides convenient intelligent prompts, enabling you to write SQL queries fluently.
 
