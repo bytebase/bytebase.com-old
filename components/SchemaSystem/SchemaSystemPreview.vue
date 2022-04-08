@@ -13,8 +13,8 @@
     </div>
     <div v-for="category in categories" :key="category.id" class="py-4">
       <a
-        :href="`#${slug(category.id, '-')}`"
-        :id="`${slug(category.id, '-')}`"
+        :href="`#${category.id.replaceAll('.', '-')}`"
+        :id="category.id.replaceAll('.', '-')"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
         {{ category.title }}
@@ -22,8 +22,8 @@
       <div v-for="rule in category.rules" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
           <a
-            :href="`#${slug(rule.id, '-')}`"
-            :id="`${slug(rule.id, '-')}`"
+            :href="`#${rule.id.replaceAll('.', '-')}`"
+            :id="rule.id.replaceAll('.', '-')"
             class="text-left text-xl text-gray-600 hover:underline"
           >
             {{ rule.id }}
@@ -81,7 +81,6 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
-import slug from "slug";
 import dayjs from "dayjs";
 import { RuleCategory } from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
@@ -103,11 +102,6 @@ export default defineComponent({
     },
   },
   emits: ["select"],
-  setup() {
-    return {
-      slug,
-    };
-  },
   computed: {
     today(): string {
       return dayjs().format("YYYY-MM-DD");

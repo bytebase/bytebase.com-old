@@ -64,7 +64,7 @@
               class="pt-2 flex items-center text-sm group"
             >
               <a
-                :href="`#${slug(rule.id, '-')}`"
+                :href="`#${rule.id.replaceAll('.', '-')}`"
                 class="text-gray-600 hover:underline cursor-pointer"
               >
                 {{ rule.id }}
@@ -119,7 +119,6 @@ import Modal from "../Modal.vue";
 import SchemaSystemRules from "./SchemaSystemRules.vue";
 import TrashIcon from "../Icons/Trash.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
-import slug from "slug";
 
 interface FilterItem {
   id: string;
@@ -186,7 +185,6 @@ export default defineComponent({
 
     return {
       state,
-      slug,
     };
   },
   computed: {
