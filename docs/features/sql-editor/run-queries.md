@@ -1,5 +1,5 @@
 ---
-title: Run/Explain Queries
+title: Run and EXPLAIN Query
 order: 30402
 ---
 
