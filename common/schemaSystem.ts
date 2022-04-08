@@ -4,7 +4,7 @@ export enum RuleLevel {
   Warning = "warning",
 }
 
-export const levels = [
+export const levelList = [
   { id: RuleLevel.Error, name: "Error" },
   { id: RuleLevel.Warning, name: "Warning" },
   { id: RuleLevel.Disabled, name: "Disabled" },
@@ -56,7 +56,7 @@ export interface SelectedRule extends Rule {
 export interface RuleCategory {
   id: string;
   name: string;
-  rules: SelectedRule[];
+  ruleList: SelectedRule[];
 }
 
 interface Database {
@@ -68,7 +68,7 @@ export interface GuidelineTemplate {
   id: string;
   tag: string;
   database: Database;
-  rules: SelectedRule[];
+  ruleList: SelectedRule[];
 }
 
 const mysql: Database = {
@@ -224,13 +224,13 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
     id: "mysql.prod",
     tag: "Prod",
     database: mysql,
-    rules: ruleList.map(r => ({ ...r, level: RuleLevel.Error })),
+    ruleList: ruleList.map(r => ({ ...r, level: RuleLevel.Error })),
   },
   {
     id: "mysql.dev",
     tag: "Dev",
     database: mysql,
-    rules: [
+    ruleList: [
       "engine.mysql.use-innodb",
       "table.require-pk",
       "naming.table",

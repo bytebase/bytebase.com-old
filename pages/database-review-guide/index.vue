@@ -51,10 +51,9 @@
     </div>
     <div class="mt-10 pt-10 border-t border-gray-200">
       <SchemaConfigurationPage
-        :selected-rules="state.rules"
-        :rule-changed="state.ruleChanged"
+        :selectedRuleList="state.ruleList"
+        :ruleChanged="state.ruleChanged"
         :title="`Database Review Guide for ${state.template.database.name}`"
-        @remove="onRuleRemove"
         @change="onRuleChange"
         @reset="onRulesReset"
       />
@@ -93,7 +92,7 @@ import Modal from "../../components/Modal.vue";
 
 interface LocalState {
   template: GuidelineTemplate;
-  rules: SelectedRule[];
+  ruleList: SelectedRule[];
   ruleChanged: boolean;
   openWarningModal: boolean;
 }
@@ -108,7 +107,7 @@ export default defineComponent({
   setup() {
     const state = reactive<LocalState>({
       template: guidelineTemplateList[0],
-      rules: guidelineTemplateList[0].rules,
+      ruleList: guidelineTemplateList[0].ruleList,
       ruleChanged: false,
       openWarningModal: false,
     });
@@ -121,23 +120,15 @@ export default defineComponent({
   methods: {
     onGuidelineChange(guideline: GuidelineTemplate) {
       this.state.template = guideline;
-      this.state.rules = [...guideline.rules];
+      this.state.ruleList = [...guideline.ruleList];
       this.state.ruleChanged = false;
     },
-    onRuleRemove(rule: SelectedRule) {
-      const index = this.state.rules.findIndex((r) => r.id === rule.id);
-      this.state.rules = [
-        ...this.state.rules.slice(0, index),
-        ...this.state.rules.slice(index + 1),
-      ];
-      this.state.ruleChanged = true;
-    },
     onRuleChange(rule: SelectedRule) {
-      const index = this.state.rules.findIndex((r) => r.id === rule.id);
-      this.state.rules = [
-        ...this.state.rules.slice(0, index),
+      const index = this.state.ruleList.findIndex((r) => r.id === rule.id);
+      this.state.ruleList = [
+        ...this.state.ruleList.slice(0, index),
         rule,
-        ...this.state.rules.slice(index + 1),
+        ...this.state.ruleList.slice(index + 1),
       ];
       this.state.ruleChanged = true;
     },
@@ -151,8 +142,8 @@ export default defineComponent({
     reset() {
       const guideline = this.guidelineTemplateList.find((g) => g.id === this.state.template.id);
       if (guideline) {
-        this.state.rules = [
-          ...guideline.rules
+        this.state.ruleList = [
+          ...guideline.ruleList
         ];
       }
       this.state.ruleChanged = false;

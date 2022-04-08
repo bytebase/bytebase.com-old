@@ -23,7 +23,7 @@
         <p class="mb-3">Level</p>
         <div class="flex gap-x-3">
           <div
-            v-for="(level, index) in levels"
+            v-for="(level, index) in levelList"
             :key="index"
             class="flex items-center"
           >
@@ -88,7 +88,7 @@
 <script lang="ts">
 import { defineComponent, reactive, PropType, watch } from "@nuxtjs/composition-api";
 import {
-  levels,
+  levelList,
   SelectedRule,
   RuleLevel,
   RulePayload,
@@ -143,7 +143,7 @@ export default defineComponent({
 
     return {
       state,
-      levels,
+      levelList,
     };
   },
   methods: {

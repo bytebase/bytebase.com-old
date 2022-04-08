@@ -25,7 +25,7 @@
           <h1 class="text-left text-2xl font-semibold">Filter</h1>
           <div class="space-y-2">
             <div
-              v-for="(filter, index) in state.filter"
+              v-for="(filter, index) in state.filterOptionList"
               :key="index"
               class="flex items-center"
             >
@@ -50,7 +50,7 @@
         <div class="space-y-6">
           <h1 class="text-left text-2xl font-semibold">Rules</h1>
           <fieldset
-            v-for="(category, index) in categories"
+            v-for="(category, index) in categoryList"
             :key="index"
           >
             <div
@@ -59,7 +59,7 @@
               {{ category.name }}
             </div>
             <div
-              v-for="(rule, ruleIndex) in category.rules"
+              v-for="(rule, ruleIndex) in category.ruleList"
               :key="ruleIndex"
               class="pt-2 flex items-center text-sm group"
             >
@@ -69,12 +69,6 @@
               >
                 {{ rule.id }}
               </a>
-
-              <div @click="$emit('remove', rule)">
-                <TrashIcon
-                  class="w-4 h-4 text-red-600 ml-2 cursor-pointer opacity-0 group-hover:opacity-100"
-                />
-              </div>
             </div>
           </fieldset>
         </div>
@@ -82,7 +76,7 @@
       <SchemaSystemPreview
         id="preview"
         :title="title"
-        :categories="categories"
+        :categoryList="categoryList"
         class="lg:col-span-4 p-5"
         @select="(rule) => onRuleSelect(rule)"
       />
@@ -108,8 +102,7 @@ import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
 import {
-  levels,
-  Rule,
+  levelList,
   RulePayload,
   RuleLevel,
   SelectedRule,
@@ -117,8 +110,6 @@ import {
   DatabaseType
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
-import SchemaSystemRules from "./SchemaSystemRules.vue";
-import TrashIcon from "../Icons/Trash.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 
 interface FilterItem {
@@ -131,17 +122,17 @@ interface FilterItem {
 interface LocalState {
   openConfigModal: boolean;
   selectedRule?: SelectedRule;
-  filter: FilterItem[];
+  filterOptionList: FilterItem[];
 }
 
-const baseFilterOptions: FilterItem[] = levels.map((l) => ({
+const baseFilterOptionList: FilterItem[] = levelList.map((l) => ({
   id: l.id,
   name: l.name,
   type: "level",
   checked: false,
 }));
 
-const filterOptions: FilterItem[] = [
+const filterOptionList: FilterItem[] = [
   {
     id: "common",
     name: "Common",
@@ -154,20 +145,18 @@ const filterOptions: FilterItem[] = [
     type: "database",
     checked: false,
   },
-  ...baseFilterOptions,
+  ...baseFilterOptionList,
 ];
 
 export default defineComponent({
   components: {
     Modal,
     ActionButton,
-    TrashIcon,
     SchemaRuleConfig,
-    SchemaSystemRules,
     SchemaSystemPreview,
   },
   props: {
-    selectedRules: {
+    selectedRuleList: {
       required: true,
       type: Array as PropType<SelectedRule[]>,
     },
@@ -180,11 +169,11 @@ export default defineComponent({
       type: Boolean,
     },
   },
-  emits: ["remove", "change", "reset"],
+  emits: ["change", "reset"],
   setup() {
     const state = reactive<LocalState>({
       openConfigModal: false,
-      filter: filterOptions
+      filterOptionList
     });
 
     return {
@@ -192,8 +181,8 @@ export default defineComponent({
     };
   },
   computed: {
-    categories(): RuleCategory[] {
-      const dict = this.$props.selectedRules.reduce((dict, rule) => {
+    categoryList(): RuleCategory[] {
+      const dict = this.$props.selectedRuleList.reduce((dict, rule) => {
         if (!this.isFilteredRule(rule)) {
           return dict;
         }
@@ -204,10 +193,10 @@ export default defineComponent({
           dict[rule.category] = {
             id: rule.category,
             name,
-            rules: [],
+            ruleList: [],
           };
         }
-        dict[rule.category].rules.push(rule);
+        dict[rule.category].ruleList.push(rule);
         return dict;
       }, {} as { [key: string]: RuleCategory });
 
@@ -216,11 +205,11 @@ export default defineComponent({
   },
   methods: {
     isFilteredRule(rule: SelectedRule): boolean {
-      if (this.state.filter.every((f) => !f.checked)) {
+      if (this.state.filterOptionList.every((f) => !f.checked)) {
         return true;
       }
 
-      return this.state.filter.some((filter) => {
+      return this.state.filterOptionList.some((filter) => {
         return (
           (filter.type === "level" && rule.level === filter.id && filter.checked) ||
           (filter.type === "database" && filter.checked && rule.database.includes(filter.id as DatabaseType))
@@ -228,7 +217,7 @@ export default defineComponent({
       });
     },
     filterItemCount(filter: FilterItem) {
-      return this.$props.selectedRules.filter((r) => {
+      return this.$props.selectedRuleList.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
           (filter.type === "database" && r.database.includes(filter.id as DatabaseType))

@@ -11,7 +11,7 @@
         </a>
       </p>
     </div>
-    <div v-for="category in categories" :key="category.id" class="py-4">
+    <div v-for="category in categoryList" :key="category.id" class="py-4">
       <a
         :href="`#${category.id.replace(/\./g, '-')}`"
         :id="category.id.replace(/\./g, '-')"
@@ -19,7 +19,7 @@
       >
         {{ category.name }}
       </a>
-      <div v-for="rule in category.rules" :key="rule.id" class="py-4 group">
+      <div v-for="rule in category.ruleList" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
           <a
             :href="`#${rule.id.replace(/\./g, '-')}`"
@@ -96,7 +96,7 @@ export default defineComponent({
       required: true,
       type: String,
     },
-    categories: {
+    categoryList: {
       required: true,
       type: Array as PropType<RuleCategory[]>,
     },
