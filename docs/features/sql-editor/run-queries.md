@@ -11,7 +11,7 @@ Please note that SQL Editor only supports running SELECT queries now. SQL will d
 
 </hint-block>
 
-## Run Queries
+## Run query
 
 Click the `Run` button or use the shortcut key `(⌘ + Enter)` to run your queries in SQL Editor.
 
