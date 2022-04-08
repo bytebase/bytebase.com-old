@@ -7,7 +7,7 @@ order: 30406
 
 Click the `Share` button on the upper right of the Editor to share SQL queries in the current tab with your teammates.
 
-## Setup permissions
+## Configure sheet access
 
 You can set up Sheet’s accessibility to allow your teammates to edit `Sheet`.
 
