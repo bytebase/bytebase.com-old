@@ -9,9 +9,7 @@ SQL Editor supports auto-completion, code formatting, and keyboard shortcuts.
 
 ## Auto-completion
 
-SQL Editor provides convenient intelligent prompts, enabling you to write SQL queries fluently.
-
-Currently, we support the following prompts:
+Currently, SQL Editor supports the following auto-completions:
 
 - Database Name
 - Table Name
