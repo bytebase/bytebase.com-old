@@ -1,5 +1,5 @@
 ---
-title: Writing a Query
+title: Compose a Query
 order: 30401
 ---
 
