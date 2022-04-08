@@ -17,7 +17,7 @@ Click the `Run` button or use the shortcut key `(⌘ + Enter)` to run your queri
 
 If you have multiple SQL queries separated by semicolons, SQL Editor will only run the first query for now.
 
-## Explain Queries
+## Explain query
 
 SQL Editor provides a button next to the `Run` one to run Explain queries. You can click it or use the shortcut key `(⌘ + E)` to run Explain SQL queries instead of writing them manually.
 
