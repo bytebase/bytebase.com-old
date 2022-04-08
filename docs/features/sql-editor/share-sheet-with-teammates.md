@@ -3,7 +3,7 @@ title: Share Sheet with Teammates
 order: 30406
 ---
 
-# Share sheet with teammates
+# Share Sheet with Teammates
 
 Click the `Share` button on the upper right of the Editor to share SQL queries in the current tab with your teammates.
 
