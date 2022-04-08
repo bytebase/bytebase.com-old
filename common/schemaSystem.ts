@@ -191,17 +191,17 @@ const rules: Rule[] = [
   {
     id: "query.select.no-select-all",
     category: "query",
-    description: "Not allow 'SELECT *'",
+    description: "Disallow 'SELECT *'.",
   },
   {
     id: "query.where.require",
     category: "query",
-    description: "Query must contains 'WHERE' limit",
+    description: "Require 'WHERE' clause.",
   },
   {
     id: "query.where.no-leading-wildcard-like",
     category: "query",
-    description: "Not allow '%x' in LIKE",
+    description: "Disallow leading '%' in LIKE, e.g. LIKE foo = '%bar' is not allowed.",
   },
 ];
 
