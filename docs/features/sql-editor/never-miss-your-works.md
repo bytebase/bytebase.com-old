@@ -11,7 +11,7 @@ Click the `Save` button on the upper right of the Editor or use the shortcut key
 
 ![Sheets](/static/docs-assets/sql-editor_sheets.webp)
 
-## History
+## Query history
 
 SQL Editor will automatically record SQL queries which have run successfully. You can find them in the `History` panel on the left.
 
