@@ -89,7 +89,7 @@ const rules: Rule[] = [
     id: "naming.table",
     category: "naming",
     description:
-      "Limit the table name format. The default convention is snake_lower_case",
+      "Enforce the table name format. Default snake_lower_case.",
     payload: {
       format: {
         type: PayloadType.String,
