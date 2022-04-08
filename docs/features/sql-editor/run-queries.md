@@ -3,7 +3,7 @@ title: Run and EXPLAIN Query
 order: 30402
 ---
 
-# Run/Explain Queries
+# Run and EXPLAIN Query
 
 <hint-block type="info">
 
