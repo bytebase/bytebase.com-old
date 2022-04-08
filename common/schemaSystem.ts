@@ -172,7 +172,7 @@ const rules: Rule[] = [
   {
     id: "column.no-null",
     category: "column",
-    description: "Columns cannot allow null value",
+    description: "Columns cannot have NULL value.",
   },
   {
     id: "query.select.no-select-all",
