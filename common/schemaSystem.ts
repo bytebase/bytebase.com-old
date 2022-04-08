@@ -83,7 +83,7 @@ const rules: Rule[] = [
   {
     id: "table.require-pk",
     category: "table",
-    description: "Force to require a primary key for each table",
+    description: "Require the table to have a primary key.",
   },
   {
     id: "naming.table",
