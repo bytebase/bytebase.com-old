@@ -53,7 +53,7 @@
       <SchemaConfigurationPage
         :selected-rules="state.rules"
         :rule-changed="state.ruleChanged"
-        :title="`Database Review Guide for ${state.guideline.engine.name}`"
+        :title="`Database Review Guide for ${state.guideline.database.name}`"
         @add="onRuleAdd"
         @remove="onRuleRemove"
         @change="onRuleChange"

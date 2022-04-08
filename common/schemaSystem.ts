@@ -39,9 +39,12 @@ export interface RulePayload {
   [key: string]: StringPayload | StringArrayPayload | TemplatePayload;
 }
 
+export type DatabaseType = "mysql" | "common";
+
 export interface Rule {
   id: string;
   category: string;
+  database: DatabaseType[];
   description: string;
   payload?: RulePayload;
 }
@@ -56,20 +59,18 @@ export interface RuleCategory {
   rules: SelectedRule[];
 }
 
-export type EngineType = "mysql";
-
-export interface Engine {
-  id: EngineType;
+interface Database {
+  id: DatabaseType;
   name: string;
 }
 
 export interface GuidelineTemplate {
   id: string;
-  engine: Engine;
+  database: Database;
   rules: SelectedRule[];
 }
 
-const mysql: Engine = {
+const mysql: Database = {
   id: "mysql",
   name: "MySQL",
 };
@@ -78,16 +79,19 @@ const rules: Rule[] = [
   {
     id: "engine.mysql.use-innodb",
     category: "database",
+    database: ["mysql"],
     description: "Require InnoDB as the storage engine.",
   },
   {
     id: "table.require-pk",
     category: "table",
+    database: ["common"],
     description: "Require the table to have a primary key.",
   },
   {
     id: "naming.table",
     category: "naming",
+    database: ["common"],
     description:
       "Enforce the table name format. Default snake_lower_case.",
     payload: {
@@ -100,6 +104,7 @@ const rules: Rule[] = [
   {
     id: "naming.column",
     category: "naming",
+    database: ["common"],
     description:
       "Enforce the column name format. Default snake_lower_case.",
     payload: {
@@ -112,6 +117,7 @@ const rules: Rule[] = [
   {
     id: "naming.index.pk",
     category: "naming",
+    database: ["common"],
     description: "Limit the primary key name format",
     payload: {
       pk: {
@@ -133,6 +139,7 @@ const rules: Rule[] = [
   {
     id: "naming.index.uk",
     category: "naming",
+    database: ["common"],
     description: "Limit the unique key name format",
     payload: {
       uk: {
@@ -154,6 +161,7 @@ const rules: Rule[] = [
   {
     id: "naming.index.idx",
     category: "naming",
+    database: ["common"],
     description: "Limit the index name format",
     payload: {
       idx: {
@@ -175,6 +183,7 @@ const rules: Rule[] = [
   {
     id: "column.required",
     category: "column",
+    database: ["common"],
     description: "Enforce the required columns in each table.",
     payload: {
       columns: {
@@ -186,21 +195,25 @@ const rules: Rule[] = [
   {
     id: "column.no-null",
     category: "column",
+    database: ["common"],
     description: "Columns cannot have NULL value.",
   },
   {
     id: "query.select.no-select-all",
     category: "query",
+    database: ["common"],
     description: "Disallow 'SELECT *'.",
   },
   {
     id: "query.where.require",
     category: "query",
+    database: ["common"],
     description: "Require 'WHERE' clause.",
   },
   {
     id: "query.where.no-leading-wildcard-like",
     category: "query",
+    database: ["common"],
     description: "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
   },
 ];
@@ -208,12 +221,12 @@ const rules: Rule[] = [
 export const guidelineTemplates: GuidelineTemplate[] = [
   {
     id: "MySQL-Prod",
-    engine: mysql,
+    database: mysql,
     rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
   },
   {
     id: "MySQL-Dev",
-    engine: mysql,
+    database: mysql,
     rules: [
       "table.require-pk",
       "naming.table",

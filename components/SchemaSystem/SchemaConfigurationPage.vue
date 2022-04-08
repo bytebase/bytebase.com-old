@@ -113,7 +113,8 @@ import {
   RulePayload,
   RuleLevel,
   SelectedRule,
-  RuleCategory
+  RuleCategory,
+  DatabaseType
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
 import SchemaSystemRules from "./SchemaSystemRules.vue";
@@ -123,7 +124,7 @@ import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 interface FilterItem {
   id: string;
   name: string;
-  type: "category" | "level";
+  type: "database" | "level";
   checked: boolean;
 }
 
@@ -139,6 +140,22 @@ const baseFilterOptions: FilterItem[] = levels.map((l) => ({
   type: "level",
   checked: false,
 }));
+
+const filterOptions: FilterItem[] = [
+  {
+    id: "common",
+    name: "Common",
+    type: "database",
+    checked: false,
+  },
+  {
+    id: "mysql",
+    name: "MySQL",
+    type: "database",
+    checked: false,
+  },
+  ...baseFilterOptions,
+];
 
 export default defineComponent({
   components: {
@@ -164,20 +181,7 @@ export default defineComponent({
     },
   },
   emits: ["add", "remove", "change", "reset"],
-  setup(props) {
-    const filterOptions = [
-      ...props.selectedRules.reduce((map, rule) => {
-        map.set(rule.category, {
-          id: rule.category,
-          type: "category",
-          name: `${rule.category[0].toUpperCase()}${rule.category.slice(1).toLowerCase()}`,
-          checked: false
-        });
-        return map;
-      }, new Map<string, FilterItem>()).values(),
-      ...baseFilterOptions,
-    ];
-
+  setup() {
     const state = reactive<LocalState>({
       openConfigModal: false,
       filter: filterOptions
@@ -219,7 +223,7 @@ export default defineComponent({
       return this.state.filter.some((filter) => {
         return (
           (filter.type === "level" && rule.level === filter.id && filter.checked) ||
-          (filter.type === "category" && rule.category === filter.id && filter.checked)
+          (filter.type === "database" && filter.checked && rule.database.includes(filter.id as DatabaseType))
         );
       });
     },
@@ -227,7 +231,7 @@ export default defineComponent({
       return this.$props.selectedRules.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
-          (filter.type === "category" && filter.id === r.category)
+          (filter.type === "database" && r.database.includes(filter.id as DatabaseType))
         )
       }).length;
     },
