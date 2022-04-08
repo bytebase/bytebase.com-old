@@ -56,7 +56,7 @@
             <div
               class="block text-sm font-medium text-gray-900"
             >
-              {{ category.title }}
+              {{ category.name }}
             </div>
             <div
               v-for="(rule, ruleIndex) in category.rules"
@@ -180,7 +180,7 @@ export default defineComponent({
       type: Boolean,
     },
   },
-  emits: ["add", "remove", "change", "reset"],
+  emits: ["remove", "change", "reset"],
   setup() {
     const state = reactive<LocalState>({
       openConfigModal: false,
@@ -200,10 +200,10 @@ export default defineComponent({
 
         if (!dict[rule.category]) {
           const id = rule.category.toLowerCase();
-          const title = `${id[0].toUpperCase()}${id.slice(1)}`;
+          const name = `${id[0].toUpperCase()}${id.slice(1)}`;
           dict[rule.category] = {
             id: rule.category,
-            title,
+            name,
             rules: [],
           };
         }
@@ -238,9 +238,6 @@ export default defineComponent({
     onRuleSelect(rule: SelectedRule) {
       this.state.selectedRule = rule;
       this.state.openConfigModal = true;
-    },
-    onRuleAdd(rule: Rule) {
-      this.$emit("add", rule);
     },
     onPayloadChange(data: { [val: string]: any }) {
       if (!this.state.selectedRule || !this.state.selectedRule.payload) {

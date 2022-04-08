@@ -55,7 +55,7 @@ export interface SelectedRule extends Rule {
 
 export interface RuleCategory {
   id: string;
-  title: string;
+  name: string;
   rules: SelectedRule[];
 }
 
@@ -66,6 +66,7 @@ interface Database {
 
 export interface GuidelineTemplate {
   id: string;
+  tag: string;
   database: Database;
   rules: SelectedRule[];
 }
@@ -75,7 +76,7 @@ const mysql: Database = {
   name: "MySQL",
 };
 
-const rules: Rule[] = [
+const ruleList: Rule[] = [
   {
     id: "engine.mysql.use-innodb",
     category: "database",
@@ -218,14 +219,16 @@ const rules: Rule[] = [
   },
 ];
 
-export const guidelineTemplates: GuidelineTemplate[] = [
+export const guidelineTemplateList: GuidelineTemplate[] = [
   {
-    id: "MySQL-Prod",
+    id: "mysql.prod",
+    tag: "Prod",
     database: mysql,
-    rules: rules.map(r => ({ ...r, level: RuleLevel.Error })),
+    rules: ruleList.map(r => ({ ...r, level: RuleLevel.Error })),
   },
   {
-    id: "MySQL-Dev",
+    id: "mysql.dev",
+    tag: "Dev",
     database: mysql,
     rules: [
       "engine.mysql.use-innodb",
@@ -238,7 +241,7 @@ export const guidelineTemplates: GuidelineTemplate[] = [
       "column.required",
       "column.no-null",
     ].reduce((res, id) => {
-      const rule = rules.find((r) => r.id === id);
+      const rule = ruleList.find((r) => r.id === id);
       if (!rule) {
         return res;
       }

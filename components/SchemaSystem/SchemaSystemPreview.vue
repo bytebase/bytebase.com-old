@@ -17,7 +17,7 @@
         :id="category.id.replace(/\./g, '-')"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
-        {{ category.title }}
+        {{ category.name }}
       </a>
       <div v-for="rule in category.rules" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
