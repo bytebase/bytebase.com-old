@@ -9,9 +9,7 @@ Click the `Share` button on the upper right of the Editor to share SQL queries i
 
 ## Configure sheet access
 
-You can set up Sheet’s accessibility to allow your teammates to edit `Sheet`.
-
-There are three types of accessibilites:
+You can configure the sheet with one of the following access levels:
 
 - `Private` - Only you can access this sheet
 - `Project` - Both sheet OWNER and project OWNER can read/write, and project DEVELOPER can read
