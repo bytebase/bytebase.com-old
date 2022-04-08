@@ -10,7 +10,7 @@ export const levelList = [
   { id: RuleLevel.Disabled, name: "Disabled" },
 ];
 
-export enum PayloadType {
+enum PayloadType {
   String = "string",
   StringArray = "string[]",
   Template = "template",
@@ -41,9 +41,11 @@ export interface RulePayload {
 
 export type DatabaseType = "mysql" | "common";
 
+type CategoryType = "engine" | "naming" | "query" | "table" | "column";
+
 export interface Rule {
   id: string;
-  category: string;
+  category: CategoryType;
   database: DatabaseType[];
   description: string;
   payload?: RulePayload;

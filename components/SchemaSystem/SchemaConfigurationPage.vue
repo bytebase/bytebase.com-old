@@ -97,7 +97,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, reactive } from "@nuxtjs/composition-api";
+import { defineComponent, PropType, reactive, nextTick } from "@nuxtjs/composition-api";
 import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
@@ -147,6 +147,14 @@ const filterOptionList: FilterItem[] = [
   },
   ...baseFilterOptionList,
 ];
+
+const categoryOrder: { [key: string] : number } = {
+  "engine": 0,
+  "naming": 1,
+  "query": 2,
+  "table": 3,
+  "column": 4,
+};
 
 export default defineComponent({
   components: {
@@ -200,7 +208,7 @@ export default defineComponent({
         return dict;
       }, {} as { [key: string]: RuleCategory });
 
-      return Object.values(dict);
+      return Object.values(dict).sort((c1, c2) => (categoryOrder[c1.id] || 0) - (categoryOrder[c2.id] || 0));
     },
   },
   methods: {
@@ -257,14 +265,26 @@ export default defineComponent({
       const node = document.getElementById("preview");
       if (!node) return;
 
-      domtoimage
-        .toPng(node, { bgcolor: "#fff" })
-        .then((dataUrl) => {
-          var link = document.createElement("a");
-          link.download = `${this.$props.title}.png`;
-          link.href = dataUrl;
-          link.click();
-        });
+      const bottom = document.getElementById("preview-bottom");
+      if (bottom) {
+        bottom.style.display = "flex";
+      }
+
+      nextTick(
+        () => domtoimage
+          .toPng(node, { bgcolor: "#fff" })
+          .then((dataUrl) => {
+            var link = document.createElement("a");
+            link.download = `${this.$props.title}.png`;
+            link.href = dataUrl;
+            link.click();
+          })
+          .finally(() => {
+            if (bottom) {
+              bottom.style.removeProperty("display");
+            }
+          })
+      );
     },
   },
 })
