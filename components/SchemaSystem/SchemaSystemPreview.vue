@@ -7,7 +7,7 @@
       <p>
         Made by
         <a href="bytebase.com/database-review-guide" class="text-indigo-600 hover:underline">
-          bytebase.com/database-review-guide
+          https://bytebase.com/database-review-guide
         </a>
       </p>
     </div>
