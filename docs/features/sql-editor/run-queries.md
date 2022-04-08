@@ -15,7 +15,7 @@ Please note that SQL Editor only supports running SELECT queries now. SQL will d
 
 Click the `Run` button or use the shortcut key `(⌘ + Enter)` to run your queries in the SQL Editor.
 
-Use semicolons to separate multiple SQL queries. SQL Editor only runs the first query now.
+If you have multiple SQL queries separated by semicolons, SQL Editor will only run the first query for now.
 
 ## Explain Queries
 
