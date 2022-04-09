@@ -267,9 +267,9 @@ export default defineComponent({
       const node = document.getElementById("preview");
       if (!node) return;
 
-      const bottom = document.getElementById("preview-bottom");
-      if (bottom) {
-        bottom.style.display = "flex";
+      const element = document.getElementById("preview-hidden");
+      if (element) {
+        element.style.display = "flex";
       }
 
       nextTick(
@@ -282,8 +282,8 @@ export default defineComponent({
             link.click();
           })
           .finally(() => {
-            if (bottom) {
-              bottom.style.removeProperty("display");
+            if (element) {
+              element.style.removeProperty("display");
             }
           })
       );

@@ -4,9 +4,9 @@
       <h1 class="text-left text-3xl font-bold mb-2">
         {{ title }}
       </h1>
-      <p>
+      <p class="hidden" id="preview-hidden">
         Made from
-        <a href="https://bytebase.com/database-review-guide" class="text-indigo-600 hover:underline">
+        <a href="https://bytebase.com/database-review-guide" class="text-indigo-600 hover:underline ml-1">
           https://bytebase.com/database-review-guide
         </a>
       </p>
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400 hidden" id="preview-bottom">
+    <div class="flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400">
       Made by
       <a href="https://bytebase.com/database-review-guide">
         <img class="h-5" src="~/assets/logo-full.svg" alt="Bytebase" />
