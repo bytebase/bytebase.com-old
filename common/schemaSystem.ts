@@ -41,7 +41,7 @@ export interface RulePayload {
 
 export type DatabaseType = "mysql" | "common";
 
-type CategoryType = "engine" | "naming" | "query" | "table" | "column";
+export type CategoryType = "engine" | "naming" | "query" | "table" | "column";
 
 export interface Rule {
   id: string;
@@ -56,7 +56,7 @@ export interface SelectedRule extends Rule {
 }
 
 export interface RuleCategory {
-  id: string;
+  id: CategoryType;
   name: string;
   ruleList: SelectedRule[];
 }
@@ -245,6 +245,9 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
         [
           "engine.mysql.use-innodb",
           "table.require-pk",
+          "query.select.no-select-all",
+          "query.where.require",
+          "query.where.no-leading-wildcard-like",
         ],
         RuleLevel.Error
       ),
@@ -259,14 +262,6 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
           "column.no-null",
         ],
         RuleLevel.Warning
-      ),
-      ...getRuleListWithLevel(
-        [
-          "query.select.no-select-all",
-          "query.where.require",
-          "query.where.no-leading-wildcard-like",
-        ],
-        RuleLevel.Error
       ),
     ],
   },

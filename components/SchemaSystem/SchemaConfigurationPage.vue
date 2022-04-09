@@ -107,6 +107,7 @@ import {
   RuleLevel,
   SelectedRule,
   RuleCategory,
+  CategoryType,
   DatabaseType
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
@@ -148,13 +149,13 @@ const filterOptionList: FilterItem[] = [
   ...baseFilterOptionList,
 ];
 
-const categoryOrder: { [key: string] : number } = {
-  "engine": 0,
-  "naming": 1,
-  "query": 2,
-  "table": 3,
-  "column": 4,
-};
+const categoryOrder: Map<CategoryType, number> = new Map([
+  ["engine", 5],
+  ["naming", 4],
+  ["query", 3],
+  ["table", 2],
+  ["column", 1],
+]);
 
 export default defineComponent({
   components: {
@@ -208,7 +209,8 @@ export default defineComponent({
         return dict;
       }, {} as { [key: string]: RuleCategory });
 
-      return Object.values(dict).sort((c1, c2) => (categoryOrder[c1.id] || 0) - (categoryOrder[c2.id] || 0));
+      return Object.values(dict)
+        .sort((c1, c2) => (categoryOrder.get(c2.id) || 0) - (categoryOrder.get(c1.id) || 0));
     },
   },
   methods: {
