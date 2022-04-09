@@ -2,7 +2,6 @@
   <div>
     <div
       class="flex justify-center items-center py-4 px-2"
-      @click="state.open = !state.open"
     >
       <div class="flex-1 flex flex-col">
         <div class="flex mb-2 items-center space-x-2">
@@ -18,7 +17,7 @@
       </div>
     </div>
 
-    <div v-if="state.open" class="px-2 py-5 text-sm">
+    <div class="px-2 py-5 text-sm">
       <div class="mb-7">
         <p class="mb-3">Level</p>
         <div class="flex gap-x-3">
@@ -98,7 +97,6 @@ import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import { InputWithTemplate } from "../InputWithTemplate";
 
 interface LocalState {
-  open: boolean;
   level: RuleLevel;
   payload: {
     [val: string]: any;
@@ -130,7 +128,6 @@ export default defineComponent({
   emits: ["payload-change", "level-change"],
   setup(props, { emit }) {
     const state = reactive<LocalState>({
-      open: true,
       level: props.rule.level,
       payload: initStatePayload(props.rule.payload),
     });
