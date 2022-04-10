@@ -32,6 +32,8 @@ Flags:
                       http:// or https://. This is used by Bytebase to create the
                       webhook callback endpoint for VCS integration (default
                       "https://localhost")
+      --pg string     optional external PostgreSQL instance connection url; for
+                      example postgresql://user:secret@masterhost:5432/dbname?sslrootcert=cert
       --port int      port where Bytebase is accessed from. This is also used by
                       Bytebase to create the webhook callback endpoint for VCS
                       integration (default 80)
@@ -67,6 +69,12 @@ Must start with http:// or https://. Together with --port, the **host:port** sho
 Because --host is part of the webhook callback endpoint. If the same Bytebase instance is brought up with a different --host, the webhook for the VCS integration created before will likely have a stale callback endpoint.
 
 </hint-block>
+
+## --pg <\<string>>
+
+default: ""
+
+Optional external PostgreSQL instance connection url. If specified, Bytebase will store its own metadata there. Check [setup guide](/docs/install/external-postgres) for details.
 
 ## --port <\<number>>
 
