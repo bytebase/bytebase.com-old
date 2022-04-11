@@ -1,5 +1,3 @@
 import InputWithTemplate from "./InputWithTemplate.vue";
 
-export {
-  InputWithTemplate,
-}
+export default InputWithTemplate;

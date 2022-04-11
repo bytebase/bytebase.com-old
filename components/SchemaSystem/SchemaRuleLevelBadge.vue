@@ -7,13 +7,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "@nuxtjs/composition-api";
+import { defineComponent, PropType, computed } from "@nuxtjs/composition-api";
 import { RuleLevel } from "../../common/schemaSystem";
 import Badge from "../Badge.vue";
 
 export default defineComponent({
   components: {
-    Badge
+    Badge,
   },
   props: {
     level: {
@@ -21,9 +21,9 @@ export default defineComponent({
       type: String as PropType<RuleLevel>,
     },
   },
-  computed: {
-    theme(): string {
-      switch (this.$props.level) {
+  setup(props) {
+    const theme = computed((): string => {
+      switch (props.level) {
         case RuleLevel.Error:
           return "red";
         case RuleLevel.Warning:
@@ -31,7 +31,11 @@ export default defineComponent({
         default:
           return "gray";
       }
-    }
-  }
+    });
+
+    return {
+      theme,
+    };
+  },
 });
 </script>

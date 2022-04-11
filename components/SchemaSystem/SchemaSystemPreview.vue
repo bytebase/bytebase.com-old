@@ -6,7 +6,10 @@
       </h1>
       <p class="hidden" id="preview-hidden">
         Made from
-        <a href="https://bytebase.com/database-review-guide" class="text-indigo-600 hover:underline ml-1">
+        <a
+          href="https://bytebase.com/database-review-guide"
+          class="text-indigo-600 hover:underline ml-1"
+        >
           https://bytebase.com/database-review-guide
         </a>
       </p>
@@ -47,7 +50,10 @@
             >
               {{ key }}:
               <span
-                v-if="rule.payload[key].type === 'string' || rule.payload[key].type === 'template'"
+                v-if="
+                  rule.payload[key].type === 'string' ||
+                  rule.payload[key].type === 'template'
+                "
                 class="bg-gray-100 rounded text-sm p-2"
               >
                 {{ rule.payload[key].value || rule.payload[key].default }}
@@ -57,7 +63,8 @@
                 class="flex flex-wrap gap-3 ml-5 mt-3"
               >
                 <span
-                  v-for="(val, i) in rule.payload[key].value || rule.payload[key].default"
+                  v-for="(val, i) in rule.payload[key].value ||
+                  rule.payload[key].default"
                   :key="i"
                   class="bg-gray-100 rounded text-sm p-2"
                 >
@@ -69,7 +76,9 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400">
+    <div
+      class="flex flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400"
+    >
       Made by
       <a href="https://bytebase.com/database-review-guide">
         <img class="h-5" src="~/assets/logo-full.svg" alt="Bytebase" />
@@ -80,7 +89,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "@nuxtjs/composition-api";
+import { defineComponent, PropType, computed } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import { RuleCategory } from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
@@ -102,10 +111,14 @@ export default defineComponent({
     },
   },
   emits: ["select"],
-  computed: {
-    today(): string {
+  setup() {
+    const today = computed(() => {
       return dayjs().format("YYYY-MM-DD");
-    }
-  }
+    });
+
+    return {
+      today,
+    };
+  },
 });
 </script>

@@ -8,7 +8,9 @@
         @click="() => onTemplateAdd(template)"
       >
         {{ template.id }}
-        <span class="tooltip whitespace-nowrap">{{ template.description }}</span>
+        <span class="tooltip whitespace-nowrap">{{
+          template.description
+        }}</span>
       </div>
     </div>
     <div class="p-2 border-t border-gray-300">
@@ -41,7 +43,6 @@
   </div>
 </template>
 
-
 <script lang="ts">
 import {
   defineComponent,
@@ -53,7 +54,11 @@ import {
 } from "@nuxtjs/composition-api";
 import Badge from "../Badge.vue";
 import AutoWidthInput from "./AutoWidthInput.vue";
-import { Template } from "./types";
+
+interface Template {
+  id: string;
+  description?: string;
+}
 
 interface TemplateInput {
   value: string;
@@ -132,10 +137,13 @@ const getTemplateInputs = (
       str = `${last ? last.value : ""}${str}`;
     }
 
-    return [...result, {
-      value: str,
-      type: "string",
-    }];
+    return [
+      ...result,
+      {
+        value: str,
+        type: "string",
+      },
+    ];
   }, [] as TemplateInput[]);
 };
 
@@ -196,10 +204,7 @@ export default defineComponent({
     watch(
       () => state.inputData,
       (val) => {
-        emit(
-          "change",
-          `${templateInputsToString(state.templateInputs)}${val}`
-        );
+        emit("change", `${templateInputsToString(state.templateInputs)}${val}`);
       }
     );
 
@@ -212,45 +217,35 @@ export default defineComponent({
       }
     });
 
-    return {
-      state,
-      containerRef,
-      inputRef,
-    };
-  },
-  created() {
-    window.addEventListener("resize", this.onWindowResize.bind(this));
-  },
-  unmounted() {
-    window.removeEventListener("resize", this.onWindowResize.bind(this));
-  },
-  methods: {
-    onWindowResize() {
-      if (this.containerRef && this.containerRef) {
-        this.state.inputMaxWidth = this.containerRef.offsetWidth;
+    const onWindowResize = () => {
+      if (containerRef && containerRef.value) {
+        state.inputMaxWidth = containerRef.value.offsetWidth;
       }
-    },
-    onInputDataDeleteEnter(e: KeyboardEvent) {
-      if (!this.state.inputData && this.state.templateInputs.length > 0) {
-        const last = this.state.templateInputs.slice(-1)[0];
+    };
+
+    const onInputDataDeleteEnter = (e: KeyboardEvent) => {
+      if (!state.inputData && state.templateInputs.length > 0) {
+        const last = state.templateInputs.slice(-1)[0];
         if (last.type === "template") {
-          this.state.templateInputs.pop();
+          state.templateInputs.pop();
         }
       }
-    },
-    onInputDataDeleteLeave(e: KeyboardEvent) {
-      if (!this.state.inputData && this.state.templateInputs.length > 0) {
-        const last = this.state.templateInputs.slice(-1)[0];
+    };
+
+    const onInputDataDeleteLeave = (e: KeyboardEvent) => {
+      if (!state.inputData && state.templateInputs.length > 0) {
+        const last = state.templateInputs.slice(-1)[0];
         if (last && last.type === "string") {
-          const target = this.state.templateInputs.pop();
+          const target = state.templateInputs.pop();
           if (target) {
-            this.state.inputData = target.value;
+            state.inputData = target.value;
           }
         }
       }
-    },
-    onKeyup(i: number, e: KeyboardEvent) {
-      const data = this.state.templateInputs[i];
+    };
+
+    const onKeyup = (i: number, e: KeyboardEvent) => {
+      const data = state.templateInputs[i];
       if (!data) {
         return;
       }
@@ -259,81 +254,101 @@ export default defineComponent({
         return;
       }
 
-      this.onTemplateRemove(i);
-    },
-    onTemplateChange(i: number, data: string) {
-      const target = this.state.templateInputs[i];
+      onTemplateRemove(i);
+    };
+
+    const onTemplateChange = (i: number, data: string) => {
+      const target = state.templateInputs[i];
       if (!target) {
         return;
       }
 
-      this.state.templateInputs = [
-        ...this.state.templateInputs.slice(0, i),
+      state.templateInputs = [
+        ...state.templateInputs.slice(0, i),
         {
           value: data,
           type: target.type,
         },
-        ...this.state.templateInputs.slice(i + 1),
+        ...state.templateInputs.slice(i + 1),
       ];
-    },
-    onTemplateAdd(template: Template) {
-      if (this.state.inputData) {
+    };
+
+    const onTemplateAdd = (template: Template) => {
+      if (state.inputData) {
         // If the last input contains user's input, we also need to add it
-        this.state.templateInputs.push({
-          value: this.state.inputData,
+        state.templateInputs.push({
+          value: state.inputData,
           type: "string",
         });
       }
 
-      this.state.templateInputs.push({
+      state.templateInputs.push({
         value: template.id,
         type: "template",
       });
 
-      this.state.inputData = "";
-      if (this.inputRef) {
-        this.inputRef.focus();
+      state.inputData = "";
+      if (inputRef && inputRef.value) {
+        inputRef.value.focus();
       }
-    },
-    onTemplateRemove(i: number) {
-      this.state.templateInputs = [
-        ...this.state.templateInputs.slice(0, i),
-        ...this.state.templateInputs.slice(i + 1),
+    };
+
+    const onTemplateRemove = (i: number) => {
+      state.templateInputs = [
+        ...state.templateInputs.slice(0, i),
+        ...state.templateInputs.slice(i + 1),
       ];
 
-      if (this.state.templateInputs.length === 0) {
+      if (state.templateInputs.length === 0) {
         return;
       }
 
       const index = i - 1;
-      if (index < 0 || index >= this.state.templateInputs.length) {
+      if (index < 0 || index >= state.templateInputs.length) {
         return;
       }
 
-      const template = this.state.templateInputs[index];
+      const template = state.templateInputs[index];
       if (template.type !== "string") {
         return;
       }
 
-      if (i === this.state.templateInputs.length) {
+      if (i === state.templateInputs.length) {
         // If the last value is string, we need to extract it into the last input.
-        const last = this.state.templateInputs.pop();
+        const last = state.templateInputs.pop();
 
-        this.state.inputData = `${
-          last ? last.value : ""
-        }${this.state.inputData}`;
-      } else if (this.state.templateInputs[i].type === "string") {
+        state.inputData = `${last ? last.value : ""}${state.inputData}`;
+      } else if (state.templateInputs[i].type === "string") {
         // Join the adjacent string value
-        this.state.templateInputs = [
-          ...this.state.templateInputs.slice(0, index),
+        state.templateInputs = [
+          ...state.templateInputs.slice(0, index),
           {
-            value: `${template.value}${this.state.templateInputs[i].value}`,
+            value: `${template.value}${state.templateInputs[i].value}`,
             type: "string",
           },
-          ...this.state.templateInputs.slice(i + 1),
+          ...state.templateInputs.slice(i + 1),
         ];
       }
-    },
+    };
+
+    return {
+      state,
+      containerRef,
+      inputRef,
+      onWindowResize,
+      onInputDataDeleteEnter,
+      onInputDataDeleteLeave,
+      onKeyup,
+      onTemplateChange,
+      onTemplateAdd,
+      onTemplateRemove,
+    };
+  },
+  created() {
+    window.addEventListener("resize", this.onWindowResize.bind(this));
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.onWindowResize.bind(this));
   },
 });
 </script>

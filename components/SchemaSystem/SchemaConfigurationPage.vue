@@ -3,9 +3,7 @@
     <div class="flex justify-end mb-8 gap-x-5">
       <ActionButton
         v-if="ruleChanged"
-        :class-names="[
-          'bg-white hover:bg-gray-200',
-        ]"
+        :class-names="['bg-white hover:bg-gray-200']"
         @click="$emit('reset')"
       >
         Reset
@@ -36,7 +34,10 @@
                 v-model="filter.checked"
                 class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
               />
-              <label :for="filter.id" class="ml-3 items-center text-sm text-gray-600">
+              <label
+                :for="filter.id"
+                class="ml-3 items-center text-sm text-gray-600"
+              >
                 {{ filter.name }}
                 <span
                   class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
@@ -49,13 +50,8 @@
         </div>
         <div class="space-y-6">
           <h1 class="text-left text-2xl font-semibold">Rules</h1>
-          <fieldset
-            v-for="(category, index) in categoryList"
-            :key="index"
-          >
-            <div
-              class="block text-sm font-medium text-gray-900"
-            >
+          <fieldset v-for="(category, index) in categoryList" :key="index">
+            <div class="block text-sm font-medium text-gray-900">
               {{ category.name }}
             </div>
             <div
@@ -97,7 +93,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, reactive, nextTick } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  PropType,
+  reactive,
+  nextTick,
+  computed,
+} from "@nuxtjs/composition-api";
 import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
@@ -108,7 +110,7 @@ import {
   SelectedRule,
   RuleCategory,
   CategoryType,
-  DatabaseType
+  DatabaseType,
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
@@ -179,20 +181,32 @@ export default defineComponent({
     },
   },
   emits: ["change", "reset"],
-  setup() {
+  setup(props, { emit }) {
     const state = reactive<LocalState>({
       openConfigModal: false,
-      filterOptionList
+      filterOptionList,
     });
 
-    return {
-      state,
+    const isFilteredRule = (rule: SelectedRule): boolean => {
+      if (state.filterOptionList.every((f) => !f.checked)) {
+        return true;
+      }
+
+      return state.filterOptionList.some((filter) => {
+        return (
+          (filter.type === "level" &&
+            rule.level === filter.id &&
+            filter.checked) ||
+          (filter.type === "database" &&
+            filter.checked &&
+            rule.database.includes(filter.id as DatabaseType))
+        );
+      });
     };
-  },
-  computed: {
-    categoryList(): RuleCategory[] {
-      const dict = this.$props.selectedRuleList.reduce((dict, rule) => {
-        if (!this.isFilteredRule(rule)) {
+
+    const categoryList = computed((): RuleCategory[] => {
+      const dict = props.selectedRuleList.reduce((dict, rule) => {
+        if (!isFilteredRule(rule)) {
           return dict;
         }
 
@@ -209,61 +223,58 @@ export default defineComponent({
         return dict;
       }, {} as { [key: string]: RuleCategory });
 
-      return Object.values(dict)
-        .sort((c1, c2) => (categoryOrder.get(c2.id) || 0) - (categoryOrder.get(c1.id) || 0));
-    },
-  },
-  methods: {
-    isFilteredRule(rule: SelectedRule): boolean {
-      if (this.state.filterOptionList.every((f) => !f.checked)) {
-        return true;
-      }
+      return Object.values(dict).sort(
+        (c1, c2) =>
+          (categoryOrder.get(c2.id) || 0) - (categoryOrder.get(c1.id) || 0)
+      );
+    });
 
-      return this.state.filterOptionList.some((filter) => {
-        return (
-          (filter.type === "level" && rule.level === filter.id && filter.checked) ||
-          (filter.type === "database" && filter.checked && rule.database.includes(filter.id as DatabaseType))
-        );
-      });
-    },
-    filterItemCount(filter: FilterItem) {
-      return this.$props.selectedRuleList.filter((r) => {
+    const filterItemCount = (filter: FilterItem) => {
+      return props.selectedRuleList.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
-          (filter.type === "database" && r.database.includes(filter.id as DatabaseType))
-        )
+          (filter.type === "database" &&
+            r.database.includes(filter.id as DatabaseType))
+        );
       }).length;
-    },
-    onRuleSelect(rule: SelectedRule) {
-      this.state.selectedRule = rule;
-      this.state.openConfigModal = true;
-    },
-    onPayloadChange(data: { [val: string]: any }) {
-      if (!this.state.selectedRule || !this.state.selectedRule.payload) {
+    };
+
+    const onRuleSelect = (rule: SelectedRule) => {
+      state.selectedRule = rule;
+      state.openConfigModal = true;
+    };
+
+    const onPayloadChange = (data: { [val: string]: any }) => {
+      if (!state.selectedRule || !state.selectedRule.payload) {
         return;
       }
 
       const newRule = {
-        ...this.state.selectedRule,
-        payload: Object.entries(this.state.selectedRule.payload).reduce((dict, [key, val]) => {
-          dict[key] = { ...val };
-          dict[key].value = data[key];
-          return dict;
-        }, {} as RulePayload),
+        ...state.selectedRule,
+        payload: Object.entries(state.selectedRule.payload).reduce(
+          (dict, [key, val]) => {
+            dict[key] = { ...val };
+            dict[key].value = data[key];
+            return dict;
+          },
+          {} as RulePayload
+        ),
       };
 
-      this.$emit("change", newRule);
-    },
-    onLevelChange(level: RuleLevel) {
-      if (!this.state.selectedRule) {
+      emit("change", newRule);
+    };
+
+    const onLevelChange = (level: RuleLevel) => {
+      if (!state.selectedRule) {
         return;
       }
-      this.$emit("change", {
-        ...this.state.selectedRule,
+      emit("change", {
+        ...state.selectedRule,
         level,
       });
-    },
-    downConfiguration() {
+    };
+
+    const downConfiguration = () => {
       const node = document.getElementById("preview");
       if (!node) return;
 
@@ -272,12 +283,12 @@ export default defineComponent({
         element.style.display = "flex";
       }
 
-      nextTick(
-        () => domtoimage
+      nextTick(() =>
+        domtoimage
           .toPng(node, { bgcolor: "#fff" })
           .then((dataUrl) => {
             var link = document.createElement("a");
-            link.download = `${this.$props.title}.png`;
+            link.download = `${props.title}.png`;
             link.href = dataUrl;
             link.click();
           })
@@ -287,7 +298,17 @@ export default defineComponent({
             }
           })
       );
-    },
+    };
+
+    return {
+      state,
+      categoryList,
+      filterItemCount,
+      onRuleSelect,
+      onPayloadChange,
+      onLevelChange,
+      downConfiguration,
+    };
   },
-})
+});
 </script>
