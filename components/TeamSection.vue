@@ -158,6 +158,11 @@ const people = [
     role: "Engineer",
     imageUrl: require(`~/assets/people/elon.webp`),
   },
+  {
+    name: "Zipeng",
+    role: "Engineering Intern",
+    imageUrl: require(`~/assets/people/zipeng.webp`),
+  },
 ];
 
 const YOU = {
