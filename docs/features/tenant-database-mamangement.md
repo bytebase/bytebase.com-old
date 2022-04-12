@@ -13,15 +13,16 @@ Let's take the hospital example to follow the steps below.
 
 ## **Labels**
 
-A label is a key-value pair that helps you identify the tenant for a database. The supported label keys are location and tenant currently. Workspace owner needs to predefine label values (tenant names) in the Workspace Label tab.
+A label is a key-value pair that helps you identify the tenant for a database. The supported label keys are location and tenant currently. Workspace owner needs to predefine label values (tenant names) in the Workspace Label tab.dddd
 
-![](https://lh5.googleusercontent.com/rMDiat5aaHH5Y4W11dyJJ6BaQFBKpgWpN1fe7I6KDa5Lr9KFl8IBvkDxBTN9PfWnUciyFsDPrp4MM2IMXKBbEunyWjfR4OoTA9LwcBci_DnTvrqAcEv17toC9P5V7sztyyhsHtOI)
+![Tenant Labels](/static/docs-assets/tntdbmngmt-tenant-labels.png)
 
 ## **Projects in Tenant Mode**
 
 Project can be created in Tenant Mode which supports tenant database management.
 
-![](https://lh6.googleusercontent.com/eCSBofNQlemoRd1hibP3uFVvxR_KBXx9AxTETaZI5DUhKSxSoZTJYpE96dOrR-dogpQMe01gjrzHyEAaz420fOVtT05Z7BHcA1ZSw19ZF0MS4shA4-y7Sc7TfSis3rRA8CKoXsU5)
+![Create Project in Tenant Mode](/static/docs-assets/tntdbmngmt-create-project-in-tenant-mode.png)
+
 
 ## **Deployment Configuration**
 
@@ -35,31 +36,32 @@ You need to define deployment configuration for a project in Tenant Mode before 
 
 This provides a reliable sequence of updating schema for all tenants.
 
-![](https://lh4.googleusercontent.com/qhiFW7AVlgR1qf6kn8QNtwBEBELrd0Wz3HiTWVbN4uUz5ZzfH_KbSGdUL3LCSVQYGt8urMW4BVn9WuMugzdouN-zlnoxPOnGSuPbfT5xPWQX5wNrBU8SsVN4UdqTcGyn-JmNF5Wv)
+![Deployment Config](/static/docs-assets/tntdbmngmt-deployment-config.png)
 
 ## **Databases with tenant labels**
 
 You can create databases with labels in tenant mode projects. The labels come from predefined label keys and values in the Workspace. You can also transfer an existing database from another project if its database name and schema follows the existing tenant pattern.
 
-![](https://lh5.googleusercontent.com/np56A-QL4l2jaCUbjVq7SehWbzyAK9gicnYIUAt_qhOd59galXdtWrfCSa2tereGS5oOyBTGWgGq5kSQ_iRd_IUi9j75A_hy-t35M6qezSy3Kvze2LB16fidknhPOgQ9nOuJcduC)
+![Create Database with Tenant Label](/static/docs-assets/create-database-with-tenant-label.png)
 
 The project overview tab shows all tenant databases for databases named lab_test. Staging environment has a database for hospital1. There are three databases in the Prod environment for hospital1, hospital2, and hospital3.
 
-![](https://lh5.googleusercontent.com/fZzLjuIq3psIv67snNyZG3cE1KPVolLOG75QYWEZTZimvwCKK3qrscNoH8d43RU99E4RYfNaK9Cs9NhxjeDvZFY_sd75K_6-1xPWzR8wu_gKs0ik0_okKPaOmh69LqqXb9jnEl3I)
+![Tenant Databases](/static/docs-assets/tntdbmngmt-tenant-databases.png)
 
 ## **Schema Update for tenant databases**
 
 There is a preview dialog showing the plan of deployment before the schema is altered.
 
-![](https://lh5.googleusercontent.com/ZtI6JsVO19yJTuPDgZWyJrC8ITc9xc-51P198xoY7JaswEEfZ-NwgiypJhJAPyG_585MQGKqOabiAhEqvhxFxqJkJFEW8aSvrj3u4ZJr1X33z6QG5pIdHta6IP670Roi7HElQgSt)
+![Alter Schema](/static/docs-assets/tntdbmngmt-alter-schema.png)
+
 
 Issue can be created to update schema for all tenants by following the deployment configuration. The database names should be the same or follow the same database name template described in the section below. For example, the first two stages have been completed, and the issue is pending approval for the last stage.
 
-![](https://lh4.googleusercontent.com/gb1GTg9LAA5Y3X6HszmGciNzc7WRlZ-RD92m37QdNkuCaLtAUXh3NwaAewtWfh6tHjtio18BBEpOVtHoAotAUxwHYiyyxpzmKRfsYRzJF4Y_ucetpS26DjIkaOvMs5Wr7Iy40Ic7)
+![Issue Alter Schema](/static/docs-assets/tntdbmngmt-issue-alter-schema.png)
 
 Once the issue is completed, all tenant databases will have the same updated version of schema.
 
-![](https://lh5.googleusercontent.com/sNe3q-fgFlFr8cIMIro7yelBqOrz3jEr2vbcAuMQqeBBhDzKVIH9Ils3-tmsKl_FkQYzPpm5kCwo2xMXyXjzYuQJZqp-VyToP2V8YSd0ZT4qllrYZZi2eEn0V3QE_jP_BhoNWgyu)
+![After Issue Complete](/static/docs-assets/tntdbmngmt-after-issue-complete.png)
 
 ## Database Name Template
 
@@ -67,12 +69,12 @@ Typically, all tenant databases should have the same database name and will be p
 
 A project in Tenant Mode can be created with a database name template.
 
-![](https://lh3.googleusercontent.com/Zqyzbns_XSQe-dWRDM_hs7wq4Lj-g0fdBikDDd7gGvqSVUd-GRgizxnv3d_6nMTYl6c2esixJMvCYWKEb0M-ZbDv76m6ve-ZAHSpHOSUDaJvOSE75arc2Agq30Ygt-eKKFkUDH-r)
+![Create Project with Template](/static/docs-assets/tntdbmngmt-create-project-with-template.png)
 
 The name of the database being created will be generated based on a base \{{DB_NAME\}} and the name of a tenant.
 
-![](https://lh3.googleusercontent.com/wydI17rEtQv4wxPTYmIYIs2g44EGj0vMhksXHRU1IRunm7yYymeKphWJvRA00EYgHvMlgNKnjMN5iMfVRBPCd-qrofvJJpkgTcV6l68us2Ncbh9cGfFzpRgBd_UUrE92t9WmnWu_)
+![Create Database](/static/docs-assets/tntdbmngmt-create-database-with-template.png)
 
 The project database overview page will look like in the following.
 
-![](https://lh6.googleusercontent.com/FHWZlkvujYScHmWZqb50VdscniqvgLozVVPYOnYpwHoTjE51KXhlB7Ye5SAGmdFJt2o49T0ddx_-vakku1wIXM4PrwoLcECXKklvab8q1yY_2hk2piElJyysd4fQ1yDfafoZqLP-)
+![Project Overview](/static/docs-assets/tntdbmngmt-project-overview.png)
