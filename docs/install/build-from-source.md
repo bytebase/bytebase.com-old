@@ -71,4 +71,9 @@ debug=false
 Version 0.1.0 has started at http://localhost.com:8080
 ```
 
+Change the open file limit if your encounter "error: too many open files".
+```
+ulimit -n 10240
+```
+
 Open [http://localhost:8080](http://localhost:8080) in you browser and create the admin account.

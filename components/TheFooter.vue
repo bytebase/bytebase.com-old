@@ -197,6 +197,14 @@
 
             <li>
               <NuxtLink
+                to="/database-review-guide"
+                class="text-base text-gray-500 hover:text-gray-900"
+                @click="track('dbreview.footer')"
+                >Database Review Guide</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
                 to="/database-glossary"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('glossary.footer')"
