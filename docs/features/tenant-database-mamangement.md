@@ -41,7 +41,7 @@ This provides a reliable sequence of updating schema for all tenants.
 
 You can create databases with labels in tenant mode projects. The labels come from predefined label keys and values in the Workspace. You can also transfer an existing database from another project if its database name and schema follows the existing tenant pattern.
 
-![Create Database with Tenant Label](/static/docs-assets/create-database-with-tenant-label.png)
+![Create Database with Tenant Label](/static/docs-assets/tntdbmngmt-create-database-with-tenant-label.png)
 
 The project overview tab shows all tenant databases for databases named lab_test. Staging environment has a database for hospital1. There are three databases in the Prod environment for hospital1, hospital2, and hospital3.
 
