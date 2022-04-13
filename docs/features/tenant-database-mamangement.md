@@ -13,7 +13,7 @@ Let's take the hospital example to follow the steps below.
 
 ## **Labels**
 
-A label is a key-value pair that helps you identify the tenant for a database. The supported label keys are location and tenant currently. Workspace owner needs to predefine label values (tenant names) in the Workspace Label tab.dddd
+A label is a key-value pair that helps you identify the tenant for a database. The supported label keys are location and tenant currently. Workspace owner needs to predefine label values (tenant names) in the Workspace Label tab.
 
 ![Tenant Labels](/static/docs-assets/tntdbmngmt-tenant-labels.png)
 
