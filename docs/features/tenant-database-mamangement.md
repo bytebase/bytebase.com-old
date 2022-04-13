@@ -23,7 +23,6 @@ Project can be created in Tenant Mode which supports tenant database management.
 
 ![Create Project in Tenant Mode](/static/docs-assets/tntdbmngmt-create-project-in-tenant-mode.png)
 
-
 ## **Deployment Configuration**
 
 You need to define deployment configuration for a project in Tenant Mode before any database is created or transferred from another project. With deployment configuration in the example below, tenants will be deployed in three stages:
@@ -53,7 +52,6 @@ The project overview tab shows all tenant databases for databases named lab_test
 There is a preview dialog showing the plan of deployment before the schema is altered.
 
 ![Alter Schema](/static/docs-assets/tntdbmngmt-alter-schema.png)
-
 
 Issue can be created to update schema for all tenants by following the deployment configuration. The database names should be the same or follow the same database name template described in the section below. For example, the first two stages have been completed, and the issue is pending approval for the last stage.
 
