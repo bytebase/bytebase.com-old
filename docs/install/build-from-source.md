@@ -24,9 +24,9 @@ Download [source code](https://github.com/bytebase/bytebase) from GitHub, then g
 
 <hint-block type="info">
 
-If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.2:
+If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.3:
 
-`$ git checkout tags/v1.0.2`
+`$ git checkout tags/v1.0.3`
 
 </hint-block>
 
