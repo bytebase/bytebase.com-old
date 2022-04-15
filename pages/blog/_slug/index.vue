@@ -56,10 +56,19 @@
 </template>
 
 <script lang="ts">
+import { onMounted } from "@nuxtjs/composition-api";
 import { PostTag, postTagStyle } from "../../../common/type";
 import { getSinglePost } from "../../../api/posts";
 
 export default {
+  setup() {
+    onMounted(() => {
+      const logoImgEl = document.createElement("img");
+      logoImgEl.className = "hidden";
+      logoImgEl.src = "/favicon.png";
+      document.body.prepend(logoImgEl);
+    });
+  },
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
     return { post: post };
