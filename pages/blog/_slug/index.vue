@@ -1,10 +1,12 @@
 <template>
-  <main v-if="post" class="overflow-hidden space-y-8">
-    <img
-      class="hidden sm:block sm:h-96 w-full object-scale-down"
-      :src="post.feature_image"
-      :alt="post.feature_image_alt"
-    />
+  <main v-if="post" class="overflow-scroll space-y-8">
+    <div class="hidden sm:flex sm:h-96 w-full">
+      <img
+        class="w-full h-auto object-scale-down"
+        :src="post.feature_image"
+        :alt="post.feature_image_alt"
+      />
+    </div>
     <div class="prose prose-xl md:prose-2xl mx-auto px-4">
       <div
         v-for="(tag, tagIndex) in post.tags"
@@ -38,9 +40,7 @@
             })
           }}
         </time>
-        <span aria-hidden="true">
-          &middot;
-        </span>
+        <span aria-hidden="true"> &middot; </span>
         <span> {{ post.reading_time }} min read </span>
       </div></span
     >
@@ -50,7 +50,7 @@
     ></div>
 
     <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
-      <ActionSection class="sm:justify-center" :moduleName="'blog-detail'" />
+      <ActionSection class="sm:justify-center" :module-name="'blog-detail'" />
     </div>
   </main>
 </template>
@@ -60,12 +60,6 @@ import { PostTag, postTagStyle } from "../../../common/type";
 import { getSinglePost } from "../../../api/posts";
 
 export default {
-  head() {
-    return {
-      title: (this as any).post?.title,
-    };
-  },
-  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
     return { post: post };
@@ -74,6 +68,40 @@ export default {
     getTagStyle(tag: PostTag): string {
       return postTagStyle(tag);
     },
+  },
+  head() {
+    const post = (this as any).post;
+
+    return {
+      title: post.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: post.excerpt,
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: post.title,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: post.excerpt,
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: post.feature_image,
+        },
+      ],
+    };
   },
 };
 </script>
