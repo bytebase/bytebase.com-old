@@ -64,7 +64,6 @@ export default {
   setup() {
     onMounted(() => {
       const logoImgEl = document.createElement("img");
-      logoImgEl.className = "hidden";
       logoImgEl.src = "/favicon.png";
       document.body.prepend(logoImgEl);
     });
