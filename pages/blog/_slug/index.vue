@@ -2,6 +2,7 @@
   <main v-if="post" class="overflow-scroll space-y-8">
     <div class="hidden sm:flex sm:h-96 w-full">
       <img
+        v-if="post.feature_image"
         class="w-full h-auto object-scale-down"
         :src="post.feature_image"
         :alt="post.feature_image_alt"
@@ -14,6 +15,7 @@
         class="mb-4 inline-flex"
       >
         <span
+          v-if="getTagStyle(tag.name)"
           class="items-center px-3 py-0.5 mr-2 rounded-full text-base font-medium"
           :class="getTagStyle(tag.name)"
         >
