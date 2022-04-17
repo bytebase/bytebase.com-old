@@ -1,6 +1,7 @@
 <template>
   <main v-if="post" class="overflow-hidden space-y-8">
     <img
+      v-if="post.feature_image"
       class="hidden sm:block sm:h-96 w-full object-scale-down"
       :src="post.feature_image"
       :alt="post.feature_image_alt"
@@ -12,6 +13,7 @@
         class="mb-4 inline-flex"
       >
         <span
+          v-if="getTagStyle(tag.name)"
           class="items-center px-3 py-0.5 mr-2 rounded-full text-base font-medium"
           :class="getTagStyle(tag.name)"
         >
