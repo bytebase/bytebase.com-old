@@ -1,66 +1,101 @@
 <template>
-  <div>
-    <MainBanner class="mb-2" />
-    <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
-          <div>
-            <div class="relative pt-6 px-4">
-              <nav
-                class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
-                aria-label="Global"
-              >
-                <div
-                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+  <div
+    ref="pageWrapperRef"
+    class="relative w-full h-screen overflow-x-hidden overflow-y-auto"
+  >
+    <!-- sticky banner and header -->
+    <div
+      class="sticky top-0 w-full z-20 bg-white"
+      :class="stickyHeaderAdditionClass"
+    >
+      <MainBanner />
+      <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+          <script
+            async
+            defer
+            src="https://buttons.github.io/buttons.js"
+          ></script>
+          <div class="z-10 relative lg:max-w-2xl lg:w-full">
+            <div>
+              <div class="relative pt-5 pb-3 px-4">
+                <nav
+                  class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
+                  aria-label="Global"
                 >
                   <div
-                    class="flex items-center justify-between w-full sm:w-auto"
+                    class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
                   >
-                    <NuxtLink to="/">
-                      <span class="sr-only">Bytebase</span>
-                      <img
-                        class="h-6 sm:h-8 w-auto"
-                        src="~/assets/logo-full.svg"
-                        alt
-                      />
-                    </NuxtLink>
-                  </div>
-                  <div class="flex sm:hidden">
-                    <a
-                      class="github-button"
-                      href="https://github.com/bytebase/bytebase"
-                      data-color-scheme="no-preference: light; light: light; dark: dark;"
-                      data-size="large"
-                      data-show-count="true"
-                      aria-label="Star bytebase/bytebase on GitHub"
-                      >Star</a
+                    <div
+                      class="flex items-center justify-between w-full sm:w-auto"
                     >
+                      <NuxtLink to="/">
+                        <span class="sr-only">Bytebase</span>
+                        <img
+                          class="h-6 sm:h-8 w-auto"
+                          src="~/assets/logo-full.svg"
+                          alt
+                        />
+                      </NuxtLink>
+                    </div>
+                    <div class="flex sm:hidden">
+                      <a
+                        class="github-button"
+                        href="https://github.com/bytebase/bytebase"
+                        data-color-scheme="no-preference: light; light: light; dark: dark;"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star bytebase/bytebase on GitHub"
+                        >Star</a
+                      >
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="flex items-center flex-row sm:ml-8 space-x-4 text-lg sm:text-xl font-semibold"
-                >
-                  <NuxtLink
-                    to="/docs"
-                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                    @click.native="track('docs.header')"
-                    >Docs</NuxtLink
+                  <div
+                    class="flex items-center flex-row sm:ml-8 space-x-4 text-lg sm:text-xl font-semibold"
                   >
-                  <NuxtLink
-                    to="/blog"
-                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-                    @click.native="track('blog.header')"
-                    >Blog</NuxtLink
+                    <NuxtLink
+                      to="/docs"
+                      class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
+                      @click.native="track('docs.header')"
+                      >Docs</NuxtLink
+                    >
+                    <NuxtLink
+                      to="/blog"
+                      class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                      @click.native="track('blog.header')"
+                      >Blog</NuxtLink
+                    >
+                    <NuxtLink
+                      to="/pricing"
+                      class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                      @click.native="track('pricing.header')"
+                      >Pricing</NuxtLink
+                    >
+                    <div class="items-center hidden sm:flex lg:hidden">
+                      <!-- Place this tag where you want the button to render. -->
+                      <a
+                        class="github-button"
+                        href="https://github.com/bytebase/bytebase"
+                        data-color-scheme="no-preference: light; light: light; dark: dark;"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star bytebase/bytebase on GitHub"
+                        >Star</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="z-10 hidden lg:flex absolute items-center justify-end right-16"
                   >
-                  <NuxtLink
-                    to="/pricing"
-                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-                    @click.native="track('pricing.header')"
-                    >Pricing</NuxtLink
-                  >
-                  <div class="items-center hidden sm:flex lg:hidden">
+                    <div
+                      class="-mt-8 h-10 w-16"
+                      :style="{
+                        backgroundImage: 'url(/imgs/starus.png)',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                      }"
+                    ></div>
                     <!-- Place this tag where you want the button to render. -->
                     <a
                       class="github-button"
@@ -72,34 +107,17 @@
                       >Star</a
                     >
                   </div>
-                </div>
-                <div
-                  class="z-10 hidden lg:flex absolute items-center justify-end right-16"
-                >
-                  <div
-                    class="-mt-8 h-10 w-16"
-                    :style="{
-                      backgroundImage: 'url(/imgs/starus.png)',
-                      backgroundSize: 'contain',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                    }"
-                  ></div>
-                  <!-- Place this tag where you want the button to render. -->
-                  <a
-                    class="github-button"
-                    href="https://github.com/bytebase/bytebase"
-                    data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star bytebase/bytebase on GitHub"
-                    >Star</a
-                  >
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="relative bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
           <div class="mt-8 mx-auto max-w-6xl px-4 lg:mt-12">
             <div class="sm:text-center lg:text-left">
               <h1
@@ -1086,15 +1104,24 @@
         </div>
       </div>
     </div>
+
     <ActionSection class="sm:justify-center" :module-name="'footer'" />
+
     <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <SubscribeSection :module-name="'subscribe.footer'" />
     </div>
+
+    <TheFooter />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  useMeta,
+  ref,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import MainBanner from "~/components/MainBanner.vue";
 
@@ -1104,9 +1131,13 @@ export default defineComponent({
   components: { MainBanner },
   layout: "main",
   setup() {
+    const pageWrapperRef = ref<HTMLDivElement>();
+    const stickyHeaderAdditionClass = ref<string>();
+
     const track = (name: string) => {
       trackEvent(name);
     };
+
     useMeta({
       title: "Bytebase | Open source web-based db schema change for team",
       meta: [
@@ -1123,7 +1154,25 @@ export default defineComponent({
         },
       ],
     });
-    return { track };
+
+    onMounted(() => {
+      if (pageWrapperRef.value) {
+        pageWrapperRef.value.addEventListener("scroll", () => {
+          const scrollTop = pageWrapperRef.value?.scrollTop as number;
+          if (scrollTop > 0) {
+            stickyHeaderAdditionClass.value = "shadow";
+          } else {
+            stickyHeaderAdditionClass.value = "";
+          }
+        });
+      }
+    });
+
+    return {
+      pageWrapperRef,
+      stickyHeaderAdditionClass,
+      track,
+    };
   },
   head: {},
 });
