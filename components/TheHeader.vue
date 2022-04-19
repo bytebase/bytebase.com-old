@@ -65,7 +65,15 @@
           >
         </div>
         <div class="hidden sm:flex absolute items-center justify-end right-0">
-          <img class="-mt-8 h-10 w-auto" src="~/assets/starus.png" alt="" />
+          <div
+            class="-mt-8 h-10 w-16"
+            :style="{
+              backgroundImage: 'url(/imgs/starus.png)',
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }"
+          ></div>
           <!-- Place this tag where you want the button to render. -->
           <a
             class="github-button"

@@ -14,9 +14,13 @@ order: 10200
 
 It's recommended to run Bytebase application as non-root user for security reason. If you don't have other non-root users on the system, you can follow the following steps to setup one, e.g. user `bytebase`.
 
-`$ groupadd bytebase && useradd -g bb bytebase`
+```bash
+$ groupadd bytebase && useradd -g bb bytebase
+```
 
-`$ sudo su bytebase`
+```bash
+$ sudo su bytebase
+```
 
 ## Build
 
@@ -26,25 +30,31 @@ Download [source code](https://github.com/bytebase/bytebase) from GitHub, then g
 
 If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as v1.0.3:
 
-`$ git checkout tags/v1.0.3`
-
 </hint-block>
+
+```bash
+$ git checkout tags/v1.0.3
+```
 
 Build the source
 
-`$ scripts/build.sh [<<out_directory>>]`
+```bash
+$ scripts/build.sh [<<out_directory>>]
+```
 
 If `out_directory`is not specified, the default directory is `./bytebase-build`
 
 Suppose you run `scripts/build.sh foo` After build completes, run:
 
-`$ foo/bytebase --host http://localhost --port 8080`
+```bash
+$ foo/bytebase --host http://localhost --port 8080
+```
 
 (check [Server Startup Options](/docs/reference/command-line) for other startup options)
 
 You should see something like this in the console:
 
-```
+```bash
 -----Config BEGIN-----
 mode=release
 host=http://localhost
@@ -72,7 +82,7 @@ Version 0.1.0 has started at http://localhost.com:8080
 ```
 
 Change the open file limit if your encounter "error: too many open files".
-```
+```bash
 ulimit -n 10240
 ```
 
