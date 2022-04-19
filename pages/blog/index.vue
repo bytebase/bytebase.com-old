@@ -9,8 +9,11 @@
           Bytebase Blog
         </h1>
         <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-          Open source, web-based, zero-config, dependency-free database schema
-          change and version control tool for Developer and DBA.
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >Safer and faster</span
+          >
+          database schema change and version control tool for Developer and DBA.
         </h2>
         <div class="mt-8">
           <SubscribeSection :moduleName="'subscribe.blog'" />
