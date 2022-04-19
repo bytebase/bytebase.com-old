@@ -7,7 +7,7 @@ order: 70100
 
 The "help" command prints all applicable options
 
-```
+```bash
 $ ./bytebase help
 
 Bytebase is a database schema change and version control tool
