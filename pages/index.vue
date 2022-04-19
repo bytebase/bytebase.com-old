@@ -76,11 +76,15 @@
                 <div
                   class="z-10 hidden lg:flex absolute items-center justify-end right-0"
                 >
-                  <img
-                    class="-mt-8 h-10 w-auto"
-                    src="~/assets/starus.png"
-                    alt
-                  />
+                  <div
+                    class="-mt-8 h-10 w-16"
+                    style="
+                      background-image: url(/imgs/starus.png);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                    "
+                  ></div>
                   <!-- Place this tag where you want the button to render. -->
                   <a
                     class="github-button"
@@ -124,13 +128,19 @@
                 Bytebase offers a web-based collaboration workspace to help
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >DBAs</span
                 >
                 and
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >Developers</span
                 >
                 manage the lifecycle of application database schemas.
@@ -616,7 +626,7 @@
     </section>
     <!-- end of/SQL Editor Section -->
 
-    <div class="pt-16 overflow-hidden ">
+    <div class="pt-16 overflow-hidden">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
@@ -651,21 +661,30 @@
                 href="https://figma.com"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >Figma</a
               >,
               <a
                 href="https://about.gitlab.com"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >GitLab</a
               >,
               <a
                 href="https://www.terraform.io/"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >Terraform</a
               >. We want to be the most favorable tool among Developers and DBAs
               for managing database schemas.
@@ -737,7 +756,10 @@
                     href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
                     target="_blank"
                     class="text-blue-600 font-semibold"
-                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
                     >confusing interface</a
                   >.
                 </dd>
@@ -832,13 +854,19 @@
                 The entire app is bundled in
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >a single binary</span
                 >
                 and started via
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >./bytebase</span
                 >. As a professional tool, Bytebase tries to be pragmatic. And
                 because Bytebase is open sourced, it favors technologies with
@@ -880,7 +908,10 @@
                       href="https://v3.vuejs.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Vue</a
                     >
                     is a progressive framework and
@@ -888,7 +919,10 @@
                       href="https://tailwindcss.com"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Tailwind CSS</a
                     >
                     is a utility-first CSS framework. Together with the build
@@ -897,7 +931,10 @@
                       href="https://vitejs.dev/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Vite</a
                     >
                     and
@@ -905,7 +942,10 @@
                       href="https://typescriptlang.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >TypeScript</a
                     >, they offer a significantly improved frontend development
                     experience.
@@ -943,7 +983,10 @@
                       href="https://golang.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Golang's</a
                     >
                     static linking + embedding allows Bytebase to deliver a
@@ -985,7 +1028,10 @@
                       href="https://postgresql.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >PostgreSQL</a
                     >
                     is the industry leading multi-model relational database. In
@@ -1069,8 +1115,7 @@ export default defineComponent({
       meta: [
         {
           hid: "bytebase",
-          name:
-            "Bytebase | Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
+          name: "Bytebase | Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
           content:
             "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
         },

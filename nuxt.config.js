@@ -125,7 +125,7 @@ export default {
         "Changelog",
         "Announcement",
         "Education",
-        "Chinese",
+        "Hidden",
       ]);
       for (const post of postList) {
         if (post.tags.find((item) => item.name == "Changelog")) {
