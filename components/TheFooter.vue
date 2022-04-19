@@ -13,9 +13,9 @@
           <ul class="mt-4 space-y-4">
             <li>
               <NuxtLink
-                to="/usecase/developer"
+                to="/usecase/dba"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >For Developer</NuxtLink
+                >For DBA</NuxtLink
               >
             </li>
             <li>
@@ -27,9 +27,9 @@
             </li>
             <li>
               <NuxtLink
-                to="/usecase/dba"
+                to="/usecase/developer"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >For DBA</NuxtLink
+                >For Developer</NuxtLink
               >
             </li>
           </ul>
@@ -58,6 +58,13 @@
             </li>
             <li>
               <NuxtLink
+                to="/database/clickhouse"
+                class="text-base text-gray-500 hover:text-gray-900"
+                >ClickHouse</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
                 to="/database/tidb"
                 class="text-base text-gray-500 hover:text-gray-900"
                 >TiDB</NuxtLink
@@ -68,13 +75,6 @@
                 to="/database/snowflake"
                 class="text-base text-gray-500 hover:text-gray-900"
                 >Snowflake</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                to="/database/clickhouse"
-                class="text-base text-gray-500 hover:text-gray-900"
-                >ClickHouse</NuxtLink
               >
             </li>
           </ul>

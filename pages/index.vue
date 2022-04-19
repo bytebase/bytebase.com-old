@@ -40,25 +40,25 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex-row sm:ml-8 space-x-4 text-sm sm:text-lg font-semibold"
+                  class="flex items-center flex-row sm:ml-8 space-x-4 text-lg sm:text-xl font-semibold"
                 >
-                  <NuxtLink
-                    to="/blog"
-                    @click.native="track('blog.header')"
-                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-                    >Blog</NuxtLink
-                  >
-                  <NuxtLink
-                    to="/changelog"
-                    @click.native="track('changelog.header')"
-                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                    >Changelog</NuxtLink
-                  >
                   <NuxtLink
                     to="/docs"
                     class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
                     @click.native="track('docs.header')"
                     >Docs</NuxtLink
+                  >
+                  <NuxtLink
+                    to="/blog"
+                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                    @click.native="track('blog.header')"
+                    >Blog</NuxtLink
+                  >
+                  <NuxtLink
+                    to="/pricing"
+                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                    @click.native="track('pricing.header')"
+                    >Pricing</NuxtLink
                   >
                   <div class="items-center hidden sm:flex lg:hidden">
                     <!-- Place this tag where you want the button to render. -->
@@ -74,7 +74,7 @@
                   </div>
                 </div>
                 <div
-                  class="z-10 hidden lg:flex absolute items-center justify-end right-0"
+                  class="z-10 hidden lg:flex absolute items-center justify-end right-16"
                 >
                   <img
                     class="-mt-8 h-10 w-auto"
@@ -96,30 +96,25 @@
             </div>
           </div>
 
-          <div class="mt-8 mx-auto max-w-7xl px-4 lg:mt-20">
+          <div class="mt-8 mx-auto max-w-6xl px-4 lg:mt-12">
             <div class="sm:text-center lg:text-left">
-              <NuxtLink
-                to="/jobs"
-                @click.native="track('job.main')"
-                class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
-                >We're hiring</NuxtLink
-              >
-              <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
-                <span class="inline">Open source, web-based, zero-config</span>
-              </h2>
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                  >Safer and Faster</span
+                >
                 <span class="block xl:inline">
                   Database schema change and version control for
                   <span
                     class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >teams</span
+                    >Teams</span
                   >
                 </span>
               </h1>
               <h2
-                class="tracking-tight mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0"
+                class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl lg:mx-0"
               >
                 Bytebase offers a web-based collaboration workspace to help
                 <span
@@ -135,13 +130,15 @@
                 >
                 manage the lifecycle of application database schemas.
               </h2>
-              <div class="flex mt-6 justify-center lg:justify-start">
+              <div class="flex mt-8 justify-center lg:justify-start">
                 <DatabaseBar />
               </div>
-              <ActionSection
-                class="justify-center lg:justify-start"
-                :moduleName="'main'"
-              />
+              <div class="mt-12">
+                <ActionSection
+                  class="justify-center lg:justify-start"
+                  :module-name="'main'"
+                />
+              </div>
             </div>
           </div>
         </div>
