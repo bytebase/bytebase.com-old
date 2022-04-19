@@ -44,14 +44,14 @@
                 >
                   <NuxtLink
                     to="/blog"
-                    @click.native="track('blog.header')"
                     class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+                    @click.native="track('blog.header')"
                     >Blog</NuxtLink
                   >
                   <NuxtLink
                     to="/changelog"
-                    @click.native="track('changelog.header')"
                     class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
+                    @click.native="track('changelog.header')"
                     >Changelog</NuxtLink
                   >
                   <NuxtLink
@@ -78,12 +78,12 @@
                 >
                   <div
                     class="-mt-8 h-10 w-16"
-                    style="
-                      background-image: url(/imgs/starus.png);
-                      background-size: contain;
-                      background-repeat: no-repeat;
-                      background-position: center;
-                    "
+                    :style="{
+                      backgroundImage: 'url(/imgs/starus.png)',
+                      backgroundSize: 'contain',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                    }"
                   ></div>
                   <!-- Place this tag where you want the button to render. -->
                   <a
@@ -104,8 +104,8 @@
             <div class="sm:text-center lg:text-left">
               <NuxtLink
                 to="/jobs"
-                @click.native="track('job.main')"
                 class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
+                @click.native="track('job.main')"
                 >We're hiring</NuxtLink
               >
               <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
@@ -150,7 +150,7 @@
               </div>
               <ActionSection
                 class="justify-center lg:justify-start"
-                :moduleName="'main'"
+                :module-name="'main'"
               />
             </div>
           </div>
@@ -1089,9 +1089,9 @@
         </div>
       </div>
     </div>
-    <ActionSection class="sm:justify-center" :moduleName="'footer'" />
+    <ActionSection class="sm:justify-center" :module-name="'footer'" />
     <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <SubscribeSection :moduleName="'subscribe.footer'" />
+      <SubscribeSection :module-name="'subscribe.footer'" />
     </div>
   </div>
 </template>
@@ -1104,7 +1104,7 @@ import MainBanner from "~/components/MainBanner.vue";
 const { trackEvent } = Plausible();
 
 export default defineComponent({
-  head: {},
+  components: { MainBanner },
   layout: "main",
   setup() {
     const track = (name: string) => {
@@ -1128,6 +1128,6 @@ export default defineComponent({
     });
     return { track };
   },
-  components: { MainBanner },
+  head: {},
 });
 </script>
