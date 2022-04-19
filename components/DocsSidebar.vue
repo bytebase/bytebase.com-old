@@ -1,119 +1,80 @@
 <template>
   <div
-    class="relative w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
+    ref="sidebarElRef"
+    class="relative pb-6 w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
+    <!-- Render document tree. We only support 3 level folder. -->
     <div
-      class="hidden sm:flex w-full flex-row justify-between items-center pl-6 py-4 border-b border-gray-200"
+      v-for="node in state.documentTreeRoot.children"
+      :key="node.document.path"
+      class="w-full flex flex-col justify-start items-start"
     >
-      <span class="flex flex-row justify-start items-center no-underline">
-        <img class="h-6 w-auto" src="~/assets/logo-icon.svg" alt="" />
-        <span class="ml-2 text-base">Documents</span>
-      </span>
-      <img
-        class="w-5 h-auto mr-3 flex-shrink-0 opacity-60 cursor-pointer hover:opacity-100"
-        src="~/assets/svg/search.svg"
-        alt="search"
-        @click="handleSearchBtnClick"
-      />
-    </div>
-    <div
-      ref="sidebarElRef"
-      class="w-full flex-grow flex flex-col pb-4 overflow-y-auto"
-    >
-      <!-- Render document tree. We only support 3 level folder. -->
+      <!-- root node -->
+      <div class="pl-3 w-full" @click="handleLinkClick">
+        <span
+          v-if="node.document.isHeader"
+          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          >{{ node.document.title }}</span
+        >
+        <nuxt-link
+          v-else
+          :to="{ path: `/docs${node.document.path}` }"
+          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+        >
+          <span>{{ node.document.title }}</span>
+        </nuxt-link>
+      </div>
       <div
-        v-for="node in state.documentTreeRoot.children"
-        :key="node.document.path"
+        v-for="subnode in node.children"
+        v-show="node.displayChildren"
+        :key="subnode.document.path"
         class="w-full flex flex-col justify-start items-start"
       >
-        <!-- root node -->
-        <div class="pl-3 w-full" @click="handleLinkClick">
-          <span
-            v-if="node.document.isHeader"
-            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-            >{{ node.document.title }}</span
-          >
-          <NuxtLink
-            v-else
-            :to="{ path: `/docs${node.document.path}` }"
-            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-          >
-            <span>{{ node.document.title }}</span>
-          </NuxtLink>
-        </div>
+        <!-- subnode which can toggle leaf children nodes -->
         <div
-          v-for="subnode in node.children"
-          v-show="node.displayChildren"
-          :key="subnode.document.path"
-          class="w-full flex flex-col justify-start items-start"
+          class="pl-6 w-full"
+          @click="
+            subnode.displayChildren = !subnode.displayChildren;
+            handleLinkClick();
+          "
         >
-          <!-- subnode which can toggle leaf children nodes -->
-          <div
-            class="pl-6 w-full"
-            @click="
-              subnode.displayChildren = !subnode.displayChildren;
-              handleLinkClick();
-            "
+          <nuxt-link
+            :to="{ path: `/docs${subnode.document.path}` }"
+            class="pl-3 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
-            <NuxtLink
-              :to="{ path: `/docs${subnode.document.path}` }"
-              class="pl-3 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+            <span>{{ subnode.document.title }}</span>
+            <span
+              v-if="subnode.children.length !== 0"
+              class="flex-shrink-0 mr-4"
+              @click.prevent.stop="
+                subnode.displayChildren = !subnode.displayChildren
+              "
             >
-              <span>{{ subnode.document.title }}</span>
-              <span
-                v-if="subnode.children.length !== 0"
-                class="flex-shrink-0 mr-4"
-                @click.prevent.stop="
-                  subnode.displayChildren = !subnode.displayChildren
-                "
-              >
-                <img
-                  class="relative w-4 h-auto transition-all opacity-60"
-                  :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
-                  src="~/assets/svg/chevron-right.svg"
-                  alt="toggle"
-                />
-              </span>
-            </NuxtLink>
-          </div>
-          <!-- leaf nodes -->
-          <div
-            v-for="leafnode in subnode.children"
-            v-show="subnode.displayChildren"
-            :key="leafnode.document.path"
-            class="pl-9 w-full"
-            @click="handleLinkClick"
+              <img
+                class="relative w-4 h-auto transition-all opacity-60"
+                :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
+                src="~/assets/svg/chevron-right.svg"
+                alt="toggle"
+              />
+            </span>
+          </nuxt-link>
+        </div>
+        <!-- leaf nodes -->
+        <div
+          v-for="leafnode in subnode.children"
+          v-show="subnode.displayChildren"
+          :key="leafnode.document.path"
+          class="pl-9 w-full"
+          @click="handleLinkClick"
+        >
+          <nuxt-link
+            :to="{ path: `/docs${leafnode.document.path}` }"
+            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
-            <NuxtLink
-              :to="{ path: `/docs${leafnode.document.path}` }"
-              class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
-            >
-              <span>{{ leafnode.document.title }}</span>
-            </NuxtLink>
-          </div>
+            <span>{{ leafnode.document.title }}</span>
+          </nuxt-link>
         </div>
       </div>
-    </div>
-    <div
-      class="w-full flex flex-col flex-shrink-0 justify-start py-2 items-start bg-white border-t border-gray-200"
-      @click="handleLinkClick"
-    >
-      <NuxtLink
-        :to="{ path: `/docs/document-write-guide` }"
-        class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
-      >
-        <span class="text-base leading-8 mr-2">✍️</span>
-        <span class="text-gray-600 hover:text-accent">Write guide</span>
-      </NuxtLink>
-      <NuxtLink
-        :to="{ path: `/` }"
-        class="pl-6 flex flex-row justify-start items-center flex-shrink-0 text-gray-500 w-full text-sm border-none"
-      >
-        <span class="text-base leading-8 mr-2">🏠</span>
-        <span class="text-gray-600 hover:text-accent">
-          Back to bytebase.com
-        </span>
-      </NuxtLink>
     </div>
   </div>
 </template>

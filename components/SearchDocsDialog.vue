@@ -1,6 +1,6 @@
 <template>
   <div
-    class="search-dialog transition-all fixed top-0 left-0 bg-transparent w-screen h-screen flex flex-row justify-center items-start pt-20"
+    class="search-dialog transition-all z-50 fixed top-0 left-0 bg-transparent w-screen h-screen flex flex-row justify-center items-start pt-20"
     @click="hideSearchDialog"
   >
     <div
@@ -127,10 +127,11 @@ export default defineComponent({
       searchDocsResult.value = [];
       if (searchText.value !== "") {
         for (const document of documentList) {
+          const searchTextValue = searchText.value.toUpperCase();
           if (
-            document.title.includes(searchText.value) ||
-            document.path.includes(searchText.value) ||
-            String(document.body).includes(searchText.value)
+            document.title.toUpperCase().includes(searchTextValue) ||
+            document.path.toUpperCase().includes(searchTextValue) ||
+            String(document.body).toUpperCase().includes(searchTextValue)
           ) {
             searchDocsResult.value.push(document);
           }
