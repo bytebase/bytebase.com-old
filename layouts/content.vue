@@ -16,12 +16,6 @@
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
         /></nuxt-link>
         <nuxt-link
-          to="/docs"
-          class="header-link"
-          @click.native="track('docs.header')"
-          >Docs</nuxt-link
-        >
-        <nuxt-link
           to="/blog"
           class="header-link"
           @click.native="track('blog.header')"
@@ -83,6 +77,9 @@ import {
 } from "@nuxtjs/composition-api";
 import { useStore } from "~/store";
 import { ContentDocument } from "~/types/docs";
+import Plausible from "plausible-tracker";
+
+const { trackEvent } = Plausible();
 
 interface State {
   isLoading: boolean;
@@ -97,6 +94,8 @@ const MOBILE_VIEW_MAX_WIDTH = 640;
 export default defineComponent({
   setup() {
     const { $content } = useContext();
+    const { $ga } = useContext() as any;
+
     const store = useStore();
     const state = reactive<State>({
       isLoading: true,
@@ -133,6 +132,16 @@ export default defineComponent({
       });
     });
 
+    const track = (name: string) => {
+      trackEvent(name);
+
+      const parts = name.split(".");
+      $ga.event({
+        eventCategory: parts[0],
+        eventLabel: parts[1],
+      });
+    };
+
     const toggleSidebar = () => {
       state.showSidebar = !state.showSidebar;
     };
@@ -150,6 +159,7 @@ export default defineComponent({
     return {
       state,
       showSearchDialogFlag,
+      track,
       toggleSidebar,
       handleSidebarClick,
       handleSearchBtnClick,
