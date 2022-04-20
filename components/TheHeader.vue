@@ -38,28 +38,22 @@
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
         >
           <NuxtLink
-            to="/pricing"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('pricing.header')"
-            >Pricing</NuxtLink
-          >
-          <NuxtLink
             to="/blog"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('blog.header')"
             >Blog</NuxtLink
           >
           <NuxtLink
-            to="/changelog"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('changelog.header')"
-            >Changelog</NuxtLink
-          >
-          <NuxtLink
             to="/docs"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
             >Docs</NuxtLink
+          >
+          <NuxtLink
+            to="/pricing"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('pricing.header')"
+            >Pricing</NuxtLink
           >
         </div>
         <div class="z-10 hidden lg:flex flex-row items-center justify-end">
@@ -86,21 +80,19 @@
           </div>
           <div class="transition-all flex flex-row">
             <a
-              href="https://github.com/bytebase/bytebase#installation"
-              target="_blank"
-              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
-              @click="track('deploy')"
-            >
-              Deploy now
-            </a>
-            <a
               href="https://demo.bytebase.com?ref=bytebase.com"
               target="_blank"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
-              @click="track('demo')"
+              @click="track('demo.header')"
             >
-              Live demo
+              Demo
             </a>
+            <NuxtLink
+              to="/docs/install/install-with-docker"
+              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
+              @click.native="track('deploy.header')"
+              >Deploy now</NuxtLink
+            >
           </div>
         </div>
       </nav>
@@ -124,7 +116,7 @@ export default defineComponent({
       const parts = name.split(".");
       $ga.event({
         eventCategory: parts[0],
-        eventLabe: parts[1],
+        eventLabel: parts[1],
       });
     };
 
