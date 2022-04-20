@@ -1,15 +1,25 @@
 <template>
-  <div>
-    <MainBanner class="mb-2" />
-    <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
-          <div>
-            <div class="relative pt-6 px-4">
+  <div
+    ref="pageWrapperRef"
+    class="relative w-full h-screen overflow-x-hidden overflow-y-auto"
+  >
+    <!-- sticky banner and header -->
+    <div
+      class="sticky top-0 w-full z-20 bg-white"
+      :class="stickyHeaderAdditionClass"
+    >
+      <MainBanner />
+      <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+          <script
+            async
+            defer
+            src="https://buttons.github.io/buttons.js"
+          ></script>
+          <div class="z-10 relative w-full">
+            <div class="relative w-full pt-5 pb-3 px-4">
               <nav
-                class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
+                class="relative w-full flex flex-col justify-between space-y-2 sm:space-y-0 sm:flex-row sm:items-center lg:grid lg:grid-cols-3 sm:h-10"
                 aria-label="Global"
               >
                 <div
@@ -40,7 +50,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex-row sm:ml-8 space-x-4 text-lg sm:text-xl font-semibold"
+                  class="flex flex-row justify-center items-center sm:ml-8 lg:ml-0 space-x-4 text-lg sm:text-xl font-semibold"
                 >
                   <NuxtLink
                     to="/docs"
@@ -74,32 +84,61 @@
                   </div>
                 </div>
                 <div
-                  class="z-10 hidden lg:flex absolute items-center justify-end right-16"
+                  class="z-10 hidden lg:flex flex-row items-center justify-end"
                 >
+                  <div class="relative flex flex-row" style="margin-top: 6px">
+                    <div
+                      class="-mt-5 h-10 w-16"
+                      :style="{
+                        backgroundImage: 'url(/imgs/starus.png)',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                      }"
+                    ></div>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a
+                      class="github-button"
+                      href="https://github.com/bytebase/bytebase"
+                      data-color-scheme="no-preference: light; light: light; dark: dark;"
+                      data-size="large"
+                      data-show-count="true"
+                      aria-label="Star bytebase/bytebase on GitHub"
+                      >Star</a
+                    >
+                  </div>
                   <div
-                    class="-mt-8 h-10 w-16"
-                    :style="{
-                      backgroundImage: 'url(/imgs/starus.png)',
-                      backgroundSize: 'contain',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                    }"
-                  ></div>
-                  <!-- Place this tag where you want the button to render. -->
-                  <a
-                    class="github-button"
-                    href="https://github.com/bytebase/bytebase"
-                    data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star bytebase/bytebase on GitHub"
-                    >Star</a
+                    v-show="shouldShowActionButtons"
+                    class="transition-all flex flex-row"
                   >
+                    <a
+                      href="https://github.com/bytebase/bytebase#installation"
+                      target="_blank"
+                      class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
+                      @click="track('deploy')"
+                    >
+                      Deploy now
+                    </a>
+                    <a
+                      href="https://demo.bytebase.com?ref=bytebase.com"
+                      target="_blank"
+                      class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+                      @click="track('demo')"
+                    >
+                      Live demo
+                    </a>
+                  </div>
                 </div>
               </nav>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="relative bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
           <div class="mt-8 mx-auto max-w-6xl px-4 lg:mt-12">
             <div class="sm:text-center lg:text-left">
               <h1
@@ -1086,15 +1125,24 @@
         </div>
       </div>
     </div>
+
     <ActionSection class="sm:justify-center" :module-name="'footer'" />
+
     <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <SubscribeSection :module-name="'subscribe.footer'" />
     </div>
+
+    <TheFooter />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  useMeta,
+  ref,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import MainBanner from "~/components/MainBanner.vue";
 
@@ -1104,9 +1152,14 @@ export default defineComponent({
   components: { MainBanner },
   layout: "main",
   setup() {
+    const pageWrapperRef = ref<HTMLDivElement>();
+    const stickyHeaderAdditionClass = ref<string>();
+    const shouldShowActionButtons = ref<boolean>(false);
+
     const track = (name: string) => {
       trackEvent(name);
     };
+
     useMeta({
       title: "Bytebase | Open source web-based db schema change for team",
       meta: [
@@ -1123,7 +1176,33 @@ export default defineComponent({
         },
       ],
     });
-    return { track };
+
+    onMounted(() => {
+      if (pageWrapperRef.value) {
+        pageWrapperRef.value.addEventListener("scroll", () => {
+          const scrollTop = pageWrapperRef.value?.scrollTop as number;
+          console.log(scrollTop);
+          if (scrollTop > 0) {
+            stickyHeaderAdditionClass.value = "shadow";
+
+            if (scrollTop >= 620) {
+              shouldShowActionButtons.value = true;
+            } else {
+              shouldShowActionButtons.value = false;
+            }
+          } else {
+            stickyHeaderAdditionClass.value = "";
+          }
+        });
+      }
+    });
+
+    return {
+      pageWrapperRef,
+      stickyHeaderAdditionClass,
+      shouldShowActionButtons,
+      track,
+    };
   },
   head: {},
 });

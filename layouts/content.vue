@@ -1,10 +1,8 @@
 <template>
-  <div
-    class="relative w-full h-screen flex flex-col justify-start items-start overflow-hidden"
-  >
+  <div class="page-wrapper w-full h-screen">
     <MainBanner />
     <header
-      class="flex-shrink-0 z-10 top-0 left-0 w-full h-14 bg-white flex flex-row justify-between items-center py-2 px-4 sm:px-6 border-b"
+      class="w-full h-14 bg-white flex flex-row justify-between items-center py-2 px-4 sm:px-6 border-b"
     >
       <nav
         class="flex flex-row relative justify-start items-center h-full sm:justify-center"
@@ -161,6 +159,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.page-wrapper {
+  @apply grid;
+  grid-template-rows:
+    minmax(min-content, max-content) minmax(min-content, max-content)
+    auto;
+}
 .main-wrapper {
   grid-template-columns: 280px auto;
   @apply flex sm:grid;
