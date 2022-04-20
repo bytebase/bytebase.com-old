@@ -35,13 +35,6 @@
         @click="track('demo')"
       >
         Live demo
-        <svg
-          class="w-0 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        ></svg>
       </a>
     </div>
   </div>

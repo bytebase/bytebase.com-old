@@ -1,6 +1,6 @@
 <template>
-  <header class="relative pt-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <header class="relative pt-5 pb-3 w-full">
+    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6">
       <div
         class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
       >
@@ -19,12 +19,10 @@
         >
       </div>
       <nav
-        class="relative flex items-center justify-between sm:h-10 sm:justify-center"
+        class="relative w-full flex items-center justify-between sm:h-10 sm:justify-center lg:grid lg:grid-cols-3"
         aria-label="Global"
       >
-        <div
-          class="hidden sm:flex items-center flex-1 sm:absolute sm:inset-y-0 sm:left-0"
-        >
+        <div class="hidden sm:flex flex-row justify-start items-center">
           <div class="flex items-center justify-between w-full sm:w-auto">
             <NuxtLink to="/">
               <span class="sr-only">Bytebase</span>
@@ -37,7 +35,7 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between text-sm sm:text-xl font-semibold space-x-2 sm:space-x-8"
+          class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
         >
           <NuxtLink
             to="/pricing"
@@ -64,27 +62,46 @@
             >Docs</NuxtLink
           >
         </div>
-        <div class="hidden sm:flex absolute items-center justify-end right-0">
-          <div
-            class="-mt-8 h-10 w-16"
-            :style="{
-              backgroundImage: 'url(/imgs/starus.png)',
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }"
-          ></div>
-          <!-- Place this tag where you want the button to render. -->
-          <a
-            class="github-button"
-            href="https://github.com/bytebase/bytebase"
-            data-color-scheme="no-preference: light; light: light; dark: dark;"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star bytebase/bytebase on GitHub"
-            @click="track('github.header')"
-            >Star</a
-          >
+        <div class="z-10 hidden lg:flex flex-row items-center justify-end">
+          <div class="relative flex flex-row" style="margin-top: 6px">
+            <div
+              class="-mt-5 h-10 w-16"
+              :style="{
+                backgroundImage: 'url(/imgs/starus.png)',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }"
+            ></div>
+            <!-- Place this tag where you want the button to render. -->
+            <a
+              class="github-button"
+              href="https://github.com/bytebase/bytebase"
+              data-color-scheme="no-preference: light; light: light; dark: dark;"
+              data-size="large"
+              data-show-count="true"
+              aria-label="Star bytebase/bytebase on GitHub"
+              >Star</a
+            >
+          </div>
+          <div class="transition-all flex flex-row">
+            <a
+              href="https://github.com/bytebase/bytebase#installation"
+              target="_blank"
+              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
+              @click="track('deploy')"
+            >
+              Deploy now
+            </a>
+            <a
+              href="https://demo.bytebase.com?ref=bytebase.com"
+              target="_blank"
+              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+              @click="track('demo')"
+            >
+              Live demo
+            </a>
+          </div>
         </div>
       </nav>
     </div>
