@@ -8,7 +8,7 @@
             <NuxtLink
               to="/database-glossary"
               active-class=""
-              class="ml-4 text-sm font-medium text-gray-700 hover:text-gray-500"
+              class="ml-4 text-base font-medium text-gray-700 hover:text-gray-500"
               >Database Glossary</NuxtLink
             >
           </div>
@@ -31,7 +31,7 @@
             </svg>
             <a
               href="#"
-              class="text-sm font-medium text-gray-700 hover:text-gray-500"
+              class="text-base font-medium text-gray-700 hover:text-gray-500"
               aria-current="page"
               >{{ glossary.name }}</a
             >
