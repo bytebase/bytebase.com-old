@@ -78,7 +78,7 @@
                     Category
                   </div>
                 </legend>
-                <div class="pt-4 pb-2 px-4" id="filter-section-0">
+                <div id="filter-section-0" class="pt-4 pb-2 px-4">
                   <div class="space-y-6">
                     <div
                       v-for="(filter, index) in state.filterList"
@@ -89,12 +89,12 @@
                         type="checkbox"
                         :value="filter.value"
                         :checked="filter.checked"
+                        class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                         @input="
                           () => {
                             filter.checked = !filter.checked;
                           }
                         "
-                        class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                       />
                       <label class="ml-3 text-sm text-gray-600">
                         {{ filter.name }}
@@ -199,12 +199,12 @@
                           type="checkbox"
                           :value="filter.value"
                           :checked="filter.checked"
+                          class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                           @input="
                             () => {
                               filter.checked = !filter.checked;
                             }
                           "
-                          class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                         />
                         <label class="ml-3 items-center text-sm text-gray-600">
                           {{ filter.name }}
@@ -257,8 +257,8 @@
                 class="mx-2"
               >
                 <a
-                  :href="`#${alphaItem.letter}`"
                   :id="alphaItem.letter"
+                  :href="`#${alphaItem.letter}`"
                   class="block text-2xl text-left text-indigo-600 font-semibold tracking-wide uppercase hover:underline"
                 >
                   {{ alphaItem.letter }}
@@ -271,8 +271,8 @@
                 >
                   <div class="flex items-center space-x-4">
                     <a
-                      :href="`#${slug(glossary.name)}`"
                       :id="slug(glossary.name)"
+                      :href="`#${slug(glossary.name)}`"
                       class="text-xl text-gray-800 font-semibold hover:underline"
                       >{{ glossary.name }}</a
                     >
@@ -291,26 +291,13 @@
                   <p class="mt-4 text-gray-600">
                     {{ glossary.description }}
                   </p>
-                  <div v-if="glossary.reference" class="flex justify-end mt-2">
-                    <a
-                      :href="glossary.reference"
-                      target="__blank"
-                      class="flex items-center text-blue-600 hover:underline"
-                      >Reference
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        ></path></svg
-                    ></a>
+                  <div class="flex justify-end mt-2 space-x-2">
+                    <NuxtLink
+                      :to="`database-glossary/${slug(glossary.name)}`"
+                      class="text-blue-600 hover:underline"
+                    >
+                      Detail
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -320,7 +307,7 @@
       </main>
     </div>
     <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-6xl">
-      <ActionSection class="sm:justify-center" :moduleName="'glossary'" />
+      <ActionSection class="sm:justify-center" :module-name="'glossary'" />
     </div>
   </div>
 </template>
@@ -371,16 +358,6 @@ interface LocalState {
 }
 
 export default defineComponent({
-  head: {
-    title: "Database Glossary",
-    meta: [
-      {
-        hid: "Database Glossary",
-        name: "Database Glossary",
-        content: "",
-      },
-    ],
-  },
   setup() {
     const state = reactive<LocalState>({
       filterList: FILTER_LIST,
@@ -439,6 +416,16 @@ export default defineComponent({
       filteredAlphaList,
       glossaryTagStyle,
     };
+  },
+  head: {
+    title: "Database Glossary",
+    meta: [
+      {
+        hid: "Database Glossary",
+        name: "Database Glossary",
+        content: "",
+      },
+    ],
   },
 });
 </script>
