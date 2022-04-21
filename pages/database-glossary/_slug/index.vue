@@ -42,17 +42,20 @@
     <div class="prose prose-xl prose-indigo mx-auto">
       <h1>📕 What is {{ glossary.name }}?</h1>
       <div class="justify-between flex">
-        <div
-          v-for="(tag, tagIndex) in glossary.tagList"
-          :key="tagIndex"
-          class="inline-flex"
-        >
-          <span
-            class="items-center px-3 py-1.5 mr-2 rounded-full text-base font-medium"
-            :class="getTagStyle(tag)"
+        <div>
+          <div
+            v-for="(tag, tagIndex) in glossary.tagList"
+            :key="tagIndex"
+            class="inline-flex"
           >
-            {{ tag }}
-          </span>
+            <span
+              v-if="getTagStyle(tag)"
+              class="items-center px-3 py-1.5 mr-2 rounded-full text-base font-medium"
+              :class="getTagStyle(tag)"
+            >
+              {{ tag }}
+            </span>
+          </div>
         </div>
         <a
           v-if="glossary.reference"
