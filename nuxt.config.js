@@ -79,7 +79,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Bytebase - Database Schema Change and Version Control",
+    title: "Bytebase - Safe Database Schema Change and Version Control",
     htmlAttrs: {
       lang: "en",
     },
@@ -94,7 +94,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Safer and faster database schema change and version control for Developers and DBAs",
+          "Safer and faster database change and version control for DBAs and Developers",
       },
       { name: "format-detection", content: "telephone=no" },
     ],

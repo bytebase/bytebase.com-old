@@ -13,10 +13,10 @@
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
             >Safer and faster</span
           >
-          database schema change and version control tool for Developer and DBA.
+          database change and version control for DBAs and Developers.
         </h2>
         <div class="mt-8">
-          <SubscribeSection :moduleName="'subscribe.blog'" />
+          <SubscribeSection :module-name="'subscribe.blog'" />
         </div>
       </div>
 
@@ -186,7 +186,7 @@
       </div>
 
       <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-        <ActionSection class="sm:justify-center" :moduleName="'blog'" />
+        <ActionSection class="sm:justify-center" :module-name="'blog'" />
       </div>
     </div>
   </div>
@@ -198,18 +198,6 @@ import { PostTag, postTagStyle } from "../../common/type";
 import { getPosts } from "../../api/posts";
 
 export default {
-  head() {
-    return {
-      title: "Blog",
-      meta: [
-        {
-          hid: "Bytebase Blog",
-          name: "Bytebase Blog",
-          content: "Bytebase Blog",
-        },
-      ],
-    };
-  },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
   async asyncData() {
     const posts = (await getPosts([
@@ -223,6 +211,18 @@ export default {
       }
     }
     return { posts, featuredPosts };
+  },
+  head() {
+    return {
+      title: "Blog",
+      meta: [
+        {
+          hid: "Bytebase Blog",
+          name: "Bytebase Blog",
+          content: "Bytebase Blog",
+        },
+      ],
+    };
   },
   methods: {
     getTagStyle(tag: PostTag): string {

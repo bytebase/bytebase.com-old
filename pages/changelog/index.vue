@@ -13,10 +13,10 @@
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
             >Safer and faster</span
           >
-          database schema change and version control tool for Developer and DBA.
+          database change and version control for DBAs and Developers.
         </h2>
         <div class="mt-8">
-          <SubscribeSection :moduleName="'subscribe.changelog'" />
+          <SubscribeSection :module-name="'subscribe.changelog'" />
         </div>
       </div>
 
@@ -32,7 +32,9 @@
                 :to="{ path: `changelog/${post.slug}` }"
                 class="flex-1 flex flex-col justify-between"
               >
-                <div class="pt-6 prose prose-xl md:prose-2xl mx-auto text-center hover:underline">
+                <div
+                  class="pt-6 prose prose-xl md:prose-2xl mx-auto text-center hover:underline"
+                >
                   <h1>{{ post.title }}</h1>
                 </div>
                 <span
@@ -74,7 +76,10 @@
                   />
                 </div>
               </NuxtLink>
-              <div class="prose prose-indigo prose-xl md:prose-2xl mx-auto" v-html="post.html"></div>
+              <div
+                class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
+                v-html="post.html"
+              ></div>
             </div>
           </div>
         </div>
@@ -83,10 +88,13 @@
         <NuxtLink
           :to="{ path: `changelog?page=${page + 1}` }"
           class="text-xl text-indigo-600"
-        >Next page</NuxtLink>
+          >Next page</NuxtLink
+        >
       </div>
-      <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
-        <ActionSection class="sm:justify-center" :moduleName="'changelog'" />
+      <div
+        class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl"
+      >
+        <ActionSection class="sm:justify-center" :module-name="'changelog'" />
       </div>
     </div>
   </div>
@@ -97,6 +105,15 @@ import { PostsOrPages } from "@tryghost/content-api";
 import { getPosts } from "../../api/posts";
 
 export default {
+  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
+  async asyncData({ params }: any) {
+    const page = parseInt(params.page) ? parseInt(params.page) : 1;
+    const posts = (await getPosts(["Changelog"], page)) as PostsOrPages;
+    const lastPage =
+      posts.length == 0 || posts[posts.length - 1].title == "Bytebase 0.1.0";
+
+    return { posts, page, lastPage };
+  },
   head() {
     return {
       title: "Changelog",
@@ -108,15 +125,6 @@ export default {
         },
       ],
     };
-  },
-  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
-  async asyncData({ params }: any) {
-    const page = parseInt(params.page) ? parseInt(params.page) : 1;
-    const posts = (await getPosts(["Changelog"], page)) as PostsOrPages;
-    const lastPage =
-      posts.length == 0 || posts[posts.length - 1].title == "Bytebase 0.1.0";
-
-    return { posts, page, lastPage };
   },
 };
 </script>
