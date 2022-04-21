@@ -19,13 +19,19 @@
         It offers a web-based collaboration workspace to help
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >DBAs</span
         >
         and
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Developers</span
         >
         manage the lifecycle of application database schemas.
@@ -38,7 +44,7 @@
       <div class="mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
       <div class="mt-8 relative">
@@ -53,7 +59,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'software-detail'"
+          :module-name="'software-detail'"
         />
       </div>
     </div>
@@ -64,10 +70,13 @@
 import { databaseSoftwareForSlug } from "../../../common/matrix";
 
 export default {
+  async asyncData({ params }: any) {
+    return { databaseSoftware: databaseSoftwareForSlug(params.slug) };
+  },
   head() {
-    const title = `${(this as any).databaseSoftware.software} ${
-      (this as any).databaseSoftware.feature
-    } for ${(this as any).databaseSoftware.database}`;
+    const databaseSoftware = (this as any).databaseSoftware;
+    const title = `${databaseSoftware.software} ${databaseSoftware.feature} for ${databaseSoftware.database}`;
+
     return {
       title: title,
       meta: [
@@ -77,25 +86,22 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseSoftware.feature,
-          name: (this as any).databaseSoftware.feature,
-          content: (this as any).databaseSoftware.feature,
+          hid: databaseSoftware.feature,
+          name: databaseSoftware.feature,
+          content: databaseSoftware.feature,
         },
         {
-          hid: (this as any).databaseSoftware.database,
-          name: (this as any).databaseSoftware.database,
-          content: (this as any).databaseSoftware.database,
+          hid: databaseSoftware.database,
+          name: databaseSoftware.database,
+          content: databaseSoftware.database,
         },
         {
-          hid: (this as any).databaseSoftware.software,
-          name: (this as any).databaseSoftware.software,
-          content: (this as any).databaseSoftware.software,
+          hid: databaseSoftware.software,
+          name: databaseSoftware.software,
+          content: databaseSoftware.software,
         },
       ],
     };
-  },
-  async asyncData({ params }: any) {
-    return { databaseSoftware: databaseSoftwareForSlug(params.slug) };
   },
   methods: {},
 };

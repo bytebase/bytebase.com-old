@@ -20,7 +20,7 @@
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
       >
-        <ActionSection :moduleName="'integration'" />
+        <ActionSection :module-name="'integration'" />
       </div>
     </div>
     <div
@@ -37,6 +37,7 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  layout: "integration",
   head: {
     title: "Integration with Lark",
     meta: [
@@ -48,7 +49,5 @@ export default defineComponent({
       },
     ],
   },
-  layout: "integration",
-  setup() {},
 });
 </script>
