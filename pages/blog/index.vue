@@ -15,7 +15,7 @@
           >
           database change and version control for DBAs and Developers.
         </h2>
-        <div class="mt-8">
+        <div class="mt-8 max-w-xl mx-auto lg:max-w-7xl">
           <SubscribeSection :module-name="'subscribe.blog'" />
         </div>
       </div>
@@ -185,8 +185,8 @@
         </div>
       </div>
 
-      <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-        <ActionSection class="sm:justify-center" :module-name="'blog'" />
+      <div class="max-w-xl mx-auto lg:max-w-7xl">
+        <SubscribeSection :module-name="'subscribe.blog'" />
       </div>
     </div>
   </div>

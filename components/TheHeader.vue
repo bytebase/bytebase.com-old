@@ -8,18 +8,9 @@
           <span class="sr-only">Bytebase</span>
           <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
         </NuxtLink>
-        <a
-          class="github-button"
-          href="https://github.com/bytebase/bytebase"
-          data-color-scheme="no-preference: light; light: light; dark: dark;"
-          data-size="large"
-          data-show-count="true"
-          aria-label="Star bytebase/bytebase on GitHub"
-          >Star</a
-        >
       </div>
       <nav
-        class="relative w-full flex items-center justify-between sm:h-10 sm:justify-center lg:grid lg:grid-cols-3"
+        class="relative w-full flex items-center justify-between sm:h-10 lg:justify-center lg:grid lg:grid-cols-3"
         aria-label="Global"
       >
         <div class="hidden sm:flex flex-row justify-start items-center">
@@ -56,7 +47,7 @@
             >Pricing</NuxtLink
           >
         </div>
-        <div class="z-10 hidden lg:flex flex-row items-center justify-end">
+        <div class="z-10 flex flex-row items-center justify-end">
           <div class="relative flex flex-row" style="margin-top: 6px">
             <div
               class="-mt-5 h-10 w-16"
@@ -89,7 +80,7 @@
             </a>
             <NuxtLink
               to="/docs/install/install-with-docker"
-              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
+              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
               >Deploy now</NuxtLink
             >

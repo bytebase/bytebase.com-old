@@ -2,7 +2,7 @@
   <div class="border mx-auto py-8 px-4 sm:px-6 lg:px-8 lg:flex lg:items-center">
     <div class="lg:w-0 lg:flex-1 text-left">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Never miss a thing
+        Get Database Insight 💡
       </h2>
       <p class="mt-3 max-w-3xl text-lg text-gray-500">
         Learn product updates and everything about database.

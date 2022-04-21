@@ -1,5 +1,5 @@
 <template>
-  <main v-if="post" class="overflow-scroll space-y-8">
+  <div v-if="post" class="space-y-8">
     <div class="hidden sm:flex sm:h-96 w-full">
       <img
         v-if="post.feature_image"
@@ -51,10 +51,10 @@
       v-html="post.html"
     ></div>
 
-    <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
-      <ActionSection class="sm:justify-center" :module-name="'blog-detail'" />
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
+      <SubscribeSection :module-name="'subscribe.blog-detail'" />
     </div>
-  </main>
+  </div>
 </template>
 
 <script lang="ts">
@@ -65,11 +65,6 @@ export default {
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
     return { post: post };
-  },
-  methods: {
-    getTagStyle(tag: PostTag): string {
-      return postTagStyle(tag);
-    },
   },
   head() {
     const post = (this as any).post;
@@ -104,6 +99,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getTagStyle(tag: PostTag): string {
+      return postTagStyle(tag);
+    },
   },
 };
 </script>
