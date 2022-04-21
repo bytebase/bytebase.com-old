@@ -34,6 +34,13 @@
           >Pricing</nuxt-link
         >
       </nav>
+      <div
+        class="w-32 sm:w-64 h-8 pl-3 border rounded-2xl flex flex-row justify-start items-center opacity-80 cursor-pointer hover:opacity-100"
+        @click="handleSearchBtnClick"
+      >
+        <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
+        <span class="text-sm ml-2">Search</span>
+      </div>
       <div class="flex">
         <img
           v-if="state.isMobileView"
@@ -42,13 +49,21 @@
           alt="menu"
           @click="toggleSidebar"
         />
-        <div
-          v-else
-          class="w-36 h-8 pl-3 border rounded-2xl flex flex-row justify-start items-center opacity-60 cursor-pointer hover:opacity-100"
-          @click="handleSearchBtnClick"
-        >
-          <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
-          <span class="text-sm ml-2">Search</span>
+        <div v-else class="transition-all flex flex-row">
+          <a
+            href="https://demo.bytebase.com?ref=bytebase.com"
+            target="_blank"
+            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+            @click="track('demo.header')"
+          >
+            Demo
+          </a>
+          <NuxtLink
+            to="/docs/install/install-with-docker"
+            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
+            @click.native="track('deploy.header')"
+            >Deploy now</NuxtLink
+          >
         </div>
       </div>
     </header>

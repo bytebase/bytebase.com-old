@@ -12,12 +12,16 @@
                   class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
                   >Safer and Faster</span
                 >
-                <span class="block xl:inline">
-                  Database Change and Version Control for
-                  <span
-                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >Teams</span
-                  >
+                <span class="block">
+                  Database Change
+                  <span class="lg:block"> and Version Control </span>
+                  <span class="lg:block">
+                    for
+                    <span
+                      class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                      >Teams</span
+                    >
+                  </span>
                 </span>
               </h1>
               <h2
