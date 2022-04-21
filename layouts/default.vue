@@ -1,34 +1,38 @@
 <template>
-  <div
-    ref="pageWrapperRef"
-    class="relative w-full h-screen overflow-x-hidden overflow-y-auto"
-  >
-    <div
-      class="sticky top-0 w-full bg-white z-20"
-      :class="stickyHeaderAdditionClass"
-    >
+  <div class="page-wrapper absolute w-full h-screen overflow-hidden">
+    <div class="w-full bg-white z-20" :class="stickyHeaderAdditionClass">
       <MainBanner class="mb-2" />
       <TheHeader />
     </div>
-    <main class="mt-8 mx-auto">
+    <div
+      ref="contentElementRef"
+      class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
+    >
       <Nuxt />
-    </main>
-    <TheFooter />
+      <TheFooter />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  ref,
+  useRoute,
+  watch,
+} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
-    const pageWrapperRef = ref<HTMLDivElement>();
+    const route = useRoute();
+    const contentElementRef = ref<HTMLDivElement>();
     const stickyHeaderAdditionClass = ref<string>();
 
     onMounted(() => {
-      if (pageWrapperRef.value) {
-        pageWrapperRef.value.addEventListener("scroll", () => {
-          const scrollTop = pageWrapperRef.value?.scrollTop as number;
+      if (contentElementRef.value) {
+        contentElementRef.value.addEventListener("scroll", () => {
+          const scrollTop = contentElementRef.value?.scrollTop as number;
           if (scrollTop > 0) {
             stickyHeaderAdditionClass.value = "shadow";
           } else {
@@ -38,8 +42,14 @@ export default defineComponent({
       }
     });
 
+    watch(route, () => {
+      contentElementRef.value?.scrollTo({
+        top: 0,
+      });
+    });
+
     return {
-      pageWrapperRef,
+      contentElementRef,
       stickyHeaderAdditionClass,
     };
   },
@@ -51,6 +61,6 @@ export default defineComponent({
   @apply grid;
   grid-template-rows:
     minmax(min-content, max-content)
-    auto auto;
+    auto;
 }
 </style>
