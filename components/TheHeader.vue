@@ -13,7 +13,9 @@
         class="relative w-full flex items-center justify-between sm:h-10 lg:justify-center lg:grid lg:grid-cols-3"
         aria-label="Global"
       >
-        <div class="hidden sm:flex flex-row justify-start items-center">
+        <div
+          class="hidden sm:flex flex-row justify-start items-center sm:mr-8 lg:mr-0"
+        >
           <div class="flex items-center justify-between w-full sm:w-auto">
             <NuxtLink to="/">
               <span class="sr-only">Bytebase</span>
