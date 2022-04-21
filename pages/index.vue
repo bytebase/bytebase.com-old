@@ -3,7 +3,7 @@
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
-          <div class="mt-8 mx-auto max-w-6xl px-4 lg:mt-12">
+          <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center lg:text-left">
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
@@ -13,7 +13,7 @@
                   >Safer and Faster</span
                 >
                 <span class="block xl:inline">
-                  Database schema change and version control for
+                  Database Change and Version Control for
                   <span
                     class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
                     >Teams</span
@@ -41,7 +41,8 @@
                   "
                   >Developers</span
                 >
-                manage the lifecycle of application database schemas.
+                manage the lifecycle of application database schemas (DDL) and
+                data (DML).
               </h2>
               <div class="flex mt-8 justify-center lg:justify-start">
                 <DatabaseBar />
@@ -89,15 +90,20 @@
         <h2
           class="text-base sm:text-2xl font-semibold tracking-wider text-indigo-600 uppercase"
         >
-          Safer and faster database migration
+          Safer and faster database migration - DDL and DML
         </h2>
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first database CI/CD solution for
+          Industry first database
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
+            >DevOps</span
+          >
+          solution for DBA & Developer
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >DBA & Developer collaboration</span
+            >collaboration</span
           >
         </h2>
         <div class="mt-12">
@@ -1012,13 +1018,13 @@ export default defineComponent({
     };
 
     useMeta({
-      title: "Bytebase | Safer and faster db schema change for teams",
+      title: "Bytebase | Safe Database Change and Version Control for Teams",
       meta: [
         {
           hid: "bytebase",
-          name: "Bytebase | Safer and faster database schema change and version control for DBAs and Developers",
+          name: "Bytebase | Safe Database Change and Version Control for Teams",
           content:
-            "Safer and faster database schema change and version control for DBAs and Developers",
+            "Safer and faster database change and version control for DBAs and Developers",
         },
         {
           hid: "og:image",

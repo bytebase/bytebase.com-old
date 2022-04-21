@@ -88,7 +88,8 @@
       </div>
 
       <h2 class="text-center">
-        Safer and faster database schema change with Bytebase
+        Safer and faster database change and version control for DBAs and
+        Developers
       </h2>
       <div class="flex text-center justify-center">
         <img

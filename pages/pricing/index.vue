@@ -12,11 +12,7 @@
             >Safer and Faster</span
           ><br />
           <span class="block xl:inline">
-            Database schema change and version control for
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-              >Teams</span
-            >
+            Database change and version control for DBAs and Developers
           </span>
         </h2>
       </div>
