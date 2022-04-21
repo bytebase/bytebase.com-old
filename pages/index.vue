@@ -1,10 +1,12 @@
 <template>
-  <div class="overflow-hidden">
+  <!-- xl:-mt-8 is negating the empty space used in the hero section  -->
+  <div class="xl:-mt-8 overflow-hidden">
+    <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
+      <div class="max-w-7xl mx-auto xl:pt-16 2xl:pt-24">
+        <div class="relative pb-8 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
-            <div class="sm:text-center lg:text-left">
+            <div class="sm:text-center xl:text-left">
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
@@ -14,8 +16,8 @@
                 >
                 <span class="block">
                   Database Change
-                  <span class="lg:block"> and Version Control </span>
-                  <span class="lg:block">
+                  <span class="xl:block"> and Version Control </span>
+                  <span class="xl:block">
                     for
                     <span
                       class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
@@ -25,7 +27,7 @@
                 </span>
               </h1>
               <h2
-                class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl lg:mx-0"
+                class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl xl:mx-0"
               >
                 Bytebase offers a web-based collaboration workspace to help
                 <span
@@ -48,12 +50,12 @@
                 manage the lifecycle of application database schemas (DDL) and
                 data (DML).
               </h2>
-              <div class="flex mt-8 justify-center lg:justify-start">
+              <div class="flex mt-8 justify-center xl:justify-start">
                 <DatabaseBar />
               </div>
               <div class="mt-12">
                 <ActionSection
-                  class="justify-center lg:justify-start"
+                  class="justify-center xl:justify-start"
                   :module-name="'main'"
                 />
               </div>
@@ -62,10 +64,10 @@
         </div>
       </div>
       <div
-        class="flex justify-center lg:absolute lg:inset-y-0 lg:-right-24 lg:w-2/3 xl:right-0"
+        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-24 xl:w-2/3 2xl:w-3/4"
       >
         <img
-          class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
+          class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
           src="~/assets/illustration/main.webp"
           alt
         />
