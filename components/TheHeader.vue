@@ -6,8 +6,29 @@
       >
         <NuxtLink to="/">
           <span class="sr-only">Bytebase</span>
-          <img class="h-6 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
+          <img class="h-7 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
         </NuxtLink>
+        <div class="flex relative sm:hidden flex-row" style="margin-top: 6px">
+          <div
+            class="-mt-5 h-10 w-16"
+            :style="{
+              backgroundImage: 'url(/imgs/starus.png)',
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }"
+          ></div>
+          <!-- Place this tag where you want the button to render. -->
+          <a
+            class="github-button"
+            href="https://github.com/bytebase/bytebase"
+            data-color-scheme="no-preference: light; light: light; dark: dark;"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star bytebase/bytebase on GitHub"
+            >Star</a
+          >
+        </div>
       </div>
       <nav
         class="relative w-full flex items-center justify-between sm:h-10 lg:justify-center lg:grid lg:grid-cols-3"
@@ -50,7 +71,7 @@
           >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">
-          <div class="relative flex flex-row" style="margin-top: 6px">
+          <div class="hidden relative sm:flex flex-row" style="margin-top: 6px">
             <div
               class="-mt-5 h-10 w-16"
               :style="{
