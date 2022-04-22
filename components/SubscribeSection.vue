@@ -1,6 +1,6 @@
 <template>
   <div class="border mx-auto py-8 px-4 sm:px-6 lg:px-8 lg:flex lg:items-center">
-    <div class="lg:w-0 lg:flex-1 text-left">
+    <div class="text-center lg:w-0 lg:flex-1 lg:text-left">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Get Database Insight 💡
       </h2>
@@ -8,7 +8,7 @@
         Learn product updates and everything about database.
       </p>
     </div>
-    <div class="mt-8 lg:mt-0 lg:ml-8">
+    <div class="flex justify-center mt-8 lg:mt-0 lg:ml-8">
       <div v-if="subscribed" class="text-xl font-semibold text-indigo-600">
         <span class="text-3xl mr-2">🙌</span> Now check {{ email }} to confirm
         the subscription.
