@@ -27,9 +27,6 @@
 import { defineComponent } from "@vue/composition-api";
 
 export default defineComponent({
-  setup() {
-    return {};
-  },
   head: {
     title: "Bytebase Refund Policy",
     meta: [
