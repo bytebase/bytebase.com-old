@@ -1,156 +1,73 @@
 <template>
-  <div>
-    <MainBanner class="mb-2" />
-    <!-- This example requires Tailwind CSS v2.0+ -->
+  <!-- xl:-mt-8 is negating the empty space used in the hero section  -->
+  <div class="xl:-mt-8 overflow-hidden">
+    <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <div class="z-10 relative pb-8 lg:max-w-2xl lg:w-full">
-          <div>
-            <div class="relative pt-6 px-4">
-              <nav
-                class="relative flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center justify-between sm:h-10 lg:justify-start"
-                aria-label="Global"
-              >
-                <div
-                  class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
-                >
-                  <div
-                    class="flex items-center justify-between w-full sm:w-auto"
-                  >
-                    <NuxtLink to="/">
-                      <span class="sr-only">Bytebase</span>
-                      <img
-                        class="h-6 sm:h-8 w-auto"
-                        src="~/assets/logo-full.svg"
-                        alt
-                      />
-                    </NuxtLink>
-                  </div>
-                  <div class="flex sm:hidden">
-                    <a
-                      class="github-button"
-                      href="https://github.com/bytebase/bytebase"
-                      data-color-scheme="no-preference: light; light: light; dark: dark;"
-                      data-size="large"
-                      data-show-count="true"
-                      aria-label="Star bytebase/bytebase on GitHub"
-                      >Star</a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="flex items-center flex-row sm:ml-8 space-x-4 text-sm sm:text-lg font-semibold"
-                >
-                  <NuxtLink
-                    to="/blog"
-                    @click.native="track('blog.header')"
-                    class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-                    >Blog</NuxtLink
-                  >
-                  <NuxtLink
-                    to="/changelog"
-                    @click.native="track('changelog.header')"
-                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                    >Changelog</NuxtLink
-                  >
-                  <NuxtLink
-                    to="/docs"
-                    class="text-gray-500 hover:text-gray-900 hover:underline whitespace-nowrap"
-                    @click.native="track('docs.header')"
-                    >Docs</NuxtLink
-                  >
-                  <div class="items-center hidden sm:flex lg:hidden">
-                    <!-- Place this tag where you want the button to render. -->
-                    <a
-                      class="github-button"
-                      href="https://github.com/bytebase/bytebase"
-                      data-color-scheme="no-preference: light; light: light; dark: dark;"
-                      data-size="large"
-                      data-show-count="true"
-                      aria-label="Star bytebase/bytebase on GitHub"
-                      >Star</a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="z-10 hidden lg:flex absolute items-center justify-end right-0"
-                >
-                  <img
-                    class="-mt-8 h-10 w-auto"
-                    src="~/assets/starus.png"
-                    alt
-                  />
-                  <!-- Place this tag where you want the button to render. -->
-                  <a
-                    class="github-button"
-                    href="https://github.com/bytebase/bytebase"
-                    data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star bytebase/bytebase on GitHub"
-                    >Star</a
-                  >
-                </div>
-              </nav>
-            </div>
-          </div>
-
-          <div class="mt-8 mx-auto max-w-7xl px-4 lg:mt-20">
-            <div class="sm:text-center lg:text-left">
-              <NuxtLink
-                to="/jobs"
-                @click.native="track('job.main')"
-                class="mb-2 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium bg-green-100 text-green-800 hover:opacity-80"
-                >We're hiring</NuxtLink
-              >
-              <h2 class="tracking-tight font-semibold text-gray-500 text-2xl">
-                <span class="inline">Open source, web-based, zero-config</span>
-              </h2>
+      <div class="max-w-7xl mx-auto xl:pt-16 2xl:pt-24">
+        <div class="relative pb-8 xl:max-w-2xl xl:w-full">
+          <div class="mx-auto max-w-6xl px-4">
+            <div class="sm:text-center xl:text-left">
               <h1
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                <span class="block xl:inline">
-                  Database schema change and version control for
-                  <span
-                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >teams</span
-                  >
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                  >Safer and Faster</span
+                >
+                <span class="block">
+                  Database Change
+                  <span class="xl:block"> and Version Control </span>
+                  <span class="xl:block">
+                    for
+                    <span
+                      class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                      >Teams</span
+                    >
+                  </span>
                 </span>
               </h1>
               <h2
-                class="tracking-tight mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0"
+                class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl xl:mx-0"
               >
                 Bytebase offers a web-based collaboration workspace to help
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >DBAs</span
                 >
                 and
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >Developers</span
                 >
-                manage the lifecycle of application database schemas.
+                manage the lifecycle of application database schemas (DDL) and
+                data (DML).
               </h2>
-              <div class="flex mt-6 justify-center lg:justify-start">
+              <div class="flex mt-8 justify-center xl:justify-start">
                 <DatabaseBar />
               </div>
-              <ActionSection
-                class="justify-center lg:justify-start"
-                :moduleName="'main'"
-              />
+              <div class="mt-12">
+                <ActionSection
+                  class="justify-center xl:justify-start"
+                  :module-name="'main'"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="flex justify-center lg:absolute lg:inset-y-0 lg:-right-24 lg:w-2/3 xl:right-0"
+        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-24 xl:w-2/3 2xl:w-3/4"
       >
         <img
-          class="object-contain h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
+          class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
           src="~/assets/illustration/main.webp"
           alt
         />
@@ -179,15 +96,20 @@
         <h2
           class="text-base sm:text-2xl font-semibold tracking-wider text-indigo-600 uppercase"
         >
-          Safer and faster database migration
+          Safer and faster database migration - DDL and DML
         </h2>
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first database CI/CD solution for
+          Industry first database
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
+            >DevOps</span
+          >
+          solution for DBA & Developer
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >DBA & Developer collaboration</span
+            >collaboration</span
           >
         </h2>
         <div class="mt-12">
@@ -616,7 +538,7 @@
     </section>
     <!-- end of/SQL Editor Section -->
 
-    <div class="pt-16 overflow-hidden ">
+    <div class="pt-16 overflow-hidden">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
@@ -651,21 +573,30 @@
                 href="https://figma.com"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >Figma</a
               >,
               <a
                 href="https://about.gitlab.com"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >GitLab</a
               >,
               <a
                 href="https://www.terraform.io/"
                 target="_blank"
                 class="text-blue-600"
-                style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                style="
+                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                "
                 >Terraform</a
               >. We want to be the most favorable tool among Developers and DBAs
               for managing database schemas.
@@ -737,7 +668,10 @@
                     href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
                     target="_blank"
                     class="text-blue-600 font-semibold"
-                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
                     >confusing interface</a
                   >.
                 </dd>
@@ -832,13 +766,19 @@
                 The entire app is bundled in
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >a single binary</span
                 >
                 and started via
                 <span
                   class="text-blue-600"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >./bytebase</span
                 >. As a professional tool, Bytebase tries to be pragmatic. And
                 because Bytebase is open sourced, it favors technologies with
@@ -880,7 +820,10 @@
                       href="https://v3.vuejs.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Vue</a
                     >
                     is a progressive framework and
@@ -888,7 +831,10 @@
                       href="https://tailwindcss.com"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Tailwind CSS</a
                     >
                     is a utility-first CSS framework. Together with the build
@@ -897,7 +843,10 @@
                       href="https://vitejs.dev/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Vite</a
                     >
                     and
@@ -905,7 +854,10 @@
                       href="https://typescriptlang.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >TypeScript</a
                     >, they offer a significantly improved frontend development
                     experience.
@@ -943,7 +895,10 @@
                       href="https://golang.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >Golang's</a
                     >
                     static linking + embedding allows Bytebase to deliver a
@@ -985,7 +940,10 @@
                       href="https://postgresql.org/"
                       target="_blank"
                       class="text-blue-600"
-                      style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
                       >PostgreSQL</a
                     >
                     is the industry leading multi-model relational database. In
@@ -1043,46 +1001,47 @@
         </div>
       </div>
     </div>
-    <ActionSection class="sm:justify-center" :moduleName="'footer'" />
+
+    <ActionSection class="sm:justify-center" :module-name="'footer'" />
+
     <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <SubscribeSection :moduleName="'subscribe.footer'" />
+      <SubscribeSection :module-name="'subscribe.footer'" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
-import MainBanner from "~/components/MainBanner.vue";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
-  head: {},
-  layout: "main",
+  components: {},
   setup() {
     const track = (name: string) => {
       trackEvent(name);
     };
-    useMeta({
-      title: "Bytebase | Open source web-based db schema change for team",
-      meta: [
-        {
-          hid: "bytebase",
-          name:
-            "Bytebase | Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
-          content:
-            "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
-        },
-        {
-          hid: "og:image",
-          property: "og:image",
-          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-full.svg`,
-        },
-      ],
-    });
-    return { track };
+
+    return {
+      track,
+    };
   },
-  components: { MainBanner },
+  head: {
+    title: "Bytebase | Safe Database Change and Version Control for Teams",
+    meta: [
+      {
+        hid: "bytebase",
+        name: "Bytebase | Safe Database Change and Version Control for Teams",
+        content:
+          "Safer and faster database change and version control for DBAs and Developers",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-full.svg`,
+      },
+    ],
+  },
 });
 </script>

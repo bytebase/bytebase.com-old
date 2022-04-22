@@ -22,6 +22,7 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  layout: "usecase",
   head: {
     title: "Bytebase for Developer",
     meta: [
@@ -33,7 +34,5 @@ export default defineComponent({
       },
     ],
   },
-  layout: "usecase",
-  setup() {},
 });
 </script>

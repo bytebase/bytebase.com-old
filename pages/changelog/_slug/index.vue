@@ -22,9 +22,7 @@
             })
           }}
         </time>
-        <span aria-hidden="true">
-          &middot;
-        </span>
+        <span aria-hidden="true"> &middot; </span>
         <span> {{ post.reading_time }} min read </span>
         <template v-if="post.authors.length > 0">
           <img
@@ -47,11 +45,8 @@
       v-html="post.html"
     ></div>
 
-    <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
-      <ActionSection
-        class="sm:justify-center"
-        :moduleName="'changelog-detail'"
-      />
+    <div class="mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
+      <SubscribeSection :module-name="'subscribe.changelog-detail'" />
     </div>
   </main>
 </template>
@@ -60,16 +55,44 @@
 import { getSinglePost } from "../../../api/posts";
 
 export default {
-  head() {
-    return {
-      title: (this as any).post.title,
-    };
-  },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
     return { post: post };
   },
-  methods: {},
+  head() {
+    const post = (this as any).post;
+
+    return {
+      title: post.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: post.excerpt,
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: post.title,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: post.excerpt,
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: post.feature_image,
+        },
+      ],
+    };
+  },
 };
 </script>

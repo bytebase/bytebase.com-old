@@ -23,13 +23,19 @@
         It offers a web-based collaboration workspace to help
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >DBAs</span
         >
         and
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Developers</span
         >
         manage the lifecycle of application database schemas.
@@ -42,7 +48,7 @@
       <div class="mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
       <div class="mt-8 relative">
@@ -57,7 +63,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
     </div>
@@ -68,10 +74,13 @@
 import { databaseVCSForSlug } from "../../../common/matrix";
 
 export default {
+  async asyncData({ params }: any) {
+    return { databaseVCS: databaseVCSForSlug(params.slug) };
+  },
   head() {
-    const title = `${
-      (this as any).databaseVCS.database
-    } schema version control with ${(this as any).databaseVCS.vcs}`;
+    const databaseVCS = (this as any).databaseVCS;
+    const title = `${databaseVCS.database} schema version control with ${databaseVCS.vcs}`;
+
     return {
       title: title,
       meta: [
@@ -81,21 +90,17 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseVCS.database,
-          name: (this as any).databaseVCS.database,
-          content: (this as any).databaseVCS.database,
+          hid: databaseVCS.database,
+          name: databaseVCS.database,
+          content: databaseVCS.database,
         },
         {
-          hid: (this as any).databaseVCS.vcs,
-          name: (this as any).databaseVCS.vcs,
-          content: (this as any).databaseVCS.vcs,
+          hid: databaseVCS.vcs,
+          name: databaseVCS.vcs,
+          content: databaseVCS.vcs,
         },
       ],
     };
   },
-  async asyncData({ params }: any) {
-    return { databaseVCS: databaseVCSForSlug(params.slug) };
-  },
-  methods: {},
 };
 </script>

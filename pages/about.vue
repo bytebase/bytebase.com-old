@@ -39,7 +39,10 @@
                   href="https://about.gitlab.com"
                   target="_blank"
                   class="text-blue-600 font-semibold"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >GitLab</a
                 >
                 for database instead of code?
@@ -50,7 +53,10 @@
                   href="https://figma.com"
                   target="_blank"
                   class="text-blue-600 font-semibold"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >Figma</a
                 >
                 for DBAs instead of designers?
@@ -61,7 +67,10 @@
                   href="https://terraform.io"
                   target="_blank"
                   class="text-blue-600 font-semibold"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >Terraform</a
                 >
                 for Database-as-Code instead of Infrastructure-as-Code?
@@ -74,7 +83,10 @@
                 driving experience. And that's what
                 <span
                   class="text-indigo-600 font-semibold"
-                  style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
                   >Bytebase</span
                 >
                 tries to achieve, to pair the database engine with the proper
@@ -92,30 +104,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
-  head: {},
   setup() {
     const track = (name: string) => {
       trackEvent(name);
     };
 
-    useMeta({
-      title: "About Us",
-      meta: [
-        {
-          hid: "about",
-          name: "about",
-          content: "Built by the engineers behind Google Cloud SQL",
-        },
-      ],
-    });
-
     return { track };
+  },
+  head: {
+    title: "About Us",
+    meta: [
+      {
+        hid: "about",
+        name: "about",
+        content: "Built by the engineers behind Google Cloud SQL",
+      },
+    ],
   },
 });
 </script>

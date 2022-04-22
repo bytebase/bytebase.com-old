@@ -16,9 +16,9 @@ Bytebase is a database schema change and version control management tool for tea
 
 ![architecture_v1](/static/docs-assets/architecture_v1.png)
 
-It's open sourced on [GitHub](https://github.com/bytebase/bytebase) under Apache 2.0 license. It currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake and plans to add more soon. As to the VCS integration, it currently supports self-hosted GitLab EE/CE and plans to add GitHub Enterprise, GitLab.com, GitHub.com later.
+It's open sourced on [GitHub](https://github.com/bytebase/bytebase). It currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake and plans to add more soon. As to the VCS integration, it currently supports self-hosted GitLab EE/CE and plans to add GitHub Enterprise, GitLab.com, GitHub.com later.
 
-Bytebase target audience are **Tech leaders**, **DBAs** and **Developers** who collaborate on day-to-day development tasks around database schema.
+Bytebase target audience are **DBAs**, **Tech leaders** and **Developers** who collaborate on day-to-day development tasks around database schema.
 
 ## 🎯 Why we build Bytebase
 
@@ -40,4 +40,4 @@ It's like [Terraform](https://www.terraform.io), where Bytebase integrates with 
 
 Bytebase puts developer experience as the top design goal. It's built with a curated tech stack with no external dependency. It comes with built-in [readonly](/docs/reference/command-line#--readonly) and [demo](/docs/reference/command-line) mode for maintenance and illustration purpose. **After compiling the binary, one can just run `./bytebase` and it will start under 5 seconds on the lowest tier machine from any cloud provider.**
 
-![Bytebase tech stack](/static/docs-assets/stack.svg)
+![Bytebase tech stack](/static/docs-assets/techstack.webp)

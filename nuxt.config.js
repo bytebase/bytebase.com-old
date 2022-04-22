@@ -79,7 +79,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Bytebase - Database Schema Change and Version Control",
+    title: "Bytebase - Safe Database Schema Change and Version Control",
     htmlAttrs: {
       lang: "en",
     },
@@ -94,7 +94,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Open source, web-based, zero-config, dependency-free database schema change and version control for Developers and DBAs",
+          "Safer and faster database change and version control for DBAs and Developers",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -125,7 +125,7 @@ export default {
         "Changelog",
         "Announcement",
         "Education",
-        "Chinese",
+        "Hidden",
       ]);
       for (const post of postList) {
         if (post.tags.find((item) => item.name == "Changelog")) {
