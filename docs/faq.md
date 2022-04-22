@@ -11,7 +11,7 @@ Bytebase is open sourced on [GitHub](https://github.com/bytebase/bytebase/)
 
 - 🐞 Report bug to [GitHub issues](https://github.com/bytebase/bytebase/issues).
 - 💡 Request feature to [GitHub discussions](https://github.com/bytebase/bytebase/discussions).
-- 🤠 Follow us on [@BytebaseHQ](https://twitter.com/bytebasehq)
+- 🤠 Follow us on [@Bytebase](https://twitter.com/bytebase)
 - 📧 Email us at [support@bytebase.com](mailto:support@bytebase.com)
 
 ## Which database engines are supported?
