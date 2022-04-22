@@ -306,7 +306,7 @@
     >
       <div class="flex justify-center space-x-6 md:order-2">
         <a
-          href="https://twitter.com/BytebaseHQ"
+          href="https://twitter.com/Bytebase"
           target="__blank"
           class="text-gray-400 hover:text-gray-500"
         >
