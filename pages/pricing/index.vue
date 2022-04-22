@@ -551,6 +551,19 @@ export default defineComponent({
       onTeamOrEnterpriseButtonClick,
     };
   },
+  head() {
+    return {
+      title: "Bytebase Pricing",
+      meta: [
+        {
+          hid: "Bytebase Pricing",
+          name: "Bytebase Pricing",
+          content:
+            "Free to start. Paid plan available. Cancel anytime. No hidden charges.",
+        },
+      ],
+    };
+  },
 });
 </script>
 

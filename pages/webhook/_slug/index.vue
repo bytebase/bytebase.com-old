@@ -32,13 +32,19 @@
         It offers a web-based collaboration workspace to help
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >DBAs</span
         >
         and
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Developers</span
         >
         manage the lifecycle of application database schemas.
@@ -51,7 +57,7 @@
       <div class="mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
       <div class="mt-8 relative">
@@ -66,7 +72,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
     </div>
@@ -77,12 +83,13 @@
 import { databaseWebhookForSlug } from "../../../common/matrix";
 
 export default {
+  async asyncData({ params }: any) {
+    return { databaseWebhook: databaseWebhookForSlug(params.slug) };
+  },
   head() {
-    const title = `${
-      (this as any).databaseWebhook.database
-    } schema version control with ${(this as any).databaseWebhook.vcs} and ${
-      (this as any).databaseWebhook.webhook
-    }`;
+    const databaseWebhook = (this as any).databaseWebhook;
+    const title = `${databaseWebhook.database} schema version control with ${databaseWebhook.vcs} and ${databaseWebhook.webhook}`;
+
     return {
       title: title,
       meta: [
@@ -92,31 +99,22 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseWebhook.database,
-          name: (this as any).databaseWebhook.database,
-          content: (this as any).databaseWebhook.database,
+          hid: databaseWebhook.database,
+          name: databaseWebhook.database,
+          content: databaseWebhook.database,
         },
         {
-          hid: (this as any).databaseWebhook.vcs,
-          name: (this as any).databaseWebhook.vcs,
-          content: (this as any).databaseWebhook.vcs,
+          hid: databaseWebhook.vcs,
+          name: databaseWebhook.vcs,
+          content: databaseWebhook.vcs,
         },
         {
-          hid: (this as any).databaseWebhook.webhook,
-          name: (this as any).databaseWebhook.webhook,
-          content: (this as any).databaseWebhook.webhook,
-        },
-        {
-          hid: (this as any).databaseWebhook.webhook,
-          name: (this as any).databaseWebhook.webhook,
-          content: (this as any).databaseWebhook.webhook,
+          hid: databaseWebhook.webhook,
+          name: databaseWebhook.webhook,
+          content: databaseWebhook.webhook,
         },
       ],
     };
   },
-  async asyncData({ params }: any) {
-    return { databaseWebhook: databaseWebhookForSlug(params.slug) };
-  },
-  methods: {},
 };
 </script>

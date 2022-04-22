@@ -28,13 +28,19 @@
         workspace to help
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >DBAs</span
         >
         and
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Developers</span
         >
         manage the lifecycle of application database schemas.
@@ -47,7 +53,7 @@
       <div class="mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
       <div class="mt-8 relative">
@@ -62,7 +68,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'compare-detail'"
+          :module-name="'compare-detail'"
         />
       </div>
     </div>
@@ -73,12 +79,13 @@
 import { databaseAlternativeForSlug } from "../../../common/matrix";
 
 export default {
+  async asyncData({ params }: any) {
+    return { databaseAlternative: databaseAlternativeForSlug(params.slug) };
+  },
   head() {
-    const title = `Bytebase - ${
-      (this as any).databaseAlternative.alternative
-    } alternative for ${
-      (this as any).databaseAlternative.database
-    } version control`;
+    const databaseAlternative = (this as any).databaseAlternative;
+    const title = `Bytebase - ${databaseAlternative.alternative} alternative for ${databaseAlternative.database} version control`;
+
     return {
       title: title,
       meta: [
@@ -88,21 +95,17 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseAlternative.database,
-          name: (this as any).databaseAlternative.database,
-          content: (this as any).databaseAlternative.database,
+          hid: databaseAlternative.database,
+          name: databaseAlternative.database,
+          content: databaseAlternative.database,
         },
         {
-          hid: (this as any).databaseAlternative.alternative,
-          name: (this as any).databaseAlternative.alternative,
-          content: (this as any).databaseAlternative.alternative,
+          hid: databaseAlternative.alternative,
+          name: databaseAlternative.alternative,
+          content: databaseAlternative.alternative,
         },
       ],
     };
   },
-  async asyncData({ params }: any) {
-    return { databaseAlternative: databaseAlternativeForSlug(params.slug) };
-  },
-  methods: {},
 };
 </script>

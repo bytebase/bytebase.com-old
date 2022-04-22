@@ -426,7 +426,7 @@ export default defineComponent({
       {
         hid: "Database Glossary",
         name: "Database Glossary",
-        content: "",
+        content: "Database Glossary",
       },
     ],
   },

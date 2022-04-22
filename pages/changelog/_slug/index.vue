@@ -61,10 +61,38 @@ export default {
     return { post: post };
   },
   head() {
+    const post = (this as any).post;
+
     return {
-      title: (this as any).post.title,
+      title: post.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: post.excerpt,
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: post.title,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: post.excerpt,
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: post.feature_image,
+        },
+      ],
     };
   },
-  methods: {},
 };
 </script>

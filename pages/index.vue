@@ -1011,7 +1011,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -1023,27 +1023,25 @@ export default defineComponent({
       trackEvent(name);
     };
 
-    useMeta({
-      title: "Bytebase | Safe Database Change and Version Control for Teams",
-      meta: [
-        {
-          hid: "bytebase",
-          name: "Bytebase | Safe Database Change and Version Control for Teams",
-          content:
-            "Safer and faster database change and version control for DBAs and Developers",
-        },
-        {
-          hid: "og:image",
-          property: "og:image",
-          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-full.svg`,
-        },
-      ],
-    });
-
     return {
       track,
     };
   },
-  head: {},
+  head: {
+    title: "Bytebase | Safe Database Change and Version Control for Teams",
+    meta: [
+      {
+        hid: "bytebase",
+        name: "Bytebase | Safe Database Change and Version Control for Teams",
+        content:
+          "Safer and faster database change and version control for DBAs and Developers",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-full.svg`,
+      },
+    ],
+  },
 });
 </script>
