@@ -37,9 +37,7 @@
             this automatically-collected information as “Device Information.”
           </p>
 
-          <p>
-            We collect Device Information using the following technologies:
-          </p>
+          <p>We collect Device Information using the following technologies:</p>
 
           <p>
             - “Cookies” are data files that are placed on your device or
@@ -128,15 +126,11 @@
             or to otherwise protect our rights.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            DO NOT TRACK
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">DO NOT TRACK</h2>
           Please note that we do not alter our Site’s data collection and use
           practices when we see a Do Not Track signal from your browser.
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            YOUR RIGHTS
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">YOUR RIGHTS</h2>
           If you are a European resident, you have the right to access personal
           information we hold about you and to ask that your personal
           information be corrected, updated, or deleted. If you would like to
@@ -148,9 +142,7 @@
           Additionally, please note that your information will be transferred
           outside of Europe, including to the United States and China.
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            DATA RETENTION
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">DATA RETENTION</h2>
 
           <p>
             When you place an order through the Site, we will maintain your
@@ -158,9 +150,7 @@
             delete this information.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            CHANGES
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">CHANGES</h2>
 
           <p>
             We may update this privacy policy from time to time in order to
@@ -168,9 +158,7 @@
             operational, legal or regulatory reasons.
           </p>
 
-          <h2 class="pt-4 text-2xl text-gray-900 font-bold">
-            CONTACT US
-          </h2>
+          <h2 class="pt-4 text-2xl text-gray-900 font-bold">CONTACT US</h2>
           <p>
             For more information about our privacy practices, if you have
             questions, or if you would like to make a complaint, please contact
@@ -196,6 +184,5 @@ export default defineComponent({
       },
     ],
   },
-  setup() {},
 });
 </script>

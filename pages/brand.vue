@@ -1,7 +1,11 @@
 <template>
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">Bytebase Brand</h1>
+      <h1
+        class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
+      >
+        Bytebase Brand
+      </h1>
       <a
         href="/bytebase-brand-kit.zip"
         download
@@ -12,22 +16,30 @@
       </a>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
-      <div class="aspect-w-2 aspect-h-1 overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+    <div
+      class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8"
+    >
+      <div
+        class="aspect-w-2 aspect-h-1 overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+      >
         <img
           src="~/assets/logo-icon.svg"
           alt="Logo icon"
           class="border p-4 object-center object-contain"
         />
       </div>
-      <div class="aspect-w-2 aspect-h-1 overflow-hidden sm:relative sm:aspect-none sm:h-full">
+      <div
+        class="aspect-w-2 aspect-h-1 overflow-hidden sm:relative sm:aspect-none sm:h-full"
+      >
         <img
           src="~/assets/logo-text.svg"
           alt="Logo text"
           class="border p-4 object-center object-contain sm:absolute sm:inset-0 sm:w-full sm:h-full"
         />
       </div>
-      <div class="aspect-w-2 aspect-h-1 overflow-hidden sm:relative sm:aspect-none sm:h-full">
+      <div
+        class="aspect-w-2 aspect-h-1 overflow-hidden sm:relative sm:aspect-none sm:h-full"
+      >
         <img
           src="~/assets/logo-full.svg"
           alt="Logo icon and text"
@@ -37,7 +49,7 @@
 
       <div
         class="aspect-w-2 aspect-h-1 overflow-hidden sm:row-span-2"
-        style="background-color: #4F46E5"
+        style="background-color: #4f46e5"
       >
         <div class="p-6 flex items-end">
           <div>
@@ -47,7 +59,9 @@
                 #4F46E5
               </a>
             </h3>
-            <p aria-hidden="true" class="mt-1 text-sm text-white">Theme color</p>
+            <p aria-hidden="true" class="mt-1 text-sm text-white">
+              Theme color
+            </p>
           </div>
         </div>
       </div>
@@ -67,8 +81,16 @@
           </div>
         </div>
       </div>
-      <img class="sm:col-span-2" src="~/assets/illustration/about_banner.webp" alt />
-      <img class="sm:col-span-2" src="~/assets/illustration/allyourbase.webp" alt />
+      <img
+        class="sm:col-span-2"
+        src="~/assets/illustration/about_banner.webp"
+        alt
+      />
+      <img
+        class="sm:col-span-2"
+        src="~/assets/illustration/allyourbase.webp"
+        alt
+      />
     </div>
 
     <EmojiSection />
@@ -80,6 +102,7 @@ import { defineComponent } from "@nuxtjs/composition-api";
 import EmojiSection from "~/components/EmojiSection.vue";
 
 export default defineComponent({
+  components: { EmojiSection },
   head: {
     title: "Bytebase Brand",
     meta: [
@@ -90,7 +113,5 @@ export default defineComponent({
       },
     ],
   },
-  setup() { },
-  components: { EmojiSection }
 });
 </script>

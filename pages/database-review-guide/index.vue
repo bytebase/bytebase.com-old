@@ -46,8 +46,8 @@
     </div>
     <div class="mt-10 pt-10 border-t border-gray-200">
       <SchemaConfigurationPage
-        :selectedRuleList="state.ruleList"
-        :ruleChanged="state.ruleChanged"
+        :selected-rule-list="state.ruleList"
+        :rule-changed="state.ruleChanged"
         :title="`Database Review Guide for ${state.template.database.name}`"
         @change="onRuleChange"
         @reset="onRulesReset"
@@ -147,6 +147,18 @@ export default defineComponent({
       onRuleChange,
       onRulesReset,
       onReset,
+    };
+  },
+  head() {
+    return {
+      title: "Database Review Guide",
+      meta: [
+        {
+          hid: "Database Review Guide",
+          name: "Database Review Guide",
+          content: "",
+        },
+      ],
     };
   },
 });

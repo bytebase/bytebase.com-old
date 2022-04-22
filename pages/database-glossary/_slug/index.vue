@@ -136,13 +136,15 @@ export default {
     return { glossary: glossaryForSlug(params.slug) };
   },
   head() {
+    const glossary = (this as any).glossary;
+
     return {
-      title: `What is ${(this as any).glossary.name}`,
+      title: `What is ${glossary.name}`,
       meta: [
         {
-          hid: (this as any).glossary.name,
-          name: (this as any).glossary.name,
-          content: `Glossary for ${(this as any).glossary.name}`,
+          hid: glossary.name,
+          name: glossary.name,
+          content: `Glossary for ${glossary.name}`,
         },
       ],
     };

@@ -551,6 +551,19 @@ export default defineComponent({
       onTeamOrEnterpriseButtonClick,
     };
   },
+  head() {
+    return {
+      title: "Bytebase Pricing",
+      meta: [
+        {
+          hid: "Bytebase Pricing",
+          name: "Bytebase Pricing",
+          content:
+            "Free, Personal project or small team, no DBA. Team, Medium size team, with dedicated DBA or TL for engineering velocity. You can upgrade, downgrade, or cancel  your subscription anytime. No hidden charges.",
+        },
+      ],
+    };
+  },
 });
 </script>
 

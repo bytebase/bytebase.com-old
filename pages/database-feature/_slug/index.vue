@@ -7,7 +7,10 @@
         {{ databaseFeature.feature }} for {{ databaseFeature.database }} with
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Bytebase</span
         >
       </h1>
@@ -19,13 +22,19 @@
         It offers a web-based collaboration workspace to help
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >DBAs</span
         >
         and
         <span
           class="text-blue-600"
-          style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+          style="
+            box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+              rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+          "
           >Developers</span
         >
         manage the lifecycle of application database schemas.
@@ -38,7 +47,7 @@
       <div class="mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
       <div class="mt-8 relative">
@@ -53,7 +62,7 @@
       <div class="border mt-8">
         <ActionSection
           class="sm:justify-center"
-          :moduleName="'feature-detail'"
+          :module-name="'feature-detail'"
         />
       </div>
     </div>
@@ -64,10 +73,13 @@
 import { databaseFeatureForSlug } from "../../../common/matrix";
 
 export default {
+  async asyncData({ params }: any) {
+    return { databaseFeature: databaseFeatureForSlug(params.slug) };
+  },
   head() {
-    const title = `${(this as any).databaseFeature.feature} for ${
-      (this as any).databaseFeature.database
-    }`;
+    const databaseFeature = (this as any).databaseFeature;
+    const title = `${databaseFeature.feature} for ${databaseFeature.database}`;
+
     return {
       title: title,
       meta: [
@@ -77,21 +89,17 @@ export default {
           content: title,
         },
         {
-          hid: (this as any).databaseFeature.feature,
-          name: (this as any).databaseFeature.feature,
-          content: (this as any).databaseFeature.feature,
+          hid: databaseFeature.feature,
+          name: databaseFeature.feature,
+          content: databaseFeature.feature,
         },
         {
-          hid: (this as any).databaseFeature.database,
-          name: (this as any).databaseFeature.database,
-          content: (this as any).databaseFeature.database,
+          hid: databaseFeature.database,
+          name: databaseFeature.database,
+          content: databaseFeature.database,
         },
       ],
     };
   },
-  async asyncData({ params }: any) {
-    return { databaseFeature: databaseFeatureForSlug(params.slug) };
-  },
-  methods: {},
 };
 </script>
