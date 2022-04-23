@@ -1002,7 +1002,9 @@
       </div>
     </div>
 
-    <ActionSection class="sm:justify-center" :module-name="'footer'" />
+    <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <ActionSection class="sm:justify-center" :module-name="'footer'" />
+    </div>
 
     <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <SubscribeSection :module-name="'subscribe.footer'" />
