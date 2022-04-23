@@ -1,6 +1,9 @@
 <template>
   <main class="overflow-hidden space-y-8 px-4 sm:px-6 lg:px-8 py-8">
     <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="max-w-4xl mx-auto">
+      <SubscribeSection :module-name="'glossary-detail.header'" />
+    </div>
     <nav class="flex max-w-4xl mx-auto" aria-label="Breadcrumb">
       <ol role="list" class="flex items-center">
         <li>
@@ -118,10 +121,7 @@
       </h2>
       <FeatureSection />
       <div class="border mt-8">
-        <ActionSection
-          class="sm:justify-center"
-          :module-name="'glossary-detail'"
-        />
+        <SubscribeSection :module-name="'glossary-detail.footer'" />
       </div>
     </div>
   </main>

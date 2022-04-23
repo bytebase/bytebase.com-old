@@ -136,7 +136,7 @@
       </div>
 
       <main class="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="border-b border-gray-200 pb-4">
+        <div class="pb-4">
           <h1
             class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900"
           >
@@ -154,6 +154,9 @@
               class="text-sm text-blue-600 hover:underline"
               >Suggest changes on GitHub</a
             >
+          </div>
+          <div class="mt-8">
+            <SubscribeSection :module-name="'glossary.header'" />
           </div>
         </div>
 
@@ -306,8 +309,8 @@
         </div>
       </main>
     </div>
-    <div class="border mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-6xl">
-      <ActionSection class="sm:justify-center" :module-name="'glossary'" />
+    <div class="mt-8 mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <SubscribeSection :module-name="'glossary.footer'" />
     </div>
   </div>
 </template>
