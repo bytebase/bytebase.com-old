@@ -141,9 +141,11 @@ export default defineComponent({
         },
       ];
 
-      const hashTags = ducumentContainerRef.value?.querySelectorAll("h2,h3");
-      if (hashTags && hashTags.length > 0) {
-        const tagElementList = Array.from(hashTags) as HTMLElement[];
+      // Add hash link for each TOC node.
+      const hashTagNodeList =
+        ducumentContainerRef.value?.querySelectorAll("h2,h3");
+      if (hashTagNodeList && hashTagNodeList.length > 0) {
+        const tagElementList = Array.from(hashTagNodeList) as HTMLElement[];
         const hash = window.location.hash;
         if (hash !== "#") {
           for (const item of tagElementList) {
@@ -166,6 +168,32 @@ export default defineComponent({
           }
         });
       }
+
+      // Add `Copy` button for each pre element.
+      const preElementNodeList =
+        ducumentContainerRef.value?.querySelectorAll("pre");
+      if (preElementNodeList && preElementNodeList.length > 0) {
+        const preElementList = Array.from(preElementNodeList);
+        for (const preElement of preElementList) {
+          const copyBtn = document.createElement("button");
+          copyBtn.innerText = "Copy";
+          copyBtn.className = "copy-btn";
+          preElement.parentElement?.appendChild(copyBtn);
+          copyBtn.addEventListener("click", async () => {
+            if (navigator.clipboard) {
+              let text = preElement.innerText;
+              if (text.startsWith("$ ")) {
+                text = text.slice(2);
+              }
+              await navigator.clipboard.writeText(text);
+            }
+            copyBtn.innerText = "Copied";
+            setTimeout(() => {
+              copyBtn.innerText = "Copy";
+            }, 2000);
+          });
+        }
+      }
     });
 
     return {
@@ -179,6 +207,15 @@ export default defineComponent({
   head: {},
 });
 </script>
+
+<style>
+.nuxt-content .nuxt-content-highlight {
+  @apply relative;
+}
+.nuxt-content .copy-btn {
+  @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;
+}
+</style>
 
 <style scoped>
 @import "~/assets/css/github-markdown-style.css";
