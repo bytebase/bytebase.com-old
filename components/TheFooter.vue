@@ -1,6 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="bg-white px-4 pb-8" aria-labelledby="footer-heading">
+  <footer class="relative bg-white px-4 pb-8" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:pt-16 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-5 lg:gap-8">
@@ -13,9 +13,9 @@
           <ul class="mt-4 space-y-4">
             <li>
               <NuxtLink
-                to="/usecase/developer"
+                to="/usecase/dba"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >For Developer</NuxtLink
+                >For DBA</NuxtLink
               >
             </li>
             <li>
@@ -27,9 +27,9 @@
             </li>
             <li>
               <NuxtLink
-                to="/usecase/dba"
+                to="/usecase/developer"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >For DBA</NuxtLink
+                >For Developer</NuxtLink
               >
             </li>
           </ul>
@@ -58,6 +58,13 @@
             </li>
             <li>
               <NuxtLink
+                to="/database/clickhouse"
+                class="text-base text-gray-500 hover:text-gray-900"
+                >ClickHouse</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
                 to="/database/tidb"
                 class="text-base text-gray-500 hover:text-gray-900"
                 >TiDB</NuxtLink
@@ -68,13 +75,6 @@
                 to="/database/snowflake"
                 class="text-base text-gray-500 hover:text-gray-900"
                 >Snowflake</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                to="/database/clickhouse"
-                class="text-base text-gray-500 hover:text-gray-900"
-                >ClickHouse</NuxtLink
               >
             </li>
           </ul>
@@ -306,7 +306,7 @@
     >
       <div class="flex justify-center space-x-6 md:order-2">
         <a
-          href="https://twitter.com/BytebaseHQ"
+          href="https://twitter.com/Bytebase"
           target="__blank"
           class="text-gray-400 hover:text-gray-500"
         >

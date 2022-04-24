@@ -7,11 +7,13 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first database CI/CD solution for
           <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >DBA & Developer collaboration</span
-          >
+            class="text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >Safer and Faster</span
+          ><br />
+          <span class="block xl:inline">
+            Database change and version control for DBAs and Developers
+          </span>
         </h2>
       </div>
 
@@ -70,14 +72,21 @@
                   <p class="text-gray-400">Per instance</p>
                   <p class="text-gray-400">{{ plan.priceDescription }}</p>
                 </div>
+                <NuxtLink
+                  v-if="plan.type == 0"
+                  to="/docs/install/install-with-docker"
+                  class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
+                  >{{ plan.buttonText }}</NuxtLink
+                >
                 <button
+                  v-else
                   :class="[
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                       : 'ring-2 ring-indigo-600',
                     'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium',
                   ]"
-                  @click="onButtonClick(plan)"
+                  @click="onTeamOrEnterpriseButtonClick(plan)"
                 >
                   {{ plan.buttonText }}
                 </button>
@@ -137,14 +146,21 @@
               {{ plan.title }}
             </h3>
             <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <NuxtLink
+              v-if="plan.type == 0"
+              to="/docs/install/install-with-docker"
+              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+              >{{ plan.buttonText }}</NuxtLink
+            >
             <button
+              v-else
               :class="[
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
                 'mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium',
               ]"
-              @click="onButtonClick(plan)"
+              @click="onTeamOrEnterpriseButtonClick(plan)"
             >
               {{ plan.buttonText }}
             </button>
@@ -281,14 +297,21 @@
               <p class="mt-2 text-sm text-gray-500 h-10">
                 {{ plan.description }}
               </p>
+              <NuxtLink
+                v-if="plan.type == 0"
+                to="/docs/install/install-with-docker"
+                class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+                >{{ plan.buttonText }}</NuxtLink
+              >
               <button
+                v-else
                 :class="[
                   plan.featured
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                     : 'ring-2 ring-indigo-600',
                   'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
                 ]"
-                @click="onButtonClick(plan)"
+                @click="onTeamOrEnterpriseButtonClick(plan)"
               >
                 {{ plan.buttonText }}
               </button>
@@ -395,14 +418,21 @@
               'relative w-1/4 py-0 text-center',
             ]"
           >
+            <NuxtLink
+              v-if="plan.type == 0"
+              to="/docs/install/install-with-docker"
+              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+              >{{ plan.buttonText }}</NuxtLink
+            >
             <button
+              v-else
               :class="[
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
                 'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
               ]"
-              @click="onButtonClick(plan)"
+              @click="onTeamOrEnterpriseButtonClick(plan)"
             >
               {{ plan.buttonText }}
             </button>
@@ -497,23 +527,20 @@ export default defineComponent({
       () => analytics.value,
       (segment) => {
         segment?.page(PAGE.PRICING);
-      },
+      }
     );
 
-    const onButtonClick = (plan: Plan) => {
+    const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
       if (plan.type === PlanType.TEAM) {
         analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
-        window.open(`https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`, "__blank");
+        window.open(
+          `https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`,
+          "__blank"
+        );
       } else if (plan.type === PlanType.ENTERPRISE) {
         analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
           "mailto:support@bytebase.com?subject=Request for enterprise plan"
-        );
-      } else {
-        analytics.value?.track(PRICING_EVENT.FREE_PLAN_CLICK);
-        window.open(
-          "https://github.com/bytebase/bytebase#installation",
-          "__blank"
         );
       }
     };
@@ -521,7 +548,20 @@ export default defineComponent({
     return {
       plans,
       sections,
-      onButtonClick,
+      onTeamOrEnterpriseButtonClick,
+    };
+  },
+  head() {
+    return {
+      title: "Bytebase Pricing",
+      meta: [
+        {
+          hid: "Bytebase Pricing",
+          name: "Bytebase Pricing",
+          content:
+            "Free to start. Paid plan available. Cancel anytime. No hidden charges.",
+        },
+      ],
     };
   },
 });

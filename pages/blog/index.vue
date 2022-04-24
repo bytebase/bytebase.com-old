@@ -9,11 +9,14 @@
           Bytebase Blog
         </h1>
         <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-          Open source, web-based, zero-config, dependency-free database schema
-          change and version control tool for Developer and DBA.
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            >Safer and faster</span
+          >
+          database change and version control for DBAs and Developers.
         </h2>
-        <div class="mt-8">
-          <SubscribeSection :moduleName="'subscribe.blog'" />
+        <div class="mt-8 max-w-xl mx-auto lg:max-w-7xl">
+          <SubscribeSection :module-name="'subscribe.blog'" />
         </div>
       </div>
 
@@ -182,8 +185,8 @@
         </div>
       </div>
 
-      <div class="border max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-        <ActionSection class="sm:justify-center" :moduleName="'blog'" />
+      <div class="max-w-xl mx-auto lg:max-w-7xl">
+        <SubscribeSection :module-name="'subscribe.blog'" />
       </div>
     </div>
   </div>
@@ -195,18 +198,6 @@ import { PostTag, postTagStyle } from "../../common/type";
 import { getPosts } from "../../api/posts";
 
 export default {
-  head() {
-    return {
-      title: "Blog",
-      meta: [
-        {
-          hid: "Bytebase Blog",
-          name: "Bytebase Blog",
-          content: "Bytebase Blog",
-        },
-      ],
-    };
-  },
   // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
   async asyncData() {
     const posts = (await getPosts([
@@ -220,6 +211,18 @@ export default {
       }
     }
     return { posts, featuredPosts };
+  },
+  head() {
+    return {
+      title: "Blog",
+      meta: [
+        {
+          hid: "Bytebase Blog",
+          name: "Bytebase Blog",
+          content: "Bytebase Blog",
+        },
+      ],
+    };
   },
   methods: {
     getTagStyle(tag: PostTag): string {

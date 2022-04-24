@@ -28,7 +28,7 @@
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
       >
-        <ActionSection :moduleName="'database'" />
+        <ActionSection :module-name="'database'" />
       </div>
     </div>
     <div
@@ -45,6 +45,7 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  layout: "integration",
   head: {
     title: "Manage PostgreSQL schema with Bytebase",
     meta: [
@@ -55,7 +56,5 @@ export default defineComponent({
       },
     ],
   },
-  layout: "integration",
-  setup() {},
 });
 </script>

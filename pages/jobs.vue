@@ -24,9 +24,12 @@
                   instead of where you have worked and studied.
                   <NuxtLink
                     to="/about#team"
-                    @click.native="track('about.job')"
                     class="text-blue-600"
-                    style="box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset, rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
+                    @click.native="track('about.job')"
                   >
                     Our team
                   </NuxtLink>
@@ -156,9 +159,7 @@
         </p>
         <div class="prose prose-xl">
           <ul>
-            <li>
-              Build the state-of-the-art SQL query advisor.
-            </li>
+            <li>Build the state-of-the-art SQL query advisor.</li>
             <li>
               Advanced schema change engine for supporting complex scenarios
               like online DDL, customer multitenancy.
@@ -195,9 +196,7 @@
               Evolve the frontend architecture and define the boundary and
               interface with the backend.
             </li>
-            <li>
-              Build the industry best vue-based SQL console and editor.
-            </li>
+            <li>Build the industry best vue-based SQL console and editor.</li>
             <li>
               Maintain and improve our vue-based UI component library
               <a
@@ -206,9 +205,7 @@
                 >bbkit</a
               >.
             </li>
-            <li>
-              Generate UI console based on database schema.
-            </li>
+            <li>Generate UI console based on database schema.</li>
           </ul>
         </div>
 
@@ -478,35 +475,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useMeta } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
-  head: {},
   setup() {
-    useMeta({
-      title: "Jobs",
-      meta: [
-        {
-          hid: "jobs",
-          name: "jobs",
-          content: "Currently open positions in Bytebase",
-        },
-        {
-          hid: "og:image",
-          property: "og:image",
-          content: `https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/illustration/main.webp`,
-        },
-      ],
-    });
-
     const track = (name: string) => {
       trackEvent(name);
     };
 
     return { track };
+  },
+  head: {
+    title: "Jobs",
+    meta: [
+      {
+        hid: "jobs",
+        name: "jobs",
+        content: "Currently open positions in Bytebase",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/illustration/main.webp`,
+      },
+    ],
   },
 });
 </script>

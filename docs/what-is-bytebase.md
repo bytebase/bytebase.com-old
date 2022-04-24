@@ -16,9 +16,9 @@ Bytebase is a database schema change and version control management tool for tea
 
 ![architecture_v1](/static/docs-assets/architecture_v1.png)
 
-It's open sourced on [GitHub](https://github.com/bytebase/bytebase) under Apache 2.0 license. It currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake and plans to add more soon. As to the VCS integration, it currently supports self-hosted GitLab EE/CE and plans to add GitHub Enterprise, GitLab.com, GitHub.com later.
+It's open sourced on [GitHub](https://github.com/bytebase/bytebase). It currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake and plans to add more soon. As to the VCS integration, it currently supports self-hosted GitLab EE/CE and plans to add GitHub Enterprise, GitLab.com, GitHub.com later.
 
-Bytebase target audience are **Tech leaders**, **DBAs** and **Developers** who collaborate on day-to-day development tasks around database schema.
+Bytebase target audience are **DBAs**, **Tech leaders** and **Developers** who collaborate on day-to-day development tasks around database schema.
 
 ## 🎯 Why we build Bytebase
 
