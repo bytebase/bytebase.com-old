@@ -7,7 +7,7 @@
         <span
           class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl"
         >
-          <span class="block text-gray-900">Lark (飞书) + Bytebase</span>
+          <span class="block text-gray-900">Lark + Bytebase</span>
         </span>
       </h1>
       <h2

@@ -21,7 +21,7 @@ order: 40501
 
 [Official guide](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
 
-### DingTalk（钉钉）
+### DingTalk
 
 [Official guide](https://developers.dingtalk.com/document/robots/custom-robot-access)
 
@@ -31,7 +31,7 @@ DingTalk allows to specify a list of keywords in the [security setting](https://
 
 </hint-block>
 
-### Feishu（飞书）
+### Feishu
 
 [Official guide](https://www.feishu.cn/hc/zh-CN/articles/360024984973)
 
@@ -41,7 +41,7 @@ DingTalk allows to specify a list of keywords in the [security setting](https://
 
 </hint-block>
 
-### WeCom（企业微信）
+### WeCom
 
 WeCom does not provide its own official guide. Please follow this similar [setup](https://intl.cloud.tencent.com/zh/document/product/614/39581) from Tencent Cloud instead.
 
