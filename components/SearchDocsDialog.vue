@@ -1,6 +1,6 @@
 <template>
   <div
-    class="search-dialog transition-all z-50 fixed top-0 left-0 bg-transparent w-screen h-screen flex flex-row justify-center items-start pt-20"
+    class="search-dialog transition-all z-50 fixed top-0 left-0 bg-transparent px-3 w-screen h-screen flex flex-row justify-center items-start pt-20"
     @click="hideSearchDialog"
   >
     <div
