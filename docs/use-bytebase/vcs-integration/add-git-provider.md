@@ -49,6 +49,14 @@ In this step, you need to register "Bytebase" as a [GitLab instance-wide OAuth a
 
 </hint-block>
 
+<hint-block type="warning">
+
+Please make sure you are configuring the [GitLab external_url](https://docs.gitlab.com/omnibus/settings/configuration.html#configure-the-external-url-for-gitlab) correctly, the **host:port** must exactly matches the one accessed by Bytebase. It's called `external_url` because that's how external systems like Bytebase reaches the GitLab instance.
+
+A common mistake is user misconfigures the port when using port forwarding. e.g. GitLab is running on port 7890, while it's exposed to the public on port 7891. In such case the `external_url` should be `https://example.com:7891` instead of `https://example.com:7890`
+
+</hint-block>
+
 ### Step 2.1 - Register GitLab instance-wide OAuth application (performed by GitLab Admin)
 
 Login the GitLab instance specified in Step 1 as an Admin user. The admin user will see a wrench icon on the top nav bar like below:

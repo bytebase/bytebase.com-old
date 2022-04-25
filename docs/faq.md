@@ -44,4 +44,4 @@ Bytebase is lightweight and has no external dependency. For normal workload, it 
 
 ## How do you make money?
 
-Bytebase is still in early stage, so everything is free to use. We plan to keep a free community version and offer an additional paid team plan.
+We offer a free version and [paid plan](../pricing).
