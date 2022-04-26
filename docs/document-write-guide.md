@@ -41,7 +41,7 @@ It's a little different from a common Markdown file. In order not to involve cha
 
 ## Using powerful components into Markdown
 
-For show more styled block into documention, we support using some powerful components:
+To display more styled blocks in documentation, we support some powerful components:
 
 ### `hint-block`
 
