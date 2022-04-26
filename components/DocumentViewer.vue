@@ -1,10 +1,12 @@
 <template>
   <div
     ref="ducumentContainerRef"
-    class="w-full h-auto relative px-8 lg:pr-72 flex flex-row justify-center overflow-x-hidden overflow-y-auto"
+    class="document-viewer w-full h-auto relative px-8 overflow-x-hidden overflow-y-auto"
     :class="classname"
   >
-    <div class="flex flex-col justify-start items-center w-full max-w-3xl">
+    <div
+      class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
+    >
       <nuxt-content class="w-full py-6 markdown-body" :document="document" />
       <div
         class="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm"
@@ -46,11 +48,14 @@
         </NuxtLink>
         <span v-else></span>
       </div>
+      <div class="mb-12 w-full">
+        <SubscribeSection :module-name="'subscribe.docs'" />
+      </div>
     </div>
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <span class="text-black pb-2 pl-4 border-l border-gray-200"
         >Table of Contents</span
@@ -82,6 +87,7 @@ import {
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
 // Table of Content Object
@@ -96,6 +102,7 @@ interface State {
 }
 
 export default defineComponent({
+  components: { SubscribeSection },
   props: {
     classname: {
       type: String,
@@ -236,5 +243,10 @@ export default defineComponent({
 .nuxt-content h2:hover a:first-child:before,
 .nuxt-content h3:hover a:first-child:before {
   visibility: visible;
+}
+
+.document-viewer {
+  @apply flex flex-col justify-start items-center lg:grid lg:justify-center;
+  grid-template-columns: auto 256px;
 }
 </style>

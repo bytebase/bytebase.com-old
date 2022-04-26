@@ -35,11 +35,11 @@
         >
       </nav>
       <div
-        class="w-32 sm:w-64 h-8 pl-3 border rounded-2xl flex flex-row justify-start items-center opacity-80 cursor-pointer hover:opacity-100"
+        class="w-8 sm:w-64 h-8 pl-0 sm:pl-3 border rounded-2xl flex flex-row justify-center sm:justify-start items-center opacity-80 cursor-pointer hover:opacity-100"
         @click="handleSearchBtnClick"
       >
         <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
-        <span class="text-sm ml-2">Search</span>
+        <span class="text-sm ml-2 hidden sm:block">Search</span>
       </div>
       <div class="flex">
         <img
