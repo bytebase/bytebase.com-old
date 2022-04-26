@@ -28,20 +28,16 @@ By default, Bytebase bundles an embedded PostgreSQL instance and stores its own 
 
 Supported format
 
-- _postgresql://user:secret@host:port_
-
 - _postgresql://user:secret@host:port/dbname_
 
 - _postgresql://user:secret@host:port/dbname?sslrootcert=root.pem_
 
 Example:
 
-- postgresql://bytebase:z\*3kd2@example.com:5432
 - postgresql://bytebase:z\*3kd2@example.com:5432/meta
 - postgresql://bytebase:z\*3kd2@example.com:5432/meta?sslrootcert=root.pem
 
 ### Notes
 
 - `user` must be specified.
-- `dbname` is optional. If not specified, we will follow the PostgreSQL convention to use the `user` name as the database name.
-- The database must be created in advance, and the connecting user must have all the database privileges mentioned above.
+- `dbname` must be specified and must be created in advance. The connecting `user` must have all the database privileges mentioned above.
