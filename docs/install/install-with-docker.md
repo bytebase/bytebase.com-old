@@ -14,13 +14,31 @@ When running on docker, the --publish \{{hostport\}}:\{{containerport\}} and the
 </hint-block>
 
 ```bash
-$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 5678:5678 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.3 --data /var/opt/bytebase --host http://localhost --port 5678
+$ docker run --init \
+  --name bytebase \
+  --restart always \
+  --add-host host.docker.internal:host-gateway \
+  --publish 5678:5678 \
+  --volume ~/.bytebase/data:/var/opt/bytebase \
+  bytebase/bytebase:1.0.3 \
+  --data /var/opt/bytebase \
+  --host http://localhost \
+  --port 5678
 ```
 
 ## Run on localhost:8080
 
 ```bash
-$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.3 --data /var/opt/bytebase --host http://localhost --port 8080
+$ docker run --init \
+  --name bytebase \
+  --restart always \
+  --add-host host.docker.internal:host-gateway \
+  --publish 8080:8080 \
+  --volume ~/.bytebase/data:/var/opt/bytebase \
+  bytebase/bytebase:1.0.3 \
+  --data /var/opt/bytebase \
+  --host http://localhost \
+  --port 8080
 ```
 
 Bytebase will then start on http://localhost:8080 and store its data under `~/.bytebase/data` (Check [Server Startup Options](/docs/reference/command-line) for other startup options).
@@ -42,7 +60,16 @@ For production setup, you need to make sure [--host](/docs/reference/command-lin
 </hint-block>
 
 ```bash
-$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 80:80 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.3 --data /var/opt/bytebase --host https://bytebase.example.com --port 80
+$ docker run --init \
+  --name bytebase \
+  --restart always \
+  --add-host host.docker.internal:host-gateway \
+  --publish 80:80 \
+  --volume ~/.bytebase/data:/var/opt/bytebase \
+  bytebase/bytebase:1.0.3 \
+  --data /var/opt/bytebase \
+  --host https://bytebase.example.com \
+  --port 80
 ```
 
 ## Start a local MySQL server for testing
@@ -56,7 +83,11 @@ The setup below is for testing purpose and should NOT be used in production setu
 </hint-block>
 
 ```bash
-docker run --name mysqld --publish 3306:3306 -e MYSQL_ROOT_HOST=172.17.0.1 -e MYSQL_ROOT_PASSWORD=testpwd1 mysql/mysql-server:8.0
+$ docker run --name mysqld \
+  --publish 3306:3306 \
+  -e MYSQL_ROOT_HOST=172.17.0.1 \
+  -e MYSQL_ROOT_PASSWORD=testpwd1 \
+  mysql/mysql-server:8.0
 ```
 
 172.17.0.1 is the default docker gateway IP to allow connection from Bytebase. See the [official MySQL docker doc](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host).
