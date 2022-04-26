@@ -86,7 +86,7 @@ A pretty link block to another page.
 
 ### `include-block`
 
-Render other markdown directly.
+Include another markdown and render inline.
 
 #### Usage
 
