@@ -5,7 +5,7 @@
   >
     <!-- Render document tree. We only support 3 level folder. -->
     <div
-      v-for="node in state.documentTreeRoot.children"
+      v-for="node in documentTreeRoot.children"
       :key="node.document.path"
       class="w-full flex flex-col justify-start items-start"
     >
@@ -82,18 +82,87 @@
 <script lang="ts">
 import {
   reactive,
-  watch,
   defineComponent,
   ref,
   nextTick,
+  onMounted,
 } from "@nuxtjs/composition-api";
 import { headerDocumentSuffix } from "~/common/const";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
-interface State {
-  documentTreeRoot: DocumentTreeNode;
-}
+const getDocumentTreeRoot = (documentList: ContentDocument[]) => {
+  const formatedDocumentList = documentList
+    .filter((d) => d.order >= 0)
+    .map((document) => {
+      let level = document.path.split("/").length - 1;
+      // The header document is an index file of its directory.
+      if (document.path.endsWith(headerDocumentSuffix)) {
+        level = level - 1;
+      }
+
+      return {
+        ...document,
+        level: level,
+      };
+    })
+    .sort((a, b) => a.level - b.level);
+
+  const documentTreeRoot = {
+    path: "",
+    document: null as any,
+    children: [],
+    displayChildren: true,
+  } as DocumentTreeNode;
+
+  for (const document of formatedDocumentList) {
+    if (document.level === 1) {
+      documentTreeRoot.children.push({
+        path: document.dir,
+        document: document as Document,
+        children: [],
+        displayChildren: true,
+      });
+    } else if (document.level === 2) {
+      let dir = document.dir;
+      let path = document.path;
+      // The header document is an index file of its directory.
+      if (document.path.endsWith(headerDocumentSuffix)) {
+        dir = `/${document.dir.split("/")[1]}`;
+        path = document.dir;
+      }
+      const node = documentTreeRoot.children.find((node) => node.path === dir);
+      if (node) {
+        node.children.push({
+          path: path,
+          document: document as Document,
+          children: [],
+          displayChildren: false,
+        });
+      }
+    } else if (document.level === 3) {
+      const parentPath = `/${document.dir.split("/")[1]}`;
+      const parentNode = documentTreeRoot.children.find(
+        (node) => node.path === parentPath
+      );
+      if (parentNode) {
+        const node = parentNode.children.find(
+          (node) => node.path === document.dir
+        );
+        if (node) {
+          node.children.push({
+            path: document.path,
+            document: document as Document,
+            children: [],
+            displayChildren: false,
+          });
+        }
+      }
+    }
+  }
+
+  return documentTreeRoot;
+};
 
 export default defineComponent({
   props: {
@@ -102,117 +171,47 @@ export default defineComponent({
   emits: ["link-click"],
   setup(props, { emit }) {
     const store = useStore();
-    const state = reactive<State>({
-      documentTreeRoot: {
-        path: "",
-        document: null as any,
-        children: [],
-        displayChildren: true,
-      },
-    });
     const sidebarElRef = ref<HTMLDivElement>();
+    const documentTreeRoot = ref(
+      getDocumentTreeRoot(props.documentList as ContentDocument[])
+    );
 
-    watch(
-      () => props.documentList,
-      async () => {
-        const formatedDocumentList = (props.documentList as ContentDocument[])
-          .filter((d) => d.order >= 0)
-          .map((document) => {
-            let level = document.path.split("/").length - 1;
-            // The header document is an index file of its directory.
-            if (document.path.endsWith(headerDocumentSuffix)) {
-              level = level - 1;
-            }
+    onMounted(() => {
+      const pathname = window.location.pathname;
 
-            return {
-              ...document,
-              level: level,
-            };
-          })
-          .sort((a, b) => a.level - b.level);
-
-        const root = {
-          path: "",
-          document: null as any,
-          children: [],
-          displayChildren: true,
-        } as DocumentTreeNode;
-        const pathname = window.location.pathname;
-        for (const document of formatedDocumentList) {
-          if (document.level === 1) {
-            root.children.push({
-              path: document.dir,
-              document: document as Document,
-              children: [],
-              displayChildren: true,
-            });
-          } else if (document.level === 2) {
-            let dir = document.dir;
-            let path = document.path;
-            // The header document is an index file of its directory.
-            if (document.path.endsWith(headerDocumentSuffix)) {
-              dir = `/${document.dir.split("/")[1]}`;
-              path = document.dir;
-            }
-            const node = root.children.find((node) => node.path === dir);
-            if (node) {
-              node.children.push({
-                path: path,
-                document: document as Document,
-                children: [],
-                displayChildren: false,
-              });
-            }
-          } else if (document.level === 3) {
-            const parentPath = `/${document.dir.split("/")[1]}`;
-            const parentNode = root.children.find(
-              (node) => node.path === parentPath
-            );
-            if (parentNode) {
-              const node = parentNode.children.find(
-                (node) => node.path === document.dir
-              );
-              if (node) {
-                node.children.push({
-                  path: document.path,
-                  document: document as Document,
-                  children: [],
-                  displayChildren: false,
-                });
-                if (pathname.includes(`/docs${document.path}`)) {
-                  node.displayChildren = true;
-                }
-              }
-            }
-          }
-        }
-
-        state.documentTreeRoot = root;
-
-        // Auto scroll to the active doc node.
-        nextTick(() => {
-          if (!sidebarElRef.value) {
-            return;
-          }
-
-          for (const anchorEl of Array.from(
-            sidebarElRef.value.querySelectorAll("a")
-          )) {
-            let href = anchorEl.getAttribute("href");
-            if (pathname.endsWith("/")) {
-              href = href + "/";
-            }
-
-            if (pathname === href) {
-              if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
-                sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
-              }
+      for (const rootNode of documentTreeRoot.value.children) {
+        for (const childNode of rootNode.children) {
+          for (const leafNode of childNode.children) {
+            if (pathname.includes(`/docs${leafNode.path}`)) {
+              childNode.displayChildren = true;
               break;
             }
           }
-        });
+        }
       }
-    );
+
+      nextTick(() => {
+        if (!sidebarElRef.value) {
+          return;
+        }
+
+        for (const anchorEl of Array.from(
+          sidebarElRef.value.querySelectorAll("a")
+        )) {
+          let href = anchorEl.getAttribute("href");
+          if (pathname.endsWith("/")) {
+            href = href + "/";
+          }
+
+          if (pathname === href) {
+            if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
+              sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
+            }
+            break;
+          }
+        }
+      });
+    });
 
     const handleLinkClick = () => {
       emit("link-click");
@@ -223,7 +222,7 @@ export default defineComponent({
     };
 
     return {
-      state,
+      documentTreeRoot,
       sidebarElRef,
       handleLinkClick,
       handleSearchBtnClick,

@@ -68,12 +68,11 @@
       </div>
     </header>
     <main
-      v-show="!state.isLoading"
       class="main-wrapper w-full h-auto flex-grow overflow-y-auto overflow-x-hidden"
     >
       <DocsSidebar
         v-show="state.showSidebar"
-        :document-list="state.documentList"
+        :document-list="documentList"
         @link-click="handleSidebarClick"
       />
       <Nuxt />
@@ -89,6 +88,7 @@ import {
   onMounted,
   reactive,
   useContext,
+  useAsync,
 } from "@nuxtjs/composition-api";
 import { useStore } from "~/store";
 import { ContentDocument } from "~/types/docs";
@@ -97,10 +97,8 @@ import Plausible from "plausible-tracker";
 const { trackEvent } = Plausible();
 
 interface State {
-  isLoading: boolean;
   isMobileView: boolean;
   showSidebar: boolean;
-  documentList: ContentDocument[];
 }
 
 // From tailwind, `sm` width is 640.
@@ -113,10 +111,14 @@ export default defineComponent({
 
     const store = useStore();
     const state = reactive<State>({
-      isLoading: true,
       isMobileView: false,
       showSidebar: true,
-      documentList: [],
+    });
+
+    const documentList = useAsync(() => {
+      return $content("", { deep: true })
+        .sortBy("order")
+        .fetch() as any as ContentDocument[];
     });
 
     const showSearchDialogFlag = computed(() => {
@@ -124,16 +126,12 @@ export default defineComponent({
     });
 
     onMounted(async () => {
-      state.documentList = (await $content("", { deep: true })
-        .sortBy("order")
-        .fetch()) as any as ContentDocument[];
       state.isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
       if (state.isMobileView) {
         state.showSidebar = false;
       } else {
         state.showSidebar = true;
       }
-      state.isLoading = false;
       window.addEventListener("resize", () => {
         const isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
         if (isMobileView != state.isMobileView) {
@@ -172,6 +170,7 @@ export default defineComponent({
     };
 
     return {
+      documentList,
       state,
       showSearchDialogFlag,
       track,

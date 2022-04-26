@@ -1,24 +1,19 @@
 <template>
   <div>
-    <p>Here is docs index page</p>
+    <!-- null -->
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, onMounted } from "@nuxtjs/composition-api";
+
+export default defineComponent({
   layout: "content",
-  async asyncData({ $content, redirect }) {
-    const documentList = await $content("", { deep: true })
-      .sortBy("order")
-      .fetch();
-
-    // Now the docs index is an empty page, show the `what-is-bytebase` document.
-    const document = documentList.find((item) => item.order === 0);
-    redirect(`/docs${document.path}`);
-
-    return {
-      documentList,
-    };
+  setup() {
+    onMounted(() => {
+      // `/docs` is an empty page as we need to redirect to `/docs/what-is-bytebase`.
+      window.location.href = "/docs/what-is-bytebase";
+    });
   },
-};
+});
 </script>
