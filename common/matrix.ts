@@ -14,9 +14,9 @@ export const imList: string[] = [
   "Slack",
   "Discord",
   "Teams",
-  "DingTalk(钉钉)",
-  "Lark(飞书)",
-  "WeCom(企业微信)",
+  "DingTalk",
+  "Lark",
+  "WeCom",
 ];
 
 export const featureList: string[] = [

@@ -1,10 +1,12 @@
 <template>
   <div
     ref="ducumentContainerRef"
-    class="w-full h-auto relative px-8 lg:pr-72 flex flex-row justify-center overflow-x-hidden overflow-y-auto"
+    class="document-viewer w-full h-auto relative px-8 overflow-x-hidden overflow-y-auto"
     :class="classname"
   >
-    <div class="flex flex-col justify-start items-center w-full max-w-3xl">
+    <div
+      class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
+    >
       <nuxt-content class="w-full py-6 markdown-body" :document="document" />
       <div
         class="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm"
@@ -46,11 +48,14 @@
         </NuxtLink>
         <span v-else></span>
       </div>
+      <div class="mb-12 w-full">
+        <SubscribeSection :module-name="'subscribe.docs'" />
+      </div>
     </div>
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <span class="text-black pb-2 pl-4 border-l border-gray-200"
         >Table of Contents</span
@@ -82,6 +87,7 @@ import {
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
 // Table of Content Object
@@ -96,6 +102,7 @@ interface State {
 }
 
 export default defineComponent({
+  components: { SubscribeSection },
   props: {
     classname: {
       type: String,
@@ -141,9 +148,11 @@ export default defineComponent({
         },
       ];
 
-      const hashTags = ducumentContainerRef.value?.querySelectorAll("h2,h3");
-      if (hashTags && hashTags.length > 0) {
-        const tagElementList = Array.from(hashTags) as HTMLElement[];
+      // Add hash link for each TOC node.
+      const hashTagNodeList =
+        ducumentContainerRef.value?.querySelectorAll("h2,h3");
+      if (hashTagNodeList && hashTagNodeList.length > 0) {
+        const tagElementList = Array.from(hashTagNodeList) as HTMLElement[];
         const hash = window.location.hash;
         if (hash !== "#") {
           for (const item of tagElementList) {
@@ -166,6 +175,32 @@ export default defineComponent({
           }
         });
       }
+
+      // Add `Copy` button for each pre element.
+      const preElementNodeList =
+        ducumentContainerRef.value?.querySelectorAll("pre");
+      if (preElementNodeList && preElementNodeList.length > 0) {
+        const preElementList = Array.from(preElementNodeList);
+        for (const preElement of preElementList) {
+          const copyBtn = document.createElement("button");
+          copyBtn.innerText = "Copy";
+          copyBtn.className = "copy-btn";
+          preElement.parentElement?.appendChild(copyBtn);
+          copyBtn.addEventListener("click", async () => {
+            if (navigator.clipboard) {
+              let text = preElement.innerText;
+              if (text.startsWith("$ ")) {
+                text = text.slice(2);
+              }
+              await navigator.clipboard.writeText(text);
+            }
+            copyBtn.innerText = "Copied";
+            setTimeout(() => {
+              copyBtn.innerText = "Copy";
+            }, 2000);
+          });
+        }
+      }
     });
 
     return {
@@ -179,6 +214,15 @@ export default defineComponent({
   head: {},
 });
 </script>
+
+<style>
+.nuxt-content .nuxt-content-highlight {
+  @apply relative;
+}
+.nuxt-content .copy-btn {
+  @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;
+}
+</style>
 
 <style scoped>
 @import "~/assets/css/github-markdown-style.css";
@@ -199,5 +243,10 @@ export default defineComponent({
 .nuxt-content h2:hover a:first-child:before,
 .nuxt-content h3:hover a:first-child:before {
   visibility: visible;
+}
+
+.document-viewer {
+  @apply flex flex-col justify-start items-center lg:grid lg:justify-center;
+  grid-template-columns: auto 256px;
 }
 </style>
