@@ -1,6 +1,15 @@
 import { IContentDocument } from "@nuxt/content/types/content";
 
+interface DocumentBodyNode {
+  type: string;
+  value: string;
+  tag: string;
+  children: DocumentBodyNode[];
+  props: any;
+}
+
 interface ContentDocument extends IContentDocument {
+  body: DocumentBodyNode;
   order: number;
   description?: string;
   isHeader?: boolean;
