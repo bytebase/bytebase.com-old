@@ -48,10 +48,8 @@
         </NuxtLink>
         <span v-else></span>
       </div>
-      <div class="mb-12 w-full">
-        <SubscribeSection :module-name="'subscribe.docs'" />
-      </div>
     </div>
+
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
@@ -73,6 +71,23 @@
         {{ item.text }}
       </a>
     </div>
+
+    <!-- Subscribtion popup -->
+    <div
+      class="transition-all fixed bottom-0 left-0 w-full bg-white z-10 lg:px-36 border-t shadow"
+      :style="{ 'margin-bottom': state.showSubscribtionPopup ? '0' : '-100%' }"
+    >
+      <span
+        class="absolute top-2 right-2 lg:right-44 mr-2 cursor-pointer text-lg opacity-80 hover:opacity-60"
+        @click="onCloseSubscribtionPopUp"
+        ><img src="@/assets/svg/x.svg" class="w-6 h-auto" alt="" />
+      </span>
+      <SubscribeSection
+        class="border-none"
+        :module-name="'subscribe.docs'"
+        @subscribed="onSubscribed"
+      />
+    </div>
   </div>
 </template>
 
@@ -87,6 +102,7 @@ import {
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import storage from "../common/storage";
 import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
@@ -99,6 +115,7 @@ interface TOC {
 
 interface State {
   currentHashId: string;
+  showSubscribtionPopup: boolean;
 }
 
 export default defineComponent({
@@ -116,6 +133,7 @@ export default defineComponent({
     const meta = useMeta({});
     const state = reactive<State>({
       currentHashId: "",
+      showSubscribtionPopup: false,
     });
     const ducumentContainerRef = ref<HTMLDivElement>();
     const toc = computed(() => {
@@ -173,6 +191,18 @@ export default defineComponent({
               break;
             }
           }
+
+          const scrollHeight = ducumentContainerRef.value?.scrollHeight || 0;
+          const clientHeight = ducumentContainerRef.value?.clientHeight || 0;
+          const gapTriggerValue = 128;
+          if (scrollHeight - scrollTop < clientHeight + gapTriggerValue) {
+            const { hasShownSubscribtionPopupInDocs } = storage.get([
+              "hasShownSubscribtionPopupInDocs",
+            ]);
+            if (!hasShownSubscribtionPopupInDocs) {
+              state.showSubscribtionPopup = true;
+            }
+          }
         });
       }
 
@@ -203,12 +233,27 @@ export default defineComponent({
       }
     });
 
+    const onCloseSubscribtionPopUp = () => {
+      state.showSubscribtionPopup = false;
+      storage.set({
+        hasShownSubscribtionPopupInDocs: true,
+      });
+    };
+
+    const onSubscribed = () => {
+      storage.set({
+        hasShownSubscribtionPopupInDocs: true,
+      });
+    };
+
     return {
       state,
       toc,
       ducumentContainerRef,
       filePath,
       updatedTsFromNow,
+      onCloseSubscribtionPopUp,
+      onSubscribed,
     };
   },
   head: {},
