@@ -5,7 +5,7 @@ order: 10100
 
 # Docker (5 seconds)
 
-**Latest release version:** [**1.0.3**](https://github.com/bytebase/bytebase/releases/tag/v1.0.3)
+**Latest release version:** [**1.0.3**](https://github.com/bytebase/bytebase/releases/tag/1.0.3)
 
 <hint-block type="info">
 
