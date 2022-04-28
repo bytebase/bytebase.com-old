@@ -115,7 +115,7 @@ Afterwards, try the GitLab setup again.
 
 ## Why my bytebase with docker won't start?
 
-### Using [Colima](https://github.com/abiosoft/colima):
+### Using [Colima](https://github.com/abiosoft/colima)
 
 Due to the vm mechanism of colima, try to use the `--mount` option when starting colima as shown below:
 
