@@ -60,12 +60,7 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  ref,
-  onMounted,
-} from "@nuxtjs/composition-api";
+import { defineComponent, ref, onMounted } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -109,14 +104,6 @@ export default defineComponent({
       });
     });
 
-    const titleAddtionClass = computed(() => {
-      if (size.value === "lg") {
-        return "text-4xl";
-      } else {
-        return "text-3xl";
-      }
-    });
-
     const subscribe = (e: any) => {
       trackEvent(props.moduleName);
       fetch("https://newsletter.bytebase.com/members/api/send-magic-link/", {
@@ -141,7 +128,6 @@ export default defineComponent({
       email,
       size,
       subscribed,
-      titleAddtionClass,
       subscribe,
     };
   },
