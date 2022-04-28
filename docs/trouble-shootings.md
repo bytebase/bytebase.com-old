@@ -113,7 +113,7 @@ Afterwards, try the GitLab setup again.
 
 ---
 
-## Why my bytebase with docker won't start?
+## Unable to start Bytebase with Docker
 
 ### Using [Colima](https://github.com/abiosoft/colima)
 
