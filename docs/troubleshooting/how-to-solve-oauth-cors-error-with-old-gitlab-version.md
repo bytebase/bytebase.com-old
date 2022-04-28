@@ -1,5 +1,5 @@
 ---
-Title: How to solve OAuth CORS error with old GitLab version
+title: How to solve OAuth CORS error with old GitLab version
 order: 90200
 ---
 

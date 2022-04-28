@@ -1,5 +1,5 @@
 ---
-Title: How to perform upgrade
+title: How to perform upgrade
 order: 90100
 ---
 
