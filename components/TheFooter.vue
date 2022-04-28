@@ -1,11 +1,9 @@
 <template>
-  <footer
-    class="w-full relative bg-white px-4 pb-8"
-    aria-labelledby="footer-heading"
-  >
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <footer class="relative bg-white px-4 pb-8" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl w-full mx-auto pt-12 pb-8 lg:pt-16 lg:px-0">
-      <div class="grid grid-cols-2 lg:grid-cols-6 lg:gap-6">
+    <div class="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:pt-16 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-5 lg:gap-8">
         <div>
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
@@ -37,7 +35,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class>
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
@@ -248,7 +246,7 @@
           </ul>
         </div>
 
-        <!-- <div class="mt-12 lg:mt-0">
+        <div class="mt-12 lg:mt-0">
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
@@ -300,17 +298,9 @@
               >
             </li>
           </ul>
-        </div> -->
-
-        <div class="w-full col-span-2">
-          <SubscribeSection
-            class="border-none"
-            :module-name="'subscribe.footer'"
-          />
         </div>
       </div>
     </div>
-
     <div
       class="border-t border-gray-200 max-w-7xl mx-auto pt-4 md:flex md:items-center md:justify-between"
     >
