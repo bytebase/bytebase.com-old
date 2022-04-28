@@ -45,7 +45,7 @@ If you run Bytebase using Docker, say you use the following command like our hel
 
 Then the data is stored under `~/.bytebase/data`. So you just need to run `rm -rf ~/.bytebase/data` and restart Bytebase again.
 
-
 ### Option 2 - Upgrade the existing data
 
 If you have already seriously used Bytebase in production and want to keep the existing data. First **thank you** for being our early adopters, and just email us at support@bytebase.com. We will help you offline to migrate the data to the latest version.
+

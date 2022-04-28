@@ -15,4 +15,3 @@ $ colima start --mount ~/volumes:w
 $ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.3 --data /var/opt/bytebase --host http://localhost --port 8080
 ```
 
-
