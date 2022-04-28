@@ -5,7 +5,7 @@ order: 10300
 
 # Use External PostgreSQL Database
 
-By default, Bytebase bundles an embedded PostgreSQL instance and stores its own metadata there. Alternatively, you can use supply [--pg](/docs/reference/command-line#--pg-string) to use an external PostgreSQL database to store those metadata.
+By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) to store these metadata in an external PostgreSQL database.
 
 ## Prerequisites
 
@@ -34,8 +34,8 @@ Supported format:
 
 Example:
 
-- postgresql://bytebase:z\*3kd2@example.com:5432/meta
-- postgresql://bytebase:z\*3kd2@example.com:5432/meta?sslrootcert=root.pem
+- _postgresql://bytebase:z\*3kd2@example.com:5432/meta
+- _postgresql://bytebase:z\*3kd2@example.com:5432/meta?sslrootcert=root.pem
 
 ### Notes
 
