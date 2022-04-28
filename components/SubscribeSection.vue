@@ -55,7 +55,8 @@ export default defineComponent({
       type: String,
     },
   },
-  setup(props) {
+  emits: ["subscribed"],
+  setup(props, { emit }) {
     const email = ref("");
     const subscribed = ref(false);
 
@@ -73,6 +74,7 @@ export default defineComponent({
         }),
       }).then(() => {
         subscribed.value = true;
+        emit("subscribed");
       });
       e.preventDefault();
     };
