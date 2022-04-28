@@ -31,6 +31,7 @@ If you are just testing out Bytebase and don't need the existing data, you can j
 ### Running using naked bytebase binary (without docker)
 
 The data is stored under the [--data](https://docs.bytebase.com/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory. By default, it's the same directory where the bytebase binary runs. Just remove the 3 files:
+
 * bytebase.db
 * bytebase.db-shm
 * bytebase.db-wal
