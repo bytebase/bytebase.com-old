@@ -26,7 +26,7 @@ By default, Bytebase bundles an embedded PostgreSQL instance and stores its own 
 
 ## --pg connection string
 
-Supported format
+Supported format:
 
 - _postgresql://user:secret@host:port/dbname_
 
