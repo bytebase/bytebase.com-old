@@ -1,21 +1,9 @@
 ---
 title: FAQ
-order: 90000
+order: 100000
 ---
 
 # FAQ
-
-## Why my bytebase with docker won't start?
-
-### Using [Colima](https://github.com/abiosoft/colima):
-
-Due to the vm mechanism of colima, you need to use the mount line selection when starting colima likes below:
-
-```bash
-$ mkdir ~/volumes
-$ colima start --mount ~/volumes:w
-$ docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.0.3 --data /var/opt/bytebase --host http://localhost --port 8080
-```
 
 ## How to reach us?
 
