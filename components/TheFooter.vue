@@ -1,9 +1,11 @@
 <template>
-  <!-- This example requires Tailwind CSS v2.0+ -->
-  <footer class="relative bg-white px-4 pb-8" aria-labelledby="footer-heading">
+  <footer
+    class="w-full relative bg-white px-4 pb-8"
+    aria-labelledby="footer-heading"
+  >
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:pt-16 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-5 lg:gap-8">
+    <div class="max-w-7xl w-full mx-auto pt-12 pb-8 lg:pt-16 lg:px-0">
+      <div class="grid grid-cols-2 lg:grid-cols-7 lg:gap-4">
         <div>
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
@@ -35,7 +37,7 @@
           </ul>
         </div>
 
-        <div class>
+        <div>
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
@@ -299,8 +301,52 @@
             </li>
           </ul>
         </div>
+
+        <div
+          class="mt-12 lg:mt-0 lg:col-span-2 lg:pl-4 w-full h-full lg:border-l flex flex-col justify-start items-start"
+        >
+          <p class="text-gray-900 text-2xl font-semibold mb-4">
+            Get Database Insight 💡
+          </p>
+          <p class="text-lg leading-8 text-gray-500">
+            Learn product updates and everything about database.
+          </p>
+          <div class="w-full flex flex-col justify-start mt-2">
+            <div
+              v-if="subscribed"
+              class="text-xl font-semibold text-indigo-600"
+            >
+              <span class="text-3xl mr-2">🙌</span> Now check {{ email }} to
+              confirm the subscription.
+            </div>
+            <form
+              v-else
+              class="w-full flex flex-row justify-start items-center flex-wrap"
+              @submit="subscribe"
+            >
+              <label for="email-address" class="sr-only">Email address</label>
+              <input
+                id="email-address"
+                v-model="email"
+                name="email-address"
+                type="email"
+                autocomplete="email"
+                required
+                class="py-2 px-3 w-40 flex-grow mr-2 mt-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                class="py-2 px-3 mt-2 flex items-center justify-center border border-transparent text-base font-medium rounded-md shadow text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
+
     <div
       class="border-t border-gray-200 max-w-7xl mx-auto pt-4 md:flex md:items-center md:justify-between"
     >
@@ -362,13 +408,15 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "@nuxtjs/composition-api";
+import { computed, defineComponent, ref } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
   setup() {
+    const email = ref("");
+    const subscribed = ref(false);
     const track = (name: string) => {
       trackEvent(name);
     };
@@ -377,7 +425,30 @@ export default defineComponent({
       return new Date().getFullYear();
     });
 
-    return { track, year };
+    const subscribe = (e: any) => {
+      fetch("https://newsletter.bytebase.com/members/api/send-magic-link/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.value,
+          name: "",
+          requestSrc: "bytebase.com",
+        }),
+      }).then(() => {
+        subscribed.value = true;
+      });
+      e.preventDefault();
+    };
+
+    return {
+      email,
+      year,
+      subscribed,
+      track,
+      subscribe,
+    };
   },
 });
 </script>

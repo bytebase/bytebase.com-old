@@ -184,10 +184,6 @@
           </div>
         </div>
       </div>
-
-      <div class="max-w-xl mx-auto lg:max-w-7xl">
-        <SubscribeSection :module-name="'subscribe.blog'" />
-      </div>
     </div>
   </div>
 </template>
