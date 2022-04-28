@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="documentTreeRoot"
     ref="sidebarElRef"
     class="relative pb-6 w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
@@ -77,21 +78,38 @@
       </div>
     </div>
   </div>
+  <div
+    v-else
+    class="relative pb-6 w-full h-full flex flex-col justify-center items-center flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
+  >
+    <span class="text-gray-500">loading...</span>
+  </div>
 </template>
 
 <script lang="ts">
 import {
-  reactive,
   defineComponent,
   ref,
   nextTick,
   onMounted,
+  useContext,
 } from "@nuxtjs/composition-api";
 import { headerDocumentSuffix } from "~/common/const";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
-const getDocumentTreeRoot = (documentList: ContentDocument[]) => {
+const getDocumentTreeRoot = (
+  documentList: ContentDocument[]
+): DocumentTreeNode => {
+  if (!documentList || !Array.isArray(documentList)) {
+    return {
+      path: "",
+      document: null as any,
+      children: [],
+      displayChildren: true,
+    };
+  }
+
   const formatedDocumentList = documentList
     .filter((d) => d.order >= 0)
     .map((document) => {
@@ -165,20 +183,20 @@ const getDocumentTreeRoot = (documentList: ContentDocument[]) => {
 };
 
 export default defineComponent({
-  props: {
-    documentList: Array,
-  },
   emits: ["link-click"],
-  setup(props, { emit }) {
+  setup(_, { emit }) {
+    const { $content } = useContext();
     const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
-    const documentTreeRoot = ref(
-      getDocumentTreeRoot(props.documentList as ContentDocument[])
-    );
+    const documentTreeRoot = ref<DocumentTreeNode | null>(null);
 
-    onMounted(() => {
+    onMounted(async () => {
+      const data = (await $content("", { deep: true })
+        .sortBy("order")
+        .fetch()) as any as ContentDocument[];
+      documentTreeRoot.value = getDocumentTreeRoot(data) as DocumentTreeNode;
+
       const pathname = window.location.pathname;
-
       for (const rootNode of documentTreeRoot.value.children) {
         for (const childNode of rootNode.children) {
           for (const leafNode of childNode.children) {
