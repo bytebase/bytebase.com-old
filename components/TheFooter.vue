@@ -408,7 +408,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "@nuxtjs/composition-api";
+import { defineComponent, ref } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -417,13 +417,7 @@ export default defineComponent({
   setup() {
     const email = ref("");
     const subscribed = ref(false);
-    const track = (name: string) => {
-      trackEvent(name);
-    };
-
-    const year = computed(() => {
-      return new Date().getFullYear();
-    });
+    const year = new Date().getFullYear();
 
     const subscribe = (e: any) => {
       fetch("https://newsletter.bytebase.com/members/api/send-magic-link/", {
@@ -440,6 +434,10 @@ export default defineComponent({
         subscribed.value = true;
       });
       e.preventDefault();
+    };
+
+    const track = (name: string) => {
+      trackEvent(name);
     };
 
     return {
