@@ -62,6 +62,7 @@ import { PostTag, postTagStyle } from "../../../common/type";
 import { getSinglePost } from "../../../api/posts";
 
 export default {
+  layout: "blog",
   async asyncData({ params }: any) {
     const post = await getSinglePost(params.slug);
     return { post: post };
