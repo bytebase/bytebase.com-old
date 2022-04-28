@@ -1,5 +1,5 @@
 ---
-title: Trouble Shootings
+title: Troubleshooting
 order: 90000
 ---
 
