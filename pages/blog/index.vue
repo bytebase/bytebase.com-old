@@ -5,17 +5,17 @@
       class="w-full max-w-full flex flex-col lg:grid lg:grid-cols-2 mx-auto lg:py-2 lg:max-w-7xl"
     >
       <nuxt-link
-        class="w-full h-auto hover:opacity-80"
+        class="w-full h-auto flex flex-col justify-center items-center hover:opacity-80 lg:pl-8"
         :to="{ path: `blog/${latestFeaturedPost.slug}` }"
       >
         <img
-          class="h-full w-full object-cover rounded"
+          class="w-full h-auto object-cover lg:rounded"
           :src="latestFeaturedPost.feature_image"
           :alt="latestFeaturedPost.feature_image_alt"
         />
       </nuxt-link>
       <div
-        class="w-full h-auto lg:row-start-1 flex flex-col justify-start items-start px-8 py-4 lg:px-4"
+        class="w-full h-auto lg:row-start-1 flex flex-col justify-center items-start p-4 lg:pr-0"
       >
         <div class="w-full flex flex-row justify-start items-center">
           <span
@@ -27,13 +27,13 @@
           >
         </div>
         <nuxt-link
-          class="w-full flex flex-col justify-start items-start hover:opacity-80"
+          class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
           :to="{ path: `blog/${latestFeaturedPost.slug}` }"
         >
           <p class="mt-4 text-6xl font-semibold text-gray-900">
             {{ latestFeaturedPost.title }}
           </p>
-          <p class="mt-4 text-base text-gray-500">
+          <p class="mt-6 text-base text-gray-500">
             {{ latestFeaturedPost.excerpt }}
           </p>
         </nuxt-link>
@@ -58,7 +58,7 @@
 
     <!-- Recent featured post list section -->
     <div
-      class="w-full lg:max-w-7xl mx-auto py-6 px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 md:gap-x-6"
+      class="w-full lg:max-w-7xl mx-auto py-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 md:gap-x-8"
     >
       <nuxt-link
         v-for="(post, index) in recentFeaturedPosts"
