@@ -3,7 +3,7 @@ title: Troubleshooting
 order: 90000
 ---
 
-# Trouble Shootings
+# Troubleshooting
 
 ## How to perform upgrade?
 
