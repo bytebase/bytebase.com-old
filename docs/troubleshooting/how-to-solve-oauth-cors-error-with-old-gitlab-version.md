@@ -10,6 +10,7 @@ When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may enc
 <p><img width="500" alt="image" src="https://user-images.githubusercontent.com/24653555/154427178-5c3b0d15-6ef3-4e65-8b62-02812a9e7b27.png"></p>
 
 This is a common problem in the old GitLab verison:
+
 * https://gitlab.com/gitlab-org/gitlab-foss/-/issues/19470
 * https://gitlab.com/gitlab-org/gitlab/-/issues/300077
 
