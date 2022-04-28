@@ -60,5 +60,6 @@ sudo nginx -s reload
 ```
 
 ---
+
 Afterwards, try the GitLab setup again.
 
