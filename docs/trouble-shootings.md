@@ -15,7 +15,7 @@ Because Bytebase is still under active development so we are making breaking sch
 
 `ERROR server/anomaly_scanner.go:131 Failed to retrieve database list {"instance": "MySQL Prod (Follow the "External Link" field to bring up the MySQL server)", "error": "no such column: schema_version"}`
 
-### Use version number to determine whether there is breaking schema changes.
+### Use version number to determine whether there is breaking schema changes
 
 Bytebase uses [semantic version](https://semver.org/) in the MAJOR.MINOR.PATCH form. Because we are still in alpha, so the MAJOR version is always 0. When there is a breaking schema change, we will bump up the MINOR version. e.g.
 
