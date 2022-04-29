@@ -45,6 +45,57 @@ Feishu (Lark) allows to specify a list of keywords in the [security setting](htt
 
 WeCom does not provide its own official guide. Please follow this similar [setup](https://intl.cloud.tencent.com/zh/document/product/614/39581) from Tencent Cloud instead.
 
+### Custom
+
+Custom is used to integrate with your own services via webhook.
+
+<hint-block type="info">
+
+You need to implement the webhook server yourself, it doesn't work out of the box.
+
+</hint-block>
+
+**API Definition as follow:**
+
+- **Request Header**
+
+  | Key            | Value              | Description  |
+  | -------------- | ------------------ | ------------ |
+  | `Content-Type` | `application/json` | JSON content |
+
+- **Request Body**
+
+  | Key          | Type            | Description  |
+  | ------------ | ---------------- | ------------ |
+  | `level` | String | One of: <br/>&nbsp;&nbsp;`INFO`<br/>&nbsp;&nbsp;`SUCCESS`<br/>&nbsp;&nbsp;`WARN`<br/>&nbsp;&nbsp;`ERROR` |
+  | `activity_type` | String | One of: <br/>&nbsp;&nbsp;`bb.issue.created`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.field.update`<br/>&nbsp;&nbsp;`bb.issue.status.update`<br/>&nbsp;&nbsp;`bb.pipeline.task.status.update`  |
+  | `title` | String | Webhook title |
+  | `description` | String | webhook description |
+  | `link` | String | Webhook link |
+  | `creator_id` | Integer  | Updater id |
+  | `creator_name` | Integer  | Updater name |
+  | `created_ts` | Integer  | Webhook create timestamp |
+  | `issue` | Object  | Issue Object |
+  | `- id` | Integer  | Issue ID |
+  | `- name` | String  | Issue Name |
+  | `- status` | String  | Issue Status, one of: <br/>&nbsp;&nbsp;`OPEN`<br/>&nbsp;&nbsp;`DONE`<br/>&nbsp;&nbsp;`CANCELED`|
+  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.general`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.database.grant`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`<br/>&nbsp;&nbsp;`bb.issue.data-source.request`| 
+  | `- description`| String | Issue Description|
+  | `project` | Object | Project Object |
+  | `- id`    | Integer | Project ID |
+  | `- name`  | String  | Project Name |
+
+- **Response Body**
+
+  | Key          | Type            | Description  |
+  | ------------ | ---------------- | ------------ |
+  | `code` | String | Zero if sucess, non-zero if faild  |
+  | `message` | String |  Some error message   |
+
+- **Response StatusCode**
+  - 200, OK
+  - Other, if any error
+
 ## Supported events
 
 ### Issue creation
