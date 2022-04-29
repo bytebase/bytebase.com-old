@@ -57,6 +57,10 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
 
 **API Definition as follow:**
 
+- **HTTP Method**
+
+  `POST`
+
 - **Request Header**
 
   | Key            | Value              | Description  |
@@ -70,7 +74,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
   | `level` | String | One of: <br/>&nbsp;&nbsp;`INFO`<br/>&nbsp;&nbsp;`SUCCESS`<br/>&nbsp;&nbsp;`WARN`<br/>&nbsp;&nbsp;`ERROR` |
   | `activity_type` | String | One of: <br/>&nbsp;&nbsp;`bb.issue.created`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.field.update`<br/>&nbsp;&nbsp;`bb.issue.status.update`<br/>&nbsp;&nbsp;`bb.pipeline.task.status.update`  |
   | `title` | String | Webhook title |
-  | `description` | String | webhook description |
+  | `description` | String | Webhook description |
   | `link` | String | Webhook link |
   | `creator_id` | Integer  | Updater id |
   | `creator_name` | Integer  | Updater name |
@@ -79,7 +83,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
   | `- id` | Integer  | Issue ID |
   | `- name` | String  | Issue Name |
   | `- status` | String  | Issue Status, one of: <br/>&nbsp;&nbsp;`OPEN`<br/>&nbsp;&nbsp;`DONE`<br/>&nbsp;&nbsp;`CANCELED`|
-  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.general`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.database.grant`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`<br/>&nbsp;&nbsp;`bb.issue.data-source.request`| 
+  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.database.create`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`| 
   | `- description`| String | Issue Description|
   | `project` | Object | Project Object |
   | `- id`    | Integer | Project ID |
