@@ -45,6 +45,100 @@ Feishu (Lark) allows to specify a list of keywords in the [security setting](htt
 
 WeCom does not provide its own official guide. Please follow this similar [setup](https://intl.cloud.tencent.com/zh/document/product/614/39581) from Tencent Cloud instead.
 
+### Custom
+
+Custom is used to integrate with your own services via webhook.
+
+<hint-block type="info">
+
+You need to implement the webhook server yourself, it doesn't work out of the box.
+
+</hint-block>
+
+**API Definition as follow:**
+
+- **HTTP Method**
+
+  `POST`
+
+- **Request Header**
+
+  | Key            | Value              | Description  |
+  | -------------- | ------------------ | ------------ |
+  | `Content-Type` | `application/json` | JSON content |
+
+- **Request Body**
+
+  | Key          | Type            | Description  |
+  | ------------ | ---------------- | ------------ |
+  | `level` | String | One of: <br/>&nbsp;&nbsp;`INFO`<br/>&nbsp;&nbsp;`SUCCESS`<br/>&nbsp;&nbsp;`WARN`<br/>&nbsp;&nbsp;`ERROR` |
+  | `activity_type` | String | One of: <br/>&nbsp;&nbsp;`bb.issue.created`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.field.update`<br/>&nbsp;&nbsp;`bb.issue.status.update`<br/>&nbsp;&nbsp;`bb.pipeline.task.status.update`  |
+  | `title` | String | Webhook title |
+  | `description` | String | Webhook description |
+  | `link` | String | Webhook link |
+  | `creator_id` | Integer  | Updater id |
+  | `creator_name` | Integer  | Updater name |
+  | `created_ts` | Integer  | Webhook create timestamp |
+  | `issue` | Object  | Issue Object |
+  | `- id` | Integer  | Issue ID |
+  | `- name` | String  | Issue Name |
+  | `- status` | String  | Issue Status, one of: <br/>&nbsp;&nbsp;`OPEN`<br/>&nbsp;&nbsp;`DONE`<br/>&nbsp;&nbsp;`CANCELED`|
+  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.database.create`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`| 
+  | `- description`| String | Issue Description|
+  | `project` | Object | Project Object |
+  | `- id`    | Integer | Project ID |
+  | `- name`  | String  | Project Name |
+
+- **Response Body**
+
+  | Key          | Type            | Description  |
+  | ------------ | ---------------- | ------------ |
+  | `code` | String | Zero if success, non-zero if failed  |
+  | `message` | String |  Some error message   |
+
+- **Response StatusCode**
+  - 200, OK
+  - Other, if any error
+
+**Example Request Body**
+```json
+{
+  "level": "INFO", 
+  "activity_type": "bb.issue.created", 
+  "title": "example webhook", 
+  "description": "example description",
+  "link": "example link",
+  "creator_id": 1, 
+  "creator_name": "Bytebase", 
+  "created_ts": 1651212107,
+  "issue": {
+      "id": 1,
+      "name": "example issue",
+      "status": "OPEN",
+      "type": "bb.issue.database.create"
+    },
+  "project": {
+      "id": 1,
+      "name": "demo"
+    }
+}
+```
+**Example Response Body**
+- Success
+  ```json
+  {
+      "code": 0,
+      "message": ""
+  }
+  ```
+- Failed
+  ```json
+  {
+      "code": 400
+      "message": "Ops, some error occured!"
+  }
+  ```
+
 ## Supported events
 
 ### Issue creation
