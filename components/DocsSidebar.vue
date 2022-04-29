@@ -98,7 +98,8 @@ import { headerDocumentSuffix } from "~/common/const";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
-// `/zh/path/to/file` -> `/path/to/file`
+// Remove i18n prefix path in origin path, and using for `localePath`.
+// e.g. `/en/path/to/file` -> `/path/to/file`
 const removeI18nPrefixPath = (path: string): string => {
   return "/" + path.split("/").slice(2).join("/");
 };
@@ -118,7 +119,8 @@ const getDocumentTreeRoot = (
   const formatedDocumentList = documentList
     .filter((d) => d.order >= 0)
     .map((document) => {
-      let level = document.path.split("/").length - 2;
+      const path = removeI18nPrefixPath(document.path);
+      let level = path.split("/").length - 1;
       // The header document is an index file of its directory.
       if (document.path.endsWith(headerDocumentSuffix)) {
         level = level - 1;
@@ -127,7 +129,7 @@ const getDocumentTreeRoot = (
       return {
         ...document,
         dir: removeI18nPrefixPath(document.dir),
-        path: removeI18nPrefixPath(document.path),
+        path: path,
         level: level,
       };
     })
