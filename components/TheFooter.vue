@@ -4,7 +4,7 @@
     aria-labelledby="footer-heading"
   >
     <div class="max-w-7xl w-full mx-auto mt-12">
-      <SubscribeSection :module-name="footer" />
+      <SubscribeSection :module-name="'footer'" />
     </div>
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl w-full mx-auto pt-12 pb-8 lg:pt-16 lg:px-0">
