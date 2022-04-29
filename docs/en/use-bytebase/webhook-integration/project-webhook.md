@@ -7,6 +7,14 @@ order: 40501
 
 ![project-webhook-configure](/static/docs-assets/project-webhook-configure.png)
 
+## Supported events
+
+* `Issue creation` - Post message when issue belonging to the configured project has been created.
+* `Issue status change` - Post message when the status of the issue belonging to the configured project has been changed.
+* `Issue task status change` - Post message when issue's enclosing task status has been changed.
+* `Issue info change` - Post message when issue's basic info such as assignee, title, description has been changed.
+* `Issue comment creation` - Post message when new comment added to the issue.
+
 ## Supported webhook endpoints
 
 ### Slack
@@ -72,7 +80,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
   | Key          | Type            | Description  |
   | ------------ | ---------------- | ------------ |
   | `level` | String | One of: <br/>&nbsp;&nbsp;`INFO`<br/>&nbsp;&nbsp;`SUCCESS`<br/>&nbsp;&nbsp;`WARN`<br/>&nbsp;&nbsp;`ERROR` |
-  | `activity_type` | String | One of: <br/>&nbsp;&nbsp;`bb.issue.created`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.field.update`<br/>&nbsp;&nbsp;`bb.issue.status.update`<br/>&nbsp;&nbsp;`bb.pipeline.task.status.update`  |
+  | `activity_type` | String | One of: <br/>&nbsp;&nbsp;`bb.issue.create`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.field.update`<br/>&nbsp;&nbsp;`bb.issue.status.update`<br/>&nbsp;&nbsp;`bb.pipeline.task.status.update`  |
   | `title` | String | Webhook title |
   | `description` | String | Webhook description |
   | `link` | String | Webhook link |
@@ -138,25 +146,3 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
       "message": "Ops, some error occured!"
   }
   ```
-
-## Supported events
-
-### Issue creation
-
-Post message when issue belonging to the configured project has been created.
-
-### Issue status change
-
-Post message when the status of the issue belonging to the configured project has been changed.
-
-### Issue task status change
-
-Post message when issue's enclosing task status has been changed.
-
-### Issue info change
-
-Post message when issue's basic info such as assignee, title, description has been changed.
-
-### Issue comment creation
-
-Post message when new comment added to the issue.
