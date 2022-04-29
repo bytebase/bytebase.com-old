@@ -31,13 +31,13 @@ DingTalk allows to specify a list of keywords in the [security setting](https://
 
 </hint-block>
 
-### Feishu
+### Feishu (Lark)
 
 [Official guide](https://www.feishu.cn/hc/zh-CN/articles/360024984973)
 
 <hint-block type="info">
 
-DingTalk allows to specify a list of keywords in the [security setting](https://www.feishu.cn/hc/zh-CN/articles/360024984973#lineguid-RahdJr) to protect webhook endpoint. You can add "Bytebase" to that keyword list.
+Feishu (Lark) allows to specify a list of keywords in the [security setting](https://www.feishu.cn/hc/zh-CN/articles/360024984973#lineguid-RahdJr) to protect webhook endpoint. You can add "Bytebase" to that keyword list.
 
 </hint-block>
 
