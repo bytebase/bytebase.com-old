@@ -83,7 +83,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
   | `- id` | Integer  | Issue ID |
   | `- name` | String  | Issue Name |
   | `- status` | String  | Issue Status, one of: <br/>&nbsp;&nbsp;`OPEN`<br/>&nbsp;&nbsp;`DONE`<br/>&nbsp;&nbsp;`CANCELED`|
-  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.database.create`<br/>&nbsp;&nbsp;`bb.issue.comment.create`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`| 
+  | `- type`   | String  | Issue Type, one of: <br/>&nbsp;&nbsp;`bb.issue.database.create`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update`<br/>&nbsp;&nbsp;`bb.issue.database.schema.update.ghost`<br/>&nbsp;&nbsp;`bb.issue.database.data.update`| 
   | `- description`| String | Issue Description|
   | `project` | Object | Project Object |
   | `- id`    | Integer | Project ID |
