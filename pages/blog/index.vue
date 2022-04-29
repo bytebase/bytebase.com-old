@@ -175,10 +175,6 @@
         </div>
       </div>
     </div>
-
-    <div class="max-w-xl mx-auto border lg:max-w-7xl">
-      <SubscribeSection class="border-none" :module-name="'subscribe.blog'" />
-    </div>
   </div>
 </template>
 
