@@ -34,8 +34,8 @@ Supported format:
 
 Example:
 
-- _postgresql://bytebase:z\*3kd2@example.com:5432/meta
-- _postgresql://bytebase:z\*3kd2@example.com:5432/meta?sslrootcert=root.pem
+- _postgresql://bytebase:z\*3kd2@example.com:5432/meta_
+- _postgresql://bytebase:z\*3kd2@example.com:5432/meta?sslrootcert=root.pem_
 
 ### Notes
 
