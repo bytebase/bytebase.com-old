@@ -17,22 +17,22 @@ export const PRICING_EVENT = {
   TEAM_PLAN_CLICK: `${PAGE.PRICING}.team-plan.${ACTION.CLICK}`,
 };
 
-const analytics = ref<Analytics>()
+const analytics = ref<Analytics>();
 
 export const useSegment = () => {
   if (!analytics.value && process.env.segmentKey) {
     AnalyticsBrowser.load({
       writeKey: process.env.segmentKey,
     })
-    .then(([response]) => {
-      analytics.value = response;
-    })
-    .catch((e) => {
-      console.log('error loading segment');
-    });
+      .then(([response]) => {
+        analytics.value = response;
+      })
+      .catch((e) => {
+        console.log("error loading segment");
+      });
   }
 
   return reactive({
     analytics,
   });
-}
+};

@@ -19,7 +19,7 @@
         >
         <nuxt-link
           v-else
-          :to="{ path: `/docs${node.document.path}` }"
+          :to="localePath(`/docs${node.document.path}`)"
           class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
         >
           <span>{{ node.document.title }}</span>
@@ -40,7 +40,7 @@
           "
         >
           <nuxt-link
-            :to="{ path: `/docs${subnode.document.path}` }"
+            :to="localePath(`/docs${subnode.document.path}`)"
             class="pl-3 pr-1 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ subnode.document.title }}</span>
@@ -69,7 +69,7 @@
           @click="handleLinkClick"
         >
           <nuxt-link
-            :to="{ path: `/docs${leafnode.document.path}` }"
+            :to="localePath(`/docs${leafnode.document.path}`)"
             class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ leafnode.document.title }}</span>
@@ -98,6 +98,12 @@ import { headerDocumentSuffix } from "~/common/const";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
 
+// Remove i18n prefix path in origin path, and using for `localePath`.
+// e.g. `/en/path/to/file` -> `/path/to/file`
+const removeI18nPrefixPath = (path: string): string => {
+  return "/" + path.split("/").slice(2).join("/");
+};
+
 const getDocumentTreeRoot = (
   documentList: ContentDocument[]
 ): DocumentTreeNode => {
@@ -113,7 +119,8 @@ const getDocumentTreeRoot = (
   const formatedDocumentList = documentList
     .filter((d) => d.order >= 0)
     .map((document) => {
-      let level = document.path.split("/").length - 1;
+      const path = removeI18nPrefixPath(document.path);
+      let level = path.split("/").length - 1;
       // The header document is an index file of its directory.
       if (document.path.endsWith(headerDocumentSuffix)) {
         level = level - 1;
@@ -121,6 +128,8 @@ const getDocumentTreeRoot = (
 
       return {
         ...document,
+        dir: removeI18nPrefixPath(document.dir),
+        path: path,
         level: level,
       };
     })
@@ -185,13 +194,14 @@ const getDocumentTreeRoot = (
 export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
-    const { $content } = useContext();
+    const { $content, app } = useContext();
     const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
     const documentTreeRoot = ref<DocumentTreeNode | null>(null);
 
     onMounted(async () => {
-      const data = (await $content("", { deep: true })
+      const data = (await $content(app.i18n.locale, { deep: true })
+        .only(["title", "path", "dir", "order", "isHeader"])
         .sortBy("order")
         .fetch()) as any as ContentDocument[];
       documentTreeRoot.value = getDocumentTreeRoot(data) as DocumentTreeNode;
