@@ -15,7 +15,13 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@nuxt/content", "@types/node", "@pinia/nuxt"]
+    "types": [
+      "@nuxt/types",
+      "@nuxtjs/i18n",
+      "@nuxt/content",
+      "@types/node",
+      "@pinia/nuxt"
+    ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
