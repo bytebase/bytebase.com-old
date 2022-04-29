@@ -9,8 +9,8 @@ export default {
   components: { DocumentViewer },
   layout: "content",
   async asyncData({ $content, params, app, redirect, error }) {
-    const path = `/${params.category}/${params.document}`;
-    const document = await $content(app.i18n.locale, path, {
+    const path = `/${app.i18n.locale}/${params.category}/${params.document}`;
+    const document = await $content(path, {
       deep: true,
     })
       .fetch()

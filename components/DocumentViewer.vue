@@ -31,7 +31,7 @@
       >
         <NuxtLink
           v-if="prev"
-          :to="{ path: `/docs${prev ? prev.path : ''}` }"
+          :to="localePath(`/docs${removeI18nPrefixPath(prev.path)}`)"
           class="py-2 flex flex-row justify-start items-center text-sm text-gray-600 hover:text-black"
         >
           <img class="h-3 mr-2" src="~/assets/svg/arrow-left.svg" alt="prev" />
@@ -40,7 +40,7 @@
         <span v-else></span>
         <NuxtLink
           v-if="next"
-          :to="{ path: `/docs${next ? next.path : ''}` }"
+          :to="localePath(`/docs${removeI18nPrefixPath(next.path)}`)"
           class="py-2 flex flex-row justify-end items-center text-sm text-gray-600 hover:text-black"
         >
           <span>{{ next ? next.title : "" }}</span>
@@ -103,6 +103,7 @@ import {
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import storage from "../common/storage";
+import { removeI18nPrefixPath } from "../common/utils";
 import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
@@ -254,6 +255,7 @@ export default defineComponent({
       updatedTsFromNow,
       onCloseSubscribtionPopUp,
       onSubscribed,
+      removeI18nPrefixPath,
     };
   },
   head: {},

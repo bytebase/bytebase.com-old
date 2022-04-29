@@ -95,14 +95,9 @@ import {
   useContext,
 } from "@nuxtjs/composition-api";
 import { headerDocumentSuffix } from "~/common/const";
+import { removeI18nPrefixPath } from "~/common/utils";
 import { useStore } from "~/store";
 import { ContentDocument, Document, DocumentTreeNode } from "~/types/docs";
-
-// Remove i18n prefix path in origin path, and using for `localePath`.
-// e.g. `/en/path/to/file` -> `/path/to/file`
-const removeI18nPrefixPath = (path: string): string => {
-  return "/" + path.split("/").slice(2).join("/");
-};
 
 const getDocumentTreeRoot = (
   documentList: ContentDocument[]
