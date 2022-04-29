@@ -131,7 +131,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
       "message": ""
   }
   ```
-- Error
+- Faild
   ```json
   {
       "code": 400
