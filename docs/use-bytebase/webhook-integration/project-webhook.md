@@ -100,6 +100,45 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
   - 200, OK
   - Other, if any error
 
+**Example Request Body**
+```json
+{
+  "level": "INFO", 
+  "activity_type": "bb.issue.created", 
+  "title": "example webhook", 
+  "description": "example description",
+  "link": "example link",
+  "creator_id": 1, 
+  "creator_name": "Bytebase", 
+  "created_ts": 1651212107,
+  "issue": {
+      "id": 1,
+      "name": "example issue",
+      "status": "OPEN",
+      "type": "bb.issue.database.create"
+    },
+  "project": {
+      "id": 1,
+      "name": "demo"
+    }
+}
+```
+**Example Response Body**
+- Success
+  ```json
+  {
+      "code": 0,
+      "message": ""
+  }
+  ```
+- Error
+  ```json
+  {
+      "code": 400
+      "message": "Ops, some error occured!"
+  }
+  ```
+
 ## Supported events
 
 ### Issue creation
