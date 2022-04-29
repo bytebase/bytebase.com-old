@@ -93,7 +93,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
 
   | Key          | Type            | Description  |
   | ------------ | ---------------- | ------------ |
-  | `code` | String | Zero if sucess, non-zero if faild  |
+  | `code` | String | Zero if success, non-zero if failed  |
   | `message` | String |  Some error message   |
 
 - **Response StatusCode**
@@ -131,7 +131,7 @@ You need to implement the webhook server yourself, it doesn't work out of the bo
       "message": ""
   }
   ```
-- Faild
+- Failed
   ```json
   {
       "code": 400
