@@ -55,19 +55,19 @@
             to="/blog"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('blog.header')"
-            >Blog</NuxtLink
+            >{{ $t("common.blog") }}</NuxtLink
           >
           <NuxtLink
             to="/docs"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
-            >Docs</NuxtLink
+            >{{ $t("common.docs") }}</NuxtLink
           >
           <NuxtLink
             to="/pricing"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('pricing.header')"
-            >Pricing</NuxtLink
+            >{{ $t("common.pricing") }}</NuxtLink
           >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">

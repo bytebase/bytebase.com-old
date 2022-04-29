@@ -8,9 +8,11 @@ import DocumentViewer from "~/components/DocumentViewer.vue";
 export default {
   components: { DocumentViewer },
   layout: "content",
-  async asyncData({ $content, params, redirect }) {
+  async asyncData({ $content, params, app, redirect }) {
     const path = `/${params.category}/${params.document}`;
-    const document = await $content(path).where({ path }).fetch();
+    const document = await $content(app.i18n.locale, path, {
+      deep: true,
+    }).fetch();
 
     if (!document) {
       redirect("/404");

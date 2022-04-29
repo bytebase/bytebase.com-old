@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import slug from "slug";
+import yaml from "js-yaml";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -36,19 +37,6 @@ function databaseVCSRouteList() {
   return list;
 }
 
-const docsRouteList = async () => {
-  const { $content } = require("@nuxt/content");
-  const documentList = await $content("", { deep: true })
-    .where({ isHeader: { $ne: true } })
-    .sortBy("order")
-    .fetch();
-  const routeList = [];
-  for (const document of documentList) {
-    routeList.push(`docs${document.path}`);
-  }
-  return routeList;
-};
-
 function webhookRouteList() {
   const list = [];
   for (const webhook of databaseWebhookList()) {
@@ -71,6 +59,22 @@ function compareRouteList() {
     list.push(`compare/${compare.slug}`);
   }
   return list;
+}
+
+function getI18nMessagesObject() {
+  const localeDirRelativePath = "./locales";
+  const localeFileFullNameList = fse.readdirSync(localeDirRelativePath);
+  const messages = {};
+
+  for (const fileFullName of localeFileFullNameList) {
+    const filePath = `${localeDirRelativePath}/${fileFullName}`;
+    const fileName = fileFullName.split(".")[0];
+    const fileContent = fse.readFileSync(filePath, "utf8");
+
+    messages[fileName] = yaml.load(fileContent);
+  }
+
+  return messages;
 }
 
 export default {
@@ -118,6 +122,15 @@ export default {
     liveEdit: false,
   },
 
+  i18n: {
+    locales: ["en", "zh"],
+    defaultLocale: "en",
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: getI18nMessagesObject(),
+    },
+  },
+
   generate: {
     routes: async () => {
       const postRoutelist = [];
@@ -135,11 +148,11 @@ export default {
         }
       }
 
-      return postRoutelist
+      return []
+        .concat(postRoutelist)
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
-        .concat(await docsRouteList())
         .concat(webhookRouteList())
         .concat(softwareRouteList())
         .concat(compareRouteList());
@@ -167,7 +180,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["vue-plausible", "@nuxtjs/sitemap", "@nuxt/content"],
+  modules: [
+    "vue-plausible",
+    "@nuxtjs/sitemap",
+    "@nuxt/content",
+    "@nuxtjs/i18n",
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
