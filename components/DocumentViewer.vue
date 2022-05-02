@@ -1,7 +1,7 @@
 <template>
   <div
     ref="ducumentContainerRef"
-    class="document-viewer w-full h-auto relative px-8 overflow-x-hidden overflow-y-auto"
+    class="flex flex-col justify-start items-start px-4 lg:pr-64 w-full h-auto relative overflow-x-hidden overflow-y-auto"
     :class="classname"
   >
     <div
@@ -31,7 +31,7 @@
       >
         <NuxtLink
           v-if="prev"
-          :to="{ path: `/docs${prev ? prev.path : ''}` }"
+          :to="localePath(`/docs${removeI18nPrefixPath(prev.path)}`)"
           class="py-2 flex flex-row justify-start items-center text-sm text-gray-600 hover:text-black"
         >
           <img class="h-3 mr-2" src="~/assets/svg/arrow-left.svg" alt="prev" />
@@ -40,7 +40,7 @@
         <span v-else></span>
         <NuxtLink
           v-if="next"
-          :to="{ path: `/docs${next ? next.path : ''}` }"
+          :to="localePath(`/docs${removeI18nPrefixPath(next.path)}`)"
           class="py-2 flex flex-row justify-end items-center text-sm text-gray-600 hover:text-black"
         >
           <span>{{ next ? next.title : "" }}</span>
@@ -53,7 +53,7 @@
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 top-32 pt-12 w-64 py-2 pr-6 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 pt-12 w-64 py-2 pr-4 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <span class="text-black pb-2 pl-4 border-l border-gray-200"
         >Table of Contents</span
@@ -103,6 +103,7 @@ import {
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import storage from "../common/storage";
+import { removeI18nPrefixPath } from "../common/utils";
 import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
@@ -254,6 +255,7 @@ export default defineComponent({
       updatedTsFromNow,
       onCloseSubscribtionPopUp,
       onSubscribed,
+      removeI18nPrefixPath,
     };
   },
   head: {},
@@ -286,10 +288,5 @@ export default defineComponent({
 .nuxt-content h2:hover a:first-child:before,
 .nuxt-content h3:hover a:first-child:before {
   visibility: visible;
-}
-
-.document-viewer {
-  @apply flex flex-col justify-start items-center lg:grid lg:justify-center;
-  grid-template-columns: auto 256px;
 }
 </style>

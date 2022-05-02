@@ -72,7 +72,6 @@
     >
       <DocsSidebar
         v-show="state.showSidebar"
-        :document-list="documentList"
         @link-click="handleSidebarClick"
       />
       <Nuxt />
@@ -88,10 +87,8 @@ import {
   onMounted,
   reactive,
   useContext,
-  useAsync,
 } from "@nuxtjs/composition-api";
 import { useStore } from "~/store";
-import { ContentDocument } from "~/types/docs";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -106,19 +103,12 @@ const MOBILE_VIEW_MAX_WIDTH = 640;
 
 export default defineComponent({
   setup() {
-    const { $content } = useContext();
     const { $ga } = useContext() as any;
 
     const store = useStore();
     const state = reactive<State>({
       isMobileView: false,
       showSidebar: true,
-    });
-
-    const documentList = useAsync(() => {
-      return $content("", { deep: true })
-        .sortBy("order")
-        .fetch() as any as ContentDocument[];
     });
 
     const showSearchDialogFlag = computed(() => {
@@ -170,7 +160,6 @@ export default defineComponent({
     };
 
     return {
-      documentList,
       state,
       showSearchDialogFlag,
       track,

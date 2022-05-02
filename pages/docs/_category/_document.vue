@@ -8,9 +8,15 @@ import DocumentViewer from "~/components/DocumentViewer.vue";
 export default {
   components: { DocumentViewer },
   layout: "content",
-  async asyncData({ $content, params, redirect }) {
-    const path = `/${params.category}/${params.document}`;
-    const document = await $content(path).where({ path }).fetch();
+  async asyncData({ $content, params, app, redirect, error }) {
+    const path = `/${app.i18n.locale}/${params.category}/${params.document}`;
+    const document = await $content(path, {
+      deep: true,
+    })
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Page not found" });
+      });
 
     if (!document) {
       redirect("/404");
