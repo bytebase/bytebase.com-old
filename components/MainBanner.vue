@@ -5,7 +5,7 @@
         <p class="font-medium text-white">
           <span class="inline">Announce Bytebase 1.0 and our Team Plan</span>
           <span class="block sm:ml-2 sm:inline-block">
-            <NuxtLink to="pricing" class="text-white font-bold underline">
+            <NuxtLink to="/pricing" class="text-white font-bold underline">
               view the plan
               <span aria-hidden="true">&rarr;</span>
             </NuxtLink>
