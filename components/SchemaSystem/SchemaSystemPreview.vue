@@ -4,20 +4,20 @@
       <h1 class="text-left text-3xl font-bold mb-2">
         {{ title }}
       </h1>
-      <p class="hidden" id="preview-hidden">
+      <p id="preview-hidden" class="hidden">
         Made from
         <a
-          href="https://bytebase.com/database-review-guide"
+          href="https://www.bytebase.com/database-review-guide"
           class="text-indigo-600 hover:underline ml-1"
         >
-          https://bytebase.com/database-review-guide
+          https://www.bytebase.com/database-review-guide
         </a>
       </p>
     </div>
     <div v-for="category in categoryList" :key="category.id" class="py-4">
       <a
-        :href="`#${category.id.replace(/\./g, '-')}`"
         :id="category.id.replace(/\./g, '-')"
+        :href="`#${category.id.replace(/\./g, '-')}`"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
         {{ category.name }}
@@ -25,8 +25,8 @@
       <div v-for="rule in category.ruleList" :key="rule.id" class="py-4 group">
         <div class="sm:flex sm:items-center sm:space-x-4">
           <a
-            :href="`#${rule.id.replace(/\./g, '-')}`"
             :id="rule.id.replace(/\./g, '-')"
+            :href="`#${rule.id.replace(/\./g, '-')}`"
             class="text-left text-xl text-gray-600 hover:underline whitespace-nowrap"
           >
             {{ rule.id }}
@@ -80,7 +80,7 @@
       class="flex flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400"
     >
       Made by
-      <a href="https://bytebase.com/database-review-guide">
+      <a href="https://www.bytebase.com/database-review-guide">
         <img class="h-5" src="~/assets/logo-full.svg" alt="Bytebase" />
       </a>
       at {{ today }}

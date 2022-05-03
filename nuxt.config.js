@@ -192,7 +192,7 @@ export default {
 
   plausible: {
     // see configuration section
-    domain: "bytebase.com",
+    domain: "www.bytebase.com",
   },
 
   googleAnalytics: {
@@ -200,7 +200,7 @@ export default {
   },
 
   sitemap: {
-    hostname: "https://bytebase.com",
+    hostname: "https://www.bytebase.com",
     gzip: true,
   },
 
