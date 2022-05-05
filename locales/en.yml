@@ -3,3 +3,11 @@ common:
   blog: Blog
   docs: Docs
   pricing: Pricing
+pricing:
+  safer-and-faster: Safer and Faster
+  mission: Database change and version control for DBAs and Developers
+  month: month
+  per-instance: Per instance
+  subscription-change-1: You can upgrade, downgrade, or
+  cancel: cancel
+  subscription-change-2: your subscription anytime. No hidden charges.

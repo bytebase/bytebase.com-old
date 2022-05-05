@@ -3,3 +3,11 @@ common:
   blog: 博客
   docs: 文档
   pricing: 价格
+pricing:
+  safer-and-faster: 更安全更有效
+  mission: 专为 DBA 和研发打造的数据库变更和版本管理工具
+  month: 月
+  per-instance: 每个实例
+  subscription-change-1: 您可以随时升级，降级，或者
+  cancel: 取消
+  subscription-change-2: 您的订阅。 没有隐藏收费。

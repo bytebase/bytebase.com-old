@@ -9,10 +9,10 @@
         >
           <span
             class="text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >Safer and Faster</span
+            >{{ $t("pricing.safer-and-faster") }}</span
           ><br />
           <span class="block xl:inline">
-            Database change and version control for DBAs and Developers
+            {{ $t("pricing.mission") }}
           </span>
         </h2>
       </div>
@@ -67,9 +67,11 @@
                     <p class="text-4xl font-extrabold tracking-tight">
                       ${{ plan.pricePerInstancePerMonth }}
                     </p>
-                    <p class="text-xl">&nbsp;/&nbsp;month</p>
+                    <p class="text-xl">
+                      &nbsp;/&nbsp;{{ $t("pricing.month") }}
+                    </p>
                   </div>
-                  <p class="text-gray-400">Per instance</p>
+                  <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
                   <p class="text-gray-400">{{ plan.priceDescription }}</p>
                 </div>
                 <NuxtLink
@@ -115,9 +117,11 @@
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
-        You can upgrade, downgrade, or
-        <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp;your
-        subscription anytime. No hidden charges.
+        {{ $t("pricing.subscription-change-1") }}
+        <NuxtLink to="/refund" class="underline">{{
+          $t("pricing.cancel")
+        }}</NuxtLink
+        >&nbsp;{{ $t("pricing.subscription-change-2") }}
       </div>
     </div>
 
@@ -441,9 +445,11 @@
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      You can upgrade, downgrade, or
-      <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp; your
-      subscription anytime. No hidden charges.
+      {{ $t("pricing.subscription-change-1") }}
+      <NuxtLink to="/refund" class="underline">{{
+        $t("pricing.cancel")
+      }}</NuxtLink
+      >&nbsp;{{ $t("pricing.subscription-change-2") }}
     </div>
   </div>
 </template>
