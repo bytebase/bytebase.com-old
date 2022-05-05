@@ -4,7 +4,7 @@ common:
   docs: 文档
   pricing: 价格
 pricing:
-  safer-and-faster: 更安全更有效
+  safer-and-faster: 更安全更高效
   mission: 专为 DBA 和研发打造的数据库变更和版本管理工具
   month: 月
   per-instance: 每个实例
