@@ -10,7 +10,6 @@ import {
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
 import { getPosts } from "./api/posts";
-import { removeI18nPrefixPath } from "./common/utils";
 
 function glossaryRouteList() {
   const list = [];
@@ -61,16 +60,6 @@ function compareRouteList() {
   }
   return list;
 }
-
-const docsRouteList = async () => {
-  const { $content } = require("@nuxt/content");
-  const documentList = await $content("", { deep: true }).fetch();
-  const routeList = [];
-  for (const document of documentList) {
-    routeList.push(`/docs${removeI18nPrefixPath(document.path)}`);
-  }
-  return routeList;
-};
 
 function getI18nMessagesObject() {
   const localeDirRelativePath = "./locales";
@@ -160,7 +149,6 @@ export default {
       }
 
       return []
-        .concat(await docsRouteList())
         .concat(postRoutelist)
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
