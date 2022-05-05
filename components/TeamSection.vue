@@ -168,6 +168,11 @@ const people = [
     role: "Solution Architect",
     imageUrl: require(`~/assets/people/changyu.webp`),
   },
+  {
+    name: "Candy",
+    role: "Product",
+    imageUrl: require(`~/assets/people/candy.webp`),
+  },
 ];
 
 const YOU = {
