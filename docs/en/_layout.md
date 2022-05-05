@@ -2,7 +2,7 @@
 
 ## [👀 What is Bytebase](/what-is-bytebase)
 
-## Install
+## 🚀 Install
 
 ### [Docker (5 seconds)](/install/install-with-docker)
 
