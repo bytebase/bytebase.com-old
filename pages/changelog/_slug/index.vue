@@ -44,10 +44,6 @@
       class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
       v-html="post.html"
     ></div>
-
-    <div class="mt-8 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl">
-      <SubscribeSection :module-name="'subscribe.changelog-detail'" />
-    </div>
   </main>
 </template>
 

@@ -309,9 +309,6 @@
         </div>
       </main>
     </div>
-    <div class="mt-8 mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <SubscribeSection :module-name="'glossary.footer'" />
-    </div>
   </div>
 </template>
 

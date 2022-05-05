@@ -4,7 +4,8 @@
     <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto xl:pt-16 2xl:pt-24">
-        <div class="relative pb-8 xl:max-w-2xl xl:w-full">
+        <!-- Set z-10 so the action buttons won't be covered by the illustration -->
+        <div class="z-10 relative pb-8 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center xl:text-left">
               <h1
@@ -1004,10 +1005,6 @@
 
     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <ActionSection class="sm:justify-center" :module-name="'footer'" />
-    </div>
-
-    <div class="mt-16 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <SubscribeSection :module-name="'subscribe.footer'" />
     </div>
   </div>
 </template>

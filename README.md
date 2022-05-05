@@ -1,6 +1,6 @@
-# <a href="https://bytebase.com"><img alt="Bytebase" src="https://raw.githubusercontent.com/bytebase/bytebase/be87525c1228fe00cdcc3585859664bdd3167aca/frontend/src/assets/logo.svg" height="56px" /></a>
+# <a href="https://www.bytebase.com"><img alt="Bytebase" src="https://raw.githubusercontent.com/bytebase/bytebase/be87525c1228fe00cdcc3585859664bdd3167aca/frontend/src/assets/logo.svg" height="56px" /></a>
 
-### 🧲 We are hiring. Check out our [jobs page](https://bytebase.com/jobs).
+### 🧲 We are hiring. Check out our [jobs page](https://www.bytebase.com/jobs).
 
 This is the source code for Bytebase.com. Our website is hosted on [Render](https://render.com).
 
@@ -28,7 +28,7 @@ Just create/update the page and push to the repo. Render can observe the change 
 
 ## Quick contribution
 
-If you are interested in contributing, you may take a look at [our online database glossary page](https://bytebase.com/database-glossary) and see if you can offer some help.
+If you are interested in contributing, you may take a look at [our online database glossary page](https://www.bytebase.com/database-glossary) and see if you can offer some help.
 
 ## 🏗 Development
 

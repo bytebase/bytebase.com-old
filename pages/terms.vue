@@ -58,7 +58,7 @@
               to="/docs"
               class="text-indigo-600 underline"
               target="_blank"
-              >https://bytebase.com/docs</NuxtLink
+              >https://www.bytebase.com/docs</NuxtLink
             >
           </p>
 

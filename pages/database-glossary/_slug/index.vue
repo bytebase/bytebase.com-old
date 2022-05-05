@@ -120,9 +120,6 @@
         Features
       </h2>
       <FeatureSection />
-      <div class="border mt-8">
-        <SubscribeSection :module-name="'glossary-detail.footer'" />
-      </div>
     </div>
   </main>
 </template>
