@@ -2,7 +2,6 @@
   <div
     ref="ducumentContainerRef"
     class="flex flex-col justify-start items-start px-4 lg:pr-64 w-full h-auto relative overflow-x-hidden overflow-y-auto"
-    :class="classname"
   >
     <div
       class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
@@ -98,6 +97,7 @@ import {
   onMounted,
   reactive,
   ref,
+  useFetch,
   useContext,
   useMeta,
 } from "@nuxtjs/composition-api";
@@ -123,10 +123,6 @@ interface State {
 export default defineComponent({
   components: { SubscribeSection },
   props: {
-    classname: {
-      type: String,
-      default: "",
-    },
     document: Object,
   },
   setup(props) {
@@ -143,16 +139,12 @@ export default defineComponent({
         (toc) => toc.depth >= 2 && toc.depth <= 3
       );
     });
-    const filePath = computed(() => {
-      return `/docs${props.document?.path}${props.document?.extension}`;
-    });
-    const updatedTsFromNow = computed(() => {
-      return dayjs(props.document?.updatedAt).fromNow();
-    });
     const prev = ref<any>(undefined);
     const next = ref<any>(undefined);
+    const filePath = `/docs${props.document?.path}${props.document?.extension}`;
+    const updatedTsFromNow = dayjs(props.document?.updatedAt).fromNow();
 
-    onMounted(async () => {
+    useFetch(async () => {
       const layout = (await $content(
         app.i18n.locale,
         "_layout"
@@ -190,7 +182,9 @@ export default defineComponent({
       );
       prev.value = nodes[index - 1];
       next.value = nodes[index + 1];
+    });
 
+    onMounted(() => {
       // Dynamicly set metadata.
       meta.title.value = props.document?.title || "Bytebase Document";
       meta.meta.value = [

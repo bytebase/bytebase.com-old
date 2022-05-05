@@ -78,12 +78,6 @@
       </div>
     </div>
   </div>
-  <div
-    v-else
-    class="relative pb-6 w-full h-full flex flex-col justify-center items-center flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
-  >
-    <span class="text-gray-500">loading...</span>
-  </div>
 </template>
 
 <script lang="ts">
@@ -93,6 +87,7 @@ import {
   nextTick,
   onMounted,
   useContext,
+  useFetch,
 } from "@nuxtjs/composition-api";
 import { last } from "lodash";
 import { useStore } from "~/store";
@@ -152,14 +147,19 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
 export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
-    const { $content, app } = useContext();
+    const { $content, app, route } = useContext();
     const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
-    const documentTreeRoot = ref<DocumentTreeNode | null>(null);
+    const documentTreeRoot = ref<DocumentTreeNode>();
 
-    onMounted(async () => {
+    useFetch(async () => {
+      // Valid category for separate menu items. e.g. "cli"
+      // Now we don't have a needed and finished submenus, so it's empty.
+      const validCategoryList: string[] = [];
+      const category = route.value.params.category;
       const layout = (await $content(
         app.i18n.locale,
+        validCategoryList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
@@ -190,14 +190,19 @@ export default defineComponent({
         });
 
       documentTreeRoot.value = getDocumentTreeRoot(nodes) as DocumentTreeNode;
+    });
 
+    onMounted(async () => {
       const pathname = window.location.pathname;
-      for (const rootNode of documentTreeRoot.value.children) {
-        for (const childNode of rootNode.children) {
-          for (const leafNode of childNode.children) {
-            if (pathname.includes(`/docs${leafNode.path}`)) {
-              childNode.displayChildren = true;
-              break;
+
+      if (documentTreeRoot.value) {
+        for (const rootNode of documentTreeRoot.value.children) {
+          for (const childNode of rootNode.children) {
+            for (const leafNode of childNode.children) {
+              if (pathname.includes(`/docs${leafNode.path}`)) {
+                childNode.displayChildren = true;
+                break;
+              }
             }
           }
         }
