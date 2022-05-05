@@ -150,7 +150,10 @@ export default {
   css: ["~/assets/css/variables.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    // Plugin for vue-gtag
+    { src: '~/plugin/vue-gtag' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -188,6 +191,8 @@ export default {
 
   env: {
     segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
+    // GA4 stream id. https://analytics.google.com/analytics/web/#/a202806916p295313050/admin/streams/table/3080936169
+    gtagKey: "G-4BZ4JH7449"
   },
 
   // Using hooks to solve static prefix problem in dev server and built.
