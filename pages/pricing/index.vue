@@ -117,11 +117,13 @@
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
-        {{ $t("pricing.subscription-change-1") }}
-        <NuxtLink to="/refund" class="underline">{{
-          $t("pricing.cancel")
-        }}</NuxtLink
-        >&nbsp;{{ $t("pricing.subscription-change-2") }}
+        <i18n path="pricing.announcement" for="cancel">
+          <template #cancel>
+            <NuxtLink to="/refund" class="underline">{{
+              $t("pricing.cancel")
+            }}</NuxtLink>
+          </template>
+        </i18n>
       </div>
     </div>
 
@@ -445,11 +447,13 @@
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      {{ $t("pricing.subscription-change-1") }}
-      <NuxtLink to="/refund" class="underline">{{
-        $t("pricing.cancel")
-      }}</NuxtLink
-      >&nbsp;{{ $t("pricing.subscription-change-2") }}
+      <i18n path="pricing.announcement" for="cancel">
+        <template #cancel>
+          <NuxtLink to="/refund" class="underline">{{
+            $t("pricing.cancel")
+          }}</NuxtLink>
+        </template>
+      </i18n>
     </div>
   </div>
 </template>
