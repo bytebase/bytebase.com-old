@@ -31,7 +31,7 @@
       >
         <NuxtLink
           v-if="prev"
-          :to="localePath(`/docs${removeI18nPrefixPath(prev.path)}`)"
+          :to="localePath(`/docs${prev.path}`)"
           class="py-2 flex flex-row justify-start items-center text-sm text-gray-600 hover:text-black"
         >
           <img class="h-3 mr-2" src="~/assets/svg/arrow-left.svg" alt="prev" />
@@ -40,7 +40,7 @@
         <span v-else></span>
         <NuxtLink
           v-if="next"
-          :to="localePath(`/docs${removeI18nPrefixPath(next.path)}`)"
+          :to="localePath(`/docs${next.path}`)"
           class="py-2 flex flex-row justify-end items-center text-sm text-gray-600 hover:text-black"
         >
           <span>{{ next ? next.title : "" }}</span>
@@ -98,12 +98,13 @@ import {
   onMounted,
   reactive,
   ref,
+  useContext,
   useMeta,
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { ContentDocument } from "~/types/docs";
 import storage from "../common/storage";
-import { removeI18nPrefixPath } from "../common/utils";
 import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
@@ -127,10 +128,9 @@ export default defineComponent({
       default: "",
     },
     document: Object,
-    prev: Object,
-    next: Object,
   },
   setup(props) {
+    const { $content, app } = useContext();
     const meta = useMeta({});
     const state = reactive<State>({
       currentHashId: "",
@@ -149,8 +149,48 @@ export default defineComponent({
     const updatedTsFromNow = computed(() => {
       return dayjs(props.document?.updatedAt).fromNow();
     });
+    const prev = ref<any>(undefined);
+    const next = ref<any>(undefined);
 
-    onMounted(() => {
+    onMounted(async () => {
+      const layout = (await $content(
+        app.i18n.locale,
+        "_layout"
+      ).fetch()) as any as ContentDocument;
+      const nodes = layout.body.children
+        .filter((n) => n.tag === "h2" || n.tag === "h3" || n.tag === "h4")
+        .map((n) => {
+          let level = 1;
+          if (n.tag === "h3") {
+            level = 2;
+          } else if (n.tag === "h4") {
+            level = 3;
+          }
+
+          const child = n.children[1];
+          let path = undefined;
+          let title = "";
+          if (child.type !== "text") {
+            path = child.props.to;
+            title = child.children[0].value;
+          } else {
+            title = child.value;
+          }
+
+          return {
+            level,
+            title,
+            path,
+          };
+        })
+        .filter((n) => n.path !== undefined);
+
+      const index = nodes.findIndex((n) =>
+        props?.document?.path.endsWith(n.path)
+      );
+      prev.value = nodes[index - 1];
+      next.value = nodes[index + 1];
+
       // Dynamicly set metadata.
       meta.title.value = props.document?.title || "Bytebase Document";
       meta.meta.value = [
@@ -249,13 +289,14 @@ export default defineComponent({
 
     return {
       state,
+      prev,
+      next,
       toc,
       ducumentContainerRef,
       filePath,
       updatedTsFromNow,
       onCloseSubscribtionPopUp,
       onSubscribed,
-      removeI18nPrefixPath,
     };
   },
   head: {},

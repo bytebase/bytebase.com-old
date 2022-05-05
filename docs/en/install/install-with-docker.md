@@ -1,6 +1,5 @@
 ---
 title: Docker (5 seconds)
-order: 10100
 ---
 
 # Docker (5 seconds)

@@ -1,6 +1,5 @@
 ---
 title: Environment Policy
-order: 40400
 ---
 
 # Environment Policy

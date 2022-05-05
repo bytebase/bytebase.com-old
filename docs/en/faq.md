@@ -1,6 +1,5 @@
 ---
 title: FAQ
-order: 100000
 ---
 
 # FAQ

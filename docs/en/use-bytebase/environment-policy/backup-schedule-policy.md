@@ -1,6 +1,5 @@
 ---
 title: Backup Schedule Policy
-order: 40402
 ---
 
 # Backup Schedule Policy

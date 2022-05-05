@@ -1,5 +1,5 @@
 <template>
-  <DocumentViewer :document="document" :prev="prev" :next="next" />
+  <DocumentViewer :document="document" />
 </template>
 
 <script>
@@ -9,10 +9,12 @@ export default {
   components: { DocumentViewer },
   layout: "content",
   async asyncData({ $content, params, app, redirect, error }) {
-    const path = `/${app.i18n.locale}/${params.category}/${params.subcategory}/${params.document}`;
-    const document = await $content(path, {
-      deep: true,
-    })
+    const document = await $content(
+      app.i18n.locale,
+      params.category,
+      params.subcategory,
+      params.document
+    )
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });
@@ -22,16 +24,8 @@ export default {
       redirect("/404");
     }
 
-    const [prev, next] = await $content("", { deep: true })
-      .where({ isHeader: { $ne: true } })
-      .sortBy("order")
-      .surround(path)
-      .fetch();
-
     return {
       document,
-      prev,
-      next,
     };
   },
 };

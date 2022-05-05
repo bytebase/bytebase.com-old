@@ -1,6 +1,5 @@
 ---
 title: Approval Policy
-order: 40401
 ---
 
 # Approval Policy

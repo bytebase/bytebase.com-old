@@ -1,6 +1,5 @@
 ---
 title: Create the SQL review ticket
-order: 40101
 ---
 
 # Create the SQL review ticket

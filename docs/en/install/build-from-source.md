@@ -1,6 +1,5 @@
 ---
 title: Build from Source
-order: 10200
 ---
 
 # Build from Source

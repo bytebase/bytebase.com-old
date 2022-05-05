@@ -85,7 +85,6 @@ import { useStore } from "~/store";
 
 interface ContentDocument extends IContentDocument {
   title: string;
-  order: number;
 }
 
 export default defineComponent({
@@ -99,9 +98,9 @@ export default defineComponent({
     const showSearchDialogFlag = computed(() => store.showSearchDialogFlag);
 
     onMounted(async () => {
-      const data = (await $content("", { deep: true })
-        .sortBy("order")
-        .fetch()) as any as ContentDocument[];
+      const data = (await $content("", {
+        deep: true,
+      }).fetch()) as any as ContentDocument[];
 
       for (const document of data) {
         documentList.push(document);

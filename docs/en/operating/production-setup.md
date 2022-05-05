@@ -1,6 +1,5 @@
 ---
 title: Production Setup
-order: 60100
 ---
 
 # Production Setup
