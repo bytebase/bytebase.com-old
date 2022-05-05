@@ -147,67 +147,6 @@
             >Jobs</a
           >
         </h1>
-        <span
-          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >Backend Engineer (China)</span
-        >
-        <p class="mt-8 text-xl text-gray-500 leading-8">
-          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
-          backend uses Golang + SQLite. As a backend engineer, you will work
-          with the frontend team to craft the industry-leading database tool.
-          Some of the problems you will be working on:
-        </p>
-        <div class="prose prose-xl">
-          <ul>
-            <li>Build the state-of-the-art SQL query advisor.</li>
-            <li>
-              Advanced schema change engine for supporting complex scenarios
-              like online DDL, customer multitenancy.
-            </li>
-            <li>
-              Easy-to-use comprehensive backup and restore solution for
-              supported database types.
-            </li>
-            <li>
-              Build up the
-              <a
-                href="https://github.com/bytebase/bytebase/tree/main/plugin"
-                target="__blank"
-                >plugin architecture</a
-              >
-              to gradually evolve the product into a platform.
-            </li>
-          </ul>
-        </div>
-
-        <span
-          class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >Frontend Engineer (China)</span
-        >
-        <p class="mt-8 text-xl text-gray-500 leading-8">
-          Our frontend uses Vue + Vite + TypeScript + Tailwind CSS, and our
-          backend uses Golang + SQLite. You will work with the backend and
-          product team to craft the industry-leading database tool. Some of the
-          problems you will be working on:
-        </p>
-        <div class="prose prose-xl">
-          <ul>
-            <li>
-              Evolve the frontend architecture and define the boundary and
-              interface with the backend.
-            </li>
-            <li>Build the industry best vue-based SQL console and editor.</li>
-            <li>
-              Maintain and improve our vue-based UI component library
-              <a
-                href="https://github.com/bytebase/bytebase/tree/main/frontend/src/bbkit"
-                target="__blank"
-                >bbkit</a
-              >.
-            </li>
-            <li>Generate UI console based on database schema.</li>
-          </ul>
-        </div>
 
         <span
           class="mt-8 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
