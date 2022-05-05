@@ -1,6 +1,5 @@
 ---
 title: SQL Review
-order: 30100
 ---
 
 # SQL Review

@@ -1,6 +1,5 @@
 ---
 title: Enable Version Control Workflow (GitOps) in Project
-order: 40202
 ---
 
 # Enable Version Control Workflow (GitOps) in Project

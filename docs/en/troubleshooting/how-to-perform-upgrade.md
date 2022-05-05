@@ -1,6 +1,5 @@
 ---
 title: How to perform upgrade
-order: 90100
 ---
 
 # How to perform upgrade

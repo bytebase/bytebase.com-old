@@ -1,6 +1,5 @@
 ---
 title: Create the First Baseline Migration
-order: 40204
 ---
 
 # Create the First Baseline Migration

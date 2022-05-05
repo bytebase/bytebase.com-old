@@ -1,6 +1,5 @@
 ---
 title: Share Sheet with Teammates
-order: 30406
 ---
 
 # Share Sheet with Teammates

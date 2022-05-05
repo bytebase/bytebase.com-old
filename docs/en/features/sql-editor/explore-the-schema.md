@@ -1,6 +1,5 @@
 ---
 title: Explore the Schema
-order: 30404
 ---
 
 # Explore the Schema

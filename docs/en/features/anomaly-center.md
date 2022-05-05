@@ -1,6 +1,5 @@
 ---
 title: Anomaly Center
-order: 30900
 ---
 
 # Anomaly Center

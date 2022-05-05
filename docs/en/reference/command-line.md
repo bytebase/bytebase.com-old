@@ -1,6 +1,5 @@
 ---
 title: Server Startup Options
-order: 70100
 ---
 
 # Server Startup Options

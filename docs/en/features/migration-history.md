@@ -1,6 +1,5 @@
 ---
 title: Migration History
-order: 30600
 ---
 
 # Migration History

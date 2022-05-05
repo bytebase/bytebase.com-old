@@ -1,6 +1,5 @@
 ---
 title: VCS Integration (GitOps)
-order: 40200
 ---
 
 # VCS Integration (GitOps)

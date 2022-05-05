@@ -1,6 +1,5 @@
 ---
 title: SQL Editor
-order: 30400
 ---
 
 # SQL Editor

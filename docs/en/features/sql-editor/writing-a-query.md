@@ -1,6 +1,5 @@
 ---
 title: Compose a Query
-order: 30401
 ---
 
 # Compose a Query

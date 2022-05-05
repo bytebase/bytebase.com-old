@@ -1,6 +1,5 @@
 ---
 title: Drift Detection
-order: 30700
 ---
 
 # Drift Detection

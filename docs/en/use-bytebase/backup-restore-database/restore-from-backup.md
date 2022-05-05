@@ -1,6 +1,5 @@
 ---
 title: Restore from Backup
-order: 40302
 ---
 
 # Restore from Backup
