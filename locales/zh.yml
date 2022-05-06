@@ -44,7 +44,7 @@ subscription:
       title: 团队协作
       features:
         ui-based-sql-review: 基于 UI 的 SQL 审查
-        vsc-workflow: "VCS 工作流 #GitOps"
+        vsc-workflow: VCS 工作流 #GitOps
         shareable-query-link: 分享查询链接
         im-integration: IM 集成
         inbox-notification: 站内信通知
