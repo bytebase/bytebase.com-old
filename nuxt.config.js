@@ -1,6 +1,5 @@
 import fse from "fs-extra";
 import slug from "slug";
-import yaml from "js-yaml";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -61,22 +60,6 @@ function compareRouteList() {
   return list;
 }
 
-function getI18nMessagesObject() {
-  const localeDirRelativePath = "./locales";
-  const localeFileFullNameList = fse.readdirSync(localeDirRelativePath);
-  const messages = {};
-
-  for (const fileFullName of localeFileFullNameList) {
-    const filePath = `${localeDirRelativePath}/${fileFullName}`;
-    const fileName = fileFullName.split(".")[0];
-    const fileContent = fse.readFileSync(filePath, "utf8");
-
-    messages[fileName] = yaml.load(fileContent);
-  }
-
-  return messages;
-}
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -123,11 +106,26 @@ export default {
   },
 
   i18n: {
-    locales: ["en", "zh"],
     defaultLocale: "en",
+    lazy: true,
+    seo: true,
+    langDir: "locales/",
+    locales: [
+      {
+        name: "English",
+        code: "en",
+        iso: "en-US",
+        file: "en.json",
+      },
+      {
+        name: "简体中文",
+        code: "zh",
+        iso: "zh-CN",
+        file: "zh.json",
+      },
+    ],
     vueI18n: {
       fallbackLocale: "en",
-      messages: getI18nMessagesObject(),
     },
   },
 
@@ -165,7 +163,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // Plugin for vue-gtag
-    { src: '~/plugin/vue-gtag' },
+    { src: "~/plugin/vue-gtag" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -210,7 +208,7 @@ export default {
   env: {
     segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
     // GA4 stream id. https://analytics.google.com/analytics/web/#/a202806916p295313050/admin/streams/table/3080936169
-    gtagKey: "G-4BZ4JH7449"
+    gtagKey: "G-4BZ4JH7449",
   },
 
   // Using hooks to solve static prefix problem in dev server and built.
