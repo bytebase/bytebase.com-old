@@ -42,7 +42,7 @@ subscription:
       title: Collaboration
       features:
         ui-based-sql-review: UI based SQL review
-        vsc-workflow: "VCS workflow #GitOps"
+        vsc-workflow: VCS workflow #GitOps
         shareable-query-link: Shareable query link
         im-integration: IM integration
         inbox-notification: Inbox notification
