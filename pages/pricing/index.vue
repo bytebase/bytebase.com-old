@@ -9,10 +9,10 @@
         >
           <span
             class="text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >{{ $t("pricing.safer-and-faster") }}</span
+            >{{ $t("slogan.safer-and-faster") }}</span
           ><br />
           <span class="block xl:inline">
-            {{ $t("pricing.mission") }}
+            {{ $t("slogan.mission") }}
           </span>
         </h2>
       </div>
@@ -174,7 +174,7 @@
 
           <div v-for="section in sections" :key="section.title">
             <h4 class="mt-10 text-sm font-bold text-gray-900">
-              {{ section.title }}
+              {{ $t(`subscription.feature-sections.${section.title}.title`) }}
             </h4>
 
             <div class="mt-6 relative">
@@ -206,7 +206,11 @@
                     class="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
                   >
                     <dt class="pr-4 text-sm font-medium text-gray-600">
-                      {{ feature.title }}
+                      {{
+                        $t(
+                          `subscription.feature-sections.${section.title}.features.${feature.title}`
+                        )
+                      }}
                     </dt>
                     <dd
                       class="flex items-center justify-end sm:px-4 sm:justify-center"
@@ -219,7 +223,7 @@
                             : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                        >{{ feature.tiers[index].value }}</span
+                        >{{ $t(feature.tiers[index].value) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -327,7 +331,7 @@
 
         <div v-for="section in sections" :key="section.title">
           <h3 class="text-xl font-bold text-gray-900 text-left my-5">
-            {{ section.title }}
+            {{ $t(`subscription.feature-sections.${section.title}.title`) }}
           </h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
@@ -367,7 +371,11 @@
                     scope="row"
                     class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
                   >
-                    {{ feature.title }}
+                    {{
+                      $t(
+                        `subscription.feature-sections.${section.title}.features.${feature.title}`
+                      )
+                    }}
                   </th>
                   <td
                     v-for="(tier, tierIdx) in feature.tiers"
@@ -382,7 +390,7 @@
                       <span
                         v-if="typeof tier.value === 'string'"
                         :class="['text-sm font-medium']"
-                        >{{ tier.value }}</span
+                        >{{ $t(tier.value) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -403,7 +411,7 @@
                         <QuestinIcon class="h-5 w-5" />
                         <!-- class="h-5 w-5" -->
                         <span class="tooltip whitespace-nowrap">{{
-                          tier.tooltip
+                          $t(tier.tooltip)
                         }}</span>
                       </span>
                     </span>

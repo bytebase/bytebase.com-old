@@ -10,3 +10,52 @@ pricing:
   per-instance: 每个实例
   cancel: 取消
   announcement: 您可以随时升级、降级或{cancel}。没有任何隐藏费用。
+slogan:
+  safer-and-faster: 更安全更高效
+  mission: 专为 DBA 和研发打造的数据库变更和版本管理工具
+subscription:
+  feature-sections:
+    database-management:
+      title: 数据库管理
+      features:
+        instance-count: 实例数
+        instance-upto-5: 不多于 5 个
+        instance-minimum-5: 5 ~ 无限制
+        instance-customized: 自定义
+        schema-change: Schema 和数据变更
+        migration-history: 迁移历史
+        sql-editor: SQL 编辑器
+        database-backup-restore: 数据库备份和恢复
+        archiving: 归档
+        sql-check: SQL 检查
+        sql-check-basic: 基础
+        sql-check-basic-tooltip: 语法检查、数据库连接检查
+        sql-check-advanced: 高级
+        sql-check-advanced-tooltip: 基础版功能+向后兼容性检查
+        anomaly-detection: 异常检测
+        anomaly-detection-basic: 基础
+        anomaly-detection-basic-tooltip: 数据库连接异常、备份缺失
+        anomaly-detection-advanced: 高级
+        anomaly-detection-advanced-tooltip: 基础版功能+ Schema 偏差检测
+        schedule-change: 设定任务执行时间
+        review-and-backup-policy: 审核和备份策略
+        tenancy: 多地域/多租户部署
+    collaboration:
+      title: 团队协作
+      features:
+        ui-based-sql-review: 基于 UI 的 SQL 审查
+        vsc-workflow: "VCS 工作流 #GitOps"
+        shareable-query-link: 分享查询链接
+        im-integration: IM 集成
+        inbox-notification: 站内信通知
+    admin-and-security:
+      title: 管理与安全
+      features:
+        activity-log: 活动日志
+        rbac: RBAC 权限管理
+        3rd-party-auth: 通过 GitLab 登录
+        sync-members-from-vcs: 从 GitLab 同步成员信息
+    branding:
+      title: 自定义品牌信息
+      features:
+        branding-logo: 自定义 Logo
