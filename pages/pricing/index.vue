@@ -505,7 +505,7 @@ export default defineComponent({
     XIcon,
   },
   setup() {
-    const app = useContext();
+    const { app } = useContext();
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
         return app.i18n.t("pricing.deploy-now") as string;
