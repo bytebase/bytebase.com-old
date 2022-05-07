@@ -32,7 +32,7 @@
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
           <div
             v-for="plan in plans"
-            :key="plan.name"
+            :key="plan.title"
             :class="[
               'bg-white',
               plan.featured
@@ -55,9 +55,7 @@
                 >
               </div>
               <img
-                :src="
-                  require(`~/assets/plans/plan-${plan.name.toLowerCase()}.webp`)
-                "
+                :src="require(`~/assets/plans/${plan.imagePath}`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
 
@@ -278,7 +276,7 @@
           <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
           <div
             v-for="(plan, planIdx) in plans"
-            :key="plan.name"
+            :key="plan.title"
             aria-hidden="true"
             :class="[
               planIdx === plans.length - 1 ? '' : 'pr-4',
@@ -362,7 +360,7 @@
                   <th scope="col">
                     <span class="sr-only">{{ section.title }}</span>
                   </th>
-                  <th v-for="plan in plans" :key="plan.name" scope="col">
+                  <th v-for="plan in plans" :key="plan.title" scope="col">
                     <span class="sr-only">{{ $t(plan.title) }} plan</span>
                   </th>
                 </tr>
@@ -428,7 +426,7 @@
           <div class="w-1/4 pr-4"></div>
           <div
             v-for="(plan, planIndex) in plans"
-            :key="plan.name"
+            :key="plan.title"
             :class="[
               planIndex === plans.length - 1 ? 'pl-4' : 'px-4',
               'relative w-1/4 py-0 text-center',

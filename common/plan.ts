@@ -14,7 +14,7 @@ export interface Plan {
   pricePerInstancePerMonth: number;
   priceDescription: string;
   // Plan desc and feature
-  name: string;
+  imagePath: string;
   title: string;
   description: string;
   features: { id: string; content?: string; tooltip?: string }[];
@@ -72,7 +72,7 @@ const FREE_PLAN: Plan = {
   pricePerInstancePerMonth: 0,
   priceDescription: "free-price-intro",
   // Plan desc and feature
-  name: "Free",
+  imagePath: "plan-free.webp",
   title: "subscription.plan.free.title",
   description: "subscription.plan.free.desc",
   features: [
@@ -126,7 +126,7 @@ const TEAM_PLAN: Plan = {
   pricePerInstancePerMonth: 29,
   priceDescription: "team-price-intro",
   // Plan desc and feature
-  name: "Team",
+  imagePath: "plan-team.webp",
   title: "subscription.plan.team.title",
   description: "subscription.plan.team.desc",
   features: [
@@ -187,7 +187,7 @@ const ENTERPRISE_PLAN: Plan = {
   pricePerInstancePerMonth: 199,
   priceDescription: "enterprise-price-intro",
   // Plan desc and feature
-  name: "Enterprise",
+  imagePath: "plan-enterprise.webp",
   title: "subscription.plan.enterprise.title",
   description: "subscription.plan.enterprise.desc",
   features: [
