@@ -46,18 +46,16 @@
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </h2>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <img
-                :src="
-                  require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)
-                "
+                :src="require(`~/assets/plans/${plan.imagePath}`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
 
@@ -72,7 +70,9 @@
                     </p>
                   </div>
                   <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
-                  <p class="text-gray-400">{{ plan.priceDescription }}</p>
+                  <p class="text-gray-400">
+                    {{ $t(`pricing.${plan.priceDescription}`) }}
+                  </p>
                 </div>
                 <NuxtLink
                   v-if="plan.type == 0"
@@ -149,9 +149,9 @@
                 'text-sm font-bold',
               ]"
             >
-              {{ plan.title }}
+              {{ $t(plan.title) }}
             </h3>
-            <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <NuxtLink
               v-if="plan.type == 0"
               to="/docs/install/install-with-docker"
@@ -296,16 +296,16 @@
                     'text-sm font-bold',
                   ]"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </p>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">
-                {{ plan.description }}
+                {{ $t(plan.description) }}
               </p>
               <NuxtLink
                 v-if="plan.type == 0"
@@ -361,7 +361,7 @@
                     <span class="sr-only">{{ section.title }}</span>
                   </th>
                   <th v-for="plan in plans" :key="plan.title" scope="col">
-                    <span class="sr-only">{{ plan.title }} plan</span>
+                    <span class="sr-only">{{ $t(plan.title) }} plan</span>
                   </th>
                 </tr>
               </thead>
@@ -467,7 +467,12 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, watch } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  useContext,
+  watch,
+} from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue";
 import CheckIcon from "../../components/CheckIcon.vue";
@@ -500,13 +505,19 @@ export default defineComponent({
     XIcon,
   },
   setup() {
+    const { app } = useContext();
     const getButtonText = (plan: Plan): string => {
-      if (plan.type === PlanType.FREE) return "Deploy now";
-      if (plan.type === PlanType.ENTERPRISE) return "Contact us";
+      if (plan.type === PlanType.FREE)
+        return app.i18n.t("pricing.deploy-now") as string;
+      if (plan.type === PlanType.ENTERPRISE)
+        return app.i18n.t("pricing.contact-us") as string;
       if (plan.trialDays && plan.trialPrice) {
-        return `Start trial with $${plan.trialPrice} for ${plan.trialDays} days`;
+        return app.i18n.t("pricing.start-trial", {
+          price: plan.trialPrice,
+          days: plan.trialDays,
+        }) as string;
       }
-      return "Subscribe now";
+      return app.i18n.t("pricing.subscribe-now") as string;
     };
 
     const plans: LocalPlan[] = PLANS.map((plan) => ({

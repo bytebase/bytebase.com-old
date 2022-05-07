@@ -8,14 +8,40 @@
   "pricing": {
     "month": "month",
     "per-instance": "Per instance",
+    "free-price-intro": "Up to 5",
+    "team-price-intro": "5 minimum, billed annually",
+    "enterprise-price-intro": "Customized, billed annually",
     "cancel": "cancel",
-    "announcement": "You can upgrade, downgrade, or {cancel} anytime. No hidden charges."
+    "announcement": "You can upgrade, downgrade, or {cancel} anytime. No hidden charges.",
+    "deploy-now": "Deploy now",
+    "contact-us": "Contact us",
+    "start-trial": "Start trial with ${price} for {days} days",
+    "subscribe-now": "Subscribe now"
   },
   "slogan": {
     "safer-and-faster": "Safer and Faster",
     "mission": "Database change and version control for DBAs and Developers"
   },
   "subscription": {
+    "plan": {
+      "title": "Plan",
+      "try": "Try Team",
+      "free": {
+        "title": "Free",
+        "label": "",
+        "desc": "Personal project or small team, no DBA"
+      },
+      "team": {
+        "title": "Team",
+        "label": "Beta",
+        "desc": "Medium size team, has dedicated DBA or TL for engineering velocity"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "label": "Early access",
+        "desc": "Large organization, has dedicated DBA group to manage database fleet"
+      }
+    },
     "feature-sections": {
       "database-management": {
         "title": "Database Development",
