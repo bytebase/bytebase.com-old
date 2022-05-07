@@ -8,14 +8,40 @@
   "pricing": {
     "month": "月",
     "per-instance": "每个实例",
+    "free-price-intro": "最多 5 个实例",
+    "team-price-intro": "5 个起步，按年付费",
+    "enterprise-price-intro": "自定义实例数，按年付费",
     "cancel": "取消",
-    "announcement": "您可以随时升级、降级或{cancel}。没有任何隐藏费用。"
+    "announcement": "您可以随时升级、降级或{cancel}。没有任何隐藏费用。",
+    "deploy-now": "立即部署",
+    "contact-us": "联系我们",
+    "start-trial": "以 {days} 天 {price} 美元的价格试用",
+    "subscribe-now": "立即订阅"
   },
   "slogan": {
     "safer-and-faster": "更安全更高效",
     "mission": "专为 DBA 和研发打造的数据库变更和版本管理工具"
   },
   "subscription": {
+    "plan": {
+      "title": "版本",
+      "try": "试用团队版",
+      "free": {
+        "title": "免费版",
+        "label": "",
+        "desc": "个人或小团队，无专职 DBA"
+      },
+      "team": {
+        "title": "团队版",
+        "label": "Beta",
+        "desc": "中型团队，有专职 DBA 或 TL 以提高工程速度"
+      },
+      "enterprise": {
+        "title": "企业版",
+        "label": "预览版",
+        "desc": "大型组织，有专属 DBA 团队来管理数据库"
+      }
+    },
     "feature-sections": {
       "database-management": {
         "title": "数据库管理",
@@ -85,7 +111,7 @@
       "sla": "SLA 支持",
       "everything-in-team-plan": "所有团队版的功能",
       "multi-tenancy": "多地域/多租户部署",
-      "more-to-come": "更多功能尽请期待..."
+      "more-to-come": "更多功能敬请期待..."
     }
   }
 }

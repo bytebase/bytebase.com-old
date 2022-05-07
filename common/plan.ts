@@ -14,6 +14,7 @@ export interface Plan {
   pricePerInstancePerMonth: number;
   priceDescription: string;
   // Plan desc and feature
+  name: string;
   title: string;
   description: string;
   features: { id: string; content?: string; tooltip?: string }[];
@@ -69,10 +70,11 @@ const FREE_PLAN: Plan = {
   unitPrice: "0",
   trialPrice: 0,
   pricePerInstancePerMonth: 0,
-  priceDescription: "Up to 5",
+  priceDescription: "free-price-intro",
   // Plan desc and feature
-  title: "Free",
-  description: "Personal project or small team, no DBA",
+  name: "Free",
+  title: "subscription.plan.free.title",
+  description: "subscription.plan.free.desc",
   features: [
     {
       id: "instance-count",
@@ -116,17 +118,17 @@ const FREE_PLAN: Plan = {
 
 const TEAM_PLAN: Plan = {
   // Plan meta data
-  label: "Beta",
+  label: "subscription.plan.team.label",
   type: PlanType.TEAM,
   trialDays: 14,
   unitPrice: "1740",
   trialPrice: 14,
   pricePerInstancePerMonth: 29,
-  priceDescription: "5 minimum, billed annually",
+  priceDescription: "team-price-intro",
   // Plan desc and feature
-  title: "Team",
-  description:
-    "Medium size team, with dedicated DBA or TL for engineering velocity",
+  name: "Team",
+  title: "subscription.plan.team.title",
+  description: "subscription.plan.team.desc",
   features: [
     {
       id: "instance-count",
@@ -177,17 +179,17 @@ const TEAM_PLAN: Plan = {
 
 const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
-  label: "Early access",
+  label: "subscription.plan.enterprise.label",
   type: PlanType.ENTERPRISE,
   trialDays: 14,
   unitPrice: "11940",
   trialPrice: 0,
   pricePerInstancePerMonth: 199,
-  priceDescription: "Customized, billed annually",
+  priceDescription: "enterprise-price-intro",
   // Plan desc and feature
-  title: "Enterprise",
-  description:
-    "Large organization, with dedicated DBA group to manage database fleet",
+  name: "Enterprise",
+  title: "subscription.plan.enterprise.title",
+  description: "subscription.plan.enterprise.desc",
   features: [
     {
       id: "instance-count",

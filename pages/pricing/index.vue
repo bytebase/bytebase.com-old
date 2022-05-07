@@ -32,7 +32,7 @@
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
           <div
             v-for="plan in plans"
-            :key="plan.title"
+            :key="plan.name"
             :class="[
               'bg-white',
               plan.featured
@@ -46,17 +46,17 @@
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </h2>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <img
                 :src="
-                  require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)
+                  require(`~/assets/plans/plan-${plan.name.toLowerCase()}.webp`)
                 "
                 class="hidden lg:block w-2/3 m-auto"
               />
@@ -72,7 +72,9 @@
                     </p>
                   </div>
                   <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
-                  <p class="text-gray-400">{{ plan.priceDescription }}</p>
+                  <p class="text-gray-400">
+                    {{ $t(`pricing.${plan.priceDescription}`) }}
+                  </p>
                 </div>
                 <NuxtLink
                   v-if="plan.type == 0"
@@ -149,9 +151,9 @@
                 'text-sm font-bold',
               ]"
             >
-              {{ plan.title }}
+              {{ $t(plan.title) }}
             </h3>
-            <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <NuxtLink
               v-if="plan.type == 0"
               to="/docs/install/install-with-docker"
@@ -276,7 +278,7 @@
           <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
           <div
             v-for="(plan, planIdx) in plans"
-            :key="plan.title"
+            :key="plan.name"
             aria-hidden="true"
             :class="[
               planIdx === plans.length - 1 ? '' : 'pr-4',
@@ -296,16 +298,16 @@
                     'text-sm font-bold',
                   ]"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </p>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">
-                {{ plan.description }}
+                {{ $t(plan.description) }}
               </p>
               <NuxtLink
                 v-if="plan.type == 0"
@@ -360,8 +362,8 @@
                   <th scope="col">
                     <span class="sr-only">{{ section.title }}</span>
                   </th>
-                  <th v-for="plan in plans" :key="plan.title" scope="col">
-                    <span class="sr-only">{{ plan.title }} plan</span>
+                  <th v-for="plan in plans" :key="plan.name" scope="col">
+                    <span class="sr-only">{{ $t(plan.title) }} plan</span>
                   </th>
                 </tr>
               </thead>
@@ -426,7 +428,7 @@
           <div class="w-1/4 pr-4"></div>
           <div
             v-for="(plan, planIndex) in plans"
-            :key="plan.title"
+            :key="plan.name"
             :class="[
               planIndex === plans.length - 1 ? 'pl-4' : 'px-4',
               'relative w-1/4 py-0 text-center',
@@ -467,7 +469,12 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, watch } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  useContext,
+  watch,
+} from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue";
 import CheckIcon from "../../components/CheckIcon.vue";
@@ -500,13 +507,19 @@ export default defineComponent({
     XIcon,
   },
   setup() {
+    const app = useContext();
     const getButtonText = (plan: Plan): string => {
-      if (plan.type === PlanType.FREE) return "Deploy now";
-      if (plan.type === PlanType.ENTERPRISE) return "Contact us";
+      if (plan.type === PlanType.FREE)
+        return app.i18n.t("pricing.deploy-now") as string;
+      if (plan.type === PlanType.ENTERPRISE)
+        return app.i18n.t("pricing.contact-us") as string;
       if (plan.trialDays && plan.trialPrice) {
-        return `Start trial with $${plan.trialPrice} for ${plan.trialDays} days`;
+        return app.i18n.t("pricing.start-trial", {
+          price: plan.trialPrice,
+          days: plan.trialDays,
+        }) as string;
       }
-      return "Subscribe now";
+      return app.i18n.t("pricing.subscribe-now") as string;
     };
 
     const plans: LocalPlan[] = PLANS.map((plan) => ({
