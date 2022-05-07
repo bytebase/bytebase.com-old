@@ -106,11 +106,11 @@ const FREE_PLAN: Plan = {
     { id: "activity-log" },
   ],
   mainFeatures: [
-    "Community support",
-    "Schema and data change review workflow",
-    "SQL Editor",
-    "Database backup / restore",
-    "IM integration (e.g. Slack, Discord and etc)",
+    "community-support",
+    "review-workflow",
+    "sql-editor",
+    "database-backup-restore",
+    "im-integration",
   ],
 };
 
@@ -166,12 +166,12 @@ const TEAM_PLAN: Plan = {
     { id: "branding-logo" },
   ],
   mainFeatures: [
-    "Email support",
-    "Everything in free plan",
-    "Owner, DBA and Developer roles",
-    "GitLab login",
-    "Advanced SQL check and anomaly detection",
-    "Review and backup policy",
+    "email-support",
+    "everything-in-free-plan",
+    "rbac",
+    "gitlab-login",
+    "sql-check-anomaly-detection",
+    "review-and-backup-policy",
   ],
 };
 
@@ -228,10 +228,10 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "branding-logo" },
   ],
   mainFeatures: [
-    "SLA support",
-    "Everything in team plan",
-    "Multi-Region / Multi-Tenancy deployment",
-    "More to come...",
+    "sla",
+    "everything-in-team-plan",
+    "multi-tenancy",
+    "more-to-come",
   ],
 };
 
