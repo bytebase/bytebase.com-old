@@ -108,9 +108,9 @@
                   class="text-indigo-500 w-5 h-5 flex-shrink-0"
                   aria-hidden="true"
                 />
-                <span class="text-gray-600 ml-3 text-sm font-medium">{{
-                  feature
-                }}</span>
+                <span class="text-gray-600 ml-3 text-sm font-medium">
+                  {{ $t(`subscription.main-features.${feature}`) }}
+                </span>
               </li>
             </ul>
           </div>
