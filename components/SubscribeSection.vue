@@ -16,10 +16,12 @@
         class="font-extrabold text-gray-900"
         :class="size === 'lg' ? 'text-4xl' : 'text-3xl'"
       >
-        Get Database Insight 💡
+        {{ $t("subscribe.get-database-insight") }} 💡
       </h2>
       <p class="mt-3 text-lg leading-8 text-gray-500">
-        Learn product updates and everything about database.
+        {{
+          $t("subscribe.learn-product-updates-and-everything-about-database")
+        }}
       </p>
     </div>
     <div
@@ -27,15 +29,17 @@
       :class="size === 'lg' ? 'mt-0' : 'mt-4'"
     >
       <div v-if="subscribed" class="text-xl font-semibold text-indigo-600">
-        <span class="text-3xl mr-2">🙌</span> Now check {{ email }} to confirm
-        the subscription.
+        <span class="text-3xl mr-2">🙌</span>
+        {{ $t("subscribe.check-email-to-confirm-subscription", { email }) }}
       </div>
       <form
         v-else
         class="flex flex-row justify-start items-center"
         @submit="subscribe"
       >
-        <label for="email-address" class="sr-only">Email address</label>
+        <label for="email-address" class="sr-only">{{
+          $t("subscribe.email-address")
+        }}</label>
         <input
           id="email-address"
           v-model="email"
@@ -45,14 +49,14 @@
           required
           class="w-auto border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 mr-3 sm:max-w-xs rounded-md"
           :class="size === 'lg' ? 'px-5 py-3 w-24' : 'px-4 py-2'"
-          placeholder="Enter your email"
+          :placeholder="$t('subscribe.enter-your-email')"
         />
         <button
           type="submit"
           class="w-auto flex items-center justify-center border border-transparent text-base font-medium rounded-md shadow text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
         >
-          Subscribe
+          {{ $t("common.subscribe") }}
         </button>
       </form>
     </div>

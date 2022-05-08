@@ -73,13 +73,13 @@ const FREE_PLAN: Plan = {
   priceDescription: "free-price-intro",
   // Plan desc and feature
   imagePath: "plan-free.webp",
-  title: "subscription.plan.free.title",
-  description: "subscription.plan.free.desc",
+  title: "pricing.subscription.plan.free.title",
+  description: "pricing.subscription.plan.free.desc",
   features: [
     {
       id: "instance-count",
       content:
-        "subscription.feature-sections.database-management.features.instance-upto-5",
+        "pricing.subscription.feature-sections.database-management.features.instance-upto-5",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -89,16 +89,16 @@ const FREE_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "subscription.feature-sections.database-management.features.sql-check-basic",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-basic",
       tooltip:
-        "subscription.feature-sections.database-management.features.sql-check-basic-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-basic-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "subscription.feature-sections.database-management.features.anomaly-detection-basic",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-basic",
       tooltip:
-        "subscription.feature-sections.database-management.features.anomaly-detection-basic-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-basic-tooltip",
     },
     { id: "ui-based-sql-review" },
     { id: "vsc-workflow" },
@@ -118,7 +118,7 @@ const FREE_PLAN: Plan = {
 
 const TEAM_PLAN: Plan = {
   // Plan meta data
-  label: "subscription.plan.team.label",
+  label: "pricing.subscription.plan.team.label",
   type: PlanType.TEAM,
   trialDays: 14,
   unitPrice: "1740",
@@ -127,13 +127,13 @@ const TEAM_PLAN: Plan = {
   priceDescription: "team-price-intro",
   // Plan desc and feature
   imagePath: "plan-team.webp",
-  title: "subscription.plan.team.title",
-  description: "subscription.plan.team.desc",
+  title: "pricing.subscription.plan.team.title",
+  description: "pricing.subscription.plan.team.desc",
   features: [
     {
       id: "instance-count",
       content:
-        "subscription.feature-sections.database-management.features.instance-minimum-5",
+        "pricing.subscription.feature-sections.database-management.features.instance-minimum-5",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -143,16 +143,16 @@ const TEAM_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "subscription.feature-sections.database-management.features.sql-check-advanced",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced",
       tooltip:
-        "subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "subscription.feature-sections.database-management.features.anomaly-detection-advanced",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced",
       tooltip:
-        "subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
     },
     { id: "schedule-change" },
     { id: "review-and-backup-policy" },
@@ -179,7 +179,7 @@ const TEAM_PLAN: Plan = {
 
 const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
-  label: "subscription.plan.enterprise.label",
+  label: "pricing.subscription.plan.enterprise.label",
   type: PlanType.ENTERPRISE,
   trialDays: 14,
   unitPrice: "11940",
@@ -188,13 +188,13 @@ const ENTERPRISE_PLAN: Plan = {
   priceDescription: "enterprise-price-intro",
   // Plan desc and feature
   imagePath: "plan-enterprise.webp",
-  title: "subscription.plan.enterprise.title",
-  description: "subscription.plan.enterprise.desc",
+  title: "pricing.subscription.plan.enterprise.title",
+  description: "pricing.subscription.plan.enterprise.desc",
   features: [
     {
       id: "instance-count",
       content:
-        "subscription.feature-sections.database-management.features.instance-customized",
+        "pricing.subscription.feature-sections.database-management.features.instance-customized",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -204,16 +204,16 @@ const ENTERPRISE_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "subscription.feature-sections.database-management.features.sql-check-advanced",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced",
       tooltip:
-        "subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "subscription.feature-sections.database-management.features.anomaly-detection-advanced",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced",
       tooltip:
-        "subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
     },
     { id: "schedule-change" },
     { id: "review-and-backup-policy" },
