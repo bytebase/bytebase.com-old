@@ -1,6 +1,5 @@
 ---
 title: Data Model
-order: 20100
 ---
 
 # Data Model

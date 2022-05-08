@@ -1,6 +1,5 @@
 ---
 title: Tenant Database
-order: 20400
 ---
 
 # Tenant Database

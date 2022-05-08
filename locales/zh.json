@@ -1,0 +1,169 @@
+{
+  "common": {
+    "bytebase": "Bytebase",
+    "blog": "博客",
+    "docs": "文档",
+    "documentation": "文档",
+    "demo": "Demo",
+    "live-demo": "在线 Demo",
+    "about": "关于",
+    "changelog": "更新日志",
+    "company": "公司",
+    "pricing": "价格",
+    "subscribe": "订阅",
+    "databases": "数据库"
+  },
+  "slogan": {
+    "safer-and-faster": "更安全更高效",
+    "mission": "专为 DBA 和研发打造的数据库变更和版本管理工具",
+    "deploy-now-in-5-seconds": "5 秒内立即部署",
+    "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase"
+  },
+  "pricing": {
+    "month": "月",
+    "per-instance": "每个实例",
+    "free-price-intro": "最多 5 个实例",
+    "team-price-intro": "5 个起步，按年付费",
+    "enterprise-price-intro": "自定义实例数，按年付费",
+    "cancel": "取消",
+    "announcement": "您可以随时升级、降级或{cancel}。没有任何隐藏费用。",
+    "deploy-now": "立即部署",
+    "contact-us": "联系我们",
+    "start-trial": "以 {days} 天 {price} 美元的价格试用",
+    "subscribe-now": "立即订阅",
+    "subscription": {
+      "plan": {
+        "title": "版本",
+        "try": "试用团队版",
+        "free": {
+          "title": "免费版",
+          "label": "",
+          "desc": "个人或小团队，无专职 DBA"
+        },
+        "team": {
+          "title": "团队版",
+          "label": "Beta",
+          "desc": "中型团队，有专职 DBA 或 TL 以提高工程速度"
+        },
+        "enterprise": {
+          "title": "企业版",
+          "label": "预览版",
+          "desc": "大型组织，有专属 DBA 团队来管理数据库"
+        }
+      },
+      "feature-sections": {
+        "database-management": {
+          "title": "数据库管理",
+          "features": {
+            "instance-count": "实例数",
+            "instance-upto-5": "不多于 5 个",
+            "instance-minimum-5": "5 ~ 无限制",
+            "instance-customized": "自定义",
+            "schema-change": "Schema 和数据变更",
+            "migration-history": "迁移历史",
+            "sql-editor": "SQL 编辑器",
+            "database-backup-restore": "数据库备份和恢复",
+            "archiving": "归档",
+            "sql-check": "SQL 检查",
+            "sql-check-basic": "基础",
+            "sql-check-basic-tooltip": "语法检查、数据库连接检查",
+            "sql-check-advanced": "高级",
+            "sql-check-advanced-tooltip": "基础版功能 + 向后兼容性检查",
+            "anomaly-detection": "异常检测",
+            "anomaly-detection-basic": "基础",
+            "anomaly-detection-basic-tooltip": "数据库连接异常、备份缺失",
+            "anomaly-detection-advanced": "高级",
+            "anomaly-detection-advanced-tooltip": "基础版功能 + Schema 偏差检测",
+            "schedule-change": "设定任务执行时间",
+            "review-and-backup-policy": "审核和备份策略",
+            "tenancy": "多地域/多租户部署"
+          }
+        },
+        "collaboration": {
+          "title": "团队协作",
+          "features": {
+            "ui-based-sql-review": "基于 UI 的 SQL 审查",
+            "vsc-workflow": "VCS 工作流 (GitOps)",
+            "shareable-query-link": "分享查询链接",
+            "im-integration": "IM 集成",
+            "inbox-notification": "站内信通知"
+          }
+        },
+        "admin-and-security": {
+          "title": "管理与安全",
+          "features": {
+            "activity-log": "活动日志",
+            "rbac": "RBAC 权限管理",
+            "3rd-party-auth": "通过 GitLab 登录",
+            "sync-members-from-vcs": "从 GitLab 同步成员信息"
+          }
+        },
+        "branding": {
+          "title": "自定义品牌信息",
+          "features": {
+            "branding-logo": "自定义 Logo"
+          }
+        }
+      },
+      "main-features": {
+        "community-support": "社区支持",
+        "review-workflow": "Schema 和数据改动审核流",
+        "sql-editor": "SQL 编辑器",
+        "database-backup-restore": "数据库备份和恢复",
+        "im-integration": "IM 集成 (Slack, Discord 等)",
+        "email-support": "邮件支持",
+        "everything-in-free-plan": "所有免费版的功能",
+        "rbac": "RBAC 权限管理",
+        "gitlab-login": "通过 GitLab 登录",
+        "sql-check-anomaly-detection": "高阶 SQL 检查和异常检测",
+        "review-and-backup-policy": "审核和备份策略",
+        "sla": "SLA 支持",
+        "everything-in-team-plan": "所有团队版的功能",
+        "multi-tenancy": "多地域/多租户部署",
+        "more-to-come": "更多功能敬请期待..."
+      }
+    }
+  },
+  "banner": {
+    "announce-bytebase-1-0-and-our-team-plan": "宣布 Bytebase 1.0 和我们的团队版",
+    "view-the-plan": "查看计划"
+  },
+  "subscribe": {
+    "get-database-insight": "获取数据库资讯",
+    "learn-product-updates-and-everything-about-database": "了解我们的产品更新和有关数据库的实时消息。",
+    "check-email-to-confirm-subscription": "现在请检查 {email} 以确认订阅。",
+    "email-address": "邮箱地址",
+    "enter-your-email": "输入你的邮箱"
+  },
+  "team": {
+    "meet-our-crew": "认识我们的团队",
+    "roles": {
+      "community-manager": "Community Manager",
+      "engineering": "Engineering",
+      "engineering-intern": "Engineering Intern",
+      "community-intern": "Community Intern",
+      "solution-architect": "Solution Architect",
+      "product-manager": "Product Manager",
+      "special-agent": "Special Agent"
+    },
+    "backed-by-the-best": "背后最好的支持",
+    "join-us": "加入我们"
+  },
+  "header": {
+    "deploy-now": "立即部署"
+  },
+  "footer": {
+    "use-cases": "使用场景",
+    "brand": "品牌",
+    "careers": "在招职位",
+    "contact": "联系我们",
+    "integrations": "应用集成",
+    "resources": "资源",
+    "database-review-guide": "数据库审查指南",
+    "database-glossary": "数据库词汇表",
+    "error-code": "错误代码",
+    "terms": "条款",
+    "policy": "政策",
+    "all-rights-reserved": "版权所有。"
+  }
+}

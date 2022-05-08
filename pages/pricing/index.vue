@@ -9,10 +9,10 @@
         >
           <span
             class="text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >Safer and Faster</span
+            >{{ $t("slogan.safer-and-faster") }}</span
           ><br />
           <span class="block xl:inline">
-            Database change and version control for DBAs and Developers
+            {{ $t("slogan.mission") }}
           </span>
         </h2>
       </div>
@@ -46,18 +46,16 @@
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </h2>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <img
-                :src="
-                  require(`~/assets/plans/plan-${plan.title.toLowerCase()}.webp`)
-                "
+                :src="require(`~/assets/plans/${plan.imagePath}`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
 
@@ -67,10 +65,14 @@
                     <p class="text-4xl font-extrabold tracking-tight">
                       ${{ plan.pricePerInstancePerMonth }}
                     </p>
-                    <p class="text-xl">&nbsp;/&nbsp;month</p>
+                    <p class="text-xl">
+                      &nbsp;/&nbsp;{{ $t("pricing.month") }}
+                    </p>
                   </div>
-                  <p class="text-gray-400">Per instance</p>
-                  <p class="text-gray-400">{{ plan.priceDescription }}</p>
+                  <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
+                  <p class="text-gray-400">
+                    {{ $t(`pricing.${plan.priceDescription}`) }}
+                  </p>
                 </div>
                 <NuxtLink
                   v-if="plan.type == 0"
@@ -106,18 +108,22 @@
                   class="text-indigo-500 w-5 h-5 flex-shrink-0"
                   aria-hidden="true"
                 />
-                <span class="text-gray-600 ml-3 text-sm font-medium">{{
-                  feature
-                }}</span>
+                <span class="text-gray-600 ml-3 text-sm font-medium">
+                  {{ $t(`pricing.subscription.main-features.${feature}`) }}
+                </span>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
-        You can upgrade, downgrade, or
-        <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp;your
-        subscription anytime. No hidden charges.
+        <i18n path="pricing.announcement" for="cancel">
+          <template #cancel>
+            <NuxtLink to="/refund" class="underline">{{
+              $t("pricing.cancel")
+            }}</NuxtLink>
+          </template>
+        </i18n>
       </div>
     </div>
 
@@ -143,9 +149,9 @@
                 'text-sm font-bold',
               ]"
             >
-              {{ plan.title }}
+              {{ $t(plan.title) }}
             </h3>
-            <p class="mt-2 text-sm text-gray-500">{{ plan.description }}</p>
+            <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <NuxtLink
               v-if="plan.type == 0"
               to="/docs/install/install-with-docker"
@@ -168,7 +174,11 @@
 
           <div v-for="section in sections" :key="section.title">
             <h4 class="mt-10 text-sm font-bold text-gray-900">
-              {{ section.title }}
+              {{
+                $t(
+                  `pricing.subscription.feature-sections.${section.title}.title`
+                )
+              }}
             </h4>
 
             <div class="mt-6 relative">
@@ -200,7 +210,11 @@
                     class="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
                   >
                     <dt class="pr-4 text-sm font-medium text-gray-600">
-                      {{ feature.title }}
+                      {{
+                        $t(
+                          `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
+                        )
+                      }}
                     </dt>
                     <dd
                       class="flex items-center justify-end sm:px-4 sm:justify-center"
@@ -213,7 +227,7 @@
                             : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                        >{{ feature.tiers[index].value }}</span
+                        >{{ $t(feature.tiers[index].value) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -286,16 +300,16 @@
                     'text-sm font-bold',
                   ]"
                 >
-                  {{ plan.title }}
+                  {{ $t(plan.title) }}
                 </p>
                 <span
                   v-if="plan.label"
                   class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
-                  >{{ plan.label }}</span
+                  >{{ $t(plan.label) }}</span
                 >
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">
-                {{ plan.description }}
+                {{ $t(plan.description) }}
               </p>
               <NuxtLink
                 v-if="plan.type == 0"
@@ -321,7 +335,9 @@
 
         <div v-for="section in sections" :key="section.title">
           <h3 class="text-xl font-bold text-gray-900 text-left my-5">
-            {{ section.title }}
+            {{
+              $t(`pricing.subscription.feature-sections.${section.title}.title`)
+            }}
           </h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
@@ -351,7 +367,7 @@
                     <span class="sr-only">{{ section.title }}</span>
                   </th>
                   <th v-for="plan in plans" :key="plan.title" scope="col">
-                    <span class="sr-only">{{ plan.title }} plan</span>
+                    <span class="sr-only">{{ $t(plan.title) }} plan</span>
                   </th>
                 </tr>
               </thead>
@@ -361,7 +377,11 @@
                     scope="row"
                     class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
                   >
-                    {{ feature.title }}
+                    {{
+                      $t(
+                        `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
+                      )
+                    }}
                   </th>
                   <td
                     v-for="(tier, tierIdx) in feature.tiers"
@@ -376,7 +396,7 @@
                       <span
                         v-if="typeof tier.value === 'string'"
                         :class="['text-sm font-medium']"
-                        >{{ tier.value }}</span
+                        >{{ $t(tier.value) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -397,7 +417,7 @@
                         <QuestinIcon class="h-5 w-5" />
                         <!-- class="h-5 w-5" -->
                         <span class="tooltip whitespace-nowrap">{{
-                          tier.tooltip
+                          $t(tier.tooltip)
                         }}</span>
                       </span>
                     </span>
@@ -441,15 +461,24 @@
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      You can upgrade, downgrade, or
-      <NuxtLink to="/refund" class="underline">cancel</NuxtLink>&nbsp; your
-      subscription anytime. No hidden charges.
+      <i18n path="pricing.announcement" for="cancel">
+        <template #cancel>
+          <NuxtLink to="/refund" class="underline">{{
+            $t("pricing.cancel")
+          }}</NuxtLink>
+        </template>
+      </i18n>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, watch } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  useContext,
+  watch,
+} from "@nuxtjs/composition-api";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
 import XIcon from "../../components/XIcon.vue";
 import CheckIcon from "../../components/CheckIcon.vue";
@@ -482,13 +511,19 @@ export default defineComponent({
     XIcon,
   },
   setup() {
+    const { app } = useContext();
     const getButtonText = (plan: Plan): string => {
-      if (plan.type === PlanType.FREE) return "Deploy now";
-      if (plan.type === PlanType.ENTERPRISE) return "Contact us";
+      if (plan.type === PlanType.FREE)
+        return app.i18n.t("pricing.deploy-now") as string;
+      if (plan.type === PlanType.ENTERPRISE)
+        return app.i18n.t("pricing.contact-us") as string;
       if (plan.trialDays && plan.trialPrice) {
-        return `Start trial with $${plan.trialPrice} for ${plan.trialDays} days`;
+        return app.i18n.t("pricing.start-trial", {
+          price: plan.trialPrice,
+          days: plan.trialDays,
+        }) as string;
       }
-      return "Subscribe now";
+      return app.i18n.t("pricing.subscribe-now") as string;
     };
 
     const plans: LocalPlan[] = PLANS.map((plan) => ({

@@ -1,0 +1,169 @@
+{
+  "common": {
+    "bytebase": "Bytebase",
+    "blog": "Blog",
+    "docs": "Docs",
+    "documentation": "Documentation",
+    "demo": "Demo",
+    "live-demo": "Live demo",
+    "about": "About",
+    "changelog": "Changelog",
+    "company": "Company",
+    "pricing": "Pricing",
+    "subscribe": "Subscribe",
+    "databases": "Databases"
+  },
+  "slogan": {
+    "safer-and-faster": "Safer and Faster",
+    "mission": "Database change and version control for DBAs and Developers",
+    "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
+    "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
+  },
+  "pricing": {
+    "month": "month",
+    "per-instance": "Per instance",
+    "free-price-intro": "Up to 5",
+    "team-price-intro": "5 minimum, billed annually",
+    "enterprise-price-intro": "Customized, billed annually",
+    "cancel": "cancel",
+    "announcement": "You can upgrade, downgrade, or {cancel} anytime. No hidden charges.",
+    "deploy-now": "Deploy now",
+    "contact-us": "Contact us",
+    "start-trial": "Start trial with ${price} for {days} days",
+    "subscribe-now": "Subscribe now",
+    "subscription": {
+      "plan": {
+        "title": "Plan",
+        "try": "Try Team",
+        "free": {
+          "title": "Free",
+          "label": "",
+          "desc": "Personal project or small team, no DBA"
+        },
+        "team": {
+          "title": "Team",
+          "label": "Beta",
+          "desc": "Medium size team, has dedicated DBA or TL for engineering velocity"
+        },
+        "enterprise": {
+          "title": "Enterprise",
+          "label": "Early access",
+          "desc": "Large organization, has dedicated DBA group to manage database fleet"
+        }
+      },
+      "feature-sections": {
+        "database-management": {
+          "title": "Database Development",
+          "features": {
+            "instance-count": "Instance count",
+            "instance-upto-5": "Up to 5",
+            "instance-customized": "Customized",
+            "instance-minimum-5": "5 ~ unlimited",
+            "schema-change": "Schema and data change",
+            "migration-history": "Migration history",
+            "sql-editor": "SQL Editor",
+            "database-backup-restore": "Database backup / restore",
+            "archiving": "Archiving",
+            "sql-check": "SQL check",
+            "sql-check-basic": "Basic",
+            "sql-check-basic-tooltip": "Syntax check, connection check",
+            "sql-check-advanced": "Advanced",
+            "sql-check-advanced-tooltip": "Basic + Backward compatibility check",
+            "anomaly-detection": "Anomaly detection",
+            "anomaly-detection-basic": "Basic",
+            "anomaly-detection-basic-tooltip": "Connection failure, missing backup",
+            "anomaly-detection-advanced": "Advanced",
+            "anomaly-detection-advanced-tooltip": "Basic + Drift detection",
+            "schedule-change": "Scheduled change at specific time",
+            "review-and-backup-policy": "Review and backup policy",
+            "tenancy": "Multi-Region / Multi-Tenancy deployment"
+          }
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "features": {
+            "ui-based-sql-review": "UI based SQL review",
+            "vsc-workflow": "VCS workflow",
+            "shareable-query-link": "Shareable query link",
+            "im-integration": "IM integration",
+            "inbox-notification": "Inbox notification"
+          }
+        },
+        "admin-and-security": {
+          "title": "Admin & Security",
+          "features": {
+            "activity-log": "Activity log",
+            "rbac": "RBAC (Owner, DBA, Developer role)",
+            "3rd-party-auth": "Login with GitLab account",
+            "sync-members-from-vcs": "Sync project membership from the linked GitLab project"
+          }
+        },
+        "branding": {
+          "title": "Branding",
+          "features": {
+            "branding-logo": "Customize the logo"
+          }
+        }
+      },
+      "main-features": {
+        "community-support": "Community support",
+        "review-workflow": "Schema and data change review workflow",
+        "sql-editor": "SQL Editor",
+        "backup-restore": "Database backup / restore",
+        "im-integration": "IM integration (e.g. Slack, Discord and etc)",
+        "email-support": "Email support",
+        "everything-in-free-plan": "Everything in free plan",
+        "rbac": "Owner, DBA and Developer roles",
+        "gitlab-login": "GitLab login",
+        "sql-check-anomaly-detection": "Advanced SQL check and anomaly detection",
+        "review-and-backup-policy": "Review and backup policy",
+        "sla": "SLA support",
+        "everything-in-team-plan": "Everything in team plan",
+        "multi-tenancy": "Multi-Region / Multi-Tenancy deployment",
+        "more-to-come": "More to come..."
+      }
+    }
+  },
+  "banner": {
+    "announce-bytebase-1-0-and-our-team-plan": "Announce Bytebase 1.0 and our Team Plan",
+    "view-the-plan": "view the plan"
+  },
+  "subscribe": {
+    "get-database-insight": "Get Database Insight",
+    "learn-product-updates-and-everything-about-database": "Learn product updates and everything about database.",
+    "check-email-to-confirm-subscription": "Now check {email} to confirm the subscription.",
+    "email-address": "Email address",
+    "enter-your-email": "Enter your email"
+  },
+  "team": {
+    "meet-our-crew": "Meet our crew",
+    "roles": {
+      "community-manager": "Community Manager",
+      "engineering": "Engineering",
+      "engineering-intern": "Engineering Intern",
+      "community-intern": "Community Intern",
+      "solution-architect": "Solution Architect",
+      "product-manager": "Product Manager",
+      "special-agent": "Special Agent"
+    },
+    "backed-by-the-best": "Backed by the best",
+    "join-us": "Join us"
+  },
+  "header": {
+    "deploy-now": "Deploy now"
+  },
+  "footer": {
+    "use-cases": "Use cases",
+    "brand": "Brand",
+    "careers": "Careers",
+    "contact": "Contact",
+    "integrations": "Integrations",
+    "resources": "Resources",
+    "database-review-guide": "Database Review Guide",
+    "database-glossary": "Database Glossary",
+    "error-code": "Error Code",
+    "terms": "Terms",
+    "policy": "Policy",
+    "all-rights-reserved": "All rights reserved."
+  }
+}

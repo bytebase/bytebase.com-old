@@ -1,6 +1,5 @@
 ---
 title: Migration Types
-order: 20400
 ---
 
 # Migration Types

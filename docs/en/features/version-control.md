@@ -1,6 +1,5 @@
 ---
 title: Version Control (GitOps)
-order: 30200
 ---
 
 # Version Control (GitOps)

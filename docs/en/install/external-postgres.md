@@ -1,6 +1,5 @@
 ---
 title: Use External PostgreSQL Database
-order: 10300
 ---
 
 # Use External PostgreSQL Database

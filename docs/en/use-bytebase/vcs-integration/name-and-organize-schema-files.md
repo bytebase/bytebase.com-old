@@ -1,6 +1,5 @@
 ---
 title: Name and Organize Schema Files
-order: 40203
 ---
 
 # Name and Organize Schema Files

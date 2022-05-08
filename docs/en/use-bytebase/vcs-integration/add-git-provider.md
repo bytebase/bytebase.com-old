@@ -1,6 +1,5 @@
 ---
 title: Add Git Provider
-order: 40201
 ---
 
 # Add Git Provider

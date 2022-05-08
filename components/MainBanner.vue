@@ -3,10 +3,12 @@
     <div class="max-w-7xl mx-auto py-2 px-2 sm:px-6 lg:px-8">
       <div class="text-center sm:px-16">
         <p class="font-medium text-white">
-          <span class="inline">Announce Bytebase 1.0 and our Team Plan</span>
+          <span class="inline">{{
+            $t("banner.announce-bytebase-1-0-and-our-team-plan")
+          }}</span>
           <span class="block sm:ml-2 sm:inline-block">
             <NuxtLink to="/pricing" class="text-white font-bold underline">
-              view the plan
+              {{ $t("banner.view-the-plan") }}
               <span aria-hidden="true">&rarr;</span>
             </NuxtLink>
           </span>

@@ -1,7 +1,7 @@
 <template>
   <Badge
     :text="`${level[0].toUpperCase()}${level.slice(1).toLowerCase()}`"
-    :canRemove="false"
+    :can-remove="false"
     :theme="theme"
   />
 </template>

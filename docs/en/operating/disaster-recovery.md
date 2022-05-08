@@ -1,6 +1,5 @@
 ---
 title: Disaster Recovery
-order: 60200
 ---
 
 # Disaster Recovery

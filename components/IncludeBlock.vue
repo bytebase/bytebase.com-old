@@ -51,8 +51,7 @@ export default defineComponent({
 
     onMounted(async () => {
       try {
-        const document = (await $content(props.url, { deep: true })
-          .sortBy("order")
+        const document = (await $content(props.url)
           .limit(1)
           .fetch()) as any as ContentDocument;
 

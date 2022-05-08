@@ -33,14 +33,14 @@
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300 md:py-4 md:text-2xl md:px-8"
         @click="track('demo')"
       >
-        Live demo
+        {{ $t("common.live-demo") }}
       </a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "@nuxtjs/composition-api";
+import { computed, defineComponent, useContext } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -53,15 +53,17 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { app } = useContext();
+
     const track = (component: string) => {
       trackEvent([component, props.moduleName].join("."));
     };
 
     const actionSentence = computed(() => {
       if (props.moduleName == "main" || props.moduleName == "footer") {
-        return "Deploy now in 5 seconds";
+        return app.i18n.t("slogan.deploy-now-in-5-seconds");
       }
-      return "Deploy Bytebase in 5 seconds";
+      return app.i18n.t("slogan.deploy-bytebase-in-5-seconds");
     });
 
     return { track, actionSentence };

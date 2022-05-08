@@ -1,6 +1,5 @@
 ---
 title: Schema Change Workflow
-order: 20300
 ---
 
 # Schema Change Workflow

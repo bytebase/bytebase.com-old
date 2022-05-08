@@ -1,6 +1,5 @@
 ---
 title: Telemetry
-order: 60300
 ---
 
 # Telemetry

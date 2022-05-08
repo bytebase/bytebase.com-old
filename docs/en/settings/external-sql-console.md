@@ -1,6 +1,5 @@
 ---
 title: Link External SQL Console
-order: 50100
 ---
 
 # Link External SQL Console

@@ -1,6 +1,5 @@
 ---
 title: Archive
-order: 31100
 ---
 
 # Archive

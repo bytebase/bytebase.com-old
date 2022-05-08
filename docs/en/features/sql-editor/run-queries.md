@@ -1,6 +1,5 @@
 ---
 title: Run and EXPLAIN Query
-order: 30402
 ---
 
 # Run and EXPLAIN Query

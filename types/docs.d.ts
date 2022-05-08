@@ -10,9 +10,7 @@ interface DocumentBodyNode {
 
 interface ContentDocument extends IContentDocument {
   body: DocumentBodyNode;
-  order: number;
   description?: string;
-  isHeader?: boolean;
 }
 
 interface Document extends ContentDocument {
@@ -20,8 +18,8 @@ interface Document extends ContentDocument {
 }
 
 interface DocumentTreeNode {
+  title: string;
   path: string;
-  document: Document;
   children: DocumentTreeNode[];
   displayChildren: boolean;
 }
