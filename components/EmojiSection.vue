@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
 
 const emojiList = [
   {
@@ -84,8 +84,7 @@ const emojiList = [
 
 export default defineComponent({
   props: {},
-  setup(props) {
-    onMounted(() => {});
+  setup() {
     return { emojiList };
   },
 });

@@ -13,7 +13,7 @@
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
-            Use cases
+            {{ $t("footer.use-cases") }}
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
@@ -44,7 +44,7 @@
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
-            Databases
+            {{ $t("common.databases") }}
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
@@ -89,7 +89,7 @@
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
-            Integrations
+            {{ $t("footer.integrations") }}
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
@@ -148,7 +148,7 @@
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
-            Resources
+            {{ $t("footer.resources") }}
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
@@ -172,40 +172,36 @@
                 </svg>
               </a>
             </li>
-
             <li>
               <NuxtLink
                 to="/docs"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('blog.footer')"
-                >Documentation</NuxtLink
+                >{{ $t("common.documentation") }}</NuxtLink
               >
             </li>
-
             <li>
               <NuxtLink
                 to="/blog"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('blog.footer')"
-                >Blog</NuxtLink
+                >{{ $t("common.blog") }}</NuxtLink
               >
             </li>
-
             <li>
               <NuxtLink
                 to="/changelog"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('changelog.footer')"
-                >Changelog</NuxtLink
+                >{{ $t("common.changelog") }}</NuxtLink
               >
             </li>
-
             <li>
               <NuxtLink
                 to="/database-review-guide"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('dbreview.footer')"
-                >Database Review Guide</NuxtLink
+                >{{ $t("footer.database-review-guide") }}</NuxtLink
               >
             </li>
             <li>
@@ -213,7 +209,7 @@
                 to="/database-glossary"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('glossary.footer')"
-                >Database Glossary</NuxtLink
+                >{{ $t("footer.database-glossary") }}</NuxtLink
               >
             </li>
             <li>
@@ -221,7 +217,7 @@
                 to="/docs/error-code"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('errordoc.footer')"
-                >Error Code</NuxtLink
+                >{{ $t("footer.error-code") }}</NuxtLink
               >
             </li>
 
@@ -255,7 +251,7 @@
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
           >
-            Company
+            {{ $t("common.company") }}
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
@@ -263,7 +259,7 @@
                 to="/about"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('about.footer')"
-                >About</NuxtLink
+                >{{ $t("common.about") }}</NuxtLink
               >
             </li>
 
@@ -272,7 +268,7 @@
                 to="/brand"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('brand.footer')"
-                >Brand</NuxtLink
+                >{{ $t("footer.brand") }}</NuxtLink
               >
             </li>
 
@@ -281,7 +277,7 @@
                 to="/pricing"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('pricing.footer')"
-                >Pricing</NuxtLink
+                >{{ $t("common.pricing") }}</NuxtLink
               >
             </li>
 
@@ -290,7 +286,7 @@
                 to="/jobs"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('job.footer')"
-                >Careers</NuxtLink
+                >{{ $t("footer.careers") }}</NuxtLink
               >
             </li>
 
@@ -299,7 +295,7 @@
                 href="mailto:support@bytebase.com"
                 target="__blank"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Contact</a
+                >{{ $t("footer.contact") }}</a
               >
             </li>
           </ul>
@@ -350,17 +346,17 @@
         </a>
 
         <p class="flex items-center text-gray-500 hover:text-gray-900">
-          <NuxtLink to="/terms">Terms</NuxtLink>
+          <NuxtLink to="/terms">{{ $t("footer.terms") }}</NuxtLink>
         </p>
 
         <p class="flex items-center text-gray-500 hover:text-gray-900">
-          <NuxtLink to="/privacy">Policy</NuxtLink>
+          <NuxtLink to="/privacy">{{ $t("footer.policy") }}</NuxtLink>
         </p>
       </div>
       <div class="mt-8 lg:mt-0 md:order-1 flex flex-row items-center space-x-4">
         <img class="h-8" src="~/assets/logo-full.svg" alt="Bytebase" />
         <p class="text-center text-base text-gray-400 mt-1">
-          &copy; {{ year }} Bytebase. All rights reserved.
+          &copy; {{ year }} Bytebase. {{ $t("footer.all-rights-reserved") }}
         </p>
       </div>
     </div>

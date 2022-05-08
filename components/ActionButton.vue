@@ -3,10 +3,7 @@
     type="button"
     :disabled="disabled"
     class="block py-2 px-2.5 border border-transparent rounded-md text-center text-sm font-medium"
-    :class="[
-      disabled ? 'cursor-not-allowed' : '',
-      ...classNames,
-    ]"
+    :class="[disabled ? 'cursor-not-allowed' : '', ...classNames]"
     @click="() => $emit('click')"
   >
     <div class="flex row justify-center items-center">

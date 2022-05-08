@@ -28,10 +28,10 @@
               class="flex items-center"
             >
               <input
-                type="checkbox"
                 :id="filter.id"
-                :value="filter.id"
                 v-model="filter.checked"
+                type="checkbox"
+                :value="filter.id"
                 class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
               />
               <label
@@ -72,7 +72,7 @@
       <SchemaSystemPreview
         id="preview"
         :title="title"
-        :categoryList="categoryList"
+        :category-list="categoryList"
         class="lg:col-span-4 p-5"
         @select="(rule) => onRuleSelect(rule)"
       />

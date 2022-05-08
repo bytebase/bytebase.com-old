@@ -10,7 +10,7 @@
             id="team"
             href="#team"
             class="text-3xl font-extrabold tracking-tight sm:text-4xl hover:underline"
-            >Meet our crew</a
+            >{{ $t("team.meet-our-crew") }}</a
           >
         </div>
         <ul
@@ -20,7 +20,7 @@
           <li v-for="person in shuffleList" :key="person.name">
             <img
               class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-              :src="person.imageUrl"
+              :src="require(`~/assets/people/${person.imageUrl}`)"
               alt=""
             />
             <div class="space-y-2">
@@ -48,7 +48,7 @@
             id="backer"
             href="#backer"
             class="text-3xl font-extrabold tracking-tight sm:text-4xl hover:underline"
-            >Backed by the best</a
+            >{{ $t("team.backed-by-the-best") }}</a
           >
         </div>
         <ul
@@ -63,17 +63,8 @@
             />
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
-                <template v-if="person.name == 'You'">
-                  <NuxtLink
-                    to="/jobs#jobs"
-                    class="text-2xl font-semibold text-indigo-600 hover:text-indigo-500 hover:underline whitespace-nowrap"
-                    >{{ person.role }}🎢</NuxtLink
-                  >
-                </template>
-                <template v-else>
-                  <h3>{{ person.name }}</h3>
-                  <p class="text-indigo-600">{{ person.role }}</p>
-                </template>
+                <h3>{{ person.name }}</h3>
+                <p class="text-indigo-600">{{ person.role }}</p>
               </div>
             </div>
           </li>
@@ -84,123 +75,131 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "@nuxtjs/composition-api";
-import { shuffle } from "@/utils/index";
-
-const people = [
-  {
-    name: "Tianzhou",
-    role: "Chief Sketching Officer",
-    imageUrl: require(`~/assets/people/tianzhou.webp`),
-  },
-  {
-    name: "Danny",
-    role: "CTO",
-    imageUrl: require(`~/assets/people/danny.webp`),
-  },
-  {
-    name: "Ningjing",
-    role: "Community Manager",
-    imageUrl: require(`~/assets/people/ningjing.webp`),
-  },
-  {
-    name: "Zhe",
-    role: "Engineering Intern",
-    imageUrl: require(`~/assets/people/xingzhe.webp`),
-  },
-  {
-    name: "Zilong",
-    role: "Engineering Intern",
-    imageUrl: require(`~/assets/people/zilong.webp`),
-  },
-  {
-    name: "Ji",
-    role: "Engineer",
-    imageUrl: require(`~/assets/people/ji.webp`),
-  },
-  {
-    name: "???",
-    role: "Special Agent",
-    imageUrl: require(`~/assets/people/yaping.webp`),
-  },
-  {
-    name: "Edward",
-    role: "Engineer",
-    imageUrl: require(`~/assets/people/edward.webp`),
-  },
-  {
-    name: "Steven",
-    role: "Engineering Intern",
-    imageUrl: require(`~/assets/people/steven.webp`),
-  },
-  {
-    name: "Ray",
-    role: "Community Intern",
-    imageUrl: require(`~/assets/people/ray.webp`),
-  },
-  {
-    name: "Qiaosheng",
-    role: "Engineering Intern",
-    imageUrl: require(`~/assets/people/qiaosheng.webp`),
-  },
-  {
-    name: "Lucy",
-    role: "Community Intern",
-    imageUrl: require(`~/assets/people/lucy.webp`),
-  },
-  {
-    name: "Elon",
-    role: "Engineer",
-    imageUrl: require(`~/assets/people/elon.webp`),
-  },
-  {
-    name: "Zipeng",
-    role: "Engineering Intern",
-    imageUrl: require(`~/assets/people/zipeng.webp`),
-  },
-  {
-    name: "Junyi",
-    role: "Engineer",
-    imageUrl: require(`~/assets/people/junyi.webp`),
-  },
-  {
-    name: "Changyu",
-    role: "Solution Architect",
-    imageUrl: require(`~/assets/people/changyu.webp`),
-  },
-  {
-    name: "Candy",
-    role: "Product",
-    imageUrl: require(`~/assets/people/candy.webp`),
-  },
-];
-
-const YOU = {
-  name: "You",
-  role: "Join us",
-  imageUrl: require(`~/assets/people/wantyou.webp`),
-};
-
-const backer = [
-  {
-    name: "Matrix Partners China",
-    role: "",
-    imageUrl: "matrix.webp",
-  },
-  {
-    name: "Dongxu Huang",
-    role: "Co-Founder & CTO - PingCAP",
-    imageUrl: "dongxu.webp",
-  },
-];
+import {
+  defineComponent,
+  useContext,
+  ref,
+  onMounted,
+} from "@nuxtjs/composition-api";
+import { shuffle } from "lodash";
 
 export default defineComponent({
   setup() {
-    const shuffleList = ref(people);
+    const { app } = useContext();
+
+    const people = [
+      {
+        name: "Tianzhou",
+        role: "Chief Sketching Officer",
+        imageUrl: "tianzhou.webp",
+      },
+      {
+        name: "Danny",
+        role: "CTO",
+        imageUrl: "danny.webp",
+      },
+      {
+        name: "Ningjing",
+        role: app.i18n.t("team.roles.community-manager"),
+        imageUrl: "ningjing.webp",
+      },
+      {
+        name: "Zhe",
+        role: app.i18n.t("team.roles.engineering-intern"),
+        imageUrl: "xingzhe.webp",
+      },
+      {
+        name: "Zilong",
+        role: app.i18n.t("team.roles.engineering-intern"),
+        imageUrl: "zilong.webp",
+      },
+      {
+        name: "Ji",
+        role: app.i18n.t("team.roles.engineering"),
+        imageUrl: "ji.webp",
+      },
+      {
+        name: "???",
+        role: app.i18n.t("team.roles.special-agent"),
+        imageUrl: "yaping.webp",
+      },
+      {
+        name: "Edward",
+        role: app.i18n.t("team.roles.engineering"),
+        imageUrl: "edward.webp",
+      },
+      {
+        name: "Steven",
+        role: app.i18n.t("team.roles.engineering-intern"),
+        imageUrl: "steven.webp",
+      },
+      {
+        name: "Ray",
+        role: app.i18n.t("team.roles.community-intern"),
+        imageUrl: "ray.webp",
+      },
+      {
+        name: "Qiaosheng",
+        role: app.i18n.t("team.roles.engineering-intern"),
+        imageUrl: "qiaosheng.webp",
+      },
+      {
+        name: "Lucy",
+        role: app.i18n.t("team.roles.community-intern"),
+        imageUrl: "lucy.webp",
+      },
+      {
+        name: "Elon",
+        role: app.i18n.t("team.roles.engineering"),
+        imageUrl: "elon.webp",
+      },
+      {
+        name: "Zipeng",
+        role: app.i18n.t("team.roles.engineering-intern"),
+        imageUrl: "zipeng.webp",
+      },
+      {
+        name: "Junyi",
+        role: app.i18n.t("team.roles.engineering"),
+        imageUrl: "junyi.webp",
+      },
+      {
+        name: "Changyu",
+        role: app.i18n.t("team.roles.solution-architect"),
+        imageUrl: "changyu.webp",
+      },
+      {
+        name: "Candy",
+        role: app.i18n.t("team.roles.product-manager"),
+        imageUrl: "candy.webp",
+      },
+    ];
+
+    const YOU = {
+      name: "You",
+      role: app.i18n.t("team.join-us"),
+      imageUrl: "wantyou.webp",
+    };
+
+    const backer = [
+      {
+        name: "Matrix Partners China",
+        role: "",
+        imageUrl: "matrix.webp",
+      },
+      {
+        name: "Dongxu Huang",
+        role: "Co-Founder & CTO - PingCAP",
+        imageUrl: "dongxu.webp",
+      },
+    ];
+
+    const shuffleList = ref<any[]>([]);
+
     onMounted(() => {
-      shuffleList.value = shuffle(people);
-      shuffleList.value.push(YOU);
+      shuffleList.value = shuffle(people).concat(YOU);
     });
+
     return { shuffleList, backer };
   },
 });

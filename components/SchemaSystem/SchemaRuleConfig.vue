@@ -4,7 +4,7 @@
       <div class="flex-1 flex flex-col">
         <div class="flex mb-2 items-center space-x-2">
           <h1 class="text-base font-semibold text-gray-900">{{ rule.id }}</h1>
-          <Badge :text="rule.category" :canRemove="false" />
+          <Badge :text="rule.category" :can-remove="false" />
         </div>
         <div class="text-sm text-gray-400">
           {{ rule.description }}
@@ -26,8 +26,8 @@
               :value="level.id"
               type="radio"
               :checked="level.id === state.level"
-              @input="() => changeLevel(level.id)"
               class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+              @input="() => changeLevel(level.id)"
             />
             <label
               :for="`level-${level.id}`"

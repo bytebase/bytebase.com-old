@@ -109,7 +109,7 @@
                   aria-hidden="true"
                 />
                 <span class="text-gray-600 ml-3 text-sm font-medium">
-                  {{ $t(`subscription.main-features.${feature}`) }}
+                  {{ $t(`pricing.subscription.main-features.${feature}`) }}
                 </span>
               </li>
             </ul>
@@ -174,7 +174,11 @@
 
           <div v-for="section in sections" :key="section.title">
             <h4 class="mt-10 text-sm font-bold text-gray-900">
-              {{ $t(`subscription.feature-sections.${section.title}.title`) }}
+              {{
+                $t(
+                  `pricing.subscription.feature-sections.${section.title}.title`
+                )
+              }}
             </h4>
 
             <div class="mt-6 relative">
@@ -208,7 +212,7 @@
                     <dt class="pr-4 text-sm font-medium text-gray-600">
                       {{
                         $t(
-                          `subscription.feature-sections.${section.title}.features.${feature.title}`
+                          `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
                         )
                       }}
                     </dt>
@@ -331,7 +335,9 @@
 
         <div v-for="section in sections" :key="section.title">
           <h3 class="text-xl font-bold text-gray-900 text-left my-5">
-            {{ $t(`subscription.feature-sections.${section.title}.title`) }}
+            {{
+              $t(`pricing.subscription.feature-sections.${section.title}.title`)
+            }}
           </h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
@@ -373,7 +379,7 @@
                   >
                     {{
                       $t(
-                        `subscription.feature-sections.${section.title}.features.${feature.title}`
+                        `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
                       )
                     }}
                   </th>

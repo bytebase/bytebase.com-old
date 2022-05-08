@@ -98,14 +98,13 @@
               target="_blank"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
               @click="track('demo.header')"
+              >{{ $t("common.demo") }}</a
             >
-              Demo
-            </a>
             <NuxtLink
               to="/docs/install/install-with-docker"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
-              >Deploy now</NuxtLink
+              >{{ $t("header.deploy-now") }}</NuxtLink
             >
           </div>
         </div>
