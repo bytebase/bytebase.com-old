@@ -176,6 +176,7 @@
   "team": {
     "meet-our-crew": "Meet our crew",
     "roles": {
+      "community": "Community",
       "community-manager": "Community Manager",
       "engineering": "Engineering",
       "engineering-intern": "Engineering Intern",
