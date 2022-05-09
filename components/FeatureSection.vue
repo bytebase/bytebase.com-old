@@ -31,12 +31,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              SQL Review
+              {{ $t("features.sql-review.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              A dedicated review workflow and UI for Developers and DBAs to
-              collaborate on schema changes. Assisted by built-in advisor such
-              as backward compatibility checks.
+              {{ $t("features.sql-review.description") }}
             </p>
           </div>
         </div>
@@ -66,11 +64,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Database-as-Code
+              {{ $t("features.database-as-code.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Integrate with VCS hosting the migration scripts. Migration
-              pipeline is triggered on observing new script push event.
+              {{ $t("features.database-as-code.description") }}
             </p>
           </div>
         </div>
@@ -100,11 +97,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Streamlined Deployment
+              {{ $t("features.streamlined-deployment.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Support multi-tenant (M), multi-environment (N) schema change in a
-              single M*N change matrix pipeline.
+              {{ $t("features.streamlined-deployment.description") }}
             </p>
           </div>
         </div>
@@ -134,10 +130,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              SQL Editor
+              {{ $t("features.sql-editor.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Easy-to-use query interface to SELECT database records.
+              {{ $t("features.sql-editor.description") }}
             </p>
           </div>
         </div>
@@ -167,11 +163,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Migration History
+              {{ $t("features.migration-history.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Record the full migration history with side-by-side diff
-              comparison between versions.
+              {{ $t("features.migration-history.description") }}
             </p>
           </div>
         </div>
@@ -201,11 +196,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Anomaly Center
+              {{ $t("features.anomaly-center.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Periodically scan all managed instances and databases and provide
-              user a holistic view to see all anomalies.
+              {{ $t("features.anomaly-center.description") }}
             </p>
           </div>
         </div>
@@ -235,11 +229,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Drift Detection
+              {{ $t("features.drift-detection.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Automatically detect schema drift by comparing the recorded schema
-              and actual schema. Catch any unexpected schema changes.
+              {{ $t("features.anomaly-center.description") }}
             </p>
           </div>
         </div>
@@ -269,12 +262,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Backup and Restore
+              {{ $t("features.backup-and-restore.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Per-database automatic and manual backup. Environment specific
-              backup schedule policy. Restore to new database with the entire
-              restored migration history chain.
+              {{ $t("features.backup-and-restore.description") }}
             </p>
           </div>
         </div>
@@ -304,11 +295,10 @@
               </span>
             </div>
             <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-              Role-based Access Control
+              {{ $t("features.role-based-access-control.title") }}
             </h3>
             <p class="mt-5 text-base text-gray-500">
-              Two role set. Owner, DBA, Developer for workspace. Owner,
-              Developer for project.
+              {{ $t("features.role-based-access-control.description") }}
             </p>
           </div>
         </div>

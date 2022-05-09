@@ -124,6 +124,44 @@
       }
     }
   },
+  "features": {
+    "sql-review": {
+      "title": "SQL 审查",
+      "description": "一个专门的审查工作流程和 UI，供开发人员和 DBA 协作处理模式更改。 由内置顾问辅助，例如向后兼容性检查。"
+    },
+    "database-as-code": {
+      "title": "Database-as-Code",
+      "description": "与托管迁移脚本的 VCS 集成，在观察到新的脚本推送事件时触发迁移管道。"
+    },
+    "streamlined-deployment": {
+      "title": "Streamlined 部署",
+      "description": "在单个 M*N 更改矩阵管道中支持多租户 (M)、多环境 (N) 模式更改。"
+    },
+    "sql-editor": {
+      "title": "SQL 编辑器",
+      "description": "易于使用的界面来查询数据库记录。"
+    },
+    "migration-history": {
+      "title": "迁移历史",
+      "description": "通过版本之间的并排差异比较记录完整的迁移历史记录。"
+    },
+    "anomaly-center": {
+      "title": "异常中心",
+      "description": "定期扫描所有托管实例和数据库，并为用户提供整体视图以查看所有异常情况。"
+    },
+    "drift-detection": {
+      "title": "Drift 检测",
+      "description": "通过比较记录的模式和实际的模式来自动检测 schema drift，捕获任何意外的架构更改。"
+    },
+    "backup-and-restore": {
+      "title": "数据的备份与还原",
+      "description": "每个数据库的自动和手动备份，环境特定的备份计划策略。使用整个恢复的迁移历史链恢复到新数据库。"
+    },
+    "role-based-access-control": {
+      "title": "基于角色的访问控制",
+      "description": "两个角色集。所有者、DBA、开发人员用于工作区管理。所有者、开发人员用于项目管理。"
+    }
+  },
   "banner": {
     "announce-bytebase-1-0-and-our-team-plan": "宣布 Bytebase 1.0 和我们的团队版",
     "view-the-plan": "查看计划"
