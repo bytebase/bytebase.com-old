@@ -203,5 +203,104 @@
     "terms": "条款",
     "policy": "政策",
     "all-rights-reserved": "版权所有。"
+  },
+  "index-page": {
+    "main-slogan": {
+      "database-change": "数据库变更",
+      "and-version-control": "和版本管理",
+      "for": "专为",
+      "teams": "团队",
+      "bytebase-offers-a-web-based-collaboration-workspace-to-help": "Bytebase 提供了一个基于 Web 的协作工作空间来帮助",
+      "DBAs": "DBA",
+      "and": "以及",
+      "developers": "开发者",
+      "manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML": "管理应用程序数据库模式 (DDL) 和数据 (DML) 的生命周期。"
+    },
+    "features": {
+      "database-migration": {
+        "slogan": "更安全、更快速的数据库迁移 - DDL、DML",
+        "industry-first-database": "行业第一的数据库",
+        "devops": "DevOps",
+        "solution-for-DBA-&-Developer": "解决方案为 DBA 和开发人员",
+        "collaboration": "协同工作"
+      },
+      "sql-review-and-version-control": {
+        "title": "SQL 审查和版本控制",
+        "description": "缓解应用程序开发周期中最紧张和最危险的变更过程。 Bytebase 支持 2 个最典型的模式更改工作流程。 团队可以选择最适合的。"
+      },
+      "ui-workflow": {
+        "title": "UI 工作流",
+        "description": "经典的 SQL Review 工作流程，开发人员直接从 Bytebase 提交 SQL 审查工单并等待分配的 DBA 或同行开发人员进行审查。 Bytebase 在审核通过后应用 SQL 更改。"
+      },
+      "version-control-workflow-gitops": {
+        "title": "版本控制工作流 #GitOps",
+        "description": "数据库迁移脚本存储在 git 存储库中。 要进行架构更改，开发人员将创建一个迁移脚本并在相应的 VCS（例如 GitLab）中提交以供审核。 在脚本被批准并合并到配置的分支后，Bytebase 将自动启动任务以应用新的架构更改。",
+        "see-guide": "查看指南"
+      },
+      "all-in-one-sql-editor": {
+        "title": "SQL Editor",
+        "description": "检查记录、探索架构、共享 SQL 脚本等。",
+        "features": {
+          "explore-the-schema": {
+            "title": "查询 schema",
+            "description": "查询由项目级访问控制保护的数据库记录和模式。"
+          },
+          "smooth-query-editing-experience": {
+            "title": "流畅的 query 编辑器",
+            "description": "自动完成建议、SQL 格式、快捷方式等。"
+          },
+          "never-miss-your-work": {
+            "title": "数据持久记录",
+            "description": "保存您最喜欢的工作表并自动记录执行历史。"
+          },
+          "share-sheet-with-teammates": {
+            "title": "与团队分享工作表",
+            "description": "与您的同事共享工作表链接，并具有可配置的访问级别。"
+          }
+        }
+      }
+    },
+    "a-complete-rethink-to-deliver-experience": {
+      "title": "彻底重新思考交付",
+      "experience": "经验",
+      "description": "从数据建模到技术堆栈、系统架构，再到最终的用户界面，Bytebase 从头开始设计，旨在为 DBA 和开发人员提供变革性的用户体验。"
+    },
+    "modern-collaborative-dev-tool": {
+      "title": "现代协作开发工具",
+      "bytebase-aspires-to-tools-like": "Bytebase 参考这些工具",
+      "description": "我们希望成为开发人员和 DBA 管理数据库模式的最有利工具。",
+      "features": {
+        "plug-and-play": {
+          "title": "即插即用",
+          "description": "Bytebase 提供了一个全面的 Web 控制台，需要零配置和外部依赖。 开发人员和 DBA 可以立即专注于他们的数据库任务。"
+        },
+        "usability": {
+          "title": "可用性",
+          "description": "作为管理应用程序最关键资产——事务数据库模式的专业工具，Bytebase 深思熟虑以呈现相关信息，设计适当的人体工程学。 进行模式更改总是很可怕，我们希望消除",
+          "confusing-interface": "混乱的界面"
+        },
+        "extensibility": {
+          "title": "可扩展性",
+          "description": "作为基础设施工具包之一，Bytebase 将提供与现有 IM、CI/CD、问题跟踪、监控、登录系统集成的钩子。"
+        }
+      }
+    },
+    "single-binary-with-curated-tech-stack": {
+      "title": "具有精选技术栈的单个二进制文件",
+      "the-entire-app-is-bundled-in": "整个应用程序捆绑在",
+      "a-single-binary": "单个二进制文件",
+      "and-started-via": "并通过",
+      "bytebase": "./bytebase",
+      "description": "作为专业工具，Bytebase 力求务实。 而且由于 Bytebase 是开源的，它偏爱简单的技术，并且自以为是地提供易于学习、使用和构建产品的可访问和有凝聚力的体验。 我们不希望人们浪费时间弄清楚如何部署或争论更好的编码风格。",
+      "tech-stacks": {
+        "vue-feature": "是一个渐进的框架，并且",
+        "tailwindcss-feature": "是一个实用程序优先的 CSS 框架。",
+        "Together with the build ": "连同构建工具",
+        "and": "与",
+        "typescript-feature": "提供了显着改进的前端开发体验。",
+        "golang-feature": "的静态链接 + 嵌入允许 Bytebase 提供带有单行命令的二进制文件以启动前端和后端，而无需额外的依赖（无 docker、docker-compose、kubernetes）。 而且我们永远不需要辩论编码风格。",
+        "postgresql-feature": "是业界领先的多模型关系数据库。 除了典型的事务性工作负载，PostgreSQL 还可以处理分析、地理空间、时间序列、全文搜索等。这使得 Bytebase 只需保留一个数据库系统即可满足各种需求。"
+      }
+    }
   }
 }

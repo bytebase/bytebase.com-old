@@ -203,5 +203,104 @@
     "terms": "Terms",
     "policy": "Policy",
     "all-rights-reserved": "All rights reserved."
+  },
+  "index-page": {
+    "main-slogan": {
+      "database-change": "Database Change",
+      "and-version-control": "and Version Control",
+      "for": "for",
+      "teams": "Teams",
+      "bytebase-offers-a-web-based-collaboration-workspace-to-help": "Bytebase offers a web-based collaboration workspace to help",
+      "DBAs": "DBAs",
+      "and": "and",
+      "developers": "Developers",
+      "manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML": "manage the lifecycle of application database schemas (DDL) and data (DML)."
+    },
+    "features": {
+      "database-migration": {
+        "slogan": "Safer and faster database migration - DDL and DML",
+        "industry-first-database": "Industry first database",
+        "devops": "DevOps",
+        "solution-for-DBA-&-Developer": "solution for DBA & Developer",
+        "collaboration": "collaboration"
+      },
+      "sql-review-and-version-control": {
+        "title": "SQL review and version control",
+        "description": "Ease the most stressful and dangerous change process in the application development cycle. Bytebase supports 2 most typical schema change workflow. Team can choose whatever fits the best."
+      },
+      "ui-workflow": {
+        "title": "UI workflow",
+        "description": "Classic SQL Review workflow where the developer submits a SQL review ticket directly from Bytebase and waits for the assigned DBA or peer developer to review. Bytebase applies the SQL change after review approved."
+      },
+      "version-control-workflow-gitops": {
+        "title": "Version control workflow #GitOps",
+        "description": "Database migration scripts are stored in a git repository. To make schema changes, a developer would create a migration script and submit for review in the corresponding VCS such as GitLab. After the script is approved and merged into the configured branch, Bytebase will automatically kicks off the task to apply the new schema change.",
+        "see-guide": "See Guide"
+      },
+      "all-in-one-sql-editor": {
+        "title": "All-in-one SQL Editor",
+        "description": "Inspect records, explore schema, sharing SQL scripts, and more.",
+        "features": {
+          "explore-the-schema": {
+            "title": "Explore the Schema",
+            "description": "Explore the database record and schema guarded by the project-level access control."
+          },
+          "smooth-query-editing-experience": {
+            "title": "Smooth query editing experience",
+            "description": "Autocomplete suggestions, SQL format, shortcuts, and more."
+          },
+          "never-miss-your-work": {
+            "title": "Never miss your work",
+            "description": "Save your favorite sheets and auto-record the execution history."
+          },
+          "share-sheet-with-teammates": {
+            "title": "Share sheet with teammates",
+            "description": "Share the sheet link with your teammates, with configurable access levels."
+          }
+        }
+      }
+    },
+    "a-complete-rethink-to-deliver-experience": {
+      "title": "A complete rethink to deliver",
+      "experience": "experience",
+      "description": "From the data modeling, to the tech stack, system architecture and then the final user interface, Bytebase is engineered from the ground up to deliver a transforming user experience to the DBAs and Developers."
+    },
+    "modern-collaborative-dev-tool": {
+      "title": "Modern collaborative dev tool",
+      "bytebase-aspires-to-tools-like": "Bytebase aspires to tools like",
+      "description": "We want to be the most favorable tool among Developers and DBAs for managing database schemas.",
+      "features": {
+        "plug-and-play": {
+          "title": "Plug-and-Play",
+          "description": "Bytebase provides a comprehensive web console requiring zero config and external dependency. Developers and DBAs can focus on their database tasks right away."
+        },
+        "usability": {
+          "title": "Usability",
+          "description": "As a professional tool for managing application's most critical asset - transactional database schema, Bytebase thinks deeply to surface the relevant info, design the proper ergonomics. Conducting schema changes is always scary, we want to eliminate the risk of misfire caused by the",
+          "confusing-interface": "confusing interface"
+        },
+        "extensibility": {
+          "title": "Extensibility",
+          "description": "Being one of the infrastructure toolkit, Bytebase will provide hooks to integrate with existing IM, CI/CD, issue tracking, monitoring, login systems."
+        }
+      }
+    },
+    "single-binary-with-curated-tech-stack": {
+      "title": "Single binary with curated tech stack",
+      "the-entire-app-is-bundled-in": "The entire app is bundled in",
+      "a-single-binary": "a single binary",
+      "and-started-via": "and started via",
+      "bytebase": "./bytebase",
+      "description": "As a professional tool, Bytebase tries to be pragmatic. And because Bytebase is open sourced, it favors technologies with simplicity and being opinionated to deliver an accessible and cohesive experience to easily learn, use and build the product. We don't want people to waste time figuring out how to deploy or arguing the better coding styles.",
+      "tech-stacks": {
+        "vue-feature": "is a progressive framework and",
+        "tailwindcss-feature.": "is a utility-first CSS framework.",
+        "Together with the build ": "Together with the build tool",
+        "and": "and",
+        "typescript-feature": "they offer a significantly improved frontend development experience.",
+        "golang-feature": "'s static linking + embedding allows Bytebase to deliver a binary with single-line command to launch both the frontend and backend without requiring extra dependency (no docker, docker-compose, kubernetes). And we never need to debate the coding style.",
+        "postgresql-feature": "is the industry leading multi-model relational database. In addition to the typical transactional workload, PostgreSQL can also handle analytical, geospatial, time series, full text search and etc. This allows Bytebase to only keep a single database system to fulfill all sorts of requirements."
+      }
+    }
   }
 }
