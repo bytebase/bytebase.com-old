@@ -173,6 +173,11 @@ export default defineComponent({
         role: app.i18n.t("team.roles.product-manager"),
         imageUrl: "candy.webp",
       },
+      {
+        name: "Mila",
+        role: app.i18n.t("team.roles.community"),
+        imageUrl: "mila.webp",
+      },
     ];
 
     const YOU = {
