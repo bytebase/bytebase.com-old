@@ -13,7 +13,10 @@
       <!-- root node -->
       <div
         class="pl-3 mt-3 pr-1 w-full flex flex-row justify-between items-start"
-        @click="handleLinkClick"
+        @click="
+          node.displayChildren = !node.displayChildren;
+          handleLinkClick();
+        "
       >
         <span
           v-if="!node.path"
