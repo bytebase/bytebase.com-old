@@ -175,7 +175,7 @@ export default defineComponent({
       },
       {
         name: "Mila",
-        role: app.i18n.t("team.roles.community"),
+        role: "Community",
         imageUrl: "mila.webp",
       },
     ];
