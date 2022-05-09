@@ -124,6 +124,44 @@
       }
     }
   },
+  "features": {
+    "sql-review": {
+      "title": "SQL Review",
+      "description": "A dedicated review workflow and UI for Developers and DBAs to collaborate on schema changes. Assisted by built-in advisor such as backward compatibility checks."
+    },
+    "database-as-code": {
+      "title": "Database-as-Code",
+      "description": "Integrate with VCS hosting the migration scripts. Migration pipeline is triggered on observing new script push event."
+    },
+    "streamlined-deployment": {
+      "title": "Streamlined Deployment",
+      "description": "Support multi-tenant (M), multi-environment (N) schema change in a single M*N change matrix pipeline."
+    },
+    "sql-editor": {
+      "title": "SQL Editor",
+      "description": "Easy-to-use query interface to SELECT database records."
+    },
+    "migration-history": {
+      "title": "Migration History",
+      "description": "Record the full migration history with side-by-side diff comparison between versions."
+    },
+    "anomaly-center": {
+      "title": "Anomaly Center",
+      "description": "Periodically scan all managed instances and databases and provide user a holistic view to see all anomalies."
+    },
+    "drift-detection": {
+      "title": "Drift Detection",
+      "description": "Automatically detect schema drift by comparing the recorded schema and actual schema. Catch any unexpected schema changes."
+    },
+    "backup-and-restore": {
+      "title": "Backup and Restore",
+      "description": "Per-database automatic and manual backup. Environment specific backup schedule policy. Restore to new database with the entire restored migration history chain."
+    },
+    "role-based-access-control": {
+      "title": "Role-based Access Control",
+      "description": "Two role set. Owner, DBA, Developer for workspace. Owner, Developer for project."
+    }
+  },
   "banner": {
     "announce-bytebase-1-0-and-our-team-plan": "Announce Bytebase 1.0 and our Team Plan",
     "view-the-plan": "view the plan"
