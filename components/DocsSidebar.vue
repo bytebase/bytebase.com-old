@@ -11,19 +11,34 @@
       class="w-full flex flex-col justify-start items-start"
     >
       <!-- root node -->
-      <div class="pl-3 w-full" @click="handleLinkClick">
+      <div
+        class="pl-3 mt-3 pr-1 w-full flex flex-row justify-between items-start"
+        @click="handleLinkClick"
+      >
         <span
-          v-if="node.path === undefined"
-          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          v-if="!node.path"
+          class="pl-3 pr-1 py-2 block text-gray-600 font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
           >{{ node.title }}</span
         >
         <nuxt-link
           v-else
           :to="localePath(`/docs${node.path}`)"
-          class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-600 mt-4 font-bold w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+          class="pl-3 pr-1 py-2 text-gray-600 flex-grow font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
         >
           <span>{{ node.title }}</span>
         </nuxt-link>
+        <span
+          v-if="node.children.length !== 0"
+          class="flex-shrink-0 mr-4 py-2 pt-3 cursor-pointer"
+          @click.prevent.stop="node.displayChildren = !node.displayChildren"
+        >
+          <img
+            class="relative w-4 h-auto transition-all opacity-60"
+            :class="node.displayChildren ? 'rotate-90-arrow' : ''"
+            src="~/assets/svg/chevron-right.svg"
+            alt="toggle"
+          />
+        </span>
       </div>
       <div
         v-for="subnode in node.children"
@@ -116,7 +131,7 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
         title: document.title,
         path: document.path,
         children: [],
-        displayChildren: true,
+        displayChildren: false,
       });
     } else if (document.level === 2) {
       const parentNode = last(documentTreeRoot.children);
@@ -200,9 +215,14 @@ export default defineComponent({
           for (const childNode of rootNode.children) {
             for (const leafNode of childNode.children) {
               if (pathname.includes(`/docs${leafNode.path}`)) {
+                rootNode.displayChildren = true;
                 childNode.displayChildren = true;
                 break;
               }
+            }
+            if (pathname.includes(`/docs${childNode.path}`)) {
+              rootNode.displayChildren = true;
+              break;
             }
           }
         }
