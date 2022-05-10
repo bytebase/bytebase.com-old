@@ -6,7 +6,7 @@
     >
       <nuxt-link
         class="w-full h-auto flex flex-col justify-center items-center hover:opacity-80 lg:pl-8"
-        :to="{ path: `blog/${latestFeaturedPost.slug}` }"
+        :to="localePath(`/blog/${latestFeaturedPost.slug}`)"
       >
         <img
           class="w-full h-auto object-cover lg:rounded"
@@ -28,7 +28,7 @@
         </div>
         <nuxt-link
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
-          :to="{ path: `blog/${latestFeaturedPost.slug}` }"
+          :to="localePath(`/blog/${latestFeaturedPost.slug}`)"
         >
           <p class="mt-4 text-6xl font-semibold text-gray-900">
             {{ latestFeaturedPost.title }}
@@ -64,7 +64,7 @@
         v-for="(post, index) in recentFeaturedPosts"
         :key="index"
         class="w-full py-2 flex flex-col justify-start items-center hover:opacity-80"
-        :to="{ path: `blog/${post.slug}` }"
+        :to="localePath(`/blog/${post.slug}`)"
       >
         <div class="inline-flex">
           <span
@@ -115,7 +115,7 @@
         :key="index"
         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
       >
-        <nuxt-link :to="localePath(`blog/${post.slug}`)" class="flex-shrink-0">
+        <nuxt-link :to="localePath(`/blog/${post.slug}`)" class="flex-shrink-0">
           <img
             class="h-48 w-full object-cover"
             :src="post.feature_image"
@@ -136,7 +136,7 @@
               >
             </div>
             <nuxt-link
-              :to="localePath(`blog/${post.slug}`)"
+              :to="localePath(`/blog/${post.slug}`)"
               class="block mt-2 no-underline"
             >
               <p class="text-xl font-semibold text-gray-900">
