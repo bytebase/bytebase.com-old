@@ -22,8 +22,8 @@
                 <p>
                   We value crafts and we care what you have built in the past
                   instead of where you have worked and studied.
-                  <NuxtLink
-                    to="/about#team"
+                  <nuxt-link
+                    :to="localePath('/about#team')"
                     class="text-blue-600"
                     style="
                       box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
@@ -32,7 +32,7 @@
                     @click.native="track('about.job')"
                   >
                     Our team
-                  </NuxtLink>
+                  </nuxt-link>
                   have built products managing one of the world largest database
                   fleets, supporting one of the largest developer organizations.
                 </p>

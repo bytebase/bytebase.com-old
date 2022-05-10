@@ -28,8 +28,8 @@
               :key="index"
               class="flex flex-col col-span-3 overflow-hidden"
             >
-              <NuxtLink
-                :to="{ path: `changelog/${post.slug}` }"
+              <nuxt-link
+                :to="localePath(`changelog/${post.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
                 <div
@@ -38,7 +38,7 @@
                   <h1>{{ post.title }}</h1>
                 </div>
                 <span
-                  class="pt-4 flex flex-row items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
+                  class="pt-4 flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
                 >
                   <div class="ml-2 flex space-x-1 text-gray-500 items-center">
                     <time :datetime="post.published_at">
@@ -62,10 +62,10 @@
                     </template>
                   </div>
                 </span>
-              </NuxtLink>
-              <NuxtLink
+              </nuxt-link>
+              <nuxt-link
                 v-if="post.feature_image"
-                :to="{ path: `changelog/${post.slug}` }"
+                :to="localePath(`changelog/${post.slug}`)"
                 class="flex-shrink-0 py-6"
               >
                 <div class="flex justify-center items-center">
@@ -75,7 +75,7 @@
                     :alt="post.feature_image_alt"
                   />
                 </div>
-              </NuxtLink>
+              </nuxt-link>
               <div
                 class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
                 v-html="post.html"
@@ -85,10 +85,10 @@
         </div>
       </div>
       <div v-if="!lastPage" class="py-12">
-        <NuxtLink
-          :to="{ path: `changelog?page=${page + 1}` }"
+        <nuxt-link
+          :to="localePath(`changelog?page=${page + 1}`)"
           class="text-xl text-indigo-600"
-          >Next page</NuxtLink
+          >Next page</nuxt-link
         >
       </div>
     </div>

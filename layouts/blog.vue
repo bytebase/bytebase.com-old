@@ -6,18 +6,18 @@
       <div
         class="max-w-full w-full mx-auto text-base px-4 sm:px-6 pb-2 pt-2 lg:pb-4 flex flex-wrap sm:grid sm:grid-flow-col justify-start lg:justify-center sm:space-x-4 lg:space-x-8"
       >
-        <NuxtLink to="/" class="nav-link">
+        <nuxt-link :to="localePath('/')" class="nav-link">
           <span>Home</span>
-        </NuxtLink>
-        <NuxtLink to="/database-glossary" class="nav-link">
+        </nuxt-link>
+        <nuxt-link :to="localePath('/database-glossary')" class="nav-link">
           <span>Database Glossary</span>
-        </NuxtLink>
-        <NuxtLink to="/database-review-guide" class="nav-link">
+        </nuxt-link>
+        <nuxt-link :to="localePath('/database-review-guide')" class="nav-link">
           <span>Database Review Guide</span>
-        </NuxtLink>
-        <NuxtLink to="/brand" class="nav-link">
+        </nuxt-link>
+        <nuxt-link :to="localePath('/brand')" class="nav-link">
           <span>Brand</span>
-        </NuxtLink>
+        </nuxt-link>
       </div>
     </div>
     <div

@@ -58,11 +58,11 @@
           >
             Demo
           </a>
-          <NuxtLink
-            to="/docs/install/install-with-docker"
+          <nuxt-link
+            :to="localePath('/docs/install/install-with-docker')"
             class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
-            >Deploy now</NuxtLink
+            >Deploy now</nuxt-link
           >
         </div>
       </div>
