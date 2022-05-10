@@ -12,7 +12,7 @@
     >
       <!-- root node -->
       <div
-        class="pl-3 mt-3 pr-1 w-full flex flex-row justify-between items-start"
+        class="pl-3 mt-3 w-full flex flex-row justify-between cursor-pointer items-start"
         @click="
           node.displayChildren = !node.displayChildren;
           handleLinkClick();
@@ -32,7 +32,7 @@
         </nuxt-link>
         <span
           v-if="node.children.length !== 0"
-          class="flex-shrink-0 mr-4 py-2 pt-3 cursor-pointer"
+          class="flex-shrink-0 mr-5 py-2 pt-3 cursor-pointer select-none"
           @click.prevent.stop="node.displayChildren = !node.displayChildren"
         >
           <img
