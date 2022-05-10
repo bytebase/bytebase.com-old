@@ -115,13 +115,13 @@
         :key="index"
         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
       >
-        <NuxtLink :to="{ path: `blog/${post.slug}` }" class="flex-shrink-0">
+        <nuxt-link :to="localePath(`blog/${post.slug}`)" class="flex-shrink-0">
           <img
             class="h-48 w-full object-cover"
             :src="post.feature_image"
             :alt="post.feature_image_alt"
           />
-        </NuxtLink>
+        </nuxt-link>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <div
@@ -135,14 +135,17 @@
                 >{{ tag.name }}</span
               >
             </div>
-            <NuxtLink :to="{ path: `blog/${post.slug}` }" class="block mt-2">
+            <nuxt-link
+              :to="localePath(`blog/${post.slug}`)"
+              class="block mt-2 no-underline"
+            >
               <p class="text-xl font-semibold text-gray-900">
                 {{ post.title }}
               </p>
               <p class="mt-3 text-base text-gray-500">
                 {{ post.excerpt }}
               </p>
-            </NuxtLink>
+            </nuxt-link>
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">

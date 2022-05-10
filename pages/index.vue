@@ -13,16 +13,18 @@
               >
                 <span
                   class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                  >Safer and Faster</span
+                  >{{ $t("slogan.safer-and-faster") }}</span
                 >
                 <span class="block">
-                  Database Change
-                  <span class="xl:block"> and Version Control </span>
+                  {{ $t("index-page.main-slogan.database-change") }}
                   <span class="xl:block">
-                    for
+                    {{ $t("index-page.main-slogan.and-version-control") }}
+                  </span>
+                  <span class="xl:block">
+                    {{ $t("index-page.main-slogan.for") }}
                     <span
                       class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                      >Teams</span
+                      >{{ $t("index-page.main-slogan.teams") }}</span
                     >
                   </span>
                 </span>
@@ -30,26 +32,33 @@
               <h2
                 class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl xl:mx-0"
               >
-                Bytebase offers a web-based collaboration workspace to help
+                {{
+                  $t(
+                    "index-page.main-slogan.bytebase-offers-a-web-based-collaboration-workspace-to-help"
+                  )
+                }}
                 <span
                   class="text-blue-600"
                   style="
                     box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                       rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                   "
-                  >DBAs</span
+                  >{{ $t("index-page.main-slogan.DBAs") }}</span
                 >
-                and
+                {{ $t("index-page.main-slogan.and") }}
                 <span
                   class="text-blue-600"
                   style="
                     box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                       rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                   "
-                  >Developers</span
+                  >{{ $t("index-page.main-slogan.developers") }}</span
                 >
-                manage the lifecycle of application database schemas (DDL) and
-                data (DML).
+                {{
+                  $t(
+                    "index-page.main-slogan.manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML"
+                  )
+                }}
               </h2>
               <div class="flex mt-8 justify-center xl:justify-start">
                 <DatabaseBar />
@@ -97,20 +106,28 @@
         <h2
           class="text-base sm:text-2xl font-semibold tracking-wider text-indigo-600 uppercase"
         >
-          Safer and faster database migration - DDL and DML
+          {{ $t("index-page.features.database-migration.slogan") }}
         </h2>
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          Industry first database
+          {{
+            $t("index-page.features.database-migration.industry-first-database")
+          }}
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
-            >DevOps</span
+            >{{ $t("index-page.features.database-migration.devops") }}</span
           >
-          solution for DBA & Developer
+          {{
+            $t(
+              "index-page.features.database-migration.solution-for-DBA-&-Developer"
+            )
+          }}
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >collaboration</span
+            >{{
+              $t("index-page.features.database-migration.collaboration")
+            }}</span
           >
         </h2>
         <div class="mt-12">
@@ -124,12 +141,12 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
-          SQL review and version control
+          {{ $t("index-page.features.sql-review-and-version-control.title") }}
         </h2>
         <h3 class="mt-4 max-w-3xl text-left text-xl text-gray-500 lg:mx-auto">
-          Ease the most stressful and dangerous change process in the
-          application development cycle. Bytebase supports 2 most typical schema
-          change workflow. Team can choose whatever fits the best.
+          {{
+            $t("index-page.features.sql-review-and-version-control.description")
+          }}
         </h3>
       </div>
     </div>
@@ -168,13 +185,10 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  UI workflow
+                  {{ $t("index-page.features.ui-workflow.title") }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Classic SQL Review workflow where the developer submits a SQL
-                  review ticket directly from Bytebase and waits for the
-                  assigned DBA or peer developer to review. Bytebase applies the
-                  SQL change after review approved.
+                  {{ $t("index-page.features.ui-workflow.description") }}
                 </h3>
               </div>
             </div>
@@ -224,22 +238,29 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Version control workflow #GitOps
+                  {{
+                    $t(
+                      "index-page.features.version-control-workflow-gitops.title"
+                    )
+                  }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Database migration scripts are stored in a git repository. To
-                  make schema changes, a developer would create a migration
-                  script and submit for review in the corresponding VCS such as
-                  GitLab. After the script is approved and merged into the
-                  configured branch, Bytebase will automatically kicks off the
-                  task to apply the new schema change.
+                  {{
+                    $t(
+                      "index-page.features.version-control-workflow-gitops.description"
+                    )
+                  }}
                 </h3>
                 <div class="mt-6">
-                  <NuxtLink
-                    to="/docs/features/version-control"
+                  <nuxt-link
+                    :to="localePath('/docs/features/version-control')"
                     class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                     @click="track('docs.version-control')"
-                    >See Guide</NuxtLink
+                    >{{
+                      $t(
+                        "index-page.features.version-control-workflow-gitops.see-guide"
+                      )
+                    }}</nuxt-link
                   >
                 </div>
               </div>
@@ -266,10 +287,10 @@
         <h2
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
-          All-in-one SQL Editor
+          {{ $t("index-page.features.all-in-one-sql-editor.title") }}
         </h2>
         <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
-          Inspect records, explore schema, sharing SQL scripts, and more.
+          {{ $t("index-page.features.all-in-one-sql-editor.description") }}
         </h3>
       </div>
       <div class="py-16">
@@ -320,11 +341,18 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Explore the Schema
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.explore-the-schema.title"
+                    )
+                  }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Explore the database record and schema guarded by the
-                  project-level access control.
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.explore-the-schema.description"
+                    )
+                  }}
                 </h3>
               </div>
             </div>
@@ -380,10 +408,18 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Smooth query editing experience
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.smooth-query-editing-experience.title"
+                    )
+                  }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Autocomplete suggestions, SQL format, shortcuts, and more.
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.smooth-query-editing-experience.description"
+                    )
+                  }}
                 </h3>
               </div>
             </div>
@@ -444,11 +480,18 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Never miss your work
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.never-miss-your-work.title"
+                    )
+                  }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Save your favorite sheets and auto-record the execution
-                  history.
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.never-miss-your-work.description"
+                    )
+                  }}
                 </h3>
               </div>
             </div>
@@ -509,11 +552,18 @@
                 <h2
                   class="text-3xl font-extrabold tracking-tight text-gray-900"
                 >
-                  Share sheet with teammates
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.share-sheet-with-teammates.title"
+                    )
+                  }}
                 </h2>
                 <h3 class="mt-4 text-lg text-gray-500">
-                  Share the sheet link with your teammates, with configurable
-                  access levels.
+                  {{
+                    $t(
+                      "index-page.features.all-in-one-sql-editor.features.share-sheet-with-teammates.description"
+                    )
+                  }}
                 </h3>
               </div>
             </div>
@@ -543,19 +593,26 @@
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
           <h2
-            class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8"
+            class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-center text-gray-900 tracking-tight mb-8"
           >
-            A complete rethink to deliver
+            {{
+              $t("index-page.a-complete-rethink-to-deliver-experience.title")
+            }}
             <span
               class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-              >experience</span
+              >{{
+                $t(
+                  "index-page.a-complete-rethink-to-deliver-experience.experience"
+                )
+              }}</span
             >
           </h2>
           <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
-            From the data modeling, to the tech stack, system architecture and
-            then the final user interface, Bytebase is engineered from the
-            ground up to deliver a transforming user experience to the DBAs and
-            Developers.
+            {{
+              $t(
+                "index-page.a-complete-rethink-to-deliver-experience.description"
+              )
+            }}
           </h3>
         </div>
 
@@ -566,10 +623,14 @@
             <h3
               class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
             >
-              Modern collaborative dev tool
+              {{ $t("index-page.modern-collaborative-dev-tool.title") }}
             </h3>
             <p class="mt-3 text-lg text-gray-500">
-              Bytebase aspires to tools like
+              {{
+                $t(
+                  "index-page.modern-collaborative-dev-tool.bytebase-aspires-to-tools-like"
+                )
+              }}
               <a
                 href="https://figma.com"
                 target="_blank"
@@ -599,8 +660,8 @@
                     rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                 "
                 >Terraform</a
-              >. We want to be the most favorable tool among Developers and DBAs
-              for managing database schemas.
+              >.
+              {{ $t("index-page.modern-collaborative-dev-tool.description") }}
             </p>
 
             <dl class="mt-10 space-y-10">
@@ -625,13 +686,19 @@
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Plug-and-Play
+                    {{
+                      $t(
+                        "index-page.modern-collaborative-dev-tool.features.plug-and-play.title"
+                      )
+                    }}
                   </p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Bytebase provides a comprehensive web console requiring zero
-                  config and external dependency. Developers and DBAs can focus
-                  on their database tasks right away.
+                  {{
+                    $t(
+                      "index-page.modern-collaborative-dev-tool.features.plug-and-play.description"
+                    )
+                  }}
                 </dd>
               </div>
 
@@ -656,15 +723,19 @@
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Usability
+                    {{
+                      $t(
+                        "index-page.modern-collaborative-dev-tool.features.usability.title"
+                      )
+                    }}
                   </p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
-                  As a professional tool for managing application's most
-                  critical asset - transactional database schema, Bytebase
-                  thinks deeply to surface the relevant info, design the proper
-                  ergonomics. Conducting schema changes is always scary, we want
-                  to eliminate the risk of misfire caused by the
+                  {{
+                    $t(
+                      "index-page.modern-collaborative-dev-tool.features.usability.description"
+                    )
+                  }}
                   <a
                     href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
                     target="_blank"
@@ -673,7 +744,11 @@
                       box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                         rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                     "
-                    >confusing interface</a
+                    >{{
+                      $t(
+                        "index-page.modern-collaborative-dev-tool.features.usability.confusing-interface"
+                      )
+                    }}</a
                   >.
                 </dd>
               </div>
@@ -699,13 +774,19 @@
                     </svg>
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Extensibility
+                    {{
+                      $t(
+                        "index-page.modern-collaborative-dev-tool.features.extensibility.title"
+                      )
+                    }}
                   </p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Being one of the infrastructure toolkit, Bytebase will provide
-                  hooks to integrate with existing IM, CI/CD, issue tracking,
-                  monitoring, login systems.
+                  {{
+                    $t(
+                      "index-page.modern-collaborative-dev-tool.features.extensibility.description"
+                    )
+                  }}
                 </dd>
               </div>
             </dl>
@@ -761,32 +842,50 @@
               <h3
                 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
               >
-                Single binary with curated tech stack
+                {{
+                  $t("index-page.single-binary-with-curated-tech-stack.title")
+                }}
               </h3>
               <p class="mt-3 text-lg text-gray-500">
-                The entire app is bundled in
+                {{
+                  $t(
+                    "index-page.single-binary-with-curated-tech-stack.the-entire-app-is-bundled-in"
+                  )
+                }}
                 <span
                   class="text-blue-600"
                   style="
                     box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                       rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                   "
-                  >a single binary</span
+                  >{{
+                    $t(
+                      "index-page.single-binary-with-curated-tech-stack.a-single-binary"
+                    )
+                  }}</span
                 >
-                and started via
+                {{
+                  $t(
+                    "index-page.single-binary-with-curated-tech-stack.and-started-via"
+                  )
+                }}
                 <span
                   class="text-blue-600"
                   style="
                     box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                       rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                   "
-                  >./bytebase</span
-                >. As a professional tool, Bytebase tries to be pragmatic. And
-                because Bytebase is open sourced, it favors technologies with
-                simplicity and being opinionated to deliver an accessible and
-                cohesive experience to easily learn, use and build the product.
-                We don't want people to waste time figuring out how to deploy or
-                arguing the better coding styles.
+                  >{{
+                    $t(
+                      "index-page.single-binary-with-curated-tech-stack.bytebase"
+                    )
+                  }}</span
+                >.
+                {{
+                  $t(
+                    "index-page.single-binary-with-curated-tech-stack.description"
+                  )
+                }}
               </p>
 
               <dl class="mt-10 space-y-10">
@@ -827,7 +926,11 @@
                       "
                       >Vue</a
                     >
-                    is a progressive framework and
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.vue-feature"
+                      )
+                    }}
                     <a
                       href="https://tailwindcss.com"
                       target="_blank"
@@ -838,8 +941,11 @@
                       "
                       >Tailwind CSS</a
                     >
-                    is a utility-first CSS framework. Together with the build
-                    tool
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.tailwindcss-feature"
+                      )
+                    }}
                     <a
                       href="https://vitejs.dev/"
                       target="_blank"
@@ -850,7 +956,11 @@
                       "
                       >Vite</a
                     >
-                    and
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.and"
+                      )
+                    }}
                     <a
                       href="https://typescriptlang.org/"
                       target="_blank"
@@ -860,8 +970,12 @@
                           rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                       "
                       >TypeScript</a
-                    >, they offer a significantly improved frontend development
-                    experience.
+                    >,
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.typescript-feature"
+                      )
+                    }}
                   </dd>
                 </div>
 
@@ -900,13 +1014,13 @@
                         box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                           rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
                       "
-                      >Golang's</a
+                      >Golang</a
                     >
-                    static linking + embedding allows Bytebase to deliver a
-                    binary with single-line command to launch both the frontend
-                    and backend without requiring extra dependency (no docker,
-                    docker-compose, kubernetes). And we never need to debate the
-                    coding style.
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.golang-feature"
+                      )
+                    }}
                   </dd>
                 </div>
 
@@ -947,11 +1061,11 @@
                       "
                       >PostgreSQL</a
                     >
-                    is the industry leading multi-model relational database. In
-                    addition to the typical transactional workload, PostgreSQL
-                    can also handle analytical, geospatial, time series, full
-                    text search and etc. This allows Bytebase to only keep a
-                    single database system to fulfill all sorts of requirements.
+                    {{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.postgresql-feature"
+                      )
+                    }}
                   </dd>
                 </div>
               </dl>
