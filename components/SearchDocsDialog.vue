@@ -38,8 +38,8 @@
           :key="document.path"
           class="w-full h-auto"
         >
-          <NuxtLink
-            :to="{ path: `/docs${document.path}` }"
+          <nuxt-link
+            :to="localePath(`/docs${document.path}`)"
             class="w-full pl-4 pr-2 py-2 block rounded-md flex-shrink-0 hover:bg-gray-100"
           >
             <div
@@ -49,7 +49,7 @@
               <p class="text-base text-gray-600">{{ document.title }}</p>
               <p class="text-sm text-gray-400">{{ document.path }}</p>
             </div>
-          </NuxtLink>
+          </nuxt-link>
         </div>
         <div
           v-show="searchDocsResult.length === 0"

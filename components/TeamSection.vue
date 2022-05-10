@@ -26,10 +26,10 @@
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
                 <template v-if="person.name == 'You'">
-                  <NuxtLink
-                    to="/jobs#jobs"
+                  <nuxt-link
+                    :to="localePath('/jobs#jobs')"
                     class="text-2xl font-semibold text-indigo-600 hover:text-indigo-500 hover:underline whitespace-nowrap"
-                    >{{ person.role }}🎢</NuxtLink
+                    >{{ person.role }}🎢</nuxt-link
                   >
                 </template>
                 <template v-else>

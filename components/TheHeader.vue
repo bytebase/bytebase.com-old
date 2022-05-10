@@ -4,10 +4,10 @@
       <div
         class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
       >
-        <NuxtLink to="/">
+        <nuxt-link :to="localePath('/')">
           <span class="sr-only">Bytebase</span>
           <img class="h-7 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
-        </NuxtLink>
+        </nuxt-link>
         <div class="flex relative sm:hidden flex-row" style="margin-top: 6px">
           <div
             class="-mt-5 h-10 w-16"
@@ -38,36 +38,36 @@
           class="hidden sm:flex flex-row justify-start items-center sm:mr-8 lg:mr-0"
         >
           <div class="flex items-center justify-between w-full sm:w-auto">
-            <NuxtLink to="/">
+            <nuxt-link :to="localePath('/')">
               <span class="sr-only">Bytebase</span>
               <img
                 class="h-6 sm:h-8 w-auto"
                 src="~/assets/logo-full.svg"
                 alt=""
               />
-            </NuxtLink>
+            </nuxt-link>
           </div>
         </div>
         <div
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
         >
-          <NuxtLink
-            to="/blog"
+          <nuxt-link
+            :to="localePath('/blog')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</NuxtLink
+            >{{ $t("common.blog") }}</nuxt-link
           >
-          <NuxtLink
-            to="/docs"
+          <nuxt-link
+            :to="localePath('/docs/what-is-bytebase')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
-            >{{ $t("common.docs") }}</NuxtLink
+            >{{ $t("common.docs") }}</nuxt-link
           >
-          <NuxtLink
-            to="/pricing"
+          <nuxt-link
+            :to="localePath('/pricing')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('pricing.header')"
-            >{{ $t("common.pricing") }}</NuxtLink
+            >{{ $t("common.pricing") }}</nuxt-link
           >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">
@@ -100,11 +100,11 @@
               @click="track('demo.header')"
               >{{ $t("common.demo") }}</a
             >
-            <NuxtLink
-              to="/docs/install/install-with-docker"
+            <nuxt-link
+              :to="localePath('/docs/install/install-with-docker')"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
-              >{{ $t("header.deploy-now") }}</NuxtLink
+              >{{ $t("header.deploy-now") }}</nuxt-link
             >
           </div>
         </div>

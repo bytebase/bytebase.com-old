@@ -17,11 +17,11 @@
         Bytebase integrates with GitLab to allow team to manage database
         migration scripts in the GitLab repository. Migration pipeline is
         triggered on observing new migration script push event,
-        <NuxtLink
-          to="/docs/features/version-control"
+        <nuxt-link
+          :to="localePath('/docs/features/version-control')"
           target="_blank"
           class="text-blue-700"
-          >View detailed guide</NuxtLink
+          >View detailed guide</nuxt-link
         >.
       </h2>
       <div

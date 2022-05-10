@@ -28,23 +28,23 @@
       <div
         class="w-full mt-4 pb-12 pt-4 flex flex-row justify-between border-t border-gray-200"
       >
-        <NuxtLink
+        <nuxt-link
           v-if="prev"
           :to="localePath(`/docs${prev.path}`)"
           class="py-2 flex flex-row justify-start items-center text-sm text-gray-600 hover:text-black"
         >
           <img class="h-3 mr-2" src="~/assets/svg/arrow-left.svg" alt="prev" />
           <span>{{ prev ? prev.title : "" }}</span>
-        </NuxtLink>
+        </nuxt-link>
         <span v-else></span>
-        <NuxtLink
+        <nuxt-link
           v-if="next"
           :to="localePath(`/docs${next.path}`)"
           class="py-2 flex flex-row justify-end items-center text-sm text-gray-600 hover:text-black"
         >
           <span>{{ next ? next.title : "" }}</span>
           <img class="h-3 ml-2" src="~/assets/svg/arrow-right.svg" alt="next" />
-        </NuxtLink>
+        </nuxt-link>
         <span v-else></span>
       </div>
     </div>

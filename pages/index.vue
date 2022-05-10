@@ -252,15 +252,15 @@
                   }}
                 </h3>
                 <div class="mt-6">
-                  <NuxtLink
-                    to="/docs/features/version-control"
+                  <nuxt-link
+                    :to="localePath('/docs/features/version-control')"
                     class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                     @click="track('docs.version-control')"
                     >{{
                       $t(
                         "index-page.features.version-control-workflow-gitops.see-guide"
                       )
-                    }}</NuxtLink
+                    }}</nuxt-link
                   >
                 </div>
               </div>
