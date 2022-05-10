@@ -89,17 +89,21 @@ $ docker run --name mysqld \
   mysql/mysql-server:8.0
 ```
 
-172.17.0.1 is the default docker gateway IP to allow connection from Bytebase. See the [official MySQL docker doc](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host).
+`172.17.0.1` is the default docker gateway IP to allow connection from Bytebase. See the [official MySQL docker doc](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host).
 
 <hint-block type="info">
 
-If Bytebase is run by docker, then it will also access the MySQL container via 172.17.0.1. This means you need to set **172.17.0.1 as the host for the configured instance**.
+If Bytebase is run by docker, then it will also access the MySQL container via 172.17.0.1. This means when you add that instance from the instance detail page, you need to set **`172.17.0.1`** as the host.
 
 </hint-block>
 
 ### Run MySQL without Docker
 
-You need to set **host.docker.internal** as the host for the configured instance.
+<hint-block type="info">
+
+Unlike setting 172.17.0.1 mentioned in the above section, you need to set **`host.docker.internal`** as the host for the configured instance.
+
+</hint-block>
 
 ## Troubleshoot
 
