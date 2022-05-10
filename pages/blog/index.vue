@@ -135,7 +135,10 @@
                 >{{ tag.name }}</span
               >
             </div>
-            <nuxt-link :to="localePath(`blog/${post.slug}`)" class="block mt-2">
+            <nuxt-link
+              :to="localePath(`blog/${post.slug}`)"
+              class="block mt-2 no-underline"
+            >
               <p class="text-xl font-semibold text-gray-900">
                 {{ post.title }}
               </p>

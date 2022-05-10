@@ -331,6 +331,36 @@
       class="border-t border-gray-200 max-w-7xl mx-auto pt-4 md:flex md:items-center md:justify-between"
     >
       <div class="flex justify-center space-x-6 md:order-2">
+        <div class="relative flex flex-row justify-start items-center">
+          <div
+            class="flex flex-row justify-start items-center hover:opacity-80 cursor-pointer"
+            @click="state.showLocaleSelector = !state.showLocaleSelector"
+          >
+            <img src="~/assets/svg/earth.svg" class="w-5 h-auto mr-2" alt="" />
+            <span>{{ currentLocale }}</span>
+            <img
+              src="~/assets/svg/chevron-right.svg"
+              class="w-4 h-auto ml-1"
+              style="transform: rotate(90deg)"
+              alt=""
+            />
+          </div>
+          <div
+            v-show="state.showLocaleSelector"
+            class="absolute -top-full -mt-16 bg-white shadow flex flex-col p-2 px-4 w-28"
+            @click="state.showLocaleSelector = false"
+          >
+            <nuxt-link
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              :to="switchLocalePath(locale.code)"
+              exact
+              class="w-full leading-8 hover:opacity-60"
+              >{{ locale.name }}</nuxt-link
+            >
+          </div>
+        </div>
+
         <a
           href="https://twitter.com/Bytebase"
           target="__blank"
@@ -392,23 +422,49 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  useContext,
+  computed,
+  reactive,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import SubscribeSection from "./SubscribeSection.vue";
 
 const { trackEvent } = Plausible();
 
+interface LocalState {
+  showLocaleSelector: boolean;
+}
+
 export default defineComponent({
   components: { SubscribeSection },
   setup() {
+    const { app } = useContext();
+    const state = reactive<LocalState>({
+      showLocaleSelector: false,
+    });
     const year = new Date().getFullYear();
+
+    const availableLocales = computed(() => {
+      return app.i18n.locales;
+    });
+
+    const currentLocale = computed(() => {
+      return (app.i18n.locales as any).find(
+        (i: any) => i.code === app.i18n.locale
+      ).name;
+    });
 
     const track = (name: string) => {
       trackEvent(name);
     };
 
     return {
+      availableLocales,
+      currentLocale,
       year,
+      state,
       track,
     };
   },
