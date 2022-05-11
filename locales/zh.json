@@ -345,5 +345,22 @@
       "title": "提高团队速度并降低风险",
       "description": "使用 Bytebase 的团队将自动遵循行业最佳实践来管理数据库架构更改。 技术主管将看到改进的开发速度并减少由数据库更改引起的中断。"
     }
+  },
+  "about": {
+    "why-we-build-title": "我们为什么要建立",
+    "why-we-build": "虽然已经有很多商业和开源数据库引擎来服务亿万用户，但是还没有一款工具能做到 {reliable} {consistent} {auditable} 的数据库 Schema 改动。并且现在还有很多团队直接连接到数据库进行操作。这么操作是挺快的，直到出事故！",
+    "reliable": "稳定、",
+    "consistent": "一致、",
+    "auditable": "可审计",
+    "what-is": "什么是",
+    "gitlab-for-database": "对应数据库而不是代码？",
+    "figma-for-dba": "对应 DBAs 而不是设计师？",
+    "terraform-for-database-as-code": "对应 Database-as-Code 而不是 Infrastructure-as-Code？",
+    "there-is-no-good-answer": "确实没有一个很好的答案。",
+    "porsche-example": "比如，保时捷跑车有很好的引擎。但只有配备了很好的轮子和刹车才能提供一个安全和舒适的驾驶体验。 这也是 {bytebase} 想要实现的，用最好的轮子和刹车去配上数据库引擎才能提升研发效率和体验。"
+  },
+  "brand": {
+    "bytebase-brand": "Bytebase 品牌",
+    "download-brand-kit": "下载品牌素材资源"
   }
 }

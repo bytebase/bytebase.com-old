@@ -4,14 +4,14 @@
       <h1
         class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        Bytebase Brand
+        {{ $t("brand.bytebase-brand") }}
       </h1>
       <a
         href="/bytebase-brand-kit.zip"
         download
         class="mt-4 text-lg font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
       >
-        Download Brand Kit
+        {{ $t("brand.download-brand-kit") }}
         <span aria-hidden="true">&darr;</span>
       </a>
     </div>
