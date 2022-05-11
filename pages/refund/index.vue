@@ -8,16 +8,20 @@
       >
         {{ $t("refund.title") }}
       </h1>
-      <p class="text-2xl pt-5 leading-relaxed">
-        {{ $t("refund.description") }}
-        <a
-          href="mailto:support@bytebase.com"
-          target="__blank"
-          class="text-2xl underline text-gray-600 hover:text-gray-900"
-          >{{ $t("refund.support-team") }}</a
-        >
-        {{ $t("refund.and-we-ll-take-care-of-you") }}
-      </p>
+      <i18n
+        path="refund.description"
+        tag="p"
+        class="text-2xl pt-5 leading-relaxed"
+      >
+        <template #support-team>
+          <a
+            href="mailto:support@bytebase.com"
+            target="__blank"
+            class="text-2xl underline text-gray-600 hover:text-gray-900"
+            >{{ $t("refund.support-team") }}</a
+          >
+        </template>
+      </i18n>
     </div>
   </div>
 </template>

@@ -329,9 +329,8 @@
   },
   "refund": {
     "title": "退款政策",
-    "description": "我们努力提供对您的业务有价值且易于使用的产品。 如果您因任何原因对它不满意，请联系我们的",
-    "support-team": "支持团队",
-    "and-we-ll-take-care-of-you": ""
+    "description": "我们努力提供对您的业务有价值且易于使用的产品。如果您因任何原因对它不满意，请联系我们的{support-team}，我们会帮助到您的。",
+    "support-team": "支持团队"
   },
   "usecase": {
     "dba": {
