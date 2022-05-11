@@ -6,14 +6,14 @@
         <h1
           class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
         >
-          Bytebase Changelog
+          Bytebase {{ $t("common.changelog") }}
         </h1>
         <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >Safer and faster</span
+            >{{ $t("slogan.safer-and-faster") }}</span
           >
-          database change and version control for DBAs and Developers.
+          {{ $t("slogan.mission") }}
         </h2>
         <div class="mt-8">
           <SubscribeSection :module-name="'subscribe.changelog'" />
@@ -88,7 +88,7 @@
         <nuxt-link
           :to="localePath(`changelog?page=${page + 1}`)"
           class="text-xl text-indigo-600"
-          >Next page</nuxt-link
+          >{{ $t("changelog.next-page") }}</nuxt-link
         >
       </div>
     </div>

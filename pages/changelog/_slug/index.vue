@@ -10,7 +10,7 @@
       <h1>{{ post.title }}</h1>
     </div>
     <span
-      class="flex flex-row items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
+      class="flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <div class="ml-2 flex space-x-1 text-gray-500 items-center">
         <time :datetime="post.published_at">

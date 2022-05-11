@@ -4,15 +4,12 @@
       <h1
         class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold text-gray-900"
       >
-        Holistic view of database schema changes
+        {{ $t("usecase.developer.title") }}
       </h1>
       <h2
         class="mt-4 tracking-tight max-w-5xl text-left text-2xl sm:text-3xl text-gray-500 lg:mx-auto"
       >
-        Regardless of working as an IC in a team or managing your own side
-        project, developers using Bytebase will have a holistic view of all the
-        related database info, the ongoing database schema change tasks and the
-        past database migration history.
+        {{ $t("usecase.developer.description") }}
       </h2>
     </div>
   </div>

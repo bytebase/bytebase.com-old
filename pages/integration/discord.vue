@@ -13,9 +13,7 @@
       <h2
         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
       >
-        Bytebase supports webhook to post database schema related events to the
-        configured Discord channel. Those webhook events are specifically
-        customized for Discord in order to display the optimal format.
+        {{ $t("integration.discord-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
