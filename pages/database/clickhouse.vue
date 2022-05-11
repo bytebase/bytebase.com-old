@@ -21,8 +21,7 @@
           class="text-indigo-500"
           >ClickHouse®</a
         >
-        is an open-source, high performance columnar OLAP database management
-        system for real-time analytics using SQL.
+        {{ $t("database.clickhouse-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"

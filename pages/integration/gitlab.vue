@@ -14,14 +14,12 @@
       <h2
         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
       >
-        Bytebase integrates with GitLab to allow team to manage database
-        migration scripts in the GitLab repository. Migration pipeline is
-        triggered on observing new migration script push event,
+        {{ $t("integration.gitlab-feature") }}
         <nuxt-link
           :to="localePath('/docs/features/version-control')"
           target="_blank"
           class="text-blue-700"
-          >View detailed guide</nuxt-link
+          >{{ $t("integration.view-detailed-guide") }}</nuxt-link
         >.
       </h2>
       <div

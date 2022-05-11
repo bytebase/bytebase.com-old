@@ -21,8 +21,7 @@
           class="text-indigo-500"
           >Snowflake®</a
         >
-        is a cloud-based data storage and analytics service. It allows corporate
-        users to store and analyze data using cloud-based hardware and software.
+        {{ $t("snowflake-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"

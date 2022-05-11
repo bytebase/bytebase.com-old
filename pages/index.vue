@@ -8,58 +8,54 @@
         <div class="z-10 relative pb-8 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center xl:text-left">
-              <h1
+              <i18n
+                path="index-page.title"
+                tag="h1"
                 class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                <span
-                  class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                  >{{ $t("slogan.safer-and-faster") }}</span
-                >
-                <span class="block">
-                  {{ $t("index-page.main-slogan.database-change") }}
-                  <span class="xl:block">
-                    {{ $t("index-page.main-slogan.and-version-control") }}
-                  </span>
-                  <span class="xl:block">
-                    {{ $t("index-page.main-slogan.for") }}
-                    <span
-                      class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                      >{{ $t("index-page.main-slogan.teams") }}</span
-                    >
-                  </span>
-                </span>
-              </h1>
-              <h2
+                <template #slogan>
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                    >{{ $t("slogan.safer-and-faster") }}</span
+                  >
+                  <br />
+                </template>
+                <template #br>
+                  <br class="hidden xl:block" />
+                </template>
+                <template #teams>
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                    >{{ $t("common.teams") }}</span
+                  >
+                </template>
+              </i18n>
+              <i18n
+                path="index-page.description"
+                tag="h2"
                 class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl xl:mx-0"
               >
-                {{
-                  $t(
-                    "index-page.main-slogan.bytebase-offers-a-web-based-collaboration-workspace-to-help"
-                  )
-                }}
-                <span
-                  class="text-blue-600"
-                  style="
-                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                  "
-                  >{{ $t("index-page.main-slogan.DBAs") }}</span
-                >
-                {{ $t("index-page.main-slogan.and") }}
-                <span
-                  class="text-blue-600"
-                  style="
-                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                  "
-                  >{{ $t("index-page.main-slogan.developers") }}</span
-                >
-                {{
-                  $t(
-                    "index-page.main-slogan.manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML"
-                  )
-                }}
-              </h2>
+                <template #dbas>
+                  <span
+                    class="text-blue-600"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
+                    >{{ $t("common.dbas") }}</span
+                  >
+                </template>
+                <template #developers>
+                  <span
+                    class="text-blue-600"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
+                    >{{ $t("common.developers") }}</span
+                  >
+                </template>
+              </i18n>
               <div class="flex mt-8 justify-center xl:justify-start">
                 <DatabaseBar />
               </div>

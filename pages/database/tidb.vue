@@ -16,9 +16,7 @@
         <a href="https://pingcap.com/" target="__blank" class="text-indigo-500"
           >TiDB</a
         >
-        is an open-source, cloud-native, distributed SQL database for elastic
-        scale and real-time analytics. Bytebase supports TiDB database natively
-        to manage schema changes, backups, record migration history and etc.
+        {{ $t("database.tidb-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"

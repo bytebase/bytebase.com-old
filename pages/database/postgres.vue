@@ -21,9 +21,7 @@
           class="text-indigo-500"
           >PostgreSQL</a
         >
-        is the world's most advanced open source relational database. Bytebase
-        supports PostgreSQL database natively to manage schema changes, backups,
-        record migration history and etc.
+        {{ $t("database.postgre-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
