@@ -1,5 +1,4 @@
 {
-  "test": "hello, {what}",
   "common": {
     "bytebase": "Bytebase",
     "blog": "Blog",
