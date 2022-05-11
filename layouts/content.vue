@@ -76,7 +76,7 @@
       />
       <Nuxt />
     </main>
-    <SearchDocsDialog v-show="showSearchDialogFlag"></SearchDocsDialog>
+    <AlgoliaSearchDialog v-show="showSearchDialogFlag"></AlgoliaSearchDialog>
   </div>
 </template>
 
