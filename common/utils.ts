@@ -7,9 +7,9 @@ export const removeI18nPrefixPath = (path: string): string => {
 export const getBrowserOSName = (): string => {
   let name = "Unknown OS";
 
-  if (navigator.appVersion.indexOf("Win") != -1) {
+  if (navigator.appVersion.indexOf("Win") !== -1) {
     name = "Windows";
-  } else if (navigator.appVersion.indexOf("Mac") != -1) {
+  } else if (navigator.appVersion.indexOf("Mac") !== -1) {
     name = "MacOS";
   }
 
