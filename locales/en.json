@@ -345,5 +345,22 @@
       "title": "Improve team velocity and reduce risk",
       "description": "Teams using Bytebase will automatically follow industry best practice for managing database schema changes. Tech leads will see an improved development velocity and reduced outages caused by database changes."
     }
+  },
+  "about": {
+    "why-we-build-title": "Why we build",
+    "why-we-build": "While we have a plethora of commercial and open-source database engines serving billions of users, our tooling around making {reliable} {consistent} {auditable} application database schema changes is embarrassing. And today many teams are still connecting to the production DB and applying changes directly. Quick and dirty, until BOMB!",
+    "reliable": "reliable,",
+    "consistent": "consistent,",
+    "auditable": "auditable",
+    "what-is": "What's the",
+    "gitlab-for-database": "for database instead of code?",
+    "figma-for-dba": "for DBAs instead of designers?",
+    "terraform-for-database-as-code": "for Database-as-Code instead of Infrastructure-as-Code?",
+    "there-is-no-good-answer": "There was no really good answer.",
+    "porsche-example": "It's like a Porsche with a good engine, but only paired with the handy wheel and brake, can it deliver a safe and pleasant driving experience. And that's what {bytebase} tries to achieve, to pair the database engine with the proper wheel and brake to improve the development velocity and experience."
+  },
+  "brand": {
+    "bytebase-brand": "Bytebase Brand",
+    "download-brand-kit": "Download Brand Kit"
   }
 }
