@@ -165,7 +165,7 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
 export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
-    const { $content, app, route } = useContext();
+    const { $content, route } = useContext();
     const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
     const documentTreeRoot = ref<DocumentTreeNode>();
@@ -175,8 +175,9 @@ export default defineComponent({
       // Now we don't have a needed and finished submenus, so it's empty.
       const validCategoryList: string[] = [];
       const category = route.value.params.category;
+      const locale = "en";
       const layout = (await $content(
-        app.i18n.locale,
+        locale,
         validCategoryList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;

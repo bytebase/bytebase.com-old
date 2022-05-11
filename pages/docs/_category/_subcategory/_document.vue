@@ -8,9 +8,10 @@ import DocumentViewer from "~/components/DocumentViewer.vue";
 export default {
   components: { DocumentViewer },
   layout: "content",
-  async asyncData({ $content, params, app, redirect, error }) {
+  async asyncData({ $content, params, redirect, error }) {
+    const locale = "en";
     const document = await $content(
-      app.i18n.locale,
+      locale,
       params.category,
       params.subcategory,
       params.document

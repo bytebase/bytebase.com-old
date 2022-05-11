@@ -98,7 +98,8 @@ export default defineComponent({
     const showSearchDialogFlag = computed(() => store.showSearchDialogFlag);
 
     onMounted(async () => {
-      const data = (await $content("", {
+      const locale = "en";
+      const data = (await $content(locale, {
         deep: true,
       }).fetch()) as any as ContentDocument[];
 

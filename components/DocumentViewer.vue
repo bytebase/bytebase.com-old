@@ -126,7 +126,7 @@ export default defineComponent({
     document: Object,
   },
   setup(props) {
-    const { $content, app } = useContext();
+    const { $content } = useContext();
     const meta = useMeta({});
     const state = reactive<State>({
       currentHashId: "",
@@ -145,8 +145,9 @@ export default defineComponent({
     const updatedTsFromNow = dayjs(props.document?.updatedAt).fromNow();
 
     useFetch(async () => {
+      const locale = "en";
       const layout = (await $content(
-        app.i18n.locale,
+        locale,
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
