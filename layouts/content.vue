@@ -35,11 +35,25 @@
         >
       </nav>
       <div
-        class="w-8 sm:w-64 h-8 pl-0 sm:pl-3 border rounded-2xl flex flex-row justify-center sm:justify-start items-center opacity-80 cursor-pointer hover:opacity-100"
+        class="w-8 sm:w-64 h-8 pl-0 sm:px-3 border rounded-2xl flex flex-row justify-center sm:justify-between items-center opacity-80 cursor-pointer hover:opacity-100"
         @click="handleSearchBtnClick"
       >
-        <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
-        <span class="text-sm ml-2 hidden sm:block">Search</span>
+        <div class="flex flex-row justify-start items-center">
+          <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
+          <span class="text-sm ml-2 hidden sm:block">Search</span>
+        </div>
+        <div
+          v-show="ctrlSymbol"
+          class="hidden sm:flex font-mono text-sm rounded-md border px-2 pt-0.5 text-gray-600"
+        >
+          <span
+            class="leading-5"
+            :class="ctrlSymbol === '⌘' ? 'text-lg' : ''"
+            >{{ ctrlSymbol }}</span
+          >
+          <span class="leading-5 mx-1">+</span>
+          <span class="leading-5">K</span>
+        </div>
       </div>
       <div class="flex">
         <img
@@ -87,9 +101,11 @@ import {
   onMounted,
   reactive,
   useContext,
+  ref,
 } from "@nuxtjs/composition-api";
 import { useStore } from "~/store";
 import Plausible from "plausible-tracker";
+import { getBrowserOSName } from "~/common/utils";
 
 const { trackEvent } = Plausible();
 
@@ -104,18 +120,20 @@ const MOBILE_VIEW_MAX_WIDTH = 640;
 export default defineComponent({
   setup() {
     const { $ga } = useContext() as any;
-
     const store = useStore();
     const state = reactive<State>({
       isMobileView: false,
       showSidebar: true,
     });
+    const ctrlSymbol = ref<string>("");
 
     const showSearchDialogFlag = computed(() => {
       return store.showSearchDialogFlag;
     });
 
     onMounted(async () => {
+      ctrlSymbol.value = getBrowserOSName() === "MacOS" ? "⌘" : "Ctrl";
+
       state.isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
       if (state.isMobileView) {
         state.showSidebar = false;
@@ -160,6 +178,7 @@ export default defineComponent({
     };
 
     return {
+      ctrlSymbol,
       state,
       showSearchDialogFlag,
       track,
