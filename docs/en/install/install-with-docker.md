@@ -4,7 +4,7 @@ title: Docker (5 seconds)
 
 # Docker (5 seconds)
 
-**Latest release version:** [**1.0.4**](https://github.com/bytebase/bytebase/releases/tag/1.0.4)
+**Latest release version:** [**1.0.5**](https://github.com/bytebase/bytebase/releases/tag/1.0.5)
 
 <hint-block type="info">
 
@@ -19,7 +19,7 @@ $ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 5678:5678 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.4 \
+  bytebase/bytebase:54 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 5678
@@ -34,7 +34,7 @@ $ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 8080:8080 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.4 \
+  bytebase/bytebase:1.0.5 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 8080
@@ -65,7 +65,7 @@ $ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.3 \
+  bytebase/bytebase:1.0.5 \
   --data /var/opt/bytebase \
   --host https://bytebase.example.com \
   --port 80
