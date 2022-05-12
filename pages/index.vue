@@ -1120,7 +1120,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  useContext,
+  onMounted,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 
 const { trackEvent } = Plausible();
@@ -1128,9 +1132,22 @@ const { trackEvent } = Plausible();
 export default defineComponent({
   components: {},
   setup() {
+    const { app } = useContext();
     const track = (name: string) => {
       trackEvent(name);
     };
+
+    onMounted(() => {
+      const browserLanguageString = String(navigator.language);
+      const browserLocale = browserLanguageString.slice(0, 2);
+      const locales = app.i18n.locales.map((locale: any) => locale.code);
+
+      if (!locales.includes(browserLocale)) {
+        app.i18n.setLocale("en");
+      } else if (app.i18n.locale !== browserLocale) {
+        app.i18n.setLocale(browserLocale);
+      }
+    });
 
     return {
       track,
