@@ -10,7 +10,7 @@
       >
         <span class="sr-only">Bytebase</span>
         <nuxt-link
-          to="/"
+          :to="localePath('/')"
           class="header-link"
           @click.native="track('docs.header')"
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
@@ -22,13 +22,13 @@
           >Blog</nuxt-link
         >
         <nuxt-link
-          to="/changelog"
+          :to="localePath('/changelog')"
           class="header-link"
           @click.native="track('changelog.header')"
           >Changelog</nuxt-link
         >
         <nuxt-link
-          to="/pricing"
+          :to="localePath('/pricing')"
           class="header-link"
           @click.native="track('pricing.header')"
           >Pricing</nuxt-link
