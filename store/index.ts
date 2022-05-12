@@ -4,6 +4,7 @@ export const useStore = defineStore("mainStore", {
   state: () => {
     return {
       showSearchDialogFlag: false,
+      hasRedirectLocale: false,
     };
   },
   actions: {
@@ -15,6 +16,9 @@ export const useStore = defineStore("mainStore", {
     },
     toggleSearchDialog() {
       this.showSearchDialogFlag = !this.showSearchDialogFlag;
+    },
+    setHasRedirectLocale() {
+      this.hasRedirectLocale = true;
     },
   },
 });

@@ -1126,6 +1126,7 @@ import {
   onMounted,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useStore } from "~/store";
 
 const { trackEvent } = Plausible();
 
@@ -1133,6 +1134,7 @@ export default defineComponent({
   components: {},
   setup() {
     const { app } = useContext();
+    const store = useStore();
     const track = (name: string) => {
       trackEvent(name);
     };
@@ -1144,8 +1146,12 @@ export default defineComponent({
 
       if (!locales.includes(browserLocale)) {
         app.i18n.setLocale("en");
-      } else if (app.i18n.locale !== browserLocale) {
+      } else if (
+        app.i18n.locale !== browserLocale &&
+        !store.hasRedirectLocale
+      ) {
         app.i18n.setLocale(browserLocale);
+        store.setHasRedirectLocale();
       }
     });
 
