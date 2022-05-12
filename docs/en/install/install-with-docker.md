@@ -19,7 +19,7 @@ $ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 5678:5678 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:54 \
+  bytebase/bytebase:1.0.5 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 5678
