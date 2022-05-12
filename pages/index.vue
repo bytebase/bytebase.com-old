@@ -1149,7 +1149,7 @@ export default defineComponent({
         app.i18n.setLocale("en");
       } else {
         // Only redirect when browserLocale is `zh` and current locale isn't `zh`.
-        // It means that we shouldn't redirect english user from zh to en.
+        // It means that we shouldn't redirect from `/zh` to `/`.
         if (
           app.i18n.locale !== "zh" &&
           browserLocale === "zh" &&
