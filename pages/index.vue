@@ -1144,14 +1144,20 @@ export default defineComponent({
       const browserLocale = browserLanguageString.slice(0, 2);
       const locales = app.i18n.locales.map((locale: any) => locale.code);
 
+      // We now have two locales: `en` and `zh`, the other locales redirect to `en`.
       if (!locales.includes(browserLocale)) {
         app.i18n.setLocale("en");
-      } else if (
-        app.i18n.locale !== browserLocale &&
-        !store.hasRedirectLocale
-      ) {
-        app.i18n.setLocale(browserLocale);
-        store.setHasRedirectLocale();
+      } else {
+        // Only redirect when browserLocale is `zh` and current locale isn't `zh`.
+        // It means that we shouldn't redirect from `/zh` to `/`.
+        if (
+          app.i18n.locale !== "zh" &&
+          browserLocale === "zh" &&
+          !store.hasRedirectLocale
+        ) {
+          app.i18n.setLocale(browserLocale);
+          store.setHasRedirectLocale();
+        }
       }
     });
 
