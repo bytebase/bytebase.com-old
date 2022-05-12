@@ -184,6 +184,7 @@ export default {
     "@nuxtjs/composition-api/module",
     "@pinia/nuxt",
     "@nuxtjs/google-analytics",
+    "@nuxtjs/web-vitals",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
