@@ -3,6 +3,7 @@
  */
 interface StorageData {
   hasShownSubscribtionPopupInDocs: boolean;
+  hasRedirectLocale: boolean;
 }
 
 type StorageKey = keyof StorageData;
