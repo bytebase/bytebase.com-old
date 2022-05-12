@@ -40,6 +40,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@nuxtjs/web-vitals": "^0.1.8",
     "@types/dom-to-image": "^2.6.4",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.180",
