@@ -112,6 +112,8 @@
 
 ### [Server Startup Options](/reference/command-line)
 
+### [CLI](/reference/cli)
+
 ## [Error Code](/error-code)
 
 ## Troubleshooting
