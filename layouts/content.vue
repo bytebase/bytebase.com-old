@@ -16,6 +16,12 @@
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
         /></nuxt-link>
         <nuxt-link
+          to="/docs/reference/cli"
+          class="header-link"
+          @click.native="track('blog.header')"
+          >CLI</nuxt-link
+        >
+        <nuxt-link
           to="/blog"
           class="header-link"
           @click.native="track('blog.header')"
