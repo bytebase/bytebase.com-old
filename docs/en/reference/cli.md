@@ -35,7 +35,7 @@ Flags:
 Use "bb [command] --help" for more information about a command.
 ```
 
-To use bb, you need a database. You can start an empty MySQL docker container (need to have Docker Engine running):
+To use bb, you need a database. You can start an empty MySQL docker container (make sure the Docker Engine is running):
 ```bash
 $ docker run -d \
   -e MYSQL_ROOT_PASSWORD=passwd \
@@ -64,14 +64,14 @@ CREATE TABLE `author` (
 ...
 ```
 
-Say you want to add a `phone_no` column to the table `author`. This is a so-called **database migration** and we provide `bb migrate` to do so:
+Say you want to add a `phone_no` column to the table `author`. This is a so-called **database migration** and you can use `bb migrate` to do so:
 ```bash
 $ bb migrate \
   --dsn mysql://user:passwd@localhost:3306/bytebase_test_todo \
   --command “ALTER TABLE author ADD COLUMN phone_no VARCHAR(15);”
 ```
 
-After migration, you can dump again to check if the migration has executed: 
+After migration, you can dump again to check if the migration has executed successfully:
 ```bash
 $  bb dump --dsn mysql://root:passwd@localhost:3306/bytebase_test_todo --schema-only
 --
@@ -99,24 +99,26 @@ The supported format is
 ```
 driver://username[:password]@host[:port]/[dbName][?param=value&...&param=value]
 ```
+
 We currently support drivers:
  - mysql
  - postgresql
+
 The optional params are:
  - ssl-ca
  - ssl-cert
  - ssl-key
 
-Here are a few examples.
+Here are a few examples:
  - mysql://root@localhost:3306/
  - postgresql://$(whoami)@localhost:5432/postgres
  - postgresql://user:pass@localhost:5432/dbname?ssl-ca=a&ssl-cert=b&ssl-key=c
 
 ## Commands
-### `migrate`
+### migrate
 Apply schema migration to database.
 
-Internally, `migrate` history is recorded. It is recommended that migrate is only used for applying schema change so that it is more clear to track schema migration.
+Internally, every `migrate` command will be recorded in history. It is recommended that `migrate` is only used for applying schema change so that it is more clear to track schema migration.
 
 #### Flags
 `--dsn`
@@ -136,12 +138,12 @@ Apply SQL command to the given database.
 $ bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
   --file migrate_v1_0_1.sql
 ```
-Apply migrate script to the given database.
+Apply the migration script to the given database.
 
-### `dump`
+### dump
 Dump the schema and data of a database.
 
-This command is used to backup a database. When given no output file and only dump schema, it can be used to view the current database schema.
+This command is used to back up a database. When given no output file and only dump schema, it can be used to view the current database schema.
 
 #### Flags
 `--dsn`
@@ -161,10 +163,10 @@ $ bb dump --dsn mysql://root@localhost:3306/bytebase_test_todo --schema-only
 ```
 Print the schema of database `bytebase_test_todo` to stdout.
 
-### `restore`
+### restore
 Restore the schema and data of a database from a dump file (usually created by `bb dump`).
 
-Internally, `restore` history is NOT recorded. It is recommended that restore is used for restoring from an existing database dump, including schema and data.
+Internally, `restore` command will NOT be recorded. It is recommended that `restore` is used for restoring from an existing database dump, including both schema and data.
 
 #### Flags
 `--dsn`
