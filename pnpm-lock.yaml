@@ -40,6 +40,7 @@ specifiers:
   lodash: ^4.17.21
   nuxt: ^2.15.8
   pinia: ^2.0.12
+  plausible-tracker: ^0.3.5
   postcss: ^8.3.5
   remove-markdown: ^0.5.0
   slug: ^5.2.0
@@ -68,6 +69,7 @@ dependencies:
   lodash: 4.17.21
   nuxt: 2.15.8_@vue+compiler-sfc@3.2.33
   pinia: 2.0.14
+  plausible-tracker: 0.3.5
   remove-markdown: 0.5.0
   slug: 5.3.0
   vue-gtag: 1.16.1
@@ -1567,7 +1569,7 @@ packages:
       chokidar: 3.5.3
       consola: 2.15.3
       fs-extra: 9.1.0
-      glob: 7.2.0
+      glob: 7.2.2
       hash-sum: 2.0.0
       ignore: 5.2.0
       lodash: 4.17.21
@@ -1677,7 +1679,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       chokidar: 3.5.3
-      glob: 7.2.0
+      glob: 7.2.2
       globby: 11.1.0
       scule: 0.2.1
       semver: 7.3.7
@@ -2004,14 +2006,14 @@ packages:
       '@nuxt/utils': 2.15.8
       babel-loader: 8.2.5_usdhdj5awexcm2e5jtwd44bofa
       cache-loader: 4.1.0_webpack@4.46.0
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       consola: 2.15.3
       css-loader: 4.3.0_webpack@4.46.0
       cssnano: 4.1.11
       eventsource-polyfill: 0.9.6
       extract-css-chunks-webpack-plugin: 4.9.0_webpack@4.46.0
       file-loader: 6.2.0_webpack@4.46.0
-      glob: 7.2.0
+      glob: 7.2.2
       hard-source-webpack-plugin: 0.13.1_webpack@4.46.0
       hash-sum: 2.0.0
       html-webpack-plugin: 4.5.2_webpack@4.46.0
@@ -4363,7 +4365,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.20.3
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4376,7 +4378,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.20.3
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -4617,7 +4619,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       electron-to-chromium: 1.4.137
       escalade: 3.1.1
       node-releases: 2.0.4
@@ -4669,7 +4671,7 @@ packages:
       bluebird: 3.7.2
       chownr: 1.1.4
       figgy-pudding: 3.5.2
-      glob: 7.2.0
+      glob: 7.2.2
       graceful-fs: 4.2.10
       infer-owner: 1.0.4
       lru-cache: 5.1.1
@@ -4691,7 +4693,7 @@ packages:
       '@npmcli/move-file': 1.1.2
       chownr: 2.0.0
       fs-minipass: 2.1.0
-      glob: 7.2.0
+      glob: 7.2.2
       infer-owner: 1.0.4
       lru-cache: 6.0.0
       minipass: 3.1.6
@@ -4811,13 +4813,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.20.3
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite/1.0.30001340:
-    resolution: {integrity: sha512-jUNz+a9blQTQVu4uFcn17uAD8IDizPzQkIKh3LCJfg9BkyIqExYYdyc/ZSlWUSKb8iYiXxKsxbv4zYSvkqjrxw==}
+  /caniuse-lite/1.0.30001341:
+    resolution: {integrity: sha512-2SodVrFFtvGENGCv0ChVJIDQ0KPaS1cg7/qtfMaICgeMolDdo/Z2OD32F0Aq9yl6F4YFwGPBS5AaPqNYiW4PoA==}
 
   /capital-case/1.0.4:
     resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==}
@@ -6678,7 +6680,7 @@ packages:
       deepmerge: 4.2.2
       eslint: 8.15.0
       fs-extra: 9.1.0
-      glob: 7.2.0
+      glob: 7.2.2
       memfs: 3.4.1
       minimatch: 3.1.2
       schema-utils: 2.7.0
@@ -6900,8 +6902,8 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /glob/7.2.0:
-    resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
+  /glob/7.2.2:
+    resolution: {integrity: sha512-NzDgHDiJwKYByLrL5lONmQFpK/2G78SMMfo+E9CuGlX4IkvfKDsiQSNPwAYxEy+e6p7ZQ3uslSLlwlJcqezBmQ==}
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -10087,7 +10089,7 @@ packages:
     dependencies:
       autoprefixer: 9.8.8
       browserslist: 4.20.3
-      caniuse-lite: 1.0.30001340
+      caniuse-lite: 1.0.30001341
       css-blank-pseudo: 0.1.4
       css-has-pseudo: 0.10.0
       css-prefers-color-scheme: 3.1.1
@@ -10446,7 +10448,7 @@ packages:
     hasBin: true
     dependencies:
       commander: 8.3.0
-      glob: 7.2.0
+      glob: 7.2.2
       postcss: 8.4.13
       postcss-selector-parser: 6.0.10
     dev: true
@@ -10778,7 +10780,7 @@ packages:
     hasBin: true
     dependencies:
       chalk: 4.1.2
-      glob: 7.2.0
+      glob: 7.2.2
       yargs: 17.5.0
     dev: true
 
@@ -10855,14 +10857,14 @@ packages:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
     dependencies:
-      glob: 7.2.0
+      glob: 7.2.2
     dev: false
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
     dependencies:
-      glob: 7.2.0
+      glob: 7.2.2
 
   /ripemd160/2.0.2:
     resolution: {integrity: sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==}
@@ -11465,7 +11467,7 @@ packages:
     peerDependencies:
       webpack: ^3.0.0 || ^4.0.0 || ^5.0.0
     dependencies:
-      glob: 7.2.0
+      glob: 7.2.2
       loader-utils: 2.0.2
       schema-utils: 2.7.1
       tslib: 2.4.0

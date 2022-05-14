@@ -29,6 +29,7 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
     "pinia": "^2.0.12",
+    "plausible-tracker": "^0.3.5",
     "remove-markdown": "^0.5.0",
     "slug": "^5.2.0",
     "vue-gtag": "1.16.1",
