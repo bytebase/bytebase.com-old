@@ -100,11 +100,13 @@ import {
   useFetch,
   useContext,
   useMeta,
+  watch,
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { ContentDocument } from "~/types/docs";
-import storage from "../common/storage";
+import storage from "~/common/storage";
+import { validDocsCategoryList } from "~/common/const";
 import SubscribeSection from "./SubscribeSection.vue";
 dayjs.extend(relativeTime);
 
@@ -126,7 +128,7 @@ export default defineComponent({
     document: Object,
   },
   setup(props) {
-    const { $content } = useContext();
+    const { $content, route } = useContext();
     const meta = useMeta({});
     const state = reactive<State>({
       currentHashId: "",
@@ -146,8 +148,10 @@ export default defineComponent({
 
     useFetch(async () => {
       const locale = "en";
+      const category = route.value.params.category;
       const layout = (await $content(
         locale,
+        validDocsCategoryList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
@@ -266,6 +270,15 @@ export default defineComponent({
             }, 2000);
           });
         }
+      }
+    });
+
+    watch(route, () => {
+      if (ducumentContainerRef.value) {
+        const targetEl = ducumentContainerRef.value.querySelector(
+          `a[href='${route.value.hash}']`
+        ) as HTMLAnchorElement;
+        targetEl?.click();
       }
     });
 

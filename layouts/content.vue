@@ -15,11 +15,11 @@
           @click.native="track('docs.header')"
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
         /></nuxt-link>
-        <nuxt-link
-          to="/docs/reference/cli"
+        <a
+          :href="localePath('/docs/cli/overview')"
           class="header-link"
           @click.native="track('blog.header')"
-          >CLI</nuxt-link
+          >CLI</a
         >
         <nuxt-link
           to="/blog"
