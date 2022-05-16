@@ -29,7 +29,7 @@
               class="flex flex-col col-span-3 overflow-hidden"
             >
               <nuxt-link
-                :to="localePath(`changelog/${post.slug}`)"
+                :to="localePath(`/changelog/${post.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
                 <div
@@ -65,7 +65,7 @@
               </nuxt-link>
               <nuxt-link
                 v-if="post.feature_image"
-                :to="localePath(`changelog/${post.slug}`)"
+                :to="localePath(`/changelog/${post.slug}`)"
                 class="flex-shrink-0 py-6"
               >
                 <div class="flex justify-center items-center">
@@ -86,7 +86,7 @@
       </div>
       <div v-if="!lastPage" class="py-12">
         <nuxt-link
-          :to="localePath(`changelog?page=${page + 1}`)"
+          :to="localePath(`/changelog?page=${page + 1}`)"
           class="text-xl text-indigo-600"
           >{{ $t("changelog.next-page") }}</nuxt-link
         >
