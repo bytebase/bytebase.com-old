@@ -145,6 +145,7 @@ export default defineComponent({
       const locale = "en";
       const category = route.value.params.category;
       const layout = (await $content(
+        "docs",
         locale,
         validDocsCategoryList.includes(category) ? category : "",
         "_layout"

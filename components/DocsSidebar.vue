@@ -224,6 +224,7 @@ export default defineComponent({
       // Now we don't have a needed and finished submenus, so it's empty.
       const locale = "en";
       const layout = (await $content(
+        "docs",
         locale,
         validDocsCategoryList.includes(category) ? category : "",
         "_layout"
