@@ -31,7 +31,7 @@ interface StringArrayPayload {
 interface TemplatePayload {
   type: PayloadType.Template;
   default: string;
-  templates: { id: string; description?: string; }[];
+  templates: { id: string; description?: string }[];
   value?: string;
 }
 
@@ -95,8 +95,7 @@ const ruleList: Rule[] = [
     id: "naming.table",
     category: "naming",
     database: ["common"],
-    description:
-      "Enforce the table name format. Default snake_lower_case.",
+    description: "Enforce the table name format. Default snake_lower_case.",
     payload: {
       format: {
         type: PayloadType.String,
@@ -108,34 +107,11 @@ const ruleList: Rule[] = [
     id: "naming.column",
     category: "naming",
     database: ["common"],
-    description:
-      "Enforce the column name format. Default snake_lower_case.",
+    description: "Enforce the column name format. Default snake_lower_case.",
     payload: {
       format: {
         type: PayloadType.String,
         default: "^[a-z]+(_[a-z]+)?$",
-      },
-    },
-  },
-  {
-    id: "naming.index.pk",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the primary key name format.",
-    payload: {
-      pk: {
-        type: PayloadType.Template,
-        default: "^pk_{{table}}_{{column_list}}$",
-        templates: [
-          {
-            id: "table",
-            description: "The table name",
-          },
-          {
-            id: "column_list",
-            description: "Index column names, joined by _",
-          },
-        ],
       },
     },
   },
@@ -217,11 +193,15 @@ const ruleList: Rule[] = [
     id: "query.where.no-leading-wildcard-like",
     category: "query",
     database: ["common"],
-    description: "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
+    description:
+      "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
   },
 ];
 
-const getRuleListWithLevel = (idList: string[], level: RuleLevel): SelectedRule[] => {
+const getRuleListWithLevel = (
+  idList: string[],
+  level: RuleLevel
+): SelectedRule[] => {
   return idList.reduce((res, id) => {
     const rule = ruleList.find((r) => r.id === id);
     if (!rule) {
@@ -233,7 +213,7 @@ const getRuleListWithLevel = (idList: string[], level: RuleLevel): SelectedRule[
     });
     return res;
   }, [] as SelectedRule[]);
-}
+};
 
 export const guidelineTemplateList: GuidelineTemplate[] = [
   {
@@ -255,7 +235,6 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
         [
           "naming.table",
           "naming.column",
-          "naming.index.pk",
           "naming.index.uk",
           "naming.index.idx",
           "column.required",
@@ -271,17 +250,13 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
     database: mysql,
     ruleList: [
       ...getRuleListWithLevel(
-        [
-          "engine.mysql.use-innodb",
-          "table.require-pk",
-        ],
+        ["engine.mysql.use-innodb", "table.require-pk"],
         RuleLevel.Error
       ),
       ...getRuleListWithLevel(
         [
           "naming.table",
           "naming.column",
-          "naming.index.pk",
           "naming.index.uk",
           "naming.index.idx",
           "column.required",
@@ -293,5 +268,5 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
         RuleLevel.Warning
       ),
     ],
-  }
+  },
 ];
