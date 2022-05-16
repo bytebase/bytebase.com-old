@@ -101,7 +101,7 @@ export default {
   },
 
   content: {
-    dir: "docs",
+    dir: "content",
     liveEdit: false,
   },
 
@@ -239,9 +239,9 @@ export default {
     generate: {
       async done() {
         try {
-          // Patch index objects of algolia.
+          // Patch docs index objects of algolia.
           const { $content } = require("@nuxt/content");
-          const data = await $content("", {
+          const data = await $content("docs", {
             deep: true,
           })
             .where({ slug: { $regex: /^(?!_)/ } })

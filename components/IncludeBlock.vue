@@ -52,7 +52,7 @@ export default defineComponent({
     onMounted(async () => {
       try {
         const locale = "en";
-        const document = (await $content(locale, props.url)
+        const document = (await $content("docs", locale, props.url)
           .limit(1)
           .fetch()) as any as ContentDocument;
 

@@ -10,7 +10,7 @@ export default {
   layout: "content",
   async asyncData({ $content, params, error }) {
     const locale = "en";
-    const document = await $content(locale, params.slug)
+    const document = await $content("docs", locale, params.slug)
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });

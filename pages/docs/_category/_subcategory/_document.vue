@@ -11,6 +11,7 @@ export default {
   async asyncData({ $content, params, error }) {
     const locale = "en";
     const document = await $content(
+      "docs",
       locale,
       params.category,
       params.subcategory,
