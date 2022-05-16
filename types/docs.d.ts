@@ -10,6 +10,7 @@ interface DocumentBodyNode {
 
 interface ContentDocument extends IContentDocument {
   body: DocumentBodyNode;
+  tags: string[];
   description?: string;
   expandAll?: boolean;
 }

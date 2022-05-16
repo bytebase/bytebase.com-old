@@ -30,8 +30,8 @@
           v-if="node.type === 'text'"
           class="pl-3 py-2 w-full flex flex-row justify-between items-start text-gray-600 font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
         >
-          <span class="pr-1 leading-6">{{ node.title }}</span
-          ><span
+          <span class="pr-1 leading-6">{{ node.title }}</span>
+          <span
             v-if="node.children.length !== 0"
             class="flex-shrink-0 h-6 mr-5 flex flex-row justify-center items-center cursor-pointer select-none"
             @click.prevent.stop="node.displayChildren = !node.displayChildren"

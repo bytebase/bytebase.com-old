@@ -8,18 +8,15 @@
     >
       <nuxt-content class="w-full py-6 markdown-body" :document="document" />
       <div
-        class="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm"
+        class="w-full flex flex-col sm:flex-row sm:justify-start sm:items-center text-base"
       >
-        <span class="text-gray-600 py-1">
-          Last updated {{ updatedTsFromNow }}
-        </span>
         <a
-          class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-black"
-          :href="`https://github.com/bytebase/bytebase.com/blob/main${filePath}`"
+          class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-accent"
+          :href="`https://github.com/bytebase/bytebase.com/blob/main${githubFilePath}`"
         >
           Edit this page on GitHub
           <img
-            class="h-3 ml-2"
+            class="h-4 ml-2"
             src="~/assets/svg/external-link.svg"
             alt="prev"
           />
@@ -31,19 +28,17 @@
         <nuxt-link
           v-if="prev"
           :to="localePath(`/docs${prev.path}`)"
-          class="py-2 flex flex-row justify-start items-center text-sm text-gray-600 hover:text-black"
+          class="py-2 flex flex-row justify-start items-center text-base text-gray-600 hover:text-accent"
         >
-          <img class="h-3 mr-2" src="~/assets/svg/arrow-left.svg" alt="prev" />
-          <span>{{ prev ? prev.title : "" }}</span>
+          <span>{{ "← " + prev.title }}</span>
         </nuxt-link>
         <span v-else></span>
         <nuxt-link
           v-if="next"
           :to="localePath(`/docs${next.path}`)"
-          class="py-2 flex flex-row justify-end items-center text-sm text-gray-600 hover:text-black"
+          class="py-2 flex flex-row justify-end items-center text-base text-gray-600 hover:text-accent"
         >
-          <span>{{ next ? next.title : "" }}</span>
-          <img class="h-3 ml-2" src="~/assets/svg/arrow-right.svg" alt="next" />
+          <span>{{ next.title + " →" }}</span>
         </nuxt-link>
         <span v-else></span>
       </div>
@@ -52,7 +47,7 @@
     <!-- TOC -->
     <div
       v-show="toc.length !== 0"
-      class="hidden fixed right-0 top-32 pt-12 w-64 py-2 pr-4 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 pt-12 w-60 py-2 pr-4 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <span class="text-black pb-2 pl-4 border-l border-gray-200"
         >Table of Contents</span
@@ -73,6 +68,7 @@
 
     <!-- Subscribtion popup -->
     <div
+      v-if="false"
       class="transition-all fixed bottom-0 left-0 w-full bg-white z-10 lg:px-36 border-t shadow"
       :style="{ 'margin-bottom': state.showSubscribtionPopup ? '0' : '-100%' }"
     >
@@ -135,16 +131,15 @@ export default defineComponent({
       showSubscribtionPopup: false,
     });
     const ducumentContainerRef = ref<HTMLDivElement>();
+    const prev = ref<any>(undefined);
+    const next = ref<any>(undefined);
     const toc = computed(() => {
       // Only show h2,h3 in toc.
       return (props.document?.toc as TOC[]).filter(
-        (toc) => toc.depth >= 2 && toc.depth <= 3
+        (t) => t.depth >= 2 && t.depth <= 3
       );
     });
-    const prev = ref<any>(undefined);
-    const next = ref<any>(undefined);
-    const filePath = `/docs${props.document?.path}${props.document?.extension}`;
-    const updatedTsFromNow = dayjs(props.document?.updatedAt).fromNow();
+    const githubFilePath = `/docs${props.document?.path}${props.document?.extension}`;
 
     useFetch(async () => {
       const locale = "en";
@@ -301,8 +296,7 @@ export default defineComponent({
       next,
       toc,
       ducumentContainerRef,
-      filePath,
-      updatedTsFromNow,
+      githubFilePath,
       onCloseSubscribtionPopUp,
       onSubscribed,
     };
