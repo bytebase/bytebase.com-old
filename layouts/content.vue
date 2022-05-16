@@ -18,7 +18,7 @@
         <a
           :href="localePath('/docs/cli/overview')"
           class="header-link"
-          @click.native="track('blog.header')"
+          @click="track('blog.header')"
           >CLI</a
         >
         <nuxt-link

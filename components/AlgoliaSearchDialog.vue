@@ -32,15 +32,15 @@
                     class="w-full flex flex-col justify-start items-start"
                     @click="handleLinkClick"
                   >
-                    <ais-highlight
-                      attribute="title"
-                      :hit="item"
-                      class="text-base leading-8 text-gray-600 font-bold"
-                    />
                     <ais-snippet
                       attribute="bodyPlainText"
                       :hit="item"
-                      class="text-sm text-gray-400"
+                      class="text-sm text-gray-600"
+                    />
+                    <ais-highlight
+                      attribute="title"
+                      :hit="item"
+                      class="text-sm leading-8 text-gray-400"
                     />
                   </div>
                 </nuxt-link>
@@ -124,5 +124,8 @@ export default defineComponent({
 
 .ais-Hits-item {
   @apply p-0 rounded-none;
+}
+.ais-SearchBox-input {
+  @apply shadow-none rounded-lg border-gray-200;
 }
 </style>

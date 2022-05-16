@@ -262,6 +262,7 @@ export default {
                 slug: item.slug,
                 title: item.title,
                 path: item.path,
+                tags: item.tags,
                 bodyPlainText: item.bodyPlainText,
               };
             })
@@ -281,9 +282,21 @@ export default {
       },
     },
     "content:file:beforeInsert": (document) => {
-      const removeMd = require("remove-markdown");
       if (document.extension === ".md") {
+        const removeMd = require("remove-markdown");
         document.bodyPlainText = removeMd(document.text);
+
+        const invalidTags = ["en", "zh"];
+        if (!Array.isArray(document.tags)) {
+          const rawTags = document.dir.split("/");
+          const tags = [];
+          for (const tag of rawTags) {
+            if (tag && !invalidTags.includes(tag)) {
+              tags.push(tag);
+            }
+          }
+          document.tags = tags;
+        }
       }
     },
   },
