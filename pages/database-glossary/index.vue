@@ -297,7 +297,7 @@
                   <div class="flex justify-end mt-2 space-x-2">
                     <nuxt-link
                       :to="
-                        localePath(`database-glossary/${slug(glossary.name)}`)
+                        localePath(`/database-glossary/${slug(glossary.name)}`)
                       "
                       class="text-blue-600 hover:underline"
                     >
