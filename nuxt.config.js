@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import slug from "slug";
+import { camelCase } from "lodash";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -296,6 +297,12 @@ export default {
             }
           }
           document.tags = tags;
+        }
+
+        for (const key of Object.keys(document)) {
+          if (key !== camelCase(key)) {
+            document[camelCase(key)] = document[key];
+          }
         }
       }
     },
