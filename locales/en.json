@@ -180,6 +180,8 @@
   "team": {
     "meet-our-crew": "Meet our crew",
     "roles": {
+      "ceo": "Chief Sketching Officer",
+      "cto": "CTO",
       "community": "Community",
       "community-manager": "Community Manager",
       "engineering": "Engineering",
