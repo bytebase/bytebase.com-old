@@ -3,8 +3,6 @@ title: ✍️ Document write guide
 description: This section shows the steps of writing a document.
 ---
 
-# ✍️ Document write guide
-
 This section shows the steps of writing a document.
 
 ## The structure of a `.md` file

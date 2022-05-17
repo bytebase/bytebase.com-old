@@ -2,8 +2,6 @@
 title: Error Code
 ---
 
-# Error Code
-
 ## General
 
 ### 0 - OK

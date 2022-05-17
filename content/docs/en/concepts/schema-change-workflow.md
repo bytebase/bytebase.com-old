@@ -2,8 +2,6 @@
 title: Schema Change Workflow
 ---
 
-# Schema Change Workflow
-
 There are 2 typical workflows employed by the team to deal with database schema changes. [UI workflow](#ui-workflow) and [version control workflow (GitOps)](#gitops-workflow).
 
 ## UI workflow

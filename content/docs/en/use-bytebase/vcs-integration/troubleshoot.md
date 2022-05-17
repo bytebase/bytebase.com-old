@@ -2,8 +2,6 @@
 title: 🐞 Troubleshoot
 ---
 
-# 🐞 Troubleshoot
-
 ### Committed migration file does not trigger issue creation
 
 1. Check the committed file conforms to the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) and directory structure conforms to the [layout](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-organization).

@@ -2,8 +2,6 @@
 title: Restore from Backup
 ---
 
-# Restore from Backup
-
 <hint-block type="warning">
 
 Bytebase only allows to restore backup to a new database under the same project and environment.

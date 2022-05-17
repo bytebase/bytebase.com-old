@@ -2,8 +2,6 @@
 title: Backup and Restore
 ---
 
-# Backup and Restore
-
 Bytebase supports both automatic and manual backup at the database level. User can also restore the backup to a different database.
 
 When Bytebase restores the backup to a new database, it also records the original parent database as well as a branch migration history linking with the restoring process.

@@ -2,8 +2,6 @@
 title: SQL Advisor
 ---
 
-# SQL Advisor
-
 Bytebase provides automatic SQL lint to check common issues in schema change process.
 
 ![sql-advisor](/static/docs-assets/sql-advisor.png)

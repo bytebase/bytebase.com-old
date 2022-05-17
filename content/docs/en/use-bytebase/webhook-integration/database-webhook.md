@@ -2,8 +2,6 @@
 title: Database Webhook
 ---
 
-# Database Webhook
-
 ![database-webhook](/static/docs-assets/database-webhook.png)
 
 User can set webhook URLs for databases. After a successful backup, an HTTP POST request will be sent to it.

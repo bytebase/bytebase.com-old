@@ -2,8 +2,6 @@
 title: Compose a Query
 ---
 
-# Compose a Query
-
 SQL Editor supports auto-completion, code formatting, and keyboard shortcuts.
 
 ## Auto-completion

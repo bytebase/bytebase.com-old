@@ -2,8 +2,6 @@
 title: Enable Version Control Workflow (GitOps) in Project
 ---
 
-# Enable Version Control Workflow (GitOps) in Project
-
 > To enable version control workflow, project owner needs to link one of their Git repositories with their Bytebase project.
 
 Estimate setup time: 15 minutes. This is a [reference setup](https://demo.bytebase.com/project/blog-git-3003#version-control) showing what it will look like after the setup.

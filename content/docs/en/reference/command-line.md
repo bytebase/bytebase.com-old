@@ -2,8 +2,6 @@
 title: Server Startup Options
 ---
 
-# Server Startup Options
-
 The "help" command prints all applicable options
 
 ```bash

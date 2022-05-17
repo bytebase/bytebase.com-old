@@ -2,8 +2,6 @@
 title: Add Git Provider
 ---
 
-# Add Git Provider
-
 > Due to the complexity and details involved, this guide takes a bit patience to follow. If you have suggestions to improve the guide or/and the setup workflow, please tell us at support@bytebase.com
 
 Estimate setup time: 30 minutes. This is a [reference setup](https://demo.bytebase.com/setting/version-control/bytebasegitlabcom-16001) showing what it will look like after the setup.

@@ -2,8 +2,6 @@
 title: VCS Integration (GitOps)
 ---
 
-# VCS Integration (GitOps)
-
 The VCS Integration is a 4-step setup. You can check this [demo issue](https://demo.bytebase.com/issue/add-createdat-column-to-userpostcomment-table-for-dev-environment-13008) created by observing the [code commit](https://gitlab.bytebase.com/bytebase-demo/blog/-/commit/171ceaf7659ceb8e495aa3ef356ec686656f9dc0) to see what it looks like after the setup.
 
 ### [Step 1 - Add Git Provider](/docs/use-bytebase/vcs-integration/add-git-provider)

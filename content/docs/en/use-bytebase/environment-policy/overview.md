@@ -2,8 +2,6 @@
 title: Environment Policy
 ---
 
-# Environment Policy
-
 <hint-block type="info">
 
 Only **Owner** or **DBA** can configure environment policies.

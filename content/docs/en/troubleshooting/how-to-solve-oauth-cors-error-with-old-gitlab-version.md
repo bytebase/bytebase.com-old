@@ -2,8 +2,6 @@
 title: How to solve OAuth CORS error with old GitLab version
 ---
 
-# How to solve OAuth CORS error with old GitLab version
-
 When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may encounter OAuth error https://github.com/bytebase/bytebase/issues/467:
 
 <p><img width="500" alt="image" src="https://user-images.githubusercontent.com/24653555/154427178-5c3b0d15-6ef3-4e65-8b62-02812a9e7b27.png"></p>

@@ -2,8 +2,6 @@
 title: Webhook
 ---
 
-# Webhook
-
 ## Project Webhook
 
 User can configure project-level webhooks to let Bytebase post messages to the configured webhook endpoint upon various events.

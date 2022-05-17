@@ -2,8 +2,6 @@
 title: Docker (5 seconds)
 ---
 
-# Docker (5 seconds)
-
 **Latest release version:** [**1.0.5**](https://github.com/bytebase/bytebase/releases/tag/1.0.5)
 
 <hint-block type="info">
