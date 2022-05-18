@@ -11,7 +11,11 @@
     "company": "公司",
     "pricing": "价格",
     "subscribe": "订阅",
-    "databases": "数据库"
+    "databases": "数据库",
+    "for": "专为",
+    "teams": "团队",
+    "dbas": "DBA",
+    "developers": "开发者"
   },
   "slogan": {
     "safer-and-faster": "更安全更高效",
@@ -176,6 +180,8 @@
   "team": {
     "meet-our-crew": "认识我们的团队",
     "roles": {
+      "ceo": "Chief Sketching Officer",
+      "cto": "CTO",
       "community": "Community",
       "community-manager": "Community Manager",
       "engineering": "Engineering",
@@ -206,17 +212,8 @@
     "all-rights-reserved": "版权所有。"
   },
   "index-page": {
-    "main-slogan": {
-      "database-change": "数据库变更",
-      "and-version-control": "和版本管理",
-      "for": "专为",
-      "teams": "团队",
-      "bytebase-offers-a-web-based-collaboration-workspace-to-help": "Bytebase 提供了一个基于 Web 的协作工作空间来帮助",
-      "DBAs": "DBA",
-      "and": "以及",
-      "developers": "开发者",
-      "manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML": "管理应用程序数据库模式 (DDL) 和数据 (DML) 的生命周期。"
-    },
+    "title": "{slogan}数据库变更{br}以及版本控制{br}专为{teams}而设计",
+    "description": "Bytebase 提供了一个基于 Web 的协作工作空间来帮助 {dbas} 和 {developers} 管理应用程序数据库模式 (DDL) 和数据 (DML) 的生命周期。",
     "features": {
       "database-migration": {
         "slogan": "更安全、更快速的数据库迁移 - DDL、DML",
@@ -303,5 +300,69 @@
         "postgresql-feature": "是业界领先的多模型关系数据库。 除了典型的事务性工作负载，PostgreSQL 还可以处理分析、地理空间、时间序列、全文搜索等。这使得 Bytebase 只需保留一个数据库系统即可满足各种需求。"
       }
     }
+  },
+  "changelog": {
+    "next-page": "下一页"
+  },
+  "database": {
+    "clickhouse-feature": "是一个开源、高性能的柱状 OLAP 数据库管理系统，用于使用 SQL 进行实时分析。",
+    "mysql-feature": "是世界上最受欢迎的开源数据库。 Bytebase 原生支持 MySQL 数据库来管理架构更改、备份、记录迁移历史等。",
+    "postgre-feature": "是世界上最先进的开源关系数据库。 Bytebase 原生支持 PostgreSQL 数据库来管理架构更改、备份、记录迁移历史等。",
+    "snowflake-feature": "是一种基于云的数据存储和分析服务。 它允许企业用户使用基于云的硬件和软件来存储和分析数据。",
+    "tidb-feature": "是一个开源、云原生、分布式 SQL 数据库，用于弹性扩展和实时分析。 Bytebase 原生支持 TiDB 数据库管理 schema 变更、备份、记录迁移历史等。"
+  },
+  "database-review-guide": {
+    "title": "数据库审查指南",
+    "description": "DBA 生成数据库模式审查/DDL 指南的在线工具。 现在支持 MySQL，以后支持 PostgreSQL。",
+    "guideline-for": "指导方针",
+    "coming-soon": "敬请等候",
+    "your-changes-will-be-reset": "您的更改将被重置。",
+    "reset-changes": "重置更改"
+  },
+  "integration": {
+    "dingtalk-feature": "Bytebase 支持 webhook 将数据库架构相关的事件发布到配置的钉钉组。 这些 webhook 事件是专门为钉钉定制的，以显示最佳格式。",
+    "discord-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Discord 通道。 这些 webhook 事件是专门为 Discord 定制的，以显示最佳格式。",
+    "feishu-feature": "Bytebase 支持 webhook 将数据库模式相关的事件发布到配置的飞书组。 这些 webhook 事件是专门为飞书定制的，以显示最佳格式。",
+    "gitlab-feature": "Bytebase 与 GitLab 集成，允许团队管理 GitLab 存储库中的数据库迁移脚本。 在观察到新的迁移脚本推送事件时触发迁移管道，",
+    "view-detailed-guide": "查看详细指南",
+    "slack-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Slack 通道。 这些 webhook 事件是专门为 Slack 定制的，以显示最佳格式。",
+    "teams-feature": "Bytebase 支持 webhook 将与数据库架构相关的事件发布到配置的 Microsoft Teams 通道。 这些 webhook 事件是专门为 Teams 定制的，以显示最佳格式。",
+    "wecom-feature": "Bytebase 支持 webhook 将数据库模式相关事件发布到配置的 WeCom 组。 这些 webhook 事件是专门为 WeCom 定制的，以显示最佳格式。"
+  },
+  "refund": {
+    "title": "退款政策",
+    "description": "我们努力提供对您的业务有价值且易于使用的产品。如果您因任何原因对它不满意，请联系我们的{support-team}，我们会帮助到您的。",
+    "support-team": "支持团队"
+  },
+  "usecase": {
+    "dba": {
+      "title": "10 倍 DBA 运营效率",
+      "description": "Bytebase 提供了一个协作的 Web 控制台和连贯的工作流程，使 DBA 能够比传统工具更有效地管理数据库任务和处理开发人员工单。"
+    },
+    "developer": {
+      "title": "数据库架构更改的整体视图",
+      "description": "无论是在团队中作为 IC 工作还是管理自己的项目，使用 Bytebase 的开发人员都可以全面了解所有相关的数据库信息、正在进行的数据库模式更改任务和过去的数据库迁移历史。"
+    },
+    "techlead": {
+      "title": "提高团队速度并降低风险",
+      "description": "使用 Bytebase 的团队将自动遵循行业最佳实践来管理数据库架构更改。 技术主管将看到改进的开发速度并减少由数据库更改引起的中断。"
+    }
+  },
+  "about": {
+    "why-we-build-title": "我们为什么要建立",
+    "why-we-build": "虽然已经有很多商业和开源数据库引擎来服务亿万用户，但是还没有一款工具能做到 {reliable} {consistent} {auditable} 的数据库 Schema 改动。并且现在还有很多团队直接连接到数据库进行操作。这么操作是挺快的，直到出事故！",
+    "reliable": "稳定、",
+    "consistent": "一致、",
+    "auditable": "可审计",
+    "what-is": "什么是",
+    "gitlab-for-database": "对应数据库而不是代码？",
+    "figma-for-dba": "对应 DBAs 而不是设计师？",
+    "terraform-for-database-as-code": "对应 Database-as-Code 而不是 Infrastructure-as-Code？",
+    "there-is-no-good-answer": "确实没有一个很好的答案。",
+    "porsche-example": "比如，保时捷跑车有很好的引擎。但只有配备了很好的轮子和刹车才能提供一个安全和舒适的驾驶体验。 这也是 {bytebase} 想要实现的，用最好的轮子和刹车去配上数据库引擎才能提升研发效率和体验。"
+  },
+  "brand": {
+    "bytebase-brand": "Bytebase 品牌",
+    "download-brand-kit": "下载品牌素材资源"
   }
 }

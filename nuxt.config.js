@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import slug from "slug";
+import { camelCase } from "lodash";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -101,7 +102,7 @@ export default {
   },
 
   content: {
-    dir: "docs",
+    dir: "content",
     liveEdit: false,
   },
 
@@ -168,7 +169,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // Plugin for vue-gtag
-    { src: "~/plugin/vue-gtag" },
+    "~/plugin/vue-gtag",
+    "~/plugin/vue-instantsearch.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -183,6 +185,7 @@ export default {
     "@nuxtjs/composition-api/module",
     "@pinia/nuxt",
     "@nuxtjs/google-analytics",
+    "@nuxtjs/web-vitals",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -194,7 +197,9 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ["vue-instantsearch", "instantsearch.js/es"],
+  },
 
   plausible: {
     // see configuration section
@@ -234,6 +239,40 @@ export default {
     // copy /static to ./dist/static in generation folder.
     generate: {
       async done() {
+        try {
+          // Patch docs index objects of algolia.
+          const { $content } = require("@nuxt/content");
+          const data = await $content("docs", {
+            deep: true,
+          })
+            .where({ slug: { $regex: /^(?!_)/ } })
+            .fetch();
+
+          const algoliasearch = require("algoliasearch");
+          const client = algoliasearch(
+            "2M7XI1QIDY",
+            process.env.ALGOLIA_ADMIN_API_KEY
+          );
+
+          const index = client.initIndex("bytebase-docs");
+          await index.clearObjects();
+          await index.saveObjects(
+            data.map((item) => {
+              return {
+                objectID: item.path,
+                slug: item.slug,
+                title: item.title,
+                path: item.path,
+                tags: item.tags,
+                bodyPlainText: item.bodyPlainText,
+              };
+            })
+          );
+        } catch (error) {
+          // We already have a complete data.
+          // So if failed in patch, then do nothing.
+        }
+
         console.log("Copying ./static folder to ./dist/static/");
         try {
           await fse.copy("./static", "./dist/static");
@@ -242,6 +281,32 @@ export default {
           console.error("Copy failed, err", error);
         }
       },
+    },
+    "content:file:beforeInsert": (document) => {
+      if (document.extension === ".md") {
+        const removeMd = require("remove-markdown");
+        document.bodyPlainText = removeMd(document.text);
+
+        if (document.tags) {
+          document.tags = document.tags.split(", ");
+        } else {
+          const invalidTags = ["en", "zh"];
+          const rawTags = document.dir.split("/");
+          const tags = [];
+          for (const tag of rawTags) {
+            if (tag && !invalidTags.includes(tag)) {
+              tags.push(tag);
+            }
+          }
+          document.tags = tags;
+        }
+
+        for (const key of Object.keys(document)) {
+          if (key !== camelCase(key)) {
+            document[camelCase(key)] = document[key];
+          }
+        }
+      }
     },
   },
 };

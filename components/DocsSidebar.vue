@@ -4,6 +4,14 @@
     ref="sidebarElRef"
     class="relative pb-6 w-full h-full flex flex-col flex-shrink-0 bg-gray-50 border-r border-gray-200 transition-all overflow-y-auto"
   >
+    <a
+      v-if="shouldShowBackToMainDocs"
+      :href="localePath('/docs/what-is-bytebase/')"
+      exact
+      class="pl-6 pr-1 mt-3 py-2 text-gray-500 text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-accent"
+    >
+      <span>← back to main docs</span>
+    </a>
     <!-- Render document tree. We only support 3 level folder. -->
     <div
       v-for="node in documentTreeRoot.children"
@@ -18,30 +26,48 @@
           handleLinkClick();
         "
       >
-        <span
-          v-if="!node.path"
-          class="pl-3 pr-1 py-2 block text-gray-600 font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
-          >{{ node.title }}</span
+        <div
+          v-if="node.type === 'text'"
+          class="pl-3 py-2 w-full flex flex-row justify-between items-start text-gray-600 font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
         >
+          <span class="pr-1 leading-6">{{ node.title }}</span>
+          <span
+            v-if="node.children.length !== 0"
+            class="flex-shrink-0 h-6 mr-5 flex flex-row justify-center items-center cursor-pointer select-none"
+            @click.prevent.stop="node.displayChildren = !node.displayChildren"
+          >
+            <img
+              class="relative w-4 h-auto transition-all opacity-60"
+              :class="node.displayChildren ? 'rotate-90-arrow' : ''"
+              src="~/assets/svg/chevron-right.svg"
+              alt="toggle"
+            />
+          </span>
+        </div>
         <nuxt-link
           v-else
-          :to="localePath(`/docs${node.path}`)"
-          class="pl-3 pr-1 py-2 text-gray-600 flex-grow font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
+          :to="
+            node.type === 'page-link'
+              ? localePath(`/docs${node.path}`)
+              : { hash: node.path }
+          "
+          exact
+          class="pl-3 py-2 w-full flex flex-row justify-between items-start text-gray-600 font-bold text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-gray-700"
         >
-          <span>{{ node.title }}</span>
+          <span class="pr-1 leading-6">{{ node.title }}</span>
+          <span
+            v-if="node.children.length !== 0"
+            class="flex-shrink-0 h-6 mr-5 flex flex-row justify-center items-center cursor-pointer select-none"
+            @click.prevent.stop="node.displayChildren = !node.displayChildren"
+          >
+            <img
+              class="relative w-4 h-auto transition-all opacity-60"
+              :class="node.displayChildren ? 'rotate-90-arrow' : ''"
+              src="~/assets/svg/chevron-right.svg"
+              alt="toggle"
+            />
+          </span>
         </nuxt-link>
-        <span
-          v-if="node.children.length !== 0"
-          class="flex-shrink-0 mr-5 py-2 pt-3 cursor-pointer select-none"
-          @click.prevent.stop="node.displayChildren = !node.displayChildren"
-        >
-          <img
-            class="relative w-4 h-auto transition-all opacity-60"
-            :class="node.displayChildren ? 'rotate-90-arrow' : ''"
-            src="~/assets/svg/chevron-right.svg"
-            alt="toggle"
-          />
-        </span>
       </div>
       <div
         v-for="subnode in node.children"
@@ -58,7 +84,11 @@
           "
         >
           <nuxt-link
-            :to="localePath(`/docs${subnode.path}`)"
+            :to="
+              subnode.type === 'page-link'
+                ? localePath(`/docs${subnode.path}`)
+                : { hash: subnode.path }
+            "
             class="pl-3 pr-1 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ subnode.title }}</span>
@@ -87,7 +117,11 @@
           @click="handleLinkClick"
         >
           <nuxt-link
-            :to="localePath(`/docs${leafnode.path}`)"
+            :to="
+              leafnode.type === 'page-link'
+                ? localePath(`/docs${leafnode.path}`)
+                : { hash: leafnode.path }
+            "
             class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ leafnode.title }}</span>
@@ -100,22 +134,28 @@
 
 <script lang="ts">
 import {
+  computed,
   defineComponent,
   ref,
-  nextTick,
   onMounted,
   useContext,
   useFetch,
+  watch,
 } from "@nuxtjs/composition-api";
 import { last } from "lodash";
 import { useStore } from "~/store";
 import { ContentDocument, DocumentTreeNode } from "~/types/docs";
+import { validDocsCategoryList } from "~/common/const";
 
-const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
+const getDocumentTreeRoot = (
+  documentList: any[],
+  expandAll = false
+): DocumentTreeNode => {
   if (!documentList || !Array.isArray(documentList)) {
     return {
       path: "",
       title: "",
+      type: "text",
       children: [],
       displayChildren: true,
     };
@@ -124,6 +164,7 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
   const documentTreeRoot = {
     path: "",
     title: "",
+    type: "text",
     children: [],
     displayChildren: true,
   } as DocumentTreeNode;
@@ -133,8 +174,9 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
       documentTreeRoot.children.push({
         title: document.title,
         path: document.path,
+        type: document.type,
         children: [],
-        displayChildren: false,
+        displayChildren: expandAll,
       });
     } else if (document.level === 2) {
       const parentNode = last(documentTreeRoot.children);
@@ -142,8 +184,9 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
         parentNode.children.push({
           title: document.title,
           path: document.path,
+          type: document.type,
           children: [],
-          displayChildren: false,
+          displayChildren: expandAll,
         });
       }
     } else if (document.level === 3) {
@@ -152,8 +195,9 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
         parentNode.children.push({
           title: document.title,
           path: document.path,
+          type: document.type,
           children: [],
-          displayChildren: false,
+          displayChildren: expandAll,
         });
       }
     }
@@ -165,19 +209,24 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
 export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
-    const { $content, app, route } = useContext();
+    const { $content, route } = useContext();
     const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
     const documentTreeRoot = ref<DocumentTreeNode>();
 
+    const category = route.value.params.category;
+    const shouldShowBackToMainDocs = computed(() =>
+      validDocsCategoryList.includes(category)
+    );
+
     useFetch(async () => {
       // Valid category for separate menu items. e.g. "cli"
       // Now we don't have a needed and finished submenus, so it's empty.
-      const validCategoryList: string[] = [];
-      const category = route.value.params.category;
+      const locale = "en";
       const layout = (await $content(
-        app.i18n.locale,
-        validCategoryList.includes(category) ? category : "",
+        "docs",
+        locale,
+        validDocsCategoryList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
@@ -193,8 +242,15 @@ export default defineComponent({
           const child = n.children[1];
           let path = undefined;
           let title = "";
+          let type = "text";
           if (child.type !== "text") {
-            path = child.props.to;
+            if (child.props.to) {
+              type = "page-link";
+              path = child.props.to;
+            } else {
+              type = "hash-link";
+              path = child.props.href;
+            }
             title = child.children[0].value;
           } else {
             title = child.value;
@@ -204,13 +260,17 @@ export default defineComponent({
             level,
             title,
             path,
+            type,
           };
         });
 
-      documentTreeRoot.value = getDocumentTreeRoot(nodes) as DocumentTreeNode;
+      documentTreeRoot.value = getDocumentTreeRoot(
+        nodes,
+        layout.expandAll
+      ) as DocumentTreeNode;
     });
 
-    onMounted(async () => {
+    const relocateSidebar = () => {
       const pathname = window.location.pathname;
 
       if (documentTreeRoot.value) {
@@ -231,27 +291,33 @@ export default defineComponent({
         }
       }
 
-      nextTick(() => {
-        if (!sidebarElRef.value) {
-          return;
+      if (!sidebarElRef.value) {
+        return;
+      }
+
+      for (const anchorEl of Array.from(
+        sidebarElRef.value.querySelectorAll("a")
+      )) {
+        let href = anchorEl.getAttribute("href");
+        if (pathname.endsWith("/")) {
+          href = href + "/";
         }
 
-        for (const anchorEl of Array.from(
-          sidebarElRef.value.querySelectorAll("a")
-        )) {
-          let href = anchorEl.getAttribute("href");
-          if (pathname.endsWith("/")) {
-            href = href + "/";
+        if (pathname === href) {
+          if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
+            sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
           }
-
-          if (pathname === href) {
-            if (anchorEl.offsetTop > sidebarElRef.value.clientHeight) {
-              sidebarElRef.value.scrollTo(0, anchorEl.offsetTop / 1.5);
-            }
-            break;
-          }
+          break;
         }
-      });
+      }
+    };
+
+    onMounted(() => {
+      relocateSidebar();
+    });
+
+    watch(route, () => {
+      relocateSidebar();
     });
 
     const handleLinkClick = () => {
@@ -265,6 +331,7 @@ export default defineComponent({
     return {
       documentTreeRoot,
       sidebarElRef,
+      shouldShowBackToMainDocs,
       handleLinkClick,
       handleSearchBtnClick,
     };

@@ -4,11 +4,10 @@
       <h1
         class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        Database Review Guide
+        {{ $t("database-review-guide.title") }}
       </h1>
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-        An online tool for DBA to generate the database schema review / DDL
-        guideline. Support MySQL now, PostgreSQL later.
+        {{ $t("database-review-guide.description") }}
       </h2>
     </div>
     <div
@@ -23,7 +22,9 @@
       >
         <img class="h-24" src="~/assets/schema-system/mysql.webp" alt="" />
         <div class="mt-4">
-          <span class="text-lg lg:text-xl">Guideline for</span>
+          <span class="text-lg lg:text-xl">{{
+            $t("database-review-guide.guideline-for")
+          }}</span>
           <span
             class="text-indigo-600 text-lg lg:text-xl"
             style="
@@ -41,7 +42,9 @@
 
       <div class="rounded-lg p-6 flex flex-col justify-center items-center">
         <img class="h-24" src="~/assets/schema-system/postgres.webp" alt="" />
-        <div class="mt-4 text-lg lg:text-xl">coming soon</div>
+        <div class="mt-4 text-lg lg:text-xl">
+          {{ $t("database-review-guide.coming-soon") }}
+        </div>
       </div>
     </div>
     <div class="mt-10 pt-10 border-t border-gray-200">
@@ -59,12 +62,12 @@
       @close="state.openWarningModal = false"
     >
       <div>
-        Your changes will be reset.
+        {{ $t("database-review-guide.your-changes-will-be-reset") }}
         <ActionButton
           :class-names="['text-white bg-red-600 hover:bg-red-700 ml-auto mt-5']"
           @click="onReset"
         >
-          Reset changes
+          {{ $t("database-review-guide.reset-changes") }}
         </ActionButton>
       </div>
     </Modal>

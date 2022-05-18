@@ -14,7 +14,7 @@
           <h1>
             <span
               class="block text-2xl text-center text-indigo-600 font-semibold tracking-wide uppercase"
-              >Why we build</span
+              >{{ $t("about.why-we-build-title") }}</span
             >
           </h1>
           <blockquote class="mt-10">
@@ -22,19 +22,28 @@
               class="max-w-5xl mx-auto text-left text-2xl leading-9 text-gray-900"
             >
               <p class="mt-6">
-                While we have a plethora of commercial and open-source database
-                engines serving billions of users, our tooling around making
-                <span class="underline inline font-semibold">reliable</span>,
-                <span class="underline inline font-semibold">consistent</span>,
-                <span class="underline inline font-semibold"></span
-                ><span class="underline inline font-semibold">auditable</span>
-                application database schema changes is embarrassing. And today
-                many teams are still connecting to the production DB and
-                applying changes directly. Quick and dirty, until BOMB!
+                <i18n path="about.why-we-build" tag="h1">
+                  <template #reliable>
+                    <span class="underline inline font-semibold">{{
+                      $t("about.reliable")
+                    }}</span>
+                  </template>
+                  <template #consistent>
+                    <span class="underline inline font-semibold">{{
+                      $t("about.consistent")
+                    }}</span>
+                  </template>
+                  <template #auditable>
+                    <span class="underline inline font-semibold"></span
+                    ><span class="underline inline font-semibold">{{
+                      $t("about.auditable")
+                    }}</span>
+                  </template>
+                </i18n>
               </p>
               <p class="mt-6"></p>
               <p class="mt2">
-                What's the
+                {{ $t("about.what-is") }}
                 <a
                   href="https://about.gitlab.com"
                   target="_blank"
@@ -45,10 +54,10 @@
                   "
                   >GitLab</a
                 >
-                for database instead of code?
+                {{ $t("about.gitlab-for-database") }}
               </p>
               <p class="mt-2">
-                What's the
+                {{ $t("about.what-is") }}
                 <a
                   href="https://figma.com"
                   target="_blank"
@@ -59,10 +68,10 @@
                   "
                   >Figma</a
                 >
-                for DBAs instead of designers?
+                {{ $t("about.figma-for-dba") }}
               </p>
               <p class="mt-2">
-                What's the
+                {{ $t("about.what-is") }}
                 <a
                   href="https://terraform.io"
                   target="_blank"
@@ -73,25 +82,24 @@
                   "
                   >Terraform</a
                 >
-                for Database-as-Code instead of Infrastructure-as-Code?
+                {{ $t("about.terraform-for-database-as-code") }}
               </p>
 
-              <p class="mt-6">There was no really good answer.</p>
+              <p class="mt-6">{{ $t("about.there-is-no-good-answer") }}</p>
               <p class="mt-6">
-                It's like a Porsche with a good engine, but only paired with the
-                handy wheel and brake, can it deliver a safe and pleasant
-                driving experience. And that's what
-                <span
-                  class="text-indigo-600 font-semibold"
-                  style="
-                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                  "
-                  >Bytebase</span
-                >
-                tries to achieve, to pair the database engine with the proper
-                wheel and brake to improve the development velocity and
-                experience.
+                <i18n path="about.porsche-example" tag="h1">
+                  <template #bytebase>
+                    <span
+                      class="text-indigo-600 font-semibold"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
+                    >
+                      {{ $t("common.bytebase") }}</span
+                    >
+                  </template>
+                </i18n>
               </p>
             </div>
           </blockquote>

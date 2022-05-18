@@ -11,7 +11,11 @@
     "company": "Company",
     "pricing": "Pricing",
     "subscribe": "Subscribe",
-    "databases": "Databases"
+    "databases": "Databases",
+    "for": "for",
+    "teams": "Teams",
+    "dbas": "DBAs",
+    "developers": "Developers"
   },
   "slogan": {
     "safer-and-faster": "Safer and Faster",
@@ -176,6 +180,8 @@
   "team": {
     "meet-our-crew": "Meet our crew",
     "roles": {
+      "ceo": "Chief Sketching Officer",
+      "cto": "CTO",
       "community": "Community",
       "community-manager": "Community Manager",
       "engineering": "Engineering",
@@ -206,17 +212,8 @@
     "all-rights-reserved": "All rights reserved."
   },
   "index-page": {
-    "main-slogan": {
-      "database-change": "Database Change",
-      "and-version-control": "and Version Control",
-      "for": "for",
-      "teams": "Teams",
-      "bytebase-offers-a-web-based-collaboration-workspace-to-help": "Bytebase offers a web-based collaboration workspace to help",
-      "DBAs": "DBAs",
-      "and": "and",
-      "developers": "Developers",
-      "manage-the-lifecycle-of-application-database-schemas-DDL-and-data-DML": "manage the lifecycle of application database schemas (DDL) and data (DML)."
-    },
+    "title": "{slogan}Database Change {br}and Version Control {br}for {teams}",
+    "description": "Bytebase offers a web-based collaboration workspace to help {dbas} and {developers} manage the lifecycle of application database schemas (DDL) and data (DML).",
     "features": {
       "database-migration": {
         "slogan": "Safer and faster database migration - DDL and DML",
@@ -303,5 +300,69 @@
         "postgresql-feature": "is the industry leading multi-model relational database. In addition to the typical transactional workload, PostgreSQL can also handle analytical, geospatial, time series, full text search and etc. This allows Bytebase to only keep a single database system to fulfill all sorts of requirements."
       }
     }
+  },
+  "changelog": {
+    "next-page": "Next page"
+  },
+  "database": {
+    "clickhouse-feature": "is an open-source, high performance columnar OLAP database management system for real-time analytics using SQL.",
+    "mysql-feature": "is the world's most popular open source database. Bytebase supports MySQL database natively to manage schema changes, backups, record migration history and etc.",
+    "postgre-feature": "is the world's most advanced open source relational database. Bytebase supports PostgreSQL database natively to manage schema changes, backups, record migration history and etc.",
+    "snowflake-feature": "is a cloud-based data storage and analytics service. It allows corporate users to store and analyze data using cloud-based hardware and software.",
+    "tidb-feature": "is an open-source, cloud-native, distributed SQL database for elastic scale and real-time analytics. Bytebase supports TiDB database natively to manage schema changes, backups, record migration history and etc."
+  },
+  "database-review-guide": {
+    "title": "Database Review Guide",
+    "description": "An online tool for DBA to generate the database schema review / DDL guideline. Support MySQL now, PostgreSQL later.",
+    "guideline-for": "Guideline for",
+    "coming-soon": "coming soon",
+    "your-changes-will-be-reset": "Your changes will be reset.",
+    "reset-changes": "Reset changes"
+  },
+  "integration": {
+    "dingtalk-feature": "Bytebase supports webhook to post database schema related events to the configured DingTalk group. Those webhook events are specifically customized for DingTalk in order to display the optimal format.",
+    "discord-feature": "Bytebase supports webhook to post database schema related events to the configured Discord channel. Those webhook events are specifically customized for Discord in order to display the optimal format.",
+    "feishu-feature": "Bytebase supports webhook to post database schema related events to the configured Feishu group. Those webhook events are specifically customized for Feishu in order to display the optimal format.",
+    "gitlab-feature": "Bytebase integrates with GitLab to allow team to manage database migration scripts in the GitLab repository. Migration pipeline is triggered on observing new migration script push event,",
+    "view-detailed-guide": "View detailed guide",
+    "slack-feature": "Bytebase supports webhook to post database schema related events to the configured Slack channel. Those webhook events are specifically customized for Slack in order to display the optimal format.",
+    "teams-feature": "Bytebase supports webhook to post database schema related events to the configured Microsoft Teams channel. Those webhook events are specifically customized for Teams in order to display the optimal format.",
+    "wecom-feature": "Bytebase supports webhook to post database schema related events to the configured WeCom group. Those webhook events are specifically customized for WeCom in order to display the optimal format."
+  },
+  "refund": {
+    "title": "Refund policy",
+    "description": "We try to deliver a product valuable to your business and delightful to use. If you're ever unhappy with it for any reason, just contact our {support-team} and we'll take care of you.",
+    "support-team": "support team"
+  },
+  "usecase": {
+    "dba": {
+      "title": "10x DBA operational efficiency",
+      "description": "Bytebase provides a collaborative web-console and cohensive workflow to allow DBA to manage database tasks and handle developer tickets much more efficently than traditonal tools."
+    },
+    "developer": {
+      "title": "Holistic view of database schema changes",
+      "description": "Regardless of working as an IC in a team or managing your own side project, developers using Bytebase will have a holistic view of all the related database info, the ongoing database schema change tasks and the past database migration history."
+    },
+    "techlead": {
+      "title": "Improve team velocity and reduce risk",
+      "description": "Teams using Bytebase will automatically follow industry best practice for managing database schema changes. Tech leads will see an improved development velocity and reduced outages caused by database changes."
+    }
+  },
+  "about": {
+    "why-we-build-title": "Why we build",
+    "why-we-build": "While we have a plethora of commercial and open-source database engines serving billions of users, our tooling around making {reliable} {consistent} {auditable} application database schema changes is embarrassing. And today many teams are still connecting to the production DB and applying changes directly. Quick and dirty, until BOMB!",
+    "reliable": "reliable,",
+    "consistent": "consistent,",
+    "auditable": "auditable",
+    "what-is": "What's the",
+    "gitlab-for-database": "for database instead of code?",
+    "figma-for-dba": "for DBAs instead of designers?",
+    "terraform-for-database-as-code": "for Database-as-Code instead of Infrastructure-as-Code?",
+    "there-is-no-good-answer": "There was no really good answer.",
+    "porsche-example": "It's like a Porsche with a good engine, but only paired with the handy wheel and brake, can it deliver a safe and pleasant driving experience. And that's what {bytebase} tries to achieve, to pair the database engine with the proper wheel and brake to improve the development velocity and experience."
+  },
+  "brand": {
+    "bytebase-brand": "Bytebase Brand",
+    "download-brand-kit": "Download Brand Kit"
   }
 }

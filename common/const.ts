@@ -1,2 +1,2 @@
-// headerDocumentSuffix is the header document suffix and using to check is header.
-export const headerDocumentSuffix = "/overview";
+// Valid documention submenu category list.
+export const validDocsCategoryList: string[] = ["cli"];

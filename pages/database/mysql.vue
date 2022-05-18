@@ -16,9 +16,7 @@
         <a href="https://mysql.com/" target="__blank" class="text-indigo-500"
           >MySQL</a
         >
-        is the world's most popular open source database. Bytebase supports
-        MySQL database natively to manage schema changes, backups, record
-        migration history and etc.
+        {{ $t("database.mysql-feature") }}
       </h2>
       <div
         class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"

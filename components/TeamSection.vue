@@ -81,104 +81,20 @@ import {
   ref,
   onMounted,
 } from "@nuxtjs/composition-api";
-import { shuffle } from "lodash";
+import { shuffle, lowerCase } from "lodash";
+import teammateList from "~/common/teammate";
 
 export default defineComponent({
   setup() {
     const { app } = useContext();
 
-    const people = [
-      {
-        name: "Tianzhou",
-        role: "Chief Sketching Officer",
-        imageUrl: "tianzhou.webp",
-      },
-      {
-        name: "Danny",
-        role: "CTO",
-        imageUrl: "danny.webp",
-      },
-      {
-        name: "Ningjing",
-        role: app.i18n.t("team.roles.community-manager"),
-        imageUrl: "ningjing.webp",
-      },
-      {
-        name: "Zhe",
-        role: app.i18n.t("team.roles.engineering-intern"),
-        imageUrl: "xingzhe.webp",
-      },
-      {
-        name: "Zilong",
-        role: app.i18n.t("team.roles.engineering-intern"),
-        imageUrl: "zilong.webp",
-      },
-      {
-        name: "Ji",
-        role: app.i18n.t("team.roles.engineering"),
-        imageUrl: "ji.webp",
-      },
-      {
-        name: "???",
-        role: app.i18n.t("team.roles.special-agent"),
-        imageUrl: "yaping.webp",
-      },
-      {
-        name: "Edward",
-        role: app.i18n.t("team.roles.engineering"),
-        imageUrl: "edward.webp",
-      },
-      {
-        name: "Steven",
-        role: app.i18n.t("team.roles.engineering-intern"),
-        imageUrl: "steven.webp",
-      },
-      {
-        name: "Ray",
-        role: app.i18n.t("team.roles.community-intern"),
-        imageUrl: "ray.webp",
-      },
-      {
-        name: "Qiaosheng",
-        role: app.i18n.t("team.roles.engineering-intern"),
-        imageUrl: "qiaosheng.webp",
-      },
-      {
-        name: "Lucy",
-        role: app.i18n.t("team.roles.community-intern"),
-        imageUrl: "lucy.webp",
-      },
-      {
-        name: "Elon",
-        role: app.i18n.t("team.roles.engineering"),
-        imageUrl: "elon.webp",
-      },
-      {
-        name: "Zipeng",
-        role: app.i18n.t("team.roles.engineering-intern"),
-        imageUrl: "zipeng.webp",
-      },
-      {
-        name: "Junyi",
-        role: app.i18n.t("team.roles.engineering"),
-        imageUrl: "junyi.webp",
-      },
-      {
-        name: "Changyu",
-        role: app.i18n.t("team.roles.solution-architect"),
-        imageUrl: "changyu.webp",
-      },
-      {
-        name: "Candy",
-        role: app.i18n.t("team.roles.product-manager"),
-        imageUrl: "candy.webp",
-      },
-      {
-        name: "Mila",
-        role: app.i18n.t("team.roles.community"),
-        imageUrl: "mila.webp",
-      },
-    ];
+    const people = teammateList.map((t) => {
+      return {
+        ...t,
+        role: app.i18n.t(t.role),
+        imageUrl: lowerCase(t.name) + ".webp",
+      };
+    });
 
     const YOU = {
       name: "You",

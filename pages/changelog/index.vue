@@ -6,14 +6,14 @@
         <h1
           class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
         >
-          Bytebase Changelog
+          Bytebase {{ $t("common.changelog") }}
         </h1>
         <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
           <span
             class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >Safer and faster</span
+            >{{ $t("slogan.safer-and-faster") }}</span
           >
-          database change and version control for DBAs and Developers.
+          {{ $t("slogan.mission") }}
         </h2>
         <div class="mt-8">
           <SubscribeSection :module-name="'subscribe.changelog'" />
@@ -29,7 +29,7 @@
               class="flex flex-col col-span-3 overflow-hidden"
             >
               <nuxt-link
-                :to="localePath(`changelog/${post.slug}`)"
+                :to="localePath(`/changelog/${post.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
                 <div
@@ -65,7 +65,7 @@
               </nuxt-link>
               <nuxt-link
                 v-if="post.feature_image"
-                :to="localePath(`changelog/${post.slug}`)"
+                :to="localePath(`/changelog/${post.slug}`)"
                 class="flex-shrink-0 py-6"
               >
                 <div class="flex justify-center items-center">
@@ -86,9 +86,9 @@
       </div>
       <div v-if="!lastPage" class="py-12">
         <nuxt-link
-          :to="localePath(`changelog?page=${page + 1}`)"
+          :to="localePath(`/changelog?page=${page + 1}`)"
           class="text-xl text-indigo-600"
-          >Next page</nuxt-link
+          >{{ $t("changelog.next-page") }}</nuxt-link
         >
       </div>
     </div>
