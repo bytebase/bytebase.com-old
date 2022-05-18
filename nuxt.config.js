@@ -287,8 +287,10 @@ export default {
         const removeMd = require("remove-markdown");
         document.bodyPlainText = removeMd(document.text);
 
-        const invalidTags = ["en", "zh"];
-        if (!Array.isArray(document.tags)) {
+        if (document.tags) {
+          document.tags = document.tags.split(", ");
+        } else {
+          const invalidTags = ["en", "zh"];
           const rawTags = document.dir.split("/");
           const tags = [];
           for (const tag of rawTags) {

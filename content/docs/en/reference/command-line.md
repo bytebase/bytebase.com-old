@@ -6,7 +6,11 @@ The "help" command prints all applicable options
 
 ```bash
 $ ./bytebase help
+```
 
+And the output will look like this:
+
+```plain
 Bytebase is a database schema change and version control tool
 
 Usage:

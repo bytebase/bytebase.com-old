@@ -248,9 +248,10 @@ export default defineComponent({
         });
       }
 
-      // Add `Copy` button for each pre element.
-      const preElementNodeList =
-        ducumentContainerRef.value?.querySelectorAll("pre");
+      // Add the `Copy` button for pre elements without plain language.
+      const preElementNodeList = ducumentContainerRef.value?.querySelectorAll(
+        "pre:not(.language-plain)"
+      );
       if (preElementNodeList && preElementNodeList.length > 0) {
         const preElementList = Array.from(preElementNodeList);
         for (const preElement of preElementList) {
@@ -260,7 +261,7 @@ export default defineComponent({
           preElement.parentElement?.appendChild(copyBtn);
           copyBtn.addEventListener("click", async () => {
             if (navigator.clipboard) {
-              let text = preElement.innerText;
+              let text = (preElement as HTMLElement).innerText;
               if (text.startsWith("$ ")) {
                 text = text.slice(2);
               }
@@ -313,14 +314,16 @@ export default defineComponent({
 </script>
 
 <style>
-@import "~/assets/css/github-markdown-style.css";
-
 .nuxt-content .nuxt-content-highlight {
   @apply relative;
 }
 .nuxt-content .copy-btn {
   @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;
 }
+</style>
+
+<style scoped>
+@import "~/assets/css/github-markdown-style.css";
 
 .nuxt-content h2 > a:first-child:before,
 .nuxt-content h3 > a:first-child:before {

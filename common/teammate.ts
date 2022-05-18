@@ -1,4 +1,4 @@
-import { template } from "lodash";
+import { camelCase } from "lodash";
 
 const teammateList = [
   {
@@ -73,7 +73,7 @@ const teammateList = [
 
 export const getTeammateByName = (name: string) => {
   for (const teammate of teammateList) {
-    if (template.name === name) {
+    if (camelCase(teammate.name) === camelCase(name)) {
       return teammate;
     }
   }
