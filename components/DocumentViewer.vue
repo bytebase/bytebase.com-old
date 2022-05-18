@@ -261,10 +261,7 @@ export default defineComponent({
           preElement.parentElement?.appendChild(copyBtn);
           copyBtn.addEventListener("click", async () => {
             if (navigator.clipboard) {
-              let text = (preElement as HTMLElement).innerText;
-              if (text.startsWith("$ ")) {
-                text = text.slice(2);
-              }
+              const text = (preElement as HTMLElement).innerText;
               await navigator.clipboard.writeText(text);
             }
             copyBtn.innerText = "Copied";
@@ -316,6 +313,10 @@ export default defineComponent({
 <style>
 .nuxt-content .nuxt-content-highlight {
   @apply relative;
+}
+.nuxt-content .nuxt-content-highlight pre.language-bash code::before {
+  @apply text-gray-400;
+  content: "$ ";
 }
 .nuxt-content .copy-btn {
   @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;

@@ -12,13 +12,13 @@ This page contains a getting-started covering frequently used commands, followed
 To install bb, just paste the following command in a macOS Terminal or Linux shell prompt:
 
 ```bash
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
 ```
 
 This installs bb in `/usr/local/bin`. Run `bb --help` to check if bb is installed:
 
 ```bash
-$ bb --help
+bb --help
 ```
 
 And the output will look like this:
@@ -44,7 +44,7 @@ Use "bb [command] --help" for more information about a command.
 To use bb, you need a database. You can start an empty MySQL docker container (make sure the Docker Engine is running):
 
 ```bash
-$ docker run -d \
+docker run -d \
   -e MYSQL_ROOT_PASSWORD=passwd \
   -p 3306:3306 \
   --platform=linux/amd64 \
@@ -54,14 +54,14 @@ $ docker run -d \
 After the MySQL server has started, you can restore an example database from our quickstart:
 
 ```bash
-$ curl -O https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/test_schema/mysql/1_todo.sql
-$ bb restore --dsn mysql://root:passwd@localhost:3306 --file 1_todo.sql
+curl -O https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/test_schema/mysql/1_todo.sql
+bb restore --dsn mysql://root:passwd@localhost:3306 --file 1_todo.sql
 ```
 
 To view the current schema, you can dump schema to stdout:
 
 ```bash
-$ bb dump --dsn mysql://root:passwd@localhost:3306/ --schema-only
+bb dump --dsn mysql://root:passwd@localhost:3306/ --schema-only
 --
 -- Table structure for `author`
 --
@@ -76,7 +76,7 @@ CREATE TABLE `author` (
 Say you want to add a `phone_no` column to the table `author`. This is a so-called **database migration** and you can use `bb migrate` to do so:
 
 ```bash
-$ bb migrate \
+bb migrate \
   --dsn mysql://user:passwd@localhost:3306/bytebase_test_todo \
   --command “ALTER TABLE author ADD COLUMN phone_no VARCHAR(15);”
 ```
@@ -84,7 +84,7 @@ $ bb migrate \
 After migration, you can dump again to check if the migration has executed successfully:
 
 ```bash
-$  bb dump --dsn mysql://root:passwd@localhost:3306/bytebase_test_todo --schema-only
+bb dump --dsn mysql://root:passwd@localhost:3306/bytebase_test_todo --schema-only
 --
 -- Table structure for `author`
 --
@@ -151,14 +151,14 @@ Internally, every `migrate` command will be recorded in history. It is recommend
 #### Usage
 
 ```bash
-$ bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
+bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
   --command “ALTER TABLE author ADD COLUMN phone_no VARCHAR(15);”
 ```
 
 Apply SQL command to the given database.
 
 ```bash
-$ bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
+bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
   --file migrate_v1_0_1.sql
 ```
 
@@ -181,13 +181,13 @@ This command is used to back up a database. When given no output file and only d
 #### Usage
 
 ```bash
-$ bb dump --dsn mysql://root@localhost:3306/ --file backup.sql
+bb dump --dsn mysql://root@localhost:3306/ --file backup.sql
 ```
 
 Dump the schema and data from all databases in localhost:3306 mysql, to `backup.sql`.
 
 ```bash
-$ bb dump --dsn mysql://root@localhost:3306/bytebase_test_todo --schema-only
+bb dump --dsn mysql://root@localhost:3306/bytebase_test_todo --schema-only
 ```
 
 Print the schema of database `bytebase_test_todo` to stdout.
@@ -207,7 +207,7 @@ Internally, `restore` command will NOT be recorded. It is recommended that `rest
 #### Usage
 
 ```bash
-$ bb restore --dsn mysql://root@localhost:3306/ \
+bb restore --dsn mysql://root@localhost:3306/ \
   --file backup.sql
 ```
 

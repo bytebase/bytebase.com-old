@@ -8,8 +8,8 @@ When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may enc
 
 This is a common problem in the old GitLab verison:
 
-* https://gitlab.com/gitlab-org/gitlab-foss/-/issues/19470
-* https://gitlab.com/gitlab-org/gitlab/-/issues/300077
+- https://gitlab.com/gitlab-org/gitlab-foss/-/issues/19470
+- https://gitlab.com/gitlab-org/gitlab/-/issues/300077
 
 ## Verify the problem
 
@@ -59,4 +59,3 @@ sudo nginx -s reload
 ---
 
 Afterwards, try the GitLab setup again.
-

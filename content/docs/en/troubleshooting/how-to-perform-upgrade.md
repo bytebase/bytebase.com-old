@@ -29,9 +29,9 @@ If you are just testing out Bytebase and don't need the existing data, you can j
 
 The data is stored under the [--data](https://docs.bytebase.com/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory. By default, it's the same directory where the bytebase binary runs. Just remove the 3 files:
 
-* bytebase.db
-* bytebase.db-shm
-* bytebase.db-wal
+- bytebase.db
+- bytebase.db-shm
+- bytebase.db-wal
 
 ![Screenshot](https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/reset-bytebase-data.png)
 
@@ -46,4 +46,3 @@ Then the data is stored under `~/.bytebase/data`. So you just need to run `rm -r
 ### Option 2 - Upgrade the existing data
 
 If you have already seriously used Bytebase in production and want to keep the existing data. First **thank you** for being our early adopters, and just email us at support@bytebase.com. We will help you offline to migrate the data to the latest version.
-

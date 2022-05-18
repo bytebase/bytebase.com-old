@@ -11,7 +11,7 @@ When running on docker, the --publish \{{hostport\}}:\{{containerport\}} and the
 </hint-block>
 
 ```bash
-$ docker run --init \
+docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
@@ -26,7 +26,7 @@ $ docker run --init \
 ## Run on localhost:8080
 
 ```bash
-$ docker run --init \
+docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
@@ -57,7 +57,7 @@ For production setup, you need to make sure [--host](/docs/reference/command-lin
 </hint-block>
 
 ```bash
-$ docker run --init \
+docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
@@ -80,7 +80,7 @@ The setup below is for testing purpose and should NOT be used in production setu
 </hint-block>
 
 ```bash
-$ docker run --name mysqld \
+docker run --name mysqld \
   --publish 3306:3306 \
   -e MYSQL_ROOT_HOST=172.17.0.1 \
   -e MYSQL_ROOT_PASSWORD=testpwd1 \
@@ -106,7 +106,7 @@ Unlike setting 172.17.0.1 mentioned in the above section, you need to set **`hos
 ## Troubleshoot
 
 ```bash
-$ docker logs bytebase
+docker logs bytebase
 ```
 
 Normally you should see something like:
