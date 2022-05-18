@@ -19,6 +19,11 @@ This installs bb in `/usr/local/bin`. Run `bb --help` to check if bb is installe
 
 ```bash
 $ bb --help
+```
+
+And the output will look like this:
+
+```plain
 A database management tool provided by bytebase.com
 
 Usage:
