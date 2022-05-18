@@ -1,5 +1,5 @@
 ---
-expandAll: true
+expand_all: true
 ---
 
 # cli_layout

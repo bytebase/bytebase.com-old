@@ -12,11 +12,11 @@ title: Build from Source
 It's recommended to run Bytebase application as non-root user for security reason. If you don't have other non-root users on the system, you can follow the following steps to setup one, e.g. user `bytebase`.
 
 ```bash
-$ groupadd bytebase && useradd -g bb bytebase
+groupadd bytebase && useradd -g bb bytebase
 ```
 
 ```bash
-$ sudo su bytebase
+sudo su bytebase
 ```
 
 ## Build
@@ -30,13 +30,13 @@ If you want to build from a specific release, then find out the release tag from
 </hint-block>
 
 ```bash
-$ git checkout tags/1.0.5
+git checkout tags/1.0.5
 ```
 
 Build the source
 
 ```bash
-$ scripts/build.sh [<<out_directory>>]
+scripts/build.sh [<<out_directory>>]
 ```
 
 If `out_directory`is not specified, the default directory is `./bytebase-build`
@@ -44,7 +44,7 @@ If `out_directory`is not specified, the default directory is `./bytebase-build`
 Suppose you run `scripts/build.sh foo` After build completes, run:
 
 ```bash
-$ foo/bytebase --host http://localhost --port 8080
+foo/bytebase --host http://localhost --port 8080
 ```
 
 (check [Server Startup Options](/docs/reference/command-line) for other startup options)
@@ -79,6 +79,7 @@ Version 0.1.0 has started at http://localhost.com:8080
 ```
 
 Change the open file limit if your encounter "error: too many open files".
+
 ```bash
 ulimit -n 10240
 ```
