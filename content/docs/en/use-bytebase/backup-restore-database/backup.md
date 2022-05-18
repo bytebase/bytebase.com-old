@@ -2,8 +2,6 @@
 title: Backup
 ---
 
-# Backup
-
 ![backup-example](/static/docs-assets/backup-example.png)
 
 ## Automatic weekly backup

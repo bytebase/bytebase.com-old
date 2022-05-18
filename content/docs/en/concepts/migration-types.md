@@ -2,8 +2,6 @@
 title: Migration Types
 ---
 
-# Migration Types
-
 <hint-block type="info">
 
 Migration type is only applicable to project using <a href="/docs/features/version-control">Version Control Workflow</a>.

@@ -2,8 +2,6 @@
 title: How to perform upgrade
 ---
 
-# How to perform upgrade
-
 ## Background
 
 Bytebase stores its own metadata in a [Postgres](https://www.postgresql.org/) database. As we add new features, we may also perform database schema changes (i.e. database migrations).

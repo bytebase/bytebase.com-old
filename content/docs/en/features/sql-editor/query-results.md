@@ -2,8 +2,6 @@
 title: Query Results
 ---
 
-# Query Results
-
 You can easily check the results by running your SQL queries.
 
 ## Search Result

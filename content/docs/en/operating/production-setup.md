@@ -2,8 +2,6 @@
 title: Production Setup
 ---
 
-# Production Setup
-
 ### 1. Make sure [--host](/docs/reference/command-line#host-less-than-less-than-string-greater-than-greater-than), [--port](/docs/reference/command-line#port-less-than-less-than-number-greater-than-greater-than) match exactly to the host:port address where Bytebase supposed to be visited.
 
 Bytebase uses --host, --port to configure the VCS webhook callback used by the [project version control workflow](/docs/use-bytebase/vcs-integration/enable-version-control-workflow#step-3-configure-deploy). If host:port mismatches, then committed migration scripts will not trigger the issue creation in Bytebase.

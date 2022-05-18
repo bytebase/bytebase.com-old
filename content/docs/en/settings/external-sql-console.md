@@ -2,8 +2,6 @@
 title: Link External SQL Console
 ---
 
-# Link External SQL Console
-
 > If your team use a separate SQL console such as phpMyAdmin, you can provide its URL pattern, so that Bytebase can surface the console link on the relevant database and table UI.
 
 Go to `Settings` , under `Workspace`, click `General`. Here you can configure the SQL console URL

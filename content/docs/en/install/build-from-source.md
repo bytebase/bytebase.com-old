@@ -2,8 +2,6 @@
 title: Build from Source
 ---
 
-# Build from Source
-
 ## Prerequisite
 
 1. Install [pnpm](https://pnpm.io/installation), Bytebase requires Node.js >=17.0.

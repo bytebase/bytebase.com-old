@@ -2,8 +2,6 @@
 title: Unable to start Bytebase with Docker
 ---
 
-# Unable to start Bytebase with Docker
-
 ## Using [Colima](https://github.com/abiosoft/colima)
 
 Due to the vm mechanism of colima, try to use the `--mount` option when starting colima as shown below:

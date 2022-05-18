@@ -2,8 +2,6 @@
 title: Roles and Permissions
 ---
 
-# Roles and Permissions
-
 Bytebase has two disjoint set of roles:
 
 1. Workspace roles: `Owner`, `DBA`, `Developer`

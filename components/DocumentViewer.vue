@@ -6,7 +6,13 @@
     <div
       class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
     >
-      <nuxt-content class="w-full py-6 markdown-body" :document="document" />
+      <div class="w-full markdown-body nuxt-content pt-6">
+        <h1>{{ document.title }}</h1>
+      </div>
+      <nuxt-content
+        class="w-full pb-6 pt-4 markdown-body"
+        :document="document"
+      />
       <div
         class="w-full flex flex-col sm:flex-row sm:justify-start sm:items-center text-base"
       >

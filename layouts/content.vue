@@ -41,7 +41,7 @@
         >
       </nav>
       <div
-        class="w-8 sm:w-64 h-8 pl-0 sm:px-3 border rounded-2xl flex flex-row justify-center sm:justify-between items-center opacity-80 cursor-pointer hover:opacity-100"
+        class="w-9 sm:w-64 h-9 pl-0 sm:px-3 border rounded-3xl flex flex-row justify-center sm:justify-between items-center opacity-80 cursor-pointer hover:opacity-100"
         @click="handleSearchBtnClick"
       >
         <div class="flex flex-row justify-start items-center">

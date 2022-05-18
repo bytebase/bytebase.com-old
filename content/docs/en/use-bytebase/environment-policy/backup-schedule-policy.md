@@ -2,8 +2,6 @@
 title: Backup Schedule Policy
 ---
 
-# Backup Schedule Policy
-
 <hint-block type="info">
 
 The backup enforcement is **NOT retroactive**, which means the updated policy **won't** automatically alter the existing database backup setting, it will only enforce the future setup. On the other hand, Bytebase will report the discrepancy if the current setting does not conform to the active policy , which gives user the control to switch the existing setting at the appropriate time.

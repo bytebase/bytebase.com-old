@@ -2,8 +2,6 @@
 title: Name and Organize Schema Files
 ---
 
-# Name and Organize Schema Files
-
 If project enables version control workflow, it will observe file changes in the observed repository. But after Bytebase notices a particular file change, it still needs to figure out the exact database where the change should apply. Also there are different migration types and Bytebase needs to figure out which. To achieve those tasks, Bytebase requires the file to follow a naming convention.
 
 ## File Path Template

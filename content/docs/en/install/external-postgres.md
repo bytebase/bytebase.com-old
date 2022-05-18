@@ -2,8 +2,6 @@
 title: Use External PostgreSQL Database
 ---
 
-# Use External PostgreSQL Database
-
 By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) to store these metadata in an external PostgreSQL database.
 
 ## Prerequisites

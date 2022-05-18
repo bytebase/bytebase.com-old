@@ -2,8 +2,6 @@
 title: Create the First Baseline Migration
 ---
 
-# Create the First Baseline Migration
-
 To bootstrap the VCS integration, Bytebase needs to know the current schema of the corresponding live database. This is achieved by using a baseline migration script which includes the entire schema of that live database.
 
 To create a baseline migration, use `baseline` as the migration type in the configured [file path template](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-path-template).

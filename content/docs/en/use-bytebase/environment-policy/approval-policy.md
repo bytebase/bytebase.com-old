@@ -2,8 +2,6 @@
 title: Approval Policy
 ---
 
-# Approval Policy
-
 ## Updating schema on existing database
 
 `Owner` or `DBA` can configure the approval policy for a particular environment from the "Environment" detail page:

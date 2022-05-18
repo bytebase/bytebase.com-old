@@ -2,8 +2,6 @@
 title: Run and EXPLAIN Query
 ---
 
-# Run and EXPLAIN Query
-
 <hint-block type="info">
 
 Please note that SQL Editor only supports running SELECT queries now. SQL will detect your SQL queries. If you are running DDL or DML change queries, it will prompt you to create a new issue to start the SQL review process.

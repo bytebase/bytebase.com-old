@@ -1,11 +1,9 @@
 ---
-title: Introducing Bytebase CLI bb
+title: Introducing Bytebase CLI
 description: This page contains a getting-started covering frequently used commands, followed by a list of all options and commands.
 ---
 
-# Introducing Bytebase CLI `bb`
-
-bb CLI is the command-line tool of Bytebase, helping developers integrate MySQL and PostgreSQL schema change into the existing CI/CD workflow. By integrating bb with your existing CI/CD system (GitLab CI, GitHub Actions, etc.), you can bring all best practices of CI/CD to the database.
+`bb` CLI is the command-line tool of Bytebase, helping developers integrate MySQL and PostgreSQL schema change into the existing CI/CD workflow. By integrating bb with your existing CI/CD system (GitLab CI, GitHub Actions, etc.), you can bring all best practices of CI/CD to the database.
 
 This page contains a getting-started covering frequently used commands, followed by a list of all options and commands.
 

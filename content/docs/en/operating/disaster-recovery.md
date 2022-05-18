@@ -2,8 +2,6 @@
 title: Disaster Recovery
 ---
 
-# Disaster Recovery
-
 ## **Periodically snapshot the entire** [**--data**](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) **directory**
 
 Bytebase stores its own data into a [SQLite](http://sqlite.com) file called `bytebase.db`under the [--data](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory. Besides the main data file, SQLite also creates 2 additional files: `bytebase.db-shm` for managing share memory and `bytebase.db-wal` for write ahead logging.

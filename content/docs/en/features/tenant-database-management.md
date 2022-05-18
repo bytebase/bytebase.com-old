@@ -2,8 +2,6 @@
 title: Tenant Database Management
 ---
 
-# Tenant Database Management
-
 Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**.
 
 For example, a software company offers medical record storage services for its customers, hospitals. Each hospital is considered as a tenant, and each tenant has to store their patient data in its own database for regulation or privacy purposes. This feature allows updating database schema for all tenants in a simple and consistent way. Other use cases include multi-location databases for supporting highly-available services where each location is a tenant.

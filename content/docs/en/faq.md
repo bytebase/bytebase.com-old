@@ -2,8 +2,6 @@
 title: FAQ
 ---
 
-# FAQ
-
 ## How to reach us?
 
 Bytebase is open sourced on [GitHub](https://github.com/bytebase/bytebase/)

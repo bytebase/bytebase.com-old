@@ -2,8 +2,6 @@
 title: Create the SQL review ticket
 ---
 
-# Create the SQL review ticket
-
 For project using the [UI-based schema change workflow](/docs/concepts/schema-change-workflow#ui-workflow), developer normally would go to the project detail page and click the "Alter Schema" button from the quick action bar. From there developer can choose one or more databases to apply the schema change.
 
 ![Change a single database schema](/static/docs-assets/alter-schema-single-db.png)
