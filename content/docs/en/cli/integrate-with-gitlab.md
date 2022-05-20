@@ -3,7 +3,7 @@ title: Integrating with GitLab CI
 description: This page contains a tutorial about integrating Bytebase CLI bb with GitLab CI/CD pipeline.
 ---
 
-This tutorial will show you the steps to integrate Bytebase CLI `bb` into your GitLab CI/CD pipeline. You will set up a pipeline automating the database schema change along with the code change, which brings your team’s DevOps automation to a new level.
+This tutorial will show you the steps to integrate Bytebase CLI `bb` into [a GitLab project](https://gitlab.com/bytebase-sample/tutorial-bb-ci). You will set up a pipeline automating the database schema change along with the code change, which brings your team’s DevOps automation to a new level.
 
 ## Prerequisites
 
@@ -25,11 +25,11 @@ You can go back to [overview](https://www.bytebase.com/docs/cli/overview) for mo
 
 ## Register GitLab Runner to a GitLab Project
 
-In your GitLab Project, go to **Settings > CI/CD > Runners** and follow the **_Show Runner Installation Instructions_** to register runner.
+In your GitLab Project, go to **Settings > CI/CD > Runners**, click the **_Show Runner Installation Instructions_** button, and follow the instructions to register runner.
 
 ![register gitlab runner](/static/docs-assets/gitlab-register-runner.png)
 
-In register interaction, add tag `bb-runner` to specify this runner has `bb` installed.
+In the shell prompt, add tag `bb-runner` to specify this runner has `bb` installed.
 
 ![tag for gitlab runner](/static/docs-assets/tag-gitlab-runner.png)
 
@@ -63,9 +63,9 @@ execute-schema-migration:
     expire_in: 30 days
 ```
 
-## Add DSN Variable
+## Configure DSN
 
-`bb` uses DSNs to access databases. Here are a few examples:
+`bb` uses [DSN](./reference#data-source-name-dsn)s to access databases. Here are a few examples:
 
 - mysql://root@localhost:3306/
 - postgresql://user:pass@localhost:5432/dbname?ssl-ca=a&ssl-cert=b&ssl-key=c
@@ -81,10 +81,12 @@ Go to **Setting > CI/CD > Variables**, add your DSN as `BYTEBASE_DSN`.
 
 Finally, you can trigger a migration by adding a new commit to your GitLab project.
 
-Here is a [demo](https://gitlab.com/bytebase-sample/tutorial-bb-ci). Commit a script to `dev/` and check if this job runs correctly.
+Commit a script to `dev/` and check if this job runs correctly:
 
 ![gitlab job result](/static/docs-assets/gitlab-job-result-1.png)
 
-You can browse the schema snapshot before and after the migration:
+The schema snapshots before and after the migration are stored in artifacts:
 
 ![gitlab job result](/static/docs-assets/gitlab-job-result-2.png)
+
+You can browse this [job detail](https://gitlab.com/bytebase-sample/tutorial-bb-ci/-/jobs/2472815264) on GitHub.com.

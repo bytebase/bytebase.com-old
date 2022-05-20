@@ -6,6 +6,6 @@ expand_all: true
 
 ## [Getting Started](/cli/overview)
 
-## [Integrate with GitLab](/cli/integrate-with-gitlab)
+## [Integrate with GitLab CI](/cli/integrate-with-gitlab)
 
 ## [Reference](/cli/reference)
