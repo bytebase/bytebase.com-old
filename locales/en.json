@@ -217,9 +217,8 @@
     "features": {
       "database-migration": {
         "slogan": "Safer and faster database migration - DDL and DML",
-        "industry-first-database": "Industry first database",
+        "description": "Industry first database {devops} solution for DBA & Developer {collaboration}",
         "devops": "DevOps",
-        "solution-for-DBA-&-Developer": "solution for DBA & Developer",
         "collaboration": "collaboration"
       },
       "sql-review-and-version-control": {
@@ -259,14 +258,13 @@
       }
     },
     "a-complete-rethink-to-deliver-experience": {
-      "title": "A complete rethink to deliver",
-      "experience": "experience",
+      "title": "A complete rethink to {deliver-experience}",
+      "deliver-experience": "deliver experience",
       "description": "From the data modeling, to the tech stack, system architecture and then the final user interface, Bytebase is engineered from the ground up to deliver a transforming user experience to the DBAs and Developers."
     },
     "modern-collaborative-dev-tool": {
       "title": "Modern collaborative dev tool",
-      "bytebase-aspires-to-tools-like": "Bytebase aspires to tools like",
-      "description": "We want to be the most favorable tool among Developers and DBAs for managing database schemas.",
+      "description": "Bytebase aspires to tools like {links}. We want to be the most favorable tool among Developers and DBAs for managing database schemas.",
       "features": {
         "plug-and-play": {
           "title": "Plug-and-Play",
@@ -274,7 +272,7 @@
         },
         "usability": {
           "title": "Usability",
-          "description": "As a professional tool for managing application's most critical asset - transactional database schema, Bytebase thinks deeply to surface the relevant info, design the proper ergonomics. Conducting schema changes is always scary, we want to eliminate the risk of misfire caused by the",
+          "description": "As a professional tool for managing application's most critical asset - transactional database schema, Bytebase thinks deeply to surface the relevant info, design the proper ergonomics. Conducting schema changes is always scary, we want to eliminate the risk of misfire caused by the {confusing-interface}.",
           "confusing-interface": "confusing interface"
         },
         "extensibility": {
@@ -285,17 +283,11 @@
     },
     "single-binary-with-curated-tech-stack": {
       "title": "Single binary with curated tech stack",
-      "the-entire-app-is-bundled-in": "The entire app is bundled in",
+      "description": "The entire app is bundled in {a-single-binary} and started via {bytebase-link}. As a professional tool, Bytebase tries to be pragmatic. And because Bytebase is open sourced, it favors technologies with simplicity and being opinionated to deliver an accessible and cohesive experience to easily learn, use and build the product. We don't want people to waste time figuring out how to deploy or arguing the better coding styles.",
       "a-single-binary": "a single binary",
-      "and-started-via": "and started via",
-      "bytebase": "./bytebase",
-      "description": "As a professional tool, Bytebase tries to be pragmatic. And because Bytebase is open sourced, it favors technologies with simplicity and being opinionated to deliver an accessible and cohesive experience to easily learn, use and build the product. We don't want people to waste time figuring out how to deploy or arguing the better coding styles.",
+      "bytebase-link": "./bytebase",
       "tech-stacks": {
-        "vue-feature": "is a progressive framework and",
-        "tailwindcss-feature.": "is a utility-first CSS framework.",
-        "Together with the build ": "Together with the build tool",
-        "and": "and",
-        "typescript-feature": "they offer a significantly improved frontend development experience.",
+        "vue-feature": "{vue-link} is a progressive framework and {tailwindcss-link} is a utility-first CSS framework. Together with the build tool {vite-link} and {typescript-link}, they offer a significantly improved frontend development experience.",
         "golang-feature": "'s static linking + embedding allows Bytebase to deliver a binary with single-line command to launch both the frontend and backend without requiring extra dependency (no docker, docker-compose, kubernetes). And we never need to debate the coding style.",
         "postgresql-feature": "is the industry leading multi-model relational database. In addition to the typical transactional workload, PostgreSQL can also handle analytical, geospatial, time series, full text search and etc. This allows Bytebase to only keep a single database system to fulfill all sorts of requirements."
       }
