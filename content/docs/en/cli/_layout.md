@@ -4,16 +4,8 @@ expand_all: true
 
 # cli_layout
 
-## [Getting Started](#getting-started)
+## [Getting Started](/cli/overview)
 
-## [Global Options](#global-options)
+## [Integrate with GitLab CI](/cli/integrate-with-gitlab)
 
-### [Data Source Name (DSN)](#data-source-name-dsn)
-
-## [Commands](#commands)
-
-### [migrate](#migrate)
-
-### [dump](#dump)
-
-### [restore](#restore)
+## [Reference](/cli/reference)
