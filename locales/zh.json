@@ -260,7 +260,7 @@
     "a-complete-rethink-to-deliver-experience": {
       "title": "彻底重新思考{deliver-experience}",
       "deliver-experience": "交付体验",
-      "description": "从数据建模到技术选型，到系统架构，再到终端用户界面，Bytebase 的设计从零开始，旨在为 DBA 与开发人员提供革命性的用户体验。"
+      "description": "从数据建模到技术选型，到系统架构，再到终端用户界面，Bytebase 从头开始设计，旨在为 DBA 与开发人员提供革命性的用户体验。"
     },
     "modern-collaborative-dev-tool": {
       "title": "新一代协同开发工具",
