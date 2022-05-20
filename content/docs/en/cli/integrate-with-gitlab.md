@@ -63,7 +63,14 @@ execute-schema-migration:
     expire_in: 30 days
 ```
 
-bb uses [DSNs](https://www.bytebase.com/docs/cli/overview#data-source-name-dsn) to access databases. You also need to setup DSN secret to make this workflow available:
+## Add DSN Variable
+
+bb uses DSNs to access databases. Here are a few examples:
+
+- mysql://root@localhost:3306/
+- postgresql://user:pass@localhost:5432/dbname?ssl-ca=a&ssl-cert=b&ssl-key=c
+
+You also need to setup DSN secret to make this workflow available:
 Go to **Setting > CI/CD > Variables**, add your DSN as `BYTEBASE_DSN`.
 
 ![add dsn secret](/static/docs-assets/add-gitlab-secret-1.png)
