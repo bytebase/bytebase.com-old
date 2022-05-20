@@ -19,7 +19,7 @@
   },
   "slogan": {
     "safer-and-faster": "安全高效",
-    "mission": "专为 DBA 和研发打造的数据库变更和版本管理工具",
+    "mission": "专为 DBA 和应用开发者打造的数据库变更和版本管理工具",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase"
   },
