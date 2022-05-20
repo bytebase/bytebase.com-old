@@ -163,7 +163,7 @@
     },
     "role-based-access-control": {
       "title": "基于角色的访问控制",
-      "description": "提供两类角色集。Owner, DBA, Developer 用于 DBA 全局平台管理。Owner, Developer 用于应用开发者在各自项目内管理。"
+      "description": "提供两类角色集。Owner, DBA, Developer 用于全局平台管理。Owner, Developer 用于应用开发者在各自项目内管理。"
     }
   },
   "banner": {
