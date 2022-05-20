@@ -217,7 +217,7 @@
     "features": {
       "database-migration": {
         "slogan": "更安全、更快速的数据库迁移 - DDL、DML",
-        "description": "行业首个面向 DBA 和应用开发者 {collaboration} 的数据库 {devops} 解决方案",
+        "description": "行业首个面向 DBA 和应用开发者{collaboration}的数据库 {devops} 解决方案",
         "devops": "DevOps",
         "collaboration": "协同场景"
       },
