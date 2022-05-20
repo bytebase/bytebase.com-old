@@ -282,7 +282,7 @@
       }
     },
     "single-binary-with-curated-tech-stack": {
-      "title": "内含精选技术栈的单个编译文件",
+      "title": "精选技术栈下的单个二进制编译文件",
       "description": "整个应用被打包为{a-single-binary}，通过{bytebase-link}直接启动。作为一款开源的专业工具，Bytebase 本身追求实用性，我们偏好朴实的技术，坚持提供顺畅的用户体验，以易于用户学习、使用和改进该产品。我们不希望人们将时间浪费在解决部署问题或是争论哪种编码风格更好上面。",
       "a-single-binary": "单个二进制编译文件",
       "bytebase-link": "./bytebase",
