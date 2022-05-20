@@ -1,15 +1,15 @@
 ---
-title: Integrating with GitLab
+title: Integrating with GitLab CI
 description: This page contains a tutorial about integrating Bytebase CLI bb with GitLab CI/CD pipeline.
 ---
 
-This tutorial will show you the steps to integrate Bytebase CLI bb into your GitLab CI/CD pipeline. You will set up a pipeline automating the database schema change along with the code change, which brings your team’s DevOps automation to a new level.
+This tutorial will show you the steps to integrate Bytebase CLI `bb` into your GitLab CI/CD pipeline. You will set up a pipeline automating the database schema change along with the code change, which brings your team’s DevOps automation to a new level.
 
 ## Prerequisites
 
 - A GitLab Project. (GitLab.com or GitLab CE/EE. We use GitLab.com for this tutorial.)
-- Self-managed GitLab Runner on a Linux machine. (If haven’t, you can follow the [GitLab Runner docs](https://docs.gitlab.com/runner) to install)
-- A MySQL database that is accessible by the GitLab Runner.
+- Self-managed GitLab Runner on a Linux machine. (You can follow the [GitLab Runner docs](https://docs.gitlab.com/runner) to install)
+- A MySQL database that is network accessible by the GitLab Runner.
 
 ## Install `bb` on GitLab Runner
 
@@ -19,7 +19,7 @@ On your GitLab Runner shell prompt, paste the following command:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
 ```
 
-Run `bb --version` to check if bb is installed.
+Run `bb --version` to check if `bb` is installed.
 
 You can go back to [overview](https://www.bytebase.com/docs/cli/overview) for more installation details.
 
@@ -29,7 +29,7 @@ In your GitLab Project, go to **Settings > CI/CD > Runners** and follow the **_S
 
 ![register gitlab runner](/static/docs-assets/gitlab-register-runner.png)
 
-In register interaction, add tag `bb-runner` to specify this runner has bb installed.
+In register interaction, add tag `bb-runner` to specify this runner has `bb` installed.
 
 ![tag for gitlab runner](/static/docs-assets/tag-gitlab-runner.png)
 
@@ -65,7 +65,7 @@ execute-schema-migration:
 
 ## Add DSN Variable
 
-bb uses DSNs to access databases. Here are a few examples:
+`bb` uses DSNs to access databases. Here are a few examples:
 
 - mysql://root@localhost:3306/
 - postgresql://user:pass@localhost:5432/dbname?ssl-ca=a&ssl-cert=b&ssl-key=c

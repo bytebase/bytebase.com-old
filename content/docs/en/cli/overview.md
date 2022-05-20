@@ -3,19 +3,19 @@ title: Getting Started
 description: This page contains a getting-started covering frequently used commands.
 ---
 
-`bb` CLI is the command-line tool of Bytebase, helping developers integrate MySQL and PostgreSQL schema change into the existing CI/CD workflow. By integrating bb with your existing CI/CD system (GitLab CI, GitHub Actions, etc.), you can bring all best practices of CI/CD to the database.
+`bb` CLI is the command-line tool of Bytebase, helping developers integrate MySQL and PostgreSQL schema change into the existing CI/CD workflow. By integrating `bb` with your existing CI/CD system (GitLab CI, GitHub Actions, etc.), you can bring all best practices of CI/CD to the database.
 
 This page contains a getting-started covering frequently used commands.
 
 ## Install `bb`
 
-To install bb, just paste the following command in a macOS Terminal or Linux shell prompt:
+To install `bb`, just paste the following command in a macOS Terminal or Linux shell prompt:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
 ```
 
-This installs bb in `/usr/local/bin`. Run the following command to check if bb is installed:
+This installs `bb` in `/usr/local/bin`. Run the following command to check if `bb` is installed:
 
 ```bash
 bb --help
@@ -43,7 +43,7 @@ Use "bb [command] --help" for more information about a command.
 
 ## Start a local MySQL server via Docker
 
-To use bb, you need a database. You can start an empty MySQL docker container (make sure the Docker Engine is running):
+To use `bb`, you need a database. You can start an empty MySQL docker container (make sure the Docker Engine is running):
 
 ```bash
 docker run -d \
