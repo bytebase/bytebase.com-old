@@ -272,7 +272,7 @@
         },
         "usability": {
           "title": "易用性",
-          "description": "Bytebase 作为一款专业工具，要管理应用程序最重要的资产—— 在线数据库的 Schema。我们认真思考了如何呈现正确的信息，做出符合人体工程学的设计。执行 Schema 变更总是令人感到恐惧，我们希望消除由于{confusing-interface}而导致的风险。",
+          "description": "Bytebase 作为一款专业工具，要管理应用程序最重要的资产 —— 在线数据库的 Schema。我们认真思考了如何呈现正确的信息，做出符合人体工程学的设计。执行 Schema 变更总是令人感到恐惧，我们希望消除由于{confusing-interface}而导致的风险。",
           "confusing-interface": "困惑的界面"
         },
         "extensibility": {
