@@ -29,7 +29,7 @@ In your GitLab Project, go to **Settings > CI/CD > Runners**, click the **_Show 
 
 ![register gitlab runner](/static/docs-assets/gitlab-register-runner.png)
 
-In the shell prompt, add tag `bb-runner` to specify this runner has `bb` installed.
+From the shell prompt, add tag `bb-runner` to specify this runner has `bb` installed.
 
 ![tag for gitlab runner](/static/docs-assets/tag-gitlab-runner.png)
 
@@ -65,7 +65,7 @@ execute-schema-migration:
 
 ## Configure DSN
 
-`bb` uses [DSN](./reference#data-source-name-dsn)s to access databases. Here are a few examples:
+`bb` configures [`--dsn`](./reference#data-source-name-dsn) to access databases. Here are a few examples:
 
 - mysql://root@localhost:3306/
 - postgresql://user:pass@localhost:5432/dbname?ssl-ca=a&ssl-cert=b&ssl-key=c
@@ -77,7 +77,7 @@ Go to **Setting > CI/CD > Variables**, add your DSN as `BYTEBASE_DSN`.
 
 ![add dsn secret](/static/docs-assets/add-gitlab-secret-2.png)
 
-## Trigger a migration
+## Trigger a Migration
 
 Finally, you can trigger a migration by adding a new commit to your GitLab project.
 
