@@ -138,7 +138,7 @@
       "description": "可与版本控制系统（VCS）集成以托管 Schema 变更文件。每当新的变更文件提交后，会自动触发变更流水线。"
     },
     "streamlined-deployment": {
-      "title": "流式部署",
+      "title": "流水线部署",
       "description": "针对多租户（M）、多环境（N）的情况，支持在单个变更流水线中实现 M*N 的矩阵式变更。"
     },
     "sql-editor": {
