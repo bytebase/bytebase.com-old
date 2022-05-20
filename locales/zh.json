@@ -216,7 +216,7 @@
     "description": "Bytebase 是一个网页版的团队协同开发工具，帮助 {dbas} 和{developers}管理数据库 Schema (DDL) 和数据 (DML) 的生命周期。",
     "features": {
       "database-migration": {
-        "slogan": "更安全、更快速的数据库迁移 - DDL、DML",
+        "slogan": "更安全、更高效的数据库变更 - DDL、DML",
         "description": "行业首个面向 DBA 和应用开发者{collaboration}的数据库 {devops} 解决方案",
         "devops": "DevOps",
         "collaboration": "协同场景"
