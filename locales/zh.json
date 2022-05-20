@@ -155,7 +155,7 @@
     },
     "drift-detection": {
       "title": "Drift 检测",
-      "description": "定期扫描所有托管的实例与数据库，并为用户提供整体视图以查看所有异常对象。"
+      "description": "定期扫描所有托管的实例与数据库，并为用户提供整体视图以查看所有异常事项。"
     },
     "backup-and-restore": {
       "title": "备份与恢复",
