@@ -277,7 +277,7 @@
         },
         "extensibility": {
           "title": "可扩展性",
-          "description": "作为基础架构工具箱中的一员，Bytebase 提供扩展能力以便与现有的 IM 系统、CI/CD 系统、工单追踪系统、监控系统、登录系统等集成。"
+          "description": "作为基础架构工具箱中的一员，Bytebase 提供扩展能力以便与现有的 IM 系统、CI/CD 系统、工单系统、运维监控系统、登录系统等集成。"
         }
       }
     },
