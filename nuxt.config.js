@@ -258,11 +258,17 @@ export default {
           await index.clearObjects();
           await index.saveObjects(
             data.map((item) => {
+              const DOC_PATH_PREFIX = "/docs";
+              let path = item.path;
+              if (path.startsWith(DOC_PATH_PREFIX)) {
+                path = path.slice(DOC_PATH_PREFIX.length);
+              }
+
               return {
-                objectID: item.path,
+                objectID: path,
+                path: path,
                 slug: item.slug,
                 title: item.title,
-                path: item.path,
                 tags: item.tags,
                 bodyPlainText: item.bodyPlainText,
               };
