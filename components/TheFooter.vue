@@ -315,6 +315,15 @@
             </li>
 
             <li>
+              <nuxt-link
+                :to="localePath('/techstack')"
+                class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
+                @click="track('job.footer')"
+                >{{ $t("footer.tech-stack") }}</nuxt-link
+              >
+            </li>
+
+            <li>
               <a
                 href="mailto:support@bytebase.com"
                 target="__blank"
