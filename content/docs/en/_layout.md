@@ -28,7 +28,7 @@
 
 ### [Version Control (GitOps)](/features/version-control)
 
-### [Tenant Database Management](/features/tenant-database-management)
+### [Tenant Database Management](/features/tenant-database-development)
 
 ### [SQL Editor](/features/sql-editor/overview)
 

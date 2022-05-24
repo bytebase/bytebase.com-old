@@ -201,7 +201,7 @@
                 :to="localePath('/database-review-guide')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('dbreview.footer')"
-                >{{ $t("footer.database-review-guide") }}</nuxt-link
+                >{{ $t("database-review-guide.title") }}</nuxt-link
               >
             </li>
             <li>
