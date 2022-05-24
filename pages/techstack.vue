@@ -504,10 +504,9 @@
 
 <script lang="ts">
 import { defineComponent } from "@nuxtjs/composition-api";
-import EmojiSection from "~/components/EmojiSection.vue";
 
 export default defineComponent({
-  components: { EmojiSection },
+  components: {},
   head: {
     title: "Tech Stack",
     meta: [
