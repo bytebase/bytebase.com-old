@@ -56,7 +56,7 @@
         }
       },
       "feature-sections": {
-        "database-management": {
+        "database-development": {
           "title": "Database Development",
           "features": {
             "instance-count": "Instance count",
@@ -204,7 +204,6 @@
     "contact": "Contact",
     "integrations": "Integrations",
     "resources": "Resources",
-    "database-review-guide": "Database Review Guide",
     "database-glossary": "Database Glossary",
     "error-code": "Error Code",
     "terms": "Terms",

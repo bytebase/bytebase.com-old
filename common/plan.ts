@@ -23,7 +23,7 @@ export interface Plan {
 
 export const FEATURE_SECTIONS = [
   {
-    id: "database-management",
+    id: "database-development",
     features: [
       "instance-count",
       "schema-change",
@@ -79,7 +79,7 @@ const FREE_PLAN: Plan = {
     {
       id: "instance-count",
       content:
-        "pricing.subscription.feature-sections.database-management.features.instance-upto-5",
+        "pricing.subscription.feature-sections.database-development.features.instance-upto-5",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -89,16 +89,16 @@ const FREE_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-basic",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-basic",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-basic-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-basic-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-basic",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-basic",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-basic-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-basic-tooltip",
     },
     { id: "ui-based-sql-review" },
     { id: "vsc-workflow" },
@@ -133,7 +133,7 @@ const TEAM_PLAN: Plan = {
     {
       id: "instance-count",
       content:
-        "pricing.subscription.feature-sections.database-management.features.instance-minimum-5",
+        "pricing.subscription.feature-sections.database-development.features.instance-minimum-5",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -143,16 +143,16 @@ const TEAM_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-advanced",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-advanced-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-advanced",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-advanced-tooltip",
     },
     { id: "schedule-change" },
     { id: "review-and-backup-policy" },
@@ -194,7 +194,7 @@ const ENTERPRISE_PLAN: Plan = {
     {
       id: "instance-count",
       content:
-        "pricing.subscription.feature-sections.database-management.features.instance-customized",
+        "pricing.subscription.feature-sections.database-development.features.instance-customized",
     },
     { id: "schema-change" },
     { id: "migration-history" },
@@ -204,16 +204,16 @@ const ENTERPRISE_PLAN: Plan = {
     {
       id: "sql-check",
       content:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-advanced",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.sql-check-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.sql-check-advanced-tooltip",
     },
     {
       id: "anomaly-detection",
       content:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-advanced",
       tooltip:
-        "pricing.subscription.feature-sections.database-management.features.anomaly-detection-advanced-tooltip",
+        "pricing.subscription.feature-sections.database-development.features.anomaly-detection-advanced-tooltip",
     },
     { id: "schedule-change" },
     { id: "review-and-backup-policy" },
