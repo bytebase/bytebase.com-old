@@ -104,28 +104,26 @@
         >
           {{ $t("index-page.features.database-migration.slogan") }}
         </h2>
-        <h2
+        <i18n
+          path="index-page.features.database-migration.description"
+          tag="h2"
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
-          {{
-            $t("index-page.features.database-migration.industry-first-database")
-          }}
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
-            >{{ $t("index-page.features.database-migration.devops") }}</span
-          >
-          {{
-            $t(
-              "index-page.features.database-migration.solution-for-DBA-&-Developer"
-            )
-          }}
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >{{
-              $t("index-page.features.database-migration.collaboration")
-            }}</span
-          >
-        </h2>
+          <template #devops>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
+              >{{ $t("index-page.features.database-migration.devops") }}</span
+            >
+          </template>
+          <template #collaboration>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+              >{{
+                $t("index-page.features.database-migration.collaboration")
+              }}</span
+            >
+          </template>
+        </i18n>
         <div class="mt-12">
           <FeatureSection />
         </div>
@@ -588,21 +586,22 @@
     <div class="pt-16 overflow-hidden">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div class="relative">
-          <h2
+          <i18n
+            path="index-page.a-complete-rethink-to-deliver-experience.title"
+            tag="h2"
             class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-center text-gray-900 tracking-tight mb-8"
           >
-            {{
-              $t("index-page.a-complete-rethink-to-deliver-experience.title")
-            }}
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-              >{{
-                $t(
-                  "index-page.a-complete-rethink-to-deliver-experience.experience"
-                )
-              }}</span
-            >
-          </h2>
+            <template #deliver-experience>
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+                >{{
+                  $t(
+                    "index-page.a-complete-rethink-to-deliver-experience.deliver-experience"
+                  )
+                }}</span
+              >
+            </template>
+          </i18n>
           <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
             {{
               $t(
@@ -621,45 +620,44 @@
             >
               {{ $t("index-page.modern-collaborative-dev-tool.title") }}
             </h3>
-            <p class="mt-3 text-lg text-gray-500">
-              {{
-                $t(
-                  "index-page.modern-collaborative-dev-tool.bytebase-aspires-to-tools-like"
-                )
-              }}
-              <a
-                href="https://figma.com"
-                target="_blank"
-                class="text-blue-600"
-                style="
-                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                "
-                >Figma</a
-              >,
-              <a
-                href="https://about.gitlab.com"
-                target="_blank"
-                class="text-blue-600"
-                style="
-                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                "
-                >GitLab</a
-              >,
-              <a
-                href="https://www.terraform.io/"
-                target="_blank"
-                class="text-blue-600"
-                style="
-                  box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                    rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                "
-                >Terraform</a
-              >.
-              {{ $t("index-page.modern-collaborative-dev-tool.description") }}
-            </p>
-
+            <i18n
+              path="index-page.modern-collaborative-dev-tool.description"
+              tag="p"
+              class="mt-3 text-lg text-gray-500"
+            >
+              <template #links>
+                <a
+                  href="https://figma.com"
+                  target="_blank"
+                  class="text-blue-600"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
+                  >Figma</a
+                >,
+                <a
+                  href="https://about.gitlab.com"
+                  target="_blank"
+                  class="text-blue-600"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
+                  >GitLab</a
+                >,
+                <a
+                  href="https://www.terraform.io/"
+                  target="_blank"
+                  class="text-blue-600"
+                  style="
+                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                  "
+                  >Terraform</a
+                >
+              </template>
+            </i18n>
             <dl class="mt-10 space-y-10">
               <div class="relative">
                 <dt>
@@ -726,27 +724,28 @@
                     }}
                   </p>
                 </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  {{
-                    $t(
-                      "index-page.modern-collaborative-dev-tool.features.usability.description"
-                    )
-                  }}
-                  <a
-                    href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
-                    target="_blank"
-                    class="text-blue-600 font-semibold"
-                    style="
-                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                    "
-                    >{{
-                      $t(
-                        "index-page.modern-collaborative-dev-tool.features.usability.confusing-interface"
-                      )
-                    }}</a
-                  >.
-                </dd>
+                <i18n
+                  path="index-page.modern-collaborative-dev-tool.features.usability.description"
+                  tag="dd"
+                  class="mt-2 ml-16 text-base text-gray-500"
+                >
+                  <template #confusing-interface>
+                    <a
+                      href="https://www.businessinsider.fr/us/citigroup-accidental-wire-transfer-payment-design-interface-oracle-flexcube-2021-2"
+                      target="_blank"
+                      class="text-blue-600 font-semibold"
+                      style="
+                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                      "
+                      >{{
+                        $t(
+                          "index-page.modern-collaborative-dev-tool.features.usability.confusing-interface"
+                        )
+                      }}</a
+                    >
+                  </template>
+                </i18n>
               </div>
 
               <div class="relative">
@@ -842,47 +841,40 @@
                   $t("index-page.single-binary-with-curated-tech-stack.title")
                 }}
               </h3>
-              <p class="mt-3 text-lg text-gray-500">
-                {{
-                  $t(
-                    "index-page.single-binary-with-curated-tech-stack.the-entire-app-is-bundled-in"
-                  )
-                }}
-                <span
-                  class="text-blue-600"
-                  style="
-                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                  "
-                  >{{
-                    $t(
-                      "index-page.single-binary-with-curated-tech-stack.a-single-binary"
-                    )
-                  }}</span
-                >
-                {{
-                  $t(
-                    "index-page.single-binary-with-curated-tech-stack.and-started-via"
-                  )
-                }}
-                <span
-                  class="text-blue-600"
-                  style="
-                    box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                      rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                  "
-                  >{{
-                    $t(
-                      "index-page.single-binary-with-curated-tech-stack.bytebase"
-                    )
-                  }}</span
-                >.
-                {{
-                  $t(
-                    "index-page.single-binary-with-curated-tech-stack.description"
-                  )
-                }}
-              </p>
+              <i18n
+                path="index-page.single-binary-with-curated-tech-stack.description"
+                tag="p"
+                class="mt-3 text-lg text-gray-500"
+              >
+                <template #a-single-binary>
+                  <span
+                    class="text-blue-600"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
+                    >{{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.a-single-binary"
+                      )
+                    }}</span
+                  >
+                </template>
+                <template #bytebase-link>
+                  <span
+                    class="text-blue-600"
+                    style="
+                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
+                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                    "
+                    >{{
+                      $t(
+                        "index-page.single-binary-with-curated-tech-stack.a-single-binary"
+                      )
+                    }}</span
+                  >
+                </template>
+              </i18n>
 
               <dl class="mt-10 space-y-10">
                 <div class="relative">
@@ -911,68 +903,64 @@
                       Vue + Tailwind CSS
                     </p>
                   </dt>
-                  <dd class="mt-2 ml-16 text-base text-gray-500">
-                    <a
-                      href="https://v3.vuejs.org/"
-                      target="_blank"
-                      class="text-blue-600"
-                      style="
-                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                      "
-                      >Vue</a
-                    >
-                    {{
-                      $t(
-                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.vue-feature"
-                      )
-                    }}
-                    <a
-                      href="https://tailwindcss.com"
-                      target="_blank"
-                      class="text-blue-600"
-                      style="
-                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                      "
-                      >Tailwind CSS</a
-                    >
-                    {{
-                      $t(
-                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.tailwindcss-feature"
-                      )
-                    }}
-                    <a
-                      href="https://vitejs.dev/"
-                      target="_blank"
-                      class="text-blue-600"
-                      style="
-                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                      "
-                      >Vite</a
-                    >
-                    {{
-                      $t(
-                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.and"
-                      )
-                    }}
-                    <a
-                      href="https://typescriptlang.org/"
-                      target="_blank"
-                      class="text-blue-600"
-                      style="
-                        box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                          rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                      "
-                      >TypeScript</a
-                    >,
-                    {{
-                      $t(
-                        "index-page.single-binary-with-curated-tech-stack.tech-stacks.typescript-feature"
-                      )
-                    }}
-                  </dd>
+                  <i18n
+                    path="index-page.single-binary-with-curated-tech-stack.tech-stacks.vue-feature"
+                    tag="dd"
+                    class="mt-2 ml-16 text-base text-gray-500"
+                  >
+                    <template #vue-link>
+                      <a
+                        href="https://v3.vuejs.org/"
+                        target="_blank"
+                        class="text-blue-600"
+                        style="
+                          box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px
+                              inset,
+                            rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                        "
+                        >Vue</a
+                      >
+                    </template>
+                    <template #tailwindcss-link>
+                      <a
+                        href="https://tailwindcss.com"
+                        target="_blank"
+                        class="text-blue-600"
+                        style="
+                          box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px
+                              inset,
+                            rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                        "
+                        >Tailwind CSS</a
+                      >
+                    </template>
+                    <template #vite-link>
+                      <a
+                        href="https://typescriptlang.org/"
+                        target="_blank"
+                        class="text-blue-600"
+                        style="
+                          box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px
+                              inset,
+                            rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                        "
+                        >Vite</a
+                      >
+                    </template>
+                    <template #typescript-link>
+                      <a
+                        href="https://typescriptlang.org/"
+                        target="_blank"
+                        class="text-blue-600"
+                        style="
+                          box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px
+                              inset,
+                            rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
+                        "
+                        >TypeScript</a
+                      >
+                    </template>
+                  </i18n>
                 </div>
 
                 <div class="relative">
