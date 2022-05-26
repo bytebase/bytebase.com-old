@@ -24,90 +24,102 @@
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
           <div class="mt-12 space-y-20">
             <div
-              v-for="(post, index) in posts"
-              :key="index"
+              v-for="changelog in changelogList"
+              :key="changelog.slug"
               class="flex flex-col col-span-3 overflow-hidden"
             >
               <nuxt-link
-                :to="localePath(`/changelog/${post.slug}`)"
+                :to="localePath(`/changelog/${changelog.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
                 <div
                   class="pt-6 prose prose-xl md:prose-2xl mx-auto text-center hover:underline"
                 >
-                  <h1>{{ post.title }}</h1>
+                  <h1>{{ changelog.title }}</h1>
                 </div>
                 <span
                   class="pt-4 flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
                 >
                   <div class="ml-2 flex space-x-1 text-gray-500 items-center">
-                    <time :datetime="post.published_at">
-                      {{
-                        new Date(post.published_at).toLocaleString("default", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })
-                      }}
+                    <time :datetime="changelog.publishedAt">
+                      {{ changelog.formatedPublishedAt }}
                     </time>
                     <span aria-hidden="true">&middot;</span>
-                    <span>{{ post.reading_time }} min read</span>
-                    <template v-if="post.authors.length > 0">
+                    <span>{{ changelog.readingTime }}</span>
+                    <template v-if="changelog.author">
+                      <span aria-hidden="true">&middot;</span>
                       <img
-                        :src="post.authors[0].profile_image"
-                        :alt="post.authors[0].profile_image"
+                        :src="
+                          require(`~/assets/people/${changelog.author.avatar}`)
+                        "
                         class="w-6 h-6"
                       />
-                      <span>{{ post.authors[0].name }}</span>
+                      <span>{{ changelog.author.name }}</span>
                     </template>
                   </div>
                 </span>
               </nuxt-link>
               <nuxt-link
-                v-if="post.feature_image"
-                :to="localePath(`/changelog/${post.slug}`)"
+                v-if="changelog.featureImage"
+                :to="localePath(`/changelog/${changelog.slug}`)"
                 class="flex-shrink-0 py-6"
               >
                 <div class="flex justify-center items-center">
                   <img
                     class="mx-auto object-cover"
-                    :src="post.feature_image"
-                    :alt="post.feature_image_alt"
+                    :src="changelog.featureImage"
                   />
                 </div>
               </nuxt-link>
-              <div
-                class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
-                v-html="post.html"
-              ></div>
+              <nuxt-content
+                class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+                :document="changelog"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div v-if="!lastPage" class="py-12">
-        <nuxt-link
-          :to="localePath(`/changelog?page=${page + 1}`)"
-          class="text-xl text-indigo-600"
-          >{{ $t("changelog.next-page") }}</nuxt-link
-        >
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { PostsOrPages } from "@tryghost/content-api";
-import { getPosts } from "../../api/posts";
+import { lowerCase } from "lodash";
+import { getTeammateByName } from "~/common/teammate";
+import { calcReadingTime } from "~/common/utils";
 
 export default {
-  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
-  async asyncData({ params }: any) {
-    const page = parseInt(params.page) ? parseInt(params.page) : 1;
-    const posts = (await getPosts(["Changelog"], page)) as PostsOrPages;
-    const lastPage =
-      posts.length == 0 || posts[posts.length - 1].title == "Bytebase 0.1.0";
+  async asyncData({ $content }: any) {
+    const data = await $content("changelog", {
+      deep: true,
+    })
+      .sortBy("publishedAt", "desc")
+      .fetch();
 
-    return { posts, page, lastPage };
+    const changelogList = data.map((changlog: any) => {
+      const author = getTeammateByName(changlog.author) as any;
+      if (author) {
+        author.avatar = `${lowerCase(author?.name)}.webp`;
+      }
+
+      return {
+        ...changlog,
+        author: author,
+        formatedPublishedAt: new Date(changlog.publishedAt).toLocaleString(
+          "default",
+          {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }
+        ),
+        readingTime: calcReadingTime(changlog.bodyPlainText),
+      };
+    });
+
+    return {
+      changelogList,
+    };
   },
   head() {
     return {

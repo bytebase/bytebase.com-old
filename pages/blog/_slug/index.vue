@@ -1,78 +1,92 @@
 <template>
-  <div v-if="post" class="space-y-8">
+  <div class="space-y-8">
     <div class="hidden sm:flex sm:h-96 w-full">
       <img
-        v-if="post.feature_image"
+        v-if="blog.featureImage"
         class="w-full h-auto object-scale-down"
-        :src="post.feature_image"
-        :alt="post.feature_image_alt"
+        :src="blog.featureImage"
       />
     </div>
     <div class="prose prose-xl md:prose-2xl mx-auto px-4">
       <div
-        v-for="(tag, tagIndex) in post.tags"
+        v-for="(tag, tagIndex) in blog.tags"
         :key="tagIndex"
         class="mb-4 inline-flex"
       >
         <span
-          v-if="getTagStyle(tag.name)"
+          v-if="getTagStyle(tag)"
           class="items-center px-3 py-0.5 mr-2 rounded-full text-base font-medium"
-          :class="getTagStyle(tag.name)"
+          :class="getTagStyle(tag)"
         >
-          {{ tag.name }}
+          {{ tag }}
         </span>
       </div>
-      <h1>{{ post.title }}</h1>
+      <h1>{{ blog.title }}</h1>
     </div>
-    <span
+    <div
       class="flex flex-row px-2 items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <img
         class="h-10 w-10 rounded-full mr-2"
-        :src="post.authors[0].profile_image"
+        :src="blog.author.avatar"
         alt=""
-      />{{ post.authors[0].name }}
+      />{{ blog.author.name }}
       <div class="ml-2 flex space-x-1 text-gray-500">
-        <time :datetime="post.published_at">
-          {{
-            new Date(post.published_at).toLocaleString("default", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })
-          }}
+        <time :datetime="blog.publishedAt">
+          {{ blog.formatedPublishedAt }}
         </time>
-        <span aria-hidden="true"> &middot; </span>
-        <span> {{ post.reading_time }} min read </span>
-      </div></span
-    >
-    <div
-      class="prose prose-indigo prose-xl md:prose-2xl mx-auto px-4"
-      v-html="post.html"
-    ></div>
+      </div>
+    </div>
+    <nuxt-content
+      class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      :document="blog"
+    />
   </div>
 </template>
 
 <script lang="ts">
+import { lowerCase } from "lodash";
+import { getTeammateByName } from "~/common/teammate";
 import { PostTag, postTagStyle } from "../../../common/type";
-import { getSinglePost } from "../../../api/posts";
 
 export default {
   layout: "blog",
-  async asyncData({ params }: any) {
-    const post = await getSinglePost(params.slug);
-    return { post: post };
-  },
-  head() {
-    const post = (this as any).post;
+  async asyncData({ params, $content }: any) {
+    const data = await $content("blog", params.slug, {
+      deep: true,
+    }).fetch();
+    const author = getTeammateByName(data.author) as any;
+    if (author) {
+      author.avatar = `${lowerCase(author?.name)}.webp`;
+    }
+
+    const blog = {
+      ...data,
+      author: author,
+      formatedPublishedAt: new Date(data.publishedAt).toLocaleString(
+        "default",
+        {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        }
+      ),
+    };
 
     return {
-      title: post.title,
+      blog,
+    };
+  },
+  head() {
+    const blog = (this as any).blog;
+
+    return {
+      title: blog.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: post.excerpt,
+          content: blog.description,
         },
         {
           hid: "twitter:card",
@@ -82,17 +96,17 @@ export default {
         {
           hid: "og:title",
           name: "og:title",
-          content: post.title,
+          content: blog.title,
         },
         {
           hid: "og:description",
           name: "og:description",
-          content: post.excerpt,
+          content: blog.description,
         },
         {
           hid: "og:image",
           name: "og:image",
-          content: post.feature_image,
+          content: blog.featureImage,
         },
       ],
     };
@@ -104,3 +118,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.nuxt-content table pre {
+  white-space: pre-wrap;
+  margin: 0;
+}
+</style>
