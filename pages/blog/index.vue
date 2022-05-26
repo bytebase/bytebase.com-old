@@ -181,6 +181,10 @@ export default {
       .sortBy("publishedAt", "desc")
       .fetch();
     const blogList = data
+      .sort(
+        (a: any, b: any) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      )
       .filter((blog: any) => !blog.tags.includes("Hidden"))
       .map((blog: any) => {
         const author = getTeammateByName(blog.author) as any;

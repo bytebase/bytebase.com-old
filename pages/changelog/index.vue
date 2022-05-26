@@ -96,26 +96,31 @@ export default {
       .sortBy("publishedAt", "desc")
       .fetch();
 
-    const changelogList = data.map((changlog: any) => {
-      const author = getTeammateByName(changlog.author) as any;
-      if (author) {
-        author.avatar = `${lowerCase(author?.name)}.webp`;
-      }
+    const changelogList = data
+      .sort(
+        (a: any, b: any) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      )
+      .map((changlog: any) => {
+        const author = getTeammateByName(changlog.author) as any;
+        if (author) {
+          author.avatar = `${lowerCase(author?.name)}.webp`;
+        }
 
-      return {
-        ...changlog,
-        author: author,
-        formatedPublishedAt: new Date(changlog.publishedAt).toLocaleString(
-          "default",
-          {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          }
-        ),
-        readingTime: calcReadingTime(changlog.bodyPlainText),
-      };
-    });
+        return {
+          ...changlog,
+          author: author,
+          formatedPublishedAt: new Date(changlog.publishedAt).toLocaleString(
+            "default",
+            {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            }
+          ),
+          readingTime: calcReadingTime(changlog.bodyPlainText),
+        };
+      });
 
     return {
       changelogList,

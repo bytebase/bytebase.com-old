@@ -24,11 +24,11 @@
       <h1>{{ blog.title }}</h1>
     </div>
     <div
-      class="flex flex-row px-2 items-center justify-center block text-base text-gray-900 font-semibold tracking-wide uppercase"
+      class="flex flex-row px-2 items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <img
         class="h-10 w-10 rounded-full mr-2"
-        :src="blog.author.avatar"
+        :src="require(`~/assets/people/${blog.author.avatar}`)"
         alt=""
       />{{ blog.author.name }}
       <div class="ml-2 flex space-x-1 text-gray-500">
