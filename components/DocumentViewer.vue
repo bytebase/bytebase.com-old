@@ -145,7 +145,7 @@ export default defineComponent({
         (t) => t.depth >= 2 && t.depth <= 3
       );
     });
-    const githubFilePath = `/docs${props.document?.path}${props.document?.extension}`;
+    const githubFilePath = `/content${props.document?.path}${props.document?.extension}`;
 
     useFetch(async () => {
       const locale = "en";
