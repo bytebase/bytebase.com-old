@@ -36,7 +36,7 @@ Install `bb` into the folder /usr/local/bin on macOS or Linux by entering the co
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
 ```
 
-![installation](static/blog-changelog-assets/2022/05/bb-installing.png)
+![installation](/static/blog-changelog-assets/2022/05/bb-installing.png)
 
 
 Enter the following command to verify the installation:
@@ -47,10 +47,10 @@ $ bb --help
 
 Then you should see help output:
 
-![help information](static/blog-changelog-assets/2022/05/bb-help.png)
+![help information](/static/blog-changelog-assets/2022/05/bb-help.png)
 
 
-<br>
+
 ## Running `bb`
 
 To execute `bb` commands, we need a database, see [Getting Started](https://www.bytebase.com/docs/cli/overview#start-a-local-mysql-server-via-docker).
@@ -65,7 +65,7 @@ $ bb dump --dsn mysql://root:passwd@localhost:3306/bytebase_test_todo --schema-o
 
 You should see there is a table named "author":
 
-![the table named "author"](static/blog-changelog-assets/2022/05/bb-before-change.png)
+![the table named "author"](/static/blog-changelog-assets/2022/05/bb-before-change.png)
 
 
 Then, add a column named "phone_no" into the table "author" with the following `migrate` command:
@@ -82,8 +82,7 @@ Finally, verify database schema with the following `dump` command:
 $ bb dump --dsn mysql://root:passwd@localhost:3306/bytebase_test_todo --schema-only
 ```
 
-![The schema of the table is changed](static/blog-changelog-assets/2022/05/bb-after-change.png)
-
+![The schema of the table is changed](/static/blog-changelog-assets/2022/05/bb-after-change.png)
 
 
 Please try it out, head over to [the documentation](https://www.bytebase.com/docs/cli/overview) to learn more, let us know how we can [improve it](https://github.com/bytebase/bytebase/issues). 
