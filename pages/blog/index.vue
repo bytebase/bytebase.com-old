@@ -6,12 +6,11 @@
     >
       <nuxt-link
         class="w-full h-auto flex flex-col justify-center items-center hover:opacity-80 lg:pl-8"
-        :to="localePath(`/blog/${latestFeaturedPost.slug}`)"
+        :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
       >
         <img
           class="w-full h-auto object-cover lg:rounded"
-          :src="latestFeaturedPost.feature_image"
-          :alt="latestFeaturedPost.feature_image_alt"
+          :src="latestFeaturedBlog.featureImage"
         />
       </nuxt-link>
       <div
@@ -19,37 +18,39 @@
       >
         <div class="w-full flex flex-row justify-start items-center">
           <span
-            v-for="(tag, tagIndex) in latestFeaturedPost.tags"
+            v-for="(tag, tagIndex) in latestFeaturedBlog.tags"
             :key="tagIndex"
             class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
-            :class="getTagStyle(tag.name)"
-            >{{ tag.name }}</span
+            :class="getTagStyle(tag)"
+            >{{ tag }}</span
           >
         </div>
         <nuxt-link
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
-          :to="localePath(`/blog/${latestFeaturedPost.slug}`)"
+          :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
         >
           <p class="mt-4 text-6xl font-semibold text-gray-900">
-            {{ latestFeaturedPost.title }}
+            {{ latestFeaturedBlog.title }}
           </p>
           <p class="mt-6 text-base text-gray-500">
-            {{ latestFeaturedPost.excerpt }}
+            {{ latestFeaturedBlog.description }}
           </p>
         </nuxt-link>
         <div class="mt-4 flex items-center">
           <img
             class="w-8 mr-2 h-auto rounded-full"
-            :src="latestFeaturedPost.authors[0].profile_image"
+            :src="
+              require(`~/assets/people/${latestFeaturedBlog.author.avatar}`)
+            "
             alt
           />
           <span class="text-sm font-medium text-gray-500">
-            {{ latestFeaturedPost.authors[0].name }}
+            {{ latestFeaturedBlog.author.name }}
           </span>
           <span class="mx-2" aria-hidden="true">&middot;</span>
-          <span class="text-sm text-gray-500"
-            >{{ latestFeaturedPost.reading_time }} min read</span
-          >
+          <span class="text-sm text-gray-500">{{
+            latestFeaturedBlog.readingTime
+          }}</span>
         </div>
       </div>
     </div>
@@ -61,35 +62,29 @@
       class="w-full lg:max-w-7xl mx-auto py-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 md:gap-x-8"
     >
       <nuxt-link
-        v-for="(post, index) in recentFeaturedPosts"
+        v-for="(blog, index) in recentFeaturedBlogs"
         :key="index"
         class="w-full py-2 flex flex-col justify-start items-center hover:opacity-80"
-        :to="localePath(`/blog/${post.slug}`)"
+        :to="localePath(`/blog/${blog.slug}`)"
       >
         <div class="inline-flex">
           <span
-            v-for="(tag, tagIndex) in post.tags"
+            v-for="(tag, tagIndex) in blog.tags"
             :key="tagIndex"
             class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
-            :class="getTagStyle(tag.name)"
-            >{{ tag.name }}</span
+            :class="getTagStyle(tag)"
+            >{{ tag }}</span
           >
         </div>
         <p class="text-lg py-2 font-semibold text-gray-700">
-          {{ post.title }}
+          {{ blog.title }}
         </p>
         <p class="flex space-x-1 text-sm text-gray-500">
-          <time :datetime="post.published_at">
-            {{
-              new Date(post.published_at).toLocaleString("default", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })
-            }}
+          <time :datetime="blog.published_at">
+            {{ blog.formatedPublishedAt }}
           </time>
           <span aria-hidden="true">&middot;</span>
-          <span>{{ post.reading_time }} min read</span>
+          <span>{{ blog.readingTime }}</span>
         </p>
       </nuxt-link>
     </div>
@@ -111,67 +106,57 @@
       class="relative w-full mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl mt-12 mb-8 grid grid-cols-1 p-4 gap-6 md:grid-cols-2 lg:grid-cols-3"
     >
       <div
-        v-for="(post, index) in posts"
+        v-for="(blog, index) in blogList"
         :key="index"
         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
       >
-        <nuxt-link :to="localePath(`/blog/${post.slug}`)" class="flex-shrink-0">
-          <img
-            class="h-48 w-full object-cover"
-            :src="post.feature_image"
-            :alt="post.feature_image_alt"
-          />
+        <nuxt-link :to="localePath(`/blog/${blog.slug}`)" class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" :src="blog.featureImage" />
         </nuxt-link>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <div
-              v-for="(tag, tagIndex) in post.tags"
+              v-for="(tag, tagIndex) in blog.tags"
               :key="tagIndex"
               class="inline-flex"
             >
               <span
                 class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
-                :class="getTagStyle(tag.name)"
-                >{{ tag.name }}</span
+                :class="getTagStyle(tag)"
+                >{{ tag }}</span
               >
             </div>
             <nuxt-link
-              :to="localePath(`/blog/${post.slug}`)"
+              :to="localePath(`/blog/${blog.slug}`)"
               class="block mt-2 no-underline"
             >
               <p class="text-xl font-semibold text-gray-900">
-                {{ post.title }}
+                {{ blog.title }}
               </p>
               <p class="mt-3 text-base text-gray-500">
-                {{ post.excerpt }}
+                {{ blog.description }}
               </p>
             </nuxt-link>
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <span class="sr-only">{{ post.authors[0].name }}</span>
+              <span class="sr-only">{{ blog.author.name }}</span>
               <img
                 class="h-10 w-10 rounded-full"
-                :src="post.authors[0].profile_image"
+                :src="require(`~/assets/people/${blog.author.avatar}`)"
                 alt
               />
             </div>
             <div class="ml-3">
               <p class="text-sm font-medium text-gray-900">
-                {{ post.authors[0].name }}
+                {{ blog.author.name }}
               </p>
               <div class="flex space-x-1 text-sm text-gray-500">
-                <time :datetime="post.published_at">
-                  {{
-                    new Date(post.published_at).toLocaleString("default", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })
-                  }}
+                <time :datetime="blog.publishedAt">
+                  {{ blog.formatedPublishedAt }}
                 </time>
                 <span aria-hidden="true">&middot;</span>
-                <span>{{ post.reading_time }} min read</span>
+                <span>{{ blog.readingTime }}</span>
               </div>
             </div>
           </div>
@@ -182,33 +167,56 @@
 </template>
 
 <script lang="ts">
-import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
+import { first, lowerCase } from "lodash";
+import { getTeammateByName } from "~/common/teammate";
+import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../common/type";
-import { getPosts } from "../../api/posts";
 
 export default {
   layout: "blog",
-  async asyncData() {
-    const posts = (await getPosts([
-      "Announcement",
-      "Education",
-    ])) as PostsOrPages;
-    const featuredPosts: PostOrPage[] = [];
-    for (const post of posts) {
-      if (post.featured) {
-        featuredPosts.push(post);
-      }
-    }
+  async asyncData({ $content }: any) {
+    const data = await $content("blog", {
+      deep: true,
+    })
+      .sortBy("publishedAt", "desc")
+      .fetch();
+    const blogList = data
+      .filter((blog: any) => !blog.tags.includes("Hidden"))
+      .sort(
+        (a: any, b: any) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      )
+      .map((blog: any) => {
+        const author = getTeammateByName(blog.author) as any;
+        if (author) {
+          author.avatar = `${lowerCase(author?.name)}.webp`;
+        }
 
-    // latestFeaturedPost is the latest feature article.
-    const latestFeaturedPost = featuredPosts.shift();
-    // recentFeaturedPosts are the the other feature articles.
-    const recentFeaturedPosts = featuredPosts.slice(0, 4);
+        return {
+          ...blog,
+          author: author,
+          formatedPublishedAt: new Date(blog.publishedAt).toLocaleString(
+            "default",
+            {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            }
+          ),
+          readingTime: calcReadingTime(blog.bodyPlainText),
+        };
+      });
+
+    const featuredBlogList = blogList.filter((blog: any) => blog.featured);
+    // latestFeaturedBlog is the latest feature article.
+    const latestFeaturedBlog = first(featuredBlogList);
+    // recentFeaturedBlogs are the the other feature articles.
+    const recentFeaturedBlogs = featuredBlogList.slice(1, 5);
 
     return {
-      posts,
-      latestFeaturedPost,
-      recentFeaturedPosts,
+      blogList,
+      latestFeaturedBlog,
+      recentFeaturedBlogs,
     };
   },
   head() {
