@@ -18,21 +18,34 @@ export const PRICING_EVENT = {
 };
 
 const analytics = ref<Analytics>();
+const analyticsForHub = ref<Analytics>();
 
 export const useSegment = () => {
-  if (!analytics.value && process.env.segmentKey) {
+  if (!analyticsForHub.value) {
     AnalyticsBrowser.load({
-      writeKey: process.env.segmentKey,
+      writeKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
+    })
+      .then(([response]) => {
+        analyticsForHub.value = response;
+      })
+      .catch((e) => {
+        console.log("error loading segment", e);
+      });
+  }
+  if (!analytics.value) {
+    AnalyticsBrowser.load({
+      writeKey: "EEgWyVTmuufXUJMulZ2EGgfN2VBy0EBP",
     })
       .then(([response]) => {
         analytics.value = response;
       })
       .catch((e) => {
-        console.log("error loading segment");
+        console.log("error loading segment", e);
       });
   }
 
   return reactive({
     analytics,
+    analyticsForHub,
   });
 };
