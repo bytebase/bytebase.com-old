@@ -114,7 +114,6 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent(props.moduleName);
-      console.log("analytics.value", analytics.value);
       analytics.value?.identify({
         email: email.value,
       });
