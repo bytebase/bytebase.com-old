@@ -2,4 +2,4 @@
 title: Telemetry
 ---
 
-Bytebase currently does NOT collect any telemetry data from the self-hosted instance.
+Bytebase does not collect any personal data (PII). It only collects Bytebase instance-wide anonymised usage data to help improving the product.
