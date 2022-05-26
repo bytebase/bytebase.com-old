@@ -9,7 +9,6 @@ import {
   databaseAlternativeList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
-import { getPosts } from "./api/posts";
 
 function glossaryRouteList() {
   const list = [];
@@ -137,23 +136,7 @@ export default {
 
   generate: {
     routes: async () => {
-      const postRoutelist = [];
-      const postList = await getPosts([
-        "Changelog",
-        "Announcement",
-        "Education",
-        "Hidden",
-      ]);
-      for (const post of postList) {
-        if (post.tags.find((item) => item.name == "Changelog")) {
-          postRoutelist.push(`changelog/${post.slug}`);
-        } else {
-          postRoutelist.push(`blog/${post.slug}`);
-        }
-      }
-
       return []
-        .concat(postRoutelist)
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
