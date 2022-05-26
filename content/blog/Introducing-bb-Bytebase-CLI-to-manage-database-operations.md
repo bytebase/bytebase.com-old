@@ -1,7 +1,7 @@
 ---
 title: "Introducing bb - a Bytebase CLI tool to manage database operations"
 author: Candy
-published_at: 2022/05/27 06:37:17
+published_at: 2022/05/27 09:57:57
 feature_image: /static/blog-changelog-assets/2022/05/CLI_bb.png
 tags: Education
 featured: true
