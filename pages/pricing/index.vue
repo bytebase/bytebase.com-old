@@ -561,7 +561,7 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      analytics.value = useSegment().analyticsForHub;
+      analytics.value = useSegment().analytics;
       analytics.value?.page(PAGE.PRICING);
     });
 

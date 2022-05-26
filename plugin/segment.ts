@@ -18,20 +18,8 @@ export const PRICING_EVENT = {
 };
 
 const analytics = ref<Analytics>();
-const analyticsForHub = ref<Analytics>();
 
 export const useSegment = () => {
-  if (!analyticsForHub.value) {
-    AnalyticsBrowser.load({
-      writeKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
-    })
-      .then(([response]) => {
-        analyticsForHub.value = response;
-      })
-      .catch((e) => {
-        console.log("error loading segment", e);
-      });
-  }
   if (!analytics.value) {
     AnalyticsBrowser.load({
       writeKey: "EEgWyVTmuufXUJMulZ2EGgfN2VBy0EBP",
@@ -46,6 +34,5 @@ export const useSegment = () => {
 
   return reactive({
     analytics,
-    analyticsForHub,
   });
 };
