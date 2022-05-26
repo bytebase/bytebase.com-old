@@ -1,5 +1,5 @@
 ---
-title: Customize your workspace with your own logo
+title: Customize the workspace with your own logo
 ---
 
 For Team and Enterprise plans, you can customize your workspace with your own logo. To add logo to your workspace,
