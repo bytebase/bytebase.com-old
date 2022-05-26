@@ -69,7 +69,7 @@ We deliberately put a large browser here to suggest the Bytebase console is a ve
 
 ### Issue detail view
 
-![_](/static/blog-changelog-assets/2021/09/IssueViewAnnotated-1.webp)
+![_](/static/blog-changelog-assets/2021/09/IssueViewAnnotated.webp)
 
 The number shows each sub-component of the issue detail view, let's take another look
 
