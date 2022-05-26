@@ -15,3 +15,14 @@ export const getBrowserOSName = (): string => {
 
   return name;
 };
+
+export const calcReadingTime = (content: string): string => {
+  const wordsPerMinute = 200;
+  const wordAmount = content.split(" ").length;
+  if (wordAmount <= 200) {
+    return "less than 1 min read";
+  }
+
+  const count = Math.ceil(wordAmount / wordsPerMinute);
+  return `${count} min read`;
+};

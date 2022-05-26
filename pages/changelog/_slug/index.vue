@@ -2,70 +2,82 @@
   <main class="overflow-hidden space-y-8">
     <div class="prose prose-xl md:prose-2xl mx-auto text-center">
       <img
-        v-if="post.feature_image"
+        v-if="changelog.featureImage"
         class="mx-auto object-cover"
-        :src="post.feature_image"
-        :alt="post.feature_image_alt"
+        :src="changelog.featureImage"
       />
-      <h1>{{ post.title }}</h1>
+      <h1>{{ changelog.title }}</h1>
     </div>
-    <span
+    <div
       class="flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <div class="ml-2 flex space-x-1 text-gray-500 items-center">
-        <time :datetime="post.published_at">
-          {{
-            new Date(post.published_at).toLocaleString("default", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })
-          }}
+        <time :datetime="changelog.publishedAt">
+          {{ changelog.formatedPublishedAt }}
         </time>
-        <span aria-hidden="true"> &middot; </span>
-        <span> {{ post.reading_time }} min read </span>
-        <template v-if="post.authors.length > 0">
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ changelog.readingTime }}</span>
+        <template v-if="changelog.author">
+          <span aria-hidden="true">&middot;</span>
           <img
-            :src="post.authors[0].profile_image"
-            :alt="post.authors[0].profile_image"
+            :src="require(`~/assets/people/${changelog.author.avatar}`)"
             class="w-6 h-6"
           />
-          <a
-            :href="post.authors[0].url"
-            target="_blank"
-            class="hover:underline"
-          >
-            {{ post.authors[0].name }}
-          </a>
+          <span>{{ changelog.author.name }}</span>
         </template>
-      </div></span
-    >
-    <div
-      class="prose prose-indigo prose-xl md:prose-2xl mx-auto"
-      v-html="post.html"
-    ></div>
+      </div>
+    </div>
+    <nuxt-content
+      class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      :document="changelog"
+    />
   </main>
 </template>
 
 <script lang="ts">
-import { getSinglePost } from "../../../api/posts";
+import { lowerCase } from "lodash";
+import { getTeammateByName } from "~/common/teammate";
+import { calcReadingTime } from "~/common/utils";
 
 export default {
-  // Have to use asyncData, CompositionAPI useAsync on the other hand doesn't refresh after first load.
-  async asyncData({ params }: any) {
-    const post = await getSinglePost(params.slug);
-    return { post: post };
-  },
-  head() {
-    const post = (this as any).post;
+  async asyncData({ params, $content }: any) {
+    const data = await $content("changelog", params.slug, {
+      deep: true,
+    }).fetch();
+
+    const author = getTeammateByName(data.author) as any;
+    if (author) {
+      author.avatar = `${lowerCase(author?.name)}.webp`;
+    }
+
+    const changelog = {
+      ...data,
+      author: author,
+      formatedPublishedAt: new Date(data.publishedAt).toLocaleString(
+        "default",
+        {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        }
+      ),
+      readingTime: calcReadingTime(data.bodyPlainText),
+    };
 
     return {
-      title: post.title,
+      changelog,
+    };
+  },
+  head() {
+    const changelog = (this as any).changelog;
+
+    return {
+      title: changelog.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: post.excerpt,
+          content: changelog.description,
         },
         {
           hid: "twitter:card",
@@ -75,17 +87,17 @@ export default {
         {
           hid: "og:title",
           name: "og:title",
-          content: post.title,
+          content: changelog.title,
         },
         {
           hid: "og:description",
           name: "og:description",
-          content: post.excerpt,
+          content: changelog.description,
         },
         {
           hid: "og:image",
           name: "og:image",
-          content: post.feature_image,
+          content: changelog.featureImage,
         },
       ],
     };
