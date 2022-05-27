@@ -2,7 +2,7 @@
 title: How Bytebase Stores its Own Data
 ---
 
-Bytebase manages its own data under the [--data](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory. The data includes:
+Bytebase manages its own data under the [--data](/docs/reference/command-line#--data-directory) directory. The data includes:
 
 - Metadata when [--pg](/docs/reference/command-line#--pg-string) is not specified.
 - Database Backup.
