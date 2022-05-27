@@ -24,7 +24,7 @@
       <h1>{{ blog.title }}</h1>
     </div>
     <div
-      class="flex flex-row px-2 items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
+      class="flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <img
         class="h-10 w-10 rounded-full mr-2"
@@ -35,10 +35,12 @@
         <time :datetime="blog.publishedAt">
           {{ blog.formatedPublishedAt }}
         </time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ blog.readingTime }}</span>
       </div>
     </div>
     <nuxt-content
-      class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      class="w-full px-4 py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
       :document="blog"
     />
   </div>
@@ -47,6 +49,7 @@
 <script lang="ts">
 import { lowerCase } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
+import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../../common/type";
 
 export default {
@@ -71,6 +74,7 @@ export default {
           day: "numeric",
         }
       ),
+      readingTime: calcReadingTime(data.bodyPlainText),
     };
 
     return {

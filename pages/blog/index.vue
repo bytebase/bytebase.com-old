@@ -108,7 +108,7 @@
       <div
         v-for="(blog, index) in blogList"
         :key="index"
-        class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+        class="flex flex-col border-none rounded-lg shadow-lg overflow-hidden"
       >
         <nuxt-link :to="localePath(`/blog/${blog.slug}`)" class="flex-shrink-0">
           <img class="h-48 w-full object-cover" :src="blog.featureImage" />
