@@ -2,7 +2,7 @@
 title: Disaster Recovery
 ---
 
-## **Periodically snapshot the entire** [**--data**](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) **directory**
+## **Periodically snapshot the entire** [**--data**](/docs/reference/command-line#--data-directory) **directory**
 
 <hint-block type="info">
 
