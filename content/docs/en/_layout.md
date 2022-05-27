@@ -100,8 +100,6 @@
 
 ### [Customize the Workspace with Your Own Logo](/settings/customize-workspace/)
 
-### [Link External SQL Console](/settings/external-sql-console)
-
 ## 🔧 Operating
 
 ### [Production Setup](/operating/production-setup)
