@@ -6,7 +6,7 @@ title: Disaster Recovery
 
 <hint-block type="info">
 
-You should periodically backup the entire [--data](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory.
+You should periodically backup the entire [--data](/docs/reference/command-line#--data-directory) directory.
 
 </hint-block>
 
