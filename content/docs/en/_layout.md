@@ -108,6 +108,8 @@
 
 ### [Disaster Recovery](/operating/disaster-recovery)
 
+### [How Bytebase Stores Data](/operating/how-bytebase-stores-data)
+
 ### [Telemetry](/operating/telemetry)
 
 ## 📖 Reference
