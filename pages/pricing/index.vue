@@ -474,16 +474,16 @@
 
 <script lang="ts">
 import {
-  computed,
   defineComponent,
   useContext,
-  watch,
+  ref,
+  onMounted,
 } from "@nuxtjs/composition-api";
-import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "../../common/plan";
-import XIcon from "../../components/XIcon.vue";
-import CheckIcon from "../../components/CheckIcon.vue";
-import QuestinIcon from "../../components/QuestinIcon.vue";
-import { PAGE, PRICING_EVENT, useSegment } from "../../plugin/segment";
+import { PAGE, PRICING_EVENT, useSegment } from "~/plugin/segment";
+import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
+import XIcon from "~/components/XIcon.vue";
+import CheckIcon from "~/components/CheckIcon.vue";
+import QuestinIcon from "~/components/QuestinIcon.vue";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -512,6 +512,8 @@ export default defineComponent({
   },
   setup() {
     const { app } = useContext();
+    const analytics = ref();
+
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
         return app.i18n.t("pricing.deploy-now") as string;
@@ -535,6 +537,7 @@ export default defineComponent({
           ? "Contact us"
           : `$${plan.unitPrice}/year`,
     }));
+
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
       return {
         title: section.id,
@@ -557,13 +560,10 @@ export default defineComponent({
       };
     });
 
-    const analytics = computed(() => useSegment().analytics);
-    watch(
-      () => analytics.value,
-      (segment) => {
-        segment?.page(PAGE.PRICING);
-      }
-    );
+    onMounted(() => {
+      analytics.value = useSegment().analytics;
+      analytics.value?.page(PAGE.PRICING);
+    });
 
     const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
       if (plan.type === PlanType.TEAM) {

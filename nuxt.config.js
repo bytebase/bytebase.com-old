@@ -199,7 +199,6 @@ export default {
   },
 
   env: {
-    segmentKey: "KWLZljyNlxBs5bkS5xaHN1RL0e5HNXxL",
     // GA4 stream id. https://analytics.google.com/analytics/web/#/a202806916p295313050/admin/streams/table/3080936169
     gtagKey: "G-4BZ4JH7449",
   },
