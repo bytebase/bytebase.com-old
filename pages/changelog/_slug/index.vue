@@ -28,7 +28,7 @@
       </div>
     </div>
     <nuxt-content
-      class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      class="w-full px-4 py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
       :document="changelog"
     />
   </main>
