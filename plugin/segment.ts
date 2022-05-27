@@ -18,6 +18,7 @@ export const PRICING_EVENT = {
 };
 
 const analytics = ref<Analytics>();
+const analyticsForNewsletter = ref<Analytics>();
 
 export const useSegment = () => {
   if (!analytics.value) {
@@ -32,7 +33,20 @@ export const useSegment = () => {
       });
   }
 
+  if (!analyticsForNewsletter.value) {
+    AnalyticsBrowser.load({
+      writeKey: "CVXXNXv3EzfQPYqHoYvlDDDOXmKa9XOj",
+    })
+      .then(([response]) => {
+        analyticsForNewsletter.value = response;
+      })
+      .catch((e) => {
+        console.log("error loading segment", e);
+      });
+  }
+
   return reactive({
     analytics,
+    analyticsForNewsletter,
   });
 };

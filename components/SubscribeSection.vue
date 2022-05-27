@@ -86,7 +86,7 @@ export default defineComponent({
     const analytics = ref();
 
     onMounted(() => {
-      analytics.value = useSegment().analytics;
+      analytics.value = useSegment().analyticsForNewsletter;
 
       // The min width could display section in a row.
       const lgMinWidth = 820;
