@@ -6,6 +6,6 @@ Bytebase supports both automatic and manual backup at the database level. User c
 
 User accesses the database backup feature by visiting the "Backups" tab from the database page.
 
-Backups are stored inside the "backup" folder under the [--data](/docs/reference/command-line#data-less-than-less-than-directory-greater-than-greater-than) directory.
+Backups are stored inside the "backup" folder under the [--data](/docs/reference/command-line#--data-directory) directory.
 
 ![backup-example](/static/docs-assets/backup-example.png)

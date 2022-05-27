@@ -52,7 +52,7 @@ Bytebase has already prepared some sample data. In particular, it has created a 
 
 <hint-block type="info">
 
-For production setup, you need to make sure [--host](/docs/reference/command-line#host-less-than-less-than-string-greater-than-greater-than), [--port](/docs/reference/command-line#port-less-than-less-than-number-greater-than-greater-than) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
+For production setup, you need to make sure [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
 
 </hint-block>
 
