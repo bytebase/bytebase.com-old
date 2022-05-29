@@ -29,8 +29,8 @@
       :class="size === 'lg' ? 'mt-0' : 'mt-4'"
     >
       <div v-if="subscribed" class="text-xl font-semibold text-indigo-600">
-        <span class="text-3xl mr-2">🙌</span>
-        {{ $t("subscribe.check-email-to-confirm-subscription", { email }) }}
+        <span class="text-3xl mr-2">🎉</span>
+        {{ $t("subscribe.email-subscription-success-message") }}
       </div>
       <form
         v-else
