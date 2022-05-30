@@ -173,7 +173,7 @@
   "subscribe": {
     "get-database-insight": "获取数据库资讯",
     "learn-product-updates-and-everything-about-database": "了解我们的产品更新和有关数据库的实时消息。",
-    "check-email-to-confirm-subscription": "现在请检查 {email} 以确认订阅。",
+    "email-subscription-success-message": "您已成功订阅我们的 Newsletter~",
     "email-address": "邮箱地址",
     "enter-your-email": "输入你的邮箱"
   },
