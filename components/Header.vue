@@ -35,18 +35,16 @@
         aria-label="Global"
       >
         <div
-          class="hidden sm:flex flex-row justify-start items-center sm:mr-8 lg:mr-0"
+          class="hidden sm:flex flex-shrink-0 flex-row justify-start items-center sm:mr-8 lg:mr-0"
         >
-          <div class="flex items-center justify-between w-full sm:w-auto">
-            <nuxt-link :to="localePath('/')">
-              <span class="sr-only">Bytebase</span>
-              <img
-                class="h-6 sm:h-8 w-auto"
-                src="~/assets/logo-full.svg"
-                alt=""
-              />
-            </nuxt-link>
-          </div>
+          <nuxt-link :to="localePath('/')" class="flex-shrink-0">
+            <span class="sr-only">Bytebase</span>
+            <img
+              class="h-6 sm:h-8 w-auto"
+              src="~/assets/logo-full.svg"
+              alt=""
+            />
+          </nuxt-link>
         </div>
         <div
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
@@ -69,6 +67,36 @@
             @click.native="track('pricing.header')"
             >{{ $t("common.pricing") }}</nuxt-link
           >
+          <div class="relative flyout-menu-trigger hidden sm:flex">
+            <div
+              class="flex flex-row justify-start items-center flex-nowrap text-gray-700 hover:text-gray-500"
+            >
+              <span class="whitespace-nowrap">User cases</span>
+            </div>
+            <div
+              class="flyout-menu-wrapper hidden absolute top-4 -left-4 pt-4 w-auto h-auto"
+            >
+              <div
+                class="flyout-menu-container bg-white w-auto h-auto p-3 px-5 shadow-lg rounded flex-col justify-start items-start"
+              >
+                <nuxt-link
+                  :to="localePath('/usecase/dba')"
+                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
+                  >For DBA</nuxt-link
+                >
+                <nuxt-link
+                  :to="localePath('/usecase/techlead')"
+                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
+                  >For Tech Lead</nuxt-link
+                >
+                <nuxt-link
+                  :to="localePath('/usecase/developer')"
+                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
+                  >For Developer</nuxt-link
+                >
+              </div>
+            </div>
+          </div>
         </div>
         <div class="z-10 flex flex-row items-center justify-end">
           <div class="hidden relative sm:flex flex-row" style="margin-top: 6px">
@@ -137,3 +165,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.flyout-menu-trigger:hover > .flyout-menu-wrapper {
+  @apply flex;
+}
+
+.flyout-menu-container {
+  box-shadow: 0 0 8px #0003;
+}
+</style>

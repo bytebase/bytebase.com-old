@@ -2,7 +2,7 @@
   <div class="page-wrapper absolute w-full h-screen overflow-hidden">
     <div class="w-full bg-white z-20" :class="stickyHeaderAdditionClass">
       <MainBanner class="mb-2" />
-      <TheHeader />
+      <Header />
       <div
         class="max-w-full w-full mx-auto text-base px-4 sm:px-6 pb-2 pt-2 lg:pb-4 flex flex-wrap sm:grid sm:grid-flow-col justify-start lg:justify-center sm:space-x-4 lg:space-x-8"
       >
@@ -25,7 +25,7 @@
       class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
     >
       <Nuxt />
-      <TheFooter />
+      <Footer />
     </div>
   </div>
 </template>
