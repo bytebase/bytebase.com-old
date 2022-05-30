@@ -2,6 +2,14 @@
 
 ## [👀 What is Bytebase](/what-is-bytebase)
 
+## Get Started with Bytebase
+
+### [Deploy in 5 Seconds](/get-started-with-bytebase/deploy-in-5-seconds)  
+
+### [Prepare the Workspace](/get-started-with-bytebase/prepare-the-workspace)  
+
+### [Run an SQL Review Workflow](/get-started-with-bytebase/run-an-sql-review-workflow)
+
 ## 🚀 Install
 
 ### [Docker (5 seconds)](/install/install-with-docker)
