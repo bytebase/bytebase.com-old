@@ -13,7 +13,7 @@ Choose **Standard**. The "Employee" project is created successfully and you are 
 
 ![_](/static/docs-assets/project-page.png)  
 
-Choose `Transfer DB` to import the two databases synced from the connected instances. You can find them in the default project since they are not transferred into any specific project yet.  
+Choose `Transfer DB` to transfer the two databases synced from the connected instances. You can find them in the default project since they have not been transferred into any specific project yet.  
 
 ![_](/static/docs-assets/transfer-db-1.png)  
 
