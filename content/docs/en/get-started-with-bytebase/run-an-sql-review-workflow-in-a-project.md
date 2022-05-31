@@ -69,7 +69,7 @@ The Test environment doesn't require manual approval, thus the SQL will be appli
 
 ### Review the SQL issue  
 
-Click `Approve` if everything is OK. Now you apply the change to the Prod environment.  
+Click `Approve` if everything is OK and the change will be applied to the Prod environment.  
 
 ![_](/static/docs-assets/approve-issue.png)  
 
