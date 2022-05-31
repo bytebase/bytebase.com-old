@@ -8,7 +8,7 @@
 
 ### [Prepare the Workspace](/get-started-with-bytebase/prepare-the-workspace)  
 
-### [Run an SQL Review Workflow](/get-started-with-bytebase/run-an-sql-review-workflow-in-a-project)
+### [Run a SQL Review Workflow](/get-started-with-bytebase/run-an-sql-review-workflow-in-a-project)
 
 ## 🚀 Install
 
