@@ -33,7 +33,7 @@ On the detail page of your created project, click `Settings` to add project memb
 
 Now that everything is prepared, it's time to try the schema change workflow. The task is to add a column named "nickname" to the "employee" table. We will create a single pipeline to propagate the change from the `Test` instance to the `Prod` instance. By default, no manual approval is required on the `Test` environment, so developers can run SQLs without DBAs' approval. Bytebase supports both UI and GitOps workflows to accomplish the task. This demo uses the UI workflow.  
 
-### Create an SQL issue
+### Create a SQL issue
 
 The whole workflow begins with an SQL issue.  
 
