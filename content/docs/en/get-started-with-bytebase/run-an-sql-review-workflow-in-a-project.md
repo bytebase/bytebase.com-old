@@ -61,7 +61,7 @@ Click `Apply to other stages`.  For demo purposes, select yourself as the assign
 
 ![_](/static/docs-assets/create-issue.png)  
 
-The SQL Advisor kicks off immediately and checks your SQL statements automatically.  
+The SQL Advisor kicks off immediately and checks your SQL statements against various rules automatically.  
 
 ![_](/static/docs-assets/sql-advisor-2.png)  
 
