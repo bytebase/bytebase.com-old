@@ -3,7 +3,7 @@ title: Run an SQL Review Workflow in a Project
 ---
 ## Create a project
 
-Developers manage their databases within the Bytebase Project. Therefore, before dealing with the sample databases, import them into a project first.  
+Developers manage their databases within the Bytebase Project. Therefore, before dealing with the sample databases, you need to transfer them into a project first.  
 
 Click `Projects` > `New Project` to create a project called "Employee".  
 
