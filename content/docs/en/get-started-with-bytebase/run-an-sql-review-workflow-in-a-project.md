@@ -75,7 +75,7 @@ Click `Approve` if everything is OK and the change will be applied to the Prod e
 
 ![_](/static/docs-assets/approve-issue-2.png)  
 
-Click `Resovle issue`, and the issue will be done.  
+Now that we have applied the same SQL change to both the `Test` and `Prod` databases, we can click `Resolve issue` to finish the workflow.
 
 ![_](/static/docs-assets/resovle-issue.jpeg)  
 
