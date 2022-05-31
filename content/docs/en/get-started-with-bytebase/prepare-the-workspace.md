@@ -3,7 +3,7 @@ title: Prepare the Workspace
 ---
 ## Manage members
 
-Click `Settings` on the top bar to manage members in your workspace. Here your role is set as Owner by default. You can add new members by email.  
+Click `Settings` on the top bar to manage members in your workspace. You are assigned the `Owner` role as the first user and can add new members by email.  
 
 ![_](/static/docs-assets/add-users.png)  
 
