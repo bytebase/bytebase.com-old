@@ -9,7 +9,7 @@ expand_section_list: ["Introduction", "👉 Get Started with Bytebase"]
 
 ### [What is Bytebase](/introduction/what-is-bytebase)
 
-### [Use cases](/introduction/use-cases)
+### [Use Cases](/introduction/use-cases)
 
 ## 👉 Get Started with Bytebase
 

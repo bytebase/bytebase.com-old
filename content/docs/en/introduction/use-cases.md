@@ -1,5 +1,5 @@
 ---
-title: Use cases
+title: Use Cases
 description: This page lists some popular Bytebase use cases.
 ---
 
@@ -17,7 +17,7 @@ You can also integrate Bytebase's CLI bb into your existing CI/CD workflow.
 
 ## Database Developer Portal
 
-As the engineering team grows, there will form a platform team or a dedicated DBA team to manage the database infrastructure and support developers to interact with their application databases. Bytebase provides a centralized portal for Developers/DBAs/Platform Engineers to collaborate on database-related tasks such as reviewing database changes,  querying data, backing up and restoring databases and etc.
+As the engineering team grows, there will form a platform team or a dedicated DBA team to manage the database infrastructure and support developers to interact with their application databases. Bytebase provides a centralized portal for Developers/DBAs/Platform Engineers to collaborate on database-related tasks such as reviewing database changes, querying data, backing up and restoring databases and etc.
 
 ## Multi-Tenant Service
 
