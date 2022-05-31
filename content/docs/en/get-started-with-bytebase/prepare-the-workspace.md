@@ -9,7 +9,7 @@ Click `Settings` on the top bar to manage members in your workspace. You are ass
 
 ![_](/static/docs-assets/manage-user.png)  
 
->This demo uses the free version of Bytebase. It doesn't support user role management, and the user becomes workspace owner by default.  
+>This demo uses the free version of Bytebase. It doesn't support role management (RBAC), and all users assume the `Owner` role.  
 
 >With team or enterprise plan, you can manage users' roles in the workspace and in a project.  
 
