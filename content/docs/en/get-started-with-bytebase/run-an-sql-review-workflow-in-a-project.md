@@ -57,7 +57,7 @@ Fill in the required title, SQL statement, and an optional description.
 
 ![_](/static/docs-assets/write-sql.png)  
 
-Click `Apply to other stages`. Assign this issue to a user for Prod review. Select yourself as the assignee for this demo, then click `Create`.  
+Click `Apply to other stages`.  For demo purposes, select yourself as the assignee, then click `Create`.  
 
 ![_](/static/docs-assets/create-issue.png)  
 
