@@ -23,8 +23,10 @@ Now you are ready to manage these two "employee" databases in your project.
 
 ## Add your teammates  
 
+<hint-block type="info">
 Remember to add your teammates to the workspace before you try to add them to a specific project.  
-
+</hint-block>
+  
 On the detail page of your created project, click `Settings` to add project members. In the below example, we add a project member "Adela".  
 
 ![_](/static/docs-assets/add-teammate.png)  
@@ -49,7 +51,7 @@ You need to choose `Alter multiple databases` to create a pipeline propagating c
 
 ![_](/static/docs-assets/alter-multiple-databases.png)  
 
-You need to choose Alter multiple databases to make the pipeline work.  
+An issue creation page appears now.  
 
 ![_](/static/docs-assets/issue-creation-page.png)  
 
