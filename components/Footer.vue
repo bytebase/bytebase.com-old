@@ -8,38 +8,7 @@
     </div>
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl w-full mx-auto pt-12 pb-8 lg:pt-16 lg:px-0">
-      <div class="grid grid-cols-2 lg:grid-cols-5 lg:gap-4">
-        <div>
-          <h3
-            class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-          >
-            {{ $t("footer.use-cases") }}
-          </h3>
-          <ul class="mt-4 space-y-4">
-            <li>
-              <nuxt-link
-                :to="localePath('/usecase/dba')"
-                class="text-base text-gray-500 hover:text-gray-900"
-                >For DBA</nuxt-link
-              >
-            </li>
-            <li>
-              <nuxt-link
-                :to="localePath('/usecase/techlead')"
-                class="text-base text-gray-500 hover:text-gray-900"
-                >For Tech Lead</nuxt-link
-              >
-            </li>
-            <li>
-              <nuxt-link
-                :to="localePath('/usecase/developer')"
-                class="text-base text-gray-500 hover:text-gray-900"
-                >For Developer</nuxt-link
-              >
-            </li>
-          </ul>
-        </div>
-
+      <div class="grid grid-cols-2 lg:grid-cols-4 lg:gap-4">
         <div>
           <h3
             class="text-sm font-semibold text-gray-400 tracking-wider uppercase"

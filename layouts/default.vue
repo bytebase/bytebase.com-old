@@ -2,14 +2,14 @@
   <div class="page-wrapper absolute w-full h-screen overflow-hidden">
     <div class="w-full bg-white z-20" :class="stickyHeaderAdditionClass">
       <MainBanner class="mb-2" />
-      <TheHeader />
+      <Header />
     </div>
     <div
       ref="contentElementRef"
       class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
     >
       <Nuxt />
-      <TheFooter />
+      <Footer />
     </div>
   </div>
 </template>
