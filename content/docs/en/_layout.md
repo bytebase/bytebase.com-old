@@ -1,7 +1,9 @@
 # docs_layout
 
 ## 👀 Introduction
+
 ### [What is Bytebase](/introduction/what-is-bytebase)
+
 ### [Use cases](/introduction/use-cases)
 
 ## 🚀 Install
