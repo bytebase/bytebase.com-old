@@ -24,7 +24,7 @@ After successful execution, you will see something like this:
 
 ![_](/static/docs-assets/bytebase-installed.png)  
 
-Now you get three containers in Docker:  
+Now you have three Docker containers:  
 
 - Bytebase
 - A MySQL instance for the Test environment
