@@ -65,7 +65,7 @@ The SQL Advisor kicks off immediately and checks your SQL statements against var
 
 ![_](/static/docs-assets/sql-advisor-2.png)  
 
-Your query runs successfully against the Test environment, which doesn't require manual approval, and waits for approval for the Prod environment.  
+The Test environment doesn't require manual approval, thus the SQL will be applied automatically after passing those advisor checks. Then you are waiting for approval for the Prod environment.  
 
 ### Review the SQL issue  
 
