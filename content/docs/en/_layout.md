@@ -6,13 +6,13 @@
 
 ### [Use cases](/introduction/use-cases)
 
-## Get Started with Bytebase
+## 🐣 Get Started
 
-### [Deploy in 5 Seconds](/get-started-with-bytebase/deploy-in-5-seconds)  
+### [Deploy in 5 Seconds](/get-started/deploy-in-5-seconds)  
 
-### [Prepare the Workspace](/get-started-with-bytebase/prepare-the-workspace)  
+### [Prepare the Workspace](/get-started/prepare-the-workspace)  
 
-### [Run a SQL Review Workflow](/get-started-with-bytebase/run-an-sql-review-workflow-in-a-project)
+### [Run a SQL Review Workflow](/get-started/run-an-sql-review-workflow-in-a-project)
 
 ## 🚀 Install
 
