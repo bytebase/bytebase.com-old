@@ -35,7 +35,7 @@ Now that everything is prepared, it's time to try the schema change workflow. Th
 
 ### Create a SQL issue
 
-The whole workflow begins with an SQL issue.  
+The whole workflow is encapsulated in a SQL issue.  
 
 Open the "Employee" project. Click `Alter Schema`.  
 
