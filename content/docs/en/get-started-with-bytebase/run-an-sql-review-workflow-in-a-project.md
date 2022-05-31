@@ -53,7 +53,7 @@ You need to choose Alter multiple databases to make the pipeline work.
 
 ![_](/static/docs-assets/issue-creation-page.png)  
 
-Fill in the title and the SQL field. Add a description if needed.  
+Fill in the required title, SQL statement, and an optional description.  
 
 ![_](/static/docs-assets/write-sql.png)  
 
