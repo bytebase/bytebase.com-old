@@ -6,7 +6,7 @@
   >
     <a
       v-if="shouldShowBackToMainDocs"
-      :href="localePath('/docs/what-is-bytebase/')"
+      :href="localePath('/docs/introduction/what-is-bytebase/')"
       exact
       class="pl-6 pr-1 mt-3 py-2 text-gray-500 text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-accent"
     >
