@@ -12,19 +12,25 @@ Bytebase complements the existing cloud provider's database platforms or the com
 ## Key Features
 
 ### Schema (DDL) and Data (DML) Change Review Workflow
+
 Like code review, Bytebase streamlines the database change process. Within a single workflow, a database change can be reviewed and deployed from the dev environment all the way to the production environment.
 
 ### SQL Quality Check
+
 Bytebase analyzes SQL changes to enforce rules in compliance with your organization's policy. The enforcement includes naming conventions, anti-SQL pattern detection and etc. Prod and non-prod environments can also enforce different rules respectively.
 
 ### SQL Editor
+
 A web-based SQL Editor to query and export data. DBAs no longer need to give away sensitive database credentials when Developers need to access the data.
 
 ### Version Control with VCS Integration
+
 Bytebase keeps the complete schema change history. It also integrates with VCS systems (e.g. GitLab). Teams can manage the SQL migration scripts in the VCS and trigger schema deployment on code commit.
 
 ### Backup and Restore
+
 Bytebase supports database-level manual and periodical backup.
 
 ### Tenant Support
+
 A multi-tenant service may create a separate database for each of its tenants. Bytebase can manage a specific database change deployment for all tenants in a single workflow.
