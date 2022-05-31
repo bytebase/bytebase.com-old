@@ -12,7 +12,7 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       // `/docs` is an empty page as we need to redirect to `/docs/what-is-bytebase`.
-      window.location.href = "/docs/what-is-bytebase";
+      window.location.href = "/docs/introduction/what-is-bytebase";
     });
   },
 });
