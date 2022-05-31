@@ -30,7 +30,7 @@ Now you have three Docker containers:
 - A MySQL instance for the Test environment
 - A MySQL instance for the Prod environment  
 
-Each instance has a copy of the sample dataset in it. We choose the dataset_small of [our open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql) as the sample for our tutorial.  
+Each MySQL instance has a copy of the sample dataset in it. We choose the dataset_small of [our open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql) as the sample for our tutorial.  
 
 ![_](/static/docs-assets/bytebase-docker.png)  
 
