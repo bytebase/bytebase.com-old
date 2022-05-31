@@ -19,7 +19,7 @@ Choose `Transfer DB` to transfer the two databases synced from the connected ins
 
 ![_](/static/docs-assets/transfer-db-2.png)  
 
-Now the "employee" databases are available.  
+Now you are ready to manage these two "employee" databases in your project.  
 
 ## Add your teammates  
 
