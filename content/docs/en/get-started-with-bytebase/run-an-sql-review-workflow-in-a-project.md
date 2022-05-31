@@ -45,7 +45,7 @@ Then a dialog box will pop up.
 
 ![_](/static/docs-assets/alter-single-schema.png)  
 
-You need to choose `Alter multiple databases` to make the pipeline work.  
+You need to choose `Alter multiple databases` to create a pipeline propagating changes across multiple databases.  
 
 ![_](/static/docs-assets/alter-multiple-databases.png)  
 
