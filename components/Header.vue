@@ -49,29 +49,15 @@
         <div
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
         >
-          <nuxt-link
-            :to="localePath('/blog')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</nuxt-link
+          <div
+            class="relative flyout-menu-trigger hidden text-gray-700 hover:text-gray-500 sm:flex"
           >
-          <nuxt-link
-            :to="localePath('/docs/what-is-bytebase')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('docs.header')"
-            >{{ $t("common.docs") }}</nuxt-link
-          >
-          <nuxt-link
-            :to="localePath('/pricing')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('pricing.header')"
-            >{{ $t("common.pricing") }}</nuxt-link
-          >
-          <div class="relative flyout-menu-trigger hidden sm:flex">
             <div
-              class="flex flex-row justify-start items-center flex-nowrap text-gray-700 hover:text-gray-500"
+              class="flex flex-row justify-start items-center flex-nowrap cursor-pointer"
             >
-              <span class="whitespace-nowrap">User cases</span>
+              <span class="whitespace-nowrap">{{
+                $t("header.solutions")
+              }}</span>
             </div>
             <div
               class="flyout-menu-wrapper hidden absolute top-4 -left-4 pt-4 w-auto h-auto"
@@ -97,6 +83,24 @@
               </div>
             </div>
           </div>
+          <nuxt-link
+            :to="localePath('/blog')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('blog.header')"
+            >{{ $t("common.blog") }}</nuxt-link
+          >
+          <nuxt-link
+            :to="localePath('/docs/what-is-bytebase')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('docs.header')"
+            >{{ $t("common.docs") }}</nuxt-link
+          >
+          <nuxt-link
+            :to="localePath('/pricing')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('pricing.header')"
+            >{{ $t("common.pricing") }}</nuxt-link
+          >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">
           <div class="hidden relative sm:flex flex-row" style="margin-top: 6px">
