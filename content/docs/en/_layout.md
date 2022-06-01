@@ -1,11 +1,11 @@
 ---
 # expand_section_list is the list of default expanded sections.
-expand_section_list: ["Introduction", "👉 Get Started with Bytebase"]
+expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ---
 
 # docs_layout
 
-## Introduction
+## 👀 Introduction
 
 ### [What is Bytebase](/introduction/what-is-bytebase)
 
