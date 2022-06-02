@@ -33,7 +33,7 @@
                 class="flex-1 flex flex-col justify-between"
               >
                 <div
-                  class="pt-6 prose prose-xl md:prose-2xl mx-auto text-center hover:underline"
+                  class="pt-6 prose sm:prose-xl md:prose-2xl mx-auto text-center hover:underline"
                 >
                   <h1>{{ changelog.title }}</h1>
                 </div>
@@ -72,7 +72,7 @@
                 </div>
               </nuxt-link>
               <nuxt-content
-                class="w-full py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+                class="w-full py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
                 :document="changelog"
               />
             </div>
