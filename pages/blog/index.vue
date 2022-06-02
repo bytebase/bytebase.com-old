@@ -29,7 +29,7 @@
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
           :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
         >
-          <p class="mt-4 text-6xl font-semibold text-gray-900">
+          <p class="mt-4 text-2xl sm:text-6xl font-semibold text-gray-900">
             {{ latestFeaturedBlog.title }}
           </p>
           <p class="mt-6 text-base text-gray-500">

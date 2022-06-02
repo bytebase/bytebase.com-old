@@ -7,7 +7,7 @@
         :src="blog.featureImage"
       />
     </div>
-    <div class="prose prose-xl md:prose-2xl mx-auto px-4">
+    <div class="prose prose sm:prose-xl md:prose-2xl mx-auto px-4">
       <div
         v-for="(tag, tagIndex) in blog.tags"
         :key="tagIndex"
@@ -40,7 +40,7 @@
       </div>
     </div>
     <nuxt-content
-      class="w-full px-4 py-6 prose prose-indigo prose-xl md:prose-2xl mx-auto"
+      class="w-full px-4 py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
       :document="blog"
     />
   </div>
