@@ -16,7 +16,11 @@
           :attributes-to-highlight.camel="['title', 'path']"
           :attributes-to-snippet.camel="['bodyPlainText']"
         >
-          <ais-search-box show-loading-indicator class="p-2 border-b" />
+          <ais-search-box
+            ref="searchInputRef"
+            show-loading-indicator
+            class="p-2 border-b"
+          />
           <ais-hits class="max-h-72 overflow-y-auto rounded-b-lg">
             <template #default="{ items }">
               <div
@@ -67,14 +71,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  ref,
+  watch,
+} from "@nuxtjs/composition-api";
 import algoliaSearch from "algoliasearch/lite";
 import { removeI18nPrefixPath } from "~/common/utils";
 import { useStore } from "~/store";
 
 export default defineComponent({
-  setup() {
+  props: {
+    status: {
+      required: true,
+      type: Boolean,
+    },
+  },
+  setup(props) {
     const store = useStore();
+    const searchInputRef = ref();
     // configurations for Algolia search
     const searchClient = algoliaSearch(
       // Applictaion ID
@@ -94,6 +110,12 @@ export default defineComponent({
       });
     });
 
+    watch(props, () => {
+      if (props.status) {
+        searchInputRef.value?.$el?.querySelector("input")?.focus();
+      }
+    });
+
     const handleLinkClick = () => {
       store.hideSearchDialog();
     };
@@ -107,6 +129,7 @@ export default defineComponent({
       handleLinkClick,
       removeI18nPrefixPath,
       hideSearchDialog,
+      searchInputRef,
     };
   },
 });
