@@ -111,7 +111,7 @@ The screen displays an image this time:
 
 **The DBAs among these 10 people have been humble audiences for 5 days. This picture becomes the last straw to break their nerves. They decided to take the lead now.**
 
-## Day 6 From[ forinti](https://news.ycombinator.com/user?id=forinti): Try to be the person I needed help from before**
+## Day 6 From [forinti](https://news.ycombinator.com/user?id=forinti): Try to be the person I needed help from before
 
 I was a developer and turned into a DBA by necessity. When I was still just a dev, I couldn't get the support I needed from the DBAs, so now I try to be the person I needed help from before. 
 
