@@ -45,7 +45,7 @@ The screen really is sentient, even intelligent at some level. It automatically 
 
 "Honestly wish we had a DBA"
 
-## Day 2  From[ steve_adams_86](https://news.ycombinator.com/user?id=steve_adams_86): Both Brilliant, both jerks**
+## Day 2  From [steve_adams_86](https://news.ycombinator.com/user?id=steve_adams_86): Both Brilliant, both jerks
 
 This is strange and funny to read; the only two DBAs I've worked with matched this description perfectly.
 
