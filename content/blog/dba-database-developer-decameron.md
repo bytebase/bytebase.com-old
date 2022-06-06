@@ -1,7 +1,7 @@
 ---
 title: "DBA, Database and Developer - The Decameron"
 author: Lucy
-published_at: 2022/06/06 15:30
+published_at: 2022/06/06 22:30
 feature_image: /static/blog-changelog-assets/2022/06/roaringdba.jpeg
 tags: Education
 featured: true
@@ -17,7 +17,7 @@ As the debut of this series, we compiled 10 stories about DBAs based on the repl
 
 Nobody knows what happened and how they ended up there. Just when they were about to smash the windows, an electronic screen flashed for a few seconds and displayed their way out:
 
-"One true story about DBAs per day, you'll only get locked up for 10 days."
+*"One true story about DBAs per day, you'll only get locked up for 10 days."*
 
 Somebody sneered at the somehow sentient screen:
 
@@ -25,7 +25,7 @@ Somebody sneered at the somehow sentient screen:
 
 Another sentence appeared on the screen:
 
-"You could leave, but your team's databases will be dropped and won't be recovered."
+*"You could leave, but your team's databases will be dropped and won't be recovered."*
 
 Dead silence permeats the room. After a while, somebody finally breaks the ice:
 
@@ -41,7 +41,7 @@ Honestly wish we had a DBA, I ended up picking up a lot of his responsibilities.
 
 The screen really is sentient, even intelligent at some level. It automatically summarized the story:
 
-"Honestly wish we had a DBA"
+*"Honestly wish we had a DBA"*
 
 ## Day 2  From [steve_adams_86](https://news.ycombinator.com/user?id=steve_adams_86): Both Brilliant, both jerks
 
@@ -55,9 +55,9 @@ Both brilliant, taught me more than I can recount here, hilarious and interestin
 
 One they had a great system in place and the product felt mature, the companies axed them.
 
-The screen falshes:
+The screen flashes:
 
-"All brilliant, all jerks."
+*"All brilliant, all jerks."*
 
 DBAs in the room frowned a little. 
 
@@ -75,7 +75,7 @@ These guys are worth their weight in gold though, I think I heard he ended up ge
 
 The screen switches to today's theme:
 
-"Gone DBA"
+*"Gone DBA"*
 
 ## Day 4 From [Simon_O_Rourke](https://news.ycombinator.com/user?id=Simon_O_Rourke): He was Supposed to Know Everything
 
@@ -87,7 +87,7 @@ In the end, we moved to Amazon Redshift, and he was progressively moved into a s
 
 The familiar flashes appeared once more:
 
-"He was supposed to 'know everything'"
+*"He was supposed to 'know everything'"*
 
 ## Day 5 From [skc](https://news.ycombinator.com/user?id=skc): “UR RUINING MY F****ING DATABASE”
 
@@ -98,14 +98,7 @@ I'm now wondering if there is something about the role that lends itself to such
 Today these guys remind me a lot of JK Simmons character in "Whiplash"
 
 The screen displays an image this time:
-
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.jpg "image_tooltip")
-
+![RoaringDBA](https://bytebase.com/static/blog-changelog-assets/2022/06/roaringdba.jpeg)
 
 **The DBAs among these 10 people have been humble audiences for 5 days. This picture becomes the last straw to break their nerves. They decided to take the lead now.**
 
@@ -123,7 +116,7 @@ So, yes, a DBA is a really important role. With regards to it being a good job, 
 
 Screen displays:
 
-"Try to be the person I needed help from before"
+*"Try to be the person I needed help from before"*
 
 ## Day 7 From [compton93](https://news.ycombinator.com/user?id=compton93): For that company my role was priceless
 
@@ -135,7 +128,7 @@ To that specific company my role was priceless, new features could be built in 1
 
 The screen flashes and shows:
 
-"For that company my role was priceless"
+*"For that company my role was priceless"*
 
 ## Day 8 From [Twisell](https://news.ycombinator.com/user?id=Twisell): Exhausting yet rewarding
 
@@ -153,7 +146,7 @@ The bugs and poor performance lingers though.
 
 The screen changed the sentence to:
 
-"Exhausting yet rewarding"
+*"Exhausting yet rewarding"*
 
 ## Day 9 From [jhugo](https://news.ycombinator.com/user?id=jhugo): Conflict comes from lack of understanding
 
@@ -165,7 +158,7 @@ Networks & DBs present abstractions, but they're very leaky ones, yet developers
 
 Screen flashes:
 
-"Conflict comes from lack of understanding"
+*"Conflict comes from lack of understanding"*
 
 ## Day 10 From [niklasrde](https://news.ycombinator.com/user?id=niklasrde) &[ datalopers](https://news.ycombinator.com/user?id=datalopers): The lost art -- data modeling and SQL
 
@@ -177,7 +170,7 @@ I honestly think the thing that costs most companies the most in their hosting i
 
 The screen flashes and literally drops a few pixel tears:
 
-"The lost art -- data modeling and SQL"
+*"The lost art -- data modeling and SQL"*
 
 ## Finale
 
