@@ -91,7 +91,7 @@ The familiar flashes appeared once more:
 
 "He was supposed to 'know everything'"
 
-## Day 5 From[ skc](https://news.ycombinator.com/user?id=skc): “UR RUINING MY F****ING DATABASE”**
+## Day 5 From [skc](https://news.ycombinator.com/user?id=skc): “UR RUINING MY F****ING DATABASE”
 
 This is eerily similar to my experiences with two very, very good DBAs I worked with.
 
