@@ -127,7 +127,7 @@ Screen displays:
 
 "Try to be the person I needed help from before"
 
-## Day 7 From[ compton93](https://news.ycombinator.com/user?id=compton93): For that company my role was priceless**
+## Day 7 From [compton93](https://news.ycombinator.com/user?id=compton93): For that company my role was priceless
 
 I hate to imagine how many startups out there don't even create indexes and just consider it to be a database problem and increase CPU/RAM and look the other way.
 
