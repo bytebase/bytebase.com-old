@@ -63,7 +63,7 @@ The screen falshes:
 
 DBAs in the room frowned a little. 
 
-## Day 3 From[ jamal-kumar](https://news.ycombinator.com/user?id=jamal-kumar): Gone DBA**
+## Day 3 From [jamal-kumar](https://news.ycombinator.com/user?id=jamal-kumar): Gone DBA
 
 Is this the DBA gone off the rails story thread?
 
