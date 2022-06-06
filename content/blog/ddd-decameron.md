@@ -33,7 +33,7 @@ Dead silence permeats the room. After a while, somebody finally breaks the ice:
 
 "Well, I'll go first."
 
-## Day 1 From[ donatj](https://news.ycombinator.com/user?id=donatj): Honestly Wish We had a DBA**
+## Day 1 From [donatj](https://news.ycombinator.com/user?id=donatj): Honestly Wish We had a DBA
 
 We had a DBA about 6 years ago, he was one of the smartest guys I've ever worked with, and knew his stuff inside and out. I would recommend a DBA highly to anyone having growth issues. I honestly don't think we would have scaled without him. I learned a ton from him.
 
