@@ -157,7 +157,7 @@ The screen changed the sentence to:
 
 "Exhausting yet rewarding"
 
-## Day 9 From[ jhugo](https://news.ycombinator.com/user?id=jhugo): Conflict comes from lack of understanding**
+## Day 9 From [jhugo](https://news.ycombinator.com/user?id=jhugo): Conflict comes from lack of understanding
 
 I think this kind of conflict often comes from frustration at developers not having much understanding of the underlying technology that the network engineer / DBA is responsible for.
 
