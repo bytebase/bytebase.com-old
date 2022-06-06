@@ -137,7 +137,7 @@ The screen flashes and shows:
 
 "For that company my role was priceless"
 
-## Day 8 From[ Twisell](https://news.ycombinator.com/user?id=Twisell): Exhausting yet rewarding**
+## Day 8 From [Twisell](https://news.ycombinator.com/user?id=Twisell): Exhausting yet rewarding
 
 I would argue that it's way more accurate to say this role is actually outsourced in most organizations with all the tradeoffs that come with that strategy. I begged my former employer to subscribe to a good PostgreSQL support company. Guess what the one we picked is constantly looking to hire new DBA to sustain growth... 
 
