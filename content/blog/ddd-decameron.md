@@ -169,7 +169,7 @@ Screen flashes:
 
 "Conflict comes from lack of understanding"
 
-## Day 10 From[ niklasrde](https://news.ycombinator.com/user?id=niklasrde) &[ datalopers](https://news.ycombinator.com/user?id=datalopers): The lost art -- data modeling and SQL**
+## Day 10 From [niklasrde](https://news.ycombinator.com/user?id=niklasrde) &[ datalopers](https://news.ycombinator.com/user?id=datalopers): The lost art -- data modeling and SQL
 
 Same at my previous role - we did have some people who were really good at some point, and into DBs. We had a very solid Redis and PostgreSQL set-up, and some advanced stuff for simple data in Redis - but once that knowledge fades with attrition, making space for continued personal development into how two very different DBMS work for a small team is not easy, and it just stays untouched, disliked, and somewhat abandoned forever more. 
 
