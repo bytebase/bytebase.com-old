@@ -79,7 +79,7 @@ The screen switches to today's theme:
 
 "Gone DBA"
 
-## Day 4 From[ Simon_O_Rourke](https://news.ycombinator.com/user?id=Simon_O_Rourke): He was Supposed to Know Everything**
+## Day 4 From [Simon_O_Rourke](https://news.ycombinator.com/user?id=Simon_O_Rourke): He was Supposed to Know Everything
 
 I had eerily similar experiences from an older DBA guy, who was going through college in his 40's while working away. He knew his stuff, helped a lot optimizing the ETL process, but could turn nasty in an instant, and had a major chip on his shoulder about younger analysts with college degrees.
 
