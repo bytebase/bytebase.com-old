@@ -98,7 +98,7 @@ I'm now wondering if there is something about the role that lends itself to such
 Today these guys remind me a lot of JK Simmons character in "Whiplash"
 
 The screen displays an image this time:
-![RoaringDBA](https://bytebase.com/static/blog-changelog-assets/2022/06/roaringdba.jpeg)
+![roaring-dba](/static/blog-changelog-assets/2022/06/roaringdba.jpeg)
 
 **The DBAs among these 10 people have been humble audiences for 5 days. This picture becomes the last straw to break their nerves. They decided to take the lead now.**
 
