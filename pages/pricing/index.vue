@@ -78,6 +78,7 @@
                   v-if="plan.type == 0"
                   :to="localePath('/docs/install/install-with-docker')"
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
+                  @click="track('deploy')"
                   >{{ plan.buttonText }}</nuxt-link
                 >
                 <button
@@ -580,9 +581,14 @@ export default defineComponent({
       }
     };
 
+    const track = (component: string) => {
+      analytics.value?.track(`pricing.${component}`);
+    };
+
     return {
       plans,
       sections,
+      track,
       onTeamOrEnterpriseButtonClick,
     };
   },
