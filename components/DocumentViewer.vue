@@ -19,6 +19,7 @@
         <a
           class="py-1 flex flex-row justify-start items-center text-gray-600 hover:text-accent"
           :href="`https://github.com/bytebase/bytebase.com/blob/main${githubFilePath}`"
+          target="_blank"
         >
           Edit this page on GitHub
           <img
