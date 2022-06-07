@@ -29,7 +29,7 @@ export const FEATURE_SECTIONS = [
       "schema-change",
       "migration-history",
       "sql-editor",
-      "database-backup-restore",
+      "disaster-recovery",
       "archiving",
       "sql-check",
       "anomaly-detection",
@@ -84,7 +84,13 @@ const FREE_PLAN: Plan = {
     { id: "schema-change" },
     { id: "migration-history" },
     { id: "sql-editor" },
-    { id: "database-backup-restore" },
+    {
+      id: "disaster-recovery",
+      content:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-basic",
+      tooltip:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-basic-tooltip",
+    },
     { id: "archiving" },
     {
       id: "sql-check",
@@ -138,7 +144,13 @@ const TEAM_PLAN: Plan = {
     { id: "schema-change" },
     { id: "migration-history" },
     { id: "sql-editor" },
-    { id: "database-backup-restore" },
+    {
+      id: "disaster-recovery",
+      content:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-advanced",
+      tooltip:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-advanced-tooltip",
+    },
     { id: "archiving" },
     {
       id: "sql-check",
@@ -199,7 +211,13 @@ const ENTERPRISE_PLAN: Plan = {
     { id: "schema-change" },
     { id: "migration-history" },
     { id: "sql-editor" },
-    { id: "database-backup-restore" },
+    {
+      id: "disaster-recovery",
+      content:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-advanced",
+      tooltip:
+        "pricing.subscription.feature-sections.database-development.features.disaster-recovery-advanced-tooltip",
+    },
     { id: "archiving" },
     {
       id: "sql-check",
