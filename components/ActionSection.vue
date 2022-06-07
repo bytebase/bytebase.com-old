@@ -40,8 +40,15 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, useContext } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  ref,
+  useContext,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useSegment } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
@@ -54,9 +61,16 @@ export default defineComponent({
   },
   setup(props) {
     const { app } = useContext();
+    const analytics = ref();
+
+    onMounted(() => {
+      analytics.value = useSegment().analytics;
+    });
 
     const track = (component: string) => {
       trackEvent([component, props.moduleName].join("."));
+      // Segment
+      analytics.value?.track([component, props.moduleName].join("."));
     };
 
     const actionSentence = computed(() => {

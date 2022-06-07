@@ -146,14 +146,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  ref,
+  useContext,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useSegment } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
   setup() {
     const { $ga } = useContext() as any;
+    const analytics = ref();
+
+    onMounted(() => {
+      analytics.value = useSegment().analytics;
+    });
 
     const track = (name: string) => {
       trackEvent(name);
@@ -163,6 +174,8 @@ export default defineComponent({
         eventCategory: parts[0],
         eventLabel: parts[1],
       });
+      // Segment
+      analytics.value?.track(name);
     };
 
     return { track };
