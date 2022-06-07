@@ -173,7 +173,7 @@
   "subscribe": {
     "get-database-insight": "Get Database Insight",
     "learn-product-updates-and-everything-about-database": "Learn product updates and everything about database.",
-    "check-email-to-confirm-subscription": "Now check {email} to confirm the subscription.",
+    "email-subscription-success-message": "You've successfully subscribed to our newsletter.",
     "email-address": "Email address",
     "enter-your-email": "Enter your email"
   },
@@ -195,10 +195,10 @@
     "join-us": "Join us"
   },
   "header": {
+    "solutions": "Solutions",
     "deploy-now": "Deploy now"
   },
   "footer": {
-    "use-cases": "Use cases",
     "brand": "Brand",
     "careers": "Careers",
     "contact": "Contact",

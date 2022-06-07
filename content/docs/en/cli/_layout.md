@@ -1,7 +1,3 @@
----
-expand_all: true
----
-
 # cli_layout
 
 ## [Getting Started](/cli/overview)

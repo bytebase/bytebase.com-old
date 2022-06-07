@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper absolute w-full h-screen overflow-hidden">
     <div class="w-full bg-white z-20" :class="stickyHeaderAdditionClass">
-      <TheHeader />
+      <Header />
     </div>
     <div
       ref="contentElementRef"
@@ -26,7 +26,7 @@
         </h2>
         <FeatureSection />
       </main>
-      <TheFooter />
+      <Footer />
     </div>
   </div>
 </template>

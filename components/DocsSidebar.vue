@@ -6,7 +6,7 @@
   >
     <a
       v-if="shouldShowBackToMainDocs"
-      :href="localePath('/docs/what-is-bytebase/')"
+      :href="localePath('/docs')"
       exact
       class="pl-6 pr-1 mt-3 py-2 text-gray-500 text-sm border border-transparent border-r-0 whitespace-pre-wrap break-all hover:text-accent"
     >
@@ -147,10 +147,7 @@ import { useStore } from "~/store";
 import { ContentDocument, DocumentTreeNode } from "~/types/docs";
 import { validDocsCategoryList } from "~/common/const";
 
-const getDocumentTreeRoot = (
-  documentList: any[],
-  expandAll = false
-): DocumentTreeNode => {
+const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
   if (!documentList || !Array.isArray(documentList)) {
     return {
       path: "",
@@ -176,7 +173,7 @@ const getDocumentTreeRoot = (
         path: document.path,
         type: document.type,
         children: [],
-        displayChildren: expandAll,
+        displayChildren: document.displayChildren,
       });
     } else if (document.level === 2) {
       const parentNode = last(documentTreeRoot.children);
@@ -186,7 +183,7 @@ const getDocumentTreeRoot = (
           path: document.path,
           type: document.type,
           children: [],
-          displayChildren: expandAll,
+          displayChildren: false,
         });
       }
     } else if (document.level === 3) {
@@ -197,7 +194,7 @@ const getDocumentTreeRoot = (
           path: document.path,
           type: document.type,
           children: [],
-          displayChildren: expandAll,
+          displayChildren: false,
         });
       }
     }
@@ -229,6 +226,7 @@ export default defineComponent({
         validDocsCategoryList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
+
       const nodes = layout.body.children
         .filter((n) => n.tag === "h2" || n.tag === "h3" || n.tag === "h4")
         .map((n) => {
@@ -243,6 +241,8 @@ export default defineComponent({
           let path = undefined;
           let title = "";
           let type = "text";
+          let displayChildren = false;
+
           if (child.type !== "text") {
             if (child.props.to) {
               type = "page-link";
@@ -256,18 +256,23 @@ export default defineComponent({
             title = child.value;
           }
 
+          if (
+            Array.isArray(layout.expandSectionList) &&
+            layout.expandSectionList.includes(title)
+          ) {
+            displayChildren = true;
+          }
+
           return {
             level,
             title,
             path,
             type,
+            displayChildren,
           };
         });
 
-      documentTreeRoot.value = getDocumentTreeRoot(
-        nodes,
-        layout.expandAll
-      ) as DocumentTreeNode;
+      documentTreeRoot.value = getDocumentTreeRoot(nodes) as DocumentTreeNode;
     });
 
     const relocateSidebar = () => {

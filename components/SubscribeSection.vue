@@ -29,8 +29,8 @@
       :class="size === 'lg' ? 'mt-0' : 'mt-4'"
     >
       <div v-if="subscribed" class="text-xl font-semibold text-indigo-600">
-        <span class="text-3xl mr-2">🙌</span>
-        {{ $t("subscribe.check-email-to-confirm-subscription", { email }) }}
+        <span class="text-3xl mr-2">🎉</span>
+        {{ $t("subscribe.email-subscription-success-message") }}
       </div>
       <form
         v-else
@@ -66,6 +66,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useSegment } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
@@ -82,8 +83,11 @@ export default defineComponent({
     const email = ref("");
     const subscribed = ref(false);
     const size = ref("");
+    const analytics = ref();
 
     onMounted(() => {
+      analytics.value = useSegment().analyticsForNewsletter;
+
       // The min width could display section in a row.
       const lgMinWidth = 820;
 
@@ -110,20 +114,11 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent(props.moduleName);
-      fetch("https://newsletter.bytebase.com/members/api/send-magic-link/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email.value,
-          name: "",
-          requestSrc: "bytebase.com",
-        }),
-      }).then(() => {
-        subscribed.value = true;
-        emit("subscribed");
+      analytics.value?.identify({
+        email: email.value,
       });
+      subscribed.value = true;
+      emit("subscribed");
       e.preventDefault();
     };
 

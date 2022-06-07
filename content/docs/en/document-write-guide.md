@@ -3,9 +3,9 @@ title: ✍️ Document write guide
 description: This section shows the steps of writing a document.
 ---
 
-This section shows the steps of writing a document.
+Before getting started, please make sure that you are familiar with the **[basic Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)**.
 
-## The structure of a `.md` file
+## The structure of a document `.md` file
 
 ```markdown
 ---
@@ -18,14 +18,14 @@ description: This section shows the steps of writing a document.
 Firstly you need to write down the main concept of your documention.
 ```
 
-For optimizing documentation SEO, we need to save its metadata between the `--- xxx ---` block. Typically used fields are:
+To optimize documentation SEO, we should save its metadata between the `--- xxx ---` block. Typically used fields are:
 
 - `title` should be same as the header title;
 - `description` field should be the excerpt of the document;
 
 ## How to write a new document?
 
-1. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/)/[typora](https://typora.io/)
+1. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/)/[typora](https://typora.io/)/[notion](https://notion.so/)
 2. Add the metadata block at the top of the markdown file.
 3. Add an entry for the document in `_layout.md`.
 4. Run `pnpm dev` start the review server.

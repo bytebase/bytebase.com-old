@@ -1,6 +1,23 @@
+---
+# expand_section_list is the list of default expanded sections.
+expand_section_list: ["👀 Introduction", "🐣 Get Started"]
+---
+
 # docs_layout
 
-## [👀 What is Bytebase](/what-is-bytebase)
+## 👀 Introduction
+
+### [What is Bytebase](/introduction/what-is-bytebase)
+
+### [Use Cases](/introduction/use-cases)
+
+## 🐣 Get Started
+
+### [Deploy in 5 Seconds](/get-started/deploy-in-5-seconds)
+
+### [Prepare the Workspace](/get-started/prepare-the-workspace)
+
+### [Run a SQL Review Workflow](/get-started/run-an-sql-review-workflow-in-a-project)
 
 ## 🚀 Install
 
@@ -100,13 +117,13 @@
 
 ### [Customize the Workspace with Your Own Logo](/settings/customize-workspace/)
 
-### [Link External SQL Console](/settings/external-sql-console)
-
 ## 🔧 Operating
 
 ### [Production Setup](/operating/production-setup)
 
 ### [Disaster Recovery](/operating/disaster-recovery)
+
+### [How Bytebase Stores Data](/operating/how-bytebase-stores-data)
 
 ### [Telemetry](/operating/telemetry)
 

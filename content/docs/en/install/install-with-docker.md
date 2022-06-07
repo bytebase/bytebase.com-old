@@ -2,7 +2,7 @@
 title: Docker (5 seconds)
 ---
 
-**Latest release version:** [**1.0.5**](https://github.com/bytebase/bytebase/releases/tag/1.0.5)
+**Latest release version:** [**1.1.0**](https://github.com/bytebase/bytebase/releases/tag/1.1.0)
 
 <hint-block type="info">
 
@@ -17,7 +17,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 5678:5678 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.5 \
+  bytebase/bytebase:1.1.0 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 5678
@@ -32,7 +32,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 8080:8080 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.5 \
+  bytebase/bytebase:1.1.0 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 8080
@@ -52,7 +52,7 @@ Bytebase has already prepared some sample data. In particular, it has created a 
 
 <hint-block type="info">
 
-For production setup, you need to make sure [--host](/docs/reference/command-line#host-less-than-less-than-string-greater-than-greater-than), [--port](/docs/reference/command-line#port-less-than-less-than-number-greater-than-greater-than) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
+For production setup, you need to make sure [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
 
 </hint-block>
 
@@ -63,7 +63,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.0.5 \
+  bytebase/bytebase:1.1.0 \
   --data /var/opt/bytebase \
   --host https://bytebase.example.com \
   --port 80

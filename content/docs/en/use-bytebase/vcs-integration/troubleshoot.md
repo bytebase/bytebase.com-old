@@ -5,7 +5,7 @@ title: 🐞 Troubleshoot
 ### Committed migration file does not trigger issue creation
 
 1. Check the committed file conforms to the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) and directory structure conforms to the [layout](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-organization).
-2. Make sure [--host](/docs/reference/command-line#host-less-than-less-than-string-greater-than-greater-than),[--port](/docs/reference/command-line#port-less-than-less-than-number-greater-than-greater-than) match exactly to the host:port address where Bytebase supposed to be visited. Bytebase uses --host, --port to configure the VCS webhook callback to trigger the issue creation.
+2. Make sure [--host](/docs/reference/command-line#--host-string),[--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Bytebase uses --host, --port to configure the VCS webhook callback to trigger the issue creation.
 
 ### Failed to create webhook xxx, status code: 422 for GitLab
 
