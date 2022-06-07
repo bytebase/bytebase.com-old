@@ -480,7 +480,12 @@ import {
   ref,
   onMounted,
 } from "@nuxtjs/composition-api";
-import { PAGE, PRICING_EVENT, useSegment } from "~/plugin/segment";
+import {
+  getSourceFromUrl,
+  PAGE,
+  PRICING_EVENT,
+  useSegment,
+} from "~/plugin/segment";
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
@@ -582,7 +587,9 @@ export default defineComponent({
     };
 
     const track = (component: string) => {
-      analytics.value?.track(`pricing.${component}`);
+      analytics.value?.track(`pricing.${component}`, {
+        source: getSourceFromUrl(),
+      });
     };
 
     return {
