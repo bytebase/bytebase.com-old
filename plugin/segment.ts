@@ -50,3 +50,10 @@ export const useSegment = () => {
     analyticsForNewsletter,
   });
 };
+
+// getSourceFromUrl will extract the "source" param from url
+export const getSourceFromUrl = (): string => {
+  const url = new URL(window.location.href);
+  const params = new URLSearchParams(url.search);
+  return params.get("source")?.toLowerCase() ?? "";
+};
