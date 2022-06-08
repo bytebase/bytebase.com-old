@@ -143,7 +143,6 @@ import {
   watch,
 } from "@nuxtjs/composition-api";
 import { last } from "lodash";
-import { useStore } from "~/store";
 import { ContentDocument, DocumentTreeNode } from "~/types/docs";
 import { validDocsCategoryList } from "~/common/const";
 
@@ -207,7 +206,6 @@ export default defineComponent({
   emits: ["link-click"],
   setup(_, { emit }) {
     const { $content, route } = useContext();
-    const store = useStore();
     const sidebarElRef = ref<HTMLDivElement>();
     const documentTreeRoot = ref<DocumentTreeNode>();
 
@@ -329,16 +327,11 @@ export default defineComponent({
       emit("link-click");
     };
 
-    const handleSearchBtnClick = () => {
-      store.showSearchDialog();
-    };
-
     return {
       documentTreeRoot,
       sidebarElRef,
       shouldShowBackToMainDocs,
       handleLinkClick,
-      handleSearchBtnClick,
     };
   },
 });

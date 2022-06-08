@@ -1,6 +1,5 @@
 <template>
   <div class="page-wrapper w-full h-screen">
-    <MainBanner />
     <header
       class="w-full h-14 bg-white flex flex-row justify-between items-center py-2 px-4 sm:px-6 border-b"
     >
@@ -40,27 +39,7 @@
           >Pricing</nuxt-link
         >
       </nav>
-      <div
-        class="w-9 sm:w-64 h-9 pl-0 sm:px-3 border rounded-3xl flex flex-row justify-center sm:justify-between items-center opacity-80 cursor-pointer hover:opacity-100"
-        @click="handleSearchBtnClick"
-      >
-        <div class="flex flex-row justify-start items-center">
-          <img class="w-4 h-auto" src="~/assets/svg/search.svg" alt="search" />
-          <span class="text-sm ml-2 hidden sm:block">Search</span>
-        </div>
-        <div
-          v-show="ctrlSymbol"
-          class="hidden sm:flex font-mono text-sm rounded-md border px-2 pt-0.5 text-gray-600"
-        >
-          <span
-            class="leading-5"
-            :class="ctrlSymbol === '⌘' ? 'text-lg' : ''"
-            >{{ ctrlSymbol }}</span
-          >
-          <span class="leading-5 mx-1">+</span>
-          <span class="leading-5">K</span>
-        </div>
-      </div>
+      <div id="algolia-search-container"></div>
       <div class="flex">
         <img
           v-if="state.isMobileView"
@@ -96,25 +75,17 @@
       />
       <Nuxt />
     </main>
-    <AlgoliaSearchDialog
-      v-show="showSearchDialogFlag"
-      :status="showSearchDialogFlag"
-    ></AlgoliaSearchDialog>
   </div>
 </template>
 
 <script lang="ts">
 import {
-  computed,
   defineComponent,
   onMounted,
   reactive,
   useContext,
-  ref,
 } from "@nuxtjs/composition-api";
-import { useStore } from "~/store";
 import Plausible from "plausible-tracker";
-import { getBrowserOSName } from "~/common/utils";
 
 const { trackEvent } = Plausible();
 
@@ -129,19 +100,18 @@ const MOBILE_VIEW_MAX_WIDTH = 640;
 export default defineComponent({
   setup() {
     const { $ga } = useContext() as any;
-    const store = useStore();
     const state = reactive<State>({
       isMobileView: false,
       showSidebar: true,
     });
-    const ctrlSymbol = ref<string>("");
-
-    const showSearchDialogFlag = computed(() => {
-      return store.showSearchDialogFlag;
-    });
 
     onMounted(async () => {
-      ctrlSymbol.value = getBrowserOSName() === "MacOS" ? "⌘" : "Ctrl";
+      (window as any).docsearch({
+        container: "div#algolia-search-container",
+        appId: "2M7XI1QIDY",
+        indexName: "bytebase-docs",
+        apiKey: "405fc756e17b8346cee6b0f969b67249",
+      });
 
       state.isMobileView = window.innerWidth <= MOBILE_VIEW_MAX_WIDTH;
       if (state.isMobileView) {
@@ -182,18 +152,11 @@ export default defineComponent({
       }
     };
 
-    const handleSearchBtnClick = () => {
-      store.showSearchDialog();
-    };
-
     return {
-      ctrlSymbol,
       state,
-      showSearchDialogFlag,
       track,
       toggleSidebar,
       handleSidebarClick,
-      handleSearchBtnClick,
     };
   },
 });
@@ -203,7 +166,7 @@ export default defineComponent({
 .page-wrapper {
   @apply grid;
   grid-template-rows:
-    minmax(min-content, max-content) minmax(min-content, max-content)
+    minmax(min-content, max-content)
     auto;
 }
 .main-wrapper {
@@ -215,5 +178,15 @@ export default defineComponent({
 }
 .router-active-link {
   @apply no-underline;
+}
+</style>
+
+<style>
+#algolia-search-container > button {
+  @apply ml-0 sm:w-52;
+}
+
+.DocSearch-Modal .DocSearch-NoResults > .DocSearch-Screen-Icon > svg {
+  @apply m-auto;
 }
 </style>
