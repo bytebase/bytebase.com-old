@@ -1,6 +1,6 @@
 import fse from "fs-extra";
 import slug from "slug";
-import { camelCase, findLast, last, lowerCase } from "lodash";
+import { camelCase, findLast, last } from "lodash";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -251,11 +251,6 @@ export default {
 
             const dataObject = {
               objectID: path,
-              path: path,
-              slug: item.slug,
-              title: item.title,
-              tags: item.tags,
-              bodyPlainText: item.bodyPlainText,
               url: `/docs${path}`,
               hierarchy: {
                 lvl0: "Documentation",
@@ -281,11 +276,6 @@ export default {
                 const title = getContentOfNode(node);
                 const dataObject = {
                   objectID: path + objects.length,
-                  path: path,
-                  slug: item.slug,
-                  title: title,
-                  tags: item.tags,
-                  bodyPlainText: item.bodyPlainText,
                   url: `/docs${path}#${node.props.id}`,
                   hierarchy: {},
                   type: type,
@@ -310,11 +300,6 @@ export default {
                 } else {
                   const dataObject = {
                     objectID: path + objects.length,
-                    path: path,
-                    slug: item.slug,
-                    title: item.title,
-                    tags: item.tags,
-                    bodyPlainText: item.bodyPlainText,
                     url: `/docs${path}`,
                     hierarchy: lastObject.hierarchy,
                     type: "content",
