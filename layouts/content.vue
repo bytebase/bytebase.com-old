@@ -39,8 +39,7 @@
           >Pricing</nuxt-link
         >
       </nav>
-      <div id="algolia-search-container"></div>
-      <div class="flex">
+      <div class="flex flex-row justify-start items-center">
         <img
           v-if="state.isMobileView"
           class="h-5 w-auto opacity-60 cursor-pointer"
@@ -52,18 +51,19 @@
           <a
             href="https://demo.bytebase.com?ref=bytebase.com"
             target="_blank"
-            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
             @click="track('demo.header')"
           >
             Demo
           </a>
           <nuxt-link
             :to="localePath('/docs/install/install-with-docker')"
-            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
+            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
             >Deploy now</nuxt-link
           >
         </div>
+        <div id="algolia-search-container" class="ml-2"></div>
       </div>
     </header>
     <main
@@ -183,10 +183,17 @@ export default defineComponent({
 
 <style>
 #algolia-search-container > button {
-  @apply ml-0 sm:w-52;
+  @apply ml-0;
 }
 
 .DocSearch-Modal .DocSearch-NoResults > .DocSearch-Screen-Icon > svg {
   @apply m-auto;
+}
+
+.DocSearch-Button-Container > .DocSearch-Button-Placeholder {
+  @apply font-normal;
+}
+.DocSearch-Button-Container > .DocSearch-Search-Icon {
+  @apply w-4 h-auto ml-1;
 }
 </style>
