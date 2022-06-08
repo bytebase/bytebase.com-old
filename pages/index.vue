@@ -615,7 +615,7 @@ export default defineComponent({
       const browserLocale = browserLanguageString.slice(0, 2);
       const locales = app.i18n.locales.map((locale: any) => locale.code);
 
-      useSegment().analytics?.track("homepage.visit", {
+      useSegment().analytics?.track("home.visit", {
         source: getSourceFromUrl(),
       });
 
