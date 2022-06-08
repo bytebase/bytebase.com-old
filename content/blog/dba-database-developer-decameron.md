@@ -7,6 +7,7 @@ tags: Education
 featured: true
 description: This is the first of the DDD series, consisting of 10 stories of DBA & Database & developer.
 ---
+
 A few days ago, we posted a question on HN: [Ask HN: Is DBA still a good job?](https://news.ycombinator.com/item?id=31309729) The question quickly drew the attention of the HN community and got 236 thought-provoking comments. We share and feel the challenges, the frustration, the fatigue and the expectation. 
 
 We want to preserve all these heated discussions and help more people develop a multi-dimensional perspective on DBAs. That's how an idea for a blog series emerges -- **D·D·D** (DBA, Database, and Developer). 
