@@ -82,7 +82,7 @@
       <span
         class="absolute top-2 right-2 lg:right-44 mr-2 cursor-pointer text-lg opacity-80 hover:opacity-60"
         @click="onCloseSubscribtionPopUp"
-        ><img src="@/assets/svg/x.svg" class="w-6 h-auto" alt="" />
+        ><img src="~/assets/svg/x.svg" class="w-6 h-auto" alt="" />
       </span>
       <SubscribeSection
         class="border-none"

@@ -11,9 +11,9 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
     "types": [
       "@nuxt/types",
