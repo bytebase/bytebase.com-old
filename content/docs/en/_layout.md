@@ -67,31 +67,31 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Schema Review](/features/schema-review/overview)
 
-#### [Require InnoDB](/features/schema-review/engine-mysql-use-innode)
+#### [Require InnoDB](/features/schema-review/engine-mysql-use-innodb)
 
-#### [Table naming convention](/features/schema-review/naming-table)
+#### [Table Naming Convention](/features/schema-review/naming-table)
 
-#### [Column naming convention](/features/schema-review/naming-column)
+#### [Column Naming Convention](/features/schema-review/naming-column)
 
-#### [Index naming convention](/features/schema-review/naming-index-idx)
+#### [Index Naming Convention](/features/schema-review/naming-index-idx)
 
-#### [Unique key naming convention](/features/schema-review/naming-index-uk)
+#### [Unique Key Naming Convention](/features/schema-review/naming-index-uk)
 
-#### [Foreign key naming convention](/features/schema-review/naming-index-fk)
+#### [Foreign Key Naming Convention](/features/schema-review/naming-index-fk)
 
-#### [Disallow `SELECT *`](/features/schema-review/query-select-no-select-all)
+#### [Disallow SELECT *](/features/schema-review/query-select-no-select-all)
 
-#### [Require `WHERE`](/features/schema-review/query-where-require)
+#### [Require WHERE Clause](/features/schema-review/query-where-require)
 
-#### [Disallow leading `%` in `LIKE`](/features/schema-review/query-where-no-leading-wildcard-like)
+#### [Disallow Leading % in LIKE](/features/schema-review/query-where-no-leading-wildcard-like)
 
-#### [Require the table to have primary key](/features/schema-review/table-require-pk)
+#### [Require Primary Key](/features/schema-review/table-require-pk)
 
-#### [Backward incompatible schema change](/features/schema-review/schema-migration-compatibility)
+#### [Backward Incompatible Schema Change](/features/schema-review/schema-migration-compatibility)
 
-#### [Enforce the required columns in each table](/features/schema-review/column-required)
+#### [Enforce the Required Columns in Each Table](/features/schema-review/column-required)
 
-#### [Columns cannot have NULL value](/features/schema-review/column-no-null)
+#### [Columns No NULL Value](/features/schema-review/column-no-null)
 
 
 ### [Migration History](/features/migration-history)

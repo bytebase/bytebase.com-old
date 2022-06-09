@@ -1,10 +1,12 @@
 ---
-title: Enforce the required columns in each table
+title: Enforce the Required Columns in Each Table
 ---
 
 For most projects, you may need some columns per table. For example, need `id` as identification and primary key for each table or need `created_ts` and `updated_ts` to record creation and modification times.
 
 You can customize the columns you need.
+
+![schema-review-column-no-null](/static/docs-assets/schema-review-column-no-null.png)
 
 ## How the rule works
 

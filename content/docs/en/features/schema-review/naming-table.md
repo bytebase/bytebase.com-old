@@ -16,6 +16,8 @@ The unified naming convention has become the de facto standard recognized by dev
 |lowerCamelCase|`^[a-z]+([A-Z][a-z]*)*$`|
 |kebab-case|`^[a-z]+(-[a-z]+)*$`|
 
+![schema-review-naming-table](/static/docs-assets/schema-review-naming-table.png)
+
 ## How the rule works
 
 Bytebase checks that all table names in DDL conform to naming conventions.

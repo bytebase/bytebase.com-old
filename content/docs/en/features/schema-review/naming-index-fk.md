@@ -10,6 +10,8 @@ The unified naming convention has become the de facto standard recognized by dev
 
 For example, `^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_table}}_{{referenced_column}}$` is a `template` where `{{referencing_table}}` is the name of referencing table, `{{referencing_column}}` is the list of the referencing column name, `{{referenced_table}}` is the name of referenced table and `{{referenced_column}}` is the list of the referencing column name. So for unique key on `user(id, name)`, the legal name is `uk_user_id_name`.
 
+![schema-review-naming-index-fk](/static/docs-assets/schema-review-naming-index-fk.png)
+
 ## How the rule works
 
 Bytebase checks that all foreign key names in DDL conform to naming conventions.

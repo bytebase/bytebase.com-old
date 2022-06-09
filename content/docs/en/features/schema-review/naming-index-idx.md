@@ -10,6 +10,8 @@ The unified naming convention has become the de facto standard recognized by dev
 
 For example, `^idx_{{table}}_{{column_list}}$` is a `template` where `{{table}}` is the name of table and `{{column_list}}` is the list of the column name. So for index on `user(id, name)`, the legal name is `idx_user_id_name`.
 
+![schema-review-naming-index-idx](/static/docs-assets/schema-review-naming-index-idx.png)
+
 ## How the rule works
 
 Bytebase checks that all index names in DDL conform to naming conventions.
