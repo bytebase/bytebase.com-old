@@ -12,7 +12,7 @@ description: Allow schema review policy configuration for the environment. Add a
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp2.gif)
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp3.gif)
 - After creating a schema review policy, users can view, edit or delete the policy any time they like
-- SQL check result in the issue when schema review policy configuration is done
+- Display schema review results in the issue detail page if the schema review policy is configured
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp4.gif)
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp5.png)
 
