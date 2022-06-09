@@ -4,7 +4,8 @@ author: Lucy
 published_at: 2022/06/09 17:20:34
 description: Allow schema review policy configuration for the environment. Add archive checkers for environment/project/instance. UI improvements for tenant-mode deployment. Improved PostgreSQL schema dump. The owner of newly created PostgreSQL schemas is the database owner by default. Display applicable conditions for Environment policies.
 ---
-- **Enable schema review policy configuration in environment
+
+- **Enable schema review policy configuration in environment**
 - Users can configure a schema review policy for a particular environment. The schema review policy can be configured both schema review policy dashboard and environment dashboard
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp1.gif)
 - Both rule level and rule configuration can be changed
