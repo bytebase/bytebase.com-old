@@ -1,0 +1,68 @@
+---
+title: Create Schema Review Policy
+---
+
+There are two ways to create the `Schema Review Policy`.
+
+One is from `Schema Review Policy` dashboard in `Settings`.
+
+![schema-review-create-from-policy-dashboard](/static/docs-assets/schema-review-create-from-policy-dashboard.gif)
+
+The other is from `Environment` dashboard.
+
+![schema-review-create-from-environment-dashboard](/static/docs-assets/schema-review-create-from-environment-dashboard.gif)
+
+The `Schema Review Policy` is a 3-step creation.
+
+## Step 1
+
+Specify the basic information, including display name for schema review policy, selected environment and schema review policy template.
+
+<hint-block type="info">
+
+Note that only **ONE** policy can be created per `Environment`.
+
+</hint-block>
+
+## Step 2
+
+
+Specify each `Schema Review Rule`, including error level and rule-specific fields. 
+
+### Change rule level
+
+You can choose one of `Error`, `Warning` and `Disabled`. 
+
+`Error` will block the automatic run of `Issue`, while `Warning` will not.
+
+When the rule is `Disabled`, it will not take effect.
+
+![schema-review-change-rule-level](/static/docs-assets/schema-review-change-rule-level.gif)
+
+### Change rule configuration
+
+There are currently three types of rules that need to be configuration.
+
+#### Regular expression
+
+The rule [Table Naming Convention](/docs/features/schema-review/naming-table) and [Column Naming Convention](/docs/features/schema-review/naming-column) use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as format.
+
+![schema-review-change-regex](/static/docs-assets/schema-review-change-regex.gif)
+
+#### Template
+
+The rule [Index Naming Convention](/docs/features/schema-review/naming-index-idx), [Unique Key Naming Convention](/docs/features/schema-review/naming-index-uk) and [Foreign Key Naming Convention](/docs/features/schema-review/naming-index-fk) use `Template` as format.
+
+![schema-review-change-template](/static/docs-assets/schema-review-change-template.gif)
+
+#### Column list
+
+The rule [Enforce the Required Columns in Each Table](/docs/features/schema-review/column-required) needs `Column List`.
+
+![schema-review-change-column-list](/static/docs-assets/schema-review-change-column-list.gif)
+
+Details of the rules can be found [here](/docs/features/schema-review/overview).
+
+## Step 3
+
+Preview and confirm the `Schema Review Rule`.

@@ -25,3 +25,5 @@ It currently supports following schema review rules:
 - Column
   - [Enforce the required columns in each table](/docs/features/schema-review/column-required)
   - [Columns no NULL value](/docs/features/schema-review/column-no-null)
+
+<doc-link-block url="/docs/use-bytebase/schema-review/overview" title="Configure Schema Review"></doc-link-block>

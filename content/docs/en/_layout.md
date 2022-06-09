@@ -134,6 +134,18 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Backup Schedule Policy](/use-bytebase/environment-policy/backup-schedule-policy)
 
+### [Schema Review](/use-bytebase/schema-review/overview)
+
+#### [Create Schema Review Policy](/use-bytebase/schema-review/create-schema-review-policy)
+
+#### [Schema Reivew Check in the Issue](/use-bytebase/schema-review/schema-review-check-in-the-issue)
+
+#### [View Schema Review Policy](/use-bytebase/schema-review/view-schema-review-policy)
+
+#### [Edit Schema Review Policy](/use-bytebase/schema-review/edit-schema-review-policy)
+
+#### [Disable and Delete Schema Review Policy](/use-bytebase/schema-review/disable-delete-policy)
+
 ### [Webhook Integration](/use-bytebase/webhook-integration/overview)
 
 #### [Project Webhook](/use-bytebase/webhook-integration/project-webhook)
