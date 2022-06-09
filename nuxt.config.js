@@ -9,7 +9,6 @@ import {
   databaseAlternativeList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
-import { removeI18nPrefixPath } from "./common/utils";
 
 function getContentOfNode(node) {
   if (node.type === "text") {
@@ -242,12 +241,8 @@ export default {
           const objects = [];
 
           for (const item of data) {
-            const DOC_PATH_PREFIX = "/docs";
-            let path = item.path;
-            if (path.startsWith(DOC_PATH_PREFIX)) {
-              path = path.slice(DOC_PATH_PREFIX.length);
-              path = removeI18nPrefixPath(path);
-            }
+            const DOC_PATH_PREFIX = "/docs/en";
+            const path = item.path.slice(DOC_PATH_PREFIX.length);
 
             const dataObject = {
               objectID: path,
