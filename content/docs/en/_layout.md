@@ -63,8 +63,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [SQL Advisor](/features/sql-advisor/overview)
 
-#### [Backward Compatibility Migration Check](/features/sql-advisor/backward-compatibility-migration-check)
-
 ### [Schema Review](/features/schema-review/overview)
 
 #### [Require InnoDB](/features/schema-review/engine-mysql-use-innodb)
