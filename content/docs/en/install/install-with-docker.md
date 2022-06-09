@@ -17,7 +17,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 5678:5678 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.1.0 \
+  bytebase/bytebase:1.1.1 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 5678
@@ -32,7 +32,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 8080:8080 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.1.0 \
+  bytebase/bytebase:1.1.1 \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 8080
@@ -63,7 +63,7 @@ docker run --init \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.1.0 \
+  bytebase/bytebase:1.1.1 \
   --data /var/opt/bytebase \
   --host https://bytebase.example.com \
   --port 80
