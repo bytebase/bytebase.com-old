@@ -38,16 +38,11 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <!-- Start of HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js.hs-scripts.com/21746822.js"
-    ></script>
-    <!-- End of HubSpot Embed Code -->
     {{ HEAD }}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
   </head>
 
   <body {{ BODY_ATTRS }}>
@@ -93,6 +88,10 @@
           }
         }
       })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="text/javascript">
+      window.docsearch = docsearch;
     </script>
   </body>
 </html>

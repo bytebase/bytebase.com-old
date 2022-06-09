@@ -1,6 +1,6 @@
 import fse from "fs-extra";
 import slug from "slug";
-import { camelCase } from "lodash";
+import { camelCase, findLast, last } from "lodash";
 import {
   databaseFeatureList,
   databaseVCSList,
@@ -9,6 +9,18 @@ import {
   databaseAlternativeList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
+
+function getContentOfNode(node) {
+  if (node.type === "text") {
+    return node.value;
+  } else {
+    let content = "";
+    for (const child of node.children) {
+      content = content + getContentOfNode(child);
+    }
+    return content;
+  }
+}
 
 function glossaryRouteList() {
   const list = [];
@@ -153,7 +165,6 @@ export default {
   plugins: [
     // Plugin for vue-gtag
     "~/plugin/vue-gtag",
-    "~/plugin/vue-instantsearch.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -180,9 +191,7 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    transpile: ["vue-instantsearch", "instantsearch.js/es"],
-  },
+  build: {},
 
   plausible: {
     // see configuration section
@@ -229,36 +238,86 @@ export default {
           })
             .where({ slug: { $regex: /^(?!_)/ } })
             .fetch();
+          const objects = [];
+
+          for (const item of data) {
+            const DOC_PATH_PREFIX = "/docs/en";
+            const path = item.path.slice(DOC_PATH_PREFIX.length);
+
+            const dataObject = {
+              objectID: path,
+              url: `/docs${path}`,
+              hierarchy: {
+                lvl0: "Documentation",
+                lvl1: item.title,
+                lvl2: null,
+                lvl3: null,
+                lvl4: null,
+                lvl5: null,
+                lvl6: null,
+              },
+              type: "lvl1",
+            };
+            objects.push(dataObject);
+
+            for (const node of item.body.children) {
+              if (
+                node.type === "element" &&
+                node.tag.length === 2 &&
+                node.tag.startsWith("h")
+              ) {
+                const level = node.tag.slice(1);
+                const type = `lvl${level}`;
+                const title = getContentOfNode(node);
+                const dataObject = {
+                  objectID: path + objects.length,
+                  url: `/docs${path}#${node.props.id}`,
+                  hierarchy: {},
+                  type: type,
+                  content: getContentOfNode(node),
+                };
+                const lastObject = findLast(
+                  objects,
+                  (o) => o.type === `lvl${level - 1}`
+                );
+                if (lastObject) {
+                  dataObject.hierarchy = {
+                    ...lastObject.hierarchy,
+                  };
+                }
+                dataObject.hierarchy[type] = title;
+                objects.push(dataObject);
+              } else {
+                const lastObject = last(objects);
+                if (lastObject && lastObject.type === "content") {
+                  lastObject.content =
+                    lastObject.content + getContentOfNode(node);
+                } else {
+                  const dataObject = {
+                    objectID: path + objects.length,
+                    url: `/docs${path}`,
+                    hierarchy: lastObject.hierarchy,
+                    type: "content",
+                    content: getContentOfNode(node),
+                  };
+                  objects.push(dataObject);
+                }
+              }
+            }
+          }
 
           const algoliasearch = require("algoliasearch");
           const client = algoliasearch(
             "2M7XI1QIDY",
             process.env.ALGOLIA_ADMIN_API_KEY
           );
-
           const index = client.initIndex("bytebase-docs");
           await index.clearObjects();
-          await index.saveObjects(
-            data.map((item) => {
-              const DOC_PATH_PREFIX = "/docs";
-              let path = item.path;
-              if (path.startsWith(DOC_PATH_PREFIX)) {
-                path = path.slice(DOC_PATH_PREFIX.length);
-              }
-
-              return {
-                objectID: path,
-                path: path,
-                slug: item.slug,
-                title: item.title,
-                tags: item.tags,
-                bodyPlainText: item.bodyPlainText,
-              };
-            })
-          );
+          await index.saveObjects(objects);
         } catch (error) {
           // We already have a complete data.
           // So if failed in patch, then do nothing.
+          console.log("error", error);
         }
 
         console.log("Copying ./static folder to ./dist/static/");
