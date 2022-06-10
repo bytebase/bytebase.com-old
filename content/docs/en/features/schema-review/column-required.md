@@ -10,7 +10,7 @@ You can customize the columns you need.
 
 ## How the rule works
 
-Bytebase defaults all tables meet the requirements. If SQL tries to create a table don't have all columns or drop required column, Bytebase considers this rule to be violated.
+Bytebase defaults all tables to meet the requirements. If the SQL tries to define a table not having all the required columns or attempts to drop the required column, Bytebase considers this rule to be violated.
 
 ## Support instance engine
 
