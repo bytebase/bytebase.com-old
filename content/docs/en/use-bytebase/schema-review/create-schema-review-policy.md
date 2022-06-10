@@ -20,7 +20,7 @@ Specify the basic information, including display name for schema review policy, 
 
 <hint-block type="info">
 
-Note that only **ONE** policy can be created per `Environment`.
+Note that only **ONE** policy can be attached per `Environment`.
 
 </hint-block>
 
