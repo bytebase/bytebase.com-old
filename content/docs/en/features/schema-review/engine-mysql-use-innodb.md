@@ -2,7 +2,7 @@
 title: Require InnoDB
 ---
 
-InnoDB is the default storage engine of MySQL 5.5.5+. It provides the powerful transaction features. Normally, using InnoDB as storage engine is the only option. Bytebase provides this rule to catch all scenarios where other engines are tried.
+InnoDB is the default storage engine of MySQL 5.5.5+. It provides powerful transaction features. Normally, using InnoDB as the storage engine is the only option. Bytebase provides this rule to catch all scenarios where other engines are attempted.
 
 ![schema-review-engine-mysql-use-innodb](/static/docs-assets/schema-review-engine-mysql-use-innodb.png)
 
