@@ -41,7 +41,7 @@ When the rule is `Disabled`, it will not take effect.
 
 ### Change rule configuration
 
-There are currently three types of rules that need to be configuration.
+There are currently three types of rules that need to be configured.
 
 #### Regular expression
 
