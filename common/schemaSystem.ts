@@ -41,7 +41,13 @@ export interface RulePayload {
 
 export type DatabaseType = "mysql" | "common";
 
-export type CategoryType = "engine" | "naming" | "query" | "table" | "column";
+export type CategoryType =
+  | "engine"
+  | "naming"
+  | "query"
+  | "table"
+  | "column"
+  | "schema";
 
 export interface Rule {
   id: string;
@@ -160,6 +166,37 @@ const ruleList: Rule[] = [
     },
   },
   {
+    id: "naming.index.fk",
+    category: "naming",
+    database: ["common"],
+    description: "Enforce the foreign key name format.",
+    payload: {
+      fk: {
+        type: PayloadType.Template,
+        default:
+          "^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_table}}_{{referenced_column}}$",
+        templates: [
+          {
+            id: "referencing_table",
+            description: "The referencing table name",
+          },
+          {
+            id: "referencing_column",
+            description: "The referencing column names, joined by _",
+          },
+          {
+            id: "referenced_table",
+            description: "The referenced table name",
+          },
+          {
+            id: "referenced_column",
+            description: "The referenced column names, joined by _",
+          },
+        ],
+      },
+    },
+  },
+  {
     id: "column.required",
     category: "column",
     database: ["common"],
@@ -195,6 +232,12 @@ const ruleList: Rule[] = [
     database: ["common"],
     description:
       "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
+  },
+  {
+    id: "schema.backward-compatibility",
+    category: "schema",
+    database: ["common"],
+    description: "Disallow backward incompatible schema changes.",
   },
 ];
 
@@ -237,8 +280,10 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
           "naming.column",
           "naming.index.uk",
           "naming.index.idx",
+          "naming.index.fk",
           "column.required",
           "column.no-null",
+          "schema.backward-compatibility",
         ],
         RuleLevel.Warning
       ),
@@ -259,11 +304,13 @@ export const guidelineTemplateList: GuidelineTemplate[] = [
           "naming.column",
           "naming.index.uk",
           "naming.index.idx",
+          "naming.index.fk",
           "column.required",
           "column.no-null",
           "query.select.no-select-all",
           "query.where.require",
           "query.where.no-leading-wildcard-like",
+          "schema.backward-compatibility",
         ],
         RuleLevel.Warning
       ),
