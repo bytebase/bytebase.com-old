@@ -12,8 +12,8 @@ The default file path template is `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE
 
 Let's say the base directory is `bytebase` :
 
-- An example file path for [normal migration type](/docs/concepts/migration-types#normal-migration) `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
-- An example file path for [baseline migration type](/docs/concepts/migration-types#baseline-migration):`bytebase/env1/db1__202101131000__baseline__create_tablefoo_for_bar.sql`
+- An example file path for [normal migration type](/docs/concepts/migration-types#normal-migration): `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
+- An example file path for [baseline migration type](/docs/concepts/migration-types#baseline-migration): `bytebase/env1/db1__202101131000__baseline__create_tablefoo_for_bar.sql`
 
 ### Supported Placeholders
 
