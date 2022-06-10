@@ -11,7 +11,7 @@ InnoDB is the default storage engine of MySQL 5.5.5+. It provides powerful trans
 Bytebase defaults MySQL to use InnoDB storage engine.
 
 So if the following situation occurs, Bytebase considers this rule to be violated:
-- Explicit other storage engines when creating tables. e.g. `CREATE TABLE t(id int) ENGINE = CSV` 
+- Explicitly specify other storage engines when creating tables. e.g. `CREATE TABLE t(id int) ENGINE = CSV` 
 - Explicit other storage engines by `ALTER TABLE`. e.g. `ALTER TABLE t ENGINE = CSV`
 - Try to set `default_storage_engine` as other storage engines. e.g. `SET default_storage_engine=CSV`
 
