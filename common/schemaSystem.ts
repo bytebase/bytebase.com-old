@@ -171,7 +171,7 @@ const ruleList: Rule[] = [
     database: ["common"],
     description: "Enforce the foreign key name format.",
     payload: {
-      uk: {
+      fk: {
         type: PayloadType.Template,
         default:
           "^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_table}}_{{referenced_column}}$",
