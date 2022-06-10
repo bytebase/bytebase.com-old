@@ -12,7 +12,7 @@ The other is from `Environment` dashboard.
 
 ![schema-review-create-from-environment-dashboard](/static/docs-assets/schema-review-create-from-environment-dashboard.gif)
 
-The `Schema Review Policy` is a 3-step creation.
+Creating the `Schema Review Policy` is a 3-step process.
 
 ## Step 1
 
