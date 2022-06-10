@@ -17,7 +17,7 @@ You can know what is schema review [here](/docs/features/schema-review/overview)
 
 ## How Schema Review Works
 
-Bytebase defines `Schema Review Policy` for each `Environment`. The `Schema Review Policy` is essentially a set of SQL lint rules, and we call SQL lint rule the `Schema Review Rule`. After this, Bytebase will check SQL according to the corresponding `Schema Review Policy`.
+Bytebase defines `Schema Review Policy` for each `Environment`. The `Schema Review Policy` is essentially a set of SQL lint rules, and we call SQL lint rule the `Schema Review Rule`. Once configured, Bytebase will check SQL according to the corresponding `Schema Review Policy`.
 
 <hint-block type="warning">
 
