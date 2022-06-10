@@ -2,7 +2,7 @@
 title: Docker (5 seconds)
 ---
 
-**Latest release version:** [**1.1.0**](https://github.com/bytebase/bytebase/releases/tag/1.1.0)
+**Latest release version:** [**1.1.1**](https://github.com/bytebase/bytebase/releases/tag/1.1.1)
 
 <hint-block type="info">
 
