@@ -3,7 +3,7 @@ title: Schema Review
 ---
 <hint-block type="warning">
 
-Schema Review requires **Team Plan**.
+Schema Review requires at least **Team Plan**.
 
 </hint-block>
 
