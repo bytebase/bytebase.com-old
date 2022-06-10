@@ -8,7 +8,7 @@ NULL is a special value. It can cause confusion or performance issues. Bytebase 
 
 ## How the rule works
 
-Bytebase considers this rule to be violated if the SQL creates a column can have NULL value.
+Bytebase considers this rule to be violated if the SQL defines a column allowing NULL value.
 
 ## Supported database engine
 
