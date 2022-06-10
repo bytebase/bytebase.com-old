@@ -7,13 +7,13 @@ description: Allow schema review policy configuration for the environment. Add a
 
 - **Enable schema review policy configuration in environment**
 - Users can configure a schema review policy for a particular environment. The schema review policy can be configured both schema review policy dashboard and environment dashboard
-![schema-review-policy](/static/blog-changelog-assets/2022/06/srp1.gif)
+![schema-review-policy](/static/blog-changelog-assets/2022/06/schemareviewpolicy_highres.gif)
 - Both rule level and rule configuration can be changed
-![schema-review-policy](/static/blog-changelog-assets/2022/06/srp2.gif)
-![schema-review-policy](/static/blog-changelog-assets/2022/06/srp3.gif)
+![schema-review-policy](/static/blog-changelog-assets/2022/06/changerulelevel_highres.gif)
+![schema-review-policy](/static/blog-changelog-assets/2022/06/changeruleconfig_highres.gif)
 - After creating a schema review policy, users can view, edit or delete the policy any time they like
 - Display schema review results in the issue detail page if the schema review policy is configured
-![schema-review-policy](/static/blog-changelog-assets/2022/06/srp4.gif)
+![schema-review-policy](/static/blog-changelog-assets/2022/06/sqlcheckissue_highres.gif)
 ![schema-review-policy](/static/blog-changelog-assets/2022/06/srp5.png)
 
 ## 🎄 Enhancement
