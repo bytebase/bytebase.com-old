@@ -21,7 +21,7 @@ Bytebase defines `Schema Review Policy` for each `Environment`. The `Schema Revi
 
 <hint-block type="warning">
 
-`Schema Review` only supports check SQL in `Issue` now. Support for `SQL Editor` is coming soon.
+`Schema Review` only supports SQL checks in `Issue` now. Support for `SQL Editor` is coming soon.
 
 </hint-block>
 
