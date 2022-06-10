@@ -2,7 +2,7 @@
 title: Enforce the Required Columns in Each Table
 ---
 
-For most projects, you may need some columns per table. For example, need `id` as identification and primary key for each table or need `created_ts` and `updated_ts` to record creation and modification times.
+For most projects, you may want to enforce some columns for every table. For example, need `id` as identification and the primary key for each table or need `created_ts` and `updated_ts` to record creation and modification times.
 
 You can customize the columns you need.
 
