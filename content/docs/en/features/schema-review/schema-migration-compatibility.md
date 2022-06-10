@@ -22,7 +22,7 @@ If the following situation occurs, Bytebase considers this rule to be violated:
 - Modify column
 - Change column
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

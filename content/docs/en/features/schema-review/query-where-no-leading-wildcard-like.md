@@ -10,7 +10,7 @@ Database cannot use an index to match entries when there is a leading wildcard. 
 
 Bytebase considers this rule to be violated if the SQL has leading wildcard LIKE.
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

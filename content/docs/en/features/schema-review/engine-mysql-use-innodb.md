@@ -15,6 +15,6 @@ So if the following situation occurs, Bytebase considers this rule to be violate
 - Explicitly specify other storage engines by `ALTER TABLE`. e.g. `ALTER TABLE t ENGINE = CSV`
 - Try to set `default_storage_engine` other than InnoDB. e.g. `SET default_storage_engine=CSV`
 
-## Support instance engine
+## Support database engine
 
 - MySQL

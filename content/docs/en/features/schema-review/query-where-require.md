@@ -12,7 +12,7 @@ If you are sure you need to act on all data, use `WHERE 1=1` to remind yourself 
 
 Bytebase considers this rule to be violated if the SQL has not WHERE clause.
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

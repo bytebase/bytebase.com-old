@@ -2,7 +2,7 @@
 title: Index Naming Convention
 ---
 
-The unified naming convention has become the de facto standard recognized by developers. And the same applies to database. Bytebase provides this rule to unified index naming convention.
+The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the index naming convention.
 
 ## About convention format
 
@@ -30,7 +30,7 @@ Specifically, Bytebase checks:
 - `ALTER TABLE ADD CONSTRAINT` statements
 - `CREATE INDEX` statements
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

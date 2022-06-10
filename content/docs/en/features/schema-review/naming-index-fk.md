@@ -2,7 +2,7 @@
 title: Foreign Key Naming Convention
 ---
 
-The unified naming convention has become the de facto standard recognized by developers. And the same applies to database. Bytebase provides this rule to unified foreign key naming convention.
+The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the foreign key naming convention.
 
 ## About convention format
 
@@ -28,7 +28,7 @@ Specifically, Bytebase checks:
 - `CREATE TABLE` statements
 - `ALTER TABLE ADD CONSTRAINT` statements
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

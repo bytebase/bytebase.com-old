@@ -14,7 +14,7 @@ For scenarios where all columns are required, you should list all column names t
 
 Bytebase considers this rule to be violated if the SQL has `SELECT *`.
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB

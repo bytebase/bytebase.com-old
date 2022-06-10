@@ -7,13 +7,7 @@ Schema Review requires at least **Team Plan**.
 
 </hint-block>
 
-This document is to show how to configure schema review.
-
-<hint-block type="info">
-
-You can know what is schema review [here](/docs/features/schema-review/overview).
-
-</hint-block>
+This document is to show how to configure [schema review](/docs/features/schema-review/overview).
 
 ## How Schema Review Works
 

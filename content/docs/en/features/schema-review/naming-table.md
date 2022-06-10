@@ -2,7 +2,7 @@
 title: Table Naming Convention
 ---
 
-The unified naming convention has become the de facto standard recognized by developers. And the same applies to database. Bytebase provides this rule to unified table naming convention.
+The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the table naming convention.
 
 ## About convention format
 
@@ -27,7 +27,7 @@ Specifically, Bytebase checks:
 - `ALTER TABLE RENAME TO` statements
 - `RENAME TABLE` statements
 
-## Support instance engine
+## Support database engine
 
 - MySQL
 - TiDB
