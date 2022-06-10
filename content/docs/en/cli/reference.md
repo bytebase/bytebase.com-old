@@ -57,7 +57,7 @@ Internally, every `migrate` command will be recorded in history. It is recommend
 
 ```bash
 bb migrate --dsn mysql://root@localhost:3306/bytebase_test_todo \
-  --command “ALTER TABLE author ADD COLUMN phone_no VARCHAR(15);”
+  --command "ALTER TABLE author ADD COLUMN phone_no VARCHAR(15);"
 ```
 
 Apply SQL command to the given database.
