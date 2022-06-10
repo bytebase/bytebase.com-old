@@ -117,6 +117,7 @@
 .markdown-body samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  word-break: break-all;
 }
 
 .markdown-body figure {
