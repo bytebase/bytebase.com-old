@@ -10,7 +10,7 @@ NULL is a special value. It can cause confusion or performance issues. Bytebase 
 
 Bytebase considers this rule to be violated if the SQL creates a column can have NULL value.
 
-## Support instance engine
+## Supported database engine
 
 - MySQL
 - TiDB
