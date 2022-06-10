@@ -6,7 +6,7 @@ There are countless stories about people forgetting the WHERE clause in an UPDAT
 
 If you are sure you need to act on all data, use `WHERE 1=1` to remind yourself of the consequences of that action.
 
-![schema-review-query-where-require](/static/docs-assets/schema-review-query-where-require.png)
+![schema-review-query-where-require](/static/docs-assets/schema-review-query-where-require.webp)
 
 ## How the rule works
 

@@ -16,7 +16,7 @@ The unified naming convention is desired by developers. And the same applies to 
 |lowerCamelCase|`^[a-z]+([A-Z][a-z]*)*$`|
 |kebab-case|`^[a-z]+(-[a-z]+)*$`|
 
-![schema-review-naming-table](/static/docs-assets/schema-review-naming-table.png)
+![schema-review-naming-table](/static/docs-assets/schema-review-naming-table.webp)
 
 ## How the rule works
 
