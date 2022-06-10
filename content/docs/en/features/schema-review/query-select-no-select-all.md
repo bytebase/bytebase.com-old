@@ -4,7 +4,7 @@ title: Disallow SELECT *
 
 `SELECT *` introduces additional performance cost or ambiguous semantics.
 
-For scenarios where all columns are not required, you should SELECT the columns you need to avoid getting unused data.
+For scenarios where all columns are not required, you should SELECT the columns you need to avoid getting uneeded data.
 
 For scenarios where all columns are required, you should list all column names to avoid semantic ambiguity. Otherwise, the data consumer cannot know the column information. And `SELECT *` may bring additional modifications and errors when modifying the table schema.
 
