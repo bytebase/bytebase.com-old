@@ -13,6 +13,7 @@ This is a series of articles about Database-as-code (GitOps)
 - Database as Code - the Good, the Bad and the Ugly (this one)
 - [Database Version Control, State-based or Migration-based?](database-version-control-state-based-vs-migration-based)
 - [What is Database Schema Drift?](what-is-database-schema-drift)
+- [The Database as Code Landscape](database-as-code-landscape)
 
 ---
 
