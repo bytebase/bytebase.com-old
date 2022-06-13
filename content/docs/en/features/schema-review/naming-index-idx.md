@@ -14,7 +14,7 @@ For example, `^idx_{{table}}_{{column_list}}$` is a `template` where `{{table}}`
 
 ## How the rule works
 
-Bytebase checks that all index names in DDL conform to naming conventions.
+Bytebase checks that all index names in DDL conform to the naming conventions.
 
 <hint-block type="info">
 
