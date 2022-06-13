@@ -6,7 +6,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 ## About convention format
 
-`Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as format.
+`Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format.
 
 ### Some useful format
 | Name | Regular Expression |
