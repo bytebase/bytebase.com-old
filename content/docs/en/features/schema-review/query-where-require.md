@@ -10,7 +10,7 @@ If you are sure you need to act on all data, use `WHERE 1=1` to remind yourself 
 
 ## How the rule works
 
-Bytebase considers this rule to be violated if the SQL has not WHERE clause.
+Bytebase considers this rule to be violated if the SQL has no WHERE clause.
 
 ## Support database engine
 
