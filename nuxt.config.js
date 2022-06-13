@@ -210,6 +210,7 @@ export default {
   env: {
     // GA4 stream id. https://analytics.google.com/analytics/web/#/a202806916p295313050/admin/streams/table/3080936169
     gtagKey: "G-4BZ4JH7449",
+    hostname: "https://www.bytebase.com",
   },
 
   // Using hooks to solve static prefix problem in dev server and built.

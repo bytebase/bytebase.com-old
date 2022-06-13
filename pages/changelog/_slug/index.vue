@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { lowerCase } from "lodash";
+import { lowerCase, startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 
@@ -70,6 +70,10 @@ export default {
   },
   head() {
     const changelog = (this as any).changelog;
+    let featureImage = changelog.featureImage;
+    if (startsWith(featureImage, "/")) {
+      featureImage = process.env.hostname + featureImage;
+    }
 
     return {
       title: changelog.title,
@@ -97,7 +101,7 @@ export default {
         {
           hid: "og:image",
           name: "og:image",
-          content: changelog.featureImage,
+          content: featureImage,
         },
       ],
     };
