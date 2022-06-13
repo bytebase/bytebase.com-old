@@ -27,3 +27,4 @@ It currently supports following schema review rules:
   - [Columns no NULL value](/docs/features/schema-review/column-no-null)
 
 <doc-link-block url="/docs/use-bytebase/schema-review/overview" title="Configure Schema Review"></doc-link-block>
+<doc-link-block url="/database-review-guide" title="Database Review Guide"></doc-link-block>
