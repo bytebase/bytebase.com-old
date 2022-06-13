@@ -6,7 +6,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 ## About convention format
 
-`Unique Key Naming Convention` uses `template` as format. Specifically, the `template` is an extended [regular expression](https://en.wikipedia.org/wiki/Regular_expression). The rest follows the rules of the regular expression except the part with curly braces.
+`Unique Key Naming Convention` uses `template` format. Specifically, the `template` is an extended [regular expression](https://en.wikipedia.org/wiki/Regular_expression). The rest follows the regular expression rules except the part with curly braces.
 
 For example, `^uk_{{table}}_{{column_list}}$` is a `template` where `{{table}}` is the name of table and `{{column_list}}` is the list of the column name. So for unique key on `user(id, name)`, the legal name is `uk_user_id_name`.
 
