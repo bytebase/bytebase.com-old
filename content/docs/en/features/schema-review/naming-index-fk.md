@@ -14,7 +14,7 @@ For example, `^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_tabl
 
 ## How the rule works
 
-Bytebase checks that all foreign key names in DDL conform to naming conventions.
+Bytebase checks that all foreign key names in DDL conform to the naming conventions.
 
 <hint-block type="info">
 
