@@ -8,7 +8,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 `Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format.
 
-### Some useful format
+### Some typical format
 | Name | Regular Expression |
 |------|--------------------|
 |snake_lower_case|`^[a-z]+(_[a-z]+)*$`|
