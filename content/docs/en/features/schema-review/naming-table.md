@@ -8,7 +8,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 `Table Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as the format.
 
-### Some useful format
+### Some typical format
 | Name | Regular Expression |
 |------|--------------------|
 |snake_lower_case|`^[a-z]+(_[a-z]+)*$`|
