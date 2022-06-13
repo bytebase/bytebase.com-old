@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import { lowerCase } from "lodash";
+import { lowerCase, startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../../common/type";
@@ -83,6 +83,10 @@ export default {
   },
   head() {
     const blog = (this as any).blog;
+    let featureImage = blog.featureImage;
+    if (startsWith(featureImage, "/")) {
+      featureImage = "https://www.bytebase.com" + featureImage;
+    }
 
     return {
       title: blog.title,
@@ -110,7 +114,7 @@ export default {
         {
           hid: "og:image",
           name: "og:image",
-          content: blog.featureImage,
+          content: featureImage,
         },
       ],
     };
