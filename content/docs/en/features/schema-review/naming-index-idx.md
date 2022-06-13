@@ -8,7 +8,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 `Index Naming Convention` uses `template` format. Specifically, the `template` is an extended [regular expression](https://en.wikipedia.org/wiki/Regular_expression). The rest follows the regular expression rules except the part with curly braces.
 
-For example, `^idx_{{table}}_{{column_list}}$` is a `template` where `{{table}}` is the name of table and `{{column_list}}` is the list of the column name. So for index on `user(id, name)`, the legal name is `idx_user_id_name`.
+For example, `^idx_{{table}}_{{column_list}}$` is a `template` where `{{table}}` is the table name and `{{column_list}}` is the list of the column name. So for index on `user(id, name)`, the legal name is `idx_user_id_name`.
 
 ![schema-review-naming-index-idx](/static/docs-assets/schema-review-naming-index-idx.webp)
 
