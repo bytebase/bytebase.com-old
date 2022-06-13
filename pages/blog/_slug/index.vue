@@ -85,7 +85,7 @@ export default {
     const blog = (this as any).blog;
     let featureImage = blog.featureImage;
     if (startsWith(featureImage, "/")) {
-      featureImage = "https://www.bytebase.com" + featureImage;
+      featureImage = process.env.hostname + featureImage;
     }
 
     return {

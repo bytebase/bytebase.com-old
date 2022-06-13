@@ -72,7 +72,7 @@ export default {
     const changelog = (this as any).changelog;
     let featureImage = changelog.featureImage;
     if (startsWith(featureImage, "/")) {
-      featureImage = "https://www.bytebase.com" + featureImage;
+      featureImage = process.env.hostname + featureImage;
     }
 
     return {
