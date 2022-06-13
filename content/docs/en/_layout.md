@@ -63,7 +63,34 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [SQL Advisor](/features/sql-advisor/overview)
 
-#### [Backward Compatibility Migration Check](/features/sql-advisor/backward-compatibility-migration-check)
+### [Schema Review](/features/schema-review/overview)
+
+#### [Require InnoDB](/features/schema-review/engine-mysql-use-innodb)
+
+#### [Table Naming Convention](/features/schema-review/naming-table)
+
+#### [Column Naming Convention](/features/schema-review/naming-column)
+
+#### [Index Naming Convention](/features/schema-review/naming-index-idx)
+
+#### [Unique Key Naming Convention](/features/schema-review/naming-index-uk)
+
+#### [Foreign Key Naming Convention](/features/schema-review/naming-index-fk)
+
+#### [Disallow SELECT *](/features/schema-review/query-select-no-select-all)
+
+#### [Require WHERE Clause](/features/schema-review/query-where-require)
+
+#### [Disallow Leading % in LIKE](/features/schema-review/query-where-no-leading-wildcard-like)
+
+#### [Require Primary Key](/features/schema-review/table-require-pk)
+
+#### [Backward Incompatible Schema Change](/features/schema-review/schema-migration-compatibility)
+
+#### [Enforce the Required Columns in Each Table](/features/schema-review/column-required)
+
+#### [Columns No NULL Value](/features/schema-review/column-no-null)
+
 
 ### [Migration History](/features/migration-history)
 
@@ -106,6 +133,18 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Approval Policy](/use-bytebase/environment-policy/approval-policy)
 
 #### [Backup Schedule Policy](/use-bytebase/environment-policy/backup-schedule-policy)
+
+### [Schema Review](/use-bytebase/schema-review/overview)
+
+#### [Create Schema Review Policy](/use-bytebase/schema-review/create-schema-review-policy)
+
+#### [Schema Reivew Check in the Issue](/use-bytebase/schema-review/schema-review-check-in-the-issue)
+
+#### [View Schema Review Policy](/use-bytebase/schema-review/view-schema-review-policy)
+
+#### [Edit Schema Review Policy](/use-bytebase/schema-review/edit-schema-review-policy)
+
+#### [Disable and Delete Schema Review Policy](/use-bytebase/schema-review/disable-delete-policy)
 
 ### [Webhook Integration](/use-bytebase/webhook-integration/overview)
 
