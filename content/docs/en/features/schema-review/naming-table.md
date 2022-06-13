@@ -20,7 +20,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 ## How the rule works
 
-Bytebase checks that all table names in DDL conform to naming conventions.
+Bytebase checks that all table names in DDL conform to the naming conventions.
 
 Specifically, Bytebase checks:
 - `CREATE TABLE` statements
