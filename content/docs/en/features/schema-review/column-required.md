@@ -4,7 +4,7 @@ title: Enforce the Required Columns in Each Table
 
 For most projects, you may want to enforce some columns for every table. For example, need `id` as identification and the primary key for each table or need `created_ts` and `updated_ts` to record creation and modification times.
 
-You can customize the columns you need.
+You can customize which columns are required.
 
 ![schema-review-column-required](/static/docs-assets/schema-review-column-required.webp)
 
