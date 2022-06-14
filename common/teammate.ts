@@ -69,6 +69,10 @@ const teammateList = [
     name: "Zhengx",
     role: "team.roles.engineering-intern",
   },
+  {
+    name: "Queeny",
+    role: "team.roles.advisor",
+  },
 ];
 
 export const getTeammateByName = (name: string) => {
