@@ -2,7 +2,7 @@
 title: The Database as Code Landscape
 author: Tianzhou
 published_at: 2022/06/15 09:00:00
-feature_image: /static/blog-assets/database-as-code-landscape/database-as-code-landscape-feature-image.webp
+feature_image: /static/blog-assets/database-as-code-landscape/database-as-code-landscape.webp
 tags: Education
 featured: true
 description: The idea of codifying database schema changes (aka schema migration) is not new. While we are observing an accelerated trend of embracing Database as Code (DaC) across the industry. In this blog, we will review the state-of-the-art in the Database as Code landscape and share our own insight into the current and future trends in this space.
@@ -23,7 +23,7 @@ In this blog, we will review the state-of-the-art in the Database as Code landsc
 
 ## The Overview
 
-![_](/static/blog-assets/database-as-code-landscape/database-as-code-landscape-2022.webp)
+![_](/static/blog-assets/database-as-code-landscape/database-as-code-landscape.webp)
 
 ## The Gatekeepers
 
