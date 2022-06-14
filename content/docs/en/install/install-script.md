@@ -19,7 +19,7 @@ Using install script to install the latest release version:
 
 If no error occur, you should see something like this in the console:
 
-```bash
+```plain
 OS: Darwin
 ARCH: arm64
 Password:
@@ -51,8 +51,9 @@ bytebase --host http://localhost --port 8080
 
 (check [Server Startup Options](/docs/reference/command-line) for other startup options)
 
-```bash
 You should see something like this in the console:
+
+```plain
 -----Config BEGIN-----
 mode=release
 host=http://localhost
