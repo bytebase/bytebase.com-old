@@ -23,6 +23,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Docker (5 seconds)](/install/install-with-docker)
 
+### [Install Script](/install/install-script)
+
 ### [Build from Source](/install/build-from-source)
 
 ### [Use External PostgreSQL Database](/install/external-postgres)
