@@ -6,10 +6,7 @@ feature_image: /static/blog-changelog-assets/2022/06/schema-review-policy-cover.
 tags: Education
 featured: true
 description: This post introduces a new feature - schema review policy, which help DBAs and application developers compose better schema change statements.
-
 ---
-
-
 
 Bytebase is an open-source database DevOps tool, and it’s the GitLab for managing databases throughout the application development lifecycle. It offers a web-based workspace for DBAs and Developers to collaborate and manage the database change safely and efficiently.
 
@@ -17,18 +14,15 @@ The trend of codifying database schema changes (aka Database as Code) has accele
 
 As the trailblazer to embrace Database as Code, Bytebase wants to lift the developer experience of working with SQL. Today we are introducing a new feature - schema review policy, a set of SQL quality checks to help DBAs and application developers compose better schema change statements.
 
-
 ## What is Schema Review Policy?
 
 A schema review policy is a set of SQL-style rules to check the SQL statement quality. DBAs can configure schema review policies for each environment. Bytebase will check SQL statements automatically before executing schema changes. And block them if any configured policies are not met. 
 
 The schema review policy is available to MySQL and TiDB. We will add support to PostgreSQL later.
 
-
 ## Rules in Schema Review Policy
 
 This initial launch includes 15 rules across 6 categories.
-
 
 ### Naming conventions
 
@@ -38,7 +32,6 @@ This initial launch includes 15 rules across 6 categories.
 * Index naming check
 * Foreign key naming check
 
-
 ### Statement
 
 * Disallow “SELECT *” 
@@ -47,13 +40,11 @@ This initial launch includes 15 rules across 6 categories.
 
 There are countless stories about the performance issue and database outages caused by bad SQL statements. Bytebase provides these rules to avoid the common problem.
 
-
 ### Table
 
 * Require primary key
 
 A table without a primary key is hard to identify a particular record. Bytebase provides the rule  “Require primary key” to enforce each table has a primary key.
-
 
 ### Schema
 
@@ -61,12 +52,10 @@ A table without a primary key is hard to identify a particular record. Bytebase 
 
 Introducing backward-incompatible schema changes is one of the most common mistakes made by developers. And enforcing backward-compatible schema change is the standard practice many engineering organizations adopt. Bytebase provides the built-in backward compatible check to catch all common incompatible schema change scenarios.
 
-
 ### Column
 
 * Required columns: make sure all tables have the required columns
 * Disallow NULL: all columns can not have a NULL value
-
 
 ### Engine
 
@@ -105,7 +94,6 @@ Let’s begin configuring a policy from the environment dashboard.
 Now you can see your just created schema review policy on the page below.
 
 ![dashboard](/static/blog-changelog-assets/2022/06/schema-review-policy-dashboard.webp)
-
 
 
 ## How Schema Review Policy is Used
