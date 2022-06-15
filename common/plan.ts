@@ -122,7 +122,7 @@ const TEAM_PLAN: Plan = {
   type: PlanType.TEAM,
   trialDays: 14,
   unitPrice: "1740",
-  trialPrice: 14,
+  trialPrice: 0,
   pricePerInstancePerMonth: 29,
   priceDescription: "team-price-intro",
   // Plan desc and feature
@@ -181,7 +181,7 @@ const ENTERPRISE_PLAN: Plan = {
   // Plan meta data
   label: "pricing.subscription.plan.enterprise.label",
   type: PlanType.ENTERPRISE,
-  trialDays: 14,
+  trialDays: 0,
   unitPrice: "11940",
   trialPrice: 0,
   pricePerInstancePerMonth: 199,

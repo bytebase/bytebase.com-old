@@ -33,7 +33,8 @@
     "announcement": "您可以随时升级、降级或{cancel}。没有任何隐藏费用。",
     "deploy-now": "立即部署",
     "contact-us": "联系我们",
-    "start-trial": "以 {days} 天 {price} 美元的价格试用",
+    "free-trial": "无需信用卡即可免费试用",
+    "start-trial": "免费试用",
     "subscribe-now": "立即订阅",
     "subscription": {
       "plan": {

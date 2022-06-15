@@ -92,6 +92,12 @@
                 >
                   {{ plan.buttonText }}
                 </button>
+                <div
+                  v-if="plan.trialDays"
+                  class="font-bold text-sm my-2 text-center"
+                >
+                  {{ $t("pricing.free-trial") }}
+                </div>
               </div>
             </div>
             <h4 class="sr-only">Features</h4>
@@ -329,6 +335,12 @@
               >
                 {{ plan.buttonText }}
               </button>
+              <div
+                v-if="plan.trialDays"
+                class="font-bold text-sm my-2 text-center"
+              >
+                {{ $t("pricing.free-trial") }}
+              </div>
             </div>
           </div>
         </div>
@@ -517,11 +529,8 @@ export default defineComponent({
         return app.i18n.t("pricing.deploy-now") as string;
       if (plan.type === PlanType.ENTERPRISE)
         return app.i18n.t("pricing.contact-us") as string;
-      if (plan.trialDays && plan.trialPrice) {
-        return app.i18n.t("pricing.start-trial", {
-          price: plan.trialPrice,
-          days: plan.trialDays,
-        }) as string;
+      if (plan.trialDays) {
+        return app.i18n.t("pricing.start-trial") as string;
       }
       return app.i18n.t("pricing.subscribe-now") as string;
     };
