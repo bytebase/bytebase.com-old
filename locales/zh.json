@@ -65,7 +65,7 @@
             "instance-minimum-5": "5 ~ 无限制",
             "instance-customized": "自定义",
             "schema-change": "Schema 和数据变更",
-            "migration-history": "迁移历史",
+            "migration-history": "变更历史",
             "sql-editor": "SQL 编辑器",
             "disaster-recovery": "数据灾备",
             "disaster-recovery-basic": "基础",
@@ -151,8 +151,8 @@
       "description": "一个易于使用的查询界面用于查看数据库记录。"
     },
     "migration-history": {
-      "title": "迁移历史",
-      "description": "通过相邻版本间的比对，来展示每次迁移产生的差异。"
+      "title": "变更历史",
+      "description": "通过相邻版本间的比对，来展示每次变更产生的差异。"
     },
     "anomaly-center": {
       "title": "异常中心",
@@ -304,10 +304,10 @@
   },
   "database": {
     "clickhouse-feature": "是一个开源、高性能的柱状 OLAP 数据库管理系统，用于使用 SQL 进行实时分析。",
-    "mysql-feature": "是世界上最受欢迎的开源数据库。 Bytebase 原生支持 MySQL 数据库来管理架构更改、备份、记录迁移历史等。",
-    "postgre-feature": "是世界上最先进的开源关系数据库。 Bytebase 原生支持 PostgreSQL 数据库来管理架构更改、备份、记录迁移历史等。",
+    "mysql-feature": "是世界上最受欢迎的开源数据库。 Bytebase 原生支持 MySQL 数据库来管理架构更改、备份、记录变更历史等。",
+    "postgre-feature": "是世界上最先进的开源关系数据库。 Bytebase 原生支持 PostgreSQL 数据库来管理架构更改、备份、记录变更历史等。",
     "snowflake-feature": "是一种基于云的数据存储和分析服务。 它允许企业用户使用基于云的硬件和软件来存储和分析数据。",
-    "tidb-feature": "是一个开源、云原生、分布式 SQL 数据库，用于弹性扩展和实时分析。 Bytebase 原生支持 TiDB 数据库管理 schema 变更、备份、记录迁移历史等。"
+    "tidb-feature": "是一个开源、云原生、分布式 SQL 数据库，用于弹性扩展和实时分析。 Bytebase 原生支持 TiDB 数据库管理 schema 变更、备份、记录变更历史等。"
   },
   "database-review-guide": {
     "title": "数据库审核规则",
@@ -321,7 +321,7 @@
     "dingtalk-feature": "Bytebase 支持 webhook 将数据库架构相关的事件发布到配置的钉钉组。 这些 webhook 事件是专门为钉钉定制的，以显示最佳格式。",
     "discord-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Discord 通道。 这些 webhook 事件是专门为 Discord 定制的，以显示最佳格式。",
     "feishu-feature": "Bytebase 支持 webhook 将数据库模式相关的事件发布到配置的飞书组。 这些 webhook 事件是专门为飞书定制的，以显示最佳格式。",
-    "gitlab-feature": "Bytebase 与 GitLab 集成，允许团队管理 GitLab 存储库中的数据库迁移脚本。 在观察到新的迁移脚本推送事件时触发迁移管道，",
+    "gitlab-feature": "Bytebase 与 GitLab 集成，允许团队管理 GitLab 存储库中的数据库变更脚本。 在观察到新的变更脚本推送事件时触发变更管道，",
     "view-detailed-guide": "查看详细指南",
     "slack-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Slack 通道。 这些 webhook 事件是专门为 Slack 定制的，以显示最佳格式。",
     "teams-feature": "Bytebase 支持 webhook 将与数据库架构相关的事件发布到配置的 Microsoft Teams 通道。 这些 webhook 事件是专门为 Teams 定制的，以显示最佳格式。",
@@ -339,7 +339,7 @@
     },
     "developer": {
       "title": "数据库架构更改的整体视图",
-      "description": "无论是在团队中作为 IC 工作还是管理自己的项目，使用 Bytebase 的开发人员都可以全面了解所有相关的数据库信息、正在进行的数据库模式更改任务和过去的数据库迁移历史。"
+      "description": "无论是在团队中作为 IC 工作还是管理自己的项目，使用 Bytebase 的开发人员都可以全面了解所有相关的数据库信息、正在进行的数据库模式更改任务和过去的数据库变更历史。"
     },
     "techlead": {
       "title": "提高团队速度并降低风险",
