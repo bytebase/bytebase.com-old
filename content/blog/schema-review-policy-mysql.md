@@ -16,7 +16,7 @@ As the trailblazer to embrace Database as Code, Bytebase wants to lift the devel
 
 ## What is Schema Review Policy?
 
-A schema review policy is a set of SQL-style rules to check the SQL statement quality. DBAs can configure schema review policies for each environment. Bytebase will check SQL statements automatically before executing schema changes. And block them if any configured policies are not met. 
+A schema review policy is a set of SQL-style rules to check the SQL statement quality. DBAs can configure schema review policies for each environment. Bytebase will check SQL statements automatically before executing schema changes, and block them if any configured policies are not met. 
 
 The schema review policy is available to MySQL and TiDB. We will add support to PostgreSQL later.
 
