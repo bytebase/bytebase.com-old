@@ -24,6 +24,15 @@ module.exports = {
         192: "48rem",
         208: "52rem",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            img: {
+              width: "100%",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [
