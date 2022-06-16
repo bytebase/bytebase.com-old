@@ -12,13 +12,13 @@ Bytebase is an open-source database DevOps tool, and it’s the GitLab for manag
 
 The trend of codifying database schema changes (aka Database as Code) has accelerated in recent years. Today, there exists a bunch of tools to check the code quality; however, the ability to check SQL statement quality is quite lacking.
 
-As the trailblazer to embrace Database as Code, Bytebase wants to lift the developer experience of working with SQL. Today we are introducing a new feature - schema review policy, a set of SQL quality checks to help DBAs and application developers compose better schema change statements.
+As the trailblazer to embrace Database as Code, Bytebase aims to lift the developer experience of working with SQL. Today we are introducing a new feature - schema review policy, a set of SQL quality checks to help DBAs and application developers compose better schema change statements.
 
 ## What is Schema Review Policy?
 
-A schema review policy is a set of SQL-style rules to check the SQL statement quality. DBAs can configure schema review policies for each environment. Bytebase will check SQL statements automatically before executing schema changes, and block them if any configured policies are not met.
+A schema review policy is a set of SQL-style rules to check the SQL statement quality. DBAs can configure schema review policies for each environment. Bytebase will check SQL statements automatically before executing schema changes and block them if any configured policies are not met.
 
-The schema review policy is available to MySQL and TiDB. We will add support to PostgreSQL later.
+The schema review policy is available to MySQL and TiDB. PostgreSQL support will be coming soon.
 
 ## Rules in Schema Review Policy
 
@@ -44,7 +44,7 @@ There are countless stories about the performance issue and database outages cau
 
 - Require primary key
 
-A table without a primary key is hard to identify a particular record. Bytebase provides the rule “Require primary key” to enforce each table has a primary key.
+It is hard to identify a particular record for a table without a primary key. Bytebase provides the rule - “Require primary key” to enforce each table to have a primary key.
 
 ### Schema
 
@@ -65,7 +65,7 @@ InnoDB is the default storage engine of MySQL 5.5+ with powerful transaction fea
 
 ## How to Configure Schema Review Policy
 
-Bytebase provides a schema review policy template based on the industry best practices. You can apply it directly to your production environment. Of course, you can create your own schema review policy based on it.
+Bytebase provides a schema review policy template based on the industry best practices. You can apply it to your production environment directly. Of course, you can create your own schema review policy based on it.
 
 Let’s begin configuring a policy from the environment dashboard.
 
@@ -85,13 +85,13 @@ Let’s begin configuring a policy from the environment dashboard.
 
 ![step4](/static/blog-changelog-assets/2022/06/schema-review-policy-step4.webp)
 
-Now you can see your just created schema review policy on the page below.
+Now you can see the schema review policy that you jsut created on the page below.
 
 ![dashboard](/static/blog-changelog-assets/2022/06/schema-review-policy-dashboard.webp)
 
 ## How Schema Review Policy is Used
 
-When you create an issue in an environment configured with a schema review policy, Bytebase automatically checks SQL statements and shows the schema review result. Take the screenshot below as an example, and it indicates that SQL statements do not meet the configured policies.
+When you create an issue in an environment configured with a schema review policy, Bytebase automatically checks SQL statements and shows the schema review result. Take the screenshot below as an example. It shows that the input SQL statement does not meet the configured policies.
 
 ![issue](/static/blog-changelog-assets/2022/06/schema-review-policy-issue.webp)
 
@@ -99,4 +99,4 @@ You can get more details by clicking the button “SQL review”.
 
 ![details](/static/blog-changelog-assets/2022/06/schema-review-policy-details.webp)
 
-Please try it out, and if you want to suggest additional rules, please [let us know](https://github.com/bytebase/bytebase/issues) .
+Please try it out. If you want to suggest additional rules, please [let us know](https://github.com/bytebase/bytebase/issues) .
