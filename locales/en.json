@@ -33,7 +33,8 @@
     "announcement": "You can upgrade, downgrade, or {cancel} anytime. No hidden charges.",
     "deploy-now": "Deploy now",
     "contact-us": "Contact us",
-    "start-trial": "Start trial with ${price} for {days} days",
+    "free-trial": "Your first 14 days are free - no credit card required",
+    "start-trial": "Try free now",
     "subscribe-now": "Subscribe now",
     "subscription": {
       "plan": {
