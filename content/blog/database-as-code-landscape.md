@@ -241,7 +241,7 @@ How Bytebase compares against other tools:
 |  Prisma   |   TypeScript    |       Custom DSL        |          State-based          | CLI + UI  |       ✅        |      ✅       |
 | Bytebase  | Go + TypeScript |           SQL           |       Migration-based\*       | CLI + UI  |       ✅        |      ✅       | ✅            |
 
-_\*Though bytebase uses migration-based approach, it records schema snapshot before and after the migration. Thus it also retains some state-based benefits such as drift detection_
+_\*Though Bytebase uses migration-based approach, it records schema snapshot before and after the migration. Thus it also retains some state-based benefits such as drift detection_
 
 ## The Summaries
 
