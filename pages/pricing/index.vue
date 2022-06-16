@@ -495,6 +495,7 @@ import {
 import {
   getSourceFromUrl,
   PAGE,
+  ACTION,
   PRICING_EVENT,
   useSegment,
 } from "~/plugin/segment";
@@ -502,7 +503,7 @@ import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
-import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
+import { useAuth0 } from "~/plugin/auth0";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -592,6 +593,9 @@ export default defineComponent({
         return;
       }
 
+      analytics.value?.track(PRICING_EVENT.LOGIN, {
+        source: getSourceFromUrl(),
+      });
       auth0.value.loginWithRedirect({
         redirect_uri: `http://localhost:3001/subscription?trial=team&source=${PAGE.PRICING}`,
       });
@@ -610,7 +614,7 @@ export default defineComponent({
     };
 
     const track = (component: string) => {
-      analytics.value?.track(`pricing.${component}`, {
+      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`, {
         source: getSourceFromUrl(),
       });
     };
