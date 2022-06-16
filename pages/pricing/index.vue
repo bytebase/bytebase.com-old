@@ -503,7 +503,7 @@ import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
-import { useAuth0 } from "~/plugin/auth0";
+import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -533,7 +533,7 @@ export default defineComponent({
   setup() {
     const { app } = useContext();
     const analytics = ref();
-    const auth0 = ref();
+    const auth0 = ref<IAtuhPlugin>();
 
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
@@ -586,6 +586,7 @@ export default defineComponent({
 
     const login = () => {
       if (!auth0.value) {
+        // To avoid auth0 initial failed
         window.open(
           `https://hub.bytebase.com?source=${PAGE.PRICING}`,
           "__blank"
@@ -623,7 +624,6 @@ export default defineComponent({
       plans,
       sections,
       track,
-      auth0,
       onTeamOrEnterpriseButtonClick,
     };
   },
