@@ -586,7 +586,7 @@ export default defineComponent({
     const login = () => {
       if (!auth0.value) {
         window.open(
-          `https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`,
+          `https://hub.bytebase.com?source=${PAGE.PRICING}`,
           "__blank"
         );
         return;
