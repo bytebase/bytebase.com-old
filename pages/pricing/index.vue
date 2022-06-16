@@ -502,6 +502,7 @@ import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
+import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -531,6 +532,7 @@ export default defineComponent({
   setup() {
     const { app } = useContext();
     const analytics = ref();
+    const auth0 = ref();
 
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
@@ -576,17 +578,29 @@ export default defineComponent({
     });
 
     onMounted(() => {
+      auth0.value = useAuth0();
       analytics.value = useSegment().analytics;
       analytics.value?.page(PAGE.PRICING);
     });
 
-    const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
-      if (plan.type === PlanType.TEAM) {
-        analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
+    const login = () => {
+      if (!auth0.value) {
         window.open(
           `https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`,
           "__blank"
         );
+        return;
+      }
+
+      auth0.value.loginWithRedirect({
+        redirect_uri: `http://localhost:3001/subscription?trial=team&source=${PAGE.PRICING}`,
+      });
+    };
+
+    const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
+      if (plan.type === PlanType.TEAM) {
+        analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
+        login();
       } else if (plan.type === PlanType.ENTERPRISE) {
         analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
@@ -605,6 +619,7 @@ export default defineComponent({
       plans,
       sections,
       track,
+      auth0,
       onTeamOrEnterpriseButtonClick,
     };
   },
