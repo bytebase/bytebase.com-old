@@ -594,11 +594,20 @@ export default defineComponent({
         return;
       }
 
-      analytics.value?.track(PRICING_EVENT.LOGIN, {
-        source: getSourceFromUrl(),
-      });
-      auth0.value.loginWithRedirect({
-        redirect_uri: `http://localhost:3001/subscription?trial=team&source=${PAGE.PRICING}`,
+      auth0.value.isAuthenticated().then((isAuthenticated) => {
+        if (isAuthenticated) {
+          window.open(
+            `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+            "__blank"
+          );
+        } else {
+          analytics.value?.track(PRICING_EVENT.LOGIN, {
+            source: getSourceFromUrl(),
+          });
+          auth0.value?.loginWithRedirect({
+            redirectUrl: `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+          });
+        }
       });
     };
 

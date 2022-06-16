@@ -1,19 +1,20 @@
 import { Auth0Client } from "@auth0/auth0-spa-js";
 import { reactive } from "@nuxtjs/composition-api";
 
-import * as interfaces from "./interface";
-
 let client: Auth0Client | undefined = undefined;
 
-const loginWithRedirect: interfaces.ILoginWithRedirect = (options) =>
-  client?.loginWithRedirect(options);
-
 export interface IAtuhPlugin {
-  loginWithRedirect: interfaces.ILoginWithRedirect;
+  loginWithRedirect: (options: { redirectUrl: string }) => Promise<void> | void;
+  isAuthenticated: () => Promise<boolean>;
 }
 
 export const authPlugin: IAtuhPlugin = {
-  loginWithRedirect,
+  loginWithRedirect: (options: { redirectUrl: string }) => {
+    client?.loginWithRedirect({
+      redirect_uri: options.redirectUrl,
+    });
+  },
+  isAuthenticated: () => client?.isAuthenticated() ?? Promise.resolve(false),
 };
 
 export const useAuth0 = () => {
