@@ -493,7 +493,7 @@ import {
   onMounted,
 } from "@nuxtjs/composition-api";
 import {
-  getSourceFromUrl,
+  Metric,
   PAGE,
   ACTION,
   PRICING_EVENT,
@@ -532,7 +532,7 @@ export default defineComponent({
   },
   setup() {
     const { app } = useContext();
-    const analytics = ref();
+    const analytics = ref<Metric>();
     const auth0 = ref<IAtuhPlugin>();
 
     const getButtonText = (plan: Plan): string => {
@@ -585,6 +585,7 @@ export default defineComponent({
     });
 
     const login = () => {
+      analytics.value?.track(PRICING_EVENT.LOGIN_CLICK);
       auth0.value?.isAuthenticated().then((isAuthenticated) => {
         if (isAuthenticated) {
           window.open(
@@ -592,9 +593,6 @@ export default defineComponent({
             "__blank"
           );
         } else {
-          analytics.value?.track(PRICING_EVENT.LOGIN, {
-            source: getSourceFromUrl(),
-          });
           auth0.value?.loginWithRedirect({
             redirectUrl: `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
           });
@@ -615,9 +613,7 @@ export default defineComponent({
     };
 
     const track = (component: string) => {
-      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`, {
-        source: getSourceFromUrl(),
-      });
+      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`);
     };
 
     return {
