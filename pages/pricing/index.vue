@@ -585,16 +585,7 @@ export default defineComponent({
     });
 
     const login = () => {
-      if (!auth0.value) {
-        // To avoid auth0 initial failed
-        window.open(
-          `https://hub.bytebase.com?source=${PAGE.PRICING}`,
-          "__blank"
-        );
-        return;
-      }
-
-      auth0.value.isAuthenticated().then((isAuthenticated) => {
+      auth0.value?.isAuthenticated().then((isAuthenticated) => {
         if (isAuthenticated) {
           window.open(
             `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
