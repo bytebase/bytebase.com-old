@@ -75,7 +75,7 @@
                   </p>
                 </div>
                 <nuxt-link
-                  v-if="plan.type == 0"
+                  v-if="plan.type == 'FREE'"
                   :to="localePath('/docs/install/install-with-docker')"
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
@@ -160,7 +160,7 @@
             </h3>
             <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <nuxt-link
-              v-if="plan.type == 0"
+              v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
@@ -319,7 +319,7 @@
                 {{ $t(plan.description) }}
               </p>
               <nuxt-link
-                v-if="plan.type == 0"
+                v-if="plan.type == 'FREE'"
                 :to="localePath('/docs/install/install-with-docker')"
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
                 >{{ plan.buttonText }}</nuxt-link
@@ -452,7 +452,7 @@
             ]"
           >
             <nuxt-link
-              v-if="plan.type == 0"
+              v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
@@ -493,7 +493,7 @@ import {
   onMounted,
 } from "@nuxtjs/composition-api";
 import {
-  getSourceFromUrl,
+  Metric,
   PAGE,
   ACTION,
   PRICING_EVENT,
@@ -532,7 +532,7 @@ export default defineComponent({
   },
   setup() {
     const { app } = useContext();
-    const analytics = ref();
+    const analytics = ref<Metric>();
     const auth0 = ref<IAtuhPlugin>();
 
     const getButtonText = (plan: Plan): string => {
@@ -585,21 +585,28 @@ export default defineComponent({
     });
 
     const login = () => {
+      analytics.value?.track(PRICING_EVENT.LOGIN_CLICK);
+      const url = `https://hub.bytebase.com/subscription?${buildUrlParamater()}`;
+
       auth0.value?.isAuthenticated().then((isAuthenticated) => {
         if (isAuthenticated) {
-          window.open(
-            `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
-            "__blank"
-          );
+          window.open(url, "__blank");
         } else {
-          analytics.value?.track(PRICING_EVENT.LOGIN, {
-            source: getSourceFromUrl(),
-          });
           auth0.value?.loginWithRedirect({
-            redirectUrl: `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+            redirectUrl: url,
           });
         }
       });
+    };
+
+    const buildUrlParamater = (): string => {
+      const param = new URLSearchParams(window.location.search);
+      const queryObj = {
+        ...Object.fromEntries(param),
+        source: PAGE.PRICING,
+        trial: PlanType.TEAM,
+      };
+      return new URLSearchParams(queryObj).toString();
     };
 
     const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
@@ -615,9 +622,7 @@ export default defineComponent({
     };
 
     const track = (component: string) => {
-      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`, {
-        source: getSourceFromUrl(),
-      });
+      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`);
     };
 
     return {

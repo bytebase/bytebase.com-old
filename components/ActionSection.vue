@@ -48,7 +48,7 @@ import {
   useContext,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
-import { getSourceFromUrl, useSegment } from "~/plugin/segment";
+import { Metric, useSegment } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
@@ -61,7 +61,7 @@ export default defineComponent({
   },
   setup(props) {
     const { app } = useContext();
-    const analytics = ref();
+    const analytics = ref<Metric>();
 
     onMounted(() => {
       analytics.value = useSegment().analytics;
@@ -70,9 +70,7 @@ export default defineComponent({
     const track = (component: string) => {
       trackEvent([component, props.moduleName].join("."));
       // Segment
-      analytics.value?.track([component, props.moduleName].join("."), {
-        source: getSourceFromUrl(),
-      });
+      analytics.value?.track([component, props.moduleName].join("."));
     };
 
     const actionSentence = computed(() => {

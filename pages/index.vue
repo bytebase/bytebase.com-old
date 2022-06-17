@@ -596,7 +596,7 @@ import {
   onMounted,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
-import { getSourceFromUrl, useSegment } from "~/plugin/segment";
+import { useSegment } from "~/plugin/segment";
 import { useStore } from "~/store";
 
 const { trackEvent } = Plausible();
@@ -615,9 +615,7 @@ export default defineComponent({
       const browserLocale = browserLanguageString.slice(0, 2);
       const locales = app.i18n.locales.map((locale: any) => locale.code);
 
-      useSegment().analytics?.track("home.visit", {
-        source: getSourceFromUrl(),
-      });
+      useSegment().analytics?.track("home.visit");
 
       // We now have two locales: `en` and `zh`, the other locales redirect to `en`.
       if (!locales.includes(browserLocale)) {
