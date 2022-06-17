@@ -32,15 +32,46 @@ To optimize documentation SEO, we should save its metadata between the `--- xxx 
 5. Go to [localhost:3000/docs](http://localhost:3000/docs) and check your creation.
 6. If everything is fine, create a new PR with the changes to [our repo in GitHub](https://github.com/bytebase/bytebase.com).
 
-## Using powerful components into Markdown
+## Blocks
 
-To display more styled blocks in documentation, we support some powerful components:
+Use following components to display more styled content in documentations:
 
-### `hint-block`
+### `Table`
+
+| Col1 | Col2 | Col3 |
+| ---- | -----| -----|
+| Bob  |  30  | ✔️    |
+| Alice|  15  |      |
+| David|  20  | ✔️    |
+
+
+### `Code`
+
+A code block with copy button.
+
+```bash
+echo hello world
+```
+
+### `Hint`
 
 Show a hint text with a styled block.
 
-![hint-block-example](/static/docs-assets/hint-block-example.png)
+<hint-block type="info">
+
+I am an info block with [link](#hint).
+
+Extra description.
+
+</hint-block>
+
+<hint-block type="warning">
+
+I am an warning block with [link](#hint).
+
+Extra description.
+
+</hint-block>
 
 #### Usage
 
@@ -58,16 +89,16 @@ Bytebase has already prepared some sample data. In particular, it has created a 
 | ---- | ------------------- | ------- | ------------------ |
 | type | `info` \| `warning` | `info`  | Set the hint style |
 
-### `doc-link-block`
+### `Doc`
 
 A pretty link block to another page.
 
-![doc-link-block-example](/static/docs-assets/doc-link-block-example.png)
+<doc-link-block url="/docs/faq" title="FAQ"></doc-link-block>
 
 #### Usage
 
 ```markdown
-<doc-link-block url="/docs/use-bytebase/webhook-integration/overview" title="Webhook Integration"></doc-link-block>
+<doc-link-block url="/docs/faq" title="FAQ"></doc-link-block>
 ```
 
 #### Props
@@ -77,7 +108,7 @@ A pretty link block to another page.
 | url   | `string` | `''`    | Set the link url              |
 | title | `string` | `''`    | Description of the link title |
 
-### `include-block`
+### `Include`
 
 Include another markdown and render inline.
 
