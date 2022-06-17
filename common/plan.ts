@@ -1,7 +1,7 @@
 export enum PlanType {
-  FREE = 0,
-  TEAM = 1,
-  ENTERPRISE = 2,
+  FREE = "FREE",
+  TEAM = "TEAM",
+  ENTERPRISE = "ENTERPRISE",
 }
 
 export interface Plan {

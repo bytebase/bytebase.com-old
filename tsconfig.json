@@ -3,7 +3,7 @@
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM", "DOM.Iterable"],
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,

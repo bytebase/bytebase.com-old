@@ -586,18 +586,27 @@ export default defineComponent({
 
     const login = () => {
       analytics.value?.track(PRICING_EVENT.LOGIN_CLICK);
+      const url = `https://hub.bytebase.com/subscription?${buildUrlParamater()}`;
+
       auth0.value?.isAuthenticated().then((isAuthenticated) => {
         if (isAuthenticated) {
-          window.open(
-            `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
-            "__blank"
-          );
+          window.open(url, "__blank");
         } else {
           auth0.value?.loginWithRedirect({
-            redirectUrl: `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+            redirectUrl: url,
           });
         }
       });
+    };
+
+    const buildUrlParamater = (): string => {
+      const param = new URLSearchParams(window.location.search);
+      const queryObj = {
+        ...Object.fromEntries(param),
+        source: PAGE.PRICING,
+        trial: PlanType.TEAM,
+      };
+      return new URLSearchParams(queryObj).toString();
     };
 
     const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
