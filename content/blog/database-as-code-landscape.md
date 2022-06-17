@@ -232,6 +232,17 @@ Bytebase is envisioned to be the counterpart of GitLab / GitHub to manage the da
 
 How Bytebase compares against other tools:
 
+|           |    Language     |      Change Format      |             Genre             | Interface | VCS Integration | Collaboration | Multi-tenancy |
+| :-------: | :-------------: | :---------------------: | :---------------------------: | :-------: | :-------------: | :-----------: | ------------- |
+| Liquibase |      Java       | XML / YAML / JSON / SQL |        Migration-based        |    CLI    |
+|  Flyway   |      Java       |           SQL           |        Migration-based        |    CLI    |
+|  Sqitch   |      Perl       |           SQL           |        Migration-based        |    CLI    |
+|   Atlas   |       Go        |       Custom DSL        | State-based & Migration-based |    CLI    |
+|  Prisma   |   TypeScript    |       Custom DSL        |          State-based          | CLI + UI  |       ✅        |      ✅       |
+| Bytebase  | Go + TypeScript |           SQL           |       Migration-based\*       | CLI + UI  |       ✅        |      ✅       | ✅            |
+
+_\*Though Bytebase uses migration-based approach, it records schema snapshot before and after the migration. Thus it also retains some state-based benefits such as drift detection_
+
 ## The Summaries
 
 Though the idea of Database as Code is not new, the trend and innovation have been much accelerated in the last 2 years:
