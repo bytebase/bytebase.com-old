@@ -495,6 +495,7 @@ import {
 import {
   getSourceFromUrl,
   PAGE,
+  ACTION,
   PRICING_EVENT,
   useSegment,
 } from "~/plugin/segment";
@@ -502,6 +503,7 @@ import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
+import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -531,6 +533,7 @@ export default defineComponent({
   setup() {
     const { app } = useContext();
     const analytics = ref();
+    const auth0 = ref<IAtuhPlugin>();
 
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
@@ -576,17 +579,33 @@ export default defineComponent({
     });
 
     onMounted(() => {
+      auth0.value = useAuth0();
       analytics.value = useSegment().analytics;
       analytics.value?.page(PAGE.PRICING);
     });
 
+    const login = () => {
+      auth0.value?.isAuthenticated().then((isAuthenticated) => {
+        if (isAuthenticated) {
+          window.open(
+            `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+            "__blank"
+          );
+        } else {
+          analytics.value?.track(PRICING_EVENT.LOGIN, {
+            source: getSourceFromUrl(),
+          });
+          auth0.value?.loginWithRedirect({
+            redirectUrl: `https://hub.bytebase.com/subscription?trial=team&source=${PAGE.PRICING}`,
+          });
+        }
+      });
+    };
+
     const onTeamOrEnterpriseButtonClick = (plan: Plan) => {
       if (plan.type === PlanType.TEAM) {
         analytics.value?.track(PRICING_EVENT.TEAM_PLAN_CLICK);
-        window.open(
-          `https://hub.bytebase.com/pricing?plan=team&source=${PAGE.PRICING}`,
-          "__blank"
-        );
+        login();
       } else if (plan.type === PlanType.ENTERPRISE) {
         analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
@@ -596,7 +615,7 @@ export default defineComponent({
     };
 
     const track = (component: string) => {
-      analytics.value?.track(`pricing.${component}`, {
+      analytics.value?.track(`${PAGE.PRICING}.${component}.${ACTION.CLICK}`, {
         source: getSourceFromUrl(),
       });
     };

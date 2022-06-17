@@ -7,7 +7,7 @@ export const PAGE = {
   PRICING: `${PREFIX}.pricing`,
 };
 
-const ACTION = {
+export const ACTION = {
   CLICK: "click",
 };
 
@@ -15,6 +15,7 @@ export const PRICING_EVENT = {
   FREE_PLAN_CLICK: `${PAGE.PRICING}.free-plan.${ACTION.CLICK}`,
   ENTERPRISE_PLAN_CLICK: `${PAGE.PRICING}.enterprise-plan.${ACTION.CLICK}`,
   TEAM_PLAN_CLICK: `${PAGE.PRICING}.team-plan.${ACTION.CLICK}`,
+  LOGIN: `${PAGE.PRICING}.login.${ACTION.CLICK}`,
 };
 
 const analytics = ref<Analytics>();
