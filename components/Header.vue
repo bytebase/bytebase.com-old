@@ -9,10 +9,11 @@
           <img class="h-7 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
         </nuxt-link>
         <div class="flex relative sm:hidden flex-row" style="margin-top: 6px">
+          <!-- Using backgroud-image is to prevent it as icon when sharing in wechat -->
           <div
             class="-mt-5 h-10 w-16"
             :style="{
-              backgroundImage: 'url(/imgs/starus.png)',
+              backgroundImage: `url(${require('~/assets/starus.webp')})`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -107,7 +108,7 @@
             <div
               class="-mt-5 h-10 w-16"
               :style="{
-                backgroundImage: 'url(/imgs/starus.png)',
+                backgroundImage: `url(${require('~/assets/starus.webp')})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
