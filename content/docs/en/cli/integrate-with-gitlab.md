@@ -27,11 +27,11 @@ You can go back to [overview](https://www.bytebase.com/docs/cli/overview) for mo
 
 In your GitLab Project, go to **Settings > CI/CD > Runners**, click the **_Show Runner Installation Instructions_** button, and follow the instructions to register runner.
 
-![register gitlab runner](/static/docs-assets/gitlab-register-runner.png)
+![register gitlab runner](/static/docs/gitlab-register-runner.png)
 
 From the shell prompt, add tag `bb-runner` to specify this runner has `bb` installed.
 
-![tag for gitlab runner](/static/docs-assets/tag-gitlab-runner.png)
+![tag for gitlab runner](/static/docs/tag-gitlab-runner.png)
 
 ## Configure GitLab CI
 
@@ -73,9 +73,9 @@ execute-schema-migration:
 You also need to setup DSN secret to make this workflow available:
 Go to **Setting > CI/CD > Variables**, add your DSN as `BYTEBASE_DSN`.
 
-![add dsn secret](/static/docs-assets/add-gitlab-secret-1.png)
+![add dsn secret](/static/docs/add-gitlab-secret-1.png)
 
-![add dsn secret](/static/docs-assets/add-gitlab-secret-2.png)
+![add dsn secret](/static/docs/add-gitlab-secret-2.png)
 
 ## Trigger a Migration
 
@@ -83,10 +83,10 @@ Finally, you can trigger a migration by adding a new commit to your GitLab proje
 
 Commit a script to `dev/` and check if this job runs correctly:
 
-![gitlab job result](/static/docs-assets/gitlab-job-result-1.png)
+![gitlab job result](/static/docs/gitlab-job-result-1.png)
 
 The schema snapshots before and after the migration are stored in artifacts:
 
-![gitlab job result](/static/docs-assets/gitlab-job-result-2.png)
+![gitlab job result](/static/docs/gitlab-job-result-2.png)
 
 You can browse this [job detail](https://gitlab.com/bytebase-sample/tutorial-bb-ci/-/jobs/2472815264) on GitHub.com.

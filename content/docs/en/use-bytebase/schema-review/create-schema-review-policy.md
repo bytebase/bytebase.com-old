@@ -6,11 +6,11 @@ There are two ways to create the `Schema Review Policy`.
 
 One is from `Schema Review Policy` dashboard in `Settings`.
 
-![schema-review-create-from-policy-dashboard](/static/docs-assets/schema-review-create-from-policy-dashboard.gif)
+![schema-review-create-from-policy-dashboard](/static/docs/schema-review-create-from-policy-dashboard.gif)
 
 The other is from `Environment` dashboard.
 
-![schema-review-create-from-environment-dashboard](/static/docs-assets/schema-review-create-from-environment-dashboard.gif)
+![schema-review-create-from-environment-dashboard](/static/docs/schema-review-create-from-environment-dashboard.gif)
 
 Creating the `Schema Review Policy` is a 3-step process.
 
@@ -26,18 +26,17 @@ Note that only **ONE** policy can be attached per `Environment`.
 
 ## Step 2
 
-
-Specify each `Schema Review Rule`, including error level and rule-specific fields. 
+Specify each `Schema Review Rule`, including error level and rule-specific fields.
 
 ### Change rule level
 
-You can choose one of `Error`, `Warning` and `Disabled`. 
+You can choose one of `Error`, `Warning` and `Disabled`.
 
 `Error` will block the automatic run of `Issue`, while `Warning` will not.
 
 When the rule is `Disabled`, it will not take effect.
 
-![schema-review-change-rule-level](/static/docs-assets/schema-review-change-rule-level.gif)
+![schema-review-change-rule-level](/static/docs/schema-review-change-rule-level.gif)
 
 ### Change rule configuration
 
@@ -47,19 +46,19 @@ There are currently three types of rules that need to be configured.
 
 The rule [Table Naming Convention](/docs/features/schema-review/naming-table) and [Column Naming Convention](/docs/features/schema-review/naming-column) use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as format.
 
-![schema-review-change-regex](/static/docs-assets/schema-review-change-regex.gif)
+![schema-review-change-regex](/static/docs/schema-review-change-regex.gif)
 
 #### Template
 
 The rule [Index Naming Convention](/docs/features/schema-review/naming-index-idx), [Unique Key Naming Convention](/docs/features/schema-review/naming-index-uk) and [Foreign Key Naming Convention](/docs/features/schema-review/naming-index-fk) use `Template` as format.
 
-![schema-review-change-template](/static/docs-assets/schema-review-change-template.gif)
+![schema-review-change-template](/static/docs/schema-review-change-template.gif)
 
 #### Column list
 
 The rule [Enforce the Required Columns in Each Table](/docs/features/schema-review/column-required) needs `Column List`.
 
-![schema-review-change-column-list](/static/docs-assets/schema-review-change-column-list.gif)
+![schema-review-change-column-list](/static/docs/schema-review-change-column-list.gif)
 
 Details of the rules can be found [here](/docs/features/schema-review/overview).
 

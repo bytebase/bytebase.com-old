@@ -290,7 +290,7 @@
       <div class="py-16">
         <img
           class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
-          src="~/static/docs-assets/sql-editor-preview.webp"
+          src="~/static/docs/sql-editor-preview.webp"
           alt="All-in-one SQL Editor"
         />
       </div>
@@ -357,12 +357,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_databases-search.webp"
+                src="~/static/docs/sql-editor_databases-search.webp"
                 alt="Explore the Schema"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_databases-table-schema.webp"
+                src="~/static/docs/sql-editor_databases-table-schema.webp"
                 alt="Explore the Schema"
               />
             </div>
@@ -424,12 +424,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_autocomplete.webp"
+                src="~/static/docs/sql-editor_autocomplete.webp"
                 alt="Smooth query editing experience"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_format-sql.webp"
+                src="~/static/docs/sql-editor_format-sql.webp"
                 alt="Smooth query editing experience"
               />
             </div>
@@ -496,12 +496,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_sheets.webp"
+                src="~/static/docs/sql-editor_sheets.webp"
                 alt="Never Miss your Work"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_history.webp"
+                src="~/static/docs/sql-editor_history.webp"
                 alt="Never Miss your Work"
               />
             </div>
@@ -568,12 +568,12 @@
             >
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_share-popover.webp"
+                src="~/static/docs/sql-editor_share-popover.webp"
                 alt="Share Sheet with Teammates"
               />
               <img
                 class="w-3/4 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:bottom-0 lg:max-w-none"
-                src="~/static/docs-assets/sql-editor_share-link-access.webp"
+                src="~/static/docs/sql-editor_share-link-access.webp"
                 alt="Share Sheet with Teammates"
               />
             </div>

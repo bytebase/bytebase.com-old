@@ -8,17 +8,17 @@ Developers manage their databases within the Bytebase Project. Therefore, before
 
 Click `Projects` > `New Project` to create a project called "Employee".
 
-![_](/static/docs-assets/create-project.png)
+![_](/static/docs/create-project.png)
 
 Choose **Standard**. The "Employee" project is created successfully and you are on its detail page.
 
-![_](/static/docs-assets/project-page.png)
+![_](/static/docs/project-page.png)
 
 Choose `Transfer DB` to transfer the two databases synced from the connected instances. You can find them in the default project since they have not been transferred into any specific project yet.
 
-![_](/static/docs-assets/transfer-db-1.png)
+![_](/static/docs/transfer-db-1.png)
 
-![_](/static/docs-assets/transfer-db-2.png)
+![_](/static/docs/transfer-db-2.png)
 
 Now you are ready to manage these two "employee" databases in your project.
 
@@ -32,7 +32,7 @@ Remember to add your teammates to the workspace before you try to add them to a 
 
 On the detail page of your created project, click `Settings` to add project members. In the below example, we add a project member "Adela".
 
-![_](/static/docs-assets/add-teammate.png)
+![_](/static/docs/add-teammate.png)
 
 ## Alter the database schema
 
@@ -44,31 +44,31 @@ The whole workflow is encapsulated in a SQL issue.
 
 Open the "Employee" project. Click `Alter Schema`.
 
-![_](/static/docs-assets/alter-schema.png)
+![_](/static/docs/alter-schema.png)
 
 Then a dialog box will pop up.
 
-![_](/static/docs-assets/alter-single-schema.png)
+![_](/static/docs/alter-single-schema.png)
 
 You need to choose `Alter multiple databases` to create a pipeline propagating changes across multiple databases.
 
-![_](/static/docs-assets/alter-multiple-databases.png)
+![_](/static/docs/alter-multiple-databases.png)
 
 An issue creation page appears now.
 
-![_](/static/docs-assets/issue-creation-page.png)
+![_](/static/docs/issue-creation-page.png)
 
 Fill in the required title, SQL statement, and an optional description.
 
-![_](/static/docs-assets/write-sql.png)
+![_](/static/docs/write-sql.png)
 
 Click `Apply to other stages`. For demo purposes, select yourself as the assignee, then click `Create`.
 
-![_](/static/docs-assets/create-issue.png)
+![_](/static/docs/create-issue.png)
 
 The SQL Advisor kicks off immediately and checks your SQL statements against various rules automatically.
 
-![_](/static/docs-assets/sql-advisor-2.png)
+![_](/static/docs/sql-advisor-2.png)
 
 The Test environment doesn't require manual approval, thus the SQL will be applied automatically after passing those advisor checks. Then you are waiting for approval for the Prod environment.
 
@@ -76,12 +76,12 @@ The Test environment doesn't require manual approval, thus the SQL will be appli
 
 Click `Approve` if everything is OK and the change will be applied to the Prod environment.
 
-![_](/static/docs-assets/approve-issue.png)
+![_](/static/docs/approve-issue.png)
 
-![_](/static/docs-assets/approve-issue-2.png)
+![_](/static/docs/approve-issue-2.png)
 
 Now that we have applied the same SQL change to both the `Test` and `Prod` databases, we can click `Resolve issue` to finish the workflow.
 
-![_](/static/docs-assets/resovle-issue.jpeg)
+![_](/static/docs/resovle-issue.jpeg)
 
-![_](/static/docs-assets/issue-done.jpeg)
+![_](/static/docs/issue-done.jpeg)

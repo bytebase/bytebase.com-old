@@ -76,9 +76,9 @@ This is a [reference directory structure ](https://gitlab.bytebase.com/bytebase-
 
 In Bytebase, database always belongs to an instance, and an instance always belongs to an environment. Thus a database also belongs to an environment. Thus one way to organize is to create a directory for each environment by using the environment name as the directory name and put migration files under the corresponding environment directory. Like the screenshot below:
 
-![Directory per environment, each file corresponds to a single database under an environment](/static/docs-assets/organize-schema-files-step1.png)
+![Directory per environment, each file corresponds to a single database under an environment](/static/docs/organize-schema-files-step1.png)
 
-![organize-schema-files-step](/static/docs-assets/organize-schema-files-step2.png)
+![organize-schema-files-step](/static/docs/organize-schema-files-step2.png)
 
 #### Pros:
 
@@ -96,13 +96,13 @@ This is a [reference directory structure](https://gitlab.bytebase.com/bytebase-d
 
 All migration files for all environments are under the same directory. Like the screenshot below:
 
-![A single file representing all databases having the same name from all environments.](/static/docs-assets/organize-schema-files-step3.png)
+![A single file representing all databases having the same name from all environments.](/static/docs/organize-schema-files-step3.png)
 
-![organize-schema-files-step](/static/docs-assets/organize-schema-files-step4.png)
+![organize-schema-files-step](/static/docs/organize-schema-files-step4.png)
 
 The pros and cons are the opposite of Approach 1. Though this approach brings less overhead to manage the files, its biggest issue is it will cause much longer divergence period when the schema the migration files represents differs from the actual schema of the live database. Because when a migration file is committed, Bytebase will generate a migration pipeline including all environments. Like the screenshot below:
 
-![organize-schema-files-step](/static/docs-assets/organize-schema-files-step5.png)
+![organize-schema-files-step](/static/docs/organize-schema-files-step5.png)
 
 This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since we want the migration files to be the source of truth of the database schema.
 

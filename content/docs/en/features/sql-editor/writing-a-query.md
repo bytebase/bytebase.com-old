@@ -13,10 +13,10 @@ Currently, SQL Editor supports the following auto-completions:
 - Field Name
 - Keywords
 
-![Autocomplete Suggestions](/static/docs-assets/sql-editor_autocomplete.webp)
+![Autocomplete Suggestions](/static/docs/sql-editor_autocomplete.webp)
 
 ## Format SQL
 
 You can click the `Format` button or use a shortcut key `(⇧ + ⌘ + F)` to format SQL queries.
 
-![Format SQL](/static/docs-assets/sql-editor_format-sql.webp)
+![Format SQL](/static/docs/sql-editor_format-sql.webp)

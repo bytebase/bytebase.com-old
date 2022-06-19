@@ -6,7 +6,7 @@ For most projects, you may want to enforce some columns for every table. For exa
 
 You can customize which columns are required.
 
-![schema-review-column-required](/static/docs-assets/schema-review-column-required.webp)
+![schema-review-column-required](/static/docs/schema-review-column-required.webp)
 
 ## How the rule works
 

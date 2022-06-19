@@ -10,4 +10,4 @@ Only **Owner** or **DBA** can configure environment policies.
 
 Development workflow setup usually contains multiple environments such as `Dev`, `Test`, `Staging`, `Prod`. Different environments normally have different policy requirements. Bytebase allows user to configure environment specific policies.
 
-![env-backup-configure](/static/docs-assets/env-backup-configure.png)
+![env-backup-configure](/static/docs/env-backup-configure.png)

@@ -8,4 +8,4 @@ Your All-in-one SQL Editor, easy-to-use query interface to SELECT database recor
 
 ---
 
-![SQL Editor Preview](/static/docs-assets/sql-editor-preview.webp)
+![SQL Editor Preview](/static/docs/sql-editor-preview.webp)

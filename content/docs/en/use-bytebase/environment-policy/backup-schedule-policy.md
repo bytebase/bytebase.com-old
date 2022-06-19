@@ -10,16 +10,16 @@ The backup enforcement is **NOT retroactive**, which means the updated policy **
 
 `Owner` or `DBA` can configure the backup schedule policy for a particular environment from the "Environment" detail page:
 
-![env-backup-configure](/static/docs-assets/env-backup-configure.png)
+![env-backup-configure](/static/docs/env-backup-configure.png)
 
 ## Detect missing backup
 
 Once policy is enforced, Bytebase will detect and report the missing backup according to the policy.
 
-![database-overview](/static/docs-assets/database-overview.png)
+![database-overview](/static/docs/database-overview.png)
 
 ## Lock backup schedule
 
 Backup policy will also prevent user changing to a non-conforming backup schedule.
 
-![database-backup](/static/docs-assets/database-backup.png)
+![database-backup](/static/docs/database-backup.png)

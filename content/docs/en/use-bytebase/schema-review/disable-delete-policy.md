@@ -6,4 +6,4 @@ You can `disable` the `Schema Review Policy` to prevent it from taking effect.
 
 After disabling it, you can delete it.
 
-![schema-review-disable-and-delete](/static/docs-assets/schema-review-disable-and-delete.gif)
+![schema-review-disable-and-delete](/static/docs/schema-review-disable-and-delete.gif)

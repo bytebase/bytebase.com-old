@@ -2,7 +2,7 @@
 title: Project Webhook
 ---
 
-![project-webhook-configure](/static/docs-assets/project-webhook-configure.png)
+![project-webhook-configure](/static/docs/project-webhook-configure.png)
 
 ## Supported events
 
