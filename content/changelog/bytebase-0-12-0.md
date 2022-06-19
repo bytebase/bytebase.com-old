@@ -15,26 +15,26 @@ Say you have many databases that use identical database schemas and need uniform
 - Flexible tenant database deployment such as multi-stage regional deployments.
 - Schema updates are applied to all tenants consistently. Adding a new tenant database will use the same schema from existing tenants.
 
-![_](/static/blog-changelog-assets/2022/01/4801dbf7-d282-4be6-9f8d-81bc9e41024f.gif)
+![_](/static/changelog/0.12.0/tenant-mode.gif)
 
 ### SQL Editor
 
 - Support keeping multiple editors under different tabs.
 
-![_](/static/blog-changelog-assets/2022/01/unnamed.gif)
+![_](/static/changelog/0.12.0/sql-editor-tab.gif)
 
 - Seamless transition to the schema change (DDL) / data change (DML) workflow from the SQL Editor.
 
-![_](/static/blog-changelog-assets/2022/01/unnamed--1-.gif)![_](/static/blog-changelog-assets/2022/01/unnamed--2-.gif)
+![_](/static/changelog/0.12.0/sql-editor-workflow.gif)
 
 - Project based permission control.
 - Save Query: support saving the SQL statement, search it with highlight and delete.
 
-![_](/static/blog-changelog-assets/2022/01/ezgif-7-be6b55c5bd.gif)
+![_](/static/changelog/0.12.0/sql-editor-saved-query.gif)
 
 - Query History: record all the executed queries.
 
-![_](/static/blog-changelog-assets/2022/01/ezgif-2-ebdba96cf3.gif)
+![_](/static/changelog/0.12.0/sql-editor-query-history.gif)
 
 ### Signup and login via GitLab EE/CE
 
@@ -58,7 +58,7 @@ Besides the schema change (DDL) workflow, we now also support the DML workflow. 
 
 - We are on the list of “The fastest-growing open-source startups in Q4 2021” by Runa Capital  [https://runacap.com/ross-index/q4-2021/](https://runacap.com/ross-index/q4-2021/)
 
-![_](/static/blog-changelog-assets/2022/01/pasted-image-0.png)
+![_](/static/changelog/0.12.0/runa-capital.webp)
 
 ## 📕 Upgrade instruction
 

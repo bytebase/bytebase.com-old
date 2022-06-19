@@ -9,24 +9,24 @@ description: Chinese language support, scheduled time to execute a task and enha
 ### 你好, 中文 Chinese Language Support
 
 Bytebase now officially supports simplified Chinese. User can toggle the language from the top-right profile dropdown.
-![_](/static//blog-changelog-assets/2021/12/b2333e4e-6432-4d25-ab4e-06987feaaf73.png)
+![_](/static/changelog/0.10.0/i18n-chinese.webp)
 
 ### Earliest allowed time for executing a task
 
 Now, user can specify the earliest allowed time for a task to be executed by Bytebase. If specified, task will not be executed until that specified time.
-![_](/static//blog-changelog-assets/2021/12/f051a459-4f49-471f-a9e5-e602d8c83664-1.png)![_](/static//blog-changelog-assets/2021/12/f754a456-1e0b-46a5-bebf-d157c298fc18.png)
+![_](/static/changelog/0.10.0/alter-schema-with-time.webp)![_](/static/changelog/0.10.0/alter-schema-with-time-check.webp)
 
 ## 🎄 Enhancement
 
 ### Logging activity for altering SQL statement
 
 We will log any change to the SQL statement now, and send an inbox message to the relevant people.
-![_](/static//blog-changelog-assets/2021/12/4ebca430-f5d7-48e6-9f94-abc82953e4ec-1.png)
+![_](/static/changelog/0.10.0/alter-schema-activity-log.webp)
 
 ### Modal showing detailed check status
 
 When the assignee opens the modal to approve an issue, she can now view the detailed check status by opening a stacked modal.
-![_](/static//blog-changelog-assets/2021/12/ljgif2-1.gif)
+![_](/static/changelog/0.10.0/detailed-task-check-status.gif)
 
 ## 🐞 Bug Fixes
 

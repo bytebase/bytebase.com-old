@@ -12,13 +12,13 @@ description: Release MySQL Database Review Guide. Toggle Debug mode at runtime f
 - Integrate those rules into the Bytebase product by detecting rule violations automatically.
 
 Currently, we only support MySQL. We will add PostgreSQL support later.
-![_](/static/blog-changelog-assets/2022/04/ezgif-5-17a1182e34.gif)
+![_](/static/changelog/1.0.3/database-review-guide.gif)
 
 ### 🚀 Features
 
 - Toggle Debug mode at runtime for easier troubleshooting
 
-![_](/static/blog-changelog-assets/2022/04/f69a4a78-da1d-49f9-b444-d2b954038b96.gif)
+![_](/static/changelog/1.0.3/debug-mode.gif)
 
 > Only OWNER and DBA can toggle Debug mode
 
