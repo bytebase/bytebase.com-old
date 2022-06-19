@@ -14,8 +14,8 @@ For general writing guide, please check [this writing guide](https://github.com/
 
 All lowercase with `-` as word separator:
 
-- `my-owesome-post.md`
-- `my-owesome-image.webp`
+- `my-awesome-post.md`
+- `my-awesome-image.webp`
 
 ### Image
 
