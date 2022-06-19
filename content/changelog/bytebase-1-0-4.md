@@ -7,7 +7,7 @@ description: Support --pg option to boot Bytebase. bb CLI Support --dsn option i
 ## Support storing Bytebase metadata in the external PostgreSQL
 
 Use the --pg option to specify the database endpoint upon launching Bytebase.
-![_](/static/blog-changelog-assets/2022/04/1.04-pg.png)
+![_](/static/changelog/1.0.4/pg-flag.webp)
 
 ## 🚀  Features
 
@@ -22,12 +22,12 @@ User can install `bb` CLI with only one command `/bin/bash -c "$(curl -fsSL [htt
 ### Add dashboard page to manage all SQL sheets
 
 Introducing the SQL sheet dashboard page as users can view all related sheets in a table view.
-![_](/static/blog-changelog-assets/2022/04/1.0.4shts.png)
+![_](/static/changelog/1.0.4/sheet-dashboard.webp)
 
 ### Admin page to view all projects
 
 Users whose roles are Owner and DBA in Workspace can view all projects under `Settings`.
-![_](/static/blog-changelog-assets/2022/04/1.0.4-prjs.png)
+![_](/static/changelog/1.0.4/admin-project-dashboard.webp)
 
 ### Added /healthz health check endpoint
 
@@ -38,7 +38,7 @@ This enables serverless platforms like [render.com](render.com) to point its hea
 ### Expose `Visit Default Project` button explicitly
 
 The `Default Project` is the special project holding the databases synced from the database instance. Users usually need to visit this project to transfer the database to their own projects.
-![_](/static/blog-changelog-assets/2022/04/1.0.4dfp.png)
+![_](/static/changelog/1.0.4/visit-default-project.webp)
 
 ## 🎠  Community
 

@@ -10,17 +10,17 @@ description: Our official documentation switches from gitbook to bytebase.com/do
 
 - Support branding customization (available in Team/Enterprise Plan)
 
-![_](/static/blog-changelog-assets/2022/03/84fa5464-4f29-4d35-8f1a-131200ab02a8.gif)
+![_](/static/changelog/1.0.2/branding.gif)
 
 ## 🎄 Enhancements
 
 - [SQL Editor] Highlight the editing SQL query block
 
-![_](/static/blog-changelog-assets/2022/03/466e9a2d-bb57-4975-b711-869631737dee.png)
+![_](/static/changelog/1.0.2/sql-editor-highlight-gutter.webp)
 
 - [SQL Editor] Add SQL query format button
 
-![_](/static/blog-changelog-assets/2022/03/7201c830-899a-4d0b-8e5e-72ea97ee7c33.png)
+![_](/static/changelog/1.0.2/sql-editor-format.webp)
 
 - Bump tailwind css to v3. JIT mode is also enabled to support [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values).
 - Switch frontend package manager from yarn to pnpm, helping developers to save time and disk spaces.
