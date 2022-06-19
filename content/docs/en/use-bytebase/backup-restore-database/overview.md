@@ -8,4 +8,4 @@ User accesses the database backup feature by visiting the "Backups" tab from the
 
 Backups are stored inside the "backup" folder under the [--data](/docs/reference/command-line#--data-directory) directory.
 
-![backup-example](/static/docs-assets/backup-example.png)
+![backup-example](/static/docs/backup-example.png)

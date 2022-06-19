@@ -11,4 +11,4 @@ For Team and Enterprise plans, you can customize your workspace with your own lo
 
 See the following example to see how to customize your workspace with the Bytebase logo:
 
-![customize-the-logo](/static/docs-assets/customize-the-logo.gif)
+![customize-the-logo](/static/docs/customize-the-logo.gif)

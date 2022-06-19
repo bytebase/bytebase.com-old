@@ -2,7 +2,7 @@
 title: Backup
 ---
 
-![backup-example](/static/docs-assets/backup-example.png)
+![backup-example](/static/docs/backup-example.png)
 
 ## Automatic weekly backup
 

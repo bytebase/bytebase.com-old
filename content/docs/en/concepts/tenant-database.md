@@ -11,4 +11,4 @@ A tenant can be a SaaS application customer, a region, a game server name and et
 
 Bytebase can manage the database schema lifecycle for Tenant database. Below shows how Bytebase progresses a schema change for a game company across all its game servers.
 
-![tenant-matrix](/static/docs-assets/tenant-matrix.png)
+![tenant-matrix](/static/docs/tenant-matrix.png)

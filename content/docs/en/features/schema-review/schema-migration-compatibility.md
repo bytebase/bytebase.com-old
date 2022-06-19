@@ -4,11 +4,12 @@ title: Backward Incompatibile Schema Change
 
 Introducing backward incompatible schema changes is one of the most common mistakes made by developers. And enforcing backward compatible schema change is the standard practice adopted by many engineering organizations. Bytebase provides the built-in backward compatible check to catch all common incompatible schema change [scenarios](https://www.bytebase.com/doc/error#backward-incompatible-migration).
 
-![schema-review-schema-backward-compatibility](/static/docs-assets/schema-review-schema-backward-compatibility.webp)
+![schema-review-schema-backward-compatibility](/static/docs/schema-review-schema-backward-compatibility.webp)
 
 ## How the rule works
 
 If the following situation occurs, Bytebase considers this rule to be violated:
+
 - Drop database
 - Rename table
 - Drop table/view

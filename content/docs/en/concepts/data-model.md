@@ -2,7 +2,7 @@
 title: Data Model
 ---
 
-![Bytebase data model](/static/docs-assets/data-model_v1.png)
+![Bytebase data model](/static/docs/data-model_v1.png)
 
 ## Workspace
 

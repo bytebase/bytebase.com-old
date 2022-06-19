@@ -22,7 +22,7 @@ curl -fsS https://ghproxy.com/https://raw.githubusercontent.com/bytebase/bytebas
 
 After successful execution, you will see something like this:
 
-![_](/static/docs-assets/bytebase-installed.png)
+![_](/static/docs/bytebase-installed.png)
 
 Now you have three Docker containers:
 
@@ -32,12 +32,12 @@ Now you have three Docker containers:
 
 Each MySQL instance has a copy of the sample dataset in it. We choose the dataset_small of [our open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql) as the sample for our tutorial.
 
-![_](/static/docs-assets/bytebase-docker.png)
+![_](/static/docs/bytebase-docker.png)
 
 Open Bytebase in [localhost:5678](http://localhost:5678/), and create an admin account.
 
-![_](/static/docs-assets/create-account.png)
+![_](/static/docs/create-account.png)
 
 Then you are in the workspace.
 
-![_](/static/docs-assets/workspace.png)
+![_](/static/docs/workspace.png)
