@@ -12,14 +12,14 @@ published_at: 2022/01/06 10:31:49
 - Navigate among different database connections via the left tree panel.
 - Display table schema info on the bottom left side panel.
 
-![_](/static/blog-changelog-assets/2022/01/202201061051.gif)
+![_](/static/changelog/0.11.0/sql-editor.gif)
 
 ## 🎄 Enhancement
 
 ### kbar quickstart
 
 User can now use cmd+k to invoke the command bar to quickly navigate among different Bytebase sections.
-![_](/static/blog-changelog-assets/2022/01/3a0cb83f-5978-4c04-b081-88bc5c19d44d.png)
+![_](/static/changelog/0.11.0/quickstart.webp)
 
 ### Refactor the underlying VCS module to make it plugable
 
@@ -34,11 +34,11 @@ This ease the path to support other VCS systems like GitHub, BitBucket.
 ### Preview environment for each PR
 
 Now every PR will create a unique preview environment. This makes it easy to collaborate among author and reviewers.
-![_](/static/blog-changelog-assets/2022/01/rendergithub.png)
+![_](/static/changelog/0.11.0/render-preview.webp)
 
 - Bytebase Sticker Collection V1.0 is ready  [https://bytebase.com/brand](https://bytebase.com/brand)
 
-![_](/static/blog-changelog-assets/2022/01/LGTM.gif)
+![_](/static/changelog/0.11.0/lgtm.gif)
 
 - Thanks to @Juneezee 's PR [refactor: move from io/ioutil to io and os packages](https://github.com/bytebase/bytebase/pull/264)
 

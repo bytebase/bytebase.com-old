@@ -15,12 +15,12 @@ Our team really love PostgreSQL and we are the ones delivering the initial launc
 ### Schema drift detection
 
 Bytebase will periodically compare the recorded schema with the actual schema and expose the drift if occurs. We also provide a side-by-side view to show the diff.
-![_](/static/blog-changelog-assets/2021/10/CleanShot-2021-10-08-at-01.05.17.png)![_](/static/blog-changelog-assets/2021/10/CleanShot-2021-10-08-at-01.05.54.png)
+![_](/static/changelog/0.7.0/schema-drift.webp)![_](/static/changelog/0.7.0/schema-drift-detail.webp)
 
 ### Introduce Anomaly Center
 
 Many things can go wrong for your database and unnoticed until an outage happens. We are always thinking of a proactive way to help user catch those problems. Today we introduce Anomaly Center, our attempt to address this challenge. A background process will periodically scan potentially anomalies on the managed instances and databases, then expose them in a holistic view.
-![_](/static/blog-changelog-assets/2021/10/CleanShot-2021-10-08-at-01.17.51.png)
+![_](/static/changelog/0.7.0/anomaly-center.webp)
 We currently detect following anomalies and will add more in the future:
 
 - Database connection issue
@@ -32,7 +32,7 @@ We currently detect following anomalies and will add more in the future:
 ### Backward compatible schema migration check (MySQL/TiDB)
 
 In the last release, we introduce the task check system and introduced the basic SQL syntax check. In this release, we advance the check to catch backward incompatible schema migration (e.g. RENAME TABLE). Introducing backward incompatible schema changes is one of the most common mistakes made by developers and enforcing backward compatible schema change is the standard practice adopted by many engineering organizations. Bytebase now automatically checks all common incompatible schema change [scenarios](https://bytebase.com/doc/error#backward-incompatible-migration) and surface them in the SQL review panel:
-![_](/static/blog-changelog-assets/2021/10/CleanShot-2021-10-08-at-01.26.36.png)
+![_](/static/changelog/0.7.0/backward-compatible-check.webp)
 
 ### Backup schedule enforcement
 
@@ -50,7 +50,7 @@ Owner and DBA can now enforce backup schedule policy for the specific environmen
 
 - We revamped our [landing page](https://bytebase.com/) with the wonderful illustration. The figure derives from our logo and we plan to continue this path to strength our branding identity.
 
-![_](/static/blog-changelog-assets/2021/10/CleanShot-2021-10-08-at-00.51.44.png)
+![_](/static/changelog/0.7.0/frontpage.webp)
 
 - We have open sourced our [take-home interview assignment](https://github.com/bytebase/interview).  And yes, we are looking for talented frontend engineer and full-stack engineer to join our remote team. Checkout [job details](http://localhost:57598/jobs).
 

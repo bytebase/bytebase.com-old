@@ -15,9 +15,9 @@ With over a year of hard work and 3500+ commits, we finally reach the milestone 
 - Per-environment schema review and backup policy.
 
 The price starts at $29 per instance per month. Please visit our [pricing](https://bytebase.com/pricing) page for more details.
-![_](/static/blog-changelog-assets/2022/03/CleanShot-2022-03-03-at-17.00.31.png)
+![_](/static/changelog/1.0.0/pricing.webp)
 You can visit [https://hub.bytebase.com/pricing](https://hub.bytebase.com/pricing) to purchase a subscription license and manage your team plan subscription in Settings page.
-![_](/static/blog-changelog-assets/2022/03/image.png)
+![_](/static/changelog/1.0.0/subscription.webp)
 
 ## 🎄 Enhancement
 
@@ -25,25 +25,25 @@ You can visit [https://hub.bytebase.com/pricing](https://hub.bytebase.com/pricin
 
 - Add an EXPLAIN button adjacent to the run button.
 
-![_](/static/blog-changelog-assets/2022/03/image-1.png)
+![_](/static/changelog/1.0.0/sql-editor-explain.webp)
 
 - Redesign the database connection navigation and connection status.
 
-![_](/static/blog-changelog-assets/2022/03/image-3.png)![_](/static/blog-changelog-assets/2022/03/image-4.png)
+![_](/static/changelog/1.0.0/sql-editor-navigation.webp)![_](/static/changelog/1.0.0/sql-editor-conneciton-status.webp)
 
 - Run non-SELECT SQL navigate to the different workflow.
 
-![_](/static/blog-changelog-assets/2022/03/image-5.png)![_](/static/blog-changelog-assets/2022/03/image-6.png)
+![_](/static/changelog/1.0.0/sql-editor-workflow.webp)
 
 ### Sync project members from GitLab
 
 If a project is linked with GitLab repository, one can sync that repository's membership to the project's membership.
-![_](/static/blog-changelog-assets/2022/03/project_membership_sync-1.png)![_](/static/blog-changelog-assets/2022/03/gitlab_role.png)Membership from the linked GitLab repository
+![_](/static/changelog/1.0.0/project-membership-vcs-sync.webp)![_](/static/changelog/1.0.0/gitlab-role.webp)Membership from the linked GitLab repository
 
 ### Improved tenant project pipeline UI
 
 We improve the layout for showing the current database schema change progress across all tenants.
-![_](/static/blog-changelog-assets/2022/03/tenant_matrix.png)
+![_](/static/changelog/1.0.0/tenant-matrix.webp)
 
 ### Misc
 
@@ -55,12 +55,7 @@ We improve the layout for showing the current database schema change progress ac
 **SQL Editor**
 
 - Query result table cover display.
-
-![_](/static/blog-changelog-assets/2022/03/project_membership_sync.png)![_](/static/blog-changelog-assets/2022/03/origin_img_v2_f8aa86a5-0471-4ed6-8396-e28d5f8723eg.png)
-
-- Query result table attributes order
-
-![_](/static/blog-changelog-assets/2022/03/middle_img_v2_157adf2c-7e12-4464-9df6-342b68dcba7g.png)
+- Query result table attributes order.
 
 ## 🌄 Sunset
 

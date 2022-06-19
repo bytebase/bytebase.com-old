@@ -7,26 +7,24 @@ description: Launch the Chinese version of our official website. Add custom proj
 
 - **Launch the Chinese version of our official website.**
 
-![_](/static/blog-changelog-assets/2022/05/image.png)
+![_](/static/changelog/1.0.5/frontpage-chinese.webp)
 
 ## 🎄 Enhancement
 
 - **Add custom project webhook.**
 
   The webhooks we currently support are pre-defined and basically can only do notifications, custom webhook can be more flexible to interact with some external systems (for example, external systems want to sense the status of an issue and do some different operations based on the issue status).
-  ![_](/static/blog-changelog-assets/2022/05/image-1.png)
+  ![_](/static/changelog/1.0.5/custom-webhook.webp)
 
 - **Add "Format on save" checkbox on the issue detail page.**
 
   With the default check, when the users click the "Create issue" button, the SQL statement will be automatically formatted.
 
-![_](/static/blog-changelog-assets/2022/05/format-on-save-3.gif)
-
 - **Add "Sync schema afterward" checkbox on the instance create and detail page to allow users to disable the database sync if needed.**
 
   Currently, we sync the schema upon adding/patching the instance. This provides a better UX since the user will see the schema after adding the instance. However, for instances having large schemas, the request will timeout and prevents them from adding the instance at all. The added checkbox only appears if connection-related info is changed.
 
-![_](/static/blog-changelog-assets/2022/05/image-3.png)
+![_](/static/changelog/1.0.5/add-instance-sync-schema-later.webp)
 
 ## 🐞 Bug Fix
 
@@ -38,7 +36,7 @@ description: Launch the Chinese version of our official website. Add custom proj
 
   In order to enhance Bytebase's backup recovery capabilities and allow users to restore the database state to any point in time, we designed the Point-in-Time Recovery (PITR) feature integrated into the Bytebase workflow.
 
-![_](/static/blog-changelog-assets/2022/05/image-4.png)
+![_](/static/changelog/1.0.5/pitr-design-doc.webp)
 
 - Thanks to [@unknwon](https://github.com/unknwon) for the PR [feat: implement add GitHub as Git provider](https://github.com/bytebase/bytebase/pull/998).
 - Thanks to [@Cluas](https://github.com/Cluas) for the PR [feat: add custom project webhook](https://github.com/bytebase/bytebase/pull/1184).
