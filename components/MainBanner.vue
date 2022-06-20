@@ -7,13 +7,13 @@
             $t("banner.announce-bytebase-1-0-and-our-team-plan")
           }}</span>
           <span class="block sm:ml-2 sm:inline-block">
-            <nuxt-link
+            <NuxtLinkWithUrlQuery
               :to="localePath({ path: '/pricing', query: $route.query })"
               class="text-white font-bold underline"
             >
               {{ $t("banner.view-the-plan") }}
               <span aria-hidden="true">&rarr;</span>
-            </nuxt-link>
+            </NuxtLinkWithUrlQuery>
           </span>
         </p>
       </div>

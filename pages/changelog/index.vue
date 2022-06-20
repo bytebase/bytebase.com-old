@@ -28,7 +28,7 @@
               :key="changelog.slug"
               class="flex flex-col col-span-3 overflow-hidden"
             >
-              <nuxt-link
+              <NuxtLinkWithUrlQuery
                 :to="localePath(`/changelog/${changelog.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
@@ -58,8 +58,8 @@
                     </template>
                   </div>
                 </span>
-              </nuxt-link>
-              <nuxt-link
+              </NuxtLinkWithUrlQuery>
+              <NuxtLinkWithUrlQuery
                 v-if="changelog.featureImage"
                 :to="localePath(`/changelog/${changelog.slug}`)"
                 class="flex-shrink-0 py-6"
@@ -70,7 +70,7 @@
                     :src="changelog.featureImage"
                   />
                 </div>
-              </nuxt-link>
+              </NuxtLinkWithUrlQuery>
               <nuxt-content
                 class="w-full py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
                 :document="changelog"

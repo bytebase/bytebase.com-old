@@ -8,11 +8,11 @@
       <ol role="list" class="flex items-center">
         <li>
           <div class="flex items-center">
-            <nuxt-link
+            <NuxtLinkWithUrlQuery
               :to="localePath('/database-glossary')"
               active-class=""
               class="ml-4 text-base font-medium text-gray-700 hover:text-gray-500"
-              >Database Glossary</nuxt-link
+              >Database Glossary</NuxtLinkWithUrlQuery
             >
           </div>
         </li>

@@ -295,14 +295,14 @@
                     {{ glossary.description }}
                   </p>
                   <div class="flex justify-end mt-2 space-x-2">
-                    <nuxt-link
+                    <NuxtLinkWithUrlQuery
                       :to="
                         localePath(`/database-glossary/${slug(glossary.name)}`)
                       "
                       class="text-blue-600 hover:underline"
                     >
                       Detail
-                    </nuxt-link>
+                    </NuxtLinkWithUrlQuery>
                   </div>
                 </div>
               </div>

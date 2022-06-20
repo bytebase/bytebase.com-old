@@ -15,11 +15,11 @@
         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
       >
         {{ $t("integration.gitlab-feature") }}
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           :to="localePath('/docs/features/version-control')"
           target="_blank"
           class="text-blue-700"
-          >{{ $t("integration.view-detailed-guide") }}</nuxt-link
+          >{{ $t("integration.view-detailed-guide") }}</NuxtLinkWithUrlQuery
         >.
       </h2>
       <div

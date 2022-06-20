@@ -8,35 +8,35 @@
         aria-label="Global"
       >
         <span class="sr-only">Bytebase</span>
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           :to="localePath('/')"
           class="header-link"
           @click.native="track('docs.header')"
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
-        /></nuxt-link>
+        /></NuxtLinkWithUrlQuery>
         <a
           :href="localePath('/docs/cli/overview')"
           class="header-link"
           @click="track('blog.header')"
           >CLI</a
         >
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           to="/blog"
           class="header-link"
           @click.native="track('blog.header')"
-          >Blog</nuxt-link
+          >Blog</NuxtLinkWithUrlQuery
         >
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           :to="localePath('/changelog')"
           class="header-link"
           @click.native="track('changelog.header')"
-          >Changelog</nuxt-link
+          >Changelog</NuxtLinkWithUrlQuery
         >
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           :to="localePath({ path: '/pricing', query: $route.query })"
           class="header-link"
           @click.native="track('pricing.header')"
-          >Pricing</nuxt-link
+          >Pricing</NuxtLinkWithUrlQuery
         >
       </nav>
       <div class="flex flex-row justify-start items-center">
@@ -56,11 +56,11 @@
           >
             Demo
           </a>
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="localePath('/docs/install/install-with-docker')"
             class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
-            >Deploy now</nuxt-link
+            >Deploy now</NuxtLinkWithUrlQuery
           >
         </div>
         <div id="algolia-search-container" class="ml-2"></div>

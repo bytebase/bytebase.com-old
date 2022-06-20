@@ -4,7 +4,7 @@
     <div
       class="w-full max-w-full flex flex-col lg:grid lg:grid-cols-2 mx-auto lg:py-2 lg:max-w-7xl"
     >
-      <nuxt-link
+      <NuxtLinkWithUrlQuery
         class="w-full h-auto flex flex-col justify-center items-center hover:opacity-80 lg:pl-8"
         :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
       >
@@ -12,7 +12,7 @@
           class="w-full h-auto object-cover lg:rounded"
           :src="latestFeaturedBlog.featureImage"
         />
-      </nuxt-link>
+      </NuxtLinkWithUrlQuery>
       <div
         class="w-full h-auto lg:row-start-1 flex flex-col justify-center items-start p-4 lg:pr-0"
       >
@@ -25,7 +25,7 @@
             >{{ tag }}</span
           >
         </div>
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
           :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
         >
@@ -35,7 +35,7 @@
           <p class="mt-6 text-base text-gray-500">
             {{ latestFeaturedBlog.description }}
           </p>
-        </nuxt-link>
+        </NuxtLinkWithUrlQuery>
         <div class="mt-4 flex items-center">
           <img
             class="w-8 mr-2 h-auto rounded-full"
@@ -61,7 +61,7 @@
     <div
       class="w-full lg:max-w-7xl mx-auto py-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 md:gap-x-8"
     >
-      <nuxt-link
+      <NuxtLinkWithUrlQuery
         v-for="(blog, index) in recentFeaturedBlogs"
         :key="index"
         class="w-full py-2 flex flex-col justify-start items-center hover:opacity-80"
@@ -86,7 +86,7 @@
           <span aria-hidden="true">&middot;</span>
           <span>{{ blog.readingTime }}</span>
         </p>
-      </nuxt-link>
+      </NuxtLinkWithUrlQuery>
     </div>
 
     <!-- Full width subscribtion section -->
@@ -110,9 +110,12 @@
         :key="index"
         class="flex flex-col border-none rounded-lg shadow-lg overflow-hidden"
       >
-        <nuxt-link :to="localePath(`/blog/${blog.slug}`)" class="flex-shrink-0">
+        <NuxtLinkWithUrlQuery
+          :to="localePath(`/blog/${blog.slug}`)"
+          class="flex-shrink-0"
+        >
           <img class="h-48 w-full object-cover" :src="blog.featureImage" />
-        </nuxt-link>
+        </NuxtLinkWithUrlQuery>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <div
@@ -126,7 +129,7 @@
                 >{{ tag }}</span
               >
             </div>
-            <nuxt-link
+            <NuxtLinkWithUrlQuery
               :to="localePath(`/blog/${blog.slug}`)"
               class="block mt-2 no-underline"
             >
@@ -136,7 +139,7 @@
               <p class="mt-3 text-base text-gray-500">
                 {{ blog.description }}
               </p>
-            </nuxt-link>
+            </NuxtLinkWithUrlQuery>
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">

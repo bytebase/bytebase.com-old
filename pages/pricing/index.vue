@@ -74,12 +74,12 @@
                     {{ $t(`pricing.${plan.priceDescription}`) }}
                   </p>
                 </div>
-                <nuxt-link
+                <NuxtLinkWithUrlQuery
                   v-if="plan.type == 'FREE'"
                   :to="localePath('/docs/install/install-with-docker')"
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
-                  >{{ plan.buttonText }}</nuxt-link
+                  >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
                 >
                 <button
                   v-else
@@ -126,9 +126,11 @@
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
         <i18n path="pricing.announcement" for="cancel">
           <template #cancel>
-            <nuxt-link :to="localePath('/refund')" class="underline">{{
-              $t("pricing.cancel")
-            }}</nuxt-link>
+            <NuxtLinkWithUrlQuery
+              :to="localePath('/refund')"
+              class="underline"
+              >{{ $t("pricing.cancel") }}</NuxtLinkWithUrlQuery
+            >
           </template>
         </i18n>
       </div>
@@ -159,11 +161,11 @@
               {{ $t(plan.title) }}
             </h3>
             <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
-            <nuxt-link
+            <NuxtLinkWithUrlQuery
               v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-              >{{ plan.buttonText }}</nuxt-link
+              >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
             >
             <button
               v-else
@@ -318,11 +320,11 @@
               <p class="mt-2 text-sm text-gray-500 h-10">
                 {{ $t(plan.description) }}
               </p>
-              <nuxt-link
+              <NuxtLinkWithUrlQuery
                 v-if="plan.type == 'FREE'"
                 :to="localePath('/docs/install/install-with-docker')"
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-                >{{ plan.buttonText }}</nuxt-link
+                >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
               >
               <button
                 v-else
@@ -451,11 +453,11 @@
               'relative w-1/4 py-0 text-center',
             ]"
           >
-            <nuxt-link
+            <NuxtLinkWithUrlQuery
               v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-              >{{ plan.buttonText }}</nuxt-link
+              >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
             >
             <button
               v-else
@@ -476,9 +478,9 @@
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
       <i18n path="pricing.announcement" for="cancel">
         <template #cancel>
-          <nuxt-link :to="localePath('/refund')" class="underline">{{
+          <NuxtLinkWithUrlQuery :to="localePath('/refund')" class="underline">{{
             $t("pricing.cancel")
-          }}</nuxt-link>
+          }}</NuxtLinkWithUrlQuery>
         </template>
       </i18n>
     </div>

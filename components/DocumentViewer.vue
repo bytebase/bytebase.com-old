@@ -32,21 +32,21 @@
       <div
         class="w-full mt-4 pb-12 pt-4 flex flex-row justify-between border-t border-gray-200"
       >
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           v-if="prev"
           :to="localePath(`/docs${prev.path}`)"
           class="py-2 flex flex-row justify-start items-center text-base text-gray-600 hover:text-accent"
         >
           <span>{{ "← " + prev.title }}</span>
-        </nuxt-link>
+        </NuxtLinkWithUrlQuery>
         <span v-else></span>
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           v-if="next"
           :to="localePath(`/docs${next.path}`)"
           class="py-2 flex flex-row justify-end items-center text-base text-gray-600 hover:text-accent"
         >
           <span>{{ next.title + " →" }}</span>
-        </nuxt-link>
+        </NuxtLinkWithUrlQuery>
         <span v-else></span>
       </div>
     </div>

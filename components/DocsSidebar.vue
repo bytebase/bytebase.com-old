@@ -44,7 +44,7 @@
             />
           </span>
         </div>
-        <nuxt-link
+        <NuxtLinkWithUrlQuery
           v-else
           :to="
             node.type === 'page-link'
@@ -67,7 +67,7 @@
               alt="toggle"
             />
           </span>
-        </nuxt-link>
+        </NuxtLinkWithUrlQuery>
       </div>
       <div
         v-for="subnode in node.children"
@@ -83,7 +83,7 @@
             handleLinkClick();
           "
         >
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="
               subnode.type === 'page-link'
                 ? localePath(`/docs${subnode.path}`)
@@ -106,7 +106,7 @@
                 alt="toggle"
               />
             </span>
-          </nuxt-link>
+          </NuxtLinkWithUrlQuery>
         </div>
         <!-- leaf nodes -->
         <div
@@ -116,7 +116,7 @@
           class="pl-9 w-full"
           @click="handleLinkClick"
         >
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="
               leafnode.type === 'page-link'
                 ? localePath(`/docs${leafnode.path}`)
@@ -125,7 +125,7 @@
             class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
             <span>{{ leafnode.title }}</span>
-          </nuxt-link>
+          </NuxtLinkWithUrlQuery>
         </div>
       </div>
     </div>
