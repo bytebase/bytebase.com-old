@@ -64,21 +64,21 @@
       <nuxt-link
         v-for="(blog, index) in recentFeaturedBlogs"
         :key="index"
-        class="w-full py-2 flex flex-col justify-start items-center hover:opacity-80"
+        class="w-full py-2 flex flex-col justify-start items-start hover:opacity-80"
         :to="localePath(`/blog/${blog.slug}`)"
       >
-        <div class="inline-flex">
+        <p class="text-lg py-2 font-semibold text-gray-700">
+          {{ blog.title }}
+        </p>
+        <div class="flex flex-wrap mb-3 gap-2">
           <span
             v-for="(tag, tagIndex) in blog.tags"
             :key="tagIndex"
-            class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
+            class="items-center px-3 py-0.5 rounded-full text-sm font-medium"
             :class="getTagStyle(tag)"
             >{{ tag }}</span
           >
         </div>
-        <p class="text-lg py-2 font-semibold text-gray-700">
-          {{ blog.title }}
-        </p>
         <p class="flex space-x-1 text-sm text-gray-500">
           <time :datetime="blog.published_at">
             {{ blog.formatedPublishedAt }}
