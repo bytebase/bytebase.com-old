@@ -118,7 +118,7 @@
         "community-support": "Community support",
         "review-workflow": "Schema and data change review workflow",
         "sql-editor": "SQL Editor",
-        "backup-restore": "Database backup / restore",
+        "database-backup-restore": "Database backup / restore",
         "im-integration": "IM integration (e.g. Slack, Discord and etc)",
         "email-support": "Email support",
         "everything-in-free-plan": "Everything in free plan",
