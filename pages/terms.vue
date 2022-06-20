@@ -505,7 +505,7 @@
             our
             <nuxt-link
               class="text-indigo-600 underline"
-              :to="localePath('/pricing')"
+              :to="localePath({ path: '/pricing', query: $route.query })"
               >Pricing and Payment Terms</nuxt-link
             >or in an Order Form and applicable taxes associated with the
             Software in a timely manner with a valid payment method. Unless

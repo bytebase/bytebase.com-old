@@ -84,23 +84,23 @@
               </div>
             </div>
           </div>
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="localePath('/blog')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</nuxt-link
+            >{{ $t("common.blog") }}</NuxtLinkWithUrlQuery
           >
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="localePath('/docs')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
-            >{{ $t("common.docs") }}</nuxt-link
+            >{{ $t("common.docs") }}</NuxtLinkWithUrlQuery
           >
-          <nuxt-link
+          <NuxtLinkWithUrlQuery
             :to="localePath('/pricing')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('pricing.header')"
-            >{{ $t("common.pricing") }}</nuxt-link
+            >{{ $t("common.pricing") }}</NuxtLinkWithUrlQuery
           >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">

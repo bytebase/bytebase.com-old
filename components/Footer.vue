@@ -267,7 +267,7 @@
 
             <li>
               <nuxt-link
-                :to="localePath('/pricing')"
+                :to="localePath({ path: '/pricing', query: $route.query })"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('pricing.footer')"
                 >{{ $t("common.pricing") }}</nuxt-link
