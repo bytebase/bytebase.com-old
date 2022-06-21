@@ -1,6 +1,6 @@
 import { ref, reactive } from "@nuxtjs/composition-api";
 import { Analytics, AnalyticsBrowser } from "@segment/analytics-next";
-import { useCookie, Cookie } from "./cookie";
+import { useCookie } from "./cookie";
 
 const PREFIX = "main-site";
 
