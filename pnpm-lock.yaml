@@ -48,6 +48,7 @@ specifiers:
   remove-markdown: ^0.5.0
   slug: ^5.2.0
   tailwindcss: ^2.2.19
+  tiny-cookie: ^2.3.2
   typescript: ^4.6.4
   vue: ^2.6.14
   vue-gtag: 1.16.1
@@ -82,6 +83,7 @@ dependencies:
   remove-markdown: 0.5.0
   slug: 5.3.0
   tailwindcss: 2.2.19_cr4sis33dk4di3xnobyqnqmrf4
+  tiny-cookie: 2.3.2
   typescript: 4.6.4
   vue: 2.6.14
   vue-gtag: 1.16.1_vue@2.6.14
@@ -11379,6 +11381,10 @@ packages:
 
   /timsort/0.3.0:
     resolution: {integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=}
+    dev: false
+
+  /tiny-cookie/2.3.2:
+    resolution: {integrity: sha512-qbymkVh+6+Gc/c9sqnvbG+dOHH6bschjphK3SHgIfT6h/t+63GBL37JXNoXEc6u/+BcwU6XmaWUuf19ouLVtPg==}
     dev: false
 
   /tiny-hashes/1.0.1:

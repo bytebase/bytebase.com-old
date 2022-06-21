@@ -39,6 +39,7 @@ import {
   useRoute,
   watch,
 } from "@nuxtjs/composition-api";
+import { useCookie } from "../plugin/cookie";
 
 export default defineComponent({
   setup() {
@@ -47,6 +48,8 @@ export default defineComponent({
     const stickyHeaderAdditionClass = ref<string>();
 
     onMounted(() => {
+      useCookie().setURLParams();
+
       if (contentElementRef.value) {
         contentElementRef.value.addEventListener("scroll", () => {
           const scrollTop = contentElementRef.value?.scrollTop as number;

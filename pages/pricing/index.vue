@@ -504,6 +504,7 @@ import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
 import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
+import { useCookie } from "~/plugin/cookie";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -600,9 +601,12 @@ export default defineComponent({
     };
 
     const buildUrlParamater = (): string => {
-      const param = new URLSearchParams(window.location.search);
+      const cookie = useCookie();
+
       const queryObj = {
-        ...Object.fromEntries(param),
+        utm_source: cookie.get("utm_source"),
+        utm_medium: cookie.get("utm_medium"),
+        utm_campaign: cookie.get("utm_campaign"),
         source: PAGE.PRICING,
         trial: PlanType.TEAM,
       };

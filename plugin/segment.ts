@@ -1,5 +1,6 @@
 import { ref, reactive } from "@nuxtjs/composition-api";
 import { Analytics, AnalyticsBrowser } from "@segment/analytics-next";
+import { useCookie } from "./cookie";
 
 const PREFIX = "main-site";
 
@@ -45,11 +46,12 @@ class SegmentMetric implements Metric {
   }
 
   private get metricParamater() {
+    const cookie = useCookie();
     return {
-      source: getUrlParamater("source"),
-      utm_source: getUrlParamater("utm_source"),
-      utm_medium: getUrlParamater("utm_medium"),
-      utm_campaign: getUrlParamater("utm_campaign"),
+      source: cookie.get("source"),
+      utm_source: cookie.get("utm_source"),
+      utm_medium: cookie.get("utm_medium"),
+      utm_campaign: cookie.get("utm_campaign"),
     };
   }
 }
@@ -83,11 +85,4 @@ export const useSegment = () => {
     analytics,
     analyticsForNewsletter,
   });
-};
-
-// getUrlParamater will extract the param by key from url
-export const getUrlParamater = (key: string): string => {
-  const url = new URL(window.location.href);
-  const params = new URLSearchParams(url.search);
-  return params.get(key) ?? "";
 };

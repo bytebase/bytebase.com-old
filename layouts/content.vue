@@ -86,6 +86,7 @@ import {
   useContext,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useCookie } from "../plugin/cookie";
 
 const { trackEvent } = Plausible();
 
@@ -106,6 +107,8 @@ export default defineComponent({
     });
 
     onMounted(async () => {
+      useCookie().setURLParams();
+
       (window as any).docsearch({
         container: "div#algolia-search-container",
         appId: "2M7XI1QIDY",
