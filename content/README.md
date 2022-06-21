@@ -19,7 +19,7 @@ All lowercase with `-` as word separator:
 
 ### Image
 
-- Choose readable image name.
+- Naming: choose a readable image name.
 - Use 16:9 ratio if possible. Feature image **must** use 16:9.
 - Use WebP instead of PNG format to reduce image size.
 - Use GIF judicious. Sometimes you have to use GIF to explain the interaction, however, GIF is much larger and slows page loading speed.
