@@ -33,7 +33,7 @@
           >Changelog</nuxt-link
         >
         <nuxt-link
-          :to="localePath({ path: '/pricing', query: $route.query })"
+          :to="localePath('/pricing')"
           class="header-link"
           @click.native="track('pricing.header')"
           >Pricing</nuxt-link

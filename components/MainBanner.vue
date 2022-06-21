@@ -8,7 +8,7 @@
           }}</span>
           <span class="block sm:ml-2 sm:inline-block">
             <nuxt-link
-              :to="localePath({ path: '/pricing', query: $route.query })"
+              :to="localePath('/pricing')"
               class="text-white font-bold underline"
             >
               {{ $t("banner.view-the-plan") }}
