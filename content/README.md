@@ -21,7 +21,7 @@ All lowercase with `-` as word separator:
 
 - Naming: choose a readable image name.
 - Use 16:9 ratio if possible. Feature image **must** use 16:9.
-- Use WebP instead of PNG format to reduce image size.
+- Format: use WebP instead of PNG format to reduce image size.
 - Use GIF judicious. Sometimes you have to use GIF to explain the interaction, however, GIF is much larger and slows page loading speed.
 
 ## Documentation
@@ -39,5 +39,5 @@ All lowercase with `-` as word separator:
 ## Changelog
 
 - Put under https://github.com/bytebase/bytebase.com/tree/main/content/changelog.
-- Under https://github.com/bytebase/bytebase.com/tree/main/static/changelog, for each changlog containing any image, create a folder using the changelog version and put all images for that changelog there.
+- Under https://github.com/bytebase/bytebase.com/tree/main/static/changelog, for each changelog containing any image, create a folder using the changelog version and put all images for that changelog there.
 - Do **NOT** use feature image
