@@ -22,7 +22,12 @@ All lowercase with `-` as word separator:
 - Naming: choose a readable image name.
 - Sizing: use 16:9 ratio if possible. The feature image sizing **must** be 16:9.
 - Format: use WebP instead of PNG format to reduce image size.
-- Use GIF judicious. Sometimes you have to use GIF to explain the interaction, however, GIF is much larger and slows page loading speed.
+
+### Recording
+
+Use animated recording judicious. Sometimes you have to use animation to showcase the feature, however, recording requires much larger size and slows page loading speed. In most cases, we should have at most 1 recording per page.
+
+- Format: Try [converting GIF to WebP](https://ezgif.com/gif-to-webp/) to see if the size can be reduced. If not, then use GIF.
 
 ## Documentation
 
