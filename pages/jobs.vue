@@ -22,7 +22,7 @@
                 <p>
                   We value crafts and we care what you have built in the past
                   instead of where you have worked and studied.
-                  <NuxtLinkWithUrlQuery
+                  <nuxt-link
                     :to="localePath('/about#team')"
                     class="text-blue-600"
                     style="
@@ -32,7 +32,7 @@
                     @click.native="track('about.job')"
                   >
                     Our team
-                  </NuxtLinkWithUrlQuery>
+                  </nuxt-link>
                   have built products managing one of the world largest database
                   fleets, supporting one of the largest developer organizations.
                 </p>

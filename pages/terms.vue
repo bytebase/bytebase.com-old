@@ -37,10 +37,10 @@
             with any order for Software (“Order Form”) and all other applicable
             rules, policies, and procedures that we may publish from time to
             time on the Site, including but not limited to our
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               class="text-indigo-600 underline"
               :to="localePath('/privacy')"
-              >Privacy Policy</NuxtLinkWithUrlQuery
+              >Privacy Policy</nuxt-link
             >.
           </p>
 
@@ -56,11 +56,11 @@
             <span class="font-bold">"Documentation"</span> means the
             documentation regarding the Software that we make available for use
             at
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               to="/docs"
               class="text-indigo-600 underline"
               target="_blank"
-              >https://www.bytebase.com/docs</NuxtLinkWithUrlQuery
+              >https://www.bytebase.com/docs</nuxt-link
             >
           </p>
 
@@ -300,11 +300,11 @@
             <span class="font-semibold">Usage Data</span>”). A specific list of
             Usage Data that we receive from self-hosted instances is always
             available in our
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               :to="localePath('/docs')"
               target="_blank"
               class="text-indigo-600 underline"
-              >Documentation</NuxtLinkWithUrlQuery
+              >Documentation</nuxt-link
             >
             and in the site-admin area on your Instance. You acknowledge and
             agree that Usage Data is owned solely and exclusively by us, and
@@ -321,10 +321,8 @@
 
           <p>
             Please read our
-            <NuxtLinkWithUrlQuery
-              class="text-indigo-600 underline"
-              to="/privacy"
-              >Privacy Policy</NuxtLinkWithUrlQuery
+            <nuxt-link class="text-indigo-600 underline" to="/privacy"
+              >Privacy Policy</nuxt-link
             >carefully for details relating to how we collect, use, and disclose
             personal information you provide to us in connection with your use
             of the Software. We have implemented, and the Software contains,
@@ -505,10 +503,10 @@
           <p>
             You are responsible for paying any applicable fees as set forth on
             our
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               class="text-indigo-600 underline"
               :to="localePath('/pricing')"
-              >Pricing and Payment Terms</NuxtLinkWithUrlQuery
+              >Pricing and Payment Terms</nuxt-link
             >or in an Order Form and applicable taxes associated with the
             Software in a timely manner with a valid payment method. Unless
             otherwise stated in an Order Form, you will pay all invoices within

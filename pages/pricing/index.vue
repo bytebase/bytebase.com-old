@@ -74,12 +74,12 @@
                     {{ $t(`pricing.${plan.priceDescription}`) }}
                   </p>
                 </div>
-                <NuxtLinkWithUrlQuery
+                <nuxt-link
                   v-if="plan.type == 'FREE'"
                   :to="localePath('/docs/install/install-with-docker')"
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
-                  >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
+                  >{{ plan.buttonText }}</nuxt-link
                 >
                 <button
                   v-else
@@ -126,11 +126,9 @@
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
         <i18n path="pricing.announcement" for="cancel">
           <template #cancel>
-            <NuxtLinkWithUrlQuery
-              :to="localePath('/refund')"
-              class="underline"
-              >{{ $t("pricing.cancel") }}</NuxtLinkWithUrlQuery
-            >
+            <nuxt-link :to="localePath('/refund')" class="underline">{{
+              $t("pricing.cancel")
+            }}</nuxt-link>
           </template>
         </i18n>
       </div>
@@ -161,11 +159,11 @@
               {{ $t(plan.title) }}
             </h3>
             <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-              >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
+              >{{ plan.buttonText }}</nuxt-link
             >
             <button
               v-else
@@ -320,11 +318,11 @@
               <p class="mt-2 text-sm text-gray-500 h-10">
                 {{ $t(plan.description) }}
               </p>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 v-if="plan.type == 'FREE'"
                 :to="localePath('/docs/install/install-with-docker')"
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-                >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
+                >{{ plan.buttonText }}</nuxt-link
               >
               <button
                 v-else
@@ -453,11 +451,11 @@
               'relative w-1/4 py-0 text-center',
             ]"
           >
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               v-if="plan.type == 'FREE'"
               :to="localePath('/docs/install/install-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
-              >{{ plan.buttonText }}</NuxtLinkWithUrlQuery
+              >{{ plan.buttonText }}</nuxt-link
             >
             <button
               v-else
@@ -478,9 +476,9 @@
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
       <i18n path="pricing.announcement" for="cancel">
         <template #cancel>
-          <NuxtLinkWithUrlQuery :to="localePath('/refund')" class="underline">{{
+          <nuxt-link :to="localePath('/refund')" class="underline">{{
             $t("pricing.cancel")
-          }}</NuxtLinkWithUrlQuery>
+          }}</nuxt-link>
         </template>
       </i18n>
     </div>
@@ -506,6 +504,7 @@ import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
 import QuestinIcon from "~/components/QuestinIcon.vue";
 import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
+import { useCookie } from "~/plugin/cookie";
 
 interface LocalPlan extends Plan {
   featured: boolean;
@@ -602,9 +601,12 @@ export default defineComponent({
     };
 
     const buildUrlParamater = (): string => {
-      const param = new URLSearchParams(window.location.search);
+      const cookie = useCookie();
+
       const queryObj = {
-        ...Object.fromEntries(param),
+        utm_source: cookie.get("utm_source"),
+        utm_medium: cookie.get("utm_medium"),
+        utm_campaign: cookie.get("utm_campaign"),
         source: PAGE.PRICING,
         trial: PlanType.TEAM,
       };

@@ -6,24 +6,18 @@
       <div
         class="max-w-full w-full mx-auto text-base px-4 sm:px-6 pb-2 pt-2 lg:pb-4 hidden flex-wrap sm:grid sm:grid-flow-col justify-start lg:justify-center sm:space-x-4 lg:space-x-8"
       >
-        <NuxtLinkWithUrlQuery :to="localePath('/')" class="nav-link">
+        <nuxt-link :to="localePath('/')" class="nav-link">
           <span>Home</span>
-        </NuxtLinkWithUrlQuery>
-        <NuxtLinkWithUrlQuery
-          :to="localePath('/database-glossary')"
-          class="nav-link"
-        >
+        </nuxt-link>
+        <nuxt-link :to="localePath('/database-glossary')" class="nav-link">
           <span>Database Glossary</span>
-        </NuxtLinkWithUrlQuery>
-        <NuxtLinkWithUrlQuery
-          :to="localePath('/database-review-guide')"
-          class="nav-link"
-        >
+        </nuxt-link>
+        <nuxt-link :to="localePath('/database-review-guide')" class="nav-link">
           <span>Database Review Guide</span>
-        </NuxtLinkWithUrlQuery>
-        <NuxtLinkWithUrlQuery :to="localePath('/brand')" class="nav-link">
+        </nuxt-link>
+        <nuxt-link :to="localePath('/brand')" class="nav-link">
           <span>Brand</span>
-        </NuxtLinkWithUrlQuery>
+        </nuxt-link>
       </div>
     </div>
     <div
@@ -44,6 +38,7 @@ import {
   useRoute,
   watch,
 } from "@nuxtjs/composition-api";
+import { useCookie } from "../plugin/cookie";
 
 export default defineComponent({
   setup() {
@@ -52,6 +47,8 @@ export default defineComponent({
     const stickyHeaderAdditionClass = ref<string>();
 
     onMounted(() => {
+      useCookie().setURLParams();
+
       if (contentElementRef.value) {
         contentElementRef.value.addEventListener("scroll", () => {
           const scrollTop = contentElementRef.value?.scrollTop as number;

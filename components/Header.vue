@@ -4,10 +4,10 @@
       <div
         class="sm:hidden mb-2 flex items-center justify-between w-full sm:w-auto"
       >
-        <NuxtLinkWithUrlQuery :to="localePath('/')">
+        <nuxt-link :to="localePath('/')">
           <span class="sr-only">Bytebase</span>
           <img class="h-7 sm:h-8 w-auto" src="~/assets/logo-full.svg" alt="" />
-        </NuxtLinkWithUrlQuery>
+        </nuxt-link>
         <div class="flex relative sm:hidden flex-row" style="margin-top: 6px">
           <!-- Using backgroud-image is to prevent it as icon when sharing in wechat -->
           <div
@@ -38,14 +38,14 @@
         <div
           class="hidden sm:flex flex-shrink-0 flex-row justify-start items-center sm:mr-8 lg:mr-0"
         >
-          <NuxtLinkWithUrlQuery :to="localePath('/')" class="flex-shrink-0">
+          <nuxt-link :to="localePath('/')" class="flex-shrink-0">
             <span class="sr-only">Bytebase</span>
             <img
               class="h-6 sm:h-8 w-auto"
               src="~/assets/logo-full.svg"
               alt=""
             />
-          </NuxtLinkWithUrlQuery>
+          </nuxt-link>
         </div>
         <div
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
@@ -66,41 +66,41 @@
               <div
                 class="flyout-menu-container bg-white w-auto h-auto p-3 px-5 shadow-lg rounded flex-col justify-start items-start"
               >
-                <NuxtLinkWithUrlQuery
+                <nuxt-link
                   :to="localePath('/usecase/dba')"
                   class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For DBA</NuxtLinkWithUrlQuery
+                  >For DBA</nuxt-link
                 >
-                <NuxtLinkWithUrlQuery
+                <nuxt-link
                   :to="localePath('/usecase/techlead')"
                   class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For Tech Lead</NuxtLinkWithUrlQuery
+                  >For Tech Lead</nuxt-link
                 >
-                <NuxtLinkWithUrlQuery
+                <nuxt-link
                   :to="localePath('/usecase/developer')"
                   class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For Developer</NuxtLinkWithUrlQuery
+                  >For Developer</nuxt-link
                 >
               </div>
             </div>
           </div>
-          <NuxtLinkWithUrlQuery
+          <nuxt-link
             :to="localePath('/blog')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</NuxtLinkWithUrlQuery
+            >{{ $t("common.blog") }}</nuxt-link
           >
-          <NuxtLinkWithUrlQuery
+          <nuxt-link
             :to="localePath('/docs')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
-            >{{ $t("common.docs") }}</NuxtLinkWithUrlQuery
+            >{{ $t("common.docs") }}</nuxt-link
           >
-          <NuxtLinkWithUrlQuery
+          <nuxt-link
             :to="localePath('/pricing')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('pricing.header')"
-            >{{ $t("common.pricing") }}</NuxtLinkWithUrlQuery
+            >{{ $t("common.pricing") }}</nuxt-link
           >
         </div>
         <div class="z-10 flex flex-row items-center justify-end">
@@ -133,11 +133,11 @@
               @click="track('demo.header')"
               >{{ $t("common.demo") }}</a
             >
-            <NuxtLinkWithUrlQuery
+            <nuxt-link
               :to="localePath('/docs/install/install-with-docker')"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
-              >{{ $t("header.deploy-now") }}</NuxtLinkWithUrlQuery
+              >{{ $t("header.deploy-now") }}</nuxt-link
             >
           </div>
         </div>

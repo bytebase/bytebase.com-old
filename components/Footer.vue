@@ -17,38 +17,38 @@
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database/mysql')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >MySQL</NuxtLinkWithUrlQuery
+                >MySQL</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database/postgres')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >PostgreSQL</NuxtLinkWithUrlQuery
+                >PostgreSQL</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database/clickhouse')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >ClickHouse</NuxtLinkWithUrlQuery
+                >ClickHouse</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database/tidb')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >TiDB</NuxtLinkWithUrlQuery
+                >TiDB</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database/snowflake')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Snowflake</NuxtLinkWithUrlQuery
+                >Snowflake</nuxt-link
               >
             </li>
           </ul>
@@ -62,52 +62,52 @@
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/gitlab')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >GitLab</NuxtLinkWithUrlQuery
+                >GitLab</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/slack')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Slack</NuxtLinkWithUrlQuery
+                >Slack</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/discord')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Discord</NuxtLinkWithUrlQuery
+                >Discord</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/teams')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Teams</NuxtLinkWithUrlQuery
+                >Teams</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/dingtalk')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >DingTalk</NuxtLinkWithUrlQuery
+                >DingTalk</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/feishu')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >Lark</NuxtLinkWithUrlQuery
+                >Lark</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/integration/wecom')"
                 class="text-base text-gray-500 hover:text-gray-900"
-                >WeCom</NuxtLinkWithUrlQuery
+                >WeCom</nuxt-link
               >
             </li>
           </ul>
@@ -142,51 +142,51 @@
               </a>
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/docs')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('blog.footer')"
-                >{{ $t("common.documentation") }}</NuxtLinkWithUrlQuery
+                >{{ $t("common.documentation") }}</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/blog')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('blog.footer')"
-                >{{ $t("common.blog") }}</NuxtLinkWithUrlQuery
+                >{{ $t("common.blog") }}</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/changelog')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('changelog.footer')"
-                >{{ $t("common.changelog") }}</NuxtLinkWithUrlQuery
+                >{{ $t("common.changelog") }}</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database-review-guide')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('dbreview.footer')"
-                >{{ $t("database-review-guide.title") }}</NuxtLinkWithUrlQuery
+                >{{ $t("database-review-guide.title") }}</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/database-glossary')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('glossary.footer')"
-                >{{ $t("footer.database-glossary") }}</NuxtLinkWithUrlQuery
+                >{{ $t("footer.database-glossary") }}</nuxt-link
               >
             </li>
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/docs/error-code')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('errordoc.footer')"
-                >{{ $t("footer.error-code") }}</NuxtLinkWithUrlQuery
+                >{{ $t("footer.error-code") }}</nuxt-link
               >
             </li>
 
@@ -248,47 +248,47 @@
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/about')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('about.footer')"
-                >{{ $t("common.about") }}</NuxtLinkWithUrlQuery
+                >{{ $t("common.about") }}</nuxt-link
               >
             </li>
 
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/brand')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('brand.footer')"
-                >{{ $t("footer.brand") }}</NuxtLinkWithUrlQuery
+                >{{ $t("footer.brand") }}</nuxt-link
               >
             </li>
 
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath({ path: '/pricing', query: $route.query })"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('pricing.footer')"
-                >{{ $t("common.pricing") }}</NuxtLinkWithUrlQuery
+                >{{ $t("common.pricing") }}</nuxt-link
               >
             </li>
 
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/jobs')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('job.footer')"
-                >{{ $t("footer.careers") }}</NuxtLinkWithUrlQuery
+                >{{ $t("footer.careers") }}</nuxt-link
               >
             </li>
 
             <li>
-              <NuxtLinkWithUrlQuery
+              <nuxt-link
                 :to="localePath('/techstack')"
                 class="text-base text-gray-500 hover:text-gray-900 whitespace-nowrap"
                 @click="track('job.footer')"
-                >{{ $t("footer.tech-stack") }}</NuxtLinkWithUrlQuery
+                >{{ $t("footer.tech-stack") }}</nuxt-link
               >
             </li>
 
@@ -378,15 +378,15 @@
         </a>
 
         <p class="flex items-center text-gray-500 hover:text-gray-900">
-          <NuxtLinkWithUrlQuery :to="localePath('/terms')">{{
+          <nuxt-link :to="localePath('/terms')">{{
             $t("footer.terms")
-          }}</NuxtLinkWithUrlQuery>
+          }}</nuxt-link>
         </p>
 
         <p class="flex items-center text-gray-500 hover:text-gray-900">
-          <NuxtLinkWithUrlQuery :to="localePath('/privacy')">{{
+          <nuxt-link :to="localePath('/privacy')">{{
             $t("footer.policy")
-          }}</NuxtLinkWithUrlQuery>
+          }}</nuxt-link>
         </p>
       </div>
       <div class="mt-8 lg:mt-0 md:order-1 flex flex-row items-center space-x-4">

@@ -8,35 +8,35 @@
         aria-label="Global"
       >
         <span class="sr-only">Bytebase</span>
-        <NuxtLinkWithUrlQuery
+        <nuxt-link
           :to="localePath('/')"
           class="header-link"
           @click.native="track('docs.header')"
           ><img class="h-6 sm:h-8 w-auto" src="~/assets/logo-icon.svg" alt=""
-        /></NuxtLinkWithUrlQuery>
+        /></nuxt-link>
         <a
           :href="localePath('/docs/cli/overview')"
           class="header-link"
           @click="track('blog.header')"
           >CLI</a
         >
-        <NuxtLinkWithUrlQuery
+        <nuxt-link
           to="/blog"
           class="header-link"
           @click.native="track('blog.header')"
-          >Blog</NuxtLinkWithUrlQuery
+          >Blog</nuxt-link
         >
-        <NuxtLinkWithUrlQuery
+        <nuxt-link
           :to="localePath('/changelog')"
           class="header-link"
           @click.native="track('changelog.header')"
-          >Changelog</NuxtLinkWithUrlQuery
+          >Changelog</nuxt-link
         >
-        <NuxtLinkWithUrlQuery
+        <nuxt-link
           :to="localePath({ path: '/pricing', query: $route.query })"
           class="header-link"
           @click.native="track('pricing.header')"
-          >Pricing</NuxtLinkWithUrlQuery
+          >Pricing</nuxt-link
         >
       </nav>
       <div class="flex flex-row justify-start items-center">
@@ -56,11 +56,11 @@
           >
             Demo
           </a>
-          <NuxtLinkWithUrlQuery
+          <nuxt-link
             :to="localePath('/docs/install/install-with-docker')"
             class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
-            >Deploy now</NuxtLinkWithUrlQuery
+            >Deploy now</nuxt-link
           >
         </div>
         <div id="algolia-search-container" class="ml-2"></div>
@@ -86,6 +86,7 @@ import {
   useContext,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import { useCookie } from "../plugin/cookie";
 
 const { trackEvent } = Plausible();
 
@@ -106,6 +107,8 @@ export default defineComponent({
     });
 
     onMounted(async () => {
+      useCookie().setURLParams();
+
       (window as any).docsearch({
         container: "div#algolia-search-container",
         appId: "2M7XI1QIDY",
