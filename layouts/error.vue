@@ -14,13 +14,7 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  PropType,
-  useRoute,
-  watchEffect,
-} from "@nuxtjs/composition-api";
-import { useSegment } from "~/plugin/segment";
+import { defineComponent, PropType } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   props: {
@@ -30,12 +24,6 @@ export default defineComponent({
       }>,
       required: true,
     },
-  },
-  setup() {
-    const route = useRoute();
-    watchEffect(() => {
-      useSegment().analytics?.page(route.value.name);
-    });
   },
 });
 </script>
