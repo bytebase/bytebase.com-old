@@ -24,7 +24,7 @@
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
   },
   "pricing": {
-    "month": "/ month",
+    "per-month": "/ month",
     "price-unit-for-enterprise": "/ month",
     "start-from": "Start from",
     "per-instance": "Per instance",
