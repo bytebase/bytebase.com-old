@@ -62,7 +62,7 @@
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28">
                   <div class="mt-3 flex items-baseline">
-                    <p v-if="plan.pricePrefix" class="text-3xl font-bold">
+                    <p v-if="plan.pricePrefix" class="text-base">
                       {{ $t(plan.pricePrefix) }}&nbsp;
                     </p>
                     <p class="text-4xl font-extrabold tracking-tight">
