@@ -27,7 +27,7 @@
         <div
           aria-hidden="true"
           class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-white ring-2 ring-indigo-700 rounded-lg lg:block"
-        />
+        ></div>
 
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
           <div
@@ -58,7 +58,6 @@
                 :src="require(`~/assets/plans/${plan.imagePath}`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
-
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28">
                   <div class="mt-3 flex items-baseline">
@@ -202,7 +201,7 @@
                     plan.featured ? 'shadow-md' : 'shadow',
                     'absolute right-0 w-1/2 h-full bg-white rounded-lg',
                   ]"
-                />
+                ></div>
               </div>
 
               <div
@@ -273,7 +272,7 @@
                       : 'ring-1 ring-black ring-opacity-5',
                     'absolute right-0 w-1/2 h-full rounded-lg',
                   ]"
-                />
+                ></div>
               </div>
             </div>
           </div>
@@ -361,15 +360,15 @@
               class="absolute inset-0 flex items-stretch pointer-events-none"
               aria-hidden="true"
             >
-              <div class="w-1/4 pr-4" />
+              <div class="w-1/4 pr-4"></div>
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg" />
+                <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
               <div class="w-1/4 px-4">
-                <div class="w-full h-full bg-white rounded-lg" />
+                <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
               <div class="w-1/4 pl-4">
-                <div class="w-full h-full bg-white rounded-lg" />
+                <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
             </div>
 
@@ -664,10 +663,11 @@ export default defineComponent({
 }
 
 .tooltip {
-  @apply invisible absolute -mt-8 ml-2 px-2 py-1 rounded bg-black bg-opacity-75 text-white;
+  @apply hidden absolute -top-10 left-4 px-2 py-1 rounded bg-black bg-opacity-80 text-white;
+  transform: translateX(-50%);
 }
 
 .tooltip-wrapper:hover .tooltip {
-  @apply visible z-50;
+  @apply block z-50;
 }
 </style>
