@@ -27,6 +27,7 @@
             data-size="large"
             data-show-count="true"
             aria-label="Star bytebase/bytebase on GitHub"
+            @click="track('starus.header')"
             >Star</a
           >
         </div>
@@ -122,6 +123,7 @@
               data-size="large"
               data-show-count="true"
               aria-label="Star bytebase/bytebase on GitHub"
+              @click="track('starus.header')"
               >Star</a
             >
           </div>

@@ -589,7 +589,6 @@ export default defineComponent({
     onMounted(() => {
       auth0.value = useAuth0();
       analytics.value = useSegment().analytics;
-      analytics.value?.page(PAGE.PRICING);
     });
 
     const login = () => {

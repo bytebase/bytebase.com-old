@@ -80,13 +80,16 @@
 
 <script lang="ts">
 import {
+  useRoute,
   defineComponent,
   onMounted,
   reactive,
   useContext,
+  watchEffect,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import { useCookie } from "../plugin/cookie";
+import { useSegment } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
@@ -100,10 +103,16 @@ const MOBILE_VIEW_MAX_WIDTH = 640;
 
 export default defineComponent({
   setup() {
+    const route = useRoute();
+
     const { $ga } = useContext() as any;
     const state = reactive<State>({
       isMobileView: false,
       showSidebar: true,
+    });
+
+    watchEffect(() => {
+      useSegment().analytics?.page(route.value.name);
     });
 
     onMounted(async () => {
