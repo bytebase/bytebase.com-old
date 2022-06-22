@@ -24,7 +24,7 @@
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase"
   },
   "pricing": {
-    "month": "/ 月",
+    "per-month": "/ 月",
     "price-unit-for-enterprise": "/ 月起",
     "start-from": "",
     "per-instance": "每个实例",
