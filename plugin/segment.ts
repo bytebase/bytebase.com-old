@@ -4,7 +4,7 @@ import { useCookie } from "./cookie";
 
 const PAGE_PREFIX = "main-site";
 
-const PAGE = {
+export const PAGE = {
   HOME: `${PAGE_PREFIX}.home`,
   PRICING: `${PAGE_PREFIX}.pricing`,
 };
