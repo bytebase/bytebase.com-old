@@ -2,10 +2,11 @@ import { ref, reactive } from "@nuxtjs/composition-api";
 import { Analytics, AnalyticsBrowser } from "@segment/analytics-next";
 import { useCookie } from "./cookie";
 
-const PREFIX = "main-site";
+const PAGE_PREFIX = "main-site";
 
-export const PAGE = {
-  PRICING: `${PREFIX}.pricing`,
+const PAGE = {
+  HOME: `${PAGE_PREFIX}.home`,
+  PRICING: `${PAGE_PREFIX}.pricing`,
 };
 
 export const ACTION = {
@@ -20,7 +21,7 @@ export const PRICING_EVENT = {
 };
 
 export interface Metric {
-  page: (name: string) => void;
+  page: (name: string | null | undefined) => void;
   track: (name: string) => void;
 }
 
@@ -33,9 +34,13 @@ class SegmentMetric implements Metric {
     this.analytics = analytics;
   }
 
-  page(name: string) {
-    this.analytics.page(name, {
+  page(name: string | null | undefined) {
+    const pageName = name || "";
+    const [id, locale] = pageName.split("___");
+
+    this.analytics.page(id ? `${PAGE_PREFIX}.${id}` : PAGE_PREFIX, {
       ...this.metricParamater,
+      locale,
     });
   }
 

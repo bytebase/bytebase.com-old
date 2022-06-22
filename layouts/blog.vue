@@ -37,14 +37,20 @@ import {
   ref,
   useRoute,
   watch,
+  watchEffect,
 } from "@nuxtjs/composition-api";
 import { useCookie } from "../plugin/cookie";
+import { useSegment } from "~/plugin/segment";
 
 export default defineComponent({
   setup() {
     const route = useRoute();
     const contentElementRef = ref<HTMLDivElement>();
     const stickyHeaderAdditionClass = ref<string>();
+
+    watchEffect(() => {
+      useSegment().analytics?.page(route.value.name);
+    });
 
     onMounted(() => {
       useCookie().setURLParams();
