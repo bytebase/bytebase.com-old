@@ -62,11 +62,14 @@
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28">
                   <div class="mt-3 flex items-baseline">
+                    <p v-if="plan.pricePrefix" class="text-3xl font-bold">
+                      {{ $t(plan.pricePrefix) }}&nbsp;
+                    </p>
                     <p class="text-4xl font-extrabold tracking-tight">
                       ${{ plan.pricePerInstancePerMonth }}
                     </p>
                     <p class="text-xl">
-                      &nbsp;/&nbsp;{{ $t("pricing.month") }}
+                      {{ $t(plan.priceUnit) }}
                     </p>
                   </div>
                   <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
@@ -509,6 +512,8 @@ import { useCookie } from "~/plugin/cookie";
 interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
+  pricePrefix: string;
+  priceUnit: string;
 }
 
 interface LocalFeature {
@@ -551,10 +556,12 @@ export default defineComponent({
       ...plan,
       featured: plan.type === PlanType.TEAM,
       buttonText: getButtonText(plan),
-      unitPrice:
+      pricePrefix:
+        plan.type === PlanType.ENTERPRISE ? "pricing.start-from" : "",
+      priceUnit:
         plan.type === PlanType.ENTERPRISE
-          ? "Contact us"
-          : `$${plan.unitPrice}/year`,
+          ? "pricing.price-unit-for-enterprise"
+          : "pricing.month",
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
