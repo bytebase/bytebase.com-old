@@ -129,7 +129,7 @@ const TEAM_PLAN: Plan = {
   trialDays: 14,
   unitPrice: "1740",
   trialPrice: 0,
-  pricePerInstancePerMonth: 29,
+  pricePerInstancePerMonth: 59,
   priceDescription: "team-price-intro",
   // Plan desc and feature
   imagePath: "plan-team.webp",
