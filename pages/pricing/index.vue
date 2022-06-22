@@ -561,7 +561,7 @@ export default defineComponent({
       priceUnit:
         plan.type === PlanType.ENTERPRISE
           ? "pricing.price-unit-for-enterprise"
-          : "pricing.month",
+          : "pricing.per-month",
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
