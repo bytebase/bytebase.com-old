@@ -72,7 +72,7 @@
                 </div>
               </nuxt-link>
               <nuxt-content
-                class="w-full py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
+                class="w-full py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
                 :document="changelog"
               />
             </div>
@@ -101,16 +101,16 @@ export default {
         (a: any, b: any) =>
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
       )
-      .map((changlog: any) => {
-        const author = getTeammateByName(changlog.author) as any;
+      .map((changelog: any) => {
+        const author = getTeammateByName(changelog.author) as any;
         if (author) {
           author.avatar = `${lowerCase(author?.name)}.webp`;
         }
 
         return {
-          ...changlog,
+          ...changelog,
           author: author,
-          formatedPublishedAt: new Date(changlog.publishedAt).toLocaleString(
+          formatedPublishedAt: new Date(changelog.publishedAt).toLocaleString(
             "default",
             {
               year: "numeric",
@@ -118,7 +118,7 @@ export default {
               day: "numeric",
             }
           ),
-          readingTime: calcReadingTime(changlog.bodyPlainText),
+          readingTime: calcReadingTime(changelog.bodyPlainText),
         };
       });
 

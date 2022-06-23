@@ -1,5 +1,5 @@
 <template>
-  <main class="overflow-hidden space-y-8">
+  <main id="content-container" class="space-y-8">
     <div class="prose sm:prose-xl md:prose-2xl mx-auto text-center">
       <img
         v-if="changelog.featureImage"
@@ -27,10 +27,14 @@
         </template>
       </div>
     </div>
-    <nuxt-content
-      class="w-full px-4 py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
-      :document="changelog"
-    />
+    <div class="flex flex-row">
+      <aside class="w-52 hidden xl:flex" />
+      <nuxt-content
+        class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
+        :document="changelog"
+      />
+      <Toc :content="changelog" />
+    </div>
   </main>
 </template>
 
@@ -38,8 +42,10 @@
 import { lowerCase, startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
+import Toc from "~/components/Toc.vue";
 
 export default {
+  components: { Toc },
   async asyncData({ params, $content }: any) {
     const data = await $content("changelog", params.slug, {
       deep: true,
