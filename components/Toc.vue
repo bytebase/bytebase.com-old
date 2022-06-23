@@ -69,9 +69,13 @@ export default defineComponent({
 
     onMounted(() => {
       if (process.client) {
+        const vh = Math.max(
+          document.documentElement.clientHeight || 0,
+          window.innerHeight || 0
+        );
         const options = {
           threshold: 0.1,
-          rootMargin: "0px 0px -75% 0px",
+          rootMargin: `0px 0px -${vh - 214}px 0px`,
         };
         const titles = Array.from(
           document.querySelectorAll(
@@ -97,7 +101,7 @@ export default defineComponent({
             } else {
               currDisappearedId.value = entry.target.id;
               if (
-                Ids.indexOf(currDisappearedId.value as string) <=
+                Ids.indexOf(currDisappearedId.value as string) <
                 Ids.indexOf(lastDisappearedId.value as string)
               ) {
                 // When a title disappears during scrolling up, make the title before it active.
