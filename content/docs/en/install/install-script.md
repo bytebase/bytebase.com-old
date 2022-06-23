@@ -23,18 +23,18 @@ If no error occurs, you should see something like this in the console:
 OS: Darwin
 ARCH: arm64
 Password:
-Get bytebase latest version: 1.2.0
+Get bytebase latest version: x.y.z
 Downloading tarball into /var/folders/j4/9x356cb9263f2jryv0xs9pnr0000gn/T/tmp.g1C2PJ8U
-Start downloading https://github.com/bytebase/bytebase/releases/download/1.2.0/bytebase_1.2.0_Darwin_arm64.tar.gz...
+Start downloading https://github.com/bytebase/bytebase/releases/download/x.y.z/bytebase_x.y.z_Darwin_arm64.tar.gz...
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
 100 81.3M  100 81.3M    0     0  3972k      0  0:00:20  0:00:20 --:--:-- 5430k
-Completed downloading https://github.com/bytebase/bytebase/releases/download/1.2.0/bytebase_1.2.0_Darwin_arm64.tar.gz
+Completed downloading https://github.com/bytebase/bytebase/releases/download/x.y.z/bytebase_x.y.z_Darwin_arm64.tar.gz
 Start extracting tarball into /opt/bytebase...
-Start installing bytebase and bb 1.2.0
-Installed bytebase 1.2.0 to /usr/local/bin
-Installed bb 1.2.0 to /usr/local/bin
+Start installing bytebase and bb x.y.z
+Installed bytebase 1x.y.z to /usr/local/bin
+Installed bb x.y.z to /usr/local/bin
 
 Check the usage with
   bytebase --help
@@ -127,7 +127,7 @@ server started
 ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
 ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
 
-Version 1.2.0 has started at http://localhost:8080
+Version x.y.z has started at http://localhost:8080
 ___________________________________________________________________________________________
 ```
 
