@@ -18,7 +18,7 @@ Schema Review for SQL Editor
 ## 🎄 Enhancements
 
 - Improved SQL Editor styles
-    ![improved-sqleditor](/static/changelog/1.2.0/sql-editor-improvement.webp)
+    ![sql-editor-improvement](/static/changelog/1.2.0/sql-editor-improvement.webp)
 - Improved SQL Editor experience with auto-completion and code formatting on the issue page
 - Support to set SSL connection arguments for ClickHouse instances
 - Support to Approve/Run all tasks in a stage for tenant mode deployment issues
