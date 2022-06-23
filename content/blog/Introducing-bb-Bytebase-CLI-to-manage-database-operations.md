@@ -29,7 +29,7 @@ This blog post gives an overview of how to install Bytebase CLI `bb` and how to 
 Install `bb` into the folder /usr/local/bin on macOS or Linux by entering the command below:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install.sh)"
 ```
 
 ![installation](/static/blog-changelog-assets/2022/05/bb-installing.png)

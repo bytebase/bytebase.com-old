@@ -12,7 +12,7 @@ This page contains a getting-started covering frequently used commands.
 To install `bb`, just paste the following command in a macOS Terminal or Linux shell prompt:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install.sh)"
 ```
 
 This installs `bb` in `/usr/local/bin`. Run the following command to check if `bb` is installed:
