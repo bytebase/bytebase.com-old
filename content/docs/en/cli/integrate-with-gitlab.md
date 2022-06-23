@@ -16,7 +16,7 @@ This tutorial will show you the steps to integrate Bytebase CLI `bb` into [a Git
 On your GitLab Runner shell prompt, paste the following command:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/install/HEAD/install.sh)"
 ```
 
 Run `bb --version` to check if `bb` is installed.
