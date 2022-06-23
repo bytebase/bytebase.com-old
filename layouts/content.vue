@@ -111,12 +111,12 @@ export default defineComponent({
       showSidebar: true,
     });
 
-    watchEffect(() => {
-      useSegment().analytics?.page(route.value.name);
-    });
-
     onMounted(async () => {
       useCookie().setURLParams();
+
+      watchEffect(() => {
+        useSegment().analytics?.page(route.value.name);
+      });
 
       (window as any).docsearch({
         container: "div#algolia-search-container",

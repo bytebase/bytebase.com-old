@@ -45,12 +45,12 @@ export default defineComponent({
     const contentElementRef = ref<HTMLDivElement>();
     const stickyHeaderAdditionClass = ref<string>();
 
-    watchEffect(() => {
-      useSegment().analytics?.page(route.value.name);
-    });
-
     onMounted(() => {
       useCookie().setURLParams();
+
+      watchEffect(() => {
+        useSegment().analytics?.page(route.value.name);
+      });
 
       if (contentElementRef.value) {
         contentElementRef.value.addEventListener("scroll", () => {

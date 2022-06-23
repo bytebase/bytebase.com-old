@@ -24,11 +24,10 @@
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
   },
   "pricing": {
-    "per-month": "/ month",
-    "price-unit-for-enterprise": "/ month",
+    "per-instance-per-month": "Per instance per month",
+    "price-suffix-for-enterprise": "",
     "start-from": "Start from",
-    "per-instance": "Per instance",
-    "free-price-intro": "Up to 5",
+    "free-price-intro": "Up to 5 instance",
     "team-price-intro": "5 minimum, billed annually",
     "enterprise-price-intro": "Customized, billed annually",
     "cancel": "cancel",

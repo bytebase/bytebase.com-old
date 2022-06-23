@@ -59,19 +59,21 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-28">
+                <div class="flex flex-col items-center h-28 gap-y-1">
                   <div class="mt-3 flex items-baseline">
-                    <p v-if="plan.pricePrefix" class="text-base">
-                      {{ $t(plan.pricePrefix) }}&nbsp;
+                    <p v-if="plan.pricePrefix" class="text-gray-400 mr-2">
+                      {{ $t(plan.pricePrefix) }}
                     </p>
-                    <p class="text-4xl font-extrabold tracking-tight">
+                    <p class="text-5xl font-extrabold tracking-tight">
                       ${{ plan.pricePerInstancePerMonth }}
                     </p>
-                    <p class="text-xl">
-                      {{ $t(plan.priceUnit) }}
+                    <p v-if="plan.priceSuffix" class="text-gray-400 ml-2">
+                      {{ $t(plan.priceSuffix) }}
                     </p>
                   </div>
-                  <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
+                  <p class="text-gray-400">
+                    {{ $t("pricing.per-instance-per-month") }}
+                  </p>
                   <p class="text-gray-400">
                     {{ $t(`pricing.${plan.priceDescription}`) }}
                   </p>
@@ -512,7 +514,7 @@ interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
   pricePrefix: string;
-  priceUnit: string;
+  priceSuffix: string;
 }
 
 interface LocalFeature {
@@ -557,10 +559,10 @@ export default defineComponent({
       buttonText: getButtonText(plan),
       pricePrefix:
         plan.type === PlanType.ENTERPRISE ? "pricing.start-from" : "",
-      priceUnit:
+      priceSuffix:
         plan.type === PlanType.ENTERPRISE
-          ? "pricing.price-unit-for-enterprise"
-          : "pricing.per-month",
+          ? "pricing.price-suffix-for-enterprise"
+          : "",
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
