@@ -59,34 +59,21 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-28 gap-y-2">
-                  <div class="mt-3 flex items-end">
-                    <p
-                      v-if="plan.pricePrefix"
-                      class="text-gray-400 text-sm mr-2 mb"
-                    >
+                <div class="flex flex-col items-center h-28 gap-y-1">
+                  <div class="mt-3 flex items-baseline">
+                    <p v-if="plan.pricePrefix" class="text-gray-400 mr-2">
                       {{ $t(plan.pricePrefix) }}
                     </p>
-                    <div class="flex items-end mr-2">
-                      <p class="text-5xl font-extrabold tracking-tight">
-                        ${{ plan.pricePerInstancePerMonth }}
-                      </p>
-                      <p
-                        v-if="plan.priceSuffix"
-                        class="mb text-gray-400 text-sm ml-1"
-                      >
-                        {{ $t(plan.priceSuffix) }}
-                      </p>
-                    </div>
-                    <div class="mb">
-                      <p class="text-gray-400 text-sm">
-                        {{ $t("pricing.per-month") }}
-                      </p>
-                      <p class="text-gray-400 text-sm">
-                        {{ $t("pricing.per-instance") }}
-                      </p>
-                    </div>
+                    <p class="text-5xl font-extrabold tracking-tight">
+                      ${{ plan.pricePerInstancePerMonth }}
+                    </p>
+                    <p v-if="plan.priceSuffix" class="text-gray-400 ml-2">
+                      {{ $t(plan.priceSuffix) }}
+                    </p>
                   </div>
+                  <p class="text-gray-400">
+                    {{ $t("pricing.per-instance-per-month") }}
+                  </p>
                   <p class="text-gray-400">
                     {{ $t(`pricing.${plan.priceDescription}`) }}
                   </p>
@@ -684,9 +671,5 @@ export default defineComponent({
 
 .tooltip-wrapper:hover .tooltip {
   @apply block z-50;
-}
-
-.mb {
-  margin-bottom: 0.15rem;
 }
 </style>
