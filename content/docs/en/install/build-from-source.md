@@ -25,12 +25,12 @@ Download [source code](https://github.com/bytebase/bytebase) from GitHub, then g
 
 <hint-block type="info">
 
-If you want to build from a specific release, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag such as 1.2.0:
+If you want to build from a specific release `x.y.z`, then find out the release tag from our [release](https://github.com/bytebase/bytebase/releases) page, and switch to that tag:
 
 </hint-block>
 
 ```bash
-git checkout tags/1.2.0
+git checkout tags/x.y.z
 ```
 
 Build the source
