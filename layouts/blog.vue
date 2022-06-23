@@ -73,6 +73,18 @@ export default defineComponent({
       });
     });
 
+    // Try to fix that the header not sticking to the top of the page when hash changed.
+    watch(
+      () => route.value.hash,
+      () => {
+        setTimeout(() => {
+          contentElementRef.value?.parentElement?.scrollTo({
+            top: 0,
+          });
+        });
+      }
+    );
+
     return {
       contentElementRef,
       stickyHeaderAdditionClass,
