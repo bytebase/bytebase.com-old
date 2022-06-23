@@ -8,7 +8,7 @@ description: Bytebase now supports Schema Review for SQL Editor.
 ## 🚀 New Feature
 
 Schema Review for SQL Editor
- ![schema-review-for-sqleditor](/static/changelog/1.2.0/sql-editor-schema-review.webp)
+ ![sql-editor-schema-review](/static/changelog/1.2.0/sql-editor-schema-review.webp)
 
 - After setting up the schema review policy, if the SQL statement violates the error rule, Bytebase prevents SQL execution and shows error messages
   - Users can change the rule level from "Error" to "Warning"
