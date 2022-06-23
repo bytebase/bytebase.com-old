@@ -59,19 +59,34 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-28">
-                  <div class="mt-3 flex items-baseline">
-                    <p v-if="plan.pricePrefix" class="text-base">
-                      {{ $t(plan.pricePrefix) }}&nbsp;
+                <div class="flex flex-col items-center h-28 gap-y-2">
+                  <div class="mt-3 flex items-end">
+                    <p
+                      v-if="plan.pricePrefix"
+                      class="text-gray-400 text-sm mr-2 mb"
+                    >
+                      {{ $t(plan.pricePrefix) }}
                     </p>
-                    <p class="text-4xl font-extrabold tracking-tight">
-                      ${{ plan.pricePerInstancePerMonth }}
-                    </p>
-                    <p class="text-xl">
-                      {{ $t(plan.priceUnit) }}
-                    </p>
+                    <div class="flex items-end mr-2">
+                      <p class="text-5xl font-extrabold tracking-tight">
+                        ${{ plan.pricePerInstancePerMonth }}
+                      </p>
+                      <p
+                        v-if="plan.priceSuffix"
+                        class="mb text-gray-400 text-sm ml-1"
+                      >
+                        {{ $t(plan.priceSuffix) }}
+                      </p>
+                    </div>
+                    <div class="mb">
+                      <p class="text-gray-400 text-sm">
+                        {{ $t("pricing.per-month") }}
+                      </p>
+                      <p class="text-gray-400 text-sm">
+                        {{ $t("pricing.per-instance") }}
+                      </p>
+                    </div>
                   </div>
-                  <p class="text-gray-400">{{ $t("pricing.per-instance") }}</p>
                   <p class="text-gray-400">
                     {{ $t(`pricing.${plan.priceDescription}`) }}
                   </p>
@@ -512,7 +527,7 @@ interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
   pricePrefix: string;
-  priceUnit: string;
+  priceSuffix: string;
 }
 
 interface LocalFeature {
@@ -557,10 +572,10 @@ export default defineComponent({
       buttonText: getButtonText(plan),
       pricePrefix:
         plan.type === PlanType.ENTERPRISE ? "pricing.start-from" : "",
-      priceUnit:
+      priceSuffix:
         plan.type === PlanType.ENTERPRISE
-          ? "pricing.price-unit-for-enterprise"
-          : "pricing.per-month",
+          ? "pricing.price-suffix-for-enterprise"
+          : "",
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
@@ -669,5 +684,9 @@ export default defineComponent({
 
 .tooltip-wrapper:hover .tooltip {
   @apply block z-50;
+}
+
+.mb {
+  margin-bottom: 0.15rem;
 }
 </style>

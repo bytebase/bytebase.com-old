@@ -25,9 +25,9 @@
   },
   "pricing": {
     "per-month": "/ 月",
-    "price-unit-for-enterprise": "/ 月起",
+    "price-suffix-for-enterprise": "起",
     "start-from": "",
-    "per-instance": "每个实例",
+    "per-instance": "/ 实例",
     "free-price-intro": "最多 5 个实例",
     "team-price-intro": "5 个起步，按年付费",
     "enterprise-price-intro": "自定义实例数，按年付费",
