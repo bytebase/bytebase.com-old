@@ -11,13 +11,13 @@ Before starting, make sure you have installed Docker. You can click [here](https
 Open Terminal and run the command:
 
 ```bash
-curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | docker-compose -f - up
+curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=1.2.0 docker-compose -f - up
 ```
 
 If the above command doesn't work, try the proxy version:
 
 ```bash
-curl -fsS https://ghproxy.com/https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | docker-compose -f - up
+curl -fsS https://ghproxy.com/https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=1.2.0 docker-compose -f - up
 ```
 
 After successful execution, you will see something like this:
