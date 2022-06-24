@@ -311,7 +311,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 @import "~/assets/css/github-markdown-style.css";
 
 .nuxt-content .nuxt-content-highlight {

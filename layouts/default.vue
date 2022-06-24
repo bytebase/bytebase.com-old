@@ -51,11 +51,14 @@ export default defineComponent({
       }
     });
 
-    watch(route, () => {
-      contentElementRef.value?.scrollTo({
-        top: 0,
-      });
-    });
+    watch(
+      () => route.value.path,
+      () => {
+        contentElementRef.value?.scrollTo({
+          top: 0,
+        });
+      }
+    );
 
     return {
       contentElementRef,

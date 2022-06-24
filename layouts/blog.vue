@@ -67,20 +67,11 @@ export default defineComponent({
       }
     });
 
-    watch(route, () => {
-      contentElementRef.value?.scrollTo({
-        top: 0,
-      });
-    });
-
-    // Try to fix that the header not sticking to the top of the page when hash changed.
     watch(
-      () => route.value.hash,
+      () => route.value.path,
       () => {
-        setTimeout(() => {
-          contentElementRef.value?.parentElement?.scrollTo({
-            top: 0,
-          });
+        contentElementRef.value?.scrollTo({
+          top: 0,
         });
       }
     );
