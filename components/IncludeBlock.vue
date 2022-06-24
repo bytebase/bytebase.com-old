@@ -38,3 +38,7 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+@import "~/assets/css/github-markdown-style.css";
+</style>

@@ -38,12 +38,11 @@ Use following components to display more styled content in documentations:
 
 ### `Table`
 
-| Col1 | Col2 | Col3 |
-| ---- | -----| -----|
-| Bob  |  30  | ✔️    |
-| Alice|  15  |      |
-| David|  20  | ✔️    |
-
+| Col1  | Col2 | Col3 |
+| ----- | ---- | ---- |
+| Bob   | 30   | ✔️   |
+| Alice | 15   |      |
+| David | 20   | ✔️   |
 
 ### `Code`
 
