@@ -17,7 +17,13 @@ Support data source name (DSN) formats to connect databases in CLI, e.g. `--dsn 
 
 ### Add installation script of bb CLI
 
-User can install `bb` CLI with only one command `/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/bytebase/install/HEAD/install.sh)"](https://raw.githubusercontent.com/bytebase/install/HEAD/install.sh)&quot;)` . Previously, users needed to go through several steps from downloading on GitHub Release, decompressing and manually moving the files to executable file directory.
+User can install `bb` CLI with only one command. 
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/bytebase/HEAD/scripts/install_bb.sh)"
+```
+
+Previously, users needed to go through several steps from downloading on GitHub Release, decompressing and manually moving the files to executable file directory.
 
 ### Add dashboard page to manage all SQL sheets
 
