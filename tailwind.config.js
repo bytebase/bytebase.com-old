@@ -25,11 +25,14 @@ module.exports = {
         208: "52rem",
       },
       typography: {
+        // These configs are to override the default `prose` theme.
         DEFAULT: {
           css: {
+            // Make images fill the horizontal space.
             img: {
               width: "100%",
             },
+            // Add background to inline code.
             code: {
               padding: "0 0.4em",
               margin: 0,
@@ -39,6 +42,7 @@ module.exports = {
               fontWeight: "inherit",
               color: "inherit",
             },
+            // Remove backticks of inline code.
             "code:before": {
               content: "none",
             },
@@ -47,6 +51,7 @@ module.exports = {
             },
           },
         },
+        // Apply same configs to `xl` screens.
         xl: {
           css: {
             code: {
