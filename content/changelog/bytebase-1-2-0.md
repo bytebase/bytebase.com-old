@@ -12,7 +12,7 @@ Schema Review for SQL Editor
 
 - After setting up the schema review policy, if the SQL statement violates the error rule, Bytebase prevents SQL execution and shows error messages
   - Users can change the rule level from "Error" to "Warning"
-    - If the SQL statement violates the schema review policy, the warning message will display "Warning"
+    - If the SQL statement violates the updated schema review policy, Bytebase will run the SQL, but the warning message will display "Warning"
     - If schema review passes, Bytebase will run the SQL normally
 
 ## 🎄 Enhancements
@@ -28,7 +28,7 @@ Schema Review for SQL Editor
 ## 🎠 Community
 
 - Thanks to @[Cluas](https://github.com/Cluas) for:
-  - fix: pg ExecuteConetxt do not return err [#1540](https://github.com/bytebase/bytebase/pull/1540)
+  - fix: pg ExecuteContext do not return err [#1540](https://github.com/bytebase/bytebase/pull/1540)
   - fix: remove early check since we support create database idempotent [#1543](https://github.com/bytebase/bytebase/pull/1543)
 - Thanks to @[chiyutianyi](https://github.com/chiyutianyi) for: feat: prometheus integration and pprof registration simplification [#1550](https://github.com/bytebase/bytebase/pull/1550)
 
