@@ -33,7 +33,7 @@ Start downloading https://github.com/bytebase/bytebase/releases/download/x.y.z/b
 Completed downloading https://github.com/bytebase/bytebase/releases/download/x.y.z/bytebase_x.y.z_Darwin_arm64.tar.gz
 Start extracting tarball into /opt/bytebase...
 Start installing bytebase and bb x.y.z
-Installed bytebase 1x.y.z to /usr/local/bin
+Installed bytebase x.y.z to /usr/local/bin
 Installed bb x.y.z to /usr/local/bin
 
 Check the usage with
