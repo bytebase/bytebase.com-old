@@ -311,6 +311,12 @@ export default defineComponent({
 });
 </script>
 
+<style>
+.nuxt-content .copy-btn {
+  @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;
+}
+</style>
+
 <style scoped>
 @import "~/assets/css/github-markdown-style.css";
 
@@ -320,9 +326,6 @@ export default defineComponent({
 .nuxt-content .nuxt-content-highlight pre.language-bash code::before {
   @apply text-gray-400;
   content: "$ ";
-}
-.nuxt-content .copy-btn {
-  @apply absolute top-0.5 right-0.5 text-xs px-1 italic bg-gray-200 rounded opacity-60 hover:opacity-100;
 }
 .nuxt-content h2 > a:first-child:before,
 .nuxt-content h3 > a:first-child:before {
