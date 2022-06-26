@@ -2,23 +2,23 @@
 title: "DBA, Database and Developer - The Decameron"
 author: Lucy
 published_at: 2022/06/08 10:18
-feature_image: /static/blog-changelog-assets/2022/06/roaringdba.jpeg
+feature_image: /static/blog/dba-database-developer-decameron/roaring-dba.webp
 tags: Education
 featured: true
 description: This is the first of the DDD series, consisting of 10 stories of DBA & Database & developer.
 ---
 
-A few days ago, we posted a question on HN: [Ask HN: Is DBA still a good job?](https://news.ycombinator.com/item?id=31309729) The question quickly drew the attention of the HN community and got 236 thought-provoking comments. We share and feel the challenges, the frustration, the fatigue and the expectation. 
+A few days ago, we posted a question on HN: [Ask HN: Is DBA still a good job?](https://news.ycombinator.com/item?id=31309729) The question quickly drew the attention of the HN community and got 236 thought-provoking comments. We share and feel the challenges, the frustration, the fatigue and the expectation.
 
-We want to preserve all these heated discussions and help more people develop a multi-dimensional perspective on DBAs. That's how an idea for a blog series emerges -- **D·D·D** (DBA, Database, and Developer). 
+We want to preserve all these heated discussions and help more people develop a multi-dimensional perspective on DBAs. That's how an idea for a blog series emerges -- **D·D·D** (DBA, Database, and Developer).
 
-As the debut of this series, we compiled 10 stories about DBAs based on the replies and comments from the [HN thread](https://news.ycombinator.com/item?id=31309729): we adopted the Decameron style, made up the story background, and borrowed the true stories shared by the commenters and turned them over to the storytellers (all credits go to the rightful owners). Some of these storytellers had experience as full-time DBAs; the others may be developers who have worked with DBAs before. You can regard this article as the appetizer of a full course meal. The crew welcomes all kinds of feedback and, last but not least: Bon Appetite! 
+As the debut of this series, we compiled 10 stories about DBAs based on the replies and comments from the [HN thread](https://news.ycombinator.com/item?id=31309729): we adopted the Decameron style, made up the story background, and borrowed the true stories shared by the commenters and turned them over to the storytellers (all credits go to the rightful owners). Some of these storytellers had experience as full-time DBAs; the others may be developers who have worked with DBAs before. You can regard this article as the appetizer of a full course meal. The crew welcomes all kinds of feedback and, last but not least: Bon Appetite!
 
-10 people, consisting of developers and DBAs from different companies, woke up in a locked-up room. Apart from basic furniture, the room seems as normal as it could be except for a wooden board hung above the door with 3 letters carved on it -- DDD. 
+10 people, consisting of developers and DBAs from different companies, woke up in a locked-up room. Apart from basic furniture, the room seems as normal as it could be except for a wooden board hung above the door with 3 letters carved on it -- DDD.
 
 Nobody knows what happened and how they ended up there. Just when they were about to smash the windows, an electronic screen flashed for a few seconds and displayed their way out:
 
-*"One true story about DBAs per day, you'll only get locked up for 10 days."*
+_"One true story about DBAs per day, you'll only get locked up for 10 days."_
 
 Somebody sneered at the somehow sentient screen:
 
@@ -26,7 +26,7 @@ Somebody sneered at the somehow sentient screen:
 
 Another sentence appeared on the screen:
 
-*"You could leave, but your team's databases will be dropped and won't be recovered."*
+_"You could leave, but your team's databases will be dropped and won't be recovered."_
 
 Dead silence permeats the room. After a while, somebody finally breaks the ice:
 
@@ -42,9 +42,9 @@ Honestly wish we had a DBA, I ended up picking up a lot of his responsibilities.
 
 The screen really is sentient, even intelligent at some level. It automatically summarized the story:
 
-*"Honestly wish we had a DBA"*
+_"Honestly wish we had a DBA"_
 
-## Day 2  From [steve_adams_86](https://news.ycombinator.com/user?id=steve_adams_86): Both Brilliant, both jerks
+## Day 2 From [steve_adams_86](https://news.ycombinator.com/user?id=steve_adams_86): Both Brilliant, both jerks
 
 This is strange and funny to read; the only two DBAs I've worked with matched this description perfectly.
 
@@ -58,9 +58,9 @@ One they had a great system in place and the product felt mature, the companies 
 
 The screen flashes:
 
-*"All brilliant, all jerks."*
+_"All brilliant, all jerks."_
 
-DBAs in the room frowned a little. 
+DBAs in the room frowned a little.
 
 ## Day 3 From [jamal-kumar](https://news.ycombinator.com/user?id=jamal-kumar): Gone DBA
 
@@ -70,13 +70,13 @@ I tried to hire a guy for a postgres DBA at a company I had worked at. I knew hi
 
 We gave him like a month paid time to get acquainted with postgres. Dude DISAPPEARS, gets his vpn keys revoked and everything because we're like what the hell. A month later he sends this big long email saying how he got in some altercation with the police, and landed in jail... it was just way too rambling to take seriously. We ask a mutual friend what the hell was up and he said that since he was working too much his wife CONFISCATED HIS CELL PHONE.
 
-I think we called him 'ballgag ***' (fill in the blank with your least favorite person's name) after that
+I think we called him 'ballgag \*\*\*' (fill in the blank with your least favorite person's name) after that
 
 These guys are worth their weight in gold though, I think I heard he ended up getting a job at Microsoft down the line.
 
 The screen switches to today's theme:
 
-*"Gone DBA"*
+_"Gone DBA"_
 
 ## Day 4 From [Simon_O_Rourke](https://news.ycombinator.com/user?id=Simon_O_Rourke): He was Supposed to Know Everything
 
@@ -88,9 +88,9 @@ In the end, we moved to Amazon Redshift, and he was progressively moved into a s
 
 The familiar flashes appeared once more:
 
-*"He was supposed to 'know everything'"*
+_"He was supposed to 'know everything'"_
 
-## Day 5 From [skc](https://news.ycombinator.com/user?id=skc): “UR RUINING MY F****ING DATABASE”
+## Day 5 From [skc](https://news.ycombinator.com/user?id=skc): “UR RUINING MY F\*\*\*\*ING DATABASE”
 
 This is eerily similar to my experiences with two very, very good DBAs I worked with.
 
@@ -99,13 +99,13 @@ I'm now wondering if there is something about the role that lends itself to such
 Today these guys remind me a lot of JK Simmons character in "Whiplash"
 
 The screen displays an image this time:
-![roaring-dba](/static/blog-changelog-assets/2022/06/roaringdba.jpeg)
+![roaring-dba](/static/blog/dba-database-developer-decameron/roaring-dba.webp)
 
 **The DBAs among these 10 people have been humble audiences for 5 days. This picture becomes the last straw to break their nerves. They decided to take the lead now.**
 
 ## Day 6 From [forinti](https://news.ycombinator.com/user?id=forinti): Try to be the person I needed help from before
 
-I was a developer and turned into a DBA by necessity. When I was still just a dev, I couldn't get the support I needed from the DBAs, so now I try to be the person I needed help from before. 
+I was a developer and turned into a DBA by necessity. When I was still just a dev, I couldn't get the support I needed from the DBAs, so now I try to be the person I needed help from before.
 
 But, I now understand the problem. At my organisation we have only 2 DBAs, and we can't give all of our time to this task.
 
@@ -117,7 +117,7 @@ So, yes, a DBA is a really important role. With regards to it being a good job, 
 
 Screen displays:
 
-*"Try to be the person I needed help from before"*
+_"Try to be the person I needed help from before"_
 
 ## Day 7 From [compton93](https://news.ycombinator.com/user?id=compton93): For that company my role was priceless
 
@@ -129,25 +129,25 @@ To that specific company my role was priceless, new features could be built in 1
 
 The screen flashes and shows:
 
-*"For that company my role was priceless"*
+_"For that company my role was priceless"_
 
 ## Day 8 From [Twisell](https://news.ycombinator.com/user?id=Twisell): Exhausting yet rewarding
 
-I would argue that it's way more accurate to say this role is actually outsourced in most organizations with all the tradeoffs that come with that strategy. I begged my former employer to subscribe to a good PostgreSQL support company. Guess what the one we picked is constantly looking to hire new DBA to sustain growth... 
+I would argue that it's way more accurate to say this role is actually outsourced in most organizations with all the tradeoffs that come with that strategy. I begged my former employer to subscribe to a good PostgreSQL support company. Guess what the one we picked is constantly looking to hire new DBA to sustain growth...
 
 I was in database engineering/administration position for the last 10 year on a small company. It was exhausting because management wouldn't care to rely one guy to manage the whole data stack. It was rewarding because the CEO saw me as probably smarter than I was because I knew SQL well enough to produce outstanding value as a single individual.
 
-I spent a few years complaining that my colleagues didn't know their database well enough, and it was causing unnecessary bugs and poor performance. 
+I spent a few years complaining that my colleagues didn't know their database well enough, and it was causing unnecessary bugs and poor performance.
 
-I wanted the company to pay for some basic courses on the databases we were using, especially for the more junior Devs. 
+I wanted the company to pay for some basic courses on the databases we were using, especially for the more junior Devs.
 
-Instead we switched database like 11 times and now I don't know the database either. 
+Instead we switched database like 11 times and now I don't know the database either.
 
-The bugs and poor performance lingers though. 
+The bugs and poor performance lingers though.
 
 The screen changed the sentence to:
 
-*"Exhausting yet rewarding"*
+_"Exhausting yet rewarding"_
 
 ## Day 9 From [jhugo](https://news.ycombinator.com/user?id=jhugo): Conflict comes from lack of understanding
 
@@ -155,15 +155,15 @@ I think this kind of conflict often comes from frustration at developers not hav
 
 Networks & DBs present abstractions, but they're very leaky ones, yet developers often expect to just treat them as magical black boxes about which they don't need to know much of the inner workings, constraints, tradeoffs etc. That makes the interface between the network engineer or DBA and software developers a natural site of conflict.
 
-(You even see this above in this very thread, someone complaining that a DBA was punishing developers for "querying the database too much". Most likely the DBA was actually upset about how they were querying the database, not that they were querying it too much, but the developers want it to "just work" so the distinction isn't important to them.) 
+(You even see this above in this very thread, someone complaining that a DBA was punishing developers for "querying the database too much". Most likely the DBA was actually upset about how they were querying the database, not that they were querying it too much, but the developers want it to "just work" so the distinction isn't important to them.)
 
 Screen flashes:
 
-*"Conflict comes from lack of understanding"*
+_"Conflict comes from lack of understanding"_
 
 ## Day 10 From [niklasrde](https://news.ycombinator.com/user?id=niklasrde) &[ datalopers](https://news.ycombinator.com/user?id=datalopers): The lost art -- data modeling and SQL
 
-Same at my previous role - we did have some people who were really good at some point, and into DBs. We had a very solid Redis and PostgreSQL set-up, and some advanced stuff for simple data in Redis - but once that knowledge fades with attrition, making space for continued personal development into how two very different DBMS work for a small team is not easy, and it just stays untouched, disliked, and somewhat abandoned forever more. 
+Same at my previous role - we did have some people who were really good at some point, and into DBs. We had a very solid Redis and PostgreSQL set-up, and some advanced stuff for simple data in Redis - but once that knowledge fades with attrition, making space for continued personal development into how two very different DBMS work for a small team is not easy, and it just stays untouched, disliked, and somewhat abandoned forever more.
 
 I honestly think the thing that costs most companies the most in their hosting is developers not using databases correctly
 
@@ -171,11 +171,11 @@ I honestly think the thing that costs most companies the most in their hosting i
 
 The screen flashes and literally drops a few pixel tears:
 
-*"The lost art -- data modeling and SQL"*
+_"The lost art -- data modeling and SQL"_
 
 ## Finale
 
-While the last story approaches its end, the doors and windows open up widely. 10 people storm out, rush back to their office, and thoroughly check their database. Everything is fine, nothing deleted. They sigh with relief and start to delve into their daily work, as concentrated as ever. 
+While the last story approaches its end, the doors and windows open up widely. 10 people storm out, rush back to their office, and thoroughly check their database. Everything is fine, nothing deleted. They sigh with relief and start to delve into their daily work, as concentrated as ever.
 
 It all starts with one sentence:
 

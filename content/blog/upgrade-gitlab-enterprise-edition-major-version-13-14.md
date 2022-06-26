@@ -2,7 +2,7 @@
 title: GitLab Upgrade from 13 to 14
 author: Tianzhou
 published_at: 2021/12/15 08:29:42
-feature_image: /static/blog-changelog-assets/2021/12/ben-kitching-cMOqSECtAaM-unsplash.jpg
+feature_image: /static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-13-to-14.webp
 tags: Education
 description: GitLab upgrade from 13 to 14
 ---
@@ -24,16 +24,16 @@ You can jump to **the Major Upgrade** section if you just want to learn the upgr
 ## Background
 
 [Bytebase](https://bytebase.com) is an open source database schema change and version control tool for teams. We have native [VCS integration](https://docs.bytebase.com/use-bytebase/vcs-integration) with GitLab CE/EE from day 1.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-13.58.10.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/frontpage.webp)
 User can visit our live [demo site](https://demo.bytebase.com) from the landing page. And we did curate the demo data to let our potential customers better understand our VCS integration feature.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.02.38.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/issue-detail-vcs.webp)
 If visitor clicks the commit hash, she will be navigated to that GitLab commit triggering the Bytebase pipeline.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.03.46.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/vcs.webp)
 
 ## The Problem
 
 Besides complementing our demo, our GitLab instance is also used by our team members to work on GitLab integration features. And last week, we received an [issue report](https://github.com/bytebase/bytebase/issues/108#issuecomment-987166197) telling our VCS integration is broken, and it turns out it's related to the default OAuth token expiration change introduced in [GitLab 14.3](https://about.gitlab.com/releases/2021/09/22/gitlab-14-3-released/#oauth-access-tokens-issued-with-expiration-by-default)
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.11.49@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/oauth.webp)
 This is a sane change from GitLab. However, when Bytebase developed this feature, the latest major version was GitLab 13. That version has no expiration time set on the access token, and our implementation didn't properly handle the case when the access token expires. In order to facilitate testing this GitLab new feature, we decide to upgrade our managed GitLab instance to the new version.
 
 ## The Major Upgrade
@@ -47,18 +47,18 @@ Overall steps
 ### Step 1 - Read the Upgrade Guide
 
 GitLab's upgrade guide is pretty well written, e.g. it clearly lists the [upgrade path](https://docs.gitlab.com/ee/update/#upgrade-paths)
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.22.54@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-upgrade-path.webp)
 On the other hand, GitLab itself is already a monster and conducting a major upgrade is still a daunting task. For our particular case, we are upgrading from 13.12.2 to the latest version (14.5.2 at the time).
 
 ### Step 2 - Backup Data
 
 Our GitLab instance runs on AWS EC2 using EBS as the storage. So we stopped the instance, took a snapshot, waited for the snapshot completion and started the instance again.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.30.24@2x.png)The created snapshot
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/aws-backup.webp)The created snapshot
 
 ### Step 3 - The Upgrade (1st try)
 
 GitLab has clearly described the general required major version [upgrade steps](https://docs.gitlab.com/ee/update/#upgrading-to-a-new-major-version):
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.44.24.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/upgrade-major-version.webp)
 We are already on 13.12.2 which is the latest minor version of the preceding major version, so we can skip the 1st step. So our identified upgrade path is:
 
 > **13.12.2 -> 14.0.z (latest first minor version of 14) -> 14 latest**
@@ -66,7 +66,7 @@ We are already on 13.12.2 which is the latest minor version of the preceding maj
 **Part 1 - 13.12.2 -> 14.0.z**
 
 Visit [GitLab docker hub](https://hub.docker.com/r/gitlab/gitlab-ee/tags?page=1&name=14.0) to find its latest 14.0.z version which is 14.0.12
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-12.09.52@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-14-docker-image.webp)
 **Pull the 14.0.12 ee image**
 
 `docker pull gitlab/gitlab-ee:14.0.12-ee.0`
@@ -80,7 +80,7 @@ Visit [GitLab docker hub](https://hub.docker.com/r/gitlab/gitlab-ee/tags?page=1&
 `sudo docker run --detach --hostname gitlab.bytebase.com --publish 8080:80 --publish 22:22 --name gitlab --restart always --log-driver json-file --log-opt max-size=10m --log-opt max-file=3 --volume /srv/gitlab/config:/etc/gitlab --volume /srv/gitlab/logs:/var/log/gitlab --volume /srv/gitlab/data:/var/opt/gitlab gitlab/gitlab-ee:14.0.12-ee.0`
 
 **Verify the running version**
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-12.42.01@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-version.webp)
 **Part 2 - 14.0.z  -> 14 latest**
 
 > **We were too hurry to proceed to part 2 and made the mistake**
@@ -100,32 +100,32 @@ Visit [GitLab docker hub](https://hub.docker.com/r/gitlab/gitlab-ee/tags?page=1&
 **PANIC, GitLab failed to start and kept crash looping 😫**
 
 Use `docker logs -f gitlab` to view the log and quickly realize we missed one critical steps already mentioned in the upgrade guide.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.39.06.png)![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-15.03.53.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-14-upgrade-attention.webp)![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-background-migration.webp)
 And it's also mentioned in the major upgrade overview.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-14.44.24-1.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/upgrade-major-version.webp)
 And we still managed to miss those 😮‍💨
 
 ## Step 4 - The Rollback
 
 Guess we are probably not alone and GitLab does provide a dedicated [troubleshooting guide](https://docs.gitlab.com/ee/user/admin_area/monitoring/background_migrations.html#troubleshooting)
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-15.12.08.png)![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-15.19.53.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-upgrade-troubleshoot.webp)![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-upgrade-rollback.webp)
 
 > **Fortunately, we took a snapshot in Step 1, so it's easier to just restore that snapshot.**
 
 Follow the [Amazon EBS restoring guide](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-15.22.13.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/aws-restore-ebs.webp)
 Verified that the restore works and we are going to take 2nd try.
 
 ## Step 5 - The Upgrade (2nd try)
 
-The steps are almost the same as our 1st try, except that we need to pause after upgrading to14.0.z,**we need to wait until all background migrations complete.**
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-12.59.03@2x.png)
+The steps are almost the same as our 1st try, except that we need to pause after upgrading to14.0.z, **we need to wait until all background migrations complete.**
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-wait-background-migration.webp)
 Only after that, we proceed to upgrade from 14.0.z to the latest version. This time everything works smoothly.
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-13.10.37@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-version2.webp)
 And all these effort is just for getting this little checkbox. What a journey!
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-15.34.15.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-oauth-token-expire.webp)
 BTW, our [monitoring](https://status.bytebase.com/) does respond promptly (provided by [betteruptime.com](https://betteruptime.com/)) along the path, you can see we have experienced 5 downtimes 😵
-![_](/static/blog-changelog-assets/2021/12/CleanShot-2021-12-15-at-16.01.14@2x.png)
+![_](/static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/monitoring-downtime.webp)
 
 ## The takeaway
 

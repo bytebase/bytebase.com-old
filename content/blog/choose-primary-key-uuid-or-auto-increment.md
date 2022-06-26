@@ -2,7 +2,7 @@
 title: SQL Primary Key - UUID or Auto Increment Integer / Serial?
 author: Tianzhou
 published_at: 2021/08/24 08:37:00
-feature_image: /static/blog-changelog-assets/2021/10/pop-zebra-NZ-9RqsE06I-unsplash-1.jpg
+feature_image: /static/blog/choose-primary-key-uuid-or-auto-incement/uuid.webp
 tags: Education
 featured: true
 description: Pros and Cons between choosing UUID or auto increment integer / serial for SQL database.

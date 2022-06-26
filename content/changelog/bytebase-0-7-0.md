@@ -37,7 +37,7 @@ In the last release, we introduce the task check system and introduced the basic
 ### Backup schedule enforcement
 
 Owner and DBA can now enforce backup schedule policy for the specific environment. e.g. require daily backup for production environment.
-![_](/static/blog-changelog-assets/2021/10/Environment1.png)
+![_](/static/changelog/0.7.0/environment.webp)
 
 ## 🎄 Enhancement
 

@@ -2,7 +2,7 @@
 title: "Introducing Schema Review Policy for MySQL"
 author: Candy
 published_at: 2022/06/15 10:39:19
-feature_image: /static/blog-changelog-assets/2022/06/schema-review-policy-cover.webp
+feature_image: /static/blog/schema-review-policy-mysql/schema-review-policy-cover.webp
 tags: Education
 featured: true
 description: This post introduces a new feature - schema review policy, which help DBAs and application developers compose better schema change statements.
@@ -71,32 +71,32 @@ Let’s begin configuring a policy from the environment dashboard.
 
 **Step 1**. Select the tab “Prod” on the environment dashboard, and click the button “Configure policy” at the bottom of the page.
 
-![step1](/static/blog-changelog-assets/2022/06/schema-review-policy-step1.webp)
+![step1](/static/blog/schema-review-policy-mysql/schema-review-policy-step1.webp)
 
 **Step 2**. Select the template “Production Environment Template” and click the button “Next”.
 
-![step2](/static/blog-changelog-assets/2022/06/schema-review-policy-step2.webp)
+![step2](/static/blog/schema-review-policy-mysql/schema-review-policy-step2.webp)
 
 **Step 3**. Modify the error-level and rule-specific fields for rules, then click the button “Next” to preview your schema review policy.
 
-![step3](/static/blog-changelog-assets/2022/06/schema-review-policy-step3.webp)
+![step3](/static/blog/schema-review-policy-mysql/schema-review-policy-step3.webp)
 
 **Step 4**. Click the button “Confirm and add” to apply your policy to the environment.
 
-![step4](/static/blog-changelog-assets/2022/06/schema-review-policy-step4.webp)
+![step4](/static/blog/schema-review-policy-mysql/schema-review-policy-step4.webp)
 
 Now you can see the schema review policy that you jsut created on the page below.
 
-![dashboard](/static/blog-changelog-assets/2022/06/schema-review-policy-dashboard.webp)
+![dashboard](/static/blog/schema-review-policy-mysql/schema-review-policy-dashboard.webp)
 
 ## How Schema Review Policy is Used
 
 When you create an issue in an environment configured with a schema review policy, Bytebase automatically checks SQL statements and shows the schema review result. Take the screenshot below as an example. It shows that the input SQL statement does not meet the configured policies.
 
-![issue](/static/blog-changelog-assets/2022/06/schema-review-policy-issue.webp)
+![issue](/static/blog/schema-review-policy-mysql/schema-review-policy-issue.webp)
 
 You can get more details by clicking the button “SQL review”.
 
-![details](/static/blog-changelog-assets/2022/06/schema-review-policy-details.webp)
+![details](/static/blog/schema-review-policy-mysql/schema-review-policy-details.webp)
 
 Please try it out. If you want to suggest additional rules, please [let us know](https://github.com/bytebase/bytebase/issues) .
