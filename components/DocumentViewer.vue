@@ -57,7 +57,7 @@
     <div
       class="hidden fixed right-0 top-32 pt-12 w-60 py-2 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
-      <Toc :content="document" :scroll-offset="20" break-point="md" />
+      <Toc :content="document" :scroll-offset="20" class="md:flex" />
     </div>
 
     <!-- Subscribtion popup -->

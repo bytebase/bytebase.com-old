@@ -2,7 +2,7 @@
   <!-- Table of Contents-->
   <aside
     v-show="tocList.length > 0"
-    :class="`hidden ${breakPoint}:flex flex-col justify-start items-start sticky w-52 top-0 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm`"
+    class="hidden xl:flex flex-col justify-start items-start sticky w-52 top-0 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm"
   >
     <span class="text-black pb-2 pl-4 border-l border-gray-200 truncate"
       >Table of Contents</span
@@ -44,7 +44,6 @@ export default defineComponent({
   props: {
     content: { type: Object, required: true },
     scrollOffset: { type: Number, required: true },
-    breakPoint: { type: String, default: "xl" },
   },
   setup(props: { content: any; scrollOffset: number }) {
     const activeHashId = ref("");
