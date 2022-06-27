@@ -2,7 +2,7 @@
 title: How to use Bytebase with Better Uptime
 author: Zhe
 published_at: 2022/04/21 10:35:39
-feature_image: https://images.unsplash.com/photo-1513224502586-d1e602410265?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGhlYXJ0JTIwYmVhdHxlbnwwfHx8fDE2NTA1MzY3NDA&ixlib=rb-1.2.1&q=80&w=2000
+feature_image: /static/blog/how-to-use-bytebase-with-better-uptime/bytebase-use-better-uptime.webp
 tags: Education
 description: We use Better Uptime as a way to monitor our websites. With a feature called heartbeats, it is also an easy-to-use tool to monitor Bytebase automatic backup.
 ---
@@ -10,12 +10,11 @@ description: We use Better Uptime as a way to monitor our websites. With a featu
 ## What is Bytebase
 
 [Bytebase](https://bytebase.com/) is a startup I am currently taking an internship at. Its aspiration is to build an open-source database tool for DBAs and developers – GitLab for database schema lifecycle management. We are a remote team and most of our development happens on GitHub.
-![_](/static/blog-changelog-assets/2022/04/logo.png)
 
 ## Why we use Better Uptime
 
 [Better Uptime](https://betteruptime.com/) is the tool we use to monitor our websites.
-![_](/static/blog-changelog-assets/2022/04/image--2-.png)![_](/static/blog-changelog-assets/2022/04/image--3-.png)
+![_](/static/blog/how-to-use-bytebase-with-better-uptime/better-uptime-monitoring-dashboard.webp)![_](/static/blog/how-to-use-bytebase-with-better-uptime/better-uptime-page-detail.webp)
 Of all the Better Uptime monitor types, there is a type called **heartbeats**. Here are the benefits of using heartbeats quoted from [Better Uptime documentation.](https://docs.betteruptime.com/monitoring/monitor-types/cron-and-heartbeat-monitor)
 
 > Every heartbeat comes with a unique URL you need to periodically make requests to in order for the heartbeat NOT to create a new incident.
@@ -30,4 +29,4 @@ In Bytebase [0.9.0](https://bytebase.com/changelog/bytebase-0-9-0), we introduce
 ## How to configure database webhook
 
 It's quite simple. Just copy the URL from Better Uptime and save it in Bytebase. You are ready to go.
-![_](/static/blog-changelog-assets/2022/04/image--4-.png)![_](/static/blog-changelog-assets/2022/04/image--5-.png)
+![_](/static/blog/how-to-use-bytebase-with-better-uptime/better-uptime-heartbeat.webp)![_](/static/blog/how-to-use-bytebase-with-better-uptime/bytebase-backup-webhook.webp)

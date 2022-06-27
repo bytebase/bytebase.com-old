@@ -38,8 +38,7 @@ Say you have many databases that use identical database schemas and need uniform
 
 ### Signup and login via GitLab EE/CE
 
-Most in-house dev teams use GitLab EE/CE to host their code. Bytebase has already supported VCS integration with GitLab to manage database schemas. We now further enhance the integration to allow users to use their GitLab EE/CE account to login Bytebase. Thanks @siu91 for the suggestion [https://github.com/bytebase/bytebase/issues/27](https://github.com/bytebase/bytebase/issues/27).
-![_](/static/blog-changelog-assets/2022/01/gitlablogin.gif)
+Most in-house dev teams use GitLab EE/CE to host their code. Bytebase has already supported VCS integration with GitLab to manage database schemas. We now further enhance the integration to allow users to use their GitLab EE/CE account to login Bytebase. Thanks @siu91 for the [suggestion](https://github.com/bytebase/bytebase/issues/27).
 
 ### Support data change (DML) workflow
 

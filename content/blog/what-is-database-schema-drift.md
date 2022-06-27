@@ -2,7 +2,7 @@
 title: What is Database Schema Drift?
 author: Tianzhou
 published_at: 2022/01/29 12:29:20
-feature_image: /static/blog-changelog-assets/2022/01/database-schema-drift.jpg
+feature_image: /static/blog/what-is-database-schema-drift/database-schema-drift.webp
 tags: Education
 featured: true
 description: Database schema drift is the case where the actual schema in the live database is different from the source of truth. It's also one of the most frequent root cause of the database related outages.
@@ -31,7 +31,7 @@ While the **source of truth part** is more complex...
 One may first wonder why we need to keep a separate source of truth. The reason is because the schema in the live database may not always be the desired state. Human error or software bugs could both accidentally change the database schema. So it's better to have a separate source of truth, this idea is similar to the classic [double-entry bookkeeping](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) used in accounting.
 
 Naturally, a good place to store this source of truth is the version control system (VCS), the same place where the application code is stored. This is known as [database-as-code](database-as-code), a GitOps practice. Solutions like Liquibase, Flyway and etc all support this approach. Bytebase also supports this and even go a step further to provide point-and-click UI to configure this [VCS integration](https://docs.bytebase.com/use-bytebase/vcs-integration).
-![_](/static/blog-changelog-assets/2022/01/ProjectVCS4.png)
+![_](/static/blog/what-is-database-schema-drift/project-vcs.webp)
 
 ## The format of source of truth
 
@@ -51,11 +51,11 @@ Bytebase optimizes this process by introducing the schema snapshot and write bac
 1. For every schema migration, Bytebase will record the schema snapshot.
 2. If team manage database schema under version control system, they can configure Bytebase to write the schema snapshot back to the repository at a specified path. Below shows an example how Bytebase writes back the full schema snapshot at the user configured path.
 
-![_](/static/blog-changelog-assets/2022/01/CleanShot-2022-01-29-at-20.00.49.png)
+![_](/static/blog/what-is-database-schema-drift/schema-write-back.webp)
 And by leveraging the schema snapshot, Bytebase continuously compare between the schema snapshot and the actual database schema in the live database and report drift once found👇
-![_](/static/blog-changelog-assets/2022/01/SchemaDrift1.png)
+![_](/static/blog/what-is-database-schema-drift/drift-alert.webp)
 The detailed drift👇
-![_](/static/blog-changelog-assets/2022/01/SchemaDrift2.png)
+![_](/static/blog/what-is-database-schema-drift/drift-diff.webp)
 
 ## Summary
 
