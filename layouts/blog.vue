@@ -21,6 +21,7 @@
       </div>
     </div>
     <div
+      id="content-container"
       ref="contentElementRef"
       class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
     >

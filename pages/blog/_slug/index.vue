@@ -1,5 +1,5 @@
 <template>
-  <div id="content-container" class="space-y-8">
+  <div id="content" class="space-y-8">
     <div class="hidden sm:flex sm:h-96 w-full">
       <img
         v-if="blog.featureImage"
@@ -46,7 +46,7 @@
         class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
         :document="blog"
       />
-      <Toc :content="blog" />
+      <Toc :content="blog" :scroll-offset="200" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <main id="content-container" class="space-y-8">
+  <main class="space-y-8">
     <div class="prose sm:prose-xl md:prose-2xl mx-auto text-center">
       <img
         v-if="changelog.featureImage"
@@ -27,13 +27,13 @@
         </template>
       </div>
     </div>
-    <div class="flex flex-row">
+    <div id="content" class="flex flex-row">
       <aside class="w-52 hidden xl:flex" />
       <nuxt-content
         class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
         :document="changelog"
       />
-      <Toc :content="changelog" />
+      <Toc :content="changelog" :scroll-offset="135" />
     </div>
   </main>
 </template>

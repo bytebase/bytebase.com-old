@@ -5,6 +5,7 @@
     class="flex flex-col justify-start items-start px-4 lg:pr-64 w-full h-auto relative overflow-x-hidden overflow-y-auto"
   >
     <div
+      id="content"
       class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
     >
       <div class="w-full markdown-body nuxt-content pt-6">
@@ -56,7 +57,7 @@
     <div
       class="hidden fixed right-0 top-32 pt-12 w-60 py-2 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
-      <Toc :content="document" />
+      <Toc :content="document" :scroll-offset="20" break-point="md" />
     </div>
 
     <!-- Subscribtion popup -->
