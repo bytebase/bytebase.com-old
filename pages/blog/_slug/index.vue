@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-8">
+  <div id="content" class="space-y-8">
     <div class="hidden sm:flex sm:h-96 w-full">
       <img
         v-if="blog.featureImage"
@@ -39,20 +39,27 @@
         <span>{{ blog.readingTime }}</span>
       </div>
     </div>
-    <nuxt-content
-      class="w-full px-4 py-6 prose prose-indigo sm:prose-xl md:prose-2xl mx-auto"
-      :document="blog"
-    />
+    <div class="flex flex-row">
+      <!-- An empty block on the left side for layout -->
+      <aside class="w-52 hidden xl:flex" />
+      <nuxt-content
+        class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
+        :document="blog"
+      />
+      <Toc :content="blog" :scroll-offset="200" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
+import Toc from "~/components/Toc.vue";
 import { lowerCase, startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../../common/type";
 
 export default {
+  components: { Toc },
   layout: "blog",
   async asyncData({ params, $content }: any) {
     const data = await $content("blog", params.slug, {
