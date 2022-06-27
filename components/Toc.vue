@@ -61,8 +61,8 @@ export default defineComponent({
         const onScroll = () => {
           const scrollTop = contentContainer?.scrollTop || 0;
           const titleOffsetTops = titleElementList
-            .map((el) => el.offsetTop)
-            .sort((a, b) => a - b);
+            .map((el: any) => el.offsetTop)
+            .sort((a: number, b: number) => a - b);
           const activeIndex =
             sortedIndex(titleOffsetTops, scrollTop + props.scrollOffset) - 1;
           if (activeIndex >= 0) {
