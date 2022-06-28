@@ -20,7 +20,7 @@ The restoration process involves several steps.
 
 ### Step 1 - Click the **Restore to point in time** button on the database page.
 
-![pitr-restore-step-1](/static/docs-assets/pitr-restore-step-1.png)
+![pitr-restore-step-1](/static/docs-assets/pitr-restore-step-1.webp)
 
 ### Step 2 - Choose a target time to restore.
 
@@ -28,7 +28,7 @@ After PITR is done, the current database will be restored to the state before bu
 
 Note that the time is at the local timezone of your browser.
 
-![pitr-restore-step-2](/static/docs-assets/pitr-restore-step-2.png)
+![pitr-restore-step-2](/static/docs-assets/pitr-restore-step-2.webp)
 
 Once you click the Confirm button, a new PITR issue will be created.
 
@@ -38,11 +38,11 @@ The PITR issue consists of two tasks. The first task is to perform a recovery to
 
 Click the Approve button to approve the first Restore task.
 
-![pitr-restore-step-3](/static/docs-assets/pitr-restore-step-3.png)
+![pitr-restore-step-3](/static/docs-assets/pitr-restore-step-3.webp)
 
 And it should succeed like this.
 
-![pitr-restore-step-4](/static/docs-assets/pitr-restore-step-4.png)
+![pitr-restore-step-4](/static/docs-assets/pitr-restore-step-4.webp)
 
 ### Step 4 - Approve the Swap task.
 
@@ -54,7 +54,7 @@ Click the Approve button to approve the second Swap task.
 
 It should succeed like this.
 
-![pitr-restore-step-5](/static/docs-assets/pitr-restore-step-5.png)
+![pitr-restore-step-5](/static/docs-assets/pitr-restore-step-5.webp)
 
 Now you successfully performed a Point-in-time Recovery to your database!
 
