@@ -10,7 +10,7 @@ Bytebase provides an all-in-one solution to ease the PITR process with a few cli
 
 ### Backup
 
-It’s recommended to follow the [doc for backup](/docs/use-bytebase/backup-restore-database/backup) to set up automatic backups. Bytebase will check that an instance meeds all the prerequisites and automatically archives binlog files.
+It’s recommended to follow the [doc for backup](/docs/use-bytebase/backup-restore-database/backup) to set up automatic backups. Bytebase will check that an instance meets all the prerequisites and automatically archives binlog files.
 
 Note that you can only restore to the point of time after a valid backup.
 
@@ -24,7 +24,7 @@ The restoration process involves several steps.
 
 #### Step 2 - Choose a target time to restore.
 
-After PITR is done, the current database will be restored to the state before but not including the target time. For example, if you give the restore time 10:00:00, Bytebase would recover the database to the state just after 9:59:59 passed but before 10:00:00.
+PITR restores the database to the state right before the target time. For example, if you give the restore time 10:00:00, Bytebase would recover the database to the state just after 9:59:59 passed but before 10:00:00.
 
 Note that the time is at the local timezone of your browser.
 
@@ -46,7 +46,7 @@ And it should succeed like this.
 
 #### Step 4 - Approve the Swap task.
 
-The second task is called Swap. It will swap the recovered temporary database with your current database. After the Swap task, your current database will be at the state of the point in time you chose to restore, and the original database will be renamed by appending a timestamp (the issue created time) and an _old suffix. You could check the old database and use the data or just delete it to save storage space.
+The second task is called Swap. It will swap the restored temporary database with your current database. After the Swap task, your current database will be at the state of the point in time you chose to restore, and the original database will be renamed by appending a timestamp (the issue created time) and an _old suffix. You could check the old database and use the data or just delete it to save storage space.
 
 Note that you must stop ongoing queries on the current database before approving the Swap task.
 
@@ -56,7 +56,7 @@ It should succeed like this.
 
 ![pitr-restore-step-5](/static/docs-assets/pitr-restore-step-5.webp)
 
-Now you successfully performed a Point-in-time Recovery to your database!
+Now you have successfully performed a Point-in-time Recovery to your database!
 
 ## General Disaster Recovery Operations
 
