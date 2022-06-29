@@ -154,6 +154,7 @@ import {
   onMounted,
   ref,
   useContext,
+  watchEffect,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import { Metric, useSegment } from "~/plugin/segment";
@@ -166,7 +167,9 @@ export default defineComponent({
     const analytics = ref<Metric>();
 
     onMounted(() => {
-      analytics.value = useSegment().analytics;
+      watchEffect(() => {
+        analytics.value = useSegment().analytics;
+      });
     });
 
     const track = (name: string) => {
