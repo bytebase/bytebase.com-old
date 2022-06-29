@@ -64,9 +64,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  ref,
+  onMounted,
+  watchEffect,
+} from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
-import { useSegment } from "~/plugin/segment";
+import { useSegment, Metric } from "~/plugin/segment";
 
 const { trackEvent } = Plausible();
 
@@ -83,10 +88,12 @@ export default defineComponent({
     const email = ref("");
     const subscribed = ref(false);
     const size = ref("");
-    const analytics = ref();
+    const analytics = ref<Metric>();
 
     onMounted(() => {
-      analytics.value = useSegment().analyticsForNewsletter;
+      watchEffect(() => {
+        analytics.value = useSegment().analyticsForNewsletter;
+      });
 
       // The min width could display section in a row.
       const lgMinWidth = 820;
@@ -114,9 +121,7 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent(props.moduleName);
-      analytics.value?.identify({
-        email: email.value,
-      });
+      analytics.value?.identify(email.value);
       subscribed.value = true;
       emit("subscribed");
       e.preventDefault();

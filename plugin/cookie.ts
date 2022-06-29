@@ -31,7 +31,6 @@ export const useCookie = (): Cookie => {
     setURLParams(options?: CookieOptions) {
       const params = new URLSearchParams(window.location.search);
       for (const [key, value] of params.entries()) {
-        console.log(`key: ${key}, value: ${value}`);
         this.set(key, value, options);
       }
     },

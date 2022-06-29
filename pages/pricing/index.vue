@@ -495,6 +495,7 @@ import {
   useContext,
   ref,
   onMounted,
+  watchEffect,
 } from "@nuxtjs/composition-api";
 import {
   Metric,
@@ -589,7 +590,9 @@ export default defineComponent({
 
     onMounted(() => {
       auth0.value = useAuth0();
-      analytics.value = useSegment().analytics;
+      watchEffect(() => {
+        analytics.value = useSegment().analytics;
+      });
     });
 
     const login = () => {
