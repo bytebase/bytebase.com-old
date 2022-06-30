@@ -7,7 +7,7 @@ tags: Education
 description: Learn how to install MySQL Shell on your macOS.
 ---
 
-You can install MySQL Shell on your Mac by using one of these two ways: with the help of Homebrew or to install using the MySQL Shell package.
+MySQL Shell is an interactive JavaScript, Python, or SQL interface for MySQL Server and is a component that you can install separately. It can be installed on your Mac by using Homebrew or the official MySQL Shell package.
 
 ## Homebrew
 
@@ -29,11 +29,11 @@ Otherwise, run the following command to install Homebrew first:
 
 On successful installation, your terminal will return a few new lines, with one of them stating:
 
-```bash
+```plain
 ==>Installation successful!
 ```
 
-### Installing MySQL Shell
+### Install MySQL Shell
 
 To [install MySQL Shell using Homebrew](https://formulae.brew.sh/cask/mysql-shell), run the following command in the terminal:
 
@@ -41,10 +41,29 @@ To [install MySQL Shell using Homebrew](https://formulae.brew.sh/cask/mysql-shel
 brew install --cask mysql-shell
 ```
 
-The installation will start shortly. You will know it's successfully installed when your Terminal returns the following lines:
+The installation will start shortly. You will know it's done when your Terminal returns the following lines:
+
+```plain
+🍺  mysql-shell was successfully installed!
+```
+
+Start MySQL Shell to verify the installation.
 
 ```bash
-🍺  mysql-shell was successfully installed!
+mysqlsh
+```
+
+This output indicates that the installation was successful.
+
+```plain
+MySQL Shell version
+
+Copyright (c) 2016, 2022, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS >
 ```
 
 ## MySQL Shell package
@@ -65,9 +84,28 @@ Double-click to extract the .pkg file, and then follow the instructions as shown
 
 When the installer finishes, it means you have successfully installed MySQL Shell for Mac, feel free to eject the DMG and delete the file.
 
+Start MySQL Shell to verify the installation.
+
+```bash
+mysqlsh
+```
+
+This output indicates that the installation was successful.
+
+```plain
+MySQL Shell version
+
+Copyright (c) 2016, 2022, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS >
+```
+
 ## Starting MySQL Shell
 
-Open a new Terminal window and start MySQL Shell using this command:
+You can start MySQL Shell using this command:
 
 ```bash
 mysqlsh
