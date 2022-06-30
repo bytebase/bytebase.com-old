@@ -172,8 +172,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## Troubleshooting
 
-### [How to enable debug mode](/troubleshooting/how-to-enable-debug-mode)
-
 ### [How to perform upgrade](/troubleshooting/how-to-perform-upgrade)
 
 ### [How to solve OAuth CORS error with old GitLab version](/troubleshooting/how-to-solve-oauth-cors-error-with-old-gitlab-version)
