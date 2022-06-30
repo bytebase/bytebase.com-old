@@ -21,7 +21,7 @@ You should check the committed file conforms exactly to the [naming convention](
 
 #### Bytebase has not received webhook event
 
-In this case, you should visit the VCS project page and check the webhook event history there. Some common mistakes:
+In this case, you should visit the VCS project page and check the webhook event history. Some common mistakes:
 
 1. Make sure [--host](/docs/reference/command-line#--host-string),[--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Bytebase uses --host, --port to configure the VCS webhook callback to trigger the issue creation.
 
