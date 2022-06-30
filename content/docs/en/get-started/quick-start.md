@@ -53,7 +53,7 @@ When the Terminal shows the following message, the execution is successful.
   employee-test_1  | [Entrypoint] Database initialized
 ```
 
-Now you have 3 Docker containers running:
+Now you have three Docker containers running:
 
 - A Bytebase instance
 - A MySQL instance for the Test environment
