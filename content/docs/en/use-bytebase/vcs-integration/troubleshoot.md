@@ -4,14 +4,14 @@ title: 🐞 Troubleshoot
 
 ### Committed migration file does not trigger issue creation
 
-When a migration file is commited to the VCS, VCS will send a webhook event to Bytebase. There are 2 error categories:
+When a migration file is committed to the VCS, VCS will send a webhook event to Bytebase. There are two error categories:
 
-1. Bytebase has received webhook event
-2. Bytebase has not received webhook event
+1. Bytebase has received webhook events
+2. Bytebase has not received any webhook event
 
-#### Bytebase has received webhook event
+#### Bytebase has received webhook events
 
-In this case, if you visit your project overview page, you should find an activity event suggesting Bytebase has received the webhook event, however, the committed file doesn't match the configured path.
+In this case, if you visit your project overview page, you should find an activity event suggesting Bytebase has received the webhook event. However, the committed file doesn't match the configured path.
 
 You should check the committed file conforms exactly to the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) and the directory structure conforms to the [layout](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-organization). Some common mistakes:
 
@@ -19,7 +19,7 @@ You should check the committed file conforms exactly to the [naming convention](
 1. Case mismatch
 1. Directory mismatch
 
-#### Bytebase has not received webhook event
+#### Bytebase has not received any webhook event
 
 In this case, you should visit the VCS project page and check the webhook event history. Some common mistakes:
 
