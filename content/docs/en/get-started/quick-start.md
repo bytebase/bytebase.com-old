@@ -5,7 +5,7 @@ title: Quick Start (5 mins Test)
 
 ## Overview
 
-In this guide, you‘ll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
+In this guide, you'll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
 
 
 ## Prerequisites
