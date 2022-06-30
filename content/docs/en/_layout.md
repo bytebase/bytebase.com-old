@@ -13,11 +13,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## 🐣 Get Started
 
-### [Deploy in 5 Seconds](/get-started/deploy-in-5-seconds)
-
-### [Prepare the Workspace](/get-started/prepare-the-workspace)
-
-### [Run a SQL Review Workflow](/get-started/run-an-sql-review-workflow-in-a-project)
+### [Quick Start (5 mins Test)](/get-started/quick-start)
 
 ## 🚀 Install
 
