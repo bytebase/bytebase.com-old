@@ -5,7 +5,7 @@ title: Quick Start (5 mins Test)
 
 ## Overview
 
-In this guide, you‘ll be provided with **"Bytebase Test Suite"** (1 Bytebase and 2 MySQL instances) to get acquainted with the system in the quickest way.
+In this guide, you‘ll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
 
 
 ## Prerequisites
@@ -14,7 +14,7 @@ Before starting, make sure you have installed Docker. You can click [here](https
 
 
 ## Procedure
-### Step 1 Deploy with sample datasets
+### Step 1 - Deploy with sample datasets
 
 1. Start Docker.
 2. Open Terminal to run the command:
@@ -63,25 +63,26 @@ Now you have 3 Docker containers running:
 
 Each MySQL instance has a copy of the sample dataset in it. it’s the dataset_small from [open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql).
 
-3. Open Bytebase in [localhost:5678](http://localhost:5678/), if you can see the following page in the browser,  you’re in the right place.
+3. Open Bytebase in [localhost:5678](http://localhost:5678/), and you can see the following page in the browser.
 
 ![welcome-page](/docs/en/get-started/quick-start/welcome-page.webp)
 
 4. Create an admin account, log in, and you are in the workspace.
    
 
-### Step 2 Prepare the Workspace
+### Step 2 - Prepare the workspace
 
-#### 2-1 Set Up Environments
+#### 2.1 Set up environments
 
 - Click **Environments** on the top bar and you will see **Test** and **Prod** environments. You can keep the default settings or adjust them based on your needs.
 
 Prod environment requires manual approval while Test environment skips that.
 
-#### 2-2 Add Instances
+#### 2.2 Add instances
 
 1. Click **Instances** on the top bar.
 2. Click **Add Instance** on the instances page, and you will see **Create Instance** dialog box.
+ ![add-instance](/docs/en/get-started/quick-start/add-instance.webp)  
 3. Fill the fields as follows:
 - Choose **MySQL**
 - **Instance Name**: Sample Instance Test
@@ -101,11 +102,10 @@ Prod environment requires manual approval while Test environment skips that.
 - **Username**: root
 - **Password**: [empty]
 
-Now, you have configured 2 instances for Test and Prod environment containing copies of the same sample dataset.
+Now, you have configured two instances for Test and Prod environment containing copies of the same sample dataset.
 
-### Step 3 Run an SQL Review Workflow in a Project
-
-#### 3-1 Create a project
+### Step 3 - Add a coloumn nickname to employee table
+#### 3.1 Create a project
 
 In Bytebase, **Project** is the unit to contain and manage databases. Therefore, before dealing with the sample databases, you need to transfer them into a project first.
 
@@ -115,17 +115,17 @@ In Bytebase, **Project** is the unit to contain and manage databases. Therefore,
 
 ![create-a-project](/docs/en/get-started/quick-start/create-a-project.webp)
 
-4. Choose **Transfer DB** to transfer in the 2 "Employee" databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
+4. Choose **Transfer DB** to transfer in the two "Employee" databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
 
 
-Now you are ready to manage these 2 "employee" databases in your project.Your next task is to add a column named "nickname" to the "employee" table.
+Now you are ready to manage these two "employee" databases in your project.Your next task is to add a column named "nickname" to the "employee" table.
 
-#### 3-2 Create an SQL issue
+#### 3.2 Create an SQL issue to alter schema
 
 1. Go to "Employee" project page.
 2. Click **Alter Schema**, you will find an **Alter Schema** dialog box.
 3. Choose **Alter multiple databases**, select **Test > employee, Prod > employee**, and click **Next**.
-4. An issue is created, and you will be navigated to the new issue page.
+4. An issue is created, and you will be navigated to the new issue page. On top of *SQL* box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
 
 ![create-an-issue](/docs/en/get-started/quick-start/create-an-issue.webp)
 
@@ -138,7 +138,7 @@ Now you are ready to manage these 2 "employee" databases in your project.Your ne
 7. Click **Create**, and you will see the **SQL Advisor** kicks off automatically — checks the SQL statements against various rules.
 8. As the Test environment doesn't require manual approval, the SQL will be applied to the database on Test environment automatically after passing those advisor checks. Then you are waiting for approval for the Prod environment.
 
-#### 3-3 Review the SQL issue
+#### 3.3 Review the SQL issue
 
 1. Click **Approve** if everything is OK and the SQL will be applied to the database on Prod environment.
 2. Click **Resolve issue**, and the issue is **Done**.
