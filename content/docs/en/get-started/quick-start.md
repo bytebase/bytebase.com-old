@@ -2,18 +2,16 @@
 title: Quick Start (5 mins Test)
 ---
 
-
 ## Overview
 
 In this guide, you'll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
-
 
 ## Prerequisites
 
 Before starting, make sure you have installed Docker. You can click [here](https://www.docker.com/get-started/) to get Docker.
 
-
 ## Procedure
+
 ### Step 1 - Deploy with sample datasets
 
 1. Start Docker.
@@ -68,7 +66,6 @@ Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_s
 ![welcome-page](/docs/en/get-started/quick-start/welcome-page.webp)
 
 4. Create an admin account, log in, and you are in the workspace.
-   
 
 ### Step 2 - Prepare the workspace
 
@@ -82,8 +79,9 @@ Prod environment requires manual approval while Test environment skips that.
 
 1. Click **Instances** on the top bar.
 2. Click **Add Instance** on the instances page, and you will see **Create Instance** dialog box.
- ![add-instance](/docs/en/get-started/quick-start/add-instance.webp)  
+   ![add-instance](/docs/en/get-started/quick-start/add-instance.webp)
 3. Fill the fields as follows:
+
 - Choose **MySQL**
 - **Instance Name**: Sample Instance Test
 - **Environment**: Test
@@ -91,9 +89,11 @@ Prod environment requires manual approval while Test environment skips that.
 - **Port**: 3307
 - **Username**: root
 - **Password**: [empty]
+
 4. Click **Create**, and the instance is created.
 5. Roll down to the bottom, you can find a section showing **Databases** and **Users** from this instance.
 6. Repeat the operation with another instance and :
+
 - Choose **MySQL**
 - **Instance Name**: Sample Instance Prod
 - **Environment**: Prod
@@ -105,6 +105,7 @@ Prod environment requires manual approval while Test environment skips that.
 Now, you have configured two instances for Test and Prod environment containing copies of the same sample dataset.
 
 ### Step 3 - Add a coloumn `nickname` to `employee` table
+
 #### 3.1 Create a project
 
 In Bytebase, **Project** is the unit to contain and manage databases. Therefore, before dealing with the sample databases, you need to transfer them into a project first.
@@ -117,7 +118,6 @@ In Bytebase, **Project** is the unit to contain and manage databases. Therefore,
 
 4. Choose **Transfer DB** to transfer in the two "Employee" databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
 
-
 Now you are ready to manage these two "employee" databases in your project.Your next task is to add a column named "nickname" to the "employee" table.
 
 #### 3.2 Create an SQL issue to alter schema
@@ -125,15 +125,17 @@ Now you are ready to manage these two "employee" databases in your project.Your 
 1. Go to "Employee" project page.
 2. Click **Alter Schema**, you will find an **Alter Schema** dialog box.
 3. Choose **Alter multiple databases**, select **Test > employee, Prod > employee**, and click **Next**.
-4. An issue is created, and you will be navigated to the new issue page. On top of *SQL* box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
+4. An issue is created, and you will be navigated to the new issue page. On top of _SQL_ box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
 
 ![create-an-issue](/docs/en/get-started/quick-start/create-an-issue.webp)
 
 5. Fill the fields as follows:
+
 - **Title**: "Alter Schema: Add a column nickname".
 - **SQL**:`ALTER TABLE employee ADD nickname VARCHAR(255) ;`.
 - **Description**(option): "Add a column nickname".
 - **Assignee**: [yourself]
+
 6. Click **Apply to other stages**, the SQL will be applied to **Prod** as well.
 7. Click **Create**, and you will see the **SQL Advisor** kicks off automatically — checks the SQL statements against various rules.
 8. As the Test environment doesn't require manual approval, the SQL will be applied to the database on Test environment automatically after passing those advisor checks. Then you are waiting for approval for the Prod environment.
