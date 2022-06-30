@@ -61,7 +61,7 @@ Now you have three Docker containers running:
 
 ![3-containers-in-docker](/docs/en/get-started/quick-start/3-containers-in-docker.webp)
 
-Each MySQL instance has a copy of the sample dataset in it. it’s the dataset_small from [open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql).
+Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_small from [open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql).
 
 3. Open Bytebase in [localhost:5678](http://localhost:5678/), and you can see the following page in the browser.
 
