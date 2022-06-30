@@ -104,7 +104,7 @@ Prod environment requires manual approval while Test environment skips that.
 
 Now, you have configured two instances for Test and Prod environment containing copies of the same sample dataset.
 
-### Step 3 - Add a coloumn nickname to employee table
+### Step 3 - Add a coloumn `nickname` to `employee` table
 #### 3.1 Create a project
 
 In Bytebase, **Project** is the unit to contain and manage databases. Therefore, before dealing with the sample databases, you need to transfer them into a project first.
@@ -144,7 +144,3 @@ Now you are ready to manage these two "employee" databases in your project.Your 
 2. Click **Resolve issue**, and the issue is **Done**.
 
 ![issue-done](/docs/en/get-started/quick-start/issue-done.webp)
-
-## Summary
-
-If you successfully completed the procedure, you have tried the basic operations in Bytebase.
