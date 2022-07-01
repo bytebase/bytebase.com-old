@@ -7,7 +7,7 @@ tags: Education
 description: Learn how to install MySQL Shell on your macOS.
 ---
 
-MySQL Shell is an interactive JavaScript, Python, or SQL interface for MySQL Server and is a component that you can install separately. It can be installed on your Mac by using Homebrew or the official MySQL Shell package.
+[MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) is an interactive JavaScript, Python, or SQL interface for MySQL Server and is a component that you can install separately. It can be installed on your Mac by using Homebrew or the official MySQL Shell package.
 
 ## Homebrew
 
