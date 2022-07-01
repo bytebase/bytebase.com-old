@@ -4,8 +4,28 @@ title: 🐞 Troubleshoot
 
 ### Committed migration file does not trigger issue creation
 
-1. Check the committed file conforms to the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) and directory structure conforms to the [layout](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-organization).
-2. Make sure [--host](/docs/reference/command-line#--host-string),[--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Bytebase uses --host, --port to configure the VCS webhook callback to trigger the issue creation.
+When a migration file is committed to the VCS, VCS will send a webhook event to Bytebase. There are two error categories:
+
+1. Bytebase has received webhook events
+2. Bytebase has not received any webhook event
+
+#### Bytebase has received webhook events
+
+In this case, if you visit your project overview page, you should find an activity event suggesting Bytebase has received the webhook event. However, the committed file doesn't match the configured path.
+
+You should check the committed file conforms exactly to the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) and the directory structure conforms to the [layout](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files#file-organization). Some common mistakes:
+
+1. Forget the extension
+1. Case mismatch
+1. Directory mismatch
+
+#### Bytebase has not received any webhook event
+
+In this case, you should visit the VCS project page and check the webhook event history. Some common mistakes:
+
+1. Make sure [--host](/docs/reference/command-line#--host-string),[--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Bytebase uses --host, --port to configure the VCS webhook callback to trigger the issue creation.
+
+1. Make sure Bytebase is network accessible from VCS.
 
 ### Failed to create webhook xxx, status code: 422 for GitLab
 
