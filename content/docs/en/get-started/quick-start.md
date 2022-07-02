@@ -65,7 +65,7 @@ Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_s
 
 ![welcome-page](/docs/en/get-started/quick-start/welcome-page.webp)
 
-4. Create an admin account, log in, and you are in the workspace.
+1. Create an admin account, and you are in the workspace.
 
 ### Step 2 - Prepare the workspace
 

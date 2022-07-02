@@ -1,0 +1,18 @@
+---
+title: Customize the workspace with your own logo
+---
+
+This document shows you how to add a logo to workspace.
+
+## Prerequisites
+- **Team** or **Enterprise** plan
+
+## Procedure
+1. Click **Settings** on the top bar.
+2. Click **General** under **Workspace**, the **Branding** page is displayed.
+3. Upload or drag your logo file to the **Logo** canvas according to the requirement on the screen.
+4. Click **Update**, your logo will be uploaded and displayed on the left of your avatar.
+
+See the following example to see how to customize your workspace with the Bytebase logo:
+
+![customize-the-logo](/docs/en/get-started/configure-the-workspace/customize-the-logo/customize-the-logo.webp)

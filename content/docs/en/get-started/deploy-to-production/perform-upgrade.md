@@ -1,10 +1,10 @@
 ---
-title: How to perform upgrade
+title: Perform Upgrade
 ---
 
 ## Background
 
-Bytebase stores its own metadata in a [Postgres](https://www.postgresql.org/) database. As we add new features, we may also perform database schema changes (i.e. database migrations).
+Bytebase stores its own metadata in a [PostgreSQL](https://www.postgresql.org/) database. As we add new features, we may also perform database schema changes (i.e. database migrations).
 
 Because Bytebase is still under active development so we are making breaking schema changes from time to time. Usually when Bytebase is not working properly and the console emits logs like `"no such column"`, it's because Bytebase is running against an old incompatible database schema.
 
@@ -25,7 +25,7 @@ You don't need to do anything when the upgrade does NOT involve a breaking schem
 
 If you are just testing out Bytebase and don't need the existing data, you can just remove the existing data.
 
-### Running using naked bytebase binary (without docker)
+#### Running using naked bytebase binary (without docker)
 
 The data is stored under the [--data](https://docs.bytebase.com/reference/command-line#--data-directory) directory. By default, it's the same directory where the bytebase binary runs. Just remove the 3 files:
 
@@ -35,7 +35,7 @@ The data is stored under the [--data](https://docs.bytebase.com/reference/comman
 
 ![Screenshot](https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/reset-bytebase-data.png)
 
-### Running inside docker
+#### Running inside docker
 
 If you run Bytebase using Docker, say you use the following command like our help doc shows:
 

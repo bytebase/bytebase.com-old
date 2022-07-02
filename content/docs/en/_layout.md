@@ -11,19 +11,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Use Cases](/introduction/use-cases)
 
-## 🐣 Get Started
-
-### [Quick Start (5 mins Test)](/get-started/quick-start)
-
-## 🚀 Install
-
-### [Docker (5 seconds)](/install/install-with-docker)
-
-### [Install Script](/install/install-script)
-
-### [Build from Source](/install/build-from-source)
-
-### [Use External PostgreSQL Database](/install/external-postgres)
 
 ## 📚 Concepts
 
@@ -36,6 +23,39 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Migration Types](/concepts/migration-types)
 
 ### [Tenant Database](/concepts/tenant-database)
+
+## 🐣 Get Started
+
+### [Quick Start (5 mins Test)](/get-started/quick-start)
+
+### [Deploy to Production](/get-started/deploy-to-production/overview)
+
+#### [System Requirement and Support](/get-started/deploy-to-production/system-requirement-and-support)
+#### [Option 1 Docker (5 seconds)](/get-started/deploy-to-production/deploy-with-docker)
+
+#### [Option 2 Install Script](/get-started/deploy-to-production/install-script)
+
+#### [Option 3 Build from Source](/get-started/deploy-to-production/build-from-source)
+
+#### [Use External PostgreSQL Database](/get-started/deploy-to-production/external-postgres)
+#### [Perform Upgrade](/get-started/deploy-to-production/perform-upgrade)
+
+### [Configure the Workspace](/get-started/configure-the-workspace/overview)
+
+#### [Register Accounts](/get-started/configure-the-workspace/register-accounts)
+#### [Manage Members](/get-started/configure-the-workspace/manage-members)
+#### [Set up Environments](/get-started/configure-the-workspace/set-up-environments)
+#### [Add an Instance](/get-started/configure-the-workspace/add-an-instance)
+#### [Add a MySQL Instance for Testing](/get-started/configure-the-workspace/add-a-mysql-instance-for-testing)
+
+#### [Customize the Logo](/get-started/configure-the-workspace/customize-the-logo)
+
+
+### [Work with a Project](/get-started/work-with-a-project/overview)
+#### [Create a Project](/get-started/work-with-a-project/create-a-project)
+#### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
+
+
 
 ## ✨ Features
 
@@ -104,10 +124,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## 🧭 Use Bytebase
 
-### [SQL Review Interface](/use-bytebase/sql-review-interface/overview)
-
-#### [Create the SQL review ticket](/use-bytebase/sql-review-interface/create-the-sql-review-ticket)
-
 ### [VCS Integration (GitOps)](/use-bytebase/vcs-integration/overview)
 
 #### [Add Git Provider](/use-bytebase/vcs-integration/add-git-provider)
@@ -150,10 +166,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Database Webhook](/use-bytebase/webhook-integration/database-webhook)
 
-## ⚙️ Settings
-
-### [Customize the Workspace with Your Own Logo](/settings/customize-workspace/)
-
 ## 🔧 Operating
 
 ### [Production Setup](/operating/production-setup)
@@ -172,11 +184,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## Troubleshooting
 
-### [How to perform upgrade](/troubleshooting/how-to-perform-upgrade)
-
 ### [How to solve OAuth CORS error with old GitLab version](/troubleshooting/how-to-solve-oauth-cors-error-with-old-gitlab-version)
-
-### [Unable to start Bytebase with Docker](/troubleshooting/unable-to-start-bytebase-with-docker)
 
 ## [FAQ](/faq)
 
