@@ -103,7 +103,7 @@ import {
   ref,
   onMounted,
 } from "@nuxtjs/composition-api";
-import { shuffle, lowerCase } from "lodash";
+import { shuffle } from "lodash";
 import teammateList from "~/common/teammate";
 
 export default defineComponent({
@@ -114,7 +114,7 @@ export default defineComponent({
       return {
         ...t,
         role: app.i18n.t(t.role),
-        imageUrl: lowerCase(t.name) + ".webp",
+        imageUrl: t.name.toLowerCase() + ".webp",
       };
     });
 

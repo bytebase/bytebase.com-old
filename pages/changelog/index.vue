@@ -49,9 +49,8 @@
                     <template v-if="changelog.author">
                       <span aria-hidden="true">&middot;</span>
                       <img
-                        :src="
-                          require(`~/assets/people/${changelog.author.avatar}`)
-                        "
+                        v-if="changelog.author.avatar"
+                        :src="changelog.author.avatar"
                         class="w-6 h-6"
                       />
                       <span>{{ changelog.author.name }}</span>
@@ -84,7 +83,6 @@
 </template>
 
 <script lang="ts">
-import { lowerCase } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 
@@ -102,9 +100,12 @@ export default {
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
       )
       .map((changelog: any) => {
-        const author = getTeammateByName(changelog.author) as any;
-        if (author) {
-          author.avatar = `${lowerCase(author?.name)}.webp`;
+        let author: any = {
+          name: changelog.author,
+        };
+        const teammate = getTeammateByName(author.name) as any;
+        if (teammate) {
+          author.avatar = require(`~/assets/people/${teammate?.name.toLowerCase()}.webp`);
         }
 
         return {
