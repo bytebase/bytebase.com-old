@@ -103,58 +103,64 @@ import {
   ref,
   onMounted,
 } from "@nuxtjs/composition-api";
-import { shuffle, lowerCase } from "lodash";
+import { shuffle } from "lodash";
 import teammateList from "~/common/teammate";
+
+const founder = [
+  {
+    name: "Tianzhou",
+    fullname: "Tianzhou Chen",
+    role: "team.roles.cofounder-ceo",
+    imageUrl: "tianzhou.webp",
+    bio: "team.bio.tianzhou",
+  },
+  {
+    name: "Danny",
+    fullname: "Danny Xu",
+    role: "team.roles.cofounder-cto",
+    imageUrl: "danny.webp",
+    bio: "team.bio.danny",
+  },
+];
+
+const backer = [
+  {
+    name: "Matrix Partners China",
+    role: "",
+    imageUrl: "matrix.webp",
+  },
+  {
+    name: "Dongxu Huang",
+    role: "Co-Founder & CTO - PingCAP",
+    imageUrl: "dongxu.webp",
+  },
+];
 
 export default defineComponent({
   setup() {
     const { app } = useContext();
-
-    const people = teammateList.map((t) => {
-      return {
-        ...t,
-        role: app.i18n.t(t.role),
-        imageUrl: lowerCase(t.name) + ".webp",
-      };
-    });
-
-    const YOU = {
-      name: "You",
-      role: app.i18n.t("team.join-us"),
-      imageUrl: "wantyou.webp",
-    };
-
-    const founder = [
-      {
-        name: "Tianzhou Chen",
-        role: "team.roles.cofounder-ceo",
-        imageUrl: "tianzhou.webp",
-        bio: "team.bio.tianzhou",
-      },
-      {
-        name: "Danny Xu",
-        role: "team.roles.cofounder-cto",
-        imageUrl: "danny.webp",
-        bio: "team.bio.danny",
-      },
-    ];
-
-    const backer = [
-      {
-        name: "Matrix Partners China",
-        role: "",
-        imageUrl: "matrix.webp",
-      },
-      {
-        name: "Dongxu Huang",
-        role: "Co-Founder & CTO - PingCAP",
-        imageUrl: "dongxu.webp",
-      },
-    ];
-
     const shuffleList = ref<any[]>([]);
 
+    const founderNameList = founder.map((person) => person.name);
+    const people = teammateList
+      .filter((t) => {
+        return !founderNameList.includes(t.name);
+      })
+      .map((t) => {
+        return {
+          ...t,
+          role: app.i18n.t(t.role),
+          imageUrl: t.name.toLowerCase() + ".webp",
+        };
+      });
+
     onMounted(() => {
+      const YOU = {
+        name: "You",
+        role: app.i18n.t("team.join-us"),
+        imageUrl: "wantyou.webp",
+      };
+
       shuffleList.value = shuffle(people).concat(YOU);
     });
 
