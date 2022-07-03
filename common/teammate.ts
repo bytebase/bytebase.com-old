@@ -34,10 +34,6 @@ const teammateList = [
     role: "team.roles.engineering-intern",
   },
   {
-    name: "Ray",
-    role: "team.roles.community-intern",
-  },
-  {
     name: "Lucy",
     role: "team.roles.community-intern",
   },
