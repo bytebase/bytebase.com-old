@@ -17,6 +17,10 @@
         </h2>
       </div>
 
+      <div class="flex justify-center">
+        <PastCompanyBar />
+      </div>
+
       <h2 class="sr-only">Plans</h2>
 
       <!-- Cards -->
