@@ -2,14 +2,6 @@ import { camelCase } from "lodash";
 
 const teammateList = [
   {
-    name: "Tianzhou",
-    role: "team.roles.ceo",
-  },
-  {
-    name: "Danny",
-    role: "team.roles.cto",
-  },
-  {
     name: "Ningjing",
     role: "team.roles.community-manager",
   },
@@ -59,7 +51,7 @@ const teammateList = [
   },
   {
     name: "Mila",
-    role: "team.roles.community",
+    role: "team.roles.community-manager",
   },
   {
     name: "Zhengx",
