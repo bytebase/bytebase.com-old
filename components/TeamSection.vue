@@ -20,7 +20,7 @@
                   :src="require(`~/assets/people/${person.imageUrl}`)"
                   alt=""
                 />
-                <div class="col-span-3 text-left">
+                <div class="col-span-3 text-left pt-4">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
                       <h3>{{ person.name }}</h3>
@@ -106,55 +106,61 @@ import {
 import { shuffle } from "lodash";
 import teammateList from "~/common/teammate";
 
+const founder = [
+  {
+    name: "Tianzhou",
+    fullname: "Tianzhou Chen",
+    role: "team.roles.cofounder-ceo",
+    imageUrl: "tianzhou.webp",
+    bio: "team.bio.tianzhou",
+  },
+  {
+    name: "Danny",
+    fullname: "Danny Xu",
+    role: "team.roles.cofounder-cto",
+    imageUrl: "danny.webp",
+    bio: "team.bio.danny",
+  },
+];
+
+const backer = [
+  {
+    name: "Matrix Partners China",
+    role: "",
+    imageUrl: "matrix.webp",
+  },
+  {
+    name: "Dongxu Huang",
+    role: "Co-Founder & CTO - PingCAP",
+    imageUrl: "dongxu.webp",
+  },
+];
+
 export default defineComponent({
   setup() {
     const { app } = useContext();
-
-    const people = teammateList.map((t) => {
-      return {
-        ...t,
-        role: app.i18n.t(t.role),
-        imageUrl: t.name.toLowerCase() + ".webp",
-      };
-    });
-
-    const YOU = {
-      name: "You",
-      role: app.i18n.t("team.join-us"),
-      imageUrl: "wantyou.webp",
-    };
-
-    const founder = [
-      {
-        name: "Tianzhou Chen",
-        role: "team.roles.cofounder-ceo",
-        imageUrl: "tianzhou.webp",
-        bio: "team.bio.tianzhou",
-      },
-      {
-        name: "Danny Xu",
-        role: "team.roles.cofounder-cto",
-        imageUrl: "danny.webp",
-        bio: "team.bio.danny",
-      },
-    ];
-
-    const backer = [
-      {
-        name: "Matrix Partners China",
-        role: "",
-        imageUrl: "matrix.webp",
-      },
-      {
-        name: "Dongxu Huang",
-        role: "Co-Founder & CTO - PingCAP",
-        imageUrl: "dongxu.webp",
-      },
-    ];
-
     const shuffleList = ref<any[]>([]);
 
+    const founderNameList = founder.map((person) => person.name);
+    const people = teammateList
+      .filter((t) => {
+        return !founderNameList.includes(t.name);
+      })
+      .map((t) => {
+        return {
+          ...t,
+          role: app.i18n.t(t.role),
+          imageUrl: t.name.toLowerCase() + ".webp",
+        };
+      });
+
     onMounted(() => {
+      const YOU = {
+        name: "You",
+        role: app.i18n.t("team.join-us"),
+        imageUrl: "wantyou.webp",
+      };
+
       shuffleList.value = shuffle(people).concat(YOU);
     });
 
