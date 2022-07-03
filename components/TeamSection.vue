@@ -20,7 +20,7 @@
                   :src="require(`~/assets/people/${person.imageUrl}`)"
                   alt=""
                 />
-                <div class="col-span-3 text-left">
+                <div class="col-span-3 text-left pt-4">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
                       <h3>{{ person.name }}</h3>
