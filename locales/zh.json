@@ -367,5 +367,8 @@
   "brand": {
     "bytebase-brand": "Bytebase 品牌",
     "download-brand-kit": "下载品牌素材资源"
+  },
+  "past-company": {
+    "built-by": "我们的团队打造过 Google Cloud SQL, TiDB 以及 OceanBase"
   }
 }
