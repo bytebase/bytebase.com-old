@@ -190,9 +190,8 @@
   "team": {
     "meet-our-crew": "Meet our crew",
     "roles": {
-      "ceo": "Chief Sketching Officer",
-      "cto": "CTO",
-      "community": "Community",
+      "cofounder-ceo": "Co-Founder & CEO",
+      "cofounder-cto": "Co-Founder & CTO",
       "community-manager": "Community Manager",
       "engineering": "Engineering",
       "engineering-intern": "Engineering Intern",
@@ -201,6 +200,10 @@
       "product-manager": "Product Manager",
       "special-agent": "Special Agent",
       "advisor": "Advisor"
+    },
+    "bio": {
+      "tianzhou": "Tianzhou was the TL of Google Cloud SQL and the maintainer of Google's internal PostgreSQL and MySQL branch. He later joined Ant Group, where he was the head of Database/DevTools/Collaboration group and served as the chair of the company's coding committee.",
+      "danny": "Danny was the Staff Engineer at Google Cloud and TL overseeing Cloud SQL and API & Service Infrastructure. He has won Google's highest engineering award twice."
     },
     "backed-by-the-best": "Backed by the best",
     "join-us": "Join us"
