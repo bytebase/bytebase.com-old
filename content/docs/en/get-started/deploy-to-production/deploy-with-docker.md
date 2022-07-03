@@ -4,10 +4,8 @@ title: Docker (5 seconds)
 
 This document guides you to run Bytebase in docker, which takes less than 5 seconds.
 
-
 ## Prerequisites
 Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/). 
-
 
 ## Run on localhost:8080 or localhost:xxxx
 Run the following command to start Bytebase locally on localhost:8080.
@@ -42,19 +40,13 @@ docker run --init \
   --port 5678
 ```
 
-
-
 Bytebase will store its data under `~/.bytebase/data` , you can reset all data by running command:
-
   
 ```
 rm -rf ~/.bytebase/data
 ```
 
 Check [Server Startup Options](./reference/command-line) for other startup options.
-
-
-
 
 ## Run on [https://bytebase.example.com](https://bytebase.example.com/)
 

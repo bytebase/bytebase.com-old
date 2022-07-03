@@ -2,13 +2,11 @@
 title: Quick Start (5 mins Test)
 ---
 
-## Overview
-
 In this guide, you'll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
 
 ## Prerequisites
 
-Before starting, make sure you have installed Docker. You can click [here](https://www.docker.com/get-started/) to get Docker.
+Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/).
 
 ## Procedure
 
@@ -125,7 +123,7 @@ Now you are ready to manage these two "employee" databases in your project.Your 
 1. Go to "Employee" project page.
 2. Click **Alter Schema**, you will find an **Alter Schema** dialog box.
 3. Choose **Alter multiple databases**, select **Test > employee, Prod > employee**, and click **Next**.
-4. An issue is created, and you will be navigated to the new issue page. On top of _SQL_ box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
+4. An issue is created, and you will be navigated to the new issue page. On top of **SQL** box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
 
 ![create-an-issue](/docs/en/get-started/quick-start/create-an-issue.webp)
 

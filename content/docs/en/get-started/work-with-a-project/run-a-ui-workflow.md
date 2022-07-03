@@ -24,7 +24,6 @@ Bytebase supports both **Alter Schema** (DDL) and **Change Data** (DML). This do
 
 ![issue-form](/docs/en/get-started/work-with-a-project/run-a-ui-workflow/issue-form.webp)
 
-
 ## Step 2 - Approve an issue
 
 Only the **Assignee** or the **Project Owner** can approve an issue that requires manual approval.
@@ -33,9 +32,7 @@ Only the **Assignee** or the **Project Owner** can approve an issue that require
 - The SQL will run, if it’s successful, it will display **Done** up there.
 - After SQL runs successfully for each environment in the pipeline is created, click **Resolve issue**, and the **Issue** is **Done**.
 
-
 ![done](/docs/en/get-started/work-with-a-project/run-a-ui-workflow/done.webp)
-
 
 ## Summary
 Now you have completed the basic UI workflow in Bytebase. There is another more advanced workflow - version control workflow. If you want to try **Database-as-Code** - [Run a Version Control Workflow (GitOps)](../../use-bytebase/vcs-integration/overview).

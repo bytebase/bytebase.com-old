@@ -30,25 +30,23 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Deploy to Production](/get-started/deploy-to-production/overview)
 
-#### [System Requirement and Support](/get-started/deploy-to-production/system-requirement-and-support)
+#### [System Requirement and Support](/get-started/deploy-to-production/system-requirements-and-supported-versions)
 #### [Option 1 Docker (5 seconds)](/get-started/deploy-to-production/deploy-with-docker)
 
-#### [Option 2 Install Script](/get-started/deploy-to-production/install-script)
+#### [Option 2 Installation Script](/get-started/deploy-to-production/installation-script)
 
-#### [Option 3 Build from Source](/get-started/deploy-to-production/build-from-source)
+#### [Option 3 Build from Source Code](/get-started/deploy-to-production/build-from-source-code)
 
 #### [Use External PostgreSQL Database](/get-started/deploy-to-production/external-postgres)
-#### [Perform Upgrade](/get-started/deploy-to-production/perform-upgrade)
+### [Configure Workspace](/get-started/configure-workspace/overview)
 
-### [Configure the Workspace](/get-started/configure-the-workspace/overview)
+#### [Register Accounts](/get-started/configure-workspace/register-accounts)
+#### [Manage Members](/get-started/configure-workspace/manage-members)
+#### [Set up Environments](/get-started/configure-workspace/set-up-environments)
+#### [Add an Instance](/get-started/configure-workspace/add-an-instance)
+#### [Add a MySQL Instance for Testing](/get-started/configure-workspace/add-a-mysql-instance-for-testing)
 
-#### [Register Accounts](/get-started/configure-the-workspace/register-accounts)
-#### [Manage Members](/get-started/configure-the-workspace/manage-members)
-#### [Set up Environments](/get-started/configure-the-workspace/set-up-environments)
-#### [Add an Instance](/get-started/configure-the-workspace/add-an-instance)
-#### [Add a MySQL Instance for Testing](/get-started/configure-the-workspace/add-a-mysql-instance-for-testing)
-
-#### [Customize the Logo](/get-started/configure-the-workspace/customize-the-logo)
+#### [Customize the Logo](/get-started/configure-workspace/customize-the-logo)
 
 
 ### [Work with a Project](/get-started/work-with-a-project/overview)
