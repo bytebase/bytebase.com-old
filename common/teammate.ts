@@ -3,11 +3,11 @@ import { camelCase } from "lodash";
 const teammateList = [
   {
     name: "Tianzhou",
-    role: "team.roles.ceo",
+    role: "team.roles.cofounder-ceo",
   },
   {
     name: "Danny",
-    role: "team.roles.cto",
+    role: "team.roles.cofounder-cto",
   },
   {
     name: "Ningjing",
@@ -32,10 +32,6 @@ const teammateList = [
   {
     name: "Steven",
     role: "team.roles.engineering-intern",
-  },
-  {
-    name: "Ray",
-    role: "team.roles.community-intern",
   },
   {
     name: "Lucy",
@@ -63,7 +59,7 @@ const teammateList = [
   },
   {
     name: "Mila",
-    role: "team.roles.community",
+    role: "team.roles.community-manager",
   },
   {
     name: "Zhengx",

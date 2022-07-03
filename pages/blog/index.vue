@@ -38,10 +38,9 @@
         </nuxt-link>
         <div class="mt-4 flex items-center">
           <img
+            v-if="latestFeaturedBlog.author.avatar"
             class="w-8 mr-2 h-auto rounded-full"
-            :src="
-              require(`~/assets/people/${latestFeaturedBlog.author.avatar}`)
-            "
+            :src="latestFeaturedBlog.author.avatar"
             alt
           />
           <span class="text-sm font-medium text-gray-500">
@@ -142,8 +141,9 @@
             <div class="flex-shrink-0">
               <span class="sr-only">{{ blog.author.name }}</span>
               <img
+                v-if="blog.author.avatar"
                 class="h-10 w-10 rounded-full"
-                :src="require(`~/assets/people/${blog.author.avatar}`)"
+                :src="blog.author.avatar"
                 alt
               />
             </div>
@@ -167,7 +167,7 @@
 </template>
 
 <script lang="ts">
-import { first, lowerCase } from "lodash";
+import { first } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../common/type";
@@ -187,9 +187,12 @@ export default {
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
       )
       .map((blog: any) => {
-        const author = getTeammateByName(blog.author) as any;
-        if (author) {
-          author.avatar = `${lowerCase(author?.name)}.webp`;
+        let author: any = {
+          name: blog.author,
+        };
+        const teammate = getTeammateByName(author.name) as any;
+        if (teammate) {
+          author.avatar = require(`~/assets/people/${teammate.name.toLowerCase()}.webp`);
         }
 
         return {

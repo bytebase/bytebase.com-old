@@ -17,8 +17,18 @@
         <a
           :href="localePath('/docs/cli/overview')"
           class="header-link"
-          @click="track('blog.header')"
+          @click="track('cli.header')"
           >CLI</a
+        >
+        <a
+          :href="
+            localePath(
+              '/docs/database-how-to/clickhouse/how-to-run-clickhouse-docker'
+            )
+          "
+          class="header-link"
+          @click="track('database-how-to.header')"
+          >Database How-To</a
         >
         <nuxt-link
           to="/blog"

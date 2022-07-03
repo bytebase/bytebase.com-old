@@ -27,8 +27,9 @@
       class="flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
     >
       <img
+        v-if="blog.author.avatar"
         class="h-10 w-10 rounded-full mr-2"
-        :src="require(`~/assets/people/${blog.author.avatar}`)"
+        :src="blog.author.avatar"
         alt=""
       />{{ blog.author.name }}
       <div class="ml-2 flex space-x-1 text-gray-500">
@@ -53,7 +54,7 @@
 
 <script lang="ts">
 import Toc from "~/components/Toc.vue";
-import { lowerCase, startsWith } from "lodash";
+import { startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 import { PostTag, postTagStyle } from "../../../common/type";
@@ -65,9 +66,12 @@ export default {
     const data = await $content("blog", params.slug, {
       deep: true,
     }).fetch();
-    const author = getTeammateByName(data.author) as any;
-    if (author) {
-      author.avatar = `${lowerCase(author?.name)}.webp`;
+    let author: any = {
+      name: data.author,
+    };
+    const teammate = getTeammateByName(author.name) as any;
+    if (teammate) {
+      author.avatar = require(`~/assets/people/${teammate?.name.toLowerCase()}.webp`);
     }
 
     const blog = {

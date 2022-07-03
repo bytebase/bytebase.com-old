@@ -190,17 +190,20 @@
   "team": {
     "meet-our-crew": "认识我们的团队",
     "roles": {
-      "ceo": "Chief Sketching Officer",
-      "cto": "CTO",
-      "community": "Community",
-      "community-manager": "Community Manager",
-      "engineering": "Engineering",
-      "engineering-intern": "Engineering Intern",
-      "community-intern": "Community Intern",
-      "solution-architect": "Solution Architect",
-      "product-manager": "Product Manager",
+      "cofounder-ceo": "联合创始人兼CEO",
+      "cofounder-cto": "联合创始人兼CTO",
+      "community-manager": "社区经理",
+      "engineering": "工程师",
+      "engineering-intern": "实习工程师",
+      "community-intern": "实习社区专员",
+      "solution-architect": "解决方案架构师",
+      "product-manager": "产品经理",
       "special-agent": "Special Agent",
-      "advisor": "Advisor"
+      "advisor": "顾问"
+    },
+    "bio": {
+      "tianzhou": "天舟曾担任 Google Cloud SQL 技术负责人，也是 Google 内部 MySQL & PostgreSQL 分支的维护者。他后来加入了蚂蚁集团，领导数据库/开发者工具/协同平台大组，同时他还担任公司代码委员会主席。",
+      "danny": "Danny 曾担任 Google Cloud 主任工程师，是 Cloud SQL 和 API & Service Infrastructure 的技术负责人。他曾两次获得 Google 最高工程奖。"
     },
     "backed-by-the-best": "背后最好的支持",
     "join-us": "加入我们"
@@ -367,5 +370,8 @@
   "brand": {
     "bytebase-brand": "Bytebase 品牌",
     "download-brand-kit": "下载品牌素材资源"
+  },
+  "past-company": {
+    "built-by": "我们的团队打造过 Google Cloud SQL, TiDB 以及 OceanBase"
   }
 }

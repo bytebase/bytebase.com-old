@@ -20,7 +20,8 @@
         <template v-if="changelog.author">
           <span aria-hidden="true">&middot;</span>
           <img
-            :src="require(`~/assets/people/${changelog.author.avatar}`)"
+            v-if="changelog.author.avatar"
+            :src="changelog.author.avatar"
             class="w-6 h-6"
           />
           <span>{{ changelog.author.name }}</span>
@@ -39,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { lowerCase, startsWith } from "lodash";
+import { startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
 import Toc from "~/components/Toc.vue";
@@ -50,10 +51,12 @@ export default {
     const data = await $content("changelog", params.slug, {
       deep: true,
     }).fetch();
-
-    const author = getTeammateByName(data.author) as any;
-    if (author) {
-      author.avatar = `${lowerCase(author?.name)}.webp`;
+    let author: any = {
+      name: data.author,
+    };
+    const teammate = getTeammateByName(author.name) as any;
+    if (teammate) {
+      author.avatar = require(`~/assets/people/${teammate.name.toLowerCase()}.webp`);
     }
 
     const changelog = {
