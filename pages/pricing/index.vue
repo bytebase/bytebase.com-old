@@ -17,7 +17,7 @@
         </h2>
       </div>
 
-      <div class="flex justify-center py-4">
+      <div class="flex justify-center">
         <PastCompanyBar />
       </div>
 
