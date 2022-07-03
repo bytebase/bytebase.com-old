@@ -367,8 +367,5 @@
   "brand": {
     "bytebase-brand": "Bytebase Brand",
     "download-brand-kit": "Download Brand Kit"
-  },
-  "past-company": {
-    "built-by": "Built by the team that built Google Cloud SQL, TiDB and OceanBase"
   }
 }
