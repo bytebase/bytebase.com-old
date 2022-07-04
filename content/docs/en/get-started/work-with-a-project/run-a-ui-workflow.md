@@ -35,4 +35,4 @@ Only the **Assignee** or the **Project Owner** can approve an issue that require
 ![done](/docs/en/get-started/work-with-a-project/run-a-ui-workflow/done.webp)
 
 ## Summary
-Now you have completed the basic UI workflow in Bytebase. There is another more advanced workflow - version control workflow. If you want to try **Database-as-Code** - [Run a Version Control Workflow (GitOps)](../../use-bytebase/vcs-integration/overview).
+Now you have completed the basic UI workflow in Bytebase. There is another more advanced workflow - version control workflow. If you want to try **Database-as-Code** - [Run a Version Control Workflow (GitOps)](../../accelerator/vcs-integration/overview).

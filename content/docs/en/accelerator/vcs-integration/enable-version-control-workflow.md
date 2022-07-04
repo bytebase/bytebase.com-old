@@ -36,7 +36,7 @@ Go to the project which you want to enable version control workflow. Choose "**V
 
 <hint-block type="info">
 
-You can only link Git repository from one of the existing Git providers in Bytebase. If your desired Git provider is not there, you need to contact **Workspace Owner** to follow [Add Git Provider](/docs/use-bytebase/vcs-integration/add-git-provider) to add it.
+You can only link Git repository from one of the existing Git providers in Bytebase. If your desired Git provider is not there, you need to contact **Workspace Owner** to follow [Add Git Provider](/docs/accelerator/vcs-integration/add-git-provider) to add it.
 
 </hint-block>
 
@@ -44,7 +44,7 @@ Click the Git provider hosting your repository. After you click the button, Byte
 
 <hint-block type="info">
 
-If you encounter error during this process, it's likely the Git provider is not setup properly and you need to contact **Workspace Owner** to double check the setup following [Add Git Provider](/docs/use-bytebase/vcs-integration/add-git-provider).
+If you encounter error during this process, it's likely the Git provider is not setup properly and you need to contact **Workspace Owner** to double check the setup following [Add Git Provider](/docs/accelerator/vcs-integration/add-git-provider).
 
 </hint-block>
 
@@ -105,7 +105,7 @@ Optional placeholders
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 - {{DESCRIPTION}} - Specify a description for the migration.
 
-Check [name and organize schema files](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
+Check [name and organize schema files](/docs/accelerator/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
 
 #### Schema path template - Optional
 
@@ -131,4 +131,4 @@ Optional placeholders
 
 ![prject-vcs-step](/static/docs/prject-vcs-step5.png)
 
-Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
+Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/accelerator/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.

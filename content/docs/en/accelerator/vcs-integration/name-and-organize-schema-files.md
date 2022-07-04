@@ -6,7 +6,7 @@ If project enables version control workflow, it will observe file changes in the
 
 ## File Path Template
 
-Bytebase allows user to customize the [file path](/docs/use-bytebase/vcs-integration/enable-version-control-workflow#file-path-template-required-default-env_name-version-__-db_name-__-type-__-description-sql) of the schema file. This file path is relative to the [base directory](/docs/use-bytebase/vcs-integration/enable-version-control-workflow#base-directory-default-root-directory).
+Bytebase allows user to customize the [file path](/docs/accelerator/vcs-integration/enable-version-control-workflow#file-path-template-required-default-env_name-version-__-db_name-__-type-__-description-sql) of the schema file. This file path is relative to the [base directory](/docs/accelerator/vcs-integration/enable-version-control-workflow#base-directory-default-root-directory).
 
 The default file path template is `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
 
@@ -47,7 +47,7 @@ An optional description string can be included in the file name. If provided, By
 
 💡 **This is useful to let repository always keep a complete schema of the corresponding database.**
 
-Bytebase allows user to customize the [schema path](/docs/use-bytebase/vcs-integration/enable-version-control-workflow#schema-path-template-optional) of the schema file. This path is relative to the [base directory](/docs/use-bytebase/vcs-integration/enable-version-control-workflow#base-directory-default-root-directory). When specified, after each migration, Bytebase will write the latest schema to this schema path relative to the base directory in the same branch as the original commit triggering the migration. Leave empty if you don't want Bytebase to do this.
+Bytebase allows user to customize the [schema path](/docs/accelerator/vcs-integration/enable-version-control-workflow#schema-path-template-optional) of the schema file. This path is relative to the [base directory](/docs/accelerator/vcs-integration/enable-version-control-workflow#base-directory-default-root-directory). When specified, after each migration, Bytebase will write the latest schema to this schema path relative to the base directory in the same branch as the original commit triggering the migration. Leave empty if you don't want Bytebase to do this.
 
 The default schema path template is `{{ENV_NAME}}/.{{DB_NAME}}__LATEST.sql`
 
@@ -106,4 +106,4 @@ The pros and cons are the opposite of Approach 1. Though this approach brings le
 
 This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since we want the migration files to be the source of truth of the database schema.
 
-After settling down the file structure, now we can go ahead to [create the first baseline migration](/docs/use-bytebase/vcs-integration/create-the-first-baseline-migration).
+After settling down the file structure, now we can go ahead to [create the first baseline migration](/docs/accelerator/vcs-integration/create-the-first-baseline-migration).

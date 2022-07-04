@@ -10,9 +10,31 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [What is Bytebase](/introduction/what-is-bytebase)
 
 ### [Use Cases](/introduction/use-cases)
+### [Features](/introduction/features/overview)
 
+#### [SQL Review](/introduction/features/sql-review)
 
-## 📚 Concepts
+#### [Schema Review](/introduction/features/schema-review)
+
+#### [SQL Advisor](/introduction/features/sql-advisor)
+
+#### [Version Control (GitOps)](/introduction/features/version-control)
+
+#### [Tenant Database Management](/introduction/features/tenant-database-management)
+
+#### [Migration History](/introduction/features/migration-history)
+#### [Drift Detection](/introduction/features/drift-detection)
+
+#### [SQL Editor](/introduction/features/sql-editor)
+#### [Backup and Restore](/introduction/features/backup-and-restore)
+
+#### [Anomaly Center](/introduction/features/anomaly-center)
+
+#### [Webhook](/introduction/features/webhook)
+
+#### [Archive](/introduction/features/archive)
+
+## 🔑 Concepts
 
 ### [Data Model](/concepts/data-model)
 
@@ -48,121 +70,65 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Customize the Logo](/get-started/configure-workspace/customize-the-logo)
 
-
 ### [Work with a Project](/get-started/work-with-a-project/overview)
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
+## 🚀 Accelerator
 
+### [VCS Integration (GitOps)](/accelerator/vcs-integration/overview)
 
-## ✨ Features
+#### [Add Git Provider](/accelerator/vcs-integration/add-git-provider)
 
-### [SQL Review](/features/sql-review)
+#### [Enable Version Control Workflow (GitOps) in Project](/accelerator/vcs-integration/enable-version-control-workflow)
 
-### [Version Control (GitOps)](/features/version-control)
+#### [Name and Organize Schema Files](/accelerator/vcs-integration/name-and-organize-schema-files)
 
-### [Tenant Database Management](/features/tenant-database-management)
+#### [Create the First Baseline Migration](/accelerator/vcs-integration/create-the-first-baseline-migration)
 
-### [SQL Editor](/features/sql-editor/overview)
+#### [🐞 Troubleshoot](/accelerator/vcs-integration/troubleshoot)
 
-#### [Compose a Query](/features/sql-editor/writing-a-query)
+### [Schema Review](/accelerator/schema-review/overview)
 
-#### [Run and EXPLAIN Query](/features/sql-editor/run-queries)
+#### [Create Schema Review Policy](/accelerator/schema-review/create-schema-review-policy)
 
-#### [Query Results](/features/sql-editor/query-results)
+#### [Schema Reivew Check in the Issue](/accelerator/schema-review/schema-review-check-in-the-issue)
 
-#### [Explore the Schema](/features/sql-editor/explore-the-schema)
+#### [View Schema Review Policy](/accelerator/schema-review/view-schema-review-policy)
 
-#### [Saved Sheet and Query History](/features/sql-editor/never-miss-your-works)
+#### [Edit Schema Review Policy](/accelerator/schema-review/edit-schema-review-policy)
 
-#### [Share Sheet with Teammates](/features/sql-editor/share-sheet-with-teammates)
+#### [Disable and Delete Schema Review Policy](/accelerator/schema-review/disable-delete-policy)
+### [Backup and Restore Database](/accelerator/backup-restore-database/overview)
 
-### [SQL Advisor](/features/sql-advisor/overview)
+#### [Backup](/accelerator/backup-restore-database/backup)
 
-### [Schema Review](/features/schema-review/overview)
+#### [Restore from Backup](/accelerator/backup-restore-database/restore-from-backup)
 
-#### [Require InnoDB](/features/schema-review/engine-mysql-use-innodb)
+### [SQL Editor](/accelerator/sql-editor/overview)
 
-#### [Table Naming Convention](/features/schema-review/naming-table)
+#### [Compose a Query](/accelerator/sql-editor/writing-a-query)
 
-#### [Column Naming Convention](/features/schema-review/naming-column)
+#### [Run and EXPLAIN Query](/accelerator/sql-editor/run-queries)
 
-#### [Index Naming Convention](/features/schema-review/naming-index-idx)
+#### [Query Results](/accelerator/sql-editor/query-results)
 
-#### [Unique Key Naming Convention](/features/schema-review/naming-index-uk)
+#### [Explore the Schema](/accelerator/sql-editor/explore-the-schema)
 
-#### [Foreign Key Naming Convention](/features/schema-review/naming-index-fk)
+#### [Saved Sheet and Query History](/accelerator/sql-editor/never-miss-your-works)
 
-#### [Disallow SELECT *](/features/schema-review/query-select-no-select-all)
+#### [Share Sheet with Teammates](/accelerator/sql-editor/share-sheet-with-teammates)
 
-#### [Require WHERE Clause](/features/schema-review/query-where-require)
+### [Environment Policy](/accelerator/environment-policy/overview)
 
-#### [Disallow Leading % in LIKE](/features/schema-review/query-where-no-leading-wildcard-like)
+#### [Approval Policy](/accelerator/environment-policy/approval-policy)
 
-#### [Require Primary Key](/features/schema-review/table-require-pk)
+#### [Backup Schedule Policy](/accelerator/environment-policy/backup-schedule-policy)
+### [Webhook Integration](/accelerator/webhook-integration/overview)
 
-#### [Backward Incompatible Schema Change](/features/schema-review/schema-migration-compatibility)
+#### [Project Webhook](/accelerator/webhook-integration/project-webhook)
 
-#### [Enforce the Required Columns in Each Table](/features/schema-review/column-required)
-
-#### [Columns No NULL Value](/features/schema-review/column-no-null)
-
-
-### [Migration History](/features/migration-history)
-
-### [Drift Detection](/features/drift-detection)
-
-### [Backup and Restore](/features/backup-and-restore)
-
-### [Anomaly Center](/features/anomaly-center)
-
-### [Webhook](/features/webhook)
-
-### [Archive](/features/archive)
-
-## 🧭 Use Bytebase
-
-### [VCS Integration (GitOps)](/use-bytebase/vcs-integration/overview)
-
-#### [Add Git Provider](/use-bytebase/vcs-integration/add-git-provider)
-
-#### [Enable Version Control Workflow (GitOps) in Project](/use-bytebase/vcs-integration/enable-version-control-workflow)
-
-#### [Name and Organize Schema Files](/use-bytebase/vcs-integration/name-and-organize-schema-files)
-
-#### [Create the First Baseline Migration](/use-bytebase/vcs-integration/create-the-first-baseline-migration)
-
-#### [🐞 Troubleshoot](/use-bytebase/vcs-integration/troubleshoot)
-
-### [Backup and Restore Database](/use-bytebase/backup-restore-database/overview)
-
-#### [Backup](/use-bytebase/backup-restore-database/backup)
-
-#### [Restore from Backup](/use-bytebase/backup-restore-database/restore-from-backup)
-
-### [Environment Policy](/use-bytebase/environment-policy/overview)
-
-#### [Approval Policy](/use-bytebase/environment-policy/approval-policy)
-
-#### [Backup Schedule Policy](/use-bytebase/environment-policy/backup-schedule-policy)
-
-### [Schema Review](/use-bytebase/schema-review/overview)
-
-#### [Create Schema Review Policy](/use-bytebase/schema-review/create-schema-review-policy)
-
-#### [Schema Reivew Check in the Issue](/use-bytebase/schema-review/schema-review-check-in-the-issue)
-
-#### [View Schema Review Policy](/use-bytebase/schema-review/view-schema-review-policy)
-
-#### [Edit Schema Review Policy](/use-bytebase/schema-review/edit-schema-review-policy)
-
-#### [Disable and Delete Schema Review Policy](/use-bytebase/schema-review/disable-delete-policy)
-
-### [Webhook Integration](/use-bytebase/webhook-integration/overview)
-
-#### [Project Webhook](/use-bytebase/webhook-integration/project-webhook)
-
-#### [Database Webhook](/use-bytebase/webhook-integration/database-webhook)
+#### [Database Webhook](/accelerator/webhook-integration/database-webhook)
 
 ## 🔧 Operating
 
@@ -178,7 +144,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Server Startup Options](/reference/command-line)
 
-## [Error Code](/error-code)
+### [Error Code](/reference/error-code)
 
 ## Troubleshooting
 

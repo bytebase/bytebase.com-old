@@ -6,7 +6,7 @@ title: Version Control (GitOps)
 
 Bytebase supports this version control model to integrate database schema with the VCS. To set it up, please follow
 
-<doc-link-block url="/docs/use-bytebase/vcs-integration/overview" title="VCS Integration"></doc-link-block>
+<doc-link-block url="/docs/accelerator/vcs-integration/overview" title="VCS Integration"></doc-link-block>
 
 ## References
 

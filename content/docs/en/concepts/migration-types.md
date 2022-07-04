@@ -20,12 +20,12 @@ mysqldump --no-data <<dbname>>
 
 See further details in
 
-<doc-link-block url="/docs/use-bytebase/vcs-integration/create-the-first-baseline-migration" title="Create the first baseline migration"></doc-link-block>
+<doc-link-block url="/docs/accelerator/vcs-integration/create-the-first-baseline-migration" title="Create the first baseline migration"></doc-link-block>
 
 ## Normal Migration
 
-Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/use-bytebase/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
+Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/accelerator/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
 
 ## Branch Migration
 
-A branch migration history is recorded when a database is restored from a backup. See [Restore from Backup](/docs/use-bytebase/backup-restore-database/restore-from-backup#step-4-view-the-restored-database) for details.
+A branch migration history is recorded when a database is restored from a backup. See [Restore from Backup](/docs/accelerator/backup-restore-database/restore-from-backup#step-4-view-the-restored-database) for details.

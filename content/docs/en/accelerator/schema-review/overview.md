@@ -21,8 +21,8 @@ Bytebase defines `Schema Review Policy` for each `Environment`. The `Schema Revi
 
 ## Operation Manual
 
-- [Create Schema Review Policy](/docs/use-bytebase/schema-review/create-schema-review-policy)
-- [Schema Reivew Check in the Issue](/docs/use-bytebase/schema-review/schema-review-check-in-the-issue)
-- [View Schema Review Policy](/docs/use-bytebase/schema-review/view-schema-review-policy)
-- [Edit Schema Review Policy](/docs/use-bytebase/schema-review/edit-schema-review-policy)
-- [Disable and Delete Schema Review Policy](/docs/use-bytebase/schema-review/disable-delete-policy)
+- [Create Schema Review Policy](/docs/accelerator/schema-review/create-schema-review-policy)
+- [Schema Reivew Check in the Issue](/docs/accelerator/schema-review/schema-review-check-in-the-issue)
+- [View Schema Review Policy](/docs/accelerator/schema-review/view-schema-review-policy)
+- [Edit Schema Review Policy](/docs/accelerator/schema-review/edit-schema-review-policy)
+- [Disable and Delete Schema Review Policy](/docs/accelerator/schema-review/disable-delete-policy)
