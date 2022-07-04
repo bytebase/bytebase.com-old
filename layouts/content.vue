@@ -32,19 +32,19 @@
         >
         <nuxt-link
           to="/blog"
-          class="header-link"
+          class="header-link hidden sm:block"
           @click.native="track('blog.header')"
           >Blog</nuxt-link
         >
         <nuxt-link
           :to="localePath('/changelog')"
-          class="header-link"
+          class="header-link hidden sm:block"
           @click.native="track('changelog.header')"
           >Changelog</nuxt-link
         >
         <nuxt-link
           :to="localePath('/pricing')"
-          class="header-link"
+          class="header-link hidden sm:block"
           @click.native="track('pricing.header')"
           >Pricing</nuxt-link
         >
@@ -61,14 +61,14 @@
           <a
             href="https://demo.bytebase.com?ref=bytebase.com"
             target="_blank"
-            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+            class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
             @click="track('demo.header')"
           >
             Demo
           </a>
           <nuxt-link
             :to="localePath('/docs/install/install-with-docker')"
-            class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
+            class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
             >Deploy now</nuxt-link
           >
@@ -216,6 +216,6 @@ export default defineComponent({
   @apply font-normal;
 }
 .DocSearch-Button-Container > .DocSearch-Search-Icon {
-  @apply w-4 h-auto ml-1;
+  @apply w-4 h-auto mx-0.5 sm:ml-1;
 }
 </style>
