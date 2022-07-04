@@ -2,30 +2,14 @@
 title: Docker (5 seconds)
 ---
 
-**Latest release version:** [**1.2.0**](https://github.com/bytebase/bytebase/releases/tag/1.2.0)
+This document guides you to run Bytebase in docker, which takes less than 5 seconds.
 
-<hint-block type="info">
+## Prerequisites
+Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/). 
 
-When running on docker, the --publish \{{hostport\}}:\{{containerport\}} and the ---port flag must be the same. Like the example below, all 3 ports are 5678: --publish 5678:5678 --port 5678
-
-</hint-block>
-
-```bash
-docker run --init \
-  --name bytebase \
-  --restart always \
-  --add-host host.docker.internal:host-gateway \
-  --publish 5678:5678 \
-  --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:1.2.0 \
-  --data /var/opt/bytebase \
-  --host http://localhost \
-  --port 5678
+## Run on localhost:8080 or localhost:xxxx
+Run the following command to start Bytebase locally on localhost:8080.
 ```
-
-## Run on localhost:8080
-
-```bash
 docker run --init \
   --name bytebase \
   --restart always \
@@ -38,25 +22,37 @@ docker run --init \
   --port 8080
 ```
 
-Bytebase will then start on http://localhost:8080 and store its data under `~/.bytebase/data` (Check [Server Startup Options](/docs/reference/command-line) for other startup options).
+You can change `8080` to `5678` or something else, however, make sure these three ports are the same:
+- --publish {{hostport}}
+- :{{containerport}} 
+- --port {{port}}}
 
-Open [http://localhost:8080](http://localhost:8080) in you browser and create the admin account.
+```
+docker run --init \
+  --name bytebase \
+  --restart always \
+  --add-host host.docker.internal:host-gateway \
+  --publish 5678:5678 \
+  --volume ~/.bytebase/data:/var/opt/bytebase \
+  bytebase/bytebase:1.2.0 \
+  --data /var/opt/bytebase \
+  --host http://localhost \
+  --port 5678
+```
 
-<hint-block type="info">
+Bytebase will store its data under `~/.bytebase/data` , you can reset all data by running command:
+  
+```
+rm -rf ~/.bytebase/data
+```
 
-Bytebase has already prepared some sample data. In particular, it has created a Test environment and a Prod environment, each containing a mysql instance. To establish the connection to those instances, one quick way is to [start a MySQL docker instance](#start-a-mysql-docker-instance-for-testing).
+Check [Server Startup Options](./reference/command-line) for other startup options.
 
-</hint-block>
+## Run on [https://bytebase.example.com](https://bytebase.example.com/)
 
-## Run on https://bytebase.example.com
+Run the following command to start Bytebase on [https://bytebase.example.com](https://bytebase.example.com/)
 
-<hint-block type="info">
-
-For production setup, you need to make sure [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
-
-</hint-block>
-
-```bash
+```
 docker run --init \
   --name bytebase \
   --restart always \
@@ -69,49 +65,22 @@ docker run --init \
   --port 80
 ```
 
-## Start a local MySQL server for testing
-
-### Run MySQL inside Docker
-
-<hint-block type="warning">
-
-The setup below is for testing purpose and should NOT be used in production setup. Also the mysql data will be wiped out after the container stops.
-
-</hint-block>
-
-```bash
-docker run --name mysqld \
-  --publish 3306:3306 \
-  -e MYSQL_ROOT_HOST=172.17.0.1 \
-  -e MYSQL_ROOT_PASSWORD=testpwd1 \
-  mysql/mysql-server:8.0
-```
-
-`172.17.0.1` is the default docker gateway IP to allow connection from Bytebase. See the [official MySQL docker doc](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host).
-
 <hint-block type="info">
 
-If Bytebase is run by docker, then it will also access the MySQL container via 172.17.0.1. This means when you add that instance from the instance detail page, you need to set **`172.17.0.1`** as the host.
-
-</hint-block>
-
-### Run MySQL without Docker
-
-<hint-block type="info">
-
-Unlike setting 172.17.0.1 mentioned in the above section, you need to set **`host.docker.internal`** as the host for the configured instance.
+For production setup, you need to make sure [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/operating/production-setup) for more advice.
 
 </hint-block>
 
 ## Troubleshoot
 
-```bash
+Run the following if something goes wrong.
+```
 docker logs bytebase
 ```
 
-Normally you should see something like:
+Normally you should see this:
 
-```bash
+```
 -----Config BEGIN-----
 mode=release
 host=http://example.com
@@ -135,7 +104,17 @@ debug=false
 ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
 ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
 
-Version 0.1.0 has started at http://example.com:8080
+Version 1.2.0 has started at http://example.com:8080
 ```
 
-If Bytebase fails to start, the error message should appear on the console around there.
+### Unable to start Bytebase with Docker
+
+#### Using [Colima](https://github.com/abiosoft/colima)
+
+Due to the vm mechanism of colima, try to use the `--mount` option when starting colima as shown below:
+
+```bash
+mkdir ~/volumes
+colima start --mount ~/volumes:w
+docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 8080:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:1.1.0 --data /var/opt/bytebase --host http://localhost --port 8080
+```
