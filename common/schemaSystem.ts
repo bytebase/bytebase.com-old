@@ -1,4 +1,4 @@
-import schemaSystemConfig from "./sql_review_config.yaml";
+import schemaSystemConfig from "./sqlReviewConfig.yaml";
 
 export enum RuleLevel {
   DISABLED = "DISABLED",
@@ -66,12 +66,12 @@ export interface GuidelineTemplate {
 }
 
 export const guidelineTemplateList =
-  schemaSystemConfig.template_list as GuidelineTemplate[];
+  schemaSystemConfig.templateList as GuidelineTemplate[];
 
 export const convertToCategoryList = (
   ruleList: RuleTemplate[]
 ): RuleCategory[] => {
-  const categoryList = schemaSystemConfig.category_list as CategoryType[];
+  const categoryList = schemaSystemConfig.categoryList as CategoryType[];
   const categoryOrder = categoryList.reduce((map, category, index) => {
     map.set(category, index);
     return map;
