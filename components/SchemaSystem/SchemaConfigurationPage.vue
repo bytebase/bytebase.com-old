@@ -6,7 +6,7 @@
         :class-names="['bg-white hover:bg-gray-200']"
         @click="$emit('reset')"
       >
-        Reset
+        {{ $t("database-review-guide.reset-changes") }}
       </ActionButton>
       <ActionButton
         :class-names="[
@@ -14,13 +14,15 @@
         ]"
         @click="downConfiguration"
       >
-        Download as image
+        {{ $t("database-review-guide.download-as-image") }}
       </ActionButton>
     </div>
     <div class="lg:grid lg:grid-cols-6 lg:gap-x-8">
       <aside class="hidden mt-2 lg:block lg:col-span-2 p-5">
         <div class="space-y-6 mb-6 pb-6 border-b border-gray-300">
-          <h1 class="text-left text-2xl font-semibold">Filter</h1>
+          <h1 class="text-left text-2xl font-semibold">
+            {{ $t("database-review-guide.filter") }}
+          </h1>
           <div class="space-y-2">
             <div
               v-for="(filter, index) in state.filterOptionList"
@@ -38,7 +40,13 @@
                 :for="filter.id"
                 class="ml-3 items-center text-sm text-gray-600"
               >
-                {{ filter.name }}
+                {{
+                  $t(
+                    `database-review-guide.${
+                      filter.type
+                    }.${filter.id.toLowerCase()}`
+                  )
+                }}
                 <span
                   class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
                 >
@@ -49,10 +57,16 @@
           </div>
         </div>
         <div class="space-y-6">
-          <h1 class="text-left text-2xl font-semibold">Rules</h1>
+          <h1 class="text-left text-2xl font-semibold">
+            {{ $t("database-review-guide.rules") }}
+          </h1>
           <fieldset v-for="(category, index) in categoryList" :key="index">
             <div class="block text-sm font-medium text-gray-900">
-              {{ category.name }}
+              {{
+                $t(
+                  `database-review-guide.category.${category.id.toLowerCase()}`
+                )
+              }}
             </div>
             <div
               v-for="(rule, ruleIndex) in category.ruleList"
@@ -60,10 +74,16 @@
               class="pt-2 flex items-center text-sm group"
             >
               <a
-                :href="`#${rule.id.replace(/\./g, '-')}`"
+                :href="`#${rule.type.replace(/\./g, '-')}`"
                 class="text-gray-600 hover:underline cursor-pointer"
               >
-                {{ rule.id }}
+                {{
+                  $t(
+                    `database-review-guide.rule.${getRuleLocalizationKey(
+                      rule.type
+                    )}.title`
+                  )
+                }}
               </a>
             </div>
           </fieldset>
@@ -79,7 +99,7 @@
     </div>
     <Modal
       :open="state.openConfigModal && !!state.selectedRule"
-      :title="state.selectedRule ? state.selectedRule.id : ''"
+      :title="$t('database-review-guide.configure-rule')"
       @close="state.openConfigModal = false"
     >
       <SchemaRuleConfig
@@ -104,60 +124,48 @@ import domtoimage from "dom-to-image";
 import SchemaSystemPreview from "./SchemaSystemPreview.vue";
 import ActionButton from "../ActionButton.vue";
 import {
-  levelList,
-  RulePayload,
+  LEVEL_LIST,
   RuleLevel,
-  SelectedRule,
+  RuleTemplate,
   RuleCategory,
-  CategoryType,
-  DatabaseType,
+  RuleConfigComponent,
+  convertToCategoryList,
+  getRuleLocalizationKey,
 } from "../../common/schemaSystem";
 import Modal from "../Modal.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 
 interface FilterItem {
   id: string;
-  name: string;
-  type: "database" | "level";
+  type: "engine" | "level";
   checked: boolean;
 }
 
 interface LocalState {
   openConfigModal: boolean;
-  selectedRule?: SelectedRule;
+  selectedRule?: RuleTemplate;
   filterOptionList: FilterItem[];
 }
 
-const baseFilterOptionList: FilterItem[] = levelList.map((l) => ({
-  id: l.id,
-  name: l.name,
+const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
+  id: level,
   type: "level",
   checked: false,
 }));
 
 const filterOptionList: FilterItem[] = [
   {
-    id: "common",
-    name: "Common",
-    type: "database",
+    id: "COMMON",
+    type: "engine",
     checked: false,
   },
   {
-    id: "mysql",
-    name: "MySQL",
-    type: "database",
+    id: "MYSQL",
+    type: "engine",
     checked: false,
   },
   ...baseFilterOptionList,
 ];
-
-const categoryOrder: Map<CategoryType, number> = new Map([
-  ["engine", 5],
-  ["naming", 4],
-  ["query", 3],
-  ["table", 2],
-  ["column", 1],
-]);
 
 export default defineComponent({
   components: {
@@ -169,7 +177,7 @@ export default defineComponent({
   props: {
     selectedRuleList: {
       required: true,
-      type: Array as PropType<SelectedRule[]>,
+      type: Array as PropType<RuleTemplate[]>,
     },
     title: {
       required: true,
@@ -187,7 +195,7 @@ export default defineComponent({
       filterOptionList,
     });
 
-    const isFilteredRule = (rule: SelectedRule): boolean => {
+    const isFilteredRule = (rule: RuleTemplate): boolean => {
       if (state.filterOptionList.every((f) => !f.checked)) {
         return true;
       }
@@ -197,67 +205,63 @@ export default defineComponent({
           (filter.type === "level" &&
             rule.level === filter.id &&
             filter.checked) ||
-          (filter.type === "database" &&
+          (filter.type === "engine" &&
             filter.checked &&
-            rule.database.includes(filter.id as DatabaseType))
+            rule.engine === filter.id)
         );
       });
     };
-
-    const categoryList = computed((): RuleCategory[] => {
-      const dict = props.selectedRuleList.reduce((dict, rule) => {
-        if (!isFilteredRule(rule)) {
-          return dict;
-        }
-
-        if (!dict[rule.category]) {
-          const id = rule.category.toLowerCase();
-          const name = `${id[0].toUpperCase()}${id.slice(1)}`;
-          dict[rule.category] = {
-            id: rule.category,
-            name,
-            ruleList: [],
-          };
-        }
-        dict[rule.category].ruleList.push(rule);
-        return dict;
-      }, {} as { [key: string]: RuleCategory });
-
-      return Object.values(dict).sort(
-        (c1, c2) =>
-          (categoryOrder.get(c2.id) || 0) - (categoryOrder.get(c1.id) || 0)
-      );
-    });
+    const categoryList = computed((): RuleCategory[] =>
+      convertToCategoryList(props.selectedRuleList.filter(isFilteredRule))
+    );
 
     const filterItemCount = (filter: FilterItem) => {
       return props.selectedRuleList.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
-          (filter.type === "database" &&
-            r.database.includes(filter.id as DatabaseType))
+          (filter.type === "engine" && r.engine === filter.id)
         );
       }).length;
     };
 
-    const onRuleSelect = (rule: SelectedRule) => {
+    const onRuleSelect = (rule: RuleTemplate) => {
       state.selectedRule = rule;
       state.openConfigModal = true;
     };
 
     const onPayloadChange = (data: { [val: string]: any }) => {
-      if (!state.selectedRule || !state.selectedRule.payload) {
+      if (!state.selectedRule || !state.selectedRule.componentList) {
         return;
       }
 
-      const newRule = {
+      const newRule: RuleTemplate = {
         ...state.selectedRule,
-        payload: Object.entries(state.selectedRule.payload).reduce(
-          (dict, [key, val]) => {
-            dict[key] = { ...val };
-            dict[key].value = data[key];
-            return dict;
+        componentList: state.selectedRule.componentList.reduce(
+          (list, component, index) => {
+            let val = data[index];
+            switch (component.payload.type) {
+              case "STRING_ARRAY":
+                list.push({
+                  ...component,
+                  payload: {
+                    ...component.payload,
+                    value: data[index] as string[],
+                  },
+                });
+                break;
+              default:
+                list.push({
+                  ...component,
+                  payload: {
+                    ...component.payload,
+                    value: data[index] as string,
+                  },
+                });
+                break;
+            }
+            return list;
           },
-          {} as RulePayload
+          [] as RuleConfigComponent[]
         ),
       };
 
@@ -308,6 +312,7 @@ export default defineComponent({
       onPayloadChange,
       onLevelChange,
       downConfiguration,
+      getRuleLocalizationKey,
     };
   },
 });

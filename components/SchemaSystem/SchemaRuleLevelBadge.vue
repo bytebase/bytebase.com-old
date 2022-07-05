@@ -1,6 +1,6 @@
 <template>
   <Badge
-    :text="`${level[0].toUpperCase()}${level.slice(1).toLowerCase()}`"
+    :text="$t(`database-review-guide.level.${level.toLowerCase()}`)"
     :can-remove="false"
     :theme="theme"
   />
@@ -24,9 +24,9 @@ export default defineComponent({
   setup(props) {
     const theme = computed((): string => {
       switch (props.level) {
-        case RuleLevel.Error:
+        case RuleLevel.ERROR:
           return "red";
-        case RuleLevel.Warning:
+        case RuleLevel.WARNING:
           return "yellow";
         default:
           return "gray";

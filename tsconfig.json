@@ -21,7 +21,8 @@
       "@nuxt/content",
       "@types/node",
       "@pinia/nuxt"
-    ]
+    ],
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

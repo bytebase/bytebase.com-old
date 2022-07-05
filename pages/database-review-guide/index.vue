@@ -80,7 +80,7 @@ import ActionButton from "../../components/ActionButton.vue";
 import CheckCircleIcon from "../../components/Icons/CheckCircle.vue";
 import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
 import {
-  SelectedRule,
+  RuleTemplate,
   GuidelineTemplate,
   guidelineTemplateList,
 } from "../../common/schemaSystem";
@@ -88,7 +88,7 @@ import Modal from "../../components/Modal.vue";
 
 interface LocalState {
   template: GuidelineTemplate;
-  ruleList: SelectedRule[];
+  ruleList: RuleTemplate[];
   ruleChanged: boolean;
   openWarningModal: boolean;
 }
@@ -114,8 +114,8 @@ export default defineComponent({
       state.ruleChanged = false;
     };
 
-    const onRuleChange = (rule: SelectedRule) => {
-      const index = state.ruleList.findIndex((r) => r.id === rule.id);
+    const onRuleChange = (rule: RuleTemplate) => {
+      const index = state.ruleList.findIndex((r) => r.type === rule.type);
       state.ruleList = [
         ...state.ruleList.slice(0, index),
         rule,
