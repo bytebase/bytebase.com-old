@@ -6,7 +6,7 @@
     "dev": "sh ./scripts/get_schema_review_rules.sh && nuxt",
     "build": "sh ./scripts/get_schema_review_rules.sh && nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "sh ./scripts/get_schema_review_rules.sh && nuxt generate"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.19.3",
