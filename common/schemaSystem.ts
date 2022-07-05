@@ -36,8 +36,7 @@ export interface RuleConfigComponent {
   payload: StringPayload | TemplatePayload | StringArrayPayload;
 }
 
-// export type DatabaseType = "mysql" | "common";
-export type SchemaRuleEngineType = "MYSQL" | "COMMON";
+type SchemaRuleEngineType = "MYSQL" | "COMMON";
 
 // The category type for rule template
 export type CategoryType =
@@ -56,106 +55,18 @@ export interface RuleTemplate {
   level: RuleLevel;
 }
 
-export const ruleTemplateList = schemaSystemConfig.rule_list as RuleTemplate[];
-
 export interface RuleCategory {
   id: CategoryType;
   ruleList: RuleTemplate[];
 }
 
-interface Database {
-  id: SchemaRuleEngineType;
-  name: string;
-}
-
 export interface GuidelineTemplate {
   id: string;
-  tag: string;
-  database: Database;
   ruleList: RuleTemplate[];
 }
 
-const mysql: Database = {
-  id: "MYSQL",
-  name: "MySQL",
-};
-
-const getRuleListWithLevel = (
-  typeList: string[],
-  level: RuleLevel
-): RuleTemplate[] => {
-  return typeList.reduce((res, ruleType) => {
-    const rule = ruleTemplateList.find((r) => r.type === ruleType);
-    if (!rule) {
-      return res;
-    }
-    res.push({
-      ...rule,
-      level,
-    });
-    return res;
-  }, [] as RuleTemplate[]);
-};
-
-export const guidelineTemplateList: GuidelineTemplate[] = [
-  {
-    id: "mysql.prod",
-    tag: "Prod",
-    database: mysql,
-    ruleList: [
-      ...getRuleListWithLevel(
-        [
-          "engine.mysql.use-innodb",
-          "table.require-pk",
-          "statement.select.no-select-all",
-          "statement.where.require",
-          "statement.where.no-leading-wildcard-like",
-        ],
-        RuleLevel.ERROR
-      ),
-      ...getRuleListWithLevel(
-        [
-          "naming.table",
-          "naming.column",
-          "naming.index.uk",
-          "naming.index.idx",
-          "naming.index.fk",
-          "column.required",
-          "column.no-null",
-          "schema.backward-compatibility",
-        ],
-        RuleLevel.WARNING
-      ),
-    ],
-  },
-  {
-    id: "mysql.dev",
-    tag: "Dev",
-    database: mysql,
-    ruleList: [
-      ...getRuleListWithLevel(
-        ["engine.mysql.use-innodb", "table.require-pk"],
-        RuleLevel.ERROR
-      ),
-      ...getRuleListWithLevel(
-        [
-          "naming.table",
-          "naming.column",
-          "naming.index.uk",
-          "naming.index.idx",
-          "naming.index.fk",
-          "column.required",
-          "column.no-null",
-          "statement.select.no-select-all",
-          "statement.where.require",
-          "statement.where.no-leading-wildcard-like",
-          "schema.backward-compatibility",
-        ],
-        RuleLevel.WARNING
-      ),
-    ],
-  },
-];
+export const guidelineTemplateList =
+  schemaSystemConfig.template_list as GuidelineTemplate[];
 
 export const convertToCategoryList = (
   ruleList: RuleTemplate[]
@@ -188,18 +99,3 @@ export const convertToCategoryList = (
 export const getRuleLocalizationKey = (type: string): string => {
   return type.split(".").join("-");
 };
-
-// export const getRuleLocalization = (
-//   type: string
-// ): { title: string; description: string } => {
-//   const { t } = useI18n();
-//   const key = getRuleLocalizationKey(type);
-
-//   const title = t(`schema-review-policy.rule.${key}.title`);
-//   const description = t(`schema-review-policy.rule.${key}.description`);
-
-//   return {
-//     title,
-//     description,
-//   };
-// };

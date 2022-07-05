@@ -345,6 +345,16 @@
       "mysql": "MySQL",
       "common": "Common"
     },
+    "template": {
+      "mysql-prod": {
+        "env": "Prod",
+        "title": "Database Review Guide for MySQL"
+      },
+      "mysql-dev": {
+        "env": "Dev",
+        "title": "Database Review Guide for MySQL"
+      }
+    },
     "configure-rule": "Configure rule",
     "rule": {
       "engine-mysql-use-innodb": {

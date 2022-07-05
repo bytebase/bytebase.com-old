@@ -101,7 +101,7 @@
           </div>
           <InputWithTemplate
             v-else-if="config.payload.type === 'TEMPLATE'"
-            :templates="
+            :template-list="
               config.payload.templateList.map((id) => ({
                 id,
                 description: $t(

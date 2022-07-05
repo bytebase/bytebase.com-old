@@ -346,6 +346,16 @@
       "common": "通用"
     },
     "configure-rule": "规则配置",
+    "template": {
+      "mysql-prod": {
+        "env": "Prod",
+        "title": "MySQL 审查规则"
+      },
+      "mysql-dev": {
+        "env": "Dev",
+        "title": "MySQL 审查规则"
+      }
+    },
     "rule": {
       "engine-mysql-use-innodb": {
         "title": "使用 InnoDB 作为储存引擎",
