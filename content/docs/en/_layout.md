@@ -53,8 +53,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
-
-
 ## 🚀 Features
 
 ### [SQL Review](/features/sql-review)
