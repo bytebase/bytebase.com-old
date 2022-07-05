@@ -42,7 +42,7 @@ Bytebase observed that a higher migration version has already applied to the tar
 
 ### 204 - Missing baseline
 
-For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/use-bytebase/vcs-integration/create-the-first-baseline-migration) for more details.
+For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/features/vcs-integration/create-the-first-baseline-migration) for more details.
 
 ## Backward Incompatible Migration
 
