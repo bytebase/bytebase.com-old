@@ -12,7 +12,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Use Cases](/introduction/use-cases)
 
 
-## 📚 Concepts
+## 🔑 Concepts
 
 ### [Data Model](/concepts/data-model)
 
@@ -53,15 +53,44 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
-
-
-## ✨ Features
+## 🚀 Features
 
 ### [SQL Review](/features/sql-review)
+### [SQL Advisor](/features/sql-advisor)
 
-### [Version Control (GitOps)](/features/version-control)
+### [Schema Review](/features/schema-review/overview)
+
+#### [Create Schema Review Policy](/features/schema-review/create-schema-review-policy)
+
+#### [Schema Reivew Check in the Issue](/features/schema-review/schema-review-check-in-the-issue)
+
+#### [View Schema Review Policy](/features/schema-review/view-schema-review-policy)
+
+#### [Edit Schema Review Policy](/features/schema-review/edit-schema-review-policy)
+
+#### [Disable and Delete Schema Review Policy](/features/schema-review/disable-delete-policy)
+### [Version Control (GitOps)](/features/vcs-integration/overview)
+
+#### [Add Git Provider](/features/vcs-integration/add-git-provider)
+
+#### [Enable Version Control Workflow (GitOps) in Project](/features/vcs-integration/enable-version-control-workflow)
+
+#### [Name and Organize Schema Files](/features/vcs-integration/name-and-organize-schema-files)
+
+#### [Create the First Baseline Migration](/features/vcs-integration/create-the-first-baseline-migration)
+
+#### [🐞 Troubleshoot](/features/vcs-integration/troubleshoot)
 
 ### [Tenant Database Management](/features/tenant-database-management)
+### [Environment Policy](/features/environment-policy/overview)
+
+#### [Approval Policy](/features/environment-policy/approval-policy)
+
+#### [Backup Schedule Policy](/features/environment-policy/backup-schedule-policy)
+
+### [Migration History](/features/migration-history)
+
+### [Drift Detection](/features/drift-detection)
 
 ### [SQL Editor](/features/sql-editor/overview)
 
@@ -77,92 +106,21 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Share Sheet with Teammates](/features/sql-editor/share-sheet-with-teammates)
 
-### [SQL Advisor](/features/sql-advisor/overview)
+### [Webhook Integration](/features/webhook-integration/overview)
 
-### [Schema Review](/features/schema-review/overview)
+#### [Project Webhook](/features/webhook-integration/project-webhook)
 
-#### [Require InnoDB](/features/schema-review/engine-mysql-use-innodb)
+#### [Database Webhook](/features/webhook-integration/database-webhook)
 
-#### [Table Naming Convention](/features/schema-review/naming-table)
+### [Backup and Restore Database](/features/backup-restore-database/overview)
 
-#### [Column Naming Convention](/features/schema-review/naming-column)
+#### [Backup](/features/backup-restore-database/backup)
 
-#### [Index Naming Convention](/features/schema-review/naming-index-idx)
-
-#### [Unique Key Naming Convention](/features/schema-review/naming-index-uk)
-
-#### [Foreign Key Naming Convention](/features/schema-review/naming-index-fk)
-
-#### [Disallow SELECT *](/features/schema-review/query-select-no-select-all)
-
-#### [Require WHERE Clause](/features/schema-review/query-where-require)
-
-#### [Disallow Leading % in LIKE](/features/schema-review/query-where-no-leading-wildcard-like)
-
-#### [Require Primary Key](/features/schema-review/table-require-pk)
-
-#### [Backward Incompatible Schema Change](/features/schema-review/schema-migration-compatibility)
-
-#### [Enforce the Required Columns in Each Table](/features/schema-review/column-required)
-
-#### [Columns No NULL Value](/features/schema-review/column-no-null)
-
-
-### [Migration History](/features/migration-history)
-
-### [Drift Detection](/features/drift-detection)
-
-### [Backup and Restore](/features/backup-and-restore)
+#### [Restore from Backup](/features/backup-restore-database/restore-from-backup)
 
 ### [Anomaly Center](/features/anomaly-center)
 
-### [Webhook](/features/webhook)
-
 ### [Archive](/features/archive)
-
-## 🧭 Use Bytebase
-
-### [VCS Integration (GitOps)](/use-bytebase/vcs-integration/overview)
-
-#### [Add Git Provider](/use-bytebase/vcs-integration/add-git-provider)
-
-#### [Enable Version Control Workflow (GitOps) in Project](/use-bytebase/vcs-integration/enable-version-control-workflow)
-
-#### [Name and Organize Schema Files](/use-bytebase/vcs-integration/name-and-organize-schema-files)
-
-#### [Create the First Baseline Migration](/use-bytebase/vcs-integration/create-the-first-baseline-migration)
-
-#### [🐞 Troubleshoot](/use-bytebase/vcs-integration/troubleshoot)
-
-### [Backup and Restore Database](/use-bytebase/backup-restore-database/overview)
-
-#### [Backup](/use-bytebase/backup-restore-database/backup)
-
-#### [Restore from Backup](/use-bytebase/backup-restore-database/restore-from-backup)
-
-### [Environment Policy](/use-bytebase/environment-policy/overview)
-
-#### [Approval Policy](/use-bytebase/environment-policy/approval-policy)
-
-#### [Backup Schedule Policy](/use-bytebase/environment-policy/backup-schedule-policy)
-
-### [Schema Review](/use-bytebase/schema-review/overview)
-
-#### [Create Schema Review Policy](/use-bytebase/schema-review/create-schema-review-policy)
-
-#### [Schema Reivew Check in the Issue](/use-bytebase/schema-review/schema-review-check-in-the-issue)
-
-#### [View Schema Review Policy](/use-bytebase/schema-review/view-schema-review-policy)
-
-#### [Edit Schema Review Policy](/use-bytebase/schema-review/edit-schema-review-policy)
-
-#### [Disable and Delete Schema Review Policy](/use-bytebase/schema-review/disable-delete-policy)
-
-### [Webhook Integration](/use-bytebase/webhook-integration/overview)
-
-#### [Project Webhook](/use-bytebase/webhook-integration/project-webhook)
-
-#### [Database Webhook](/use-bytebase/webhook-integration/database-webhook)
 
 ## 🔧 Operating
 
@@ -178,7 +136,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Server Startup Options](/reference/command-line)
 
-## [Error Code](/error-code)
+### [Error Code](/reference/error-code)
 
 ## Troubleshooting
 
