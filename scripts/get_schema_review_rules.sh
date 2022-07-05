@@ -1,6 +1,6 @@
 #!/bin/sh
 # TODO: use version to fetch the lastest file
-FILE="schemaSystem.json"
+FILE="sql_review_config.yaml"
 URL="https://raw.githubusercontent.com/ecmadao/bytebase/feat/schema-review-api/frontend/src/types/$FILE"
 
 curl -o $FILE $URL

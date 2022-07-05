@@ -1,4 +1,4 @@
-import schemaSystemConfig from "./schemaSystemConfig.json";
+import schemaSystemConfig from "./sql_review_config.yaml";
 
 export enum RuleLevel {
   DISABLED = "DISABLED",

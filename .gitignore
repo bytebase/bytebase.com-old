@@ -89,4 +89,4 @@ sw.*
 
 # Vim swap files
 *.swp
-common/schemaSystemConfig.json
+common/sql_review_config.yaml
