@@ -84,7 +84,11 @@
                 </div>
                 <nuxt-link
                   v-if="plan.type == 'FREE'"
-                  :to="localePath('/docs/install/install-with-docker')"
+                  :to="
+                    localePath(
+                      '/docs/get-started/deploy-to-production/deploy-with-docker'
+                    )
+                  "
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
                   >{{ plan.buttonText }}</nuxt-link
@@ -169,7 +173,11 @@
             <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <nuxt-link
               v-if="plan.type == 'FREE'"
-              :to="localePath('/docs/install/install-with-docker')"
+              :to="
+                localePath(
+                  '/docs/get-started/deploy-to-production/deploy-with-docker'
+                )
+              "
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
@@ -328,7 +336,11 @@
               </p>
               <nuxt-link
                 v-if="plan.type == 'FREE'"
-                :to="localePath('/docs/install/install-with-docker')"
+                :to="
+                  localePath(
+                    '/docs/get-started/deploy-to-production/deploy-with-docker'
+                  )
+                "
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
                 >{{ plan.buttonText }}</nuxt-link
               >
@@ -461,7 +473,11 @@
           >
             <nuxt-link
               v-if="plan.type == 'FREE'"
-              :to="localePath('/docs/install/install-with-docker')"
+              :to="
+                localePath(
+                  '/docs/get-started/deploy-to-production/deploy-with-docker'
+                )
+              "
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
