@@ -11,6 +11,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Use Cases](/introduction/use-cases)
 
+### [System Requirement and Support](/introduction/system-requirements-and-supported-versions)
 
 ## 🔑 Concepts
 
@@ -30,7 +31,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Deploy to Production](/get-started/deploy-to-production/overview)
 
-#### [System Requirement and Support](/get-started/deploy-to-production/system-requirements-and-supported-versions)
 #### [Option 1 Docker (5 seconds)](/get-started/deploy-to-production/deploy-with-docker)
 
 #### [Option 2 Installation Script](/get-started/deploy-to-production/installation-script)
@@ -137,11 +137,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Server Startup Options](/reference/command-line)
 
 ### [Error Code](/reference/error-code)
-
-## Troubleshooting
-
-### [How to enable debug mode](/troubleshooting/how-to-enable-debug-mode)
-### [How to solve OAuth CORS error with old GitLab version](/troubleshooting/how-to-solve-oauth-cors-error-with-old-gitlab-version)
 
 ## [FAQ](/faq)
 
