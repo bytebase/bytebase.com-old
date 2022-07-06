@@ -67,7 +67,11 @@
             Demo
           </a>
           <nuxt-link
-            :to="localePath('/docs/install/install-with-docker')"
+            :to="
+              localePath(
+                '/docs/get-started/deploy-to-production/deploy-with-docker'
+              )
+            "
             class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
             >Deploy now</nuxt-link
