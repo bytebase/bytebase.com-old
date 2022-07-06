@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "sh ./scripts/get_schema_review_rules.sh && nuxt",
-    "build": "sh ./scripts/get_schema_review_rules.sh && nuxt build",
+    "dev": "npm run fetch-file && nuxt",
+    "build": "npm run fetch-file && nuxt build",
     "start": "nuxt start",
-    "generate": "sh ./scripts/get_schema_review_rules.sh && nuxt generate"
+    "generate": "npm run fetch-file && nuxt generate",
+    "fetch-file": "sh ./scripts/get_schema_review_rules.sh"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.19.3",
