@@ -503,5 +503,26 @@
   },
   "past-company": {
     "built-by": "Built by the team that built Google Cloud SQL, TiDB and OceanBase"
+  },
+  "demo": {
+    "features": {
+      "schema-migration-history": {
+        "title": "Schema Migration History",
+        "description": ""
+      },
+      "sql-review": {
+        "title": "SQL Review",
+        "description": ""
+      },
+      "multi-tenancy": {
+        "title": "Multi-tenancy",
+        "description": ""
+      },
+      "vcs-integration": {
+        "title": "VCS Integration",
+        "description": ""
+      }
+    },
+    "learn-more": "Learn More"
   }
 }
