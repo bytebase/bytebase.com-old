@@ -20,16 +20,26 @@
         :href="`#${category.id.replace(/\./g, '-')}`"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
-        {{ category.name }}
+        {{ $t(`database-review-guide.category.${category.id.toLowerCase()}`) }}
       </a>
-      <div v-for="rule in category.ruleList" :key="rule.id" class="py-4 group">
+      <div
+        v-for="rule in category.ruleList"
+        :key="rule.type"
+        class="py-4 group"
+      >
         <div class="sm:flex sm:items-center sm:space-x-4">
           <a
-            :id="rule.id.replace(/\./g, '-')"
-            :href="`#${rule.id.replace(/\./g, '-')}`"
+            :id="rule.type.replace(/\./g, '-')"
+            :href="`#${rule.type.replace(/\./g, '-')}`"
             class="text-left text-xl text-gray-600 hover:underline whitespace-nowrap"
           >
-            {{ rule.id }}
+            {{
+              $t(
+                `database-review-guide.rule.${getRuleLocalizationKey(
+                  rule.type
+                )}.title`
+              )
+            }}
           </a>
           <div class="mt-3 flex items-center space-x-4 sm:mt-0">
             <SchemaRuleLevelBadge :level="rule.level" />
@@ -40,32 +50,46 @@
             </div>
           </div>
         </div>
-        <p class="py-2 text-gray-400">{{ rule.description }}</p>
-        <div v-if="rule.payload" class="mt-1">
+        <p class="py-2 text-gray-400">
+          {{
+            $t(
+              `database-review-guide.rule.${getRuleLocalizationKey(
+                rule.type
+              )}.description`
+            )
+          }}
+        </p>
+        <div v-if="rule.componentList" class="mt-1">
           <ul role="list" class="space-y-4 list-disc list-inside">
             <li
-              v-for="key in Object.keys(rule.payload)"
-              :key="key"
+              v-for="(config, index) in rule.componentList"
+              :key="index"
               class="leading-8"
             >
-              {{ key }}:
+              {{
+                $t(
+                  `database-review-guide.rule.${getRuleLocalizationKey(
+                    rule.type
+                  )}.component.${config.key}.title`
+                )
+              }}:
               <span
                 v-if="
-                  rule.payload[key].type === 'string' ||
-                  rule.payload[key].type === 'template'
+                  config.payload.type === 'STRING' ||
+                  config.payload.type === 'TEMPLATE'
                 "
                 class="bg-gray-100 rounded text-sm p-2"
               >
-                {{ rule.payload[key].value || rule.payload[key].default }}
+                {{ config.payload.value || config.payload.default }}
               </span>
               <div
-                v-else-if="rule.payload[key].type === 'string[]'"
+                v-else-if="config.payload.type === 'STRING_ARRAY'"
                 class="flex flex-wrap gap-3 ml-5 mt-3"
               >
                 <span
-                  v-for="(val, i) in rule.payload[key].value ||
-                  rule.payload[key].default"
-                  :key="i"
+                  v-for="(val, i) in config.payload.value ||
+                  config.payload.default"
+                  :key="`${index}-${i}`"
                   class="bg-gray-100 rounded text-sm p-2"
                 >
                   {{ val }}
@@ -91,7 +115,10 @@
 <script lang="ts">
 import { defineComponent, PropType, computed } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
-import { RuleCategory } from "../../common/schemaSystem";
+import {
+  RuleCategory,
+  getRuleLocalizationKey,
+} from "../../common/schemaSystem";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import Pencil from "../Icons/Pencil.vue";
 
@@ -118,6 +145,7 @@ export default defineComponent({
 
     return {
       today,
+      getRuleLocalizationKey,
     };
   },
 });

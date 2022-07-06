@@ -1,319 +1,101 @@
+import schemaSystemConfig from "./sqlReviewConfig.yaml";
+
 export enum RuleLevel {
-  Disabled = "disabled",
-  Error = "error",
-  Warning = "warning",
+  DISABLED = "DISABLED",
+  ERROR = "ERROR",
+  WARNING = "WARNING",
 }
 
-export const levelList = [
-  { id: RuleLevel.Error, name: "Error" },
-  { id: RuleLevel.Warning, name: "Warning" },
-  { id: RuleLevel.Disabled, name: "Disabled" },
+export const LEVEL_LIST = [
+  RuleLevel.ERROR,
+  RuleLevel.WARNING,
+  RuleLevel.DISABLED,
 ];
 
-enum PayloadType {
-  String = "string",
-  StringArray = "string[]",
-  Template = "template",
-}
-
 interface StringPayload {
-  type: PayloadType.String;
+  type: "STRING";
   default: string;
   value?: string;
 }
 
 interface StringArrayPayload {
-  type: PayloadType.StringArray;
+  type: "STRING_ARRAY";
   default: string[];
   value?: string[];
 }
 
 interface TemplatePayload {
-  type: PayloadType.Template;
+  type: "TEMPLATE";
   default: string;
-  templates: { id: string; description?: string }[];
+  templateList: string[];
   value?: string;
 }
 
-export interface RulePayload {
-  [key: string]: StringPayload | StringArrayPayload | TemplatePayload;
+export interface RuleConfigComponent {
+  key: string;
+  payload: StringPayload | TemplatePayload | StringArrayPayload;
 }
 
-export type DatabaseType = "mysql" | "common";
+type SchemaRuleEngineType = "MYSQL" | "COMMON";
 
+// The category type for rule template
 export type CategoryType =
-  | "engine"
-  | "naming"
-  | "query"
-  | "table"
-  | "column"
-  | "schema";
+  | "ENGINE"
+  | "NAMING"
+  | "STATEMENT"
+  | "TABLE"
+  | "COLUMN"
+  | "SCHEMA";
 
-export interface Rule {
-  id: string;
+export interface RuleTemplate {
+  type: string;
   category: CategoryType;
-  database: DatabaseType[];
-  description: string;
-  payload?: RulePayload;
-}
-
-export interface SelectedRule extends Rule {
+  engine: SchemaRuleEngineType;
+  componentList: RuleConfigComponent[];
   level: RuleLevel;
 }
 
 export interface RuleCategory {
   id: CategoryType;
-  name: string;
-  ruleList: SelectedRule[];
-}
-
-interface Database {
-  id: DatabaseType;
-  name: string;
+  ruleList: RuleTemplate[];
 }
 
 export interface GuidelineTemplate {
   id: string;
-  tag: string;
-  database: Database;
-  ruleList: SelectedRule[];
+  ruleList: RuleTemplate[];
 }
 
-const mysql: Database = {
-  id: "mysql",
-  name: "MySQL",
-};
+export const guidelineTemplateList =
+  schemaSystemConfig.templateList as GuidelineTemplate[];
 
-const ruleList: Rule[] = [
-  {
-    id: "engine.mysql.use-innodb",
-    category: "engine",
-    database: ["mysql"],
-    description: "Require InnoDB as the storage engine.",
-  },
-  {
-    id: "table.require-pk",
-    category: "table",
-    database: ["common"],
-    description: "Require the table to have a primary key.",
-  },
-  {
-    id: "naming.table",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the table name format. Default snake_lower_case.",
-    payload: {
-      format: {
-        type: PayloadType.String,
-        default: "^[a-z]+(_[a-z]+)?$",
-      },
-    },
-  },
-  {
-    id: "naming.column",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the column name format. Default snake_lower_case.",
-    payload: {
-      format: {
-        type: PayloadType.String,
-        default: "^[a-z]+(_[a-z]+)?$",
-      },
-    },
-  },
-  {
-    id: "naming.index.uk",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the unique key name format.",
-    payload: {
-      uk: {
-        type: PayloadType.Template,
-        default: "^uk_{{table}}_{{column_list}}$",
-        templates: [
-          {
-            id: "table",
-            description: "The table name",
-          },
-          {
-            id: "column_list",
-            description: "Index column names, joined by _",
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: "naming.index.idx",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the index name format.",
-    payload: {
-      idx: {
-        type: PayloadType.Template,
-        default: "^idx_{{table}}_{{column_list}}$",
-        templates: [
-          {
-            id: "table",
-            description: "The table name",
-          },
-          {
-            id: "column_list",
-            description: "Index column names, joined by _",
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: "naming.index.fk",
-    category: "naming",
-    database: ["common"],
-    description: "Enforce the foreign key name format.",
-    payload: {
-      fk: {
-        type: PayloadType.Template,
-        default:
-          "^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_table}}_{{referenced_column}}$",
-        templates: [
-          {
-            id: "referencing_table",
-            description: "The referencing table name",
-          },
-          {
-            id: "referencing_column",
-            description: "The referencing column names, joined by _",
-          },
-          {
-            id: "referenced_table",
-            description: "The referenced table name",
-          },
-          {
-            id: "referenced_column",
-            description: "The referenced column names, joined by _",
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: "column.required",
-    category: "column",
-    database: ["common"],
-    description: "Enforce the required columns in each table.",
-    payload: {
-      columns: {
-        type: PayloadType.StringArray,
-        default: ["id", "created_ts", "updated_ts", "creator_id", "updater_id"],
-      },
-    },
-  },
-  {
-    id: "column.no-null",
-    category: "column",
-    database: ["common"],
-    description: "Columns cannot have NULL value.",
-  },
-  {
-    id: "query.select.no-select-all",
-    category: "query",
-    database: ["common"],
-    description: "Disallow 'SELECT *'.",
-  },
-  {
-    id: "query.where.require",
-    category: "query",
-    database: ["common"],
-    description: "Require 'WHERE' clause.",
-  },
-  {
-    id: "query.where.no-leading-wildcard-like",
-    category: "query",
-    database: ["common"],
-    description:
-      "Disallow leading '%' in LIKE, e.g. LIKE foo = '%x' is not allowed.",
-  },
-  {
-    id: "schema.backward-compatibility",
-    category: "schema",
-    database: ["common"],
-    description: "Disallow backward incompatible schema changes.",
-  },
-];
+export const convertToCategoryList = (
+  ruleList: RuleTemplate[]
+): RuleCategory[] => {
+  const categoryList = schemaSystemConfig.categoryList as CategoryType[];
+  const categoryOrder = categoryList.reduce((map, category, index) => {
+    map.set(category, index);
+    return map;
+  }, new Map<CategoryType, number>());
 
-const getRuleListWithLevel = (
-  idList: string[],
-  level: RuleLevel
-): SelectedRule[] => {
-  return idList.reduce((res, id) => {
-    const rule = ruleList.find((r) => r.id === id);
-    if (!rule) {
-      return res;
+  const dict = ruleList.reduce((dict, rule) => {
+    if (!dict[rule.category]) {
+      const id = rule.category.toLowerCase();
+      dict[rule.category] = {
+        id: rule.category,
+        ruleList: [],
+      };
     }
-    res.push({
-      ...rule,
-      level,
-    });
-    return res;
-  }, [] as SelectedRule[]);
+    dict[rule.category].ruleList.push(rule);
+    return dict;
+  }, {} as { [key: string]: RuleCategory });
+
+  return Object.values(dict).sort(
+    (c1, c2) =>
+      (categoryOrder.get(c2.id as CategoryType) || 0) -
+      (categoryOrder.get(c1.id as CategoryType) || 0)
+  );
 };
 
-export const guidelineTemplateList: GuidelineTemplate[] = [
-  {
-    id: "mysql.prod",
-    tag: "Prod",
-    database: mysql,
-    ruleList: [
-      ...getRuleListWithLevel(
-        [
-          "engine.mysql.use-innodb",
-          "table.require-pk",
-          "query.select.no-select-all",
-          "query.where.require",
-          "query.where.no-leading-wildcard-like",
-        ],
-        RuleLevel.Error
-      ),
-      ...getRuleListWithLevel(
-        [
-          "naming.table",
-          "naming.column",
-          "naming.index.uk",
-          "naming.index.idx",
-          "naming.index.fk",
-          "column.required",
-          "column.no-null",
-          "schema.backward-compatibility",
-        ],
-        RuleLevel.Warning
-      ),
-    ],
-  },
-  {
-    id: "mysql.dev",
-    tag: "Dev",
-    database: mysql,
-    ruleList: [
-      ...getRuleListWithLevel(
-        ["engine.mysql.use-innodb", "table.require-pk"],
-        RuleLevel.Error
-      ),
-      ...getRuleListWithLevel(
-        [
-          "naming.table",
-          "naming.column",
-          "naming.index.uk",
-          "naming.index.idx",
-          "naming.index.fk",
-          "column.required",
-          "column.no-null",
-          "query.select.no-select-all",
-          "query.where.require",
-          "query.where.no-leading-wildcard-like",
-          "schema.backward-compatibility",
-        ],
-        RuleLevel.Warning
-      ),
-    ],
-  },
-];
+export const getRuleLocalizationKey = (type: string): string => {
+  return type.split(".").join("-");
+};

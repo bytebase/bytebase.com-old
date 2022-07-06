@@ -31,7 +31,13 @@
               box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                 rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
             "
-            >{{ template.tag }}</span
+            >{{
+              $t(
+                `database-review-guide.template.${template.id
+                  .split(".")
+                  .join("-")}.env`
+              )
+            }}</span
           >
         </div>
         <CheckCircleIcon
@@ -51,7 +57,13 @@
       <SchemaConfigurationPage
         :selected-rule-list="state.ruleList"
         :rule-changed="state.ruleChanged"
-        :title="`Database Review Guide for ${state.template.database.name}`"
+        :title="
+          $t(
+            `database-review-guide.template.${state.template.id
+              .split('.')
+              .join('-')}.title`
+          )
+        "
         @change="onRuleChange"
         @reset="onRulesReset"
       />
@@ -80,7 +92,7 @@ import ActionButton from "../../components/ActionButton.vue";
 import CheckCircleIcon from "../../components/Icons/CheckCircle.vue";
 import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
 import {
-  SelectedRule,
+  RuleTemplate,
   GuidelineTemplate,
   guidelineTemplateList,
 } from "../../common/schemaSystem";
@@ -88,7 +100,7 @@ import Modal from "../../components/Modal.vue";
 
 interface LocalState {
   template: GuidelineTemplate;
-  ruleList: SelectedRule[];
+  ruleList: RuleTemplate[];
   ruleChanged: boolean;
   openWarningModal: boolean;
 }
@@ -114,8 +126,8 @@ export default defineComponent({
       state.ruleChanged = false;
     };
 
-    const onRuleChange = (rule: SelectedRule) => {
-      const index = state.ruleList.findIndex((r) => r.id === rule.id);
+    const onRuleChange = (rule: RuleTemplate) => {
+      const index = state.ruleList.findIndex((r) => r.type === rule.type);
       state.ruleList = [
         ...state.ruleList.slice(0, index),
         rule,
