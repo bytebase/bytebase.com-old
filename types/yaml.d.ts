@@ -1,4 +1,4 @@
 declare module "*.yaml" {
-  const data: { [key: string]: any };
+  const data: any;
   export default data;
 }
