@@ -147,12 +147,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Error Code](/reference/error-code)
 
-## 🕊 Contributing
-
-### [Contribute Code](/contribute/contribute-code)
-
-### [Contribute Documentation](/contribute/contribute-documentation)
-
-### [Improve Bytebase](/contribute/improve-bytebase)
-
 ## [❓ FAQ](/faq)
+
+## [✍️ Document Write Guide](/document-write-guide)
+
+## [🕊 Contribute to Bytebase](/contribute-to-bytebase)

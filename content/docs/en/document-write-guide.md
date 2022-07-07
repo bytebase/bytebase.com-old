@@ -1,9 +1,7 @@
 ---
-title: Contribute Documentation
+title: ✍️ Document write guide
 description: This section shows the steps of contributing documentation.
 ---
-
-This section will walk you through how to contribute or make changes to Bytebase documentation.
 
 Before getting started, please make sure that you are familiar with the **[basic Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)**.
 
@@ -17,26 +15,13 @@ description: This section shows the steps of writing a document.
 
 # How to write a document?
 
-Firstly you need to write down the main concept of your documention.
+First, you need to write down the main concept of your documention.
 ```
 
 To optimize documentation SEO, we should save its metadata between the `--- xxx ---` block. Typically used fields are:
 
 - `title` should be same as the header title;
 - `description` field should be the excerpt of the document.
-
-## How to contribute documentation?
-
-1. Set up your [development environment](https://github.com/bytebase/bytebase.com#-development).
-2. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/), [Typora](https://typora.io/), or [Notion](https://notion.so/).
-3. Add the metadata block at the top of the markdown file.
-4. Add your edits to the corresponding folders:
-   1. Add your .md file to the folder `/content/docs/en/xxx`
-   2. Add your images to the folder `/static/docs/xxx`
-   3. Add an entry for the document in `_layout.md`, under the proper section
-5. Run `pnpm dev` start the review server.
-6. Go to [localhost:3000/docs](http://localhost:3000/docs) and check your creation.
-7. If everything looks fine, submit a PR with the changes to [our repo in GitHub](https://github.com/bytebase/bytebase.com).
 
 ## Useful Blocks
 
