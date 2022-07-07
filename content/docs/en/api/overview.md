@@ -2,9 +2,7 @@
 title: Bytebase OpenAPI
 ---
 
-Bytebase provides OpenAPI to allow users to operate resources without the UX.
-
-It currently supports the following OpenAPIs:
+Bytebase supports the following OpenAPIs:
 
 - [SQL Advise](/docs/api/sql-advise)
 
