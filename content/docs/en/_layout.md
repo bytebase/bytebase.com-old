@@ -38,24 +38,31 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Option 3 Build from Source Code](/get-started/deploy-to-production/build-from-source-code)
 
 #### [Use External PostgreSQL Database](/get-started/deploy-to-production/external-postgres)
+
 ### [Configure Workspace](/get-started/configure-workspace/overview)
 
 #### [Register Accounts](/get-started/configure-workspace/register-accounts)
+
 #### [Manage Members](/get-started/configure-workspace/manage-members)
+
 #### [Set up Environments](/get-started/configure-workspace/set-up-environments)
+
 #### [Add an Instance](/get-started/configure-workspace/add-an-instance)
+
 #### [Add a MySQL Instance for Testing](/get-started/configure-workspace/add-a-mysql-instance-for-testing)
 
 #### [Customize the Logo](/get-started/configure-workspace/customize-the-logo)
 
-
 ### [Work with a Project](/get-started/work-with-a-project/overview)
+
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
+
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
 ## 🚀 Features
 
 ### [SQL Review](/features/sql-review)
+
 ### [SQL Advisor](/features/sql-advisor)
 
 ### [Schema Review](/features/schema-review/overview)
@@ -69,6 +76,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Edit Schema Review Policy](/features/schema-review/edit-schema-review-policy)
 
 #### [Disable and Delete Schema Review Policy](/features/schema-review/disable-delete-policy)
+
 ### [Version Control (GitOps)](/features/vcs-integration/overview)
 
 #### [Add Git Provider](/features/vcs-integration/add-git-provider)
@@ -82,6 +90,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [🐞 Troubleshoot](/features/vcs-integration/troubleshoot)
 
 ### [Tenant Database Management](/features/tenant-database-management)
+
 ### [Environment Policy](/features/environment-policy/overview)
 
 #### [Approval Policy](/features/environment-policy/approval-policy)

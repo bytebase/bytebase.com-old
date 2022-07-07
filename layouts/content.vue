@@ -21,6 +21,12 @@
           >CLI</a
         >
         <a
+          :href="localePath('/docs/api/overview')"
+          class="header-link"
+          @click="track('api.header')"
+          >API</a
+        >
+        <a
           :href="
             localePath(
               '/docs/database-how-to/clickhouse/how-to-run-clickhouse-docker'
