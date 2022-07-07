@@ -503,5 +503,30 @@
   },
   "past-company": {
     "built-by": "我们的团队打造过 Google Cloud SQL, TiDB 以及 OceanBase"
+  },
+  "demo": {
+    "features": {
+      "schema-migration-history": {
+        "title": "Schema 变更历史",
+        "description": "“变更历史”功能记录下每次变更前后数据库的结构快照，帮助团队直观地查看变更记录，高效地分析版本间的差异性。"
+      },
+      "sql-review": {
+        "title": "SQL 审核",
+        "description": "Bytebase 内置了多种可定制的 SQL 审核策略模板，帮助团队高效的审核待上线的变更语句。"
+      },
+      "multi-tenancy": {
+        "title": "多租户",
+        "description": "多租户功能提供了批量管理能力，帮助团队灵活应对多租户、多环境、分库分表等场景下的批量变更需求。"
+      },
+      "vcs-integration": {
+        "title": "VCS 集成",
+        "description": "Bytebase 支持与 VCS 结合的发布工作流，变更脚本存放在 VCS 中，发布时推送至 Bytebase 平台，从而将数据库变更与应用变更进行统一管理。"
+      },
+      "live-demo": {
+        "title": "在线 Demo"
+      }
+    },
+    "learn-more": "视频演示",
+    "try-it-now": "马上试试"
   }
 }
