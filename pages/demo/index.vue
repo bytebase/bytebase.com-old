@@ -6,8 +6,8 @@
       class="w-10/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-16 gap-y-8"
     >
       <div
-        v-for="f in FEATURE_LIST"
-        :key="f.title"
+        v-for="feature in FEATURE_LIST"
+        :key="feature.title"
         class="w-full h-112 flex flex-row justify-center items-center"
       >
         <div
@@ -16,20 +16,20 @@
           <div class="flex flex-col items-center h-28 gap-y-1">
             <div class="w-full border-b-2 pb-6">
               <p class="text-2xl text-center font-extrabold tracking-tight">
-                {{ $t(`demo.features.${f.title}.title`) }}
+                {{ $t(`demo.features.${feature.title}.title`) }}
               </p>
             </div>
             <p class="mt-6 text-lg text-gray-500 text-justify">
-              {{ $t(`demo.features.${f.title}.description`) }}
+              {{ $t(`demo.features.${feature.title}.description`) }}
             </p>
           </div>
           <DynamicIcon
-            :name="f.icon"
+            :name="feature.icon"
             class="absolute top-32 left-32 w-48 h-48 opacity-10"
           />
           <div class="flex flex-col justify-end">
             <div class="flex flex-row justify-center w-full">
-              <button class="enter-btn" @click="handleKnowMore(f)">
+              <button class="enter-btn" @click="handleKnowMore(feature)">
                 <div class="flex flex-row justify-center items-center">
                   <Play class="w-4 h-4 mr-2" />{{ $t("demo.learn-more") }}
                 </div>

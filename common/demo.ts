@@ -1,7 +1,7 @@
 export interface Feature {
   title: string;
   icon: string;
-  bv: string;
+  bv: string; // the identifier for videos on bilibili.com i.e. https://www.bilibili.com/video/:bv
 }
 
 export const FEATURE_LIST: Feature[] = [
