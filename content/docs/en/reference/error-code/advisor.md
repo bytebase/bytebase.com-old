@@ -1,5 +1,5 @@
 ---
-title: Error Code for Advisor
+title: Error Code for SQL Advisor
 ---
 
 Error code for bytebase advisor.

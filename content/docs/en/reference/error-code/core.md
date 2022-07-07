@@ -1,5 +1,5 @@
 ---
-title: Error Code for Core
+title: Error Code for Bytebase Core
 ---
 
 Error code for bytebase core.
@@ -36,7 +36,7 @@ The database has already applied the version.
 
 ### 203 - Migration out of order
 
-The database has already applied the newest version.
+The version for migration is out of order. The database has already applied a newer version.
 
 ### 204 - Migration missing baseline
 

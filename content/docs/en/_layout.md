@@ -147,9 +147,9 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Error Code](/reference/error-code/overview)
 
-#### [Error Code for Core](/reference/error-code/core)
+#### [Error Code for Bytebase Core](/reference/error-code/core)
 
-#### [Error Code for Advisor](/reference/error-code/advisor)
+#### [Error Code for SQL Advisor](/reference/error-code/advisor)
 
 ## [FAQ](/faq)
 
