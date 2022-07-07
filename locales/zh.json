@@ -508,7 +508,7 @@
     "features": {
       "schema-migration-history": {
         "title": "Schema 变更历史",
-        "description": "“变更历史”功能记录下每次变更前后数据库的结构快照，帮助团队直观的查看变更记录，高效的分析版本间的差异性。"
+        "description": "“变更历史”功能记录下每次变更前后数据库的结构快照，帮助团队直观地查看变更记录，高效地分析版本间的差异性。"
       },
       "sql-review": {
         "title": "SQL 审核",

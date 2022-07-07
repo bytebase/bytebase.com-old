@@ -82,25 +82,42 @@ import {
 } from "@nuxtjs/composition-api";
 import { Metric, useSegment } from "~/plugin/segment";
 import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
+import Plausible from "plausible-tracker";
 import { FEATURE_LIST } from "~/common/demo";
 import Play from "~/components/Icons/Play.vue";
 import DynamicIcon from "~/components/DynamicIcon.vue";
 import Click from "~/components/Icons/Click.vue";
 import { Feature } from "~/common/demo";
 
+const { trackEvent } = Plausible();
+
 export default defineComponent({
   components: { Play, DynamicIcon, Click },
   setup() {
-    const { app } = useContext();
+    const { $ga, app } = useContext() as any;
     const analytics = ref<Metric>();
     const auth0 = ref<IAtuhPlugin>();
 
     const handleKnowMore = (feature: Feature) => {
+      track(`demo.video.${feature.title}`);
       if (app.i18n.locale === "zh") {
-        window.open(`https://www.bilibili.com/video/${feature.bv}`);
+        window.open(`https://www.bilibili.com/video/${feature.videoId}`);
       } else {
         // show future YouTube player
       }
+    };
+
+    const track = (name: string) => {
+      trackEvent(name);
+
+      const parts = name.split(".");
+      $ga.event({
+        eventCategory: parts[0],
+        eventType: parts[1],
+        eventLabel: parts[2],
+      });
+      // Segment
+      analytics.value?.track(name);
     };
 
     onMounted(() => {
