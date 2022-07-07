@@ -2,33 +2,30 @@
 title: SQL Advise API
 ---
 
-The SQL advise API provides SQL check based on your schema review policy.
+The SQL Advise API provides SQL checks based on your schema review policy.
 
 > Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/use-bytebase/schema-review/overview) for more information.
 
 ### Endpoint
 
+**`GET`** `http://localhost:8080/v1/sql/advise`
+
 ```bash
-GET http://localhost:8080/v1/sql/advise
+curl http://localhost:8080/v1/sql/advise \
+  -G --data-urlencode '{SQL statement}' \
+  -d 'environment={environment name}' \
+  -d 'databaseType={database type}
 ```
 
-### Parameters (query)
+### Query parameters
 
-#### environment
+| Parameter    | Required?    | Description                                                            | Example                |
+| ------------ | ------------ | ---------------------------------------------------------------------- | ---------------------- |
+| environment  | **Required** | The environment name for your schema review policy. **Case sensitive** | Dev                    |
+| databaseType | **Required** | The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.   | MySQL                  |
+| statement    | **Required** | The SQL statement.                                                     | SELECT \* FROM `table` |
 
-The environment name for your schema review policy. Case sensitive
-
-#### statement
-
-The SQL statement.
-
-#### databaseType
-
-The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.
-
-### Response
-
-#### 200 OK
+### Response body
 
 ```json
 [
@@ -86,27 +83,26 @@ The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.
   - [`column.required`](/docs/features/schema-review/column-required)
   - [`schema.backward-compatibility`](/docs/features/schema-review/schema-migration-compatibility)
 
-#### 400 Bad request
+### Response Codes
 
-```json
-{
-  "message": "string"
-}
-```
-
-#### 500 Internal server error
-
-```json
-{
-  "message": "string"
-}
-```
+| Code  | Description                                                 |
+| ----- | ----------------------------------------------------------- |
+| `200` | OK                                                          |
+| `400` | One of the provided values in the request query is invalid. |
+| `500` | Internal server error                                       |
 
 ### Example
 
+Request
+
 ```bash
-curl http://localhost:8080/v1/sql/advise\?environment\=Dev\&statement\=SELECT%20\*%20FROM%20\`table\`\&databaseType\=MySQL
+curl http://localhost:8080/v1/sql/advise \
+  -G --data-urlencode 'statement=SELECT * FROM `table`' \
+  -d environment=Dev \
+  -d databaseType=MySQL
 ```
+
+Response
 
 ```json
 [
@@ -125,9 +121,16 @@ curl http://localhost:8080/v1/sql/advise\?environment\=Dev\&statement\=SELECT%20
 ]
 ```
 
+Request
+
 ```bash
-curl http://localhost:8080/v1/sql/advise\?environment\=Dev\&statement\=SELECT%20id%20FROM%20\`table\`%20WHERE%20id%20\=%201\&databaseType\=MySQL
+curl http://localhost:8080/v1/sql/advise \
+  -G --data-urlencode 'statement=SELECT id FROM `table` WHERE id = 1' \
+  -d environment=Dev \
+  -d databaseType=MySQL
 ```
+
+Response
 
 ```json
 [
