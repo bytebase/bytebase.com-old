@@ -521,8 +521,12 @@
       "vcs-integration": {
         "title": "VCS Integration",
         "description": ""
+      },
+      "live-demo": {
+        "title": "Live Demo"
       }
     },
-    "learn-more": "Learn More"
+    "learn-more": "Learn More",
+    "try-it-now": "Try it now"
   }
 }

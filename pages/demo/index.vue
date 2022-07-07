@@ -38,6 +38,37 @@
           </div>
         </div>
       </div>
+      <div class="w-full h-112 flex flex-row justify-center items-center">
+        <div
+          class="demo-card relative w-72 h-96 flex flex-col justify-between ring-indigo-700 ring-2 shadow-lg rounded-lg p-6 overflow-hidden"
+        >
+          <div class="flex flex-col items-center h-28 gap-y-1">
+            <div class="w-full border-b-2 pb-6">
+              <p class="text-2xl text-center font-extrabold tracking-tight">
+                {{ $t(`demo.features.live-demo.title`) }}
+              </p>
+            </div>
+            <img
+              :src="require('~/assets/plans/plan-free.webp')"
+              class="w-full m-auto -mt-4"
+            />
+          </div>
+          <div class="flex flex-col justify-end">
+            <div class="flex flex-row justify-center w-full">
+              <a
+                href="https://demo.bytebase.com?ref=bytebase.com"
+                target="_blank"
+              >
+                <button class="enter-btn">
+                  <div class="flex flex-row justify-center items-center">
+                    <Click class="w-4 h-4 mr-2" />{{ $t("demo.try-it-now") }}
+                  </div>
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -54,10 +85,11 @@ import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 import { FEATURE_LIST } from "~/common/demo";
 import Play from "~/components/Icons/Play.vue";
 import DynamicIcon from "~/components/DynamicIcon.vue";
+import Click from "~/components/Icons/Click.vue";
 import { Feature } from "~/common/demo";
 
 export default defineComponent({
-  components: { Play, DynamicIcon },
+  components: { Play, DynamicIcon, Click },
   setup() {
     const { app } = useContext();
     const analytics = ref<Metric>();

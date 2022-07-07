@@ -521,8 +521,12 @@
       "vcs-integration": {
         "title": "VCS 集成",
         "description": "Bytebase 支持与 VCS 结合的发布工作流，变更脚本存放在 VCS 中，发布时推送至 Bytebase 平台，从而将数据库变更与应用变更进行统一管理。"
+      },
+      "live-demo": {
+        "title": "在线 Demo"
       }
     },
-    "learn-more": "视频演示"
+    "learn-more": "视频演示",
+    "try-it-now": "马上试试"
   }
 }
