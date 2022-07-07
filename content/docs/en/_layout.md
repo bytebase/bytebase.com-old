@@ -77,10 +77,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Disable and Delete Schema Review Policy](/features/schema-review/disable-delete-policy)
 
-### [OpenAPI](/features/openapi/overview)
-
-#### [SQL Advise](/features/openapi/sql-advise)
-
 ### [Version Control (GitOps)](/features/vcs-integration/overview)
 
 #### [Add Git Provider](/features/vcs-integration/add-git-provider)
