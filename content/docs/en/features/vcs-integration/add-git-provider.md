@@ -3,7 +3,7 @@ title: Add Git Provider
 ---
 
 Estimate setup time: 30 minutes. 
-This guide will show you how to integrate a version control system with Bytebase. This is a [reference setup](https://demo.bytebase.com/setting/version-control/bytebasegitlabcom-16001) showing what it will look like after the setup.
+This guide will show you how to integrate a version control system (VCS) with Bytebase. This is a [reference setup](https://demo.bytebase.com/setting/version-control/bytebasegitlabcom-16001) showing what it will look like after the setup.
 
 <hint-block type="info">
 
@@ -30,7 +30,7 @@ Go to "**Settings**" from the top nav bar, select "**Version Control**" under "*
 
 Fill in the URL where the GitLab instance is running.
 
-![add-git-provider-steps](/static/docs/features/vcs-integration/add-git-provider/add-git-provider-steps.webp)
+![add-git-provider-steps](/static/docs/features/vcs-integration/add-git-provider/add-git-provider-step1.webp)
 
 ## Step 2 - OAuth application info
 

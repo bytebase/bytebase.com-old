@@ -67,7 +67,7 @@ This is the branch where Bytebase observes the migration SQL file changes.
 
 <hint-block type="info">
 
-For GitLab, you can specify wildcards, such as "**feature**" to match branches starting with "feature/"
+For GitLab, you can specify wildcards, such as "**feature/***" to match branches starting with "feature/".
 
 </hint-block>
 
