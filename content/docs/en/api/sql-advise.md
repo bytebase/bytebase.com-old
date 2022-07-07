@@ -38,11 +38,11 @@ curl http://localhost:8080/v1/sql/advise \
 ]
 ```
 
-- `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details
+- `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details.
 - `content`: The error message.
-- `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`
+- `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
 - `title`: The schema review rule type.
-  - `OK`: No errors
+  - `OK`: No errors.
   - [`engine.mysql.use-innodb`](/docs/features/schema-review/engine-mysql-use-innodb)
   - [`naming.table`](/docs/features/schema-review/naming-table)
   - [`naming.column`](/docs/features/schema-review/naming-column)
