@@ -144,6 +144,11 @@ export default {
       cookieKey: "i18n_redirected",
       redirectOn: "root",
     },
+    pages: {
+      demo: {
+        en: false,
+      },
+    },
   },
 
   generate: {

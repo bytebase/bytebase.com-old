@@ -2,6 +2,12 @@
 title: SQL Advise API
 ---
 
+<hint-block type="warning">
+
+This OpenAPI is in **Alpha** stage, we may change it in the future.
+
+</hint-block>
+
 The SQL Advise API provides SQL checks based on your schema review policy.
 
 > Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/use-bytebase/schema-review/overview) for more information.
@@ -19,11 +25,11 @@ curl http://localhost:8080/v1/sql/advise \
 
 ### Query parameters
 
-| Parameter    | Required?    | Description                                                            | Example                |
-| ------------ | ------------ | ---------------------------------------------------------------------- | ---------------------- |
-| environment  | **Required** | The environment name for your schema review policy. **Case sensitive** | Dev                    |
-| databaseType | **Required** | The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.   | MySQL                  |
-| statement    | **Required** | The SQL statement.                                                     | SELECT \* FROM `table` |
+| Parameter      | Required?    | Description                                                            | Example                  |
+| -------------- | ------------ | ---------------------------------------------------------------------- | ------------------------ |
+| `environment`  | **Required** | The environment name for your schema review policy. **Case sensitive** | Dev                      |
+| `databaseType` | **Required** | The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.   | MySQL                    |
+| `statement`    | **Required** | The SQL statement.                                                     | SELECT \* FROM \`table\` |
 
 ### Response body
 
@@ -38,38 +44,11 @@ curl http://localhost:8080/v1/sql/advise \
 ]
 ```
 
-- `code`: The error code. Should be `0` if no errors.
-  - `0`: OK
-  - `1`: Internal error
-  - `2`: Schema review policy not found
-  - `101`: Drop database compatibility error
-  - `102`: Rename table compatibility error
-  - `103`: Drop table compatibility error
-  - `104`: Rename column compatibility error
-  - `105`: Drop column compatibility error
-  - `106`: Add primary key compatibility error
-  - `107`: Add unique key compatibility error
-  - `108`: Add foreign key compatibility error
-  - `109`: Add check compatibility error
-  - `110`: Alter check compatibility error
-  - `111`: Alter column compatibility error
-  - `201`: Statement syntax error
-  - `202`: Statement no where error
-  - `203`: Statement select all error
-  - `204`: Statement leading wildcard like error
-  - `301`: Naming table convention mismatch error
-  - `302`: Naming column convention mismatch error
-  - `303`: Naming index convention mismatch error
-  - `304`: Naming unique key convention mismatch error
-  - `305`: Naming foreign key convention mismatch error
-  - `401`: No required column error
-  - `402`: Column can not null error
-  - `501`: Not InnoDB engine error
-  - `601`: Table no primary key error
+- `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details.
 - `content`: The error message.
-- `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`
+- `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
 - `title`: The schema review rule type.
-  - `OK`: No errors
+  - `OK`: No errors.
   - [`engine.mysql.use-innodb`](/docs/features/schema-review/engine-mysql-use-innodb)
   - [`naming.table`](/docs/features/schema-review/naming-table)
   - [`naming.column`](/docs/features/schema-review/naming-column)
