@@ -77,7 +77,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Disable and Delete Schema Review Policy](/features/schema-review/disable-delete-policy)
 
-### [Version Control (GitOps)](/features/vcs-integration/overview)
+### [VCS Integration](/features/vcs-integration/overview)
 
 #### [Add Git Provider](/features/vcs-integration/add-git-provider)
 
