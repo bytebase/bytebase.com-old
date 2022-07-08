@@ -43,7 +43,7 @@ A common mistake is user misconfigures the port when using port forwarding. e.g.
 
 ### OAuth CORS error with old GitLab version
 
-When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may encounter OAuth error https://github.com/bytebase/bytebase/issues/467:
+When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may encounter OAuth error like [this one](https://github.com/bytebase/bytebase/issues/467):
 
 ![oauth-failed](/static/docs/en/features/vcs-integration/troubleshoot/oauth-failed.webp)
 

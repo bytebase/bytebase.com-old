@@ -27,7 +27,7 @@ Go to the project you wish to enable version control workflow. Choose "**Version
 
 <hint-block type="info">
 
-You can only link Git repository from one of the existing Git providers in Bytebase. If your desired Git provider is not there, you need to contact **Workspace Owner** to follow [Add Git Provider](/docs/en/features/vcs-integration/add-git-provider) to add it.
+You can only link Git repository from one of the existing Git providers in Bytebase. If your desired Git provider is not there, you need to contact **Workspace Owner** to follow [Add Git Provider](/docs/features/vcs-integration/add-git-provider) to add it.
 
 </hint-block>
 
@@ -35,7 +35,7 @@ Click the Git provider hosting your repository, and Bytebase will start the OAut
 
 <hint-block type="info">
 
-If you encounter errors during this process, it's likely the Git provider is not setup properly and you need to contact **Workspace Owner** to double check the setup following [Add Git Provider](/docs/en/features/vcs-integration/add-git-provider).
+If you encounter errors during this process, it's likely the Git provider is not setup properly and you need to contact **Workspace Owner** to double check the setup following [Add Git Provider](/docs/features/vcs-integration/add-git-provider).
 
 </hint-block>
 
@@ -83,7 +83,7 @@ Click "Finish" button to complete the setup. Under the hood, this will create a 
 
 Default: `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
 
-The file path template allows user to customize the file path format of the migration file. This path is relative to the [base directory](#base-directory-default-root-directory) set above. The template supports following placeholders:
+The file path template allows user to customize the file path format of the migration file. This path is relative to the base directory set above. The template supports following placeholders:
 
 Required placeholders (must present in the template):
 
@@ -96,7 +96,7 @@ Optional placeholders
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 - {{DESCRIPTION}} - Specify a description for the migration.
 
-Check [name and organize schema files](/docs/en/features/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
+Check [name and organize schema files](/docs/features/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
 
 #### Schema path template - Optional
 
@@ -108,7 +108,7 @@ When specified, after each migration, Bytebase will write the latest schema to t
 
 <hint-block type="warning">
 
-Make sure the changed branch is not protected or allow repository maintainer to push to that protected branch. See [protected branch](https://docs.gitlab.com/ee/user/project/protected_branches.html)
+Make sure the changed branch is not protected or allow repository maintainer to push to that protected branch. See [protected branch](https://docs.gitlab.com/ee/user/project/protected_branches.html).
 
 </hint-block>
 
@@ -122,4 +122,4 @@ Optional placeholders
 
 ![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
 
-Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/en/features/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
+Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/features/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
