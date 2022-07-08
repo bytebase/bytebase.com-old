@@ -3,12 +3,12 @@ title: 🕊️ Contribute to Bytebase
 description: This section shows the steps of contributing to Bytebase.
 ---
 
-This section will walk you through how to contribute to or improve Bytebase.
+This section will walk you through how to contribute to and improve Bytebase.
 
 ## Contributing docs
 
 1. Set up your [development environment](https://github.com/bytebase/bytebase.com#-development).
-2. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/), [Typora](https://typora.io/), or [Notion](https://notion.so/). Make sure to follow the [Document Write Guide](/content/docs/en/document-write-guide.md).
+2. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/), [Typora](https://typora.io/), or [Notion](https://notion.so/). Make sure to follow the [Document Write Guide](/docs/document-write-guide).
 3. Add your edits to the corresponding folders:
    1. Add your .md file to the folder `/content/docs/en/xxx`
    2. Add your images to the folder `/static/docs/xxx`
@@ -36,11 +36,11 @@ Bytebase is built with a curated tech stack. It is optimized for **developer exp
 
 **Tech Stack**
 
-![techstack](/static/docs/en/contribute-to-bytebase/techstack.webp)
+![techstack](/static/docs/en/contribute-to-bytebase/tech-stack.webp)
 
 **Data Model**
 
-![datamodel](/static/docs/en/contribute-to-bytebase/datamodel_v1.webp)
+![datamodel](/static/docs/en/contribute-to-bytebase/data-model-v1.webp)
 
 #### Prerequisites
 

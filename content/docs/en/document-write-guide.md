@@ -23,7 +23,7 @@ To optimize documentation SEO, we should save its metadata between the `--- xxx 
 - `title` should be same as the header title;
 - `description` field should be the excerpt of the document.
 
-## Useful Blocks
+## Blocks
 
 Use following components to display more styled content in documentations:
 
