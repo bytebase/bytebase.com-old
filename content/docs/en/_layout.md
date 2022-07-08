@@ -155,4 +155,4 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## [✍️ Document Write Guide](/document-write-guide)
 
-## [🕊 Contribute to Bytebase](/contribute-to-bytebase)
+## [🕊 How to Contribute](/how-to-contribute)

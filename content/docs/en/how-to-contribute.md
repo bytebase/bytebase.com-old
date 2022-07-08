@@ -1,5 +1,5 @@
 ---
-title: 🕊️ Contribute to Bytebase
+title: 🕊️ How to Contribute
 description: This section shows the steps of contributing to Bytebase.
 ---
 
