@@ -145,7 +145,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Server Startup Options](/reference/command-line)
 
-### [Error Code](/reference/error-code)
+### [Error Code](/reference/error-code/overview)
+
+#### [Error Code for Bytebase Core](/reference/error-code/core)
+
+#### [Error Code for SQL Advisor](/reference/error-code/advisor)
 
 ## [FAQ](/faq)
 

@@ -3,6 +3,7 @@
 
 # Content such as docs.
 /content/                    @adela-bytebase @tianzhou
+/static/                     @adela-bytebase @tianzhou
 
 # Team page
 /assets/people/              @tianzhou @d-bytebase
