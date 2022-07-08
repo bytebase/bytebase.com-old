@@ -13,7 +13,7 @@ When a migration file is committed to the VCS, VCS will send a webhook event to 
 
 In this case, if you visit your project overview page, you should find an activity event suggesting Bytebase has received the webhook event. However, the committed file doesn't match the configured path.
 
-You should check the committed file conforms exactly to the [naming convention](/docs/features/vcs-integration/name-and-organize-schema-files) and the directory structure conforms to the [layout](/docs/features/vcs-integration/name-and-organize-schema-files#file-organization). Some common mistakes:
+You should check the committed file conforms exactly to the [naming convention](/docs/en/features/vcs-integration/name-and-organize-schema-files) and the directory structure conforms to the [layout](/docs/en/features/vcs-integration/name-and-organize-schema-files#file-organization). Some common mistakes:
 
 1. Forget the extension
 1. Case mismatch
@@ -45,7 +45,7 @@ A common mistake is user misconfigures the port when using port forwarding. e.g.
 
 When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may encounter OAuth error https://github.com/bytebase/bytebase/issues/467:
 
-![oauth-failed](/static/docs/features/vcs-integration/troubleshoot/oauth-failed.webp)
+![oauth-failed](/static/docs/en/features/vcs-integration/troubleshoot/oauth-failed.webp)
 
 This is a common problem in the old GitLab verison:
 
@@ -56,7 +56,7 @@ This is a common problem in the old GitLab verison:
 
 Open your browser devtool with `F12`, check the `Network` section. If the latest token request with **`CORS error`** status, we can be certain that it's the `/oauth/token` api CORS error inside GitLab.
 
-![cors-error](/static/docs/features/vcs-integration/troubleshoot/cors-error.webp)
+![cors-error](/static/docs/en/features/vcs-integration/troubleshoot/cors-error.webp)
 
 #### Potential solution
 
