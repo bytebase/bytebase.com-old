@@ -343,13 +343,9 @@
           v-if="currentLocale === '简体中文'"
           class="wechat-qrcode-wrapper relative"
         >
-          <img
-            class="w-6 h-auto opacity-60"
-            src="~/assets/svg/qrcode.svg"
-            alt=""
-          />
+          <img class="w-6 h-auto=" src="~/assets/wechat.webp" alt="" />
           <div
-            class="wechat-qrcode-container hidden absolute bottom-4 left-0 pb-4"
+            class="wechat-qrcode-container hidden absolute bottom-4 -left-2 pb-4"
           >
             <div
               class="w-44 h-auto border shadow rounded bg-white flex flex-col justify-start items-center"
