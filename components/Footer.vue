@@ -308,7 +308,7 @@
     <div
       class="border-t border-gray-200 max-w-7xl mx-auto pt-4 md:flex md:items-center md:justify-between"
     >
-      <div class="flex justify-center space-x-6 md:order-2">
+      <div class="flex justify-center space-x-3 sm:space-x-6 md:order-2">
         <div class="relative flex flex-row justify-start items-center">
           <div
             class="flex flex-row justify-start items-center hover:opacity-80 cursor-pointer"
@@ -339,10 +339,36 @@
           </div>
         </div>
 
+        <div
+          v-if="currentLocale === '简体中文'"
+          class="wechat-qrcode-wrapper relative"
+        >
+          <span class="sr-only">Wechat</span>
+          <img
+            class="w-6 h-auto opacity-90 hover:opacity-70"
+            src="~/assets/wechat.webp"
+            alt=""
+          />
+          <div
+            class="wechat-qrcode-container hidden absolute bottom-4 -left-2 pb-4"
+          >
+            <div
+              class="w-44 h-auto border shadow rounded bg-white flex flex-col justify-start items-center"
+            >
+              <img
+                class="w-full h-auto"
+                src="~/assets/wechat-bb-qrcode.webp"
+                alt=""
+              />
+              <span class="text-xs mb-2">关注 Bytebase 微信公众号</span>
+            </div>
+          </div>
+        </div>
+
         <a
           href="https://twitter.com/Bytebase"
           target="__blank"
-          class="text-gray-400 hover:text-gray-500"
+          class="text-gray-800 hover:text-gray-600"
         >
           <span class="sr-only">Twitter</span>
           <svg
@@ -360,7 +386,7 @@
         <a
           href="https://github.com/bytebase/bytebase"
           target="__blank"
-          class="text-gray-400 hover:text-gray-500"
+          class="text-gray-800 hover:text-gray-600"
         >
           <span class="sr-only">GitHub</span>
           <svg
@@ -448,3 +474,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.wechat-qrcode-wrapper:hover .wechat-qrcode-container {
+  @apply block;
+}
+</style>
