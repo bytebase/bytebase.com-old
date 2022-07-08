@@ -7,7 +7,7 @@
     "build": "npm run fetch-file && nuxt build",
     "start": "nuxt start",
     "generate": "npm run fetch-file && nuxt generate",
-    "fetch-file": "sh ./scripts/get_schema_review_rules.sh"
+    "fetch-file": "sh ./scripts/get_sql_review_configuration.sh"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.19.3",

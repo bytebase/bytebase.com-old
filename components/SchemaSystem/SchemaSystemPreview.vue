@@ -20,7 +20,7 @@
         :href="`#${category.id.replace(/\./g, '-')}`"
         class="text-left text-2xl text-indigo-600 font-semibold hover:underline"
       >
-        {{ $t(`database-review-guide.category.${category.id.toLowerCase()}`) }}
+        {{ $t(`sql-review.category.${category.id.toLowerCase()}`) }}
       </a>
       <div
         v-for="rule in category.ruleList"
@@ -34,11 +34,7 @@
             class="text-left text-xl text-gray-600 hover:underline whitespace-nowrap"
           >
             {{
-              $t(
-                `database-review-guide.rule.${getRuleLocalizationKey(
-                  rule.type
-                )}.title`
-              )
+              $t(`sql-review.rule.${getRuleLocalizationKey(rule.type)}.title`)
             }}
           </a>
           <div class="mt-3 flex items-center space-x-4 sm:mt-0">
@@ -53,9 +49,7 @@
         <p class="py-2 text-gray-400">
           {{
             $t(
-              `database-review-guide.rule.${getRuleLocalizationKey(
-                rule.type
-              )}.description`
+              `sql-review.rule.${getRuleLocalizationKey(rule.type)}.description`
             )
           }}
         </p>
@@ -68,7 +62,7 @@
             >
               {{
                 $t(
-                  `database-review-guide.rule.${getRuleLocalizationKey(
+                  `sql-review.rule.${getRuleLocalizationKey(
                     rule.type
                   )}.component.${config.key}.title`
                 )
