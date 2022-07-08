@@ -2,7 +2,7 @@
 title: Error Code for SQL Advisor
 ---
 
-Error code for bytebase advisor.
+Error code for Bytebase SQL Advisor.
 
 ## General
 
