@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run fetch-file && nuxt",
-    "build": "npm run fetch-file && nuxt build",
+    "dev": "npm run fetch-sql-review-file && nuxt",
+    "build": "npm run fetch-sql-review-file && nuxt build",
     "start": "nuxt start",
-    "generate": "npm run fetch-file && nuxt generate",
-    "fetch-file": "sh ./scripts/get_sql_review_configuration.sh"
+    "generate": "npm run fetch-sql-review-file && nuxt generate",
+    "fetch-sql-review-file": "sh ./scripts/fetch_sql_review_file.sh"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.19.3",
