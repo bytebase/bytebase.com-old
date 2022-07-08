@@ -183,7 +183,7 @@
             </li>
             <li>
               <nuxt-link
-                :to="localePath('/docs/error-code')"
+                :to="localePath('/docs/reference/error-code/overview')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('errordoc.footer')"
                 >{{ $t("footer.error-code") }}</nuxt-link
