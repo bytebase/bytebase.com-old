@@ -357,7 +357,7 @@
             >
               <img
                 class="w-full h-auto"
-                src="~/assets/bb-wechat-qrcode.webp"
+                src="~/assets/wechat-bb-qrcode.webp"
                 alt=""
               />
               <span class="text-xs mb-2">关注 Bytebase 微信公众号</span>
