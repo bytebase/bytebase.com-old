@@ -3,7 +3,7 @@
     class="flex flex-row justify-center mb-12 relative mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:px-8 lg:pb-0"
   >
     <div
-      class="w-10/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-16 gap-y-8"
+      class="w-10/12 max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-16 gap-y-8"
     >
       <div
         v-for="feature in FEATURE_LIST"
