@@ -343,7 +343,12 @@
           v-if="currentLocale === '简体中文'"
           class="wechat-qrcode-wrapper relative"
         >
-          <img class="w-6 h-auto=" src="~/assets/wechat.webp" alt="" />
+          <span class="sr-only">Wechat</span>
+          <img
+            class="w-6 h-auto opacity-90 hover:opacity-70"
+            src="~/assets/wechat.webp"
+            alt=""
+          />
           <div
             class="wechat-qrcode-container hidden absolute bottom-4 -left-2 pb-4"
           >
@@ -363,7 +368,7 @@
         <a
           href="https://twitter.com/Bytebase"
           target="__blank"
-          class="text-gray-400 hover:text-gray-500"
+          class="text-gray-800 hover:text-gray-600"
         >
           <span class="sr-only">Twitter</span>
           <svg
@@ -381,7 +386,7 @@
         <a
           href="https://github.com/bytebase/bytebase"
           target="__blank"
-          class="text-gray-400 hover:text-gray-500"
+          class="text-gray-800 hover:text-gray-600"
         >
           <span class="sr-only">GitHub</span>
           <svg
