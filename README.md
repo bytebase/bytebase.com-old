@@ -33,7 +33,7 @@ If you are interested in contributing, you may take a look at [our online databa
    pnpm dev
    ```
 
-This will fetch the SQL review configuration files before start the nuxt service, you can check the script [fetch_sql_review_file.sh](./scripts/fetch_sql_review_file.sh) for details.
+This will fetch the SQL review configuration files before starting the nuxt service, you can check the script [fetch_sql_review_file.sh](./scripts/fetch_sql_review_file.sh) for details.
 
 If you have any problems fetching these files, you could download them manually on the [Bytebase repository](https://github.com/bytebase/bytebase)
 
