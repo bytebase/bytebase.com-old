@@ -5,7 +5,7 @@
         :to="localePath('/about')"
         class="text-gray-500 hover:underline"
       >
-        <p class="text-center text-xl tracking-wider">
+        <p class="text-center text-2xl tracking-wider">
           {{ $t("past-company.built-by") }}
         </p>
       </nuxt-link>
