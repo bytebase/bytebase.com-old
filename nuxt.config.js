@@ -1,3 +1,4 @@
+import path from "path";
 import fse from "fs-extra";
 import slug from "slug";
 import { camelCase, findLast, last } from "lodash";
@@ -72,6 +73,37 @@ function compareRouteList() {
   return list;
 }
 
+function mergedLocalMessages(folder) {
+  const message = {};
+  const pathes = fse.readdirSync(folder);
+  for (const name of pathes) {
+    const fullpath = path.resolve(folder, name);
+    if (fse.statSync(fullpath).isFile()) {
+      const local = name.split(".")[0];
+      console.log(`reading localization file from fullpath: ${fullpath}`);
+      message[local] = {
+        ...(message[local] || {}),
+        ...fse.readJSONSync(fullpath),
+      };
+    } else {
+      const nestedMessage = mergedLocalMessages(fullpath);
+      for (const [key, value] of Object.entries(nestedMessage)) {
+        console.log(`merge ${name}:${key} into localization message`);
+        const existed = message[key] || {};
+        message[key] = {
+          ...existed,
+          [name]: {
+            ...(existed[name] || {}),
+            ...value,
+          },
+        };
+      }
+    }
+  }
+
+  return message;
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -119,9 +151,7 @@ export default {
 
   i18n: {
     defaultLocale: "en",
-    lazy: true,
     seo: true,
-    langDir: "locales/",
     locales: [
       {
         name: "English",
@@ -138,6 +168,7 @@ export default {
     ],
     vueI18n: {
       fallbackLocale: "en",
+      messages: mergedLocalMessages(path.resolve(__dirname, "./locales/")),
     },
     detectBrowserLanguage: {
       useCookie: true,

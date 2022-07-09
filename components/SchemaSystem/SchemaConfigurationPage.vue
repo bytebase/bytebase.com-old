@@ -40,13 +40,7 @@
                 :for="filter.id"
                 class="ml-3 items-center text-sm text-gray-600"
               >
-                {{
-                  $t(
-                    `database-review-guide.${
-                      filter.type
-                    }.${filter.id.toLowerCase()}`
-                  )
-                }}
+                {{ $t(`sql-review.${filter.type}.${filter.id.toLowerCase()}`) }}
                 <span
                   class="ml-1 items-center px-2 py-0.5 rounded-full bg-gray-200 text-gray-800"
                 >
@@ -62,11 +56,7 @@
           </h1>
           <fieldset v-for="(category, index) in categoryList" :key="index">
             <div class="block text-sm font-medium text-gray-900">
-              {{
-                $t(
-                  `database-review-guide.category.${category.id.toLowerCase()}`
-                )
-              }}
+              {{ $t(`sql-review.category.${category.id.toLowerCase()}`) }}
             </div>
             <div
               v-for="(rule, ruleIndex) in category.ruleList"
@@ -79,9 +69,7 @@
               >
                 {{
                   $t(
-                    `database-review-guide.rule.${getRuleLocalizationKey(
-                      rule.type
-                    )}.title`
+                    `sql-review.rule.${getRuleLocalizationKey(rule.type)}.title`
                   )
                 }}
               </a>
