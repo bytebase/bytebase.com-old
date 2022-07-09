@@ -5,28 +5,18 @@
         <div class="flex mb-2 items-center space-x-2">
           <h1 class="text-base font-semibold text-gray-900">
             {{
-              $t(
-                `database-review-guide.rule.${getRuleLocalizationKey(
-                  rule.type
-                )}.title`
-              )
+              $t(`sql-review.rule.${getRuleLocalizationKey(rule.type)}.title`)
             }}
           </h1>
           <Badge
-            :text="
-              $t(
-                `database-review-guide.category.${rule.category.toLowerCase()}`
-              )
-            "
+            :text="$t(`sql-review.category.${rule.category.toLowerCase()}`)"
             :can-remove="false"
           />
         </div>
         <div class="text-sm text-gray-400">
           {{
             $t(
-              `database-review-guide.rule.${getRuleLocalizationKey(
-                rule.type
-              )}.description`
+              `sql-review.rule.${getRuleLocalizationKey(rule.type)}.description`
             )
           }}
         </div>
@@ -36,7 +26,7 @@
     <div class="px-2 py-5 text-sm">
       <div class="mb-7">
         <p class="mb-3">
-          {{ $t("database-review-guide.level.name") }}
+          {{ $t("sql-review.level.name") }}
         </p>
         <div class="flex gap-x-3">
           <div
@@ -56,7 +46,7 @@
               :for="`level-${level}`"
               class="ml-2 items-center text-sm text-gray-600"
             >
-              {{ $t(`database-review-guide.level.${level.toLowerCase()}`) }}
+              {{ $t(`sql-review.level.${level.toLowerCase()}`) }}
             </label>
           </div>
         </div>
@@ -70,7 +60,7 @@
           <p class="mb-3">
             {{
               $t(
-                `database-review-guide.rule.${getRuleLocalizationKey(
+                `sql-review.rule.${getRuleLocalizationKey(
                   rule.type
                 )}.component.${config.key}.title`
               )
@@ -95,7 +85,7 @@
             <input
               type="text"
               class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
-              placeholder="Input the value then press enter to add"
+              :placeholder="$t('database-review-guide.input-then-press-enter')"
               @keyup.enter="(e) => pushToList(index, e)"
             />
           </div>
@@ -105,7 +95,7 @@
               config.payload.templateList.map((id) => ({
                 id,
                 description: $t(
-                  `database-review-guide.rule.${getRuleLocalizationKey(
+                  `sql-review.rule.${getRuleLocalizationKey(
                     rule.type
                   )}.component.${config.key}.template.${id}`
                 ),

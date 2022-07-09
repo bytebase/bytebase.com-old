@@ -90,3 +90,4 @@ sw.*
 # Vim swap files
 *.swp
 common/sqlReviewConfig.yaml
+locales/sql-review

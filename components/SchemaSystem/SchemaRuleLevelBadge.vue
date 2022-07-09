@@ -1,6 +1,6 @@
 <template>
   <Badge
-    :text="$t(`database-review-guide.level.${level.toLowerCase()}`)"
+    :text="$t(`sql-review.level.${level.toLowerCase()}`)"
     :can-remove="false"
     :theme="theme"
   />
