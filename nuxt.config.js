@@ -6,8 +6,6 @@ import {
   databaseFeatureList,
   databaseVCSList,
   databaseWebhookList,
-  databaseSoftwareList,
-  databaseAlternativeList,
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
 
@@ -53,22 +51,6 @@ function webhookRouteList() {
   const list = [];
   for (const webhook of databaseWebhookList()) {
     list.push(`webhook/${webhook.slug}`);
-  }
-  return list;
-}
-
-function softwareRouteList() {
-  const list = [];
-  for (const software of databaseSoftwareList()) {
-    list.push(`software/${software.slug}`);
-  }
-  return list;
-}
-
-function compareRouteList() {
-  const list = [];
-  for (const compare of databaseAlternativeList()) {
-    list.push(`compare/${compare.slug}`);
   }
   return list;
 }
@@ -188,9 +170,7 @@ export default {
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
-        .concat(webhookRouteList())
-        .concat(softwareRouteList())
-        .concat(compareRouteList());
+        .concat(webhookRouteList());
     },
   },
 
