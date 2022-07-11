@@ -151,6 +151,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Error Code for SQL Advisor](/reference/error-code/advisor)
 
-## [FAQ](/faq)
+## [❓ FAQ](/faq)
 
-## [✍️ Document write guide](/document-write-guide)
+## [✍️ Document Write Guide](/document-write-guide)
+
+## [🕊 How to Contribute](/how-to-contribute)
