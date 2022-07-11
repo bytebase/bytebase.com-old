@@ -2,7 +2,7 @@
 title: Add Git Provider
 ---
 
-Estimate setup time: 30 minutes. 
+Estimate setup time: 30 minutes.
 This guide will show you how to integrate a version control system (VCS) with Bytebase. This is a [reference setup](https://demo.bytebase.com/setting/version-control/bytebasegitlabcom-16001) showing what it will look like after the setup.
 
 <hint-block type="info">

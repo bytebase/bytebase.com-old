@@ -4,7 +4,7 @@ title: Migration Types
 
 <hint-block type="info">
 
-Migration type is only applicable to project using <a href="/docs/features/version-control">Version Control Workflow</a>.
+Migration type is only applicable to project using <a href="/docs/features/vcs-integration/overview">Version Control Workflow</a>.
 
 </hint-block>
 

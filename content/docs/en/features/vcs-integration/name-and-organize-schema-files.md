@@ -106,4 +106,4 @@ The pros and cons are the opposite of Approach 1. Though this approach brings le
 
 This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since we want the migration files to be the source of truth of the database schema.
 
-After settling down the file structure, now we can go ahead to [creating the first baseline migration](/docs/en/features/vcs-integration/create-the-first-baseline-migration).
+After settling down the file structure, now we can go ahead to [creating the first baseline migration](/docs/features/vcs-integration/create-the-first-baseline-migration).

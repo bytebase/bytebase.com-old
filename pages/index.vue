@@ -251,7 +251,7 @@
                 </h3>
                 <div class="mt-6">
                   <nuxt-link
-                    :to="localePath('/docs/features/version-control')"
+                    :to="localePath('/docs/features/vcs-integration/overview')"
                     class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                     @click="track('docs.version-control')"
                     >{{

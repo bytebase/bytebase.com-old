@@ -22,7 +22,7 @@ Bytebase provides an all-in-one solution to ease the PITR process with a few cli
 
 ### Backup
 
-It’s recommended to follow the [doc for backup](/docs/use-bytebase/backup-restore-database/backup) to set up automatic backups. Bytebase will check that an instance meets all the prerequisites and automatically archives binlog files.
+It’s recommended to follow the [doc for backup](/docs/features/backup-restore-database/backup) to set up automatic backups. Bytebase will check that an instance meets all the prerequisites and automatically archives binlog files.
 
 Note that you can only restore to the point of time after a valid backup.
 
@@ -58,7 +58,7 @@ And it should succeed like this.
 
 #### Step 4 - Approve the Swap task.
 
-The second task is called Swap. It will swap the restored temporary database with your current database. After the Swap task, your current database will be at the state of the point in time you chose to restore, and the original database will be renamed by appending a timestamp (the issue created time) and an _old suffix. You could check the old database and use the data or just delete it to save storage space.
+The second task is called Swap. It will swap the restored temporary database with your current database. After the Swap task, your current database will be at the state of the point in time you chose to restore, and the original database will be renamed by appending a timestamp (the issue created time) and an \_old suffix. You could check the old database and use the data or just delete it to save storage space.
 
 <hint-block type="info">
 

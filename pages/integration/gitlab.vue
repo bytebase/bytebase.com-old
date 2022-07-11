@@ -16,7 +16,7 @@
       >
         {{ $t("integration.gitlab-feature") }}
         <nuxt-link
-          :to="localePath('/docs/features/version-control')"
+          :to="localePath('/docs/features/vcs-integration/overview')"
           target="_blank"
           class="text-blue-700"
           >{{ $t("integration.view-detailed-guide") }}</nuxt-link
