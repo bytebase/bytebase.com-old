@@ -58,6 +58,6 @@ Let’s verify tables in the database “db_pitr_example”. The deleted table �
 
 # Learn more
 
-We just showed you how Bytebase performs a point-in-time recovery. It’s an in-place recovery, which means it does not require extra work to change the application code after the recovery. To learn more about Point-in-Time Recovery in Bytebase, see our [documentation](/docs/operating/disaster-recovery#point-in-time-recovery-for-mysql).
+We just showed you how Bytebase performs a point-in-time recovery. It’s an in-place recovery, which means it does not require extra work to change the application code after the recovery. To learn more about Point-in-Time Recovery in Bytebase, see our [documentation](/content/docs/en/operating/disaster-recovery.md).
 
 Thank you for reading this post. If you have any comments or questions, don’t hesitate to [let us know](https://github.com/bytebase/bytebase/issues).
