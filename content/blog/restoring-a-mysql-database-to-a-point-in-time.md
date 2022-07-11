@@ -52,7 +52,7 @@ After the first task is completed, click the button “Approve” again to execu
 Now, the point-in-time recovery for the database is done. The result says that the database “db_pitr_example” has performed point-in-time recovery successfully.
 ![result](/static/blog/restoring-a-mysql-database-to-a-point-in-time/result.webp)
 
-Let’s verify tables in the database “db_pitr_example”. The deleted table “tb_pitr_two” is back again.
+Let’s verify tables in the database “db_pitr_example”. The deleted table “pitr_two” is back again.
 ![verify](/static/blog/restoring-a-mysql-database-to-a-point-in-time/verify.webp)
 
 ## Learn more
