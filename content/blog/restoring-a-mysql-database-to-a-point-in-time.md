@@ -29,7 +29,7 @@ The last step means Bytebase is doing an in-place database recovery and does not
 
 ## How to Restore a Database to a Point in Time?
 
-Let’s say there is a MySQL database “db_pitr_example” that has two tables “tb_pitr_one” and “tb_pitr_two”. 
+Let’s say there is a MySQL database “db_pitr_example” that has two tables “pitr_one” and “pitr_two”. 
 ![original](/static/blog/restoring-a-mysql-database-to-a-point-in-time/original.webp)
 
 Suddenly, an application goes down since someone accidentally deletes the table “tb_pitr_two”. Then, the DBA or the on-call developer needs to restore that deleted table.
