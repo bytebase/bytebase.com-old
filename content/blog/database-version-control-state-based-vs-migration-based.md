@@ -71,7 +71,7 @@ Well, first that's why Terraform worths its hype:) It has done a terrific job of
 
 Another reason is the state-based approach is inherently a fit to manage ephemeral computing/networking resources since they can be destroyed and rebuilt. Database holds data (the state), to deliver a complete state-based approach for DaC, it not only needs to solve the schema (metadata) reconciliation problem like its IaC peer, but also requires to deal with the data.
 
-## Team have better control using migration-based approach then state-based approach, the cost of database mistake is too high
+## Team have better control using migration-based approach than state-based approach, the cost of database mistake is too high
 
 Migration-based approach uses step by step command to instruct the database to make changes. By contrast, state-based approach appears to be a blackbox, and sometimes, this may lead to unexpected outcome. Let's give an example:
 
