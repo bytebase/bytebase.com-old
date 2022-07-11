@@ -13,4 +13,4 @@ If [--pg](/docs/reference/command-line#--pg-string) is specified, the metadata w
 
 ## Database Backup
 
-Bytebase allows users to take database [backups](/docs/features/backup-and-restore). The `backup` directory will be put under the `--data` directory.
+Bytebase allows users to take database [backups](/docs/features/backup-restore-database/overview). The `backup` directory will be put under the `--data` directory.

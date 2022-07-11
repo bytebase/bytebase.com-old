@@ -205,7 +205,8 @@ export const ALPHA_LIST: AlphaItem[] = [
         Thus the database schema change is managed in a very similar fashion as code. This workflow is considered superior than the classic
         UI based SQL review workflow. However, it requires a bit more setup and engineering discipline. Bytebase supports this workflow and helps
         ease the onboarding and ongoing management of using this workflow.`,
-        reference: "https://www.bytebase.com/docs/features/version-control",
+        reference:
+          "https://www.bytebase.com/docs/features/vcs-integration/overview",
         tagList: ["General", "Bytebase"],
       },
       {
@@ -648,7 +649,8 @@ export const ALPHA_LIST: AlphaItem[] = [
         name: "Restore",
         description: `A process to reset the database to a state based on a backup. Bytebase supports to restore
         a backup to a new database.`,
-        reference: "https://www.bytebase.com/docs/features/backup-and-restore",
+        reference:
+          "https://www.bytebase.com/docs/features/backup-restore-database/overview",
         tagList: ["General", "Bytebase"],
       },
       {

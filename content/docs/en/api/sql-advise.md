@@ -10,7 +10,7 @@ This OpenAPI is in **Alpha** stage, we may change it in the future.
 
 The SQL Advise API provides SQL checks based on your schema review policy.
 
-> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/use-bytebase/schema-review/overview) for more information.
+> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/features/schema-review/overview) for more information.
 
 ### Endpoint
 
