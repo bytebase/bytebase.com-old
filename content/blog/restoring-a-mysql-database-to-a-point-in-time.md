@@ -8,7 +8,6 @@ featured: true
 description: This article describes how Point-in-Time-Recovery (PITR) works in Bytebase and the steps to restore a database using this feature.
 ---
 
-# Restoring a MySQL Database to a Point in Time
 Bytebase is an open-source database DevOps tool, and it’s the GitLab for managing databases throughout the application development lifecycle. It offers a web-based workspace for DBAs and Developers to collaborate and manage the database change safely and efficiently.
 
 What would you do if you encountered these scenarios in your daily work?
@@ -19,7 +18,7 @@ You want a time travel.
 
 For MySQL, this means you would look for the valid backup and the relevant binlog files to recover to a point in the past before the incident occurred. This is a complicated process that requires an experienced DBA to operate. Today, we are introducing Point-in-Time Recovery (PITR) in Bytebase, which enables users to perform this error-prone operation with just a few clicks.
 
-# How MySQL PITR works in Bytebase?
+## How MySQL PITR works in Bytebase?
 
 1. Find the most recent backup before the specified recovery point in time.
 2. Restore the backup to a temporary database.
@@ -28,7 +27,7 @@ For MySQL, this means you would look for the valid backup and the relevant binlo
 
 The last step means Bytebase is doing an in-place database recovery and does not require application code change.
 
-# How to Restore a Database to a Point in Time?
+## How to Restore a Database to a Point in Time?
 
 Let’s say there is a MySQL database “db_pitr_example” that has two tables “tb_pitr_one” and “tb_pitr_two”. 
 ![original](/static/blog/restoring-a-mysql-database-to-a-point-in-time/original.webp)
@@ -56,7 +55,7 @@ Now, the point-in-time recovery for the database is done. The result says that t
 Let’s verify tables in the database “db_pitr_example”. The deleted table “tb_pitr_two” is back again.
 ![verify](/static/blog/restoring-a-mysql-database-to-a-point-in-time/verify.webp)
 
-# Learn more
+## Learn more
 
 We just showed you how Bytebase performs a point-in-time recovery. It’s an in-place recovery, which means it does not require extra work to change the application code after the recovery. To learn more about Point-in-Time Recovery in Bytebase, see our [documentation](/content/docs/en/operating/disaster-recovery.md).
 
