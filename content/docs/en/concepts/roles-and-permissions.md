@@ -43,7 +43,6 @@ By default, the first registered user is granted the `Owner` role, all following
 | Sync instance schema                         |           | ✔️  | ✔️    |
 | Re-assign issue                              |           | ✔️  | ✔️    |
 | Become issue assignee                        |           | ✔️  | ✔️    |
-| Edit external SQL console                    |           | ✔️  | ✔️    |
 | Add new user                                 |           |     | ✔️    |
 | Change any user's role                       |           |     | ✔️    |
 | De-activate/re-activate user                 |           |     | ✔️    |
