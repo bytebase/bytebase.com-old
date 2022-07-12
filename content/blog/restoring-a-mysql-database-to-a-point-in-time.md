@@ -25,7 +25,7 @@ For MySQL, this means you would look for the valid backup and the relevant binlo
 3. Replay the binlog files to that temporary database up to the specified point in time.
 4. Swap the temporary database with the targeting database.
 
-The last step means Bytebase is doing an in-place database recovery and does not require application code change.
+The last step means Bytebase is doing an in-place database recovery and does not require any application code change.
 
 ## How to Restore a Database to a Point in Time?
 
