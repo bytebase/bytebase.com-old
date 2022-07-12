@@ -13,21 +13,9 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [System Requirement and Support](/introduction/system-requirements-and-supported-versions)
 
-## 🔑 Concepts
-
-### [Data Model](/concepts/data-model)
-
-### [Roles and Permissions](/concepts/roles-and-permissions)
-
-### [Schema Change Workflow](/concepts/schema-change-workflow)
-
-### [Migration Types](/concepts/migration-types)
-
-### [Tenant Database](/concepts/tenant-database)
-
 ## 🐣 Get Started
 
-### [Quick Start (5 mins Test)](/get-started/quick-start)
+### [5 Mins Quick Start](/get-started/quick-start)
 
 ### [Deploy to Production](/get-started/deploy-to-production/overview)
 
@@ -58,6 +46,18 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
+
+## 🔑 Concepts
+
+### [Data Model](/concepts/data-model)
+
+### [Roles and Permissions](/concepts/roles-and-permissions)
+
+### [Schema Change Workflow](/concepts/schema-change-workflow)
+
+### [Migration Types](/concepts/migration-types)
+
+### [Tenant Database](/concepts/tenant-database)
 
 ## 🚀 Features
 
