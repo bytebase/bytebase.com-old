@@ -32,7 +32,7 @@ The last step means Bytebase is doing an in-place database recovery and does not
 Let’s say there is a MySQL database “db_pitr_example” that has two tables “pitr_one” and “pitr_two”. 
 ![original](/static/blog/restoring-a-mysql-database-to-a-point-in-time/original.webp)
 
-Suddenly, an application goes down since someone accidentally deletes the table “pitr_two”. Then, the DBA or the on-call developer needs to restore that deleted table.
+Suddenly, the application goes down since someone accidentally deletes the table “pitr_two”. Then, the DBA or the on-call developer needs to restore that deleted table.
 ![del](/static/blog/restoring-a-mysql-database-to-a-point-in-time/del.webp)
 
 The following steps demonstrate how to restore the database “db_pitr_example” with PITR.
