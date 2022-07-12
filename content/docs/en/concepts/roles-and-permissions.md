@@ -19,36 +19,36 @@ Workspace role and project role are **disjoint**, which means a Workspace Owner 
 
 By default, the first registered user is granted the `Owner` role, all following registered users are granted `Developer` role. `Owner` can update any user's role later.
 
-| Workspace level permission                                       | Developer | DBA | Owner |
-| ---------------------------------------------------------------- | --------- | --- | ----- |
-| Change own name and password                                     | ✔️        | ✔️  | ✔️    |
-| View all members                                                 | ✔️        | ✔️  | ✔️    |
-| View all environments                                            | ✔️        | ✔️  | ✔️    |
-| View all instances                                               | ✔️        | ✔️  | ✔️    |
-| Create database                                                  | ✔️        | ✔️  | ✔️    |
-| View all databases                                               | ✔️        | ✔️  | ✔️    |
-| View all projects                                                | ✔️        | ✔️  | ✔️    |
-| Create project                                                   | ✔️        | ✔️  | ✔️    |
-| View all issues                                                  | ✔️        | ✔️  | ✔️    |
-| Add comment to all issues                                        | ✔️        | ✔️  | ✔️    |
-| Subscribe to all issues                                          | ✔️        | ✔️  | ✔️    |
-| Alter schema                                                     | ✔️        | ✔️  | ✔️    |
-| Add environment                                                  |           | ✔️  | ✔️    |
-| Edit environment                                                 |           | ✔️  | ✔️    |
-| Reorder environment                                              |           | ✔️  | ✔️    |
-| Archive environment                                              |           | ✔️  | ✔️    |
-| Add instance                                                     |           | ✔️  | ✔️    |
-| Edit instance                                                    |           | ✔️  | ✔️    |
-| Archive instance                                                 |           | ✔️  | ✔️    |
-| Sync instance schema                                             |           | ✔️  | ✔️    |
-| Re-assign issue                                                  |           | ✔️  | ✔️    |
-| Become issue assignee                                            |           | ✔️  | ✔️    |
-| Add new user                                                     |           |     | ✔️    |
-| Change any user's role                                           |           |     | ✔️    |
-| De-activate/re-activate user                                     |           |     | ✔️    |
-| Change any user's name and password                              |           |     | ✔️    |
-| Edit [external SQL console](/docs/settings/external-sql-console) |           |     | ✔️    |
-| Manage version control system (VCS) provider                     |           |     | ✔️    |
+| Workspace level permission                   | Developer | DBA | Owner |
+| -------------------------------------------- | --------- | --- | ----- |
+| Change own name and password                 | ✔️        | ✔️  | ✔️    |
+| View all members                             | ✔️        | ✔️  | ✔️    |
+| View all environments                        | ✔️        | ✔️  | ✔️    |
+| View all instances                           | ✔️        | ✔️  | ✔️    |
+| Create database                              | ✔️        | ✔️  | ✔️    |
+| View all databases                           | ✔️        | ✔️  | ✔️    |
+| View all projects                            | ✔️        | ✔️  | ✔️    |
+| Create project                               | ✔️        | ✔️  | ✔️    |
+| View all issues                              | ✔️        | ✔️  | ✔️    |
+| Add comment to all issues                    | ✔️        | ✔️  | ✔️    |
+| Subscribe to all issues                      | ✔️        | ✔️  | ✔️    |
+| Alter schema                                 | ✔️        | ✔️  | ✔️    |
+| Add environment                              |           | ✔️  | ✔️    |
+| Edit environment                             |           | ✔️  | ✔️    |
+| Reorder environment                          |           | ✔️  | ✔️    |
+| Archive environment                          |           | ✔️  | ✔️    |
+| Add instance                                 |           | ✔️  | ✔️    |
+| Edit instance                                |           | ✔️  | ✔️    |
+| Archive instance                             |           | ✔️  | ✔️    |
+| Sync instance schema                         |           | ✔️  | ✔️    |
+| Re-assign issue                              |           | ✔️  | ✔️    |
+| Become issue assignee                        |           | ✔️  | ✔️    |
+| Edit external SQL console                    |           | ✔️  | ✔️    |
+| Add new user                                 |           |     | ✔️    |
+| Change any user's role                       |           |     | ✔️    |
+| De-activate/re-activate user                 |           |     | ✔️    |
+| Change any user's name and password          |           |     | ✔️    |
+| Manage version control system (VCS) provider |           |     | ✔️    |
 
 ## Project roles
 
