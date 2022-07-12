@@ -37,7 +37,7 @@ Suddenly, the application goes down since someone accidentally deletes the table
 
 The following steps demonstrate how to restore the database `db_pitr_example` with PITR.
 
-**Step1**. Click **Restore to point in time** in **Backup and restore**.
+**Step1**. Click **Restore to point in time** under **Backup and restore**.
 ![pitr-step1](/static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-step1.webp)
 
 **Step2**. Choose a point in time to restore the database, and click **Confirm**.
