@@ -37,7 +37,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Option 3 Build from Source Code](/get-started/deploy-to-production/build-from-source-code)
 
-#### [Use External PostgreSQL Database](/get-started/deploy-to-production/external-postgres)
+#### [Configure External PostgreSQL](/get-started/deploy-to-production/external-postgres)
 
 ### [Configure Workspace](/get-started/configure-workspace/overview)
 
@@ -135,9 +135,9 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Production Setup](/operating/production-setup)
 
-### [Disaster Recovery](/operating/disaster-recovery)
+### [Backup Data Directory](/operating/backup-data-directory)
 
-### [How Bytebase Stores Data](/operating/how-bytebase-stores-data)
+### [Disaster Recovery](/operating/disaster-recovery)
 
 ### [Telemetry](/operating/telemetry)
 
