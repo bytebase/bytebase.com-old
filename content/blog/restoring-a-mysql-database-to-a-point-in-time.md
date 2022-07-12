@@ -8,7 +8,7 @@ featured: true
 description: This article describes how Point-in-Time-Recovery (PITR) works in Bytebase and the steps to restore a database using this feature.
 ---
 
-Bytebase is an open-source database DevOps tool, and it’s the GitLab for managing databases throughout the application development lifecycle. It offers a web-based workspace for DBAs and Developers to collaborate and manage the database change safely and efficiently.
+Bytebase is an open source database DevOps tool, it's the GitLab for managing databases throughout the software development lifecycle (SDLC). It offers a web-based workspace for Developers and DBAs to collaborate and execute database changes safely and efficiently. 
 
 What would you do if you encountered these scenarios in your daily work?
 * Someone accidentally drops a table or deletes a bunch of customer data.
