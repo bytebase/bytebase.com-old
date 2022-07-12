@@ -16,7 +16,7 @@ As an application developer, what would you do if you encountered these scenario
 
 You want a time travel. 
 
-For MySQL, this means you would look for the valid backup and the relevant binlog files to recover to a point in the past before the incident occurred. This is a complicated process that requires an experienced DBA to operate. Today, we are introducing Point-in-Time Recovery (PITR) in Bytebase, which enables users to perform this error-prone operation with just a few clicks.
+For MySQL, this means you would look for the valid backup and the relevant binlog files to recover to a point in the past before the incident occurred. This is a complicated process that requires an experienced DBA to operate. Today, we are introducing Point-in-Time Recovery (PITR) Beta in Bytebase, which enables users to perform this error-prone operation with just a few clicks.
 
 ## How MySQL PITR works in Bytebase?
 
