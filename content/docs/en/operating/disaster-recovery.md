@@ -2,18 +2,6 @@
 title: Disaster Recovery
 ---
 
-## General Disaster Recovery Operations
-
-### **Periodically snapshot the entire** [**--data**](/docs/reference/command-line#--data-directory) **directory**
-
-<hint-block type="info">
-
-You should periodically backup the entire [--data](/docs/reference/command-line#--data-directory) directory.
-
-</hint-block>
-
-If Bytebase is running and not in the [readonly](/docs/reference/command-line#--readonly) mode, and you want to take the backup, then the underlying data volume must support snapshot feature where the entire directory can take a snapshot at the same time, otherwise it may produce a corrupted backup bundle.
-
 ## Point-in-time Recovery for MySQL
 
 Point-in-time Recovery (for MySQL), also known as PITR, enables you to recover your database to any point in the history with valid logical backups and archived binlog files. PITR is a complicated task involving a series of operations and a deep understanding of the database, often requiring an experienced DBA. And it is always performed under dramatic pressure because you always wish to recover the database to a previous healthy state when disaster happens, such as accidentally dropped tables or columns, new release corrupted data, etc.
