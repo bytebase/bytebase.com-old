@@ -54,7 +54,13 @@
           }}
         </p>
         <div v-if="rule.componentList" class="mt-1">
-          <ul role="list" class="space-y-4 list-disc list-inside">
+          <ul
+            role="list"
+            :class="[
+              'space-y-2 list-disc list-inside',
+              rule.componentList.length > 0 ? 'mt-3' : '',
+            ]"
+          >
             <li
               v-for="(config, index) in rule.componentList"
               :key="index"
@@ -70,6 +76,7 @@
               <span
                 v-if="
                   config.payload.type === 'STRING' ||
+                  config.payload.type === 'NUMBER' ||
                   config.payload.type === 'TEMPLATE'
                 "
                 class="bg-gray-100 rounded text-sm p-2"
