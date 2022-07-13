@@ -7,7 +7,7 @@ title: FAQ
 - 🤠 Follow us on [@Bytebase](https://twitter.com/bytebase)
 - 📧 Email us at [support@bytebase.com](mailto:support@bytebase.com)
 
-## System Requirements and Supported Versions
+## System requirements and supported versions
 
 ### System requirements
 

@@ -1,5 +1,5 @@
 ---
-title: Tenant Database Management
+title: Multi-Tenancy
 ---
 
 Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**.

@@ -11,8 +11,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Use Cases](/introduction/use-cases)
 
-### [System Requirement and Support](/introduction/system-requirements-and-supported-versions)
-
 ## 🐣 Get Started
 
 ### [5 Mins Quick Start](/get-started/quick-start)
@@ -93,7 +91,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
 
-## [Tenant Database Management](/tenant-database-management)
+## [Multi-Tenancy](/multi-tenancy)
 
 ## Disaster Recovery
 
