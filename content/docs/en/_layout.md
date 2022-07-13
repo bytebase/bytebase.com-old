@@ -11,21 +11,19 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Use Cases](/introduction/use-cases)
 
-### [System Requirement and Support](/introduction/system-requirements-and-supported-versions)
-
 ## 🐣 Get Started
 
 ### [5 Mins Quick Start](/get-started/quick-start)
 
-### [Deploy to Production](/get-started/deploy-to-production/overview)
+### [Install](/get-started/install/overview)
 
-#### [Option 1 Docker (5 seconds)](/get-started/deploy-to-production/deploy-with-docker)
+#### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
 
-#### [Option 2 Installation Script](/get-started/deploy-to-production/installation-script)
+#### [Option 2 Installation Script](/get-started/install/installation-script)
 
-#### [Option 3 Build from Source Code](/get-started/deploy-to-production/build-from-source-code)
+#### [Option 3 Build from Source Code](/get-started/install/build-from-source-code)
 
-#### [Configure External PostgreSQL](/get-started/deploy-to-production/external-postgres)
+#### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
 ### [Configure Workspace](/get-started/configure-workspace/overview)
 
@@ -59,87 +57,91 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Tenant Database](/concepts/tenant-database)
 
-## 🚀 Features
+## SQL Review
 
-### [SQL Review](/features/sql-review)
+### [SQL Advisor](/sql-review/sql-advisor)
 
-### [SQL Advisor](/features/sql-advisor)
+### [Schema Review](/sql-review/schema-review/overview)
 
-### [Schema Review](/features/schema-review/overview)
+#### [Create Schema Review Policy](/sql-review/schema-review/create-schema-review-policy)
 
-#### [Create Schema Review Policy](/features/schema-review/create-schema-review-policy)
+#### [Schema Reivew Check in the Issue](/sql-review/schema-review/schema-review-check-in-the-issue)
 
-#### [Schema Reivew Check in the Issue](/features/schema-review/schema-review-check-in-the-issue)
+#### [View Schema Review Policy](/sql-review/schema-review/view-schema-review-policy)
 
-#### [View Schema Review Policy](/features/schema-review/view-schema-review-policy)
+#### [Edit Schema Review Policy](/sql-review/schema-review/edit-schema-review-policy)
 
-#### [Edit Schema Review Policy](/features/schema-review/edit-schema-review-policy)
+#### [Disable and Delete Schema Review Policy](/sql-review/schema-review/disable-delete-policy)
 
-#### [Disable and Delete Schema Review Policy](/features/schema-review/disable-delete-policy)
+## Change Database
 
-### [VCS Integration](/features/vcs-integration/overview)
+### [Change Workflow](/change-database/change-workflow)
 
-#### [Add Git Provider](/features/vcs-integration/add-git-provider)
+### [Migration History](/change-database/migration-history)
 
-#### [Enable Version Control Workflow (GitOps) in Project](/features/vcs-integration/enable-version-control-workflow)
+## [VCS Integration](/vcs-integration/overview)
 
-#### [Name and Organize Schema Files](/features/vcs-integration/name-and-organize-schema-files)
+### [Add Git Provider](/vcs-integration/add-git-provider)
 
-#### [Create the First Baseline Migration](/features/vcs-integration/create-the-first-baseline-migration)
+### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
 
-#### [🐞 Troubleshoot](/features/vcs-integration/troubleshoot)
+### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
-### [Tenant Database Management](/features/tenant-database-management)
+### [Create the First Baseline Migration](/vcs-integration/create-the-first-baseline-migration)
 
-### [Environment Policy](/features/environment-policy/overview)
+### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
 
-#### [Approval Policy](/features/environment-policy/approval-policy)
+## [Multi-Tenancy](/tenant-database-management)
 
-#### [Backup Schedule Policy](/features/environment-policy/backup-schedule-policy)
+## Disaster Recovery
 
-### [Migration History](/features/migration-history)
+### [Backup and Restore Database](/disaster-recovery/backup-restore-database/overview)
 
-### [Drift Detection](/features/drift-detection)
+#### [Backup](/disaster-recovery/backup-restore-database/backup)
 
-### [SQL Editor](/features/sql-editor/overview)
+#### [Restore from Backup](/disaster-recovery/backup-restore-database/restore-from-backup)
 
-#### [Compose a Query](/features/sql-editor/writing-a-query)
+### [Point-in-time Recovery for MySQL](/disaster-recovery/point-in-time-recovery-for-mysql)
 
-#### [Run and EXPLAIN Query](/features/sql-editor/run-queries)
+## [SQL Editor](/sql-editor/overview)
 
-#### [Query Results](/features/sql-editor/query-results)
+### [Compose a Query](/sql-editor/writing-a-query)
 
-#### [Explore the Schema](/features/sql-editor/explore-the-schema)
+### [Run and EXPLAIN Query](/sql-editor/run-queries)
 
-#### [Saved Sheet and Query History](/features/sql-editor/never-miss-your-works)
+### [Query Results](/sql-editor/query-results)
 
-#### [Share Sheet with Teammates](/features/sql-editor/share-sheet-with-teammates)
+### [Explore the Schema](/sql-editor/explore-the-schema)
 
-### [Webhook Integration](/features/webhook-integration/overview)
+### [Saved Sheet and Query History](/sql-editor/never-miss-your-works)
 
-#### [Project Webhook](/features/webhook-integration/project-webhook)
+### [Share Sheet with Teammates](/sql-editor/share-sheet-with-teammates)
 
-#### [Database Webhook](/features/webhook-integration/database-webhook)
+## Anomaly Detection
 
-### [Backup and Restore Database](/features/backup-restore-database/overview)
+### [Drift Detection](/anomaly-detection/drift-detection)
 
-#### [Backup](/features/backup-restore-database/backup)
+### [Anomaly Center](/anomaly-detection/anomaly-center)
 
-#### [Restore from Backup](/features/backup-restore-database/restore-from-backup)
+## 🔧 Administration
 
-### [Anomaly Center](/features/anomaly-center)
+### [Environment Policy](/administration/environment-policy/overview)
 
-### [Archive](/features/archive)
+#### [Approval Policy](/administration/environment-policy/approval-policy)
 
-## 🔧 Operating
+#### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
-### [Production Setup](/operating/production-setup)
+### [Webhook Integration](/administration/webhook-integration/overview)
 
-### [Backup Data Directory](/operating/backup-data-directory)
+#### [Project Webhook](/administration/webhook-integration/project-webhook)
 
-### [Disaster Recovery](/operating/disaster-recovery)
+#### [Database Webhook](/administration/webhook-integration/database-webhook)
 
-### [Telemetry](/operating/telemetry)
+### [Archive](/administration/archive)
+
+### [Production Setup](/administration/production-setup)
+
+### [Backup Data Directory](/administration/backup-data-directory)
 
 ## 📖 Reference
 

@@ -1,28 +1,26 @@
 ---
-title: Disaster Recovery
+title: Point-in-time Recovery for MySQL
 ---
-
-## Point-in-time Recovery for MySQL
 
 Point-in-time Recovery (for MySQL), also known as PITR, enables you to recover your database to any point in the history with valid logical backups and archived binlog files. PITR is a complicated task involving a series of operations and a deep understanding of the database, often requiring an experienced DBA. And it is always performed under dramatic pressure because you always wish to recover the database to a previous healthy state when disaster happens, such as accidentally dropped tables or columns, new release corrupted data, etc.
 
 Bytebase provides an all-in-one solution to ease the PITR process with a few clicks and a straightforward UI to present the essential progress information.
 
-### Backup
+## Backup
 
 It’s recommended to follow the [doc for backup](/docs/features/backup-restore-database/backup) to set up automatic backups. Bytebase will check that an instance meets all the prerequisites and automatically archives binlog files.
 
 Note that you can only restore to the point of time after a valid backup.
 
-### Restore
+## Restore
 
 The restoration process involves several steps.
 
-#### Step 1 - Click the **Restore to point in time** button on the database page.
+### Step 1 - Click the **Restore to point in time** button on the database page.
 
 ![pitr-restore-step-1](/static/docs-assets/pitr-restore-step-1.webp)
 
-#### Step 2 - Choose a target time to restore.
+### Step 2 - Choose a target time to restore.
 
 PITR restores the database to the state right before the target time. For example, if you give the restore time 10:00:00, Bytebase would recover the database to the state just after 9:59:59 passed but before 10:00:00.
 
@@ -32,7 +30,7 @@ Note that the time is at the local timezone of your browser.
 
 Once you click the Confirm button, a new PITR issue will be created.
 
-#### Step 3 - Approve the Restore task.
+### Step 3 - Approve the Restore task.
 
 The PITR issue consists of two tasks. The first task is to perform a recovery to the point in time you chose in the last step in a temporary database. It does not affect your current database.
 
@@ -44,7 +42,7 @@ And it should succeed like this.
 
 ![pitr-restore-step-4](/static/docs-assets/pitr-restore-step-4.webp)
 
-#### Step 4 - Approve the Swap task.
+### Step 4 - Approve the Swap task.
 
 The second task is called Swap. It will swap the restored temporary database with your current database. After the Swap task, your current database will be at the state of the point in time you chose to restore, and the original database will be renamed by appending a timestamp (the issue created time) and an \_old suffix. You could check the old database and use the data or just delete it to save storage space.
 
