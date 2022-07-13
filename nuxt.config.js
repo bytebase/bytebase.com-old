@@ -59,19 +59,15 @@ function mergedLocalMessages(folder) {
   const message = {};
   const pathes = fse.readdirSync(folder);
   for (const name of pathes) {
-    // Ignore hidden files like .DS_Store in MacOS
-    if (name[0] === ".") {
-      continue;
-    }
     const fullpath = path.resolve(folder, name);
-    if (fse.statSync(fullpath).isFile()) {
+    if (fse.statSync(fullpath).isFile() && /\.json$/.test(name)) {
       const local = name.split(".")[0];
       console.log(`reading localization file from fullpath: ${fullpath}`);
       message[local] = {
         ...(message[local] || {}),
         ...fse.readJSONSync(fullpath),
       };
-    } else {
+    } else if (fse.statSync(fullpath).isDirectory()) {
       const nestedMessage = mergedLocalMessages(fullpath);
       for (const [key, value] of Object.entries(nestedMessage)) {
         console.log(`merge ${name}:${key} into localization message`);
