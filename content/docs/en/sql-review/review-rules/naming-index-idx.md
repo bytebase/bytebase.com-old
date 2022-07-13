@@ -19,7 +19,7 @@ Bytebase checks that all index names in DDL conform to the naming conventions.
 <hint-block type="info">
 
 `Index Naming Convention` rule is only valid for index, which means it does **NOT** work for unique key, foreign key and primary key.
-Also see [unique key naming convention](/docs/features/schema-review/naming-index-uk) and [foreign key naming convention](/docs/features/schema-review/naming-index-fk).
+Also see [unique key naming convention](/docs/sql-review/review-rules/naming-index-uk) and [foreign key naming convention](/docs/sql-review/review-rules/naming-index-fk).
 
 </hint-block>
 
