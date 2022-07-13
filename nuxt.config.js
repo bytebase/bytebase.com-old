@@ -59,7 +59,7 @@ function mergedLocalMessages(folder) {
   const message = {};
   const pathes = fse.readdirSync(folder);
   for (const name of pathes) {
-    if (name.startWith(".")) {
+    if (name[0] === ".") {
       continue;
     }
     const fullpath = path.resolve(folder, name);
