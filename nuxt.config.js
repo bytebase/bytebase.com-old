@@ -59,6 +59,7 @@ function mergedLocalMessages(folder) {
   const message = {};
   const pathes = fse.readdirSync(folder);
   for (const name of pathes) {
+    // Ignore hidden files like .DS_Store in MacOS
     if (name[0] === ".") {
       continue;
     }
