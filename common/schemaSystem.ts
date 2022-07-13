@@ -18,6 +18,12 @@ interface StringPayload {
   value?: string;
 }
 
+interface NumberPayload {
+  type: "NUMBER";
+  default: number;
+  value?: number;
+}
+
 interface StringArrayPayload {
   type: "STRING_ARRAY";
   default: string[];
@@ -33,7 +39,7 @@ interface TemplatePayload {
 
 export interface RuleConfigComponent {
   key: string;
-  payload: StringPayload | TemplatePayload | StringArrayPayload;
+  payload: StringPayload | NumberPayload | TemplatePayload | StringArrayPayload;
 }
 
 type SchemaRuleEngineType = "MYSQL" | "COMMON";
