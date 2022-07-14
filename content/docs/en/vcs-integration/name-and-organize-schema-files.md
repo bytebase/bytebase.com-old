@@ -76,9 +76,9 @@ This is a [reference directory structure ](https://gitlab.bytebase.com/bytebase-
 
 In Bytebase, database always belongs to an instance, and an instance always belongs to an environment. Thus a database also belongs to an environment. One way to organize files is to create a directory for each environment by using the environment name as the directory name and put migration files under the corresponding environment directory. For example:
 
-![Directory per environment, each file corresponds to a single database under an environment](/static/docs/en/features/vcs-integration/name-and-organize-schema-files/organize-schema-files-step1.webp)
+![Directory per environment, each file corresponds to a single database under an environment](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step1.webp)
 
-![organize-schema-files-step](/static/docs/en/features/vcs-integration/name-and-organize-schema-files/organize-schema-files-step2.webp)
+![organize-schema-files-step](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step2.webp)
 
 #### Pros:
 
@@ -96,13 +96,13 @@ This is a [reference directory structure](https://gitlab.bytebase.com/bytebase-d
 
 All migration files for all environments are under the same directory. Like the screenshot below:
 
-![A single file representing all databases having the same name from all environments.](/static/docs/en/features/vcs-integration/name-and-organize-schema-files/organize-schema-files-step3.webp)
+![A single file representing all databases having the same name from all environments.](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step3.webp)
 
-![organize-schema-files-step](/static/docs/en/features/vcs-integration/name-and-organize-schema-files/organize-schema-files-step4.webp)
+![organize-schema-files-step](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step4.webp)
 
 The pros and cons are the opposite of Approach 1. Though this approach brings less overhead to managing the files, when the schema the migration files represents differs from the actual schema of the live database, it will cause a much longer divergence period, because when a migration file is committed, Bytebase will generate a migration pipeline including all environments:
 
-![organize-schema-files-step](/static/docs/en/features/vcs-integration/name-and-organize-schema-files/organize-schema-files-step5.webp)
+![organize-schema-files-step](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step5.webp)
 
 This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since we want the migration files to be the source of truth of the database schema.
 

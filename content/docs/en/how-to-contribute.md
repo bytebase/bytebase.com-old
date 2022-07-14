@@ -36,11 +36,11 @@ Bytebase is built with a curated tech stack. It is optimized for **developer exp
 
 **Tech Stack**
 
-![techstack](/static/docs/en/contribute-to-bytebase/tech-stack.webp)
+![techstack](/static/docs/en/how-to-contribute/tech-stack.webp)
 
 **Data Model**
 
-![datamodel](/static/docs/en/contribute-to-bytebase/data-model-v1.webp)
+![datamodel](/static/docs/en/how-to-contribute/data-model-v1.webp)
 
 #### Prerequisites
 

@@ -21,7 +21,7 @@ One project has to choose between the **UI workflow** and the **Version control 
 
 Go to the project you wish to enable version control workflow. Choose "**Version control workflow**" and click "**Configure version control**".
 
-![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step1.webp)
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step1.webp)
 
 ## Step 1 - Choose Git provider
 
@@ -39,7 +39,7 @@ If you encounter errors during this process, it's likely the Git provider is not
 
 </hint-block>
 
-![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step2.webp)
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step2.webp)
 
 ## Step 2 - Select repository
 
@@ -51,13 +51,13 @@ For GitLab, Bytebase only lists repositories where you have at least the **Maint
 
 </hint-block>
 
-![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step3.webp)
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step3.webp)
 
 Select the repository you want to link to the Bytebase project.
 
 ## Step 3 - Configure deploy
 
-![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step4.webp)
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step4.webp)
 
 The final step allows you to configure the following settings:
 
@@ -120,6 +120,6 @@ Optional placeholders
 
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
-![project-vcs-step](/static/docs/en/features/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
 
 Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
