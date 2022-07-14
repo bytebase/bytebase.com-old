@@ -2,7 +2,7 @@
 title: Installation Script
 ---
 
-**Latest release version:** [**<version></version>**](https://github.com/bytebase/bytebase/releases/latest) 
+**Latest release version:** [**<version></version>**](https://github.com/bytebase/bytebase/releases/latest)
 
 ## Prerequisite
 
