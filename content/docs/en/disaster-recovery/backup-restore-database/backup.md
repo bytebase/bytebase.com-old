@@ -14,7 +14,7 @@ Automatic weekly backup can be enabled/disabled by the Owner of the project owni
 
 Whenever user (re-)enables the automatic backup, Bytebase will choose a random local time between 0:00 AM \~ 6:00 AM on Sunday.
 
-You can use [webhook](/docs/features/webhook-integration/database-webhook) to monitor backup status.
+You can use [webhook](/docs/administration/webhook-integration/database-webhook) to monitor backup status.
 
 ## Manual backup
 

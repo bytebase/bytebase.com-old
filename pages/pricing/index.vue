@@ -86,7 +86,7 @@
                   v-if="plan.type == 'FREE'"
                   :to="
                     localePath(
-                      '/docs/get-started/deploy-to-production/deploy-with-docker'
+                      '/docs/get-started/install/deploy-with-docker'
                     )
                   "
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
@@ -175,7 +175,7 @@
               v-if="plan.type == 'FREE'"
               :to="
                 localePath(
-                  '/docs/get-started/deploy-to-production/deploy-with-docker'
+                  '/docs/get-started/install/deploy-with-docker'
                 )
               "
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
@@ -338,7 +338,7 @@
                 v-if="plan.type == 'FREE'"
                 :to="
                   localePath(
-                    '/docs/get-started/deploy-to-production/deploy-with-docker'
+                    '/docs/get-started/install/deploy-with-docker'
                   )
                 "
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
@@ -475,7 +475,7 @@
               v-if="plan.type == 'FREE'"
               :to="
                 localePath(
-                  '/docs/get-started/deploy-to-production/deploy-with-docker'
+                  '/docs/get-started/install/deploy-with-docker'
                 )
               "
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"

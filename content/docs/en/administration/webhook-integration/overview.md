@@ -7,7 +7,7 @@ User can configure project-level webhooks to let Bytebase post messages to the c
 
 For example, **[Slack](https://slack.com/)**.
 
-Read [Project Webhook](/docs/features/webhook-integration/project-webhook) in detail.
+Read [Project Webhook](/docs/administration/webhook-integration/project-webhook) in detail.
 
 ![Post to a slack channel](/static/docs/webhook-slash-example.png)
 
@@ -18,4 +18,4 @@ For example, **[Better Uptime Heartbeats](https://docs.betteruptime.com/monitori
 
 ![Integrate with Better Uptime Heartbeats](/static/docs/webhook-integrate-example.png)
 
-Read [Database Webhook](/docs/features/webhook-integration/database-webhook) in detail.
+Read [Database Webhook](/docs/administration/webhook-integration/database-webhook) in detail.

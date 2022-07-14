@@ -75,7 +75,7 @@
           <nuxt-link
             :to="
               localePath(
-                '/docs/get-started/deploy-to-production/deploy-with-docker'
+                '/docs/get-started/install/deploy-with-docker'
               )
             "
             class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"

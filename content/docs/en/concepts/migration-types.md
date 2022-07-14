@@ -4,7 +4,7 @@ title: Migration Types
 
 <hint-block type="info">
 
-Migration type is only applicable to project using <a href="/docs/features/vcs-integration/overview">Version Control Workflow</a>.
+Migration type is only applicable to project using <a href="/docs/vcs-integration/overview">Version Control Workflow</a>.
 
 </hint-block>
 
@@ -20,12 +20,12 @@ mysqldump --no-data <<dbname>>
 
 See further details in
 
-<doc-link-block url="/docs/features/vcs-integration/create-the-first-baseline-migration" title="Create the first baseline migration"></doc-link-block>
+<doc-link-block url="/docs/vcs-integration/create-the-first-baseline-migration" title="Create the first baseline migration"></doc-link-block>
 
 ## Normal Migration
 
-Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/features/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
+Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
 
 ## Branch Migration
 
-A branch migration history is recorded when a database is restored from a backup. See [Restore from Backup](/docs/features/backup-restore-database/restore-from-backup#step-4-view-the-restored-database) for details.
+A branch migration history is recorded when a database is restored from a backup. See [Restore from Backup](/docs/disaster-recovery/backup-restore-database/restore-from-backup#step-4-view-the-restored-database) for details.

@@ -4,7 +4,7 @@ title: Production Setup
 
 ### 1. Make sure [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited.
 
-Bytebase uses --host, --port to configure the VCS webhook callback used by the [project version control workflow](/docs/features/vcs-integration/enable-version-control-workflow#step-3-configure-deploy). If host:port mismatches, then committed migration scripts will not trigger the issue creation in Bytebase.
+Bytebase uses --host, --port to configure the VCS webhook callback used by the [project version control workflow](/docs/vcs-integration/enable-version-control-workflow#step-3-configure-deploy). If host:port mismatches, then committed migration scripts will not trigger the issue creation in Bytebase.
 
 ### 2. Setup https
 

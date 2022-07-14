@@ -12,4 +12,4 @@ There are three different ways to deploy Bytebase to production:
 2. [Installation Script](installation-script)
 3. [Build from Source Code](build-from-source-code)
 
-By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. However，you can choose to store the metadata in [an external PostgreSQL database](/docs/get-started/deploy-to-production/external-postgres).
+By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. However，you can choose to store the metadata in [an external PostgreSQL database](https://www.bytebase.com/docs/get-started/install/external-postgres).
