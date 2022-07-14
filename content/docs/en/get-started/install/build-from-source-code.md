@@ -51,7 +51,7 @@ foo/bytebase --host http://localhost --port 8080
 
 You should see something like this in the console:
 
-```bash
+```plain
 -----Config BEGIN-----
 mode=release
 host=http://localhost

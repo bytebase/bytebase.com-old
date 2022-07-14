@@ -55,7 +55,7 @@
 
     <!-- TOC -->
     <div
-      class="hidden fixed right-0 top-32 pt-12 w-60 py-2 h-auto max-h-screen flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 w-60 py-2 pt-12 h-auto max-h-full flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <Toc :content="document" :scroll-offset="20" class="md:flex" />
     </div>
@@ -178,10 +178,9 @@ export default defineComponent({
         },
       ];
 
-      // Add the `Copy` button for pre elements without plain language.
-      const preElementNodeList = ducumentContainerRef.value?.querySelectorAll(
-        "pre:not(.language-plain)"
-      );
+      // Add the `Copy` button for pre elements with bash language.
+      const preElementNodeList =
+        ducumentContainerRef.value?.querySelectorAll("pre.language-bash");
       if (preElementNodeList && preElementNodeList.length > 0) {
         const preElementList = Array.from(preElementNodeList);
         for (const preElement of preElementList) {
@@ -251,7 +250,10 @@ export default defineComponent({
 .nuxt-content .nuxt-content-highlight {
   @apply relative;
 }
-.nuxt-content .nuxt-content-highlight pre.language-bash code::before {
+.nuxt-content .nuxt-content-highlight pre.language-bash {
+  @apply flex;
+}
+.nuxt-content .nuxt-content-highlight pre.language-bash::before {
   @apply text-gray-400;
   content: "$ ";
 }
