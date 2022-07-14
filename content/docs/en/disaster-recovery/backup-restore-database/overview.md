@@ -10,7 +10,7 @@ User accesses the database backup feature by visiting the "Backups" tab from the
 
 ![backup-example](/static/docs/backup-example.png)
 
-At the workspace level, Bytebase also supports enforcing [backup schedule policy](/docs/features/environment-policy/backup-schedule-policy) for each environment. e.g. DBA can require the database in `production` environment to have `daily` backups.
+At the workspace level, Bytebase also supports enforcing [backup schedule policy](/docs/administration/environment-policy/backup-schedule-policy) for each environment. e.g. DBA can require the database in `production` environment to have `daily` backups.
 
 ![env-backup-configure](/static/docs/env-backup-configure.png)
 
