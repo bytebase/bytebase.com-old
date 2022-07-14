@@ -93,6 +93,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## [Multi-Tenancy](/tenant-database-management)
 
+## [gh-ost Integration](/gh-ost-integration)
+
 ## Disaster Recovery
 
 ### [Backup and Restore Database](/disaster-recovery/backup-restore-database/overview)
