@@ -45,7 +45,7 @@ A common mistake is user misconfigures the port when using port forwarding. e.g.
 
 When using old GitLab version (e.g. 9.4.0) to setup VCS integration, you may encounter OAuth error like [this one](https://github.com/bytebase/bytebase/issues/467):
 
-![oauth-failed](/static/docs/en/features/vcs-integration/troubleshoot/oauth-failed.webp)
+![oauth-failed](/static/docs/en/vcs-integration/troubleshoot/oauth-failed.webp)
 
 This is a common problem in the old GitLab verison:
 
@@ -56,7 +56,7 @@ This is a common problem in the old GitLab verison:
 
 Open your browser devtool with `F12`, check the `Network` section. If the latest token request with **`CORS error`** status, we can be certain that it's the `/oauth/token` api CORS error inside GitLab.
 
-![cors-error](/static/docs/en/features/vcs-integration/troubleshoot/cors-error.webp)
+![cors-error](/static/docs/en/vcs-integration/troubleshoot/cors-error.webp)
 
 #### Potential solution
 
