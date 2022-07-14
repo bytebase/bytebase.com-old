@@ -8,7 +8,7 @@ Bytebase provides automatic SQL lint to check common issues in schema change pro
 
 It currently supports following checks:
 
-- [Schema review](/docs/features/schema-review/overview)
+- [SQL Review Rules](/docs/sql-review/review-rules/overview)
 - Database connection failure
 - Syntax error
 - Migration schema missing (the internal bytebase schema recording the migration history)

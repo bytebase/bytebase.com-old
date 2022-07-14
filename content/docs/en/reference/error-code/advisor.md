@@ -16,7 +16,7 @@ Something unexpected happened, you can open a [GitHub issue](https://github.com/
 
 ### 2 - Schema review policy not found
 
-Cannot find the schema review policy in a specific environment. Please [follow the doc](/docs/features/schema-review/create-schema-review-policy) to create the policy.
+Cannot find the schema review policy in a specific environment. Please [follow the doc](/docs/sql-review/review-rules/create-schema-review-policy) to create the policy.
 
 ## Compatibility
 
@@ -72,56 +72,56 @@ A syntax error in your SQL statement.
 
 ### 202 - Statement missing where
 
-The SQL has no WHERE clause. Check [Require WHERE clause](/docs/features/schema-review/query-where-require) for details.
+The SQL has no WHERE clause. Check [Require WHERE clause](/docs/sql-review/review-rules/query-where-require) for details.
 
 ### 203 - Statement not select all
 
-The SQL has `SELECT *`. Check [Disallow SELECT \*](/docs/features/schema-review/query-select-no-select-all) for details.
+The SQL has `SELECT *`. Check [Disallow SELECT \*](/docs/sql-review/review-rules/query-select-no-select-all) for details.
 
 ### 204 - Statement not allow leading wildcard like
 
-The SQL has leading wildcard LIKE. Check [Disallow leading % in LIKE](/docs/features/schema-review/query-where-no-leading-wildcard-like) for details.
+The SQL has leading wildcard LIKE. Check [Disallow leading % in LIKE](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like) for details.
 
 ## Naming
 
 ### 301 - Table naming convention mismatch
 
-Mismatch the table naming convention in your schema review policy. Check [Table naming convention](/docs/features/schema-review/naming-table) for details.
+Mismatch the table naming convention in your schema review policy. Check [Table naming convention](/docs/sql-review/review-rules/naming-table) for details.
 
 ### 302 - Column naming convention mismatch
 
-Mismatch the column naming convention in your schema review policy. Check [Column naming convention](/docs/features/schema-review/naming-column) for details.
+Mismatch the column naming convention in your schema review policy. Check [Column naming convention](/docs/sql-review/review-rules/naming-column) for details.
 
 ### 303 - Index naming convention mismatch
 
-Mismatch the index naming convention in your schema review policy. Check [Index naming convention](/docs/features/schema-review/naming-index-idx) for details.
+Mismatch the index naming convention in your schema review policy. Check [Index naming convention](/docs/sql-review/review-rules/naming-index-idx) for details.
 
 ### 304 - Unique key naming convention mismatch
 
-Mismatch the unique key naming convention in your schema review policy. Check [Unique key naming convention](/docs/features/schema-review/naming-index-uk) for details.
+Mismatch the unique key naming convention in your schema review policy. Check [Unique key naming convention](/docs/sql-review/review-rules/naming-index-uk) for details.
 
 ### 305 - Foreign key naming convention mismatch
 
-Mismatch the foreign key naming convention in your schema review policy. Check [Foreign key naming convention](/docs/features/schema-review/naming-index-fk) for details.
+Mismatch the foreign key naming convention in your schema review policy. Check [Foreign key naming convention](/docs/sql-review/review-rules/naming-index-fk) for details.
 
 ## Column
 
 ### 401 - Missing required columns
 
-Cannot find the required columns defined in your schema review policy. Check [Enforce the required columns in each table](/docs/features/schema-review/column-required) for details.
+Cannot find the required columns defined in your schema review policy. Check [Enforce the required columns in each table](/docs/sql-review/review-rules/column-required) for details.
 
 ### 402 - Column cannot be null
 
-The column cannot be `NULL`. Check [Columns no NULL value](/docs/features/schema-review/column-no-null) for details.
+The column cannot be `NULL`. Check [Columns no NULL value](/docs/sql-review/review-rules/column-no-null) for details.
 
 ## Engine
 
 ### 501 - Use InnoDB engine
 
-Should se InnoDB as MySQL storage engine. Check [Require InnoDB](/docs/features/schema-review/engine-mysql-use-innodb) for details.
+Should se InnoDB as MySQL storage engine. Check [Require InnoDB](/docs/sql-review/review-rules/engine-mysql-use-innodb) for details.
 
 ## Table
 
 ### 601 - Table missing primary key
 
-The table needs a primary key. Check [Require primary key](/docs/features/schema-review/table-require-pk) for details.
+The table needs a primary key. Check [Require primary key](/docs/sql-review/review-rules/table-require-pk) for details.

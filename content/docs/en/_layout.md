@@ -61,17 +61,17 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [SQL Advisor](/sql-review/sql-advisor)
 
-### [Schema Review](/sql-review/schema-review/overview)
+### [Review Rules](/sql-review/review-rules/overview)
 
-#### [Create Schema Review Policy](/sql-review/schema-review/create-schema-review-policy)
+#### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
 
-#### [Schema Reivew Check in the Issue](/sql-review/schema-review/schema-review-check-in-the-issue)
+#### [Schema Reivew Check in the Issue](/sql-review/review-rules/schema-review-check-in-the-issue)
 
-#### [View Schema Review Policy](/sql-review/schema-review/view-schema-review-policy)
+#### [View Schema Review Policy](/sql-review/review-rules/view-schema-review-policy)
 
-#### [Edit Schema Review Policy](/sql-review/schema-review/edit-schema-review-policy)
+#### [Edit Schema Review Policy](/sql-review/review-rules/edit-schema-review-policy)
 
-#### [Disable and Delete Schema Review Policy](/sql-review/schema-review/disable-delete-policy)
+#### [Disable and Delete Schema Review Policy](/sql-review/review-rules/disable-delete-policy)
 
 ## Change Database
 
