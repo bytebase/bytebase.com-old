@@ -7,7 +7,9 @@
     <span class="text-black pb-2 pl-4 border-l border-gray-200 truncate"
       >Table of Contents</span
     >
-    <div class="flex flex-col w-52 md:h-112 2xl:h-screen overflow-y-auto">
+    <div
+      class="flex flex-col w-52 h-auto max-h-screen md:h-112 overflow-y-auto"
+    >
       <a
         v-for="item of tocList"
         :key="item.id"

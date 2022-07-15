@@ -75,7 +75,7 @@ Because --host is part of the webhook callback endpoint. If the same Bytebase in
 
 default: ""
 
-Optional external PostgreSQL instance connection url. If specified, Bytebase will store its own metadata there. Check [setup guide](/docs/get-started/deploy-to-production/external-postgres) for details.
+Optional external PostgreSQL instance connection url. If specified, Bytebase will store its own metadata there. Check [setup guide](/docs/get-started/install/external-postgres) for details.
 
 ## --port <\<number>>
 

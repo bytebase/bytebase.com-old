@@ -10,7 +10,7 @@ This OpenAPI is in **Alpha** stage, we may change it in the future.
 
 The SQL Advise API provides SQL checks based on your schema review policy.
 
-> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/features/schema-review/overview) for more information.
+> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/sql-review/review-rules/overview) for more information.
 
 ### Endpoint
 
@@ -56,18 +56,18 @@ You can also create the instance and database in Bytebase UX, then call the API 
 - `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
 - `title`: The schema review rule type.
   - `OK`: No errors.
-  - [`engine.mysql.use-innodb`](/docs/features/schema-review/engine-mysql-use-innodb)
-  - [`naming.table`](/docs/features/schema-review/naming-table)
-  - [`naming.column`](/docs/features/schema-review/naming-column)
-  - [`naming.index.idx`](/docs/features/schema-review/naming-index-idx)
-  - [`naming.index.uk`](/docs/features/schema-review/naming-index-uk)
-  - [`naming.index.fk`](/docs/features/schema-review/naming-index-fk)
-  - [`statement.select.no-select-all`](/docs/features/schema-review/query-select-no-select-all)
-  - [`statement.where.require`](/docs/features/schema-review/query-where-require)
-  - [`statement.where.no-leading-wildcard-like`](/docs/features/schema-review/query-where-no-leading-wildcard-like)
-  - [`table.require-pk`](/docs/features/schema-review/table-require-pk)
-  - [`column.required`](/docs/features/schema-review/column-required)
-  - [`schema.backward-compatibility`](/docs/features/schema-review/schema-migration-compatibility)
+  - [`engine.mysql.use-innodb`](/docs/sql-review/review-rules/engine-mysql-use-innodb)
+  - [`naming.table`](/docs/sql-review/review-rules/naming-table)
+  - [`naming.column`](/docs/sql-review/review-rules/naming-column)
+  - [`naming.index.idx`](/docs/sql-review/review-rules/naming-index-idx)
+  - [`naming.index.uk`](/docs/sql-review/review-rules/naming-index-uk)
+  - [`naming.index.fk`](/docs/sql-review/review-rules/naming-index-fk)
+  - [`statement.select.no-select-all`](/docs/sql-review/review-rules/query-select-no-select-all)
+  - [`statement.where.require`](/docs/sql-review/review-rules/query-where-require)
+  - [`statement.where.no-leading-wildcard-like`](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
+  - [`table.require-pk`](/docs/sql-review/review-rules/table-require-pk)
+  - [`column.required`](/docs/sql-review/review-rules/column-required)
+  - [`schema.backward-compatibility`](/docs/sql-review/review-rules/schema-migration-compatibility)
 
 ### Response Codes
 

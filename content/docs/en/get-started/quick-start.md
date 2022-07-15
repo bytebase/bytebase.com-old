@@ -28,25 +28,25 @@ curl -fsS https://ghproxy.com/https://raw.githubusercontent.com/bytebase/bytebas
 When the Terminal shows the following message, the execution is successful.
 
 <pre>
-  employee-prod_1  | 2022-06-21T02:35:01.128005Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.29) starting as process 63
-  employee-prod_1  | 2022-06-21T02:35:01.150847Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-  bytebase         | 2022-06-21T02:35:01.449Z	INFO	Completed database initial migration with version 1.1.2.
-  bytebase         | 2022-06-21T02:35:01.465Z	INFO	Current schema version after migration: 1.1.2
-  employee-prod_1  | 2022-06-21T02:35:01.483013Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-  bytebase         | 2022-06-21T02:35:01.489Z	INFO	get project env	{"env": "prod"}
-  bytebase         | 2022-06-21T02:35:01.489Z	INFO	load public pem	{"file": "keys/prod.pub.pem"}
-  bytebase         |
-  bytebase         | ██████╗ ██╗   ██╗████████╗███████╗██████╗  █████╗ ███████╗███████╗
-  bytebase         | ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
-  bytebase         | ██████╔╝ ╚████╔╝    ██║   █████╗  ██████╔╝███████║███████╗█████╗
-  bytebase         | ██╔══██╗  ╚██╔╝     ██║   ██╔══╝  ██╔══██╗██╔══██║╚════██║██╔══╝
-  bytebase         | ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
-  bytebase         | ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
-  bytebase         |
-  bytebase         | Version <version></version> has started at <http://localhost:5678>
-  bytebase         | ___________________________________________________________________________________________
-  bytebase         |
-  employee-test_1  | [Entrypoint] Database initialized
+employee-prod_1  | 2022-06-21T02:35:01.128005Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.29) starting as process 63
+employee-prod_1  | 2022-06-21T02:35:01.150847Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+bytebase         | 2022-06-21T02:35:01.449Z	INFO	Completed database initial migration with version 1.1.2.
+bytebase         | 2022-06-21T02:35:01.465Z	INFO	Current schema version after migration: 1.1.2
+employee-prod_1  | 2022-06-21T02:35:01.483013Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+bytebase         | 2022-06-21T02:35:01.489Z	INFO	get project env	{"env": "prod"}
+bytebase         | 2022-06-21T02:35:01.489Z	INFO	load public pem	{"file": "keys/prod.pub.pem"}
+bytebase         |
+bytebase         | ██████╗ ██╗   ██╗████████╗███████╗██████╗  █████╗ ███████╗███████╗
+bytebase         | ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
+bytebase         | ██████╔╝ ╚████╔╝    ██║   █████╗  ██████╔╝███████║███████╗█████╗
+bytebase         | ██╔══██╗  ╚██╔╝     ██║   ██╔══╝  ██╔══██╗██╔══██║╚════██║██╔══╝
+bytebase         | ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
+bytebase         | ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+bytebase         |
+bytebase         | Version <version></version> has started at http://localhost:5678
+bytebase         | ___________________________________________________________________________________________
+bytebase         |
+employee-test_1  | [Entrypoint] Database initialized
 </pre>
 
 Now you have three Docker containers running:

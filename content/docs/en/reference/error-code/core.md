@@ -40,7 +40,7 @@ The version for migration is out of order. The database has already applied a ne
 
 ### 204 - Migration missing baseline
 
-For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/features/vcs-integration/create-the-first-baseline-migration) for more details.
+For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/vcs-integration/create-the-first-baseline-migration) for more details.
 
 ### 205 - Migration pending
 

@@ -73,12 +73,19 @@
             class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
             :placeholder="config.payload.default"
           />
+          <input
+            v-if="config.payload.type === 'NUMBER'"
+            v-model="state.payload[index]"
+            type="text"
+            class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
+            :placeholder="`${config.payload.default}`"
+          />
           <div v-else-if="config.payload.type === 'STRING_ARRAY'">
             <div class="flex flex-wrap gap-4 mb-4">
               <Badge
                 v-for="(val, i) in state.payload[index]"
                 :key="`${index}-${i}`"
-                :text="val"
+                :text="`${val}`"
                 @remove="() => removeFromList(index, val)"
               />
             </div>
@@ -128,7 +135,7 @@ import Badge from "../Badge.vue";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import InputWithTemplate from "../InputWithTemplate";
 
-type PayloadValueList = (string | string[])[];
+type PayloadValueList = (string | number | string[])[];
 
 interface LocalState {
   level: RuleLevel;
@@ -223,3 +230,16 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+/*  Removed the ticker in the number field  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+</style>

@@ -237,6 +237,15 @@ export default defineComponent({
                   },
                 });
                 break;
+              case "NUMBER":
+                list.push({
+                  ...component,
+                  payload: {
+                    ...component.payload,
+                    value: data[index] as number,
+                  },
+                });
+                break;
               default:
                 list.push({
                   ...component,
