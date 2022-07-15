@@ -10,7 +10,7 @@ The first registered account after deployment will be granted a **Workspace Owne
 
 ![welcome-page](/docs/en/get-started/configure-workspace/register-accounts/welcome-page.webp)
 
-## **Register a normal account**
+## **Register a regular account**
 
 After the admin account is created, you can register a normal account and will be granted **Workspace Developer** role.
 
