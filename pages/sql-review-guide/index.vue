@@ -4,10 +4,10 @@
       <h1
         class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl"
       >
-        {{ $t("database-review-guide.title") }}
+        {{ $t("sql-review-guide.title") }}
       </h1>
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
-        {{ $t("database-review-guide.description") }}
+        {{ $t("sql-review-guide.description") }}
       </h2>
     </div>
     <div
@@ -23,7 +23,7 @@
         <img class="h-24" src="~/assets/schema-system/mysql.webp" alt="" />
         <div class="mt-4">
           <span class="text-lg lg:text-xl">{{
-            $t("database-review-guide.guideline-for")
+            $t("sql-review-guide.guideline-for")
           }}</span>
           <span
             class="text-indigo-600 text-lg lg:text-xl"
@@ -33,7 +33,7 @@
             "
             >{{
               $t(
-                `database-review-guide.template.${template.id
+                `sql-review-guide.template.${template.id
                   .split(".")
                   .join("-")}.env`
               )
@@ -49,7 +49,7 @@
       <div class="rounded-lg p-6 flex flex-col justify-center items-center">
         <img class="h-24" src="~/assets/schema-system/postgres.webp" alt="" />
         <div class="mt-4 text-lg lg:text-xl">
-          {{ $t("database-review-guide.coming-soon") }}
+          {{ $t("sql-review-guide.coming-soon") }}
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
         :rule-changed="state.ruleChanged"
         :title="
           $t(
-            `database-review-guide.template.${state.template.id
+            `sql-review-guide.template.${state.template.id
               .split('.')
               .join('-')}.title`
           )
@@ -74,12 +74,12 @@
       @close="state.openWarningModal = false"
     >
       <div>
-        {{ $t("database-review-guide.your-changes-will-be-reset") }}
+        {{ $t("sql-review-guide.your-changes-will-be-reset") }}
         <ActionButton
           :class-names="['text-white bg-red-600 hover:bg-red-700 ml-auto mt-5']"
           @click="onReset"
         >
-          {{ $t("database-review-guide.reset-changes") }}
+          {{ $t("sql-review-guide.reset-changes") }}
         </ActionButton>
       </div>
     </Modal>

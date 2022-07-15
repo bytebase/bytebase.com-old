@@ -317,9 +317,9 @@
     "snowflake-feature": "是一种基于云的数据存储和分析服务。 它允许企业用户使用基于云的硬件和软件来存储和分析数据。",
     "tidb-feature": "是一个开源、云原生、分布式 SQL 数据库，用于弹性扩展和实时分析。 Bytebase 原生支持 TiDB 数据库管理 schema 变更、备份、记录变更历史等。"
   },
-  "database-review-guide": {
-    "title": "数据库审核规则",
-    "description": "数据库 Schema 审核规则在线生成工具。当前已支持 MySQL，后续会支持 PostgreSQL。",
+  "sql-review-guide": {
+    "title": "SQL 审核规则",
+    "description": "SQL 审核规则在线生成工具。当前已支持 MySQL，后续会支持 PostgreSQL。",
     "guideline-for": "指导方针",
     "coming-soon": "敬请等候",
     "your-changes-will-be-reset": "您的更改将被重置。",

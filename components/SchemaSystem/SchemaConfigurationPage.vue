@@ -6,7 +6,7 @@
         :class-names="['bg-white hover:bg-gray-200']"
         @click="$emit('reset')"
       >
-        {{ $t("database-review-guide.reset-changes") }}
+        {{ $t("sql-review-guide.reset-changes") }}
       </ActionButton>
       <ActionButton
         :class-names="[
@@ -14,14 +14,14 @@
         ]"
         @click="downConfiguration"
       >
-        {{ $t("database-review-guide.download-as-image") }}
+        {{ $t("sql-review-guide.download-as-image") }}
       </ActionButton>
     </div>
     <div class="lg:grid lg:grid-cols-6 lg:gap-x-8">
       <aside class="hidden mt-2 lg:block lg:col-span-2 p-5">
         <div class="space-y-6 mb-6 pb-6 border-b border-gray-300">
           <h1 class="text-left text-2xl font-semibold">
-            {{ $t("database-review-guide.filter") }}
+            {{ $t("sql-review-guide.filter") }}
           </h1>
           <div class="space-y-2">
             <div
@@ -52,7 +52,7 @@
         </div>
         <div class="space-y-6">
           <h1 class="text-left text-2xl font-semibold">
-            {{ $t("database-review-guide.rules") }}
+            {{ $t("sql-review-guide.rules") }}
           </h1>
           <fieldset v-for="(category, index) in categoryList" :key="index">
             <div class="block text-sm font-medium text-gray-900">
@@ -87,7 +87,7 @@
     </div>
     <Modal
       :open="state.openConfigModal && !!state.selectedRule"
-      :title="$t('database-review-guide.configure-rule')"
+      :title="$t('sql-review-guide.configure-rule')"
       @close="state.openConfigModal = false"
     >
       <SchemaRuleConfig

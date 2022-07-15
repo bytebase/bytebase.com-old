@@ -7,10 +7,10 @@
       <p id="preview-hidden" class="hidden">
         Made from
         <a
-          href="https://www.bytebase.com/database-review-guide"
+          href="https://www.bytebase.com/sql-review-guide"
           class="text-indigo-600 hover:underline ml-1"
         >
-          https://www.bytebase.com/database-review-guide
+          https://www.bytebase.com/sql-review-guide
         </a>
       </p>
     </div>
@@ -105,7 +105,7 @@
       class="flex flex-row items-center gap-x-2 border-t border-gray-200 pt-8 text-gray-400"
     >
       Made by
-      <a href="https://www.bytebase.com/database-review-guide">
+      <a href="https://www.bytebase.com/sql-review-guide">
         <img class="h-5" src="~/assets/logo-full.svg" alt="Bytebase" />
       </a>
       at {{ today }}

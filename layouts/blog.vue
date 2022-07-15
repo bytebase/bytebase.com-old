@@ -12,7 +12,7 @@
         <nuxt-link :to="localePath('/database-glossary')" class="nav-link">
           <span>Database Glossary</span>
         </nuxt-link>
-        <nuxt-link :to="localePath('/database-review-guide')" class="nav-link">
+        <nuxt-link :to="localePath('/sql-review-guide')" class="nav-link">
           <span>Database Review Guide</span>
         </nuxt-link>
         <nuxt-link :to="localePath('/brand')" class="nav-link">
