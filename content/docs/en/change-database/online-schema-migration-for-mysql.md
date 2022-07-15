@@ -17,7 +17,6 @@ All existing online schema change tools operate similarly:
 1. Migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table.
 1. Finally, they replace your original table with the ghost table at the right time.
 
-
 ## Requirements and limitations
 
 - MySQL versions 5.7 or greater.
