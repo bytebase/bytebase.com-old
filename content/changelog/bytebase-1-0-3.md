@@ -4,15 +4,15 @@ published_at: 2022/04/14 10:46:34
 description: Release MySQL Database Review Guide. Toggle Debug mode at runtime for easier troubleshooting. SQL editor support more types of EXPLAIN queries on the basis of EXPLAIN SELECT, such as EXPLAIN INSERT.
 ---
 
-## Release MySQL Database Review Guide
+## Release MySQL SQL Review Guide
 
-[Database Review Guide](http://bytebase.com/database-review-guide) lists all the rules in schema change review, from the naming convention of Table, Column, and Index to the designated WHERE clause. We provide rule templates for the MySQL Dev and Prod environments. DBAs can configure the rules manually based on our templates, and generate images for internal reference.  Meanwhile, we are actively working on the following area:
+[SQL Review Guide](http://bytebase.com/sql-review-guide) lists all the rules in schema change review, from the naming convention of Table, Column, and Index to the designated WHERE clause. We provide rule templates for the MySQL Dev and Prod environments. DBAs can configure the rules manually based on our templates, and generate images for internal reference.  Meanwhile, we are actively working on the following area:
 
 - Add more rules. We also welcome DBAs' suggestions at [Issues · bytebase/bytebase](https://github.com/bytebase/bytebase/issues)
 - Integrate those rules into the Bytebase product by detecting rule violations automatically.
 
 Currently, we only support MySQL. We will add PostgreSQL support later.
-![_](/static/changelog/1.0.3/database-review-guide.gif)
+![_](/static/changelog/1.0.3/sql-review-guide.gif)
 
 ### 🚀 Features
 

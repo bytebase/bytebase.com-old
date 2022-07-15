@@ -167,10 +167,10 @@
             </li>
             <li>
               <nuxt-link
-                :to="localePath('/database-review-guide')"
+                :to="localePath('/sql-review-guide')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('dbreview.footer')"
-                >{{ $t("database-review-guide.title") }}</nuxt-link
+                >{{ $t("sql-review-guide.title") }}</nuxt-link
               >
             </li>
             <li>
