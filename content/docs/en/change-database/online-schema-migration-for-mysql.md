@@ -3,6 +3,12 @@ title: Online Schema Migration for MySQL
 description: This guide shows you how to use gh-ost to migrate your MySQL databases in Bytebase. 
 ---
 
+<hint-block type="warning">
+
+This is currently a preview feature.
+
+</hint-block>
+
 [gh-ost](https://github.com/github/gh-ost) is a triggerless online schema migration tool for MySQL.
 
 All existing online schema change tools operate similarly:
@@ -11,22 +17,13 @@ All existing online schema change tools operate similarly:
 1. Migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table.
 1. Finally, at the right time, they replace your original table with the ghost table.
 
-Bytebase uses the power of gh-ost to help users migrate MySQL databases with little downtime.
+Bytebase leverages gh-ost to migrate MySQL table schemas with little downtime.
 
-<hint-block type="warning">
-
-This is currently a preview feature. Data loss is possible.
-
-</hint-block>
-
-## Requirements
+## Requirements and limitations
 
 - MySQL versions 5.7 or greater.
 - Enable row-based logging.
-- Bytebase currently only supports migrating on main.
-
-## Limitations
-
+- Bytebase currently only supports migrating on primary.
 - Foreign key constraints are not supported.
 - Triggers are not supported.
 
