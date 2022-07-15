@@ -11,7 +11,7 @@ Developers (Dev), Site Reliability Engineer (SRE), and Operations (Ops) are job 
 
 ## Dev
 
-Also called Development engineer, Software Engineer (SWE), Software Developer, or simply Developer (Dev). Their main responsibility is to write code and implement software business logic. The logic could be fulfilling a grocery order, scheduling a cab to your place and etc. Developers mostly deal with the code.
+Also called Development Engineer, Software Engineer (SWE), Software Developer, or simply Developer (Dev). Their main responsibility is to write code and implement software business logic. The logic could be fulfilling a grocery order, scheduling a cab to your place and etc. Developers mostly deal with the code.
 
 ## Ops
 
@@ -33,7 +33,7 @@ Site Reliability Engineer (SRE), coined by Google in 2003. A couple of backgroun
 
 Simply put, SRE is an upgraded version of traditional Operations. SRE differs from Operations in the following ways:
 
-1. No longer deal with physical equipment, this part is taken care of by the cloud services.
+1. No longer deals with physical equipment, this part is taken care of by the cloud services.
 1. Employs a more systematic approach to ensure service stability, such as building automation tools, and working with the development team together to develop [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service-level_objective) / [Service Level Agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) / [Service Level Indicator (SLI)](https://en.wikipedia.org/wiki/Service_level_indicator). This triplet serves as the contract between SREs and Developers to work towards a shared goal of providing a better service.
 1. Stronger engineering background. Some SREs possess quite strong engineering skills. e.g. The author of the monitoring software Prometheus, who was an SRE at Google.
 
