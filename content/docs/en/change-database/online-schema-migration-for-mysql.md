@@ -37,13 +37,13 @@ Click "Alter Schema" on the database page.
 
 ![The database detail page with "alter schema" button highlighted](/static/docs/gh-ost-step-1-1.webp)
 
-Choose “Online migration” and click “Next”.
+Choose "Online migration" and click "Next".
 
 ![The migration mode option popup with online migration selected](/static/docs/gh-ost-step-1-2.webp)
 
 The online migration mode has two tasks: The first task syncs your data to the ghost table. The second task replaces your original table with the ghost table.
 
-Select “Sync data” and enter your SQL statements in the editor. After that, click “Create”.
+Select "Sync data" and enter your SQL statements in the editor. After that, click "Create".
 
 ![The create issue page](/static/docs/gh-ost-step-1-3.webp)
 
@@ -53,7 +53,7 @@ After creating the issue, you should see something like this.
 
 ![The issue detail page where gh-ost sync task is waiting approval.](/static/docs/gh-ost-step-2-1.webp)
 
-Make sure that the gh-ost sync task check is passing. Then click “Approve” to run the sync task.
+Make sure that the gh-ost sync task check is passing. Then click "Approve" to run the sync task.
 
 ![The task check result of gh-ost sync task, and gh-ost dry run passed](/static/docs/gh-ost-step-2-2.webp)
 
@@ -72,13 +72,13 @@ Depending on your table size, the sync task could take some time to process. Whe
 
 The cutover task atomically renames `yourtablename`, `~yourtablename_{timestamp}_gho` to `~yourtablename_{timestamp}_del`, `yourtablename` respectively to switch the original table and the ghost table.
 
-Click “Approve” to perform the cutover task.
+Click "Approve" to perform the cutover task.
 
 ![The issue detail page where the cutover task is waiting approval.](/static/docs/gh-ost-step-3-1.webp)
 
 ### Step 4 - Delete `~yourtablename_{timestamp}_del` after migration
 
-After migration, the original table is renamed to `~yourtablename_{timestamp}_del`. Make sure there is no data loss, then manually drop the original table if you wish. You can check the table by clicking “Show Bytebase reserved tables” on the database page.
+After migration, the original table is renamed to `~yourtablename_{timestamp}_del`. Make sure there is no data loss, then manually drop the original table if you wish. You can check the table by clicking "Show Bytebase reserved tables" on the database page.
 
 ![A table list where "Show Bytebase reserved tables" button is highlighted](/static/docs/gh-ost-step-4-1.webp)
 ![A table list which also shows reserved tables](/static/docs/gh-ost-step-4-2.webp)
@@ -129,7 +129,7 @@ Replace taskID, databaseID, databaseName and tableName accordingly.
 </hint-block>
 
 Sometimes you want to kill gh-ost. Maybe it’s because gh-ost is so slow, or you find a typo in your sql statement.
-To kill gh-ost, you issue “panic” to the UNIX socket file on which gh-ost listens.
+To kill gh-ost, you issue "panic" to the UNIX socket file on which gh-ost listens.
 
 If Bytebase is running on docker, execute the command below to kill gh-ost:
 
