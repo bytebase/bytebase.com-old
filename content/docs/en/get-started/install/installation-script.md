@@ -2,7 +2,7 @@
 title: Installation Script
 ---
 
-**Latest release version:** [**<version></version>**](https://github.com/bytebase/bytebase/releases/latest)
+This document guides you to install the latest Bytebase via the one-liner installation script. The installation script is stored at [https://github.com/bytebase/install](https://github.com/bytebase/install).
 
 ## Prerequisite
 

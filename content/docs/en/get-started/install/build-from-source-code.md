@@ -2,6 +2,8 @@
 title: Build from Source Code
 ---
 
+This document guides you to build Bytebase from source code.
+
 ## Prerequisite
 
 1. Install [pnpm](https://pnpm.io/installation), Bytebase requires Node.js >=17.0.
