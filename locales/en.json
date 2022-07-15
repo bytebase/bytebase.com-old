@@ -317,9 +317,9 @@
     "snowflake-feature": "is a cloud-based data storage and analytics service. It allows corporate users to store and analyze data using cloud-based hardware and software.",
     "tidb-feature": "is an open-source, cloud-native, distributed SQL database for elastic scale and real-time analytics. Bytebase supports TiDB database natively to manage schema changes, backups, record migration history and etc."
   },
-  "database-review-guide": {
-    "title": "Database Review Guide",
-    "description": "An online tool for DBA to generate the database schema review / DDL guideline. Support MySQL now, PostgreSQL later.",
+  "sql-review-guide": {
+    "title": "SQL Review Guide",
+    "description": "An online tool for DBA to generate the SQL review / DDL guideline. Support MySQL now, PostgreSQL later.",
     "guideline-for": "Guideline for",
     "coming-soon": "coming soon",
     "your-changes-will-be-reset": "Your changes will be reset.",

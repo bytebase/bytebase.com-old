@@ -4,7 +4,7 @@ title: Configure the Workspace
 
 Now that you have successfully deployed Bytebase. Before making any changes to databases, you should first configure the workspace.
 
-A single Bytebase deployment represents a single **Workspace**. At the workspace level you can configure global settings applicable to all later created projects. There are three roles at the workspace level: **Owner**, **DBA**, and **Developer**.
+A single Bytebase deployment represents a single **Workspace**. At the workspace level, you can configure global settings applicable to all projects within this workspace. There are three roles at the workspace level: **Owner**, **DBA**, and **Developer**.
 
 This section guides you through the workspace level configuration before you start any **Project**.
 

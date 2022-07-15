@@ -124,6 +124,12 @@ export default {
     linkActiveClass: "router-active-link underline",
     linkExactActiveClass: "router-exact-active-link underline",
     prefetchPayloads: false,
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: "/database-review-guide",
+        redirect: "/sql-review-guide",
+      });
+    },
   },
 
   content: {

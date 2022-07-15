@@ -92,7 +92,7 @@
             <input
               type="text"
               class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
-              :placeholder="$t('database-review-guide.input-then-press-enter')"
+              :placeholder="$t('sql-review-guide.input-then-press-enter')"
               @keyup.enter="(e) => pushToList(index, e)"
             />
           </div>
