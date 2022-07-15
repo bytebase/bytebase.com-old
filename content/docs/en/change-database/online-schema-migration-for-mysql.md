@@ -9,7 +9,7 @@ This is currently a preview feature.
 
 </hint-block>
 
-[gh-ost](https://github.com/github/gh-ost) is a triggerless online schema migration tool for MySQL.
+[gh-ost](https://github.com/github/gh-ost) is a triggerless online schema migration tool for MySQL. Bytebase leverages gh-ost to migrate MySQL table schemas with little downtime.
 
 All existing online schema change tools operate similarly:
 
@@ -17,7 +17,6 @@ All existing online schema change tools operate similarly:
 1. Migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table.
 1. Finally, they replace your original table with the ghost table at the right time.
 
-Bytebase leverages gh-ost to migrate MySQL table schemas with little downtime.
 
 ## Requirements and limitations
 
