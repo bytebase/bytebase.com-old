@@ -15,7 +15,7 @@ All existing online schema change tools operate similarly:
 
 1. Create a ghost table in the likeness of your original table.
 1. Migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table.
-1. Finally, at the right time, they replace your original table with the ghost table.
+1. Finally, they replace your original table with the ghost table at the right time.
 
 Bytebase leverages gh-ost to migrate MySQL table schemas with little downtime.
 
@@ -23,7 +23,7 @@ Bytebase leverages gh-ost to migrate MySQL table schemas with little downtime.
 
 - MySQL versions 5.7 or greater.
 - Enable row-based logging.
-- Bytebase currently only supports migrating on primary.
+- Bytebase currently only supports migrating on the primary.
 - Foreign key constraints are not supported.
 - Triggers are not supported.
 
@@ -33,7 +33,7 @@ For an exhaustive list, please refer to this [doc](https://github.com/github/gh-
 
 ### Step 1 - Create an alter schema issue
 
-Click “Alter Schema” on the database page.
+Click "Alter Schema" on the database page.
 
 ![The database detail page with "alter schema" button highlighted](/static/docs/gh-ost-step-1-1.webp)
 
@@ -53,7 +53,7 @@ After creating the issue, you should see something like this.
 
 ![The issue detail page where gh-ost sync task is waiting approval.](/static/docs/gh-ost-step-2-1.webp)
 
-Make sure that the gh-ost sync task check is passing. Then click “Approve” to run the sync task
+Make sure that the gh-ost sync task check is passing. Then click “Approve” to run the sync task.
 
 ![The task check result of gh-ost sync task, and gh-ost dry run passed](/static/docs/gh-ost-step-2-2.webp)
 
@@ -89,7 +89,7 @@ Gh-ost listens on a UNIX socket file.
 
 The UNIX socket file name is `/tmp/gh-ost.{taskID}.{databaseID}.{databaseName}.{tableName}.sock`
 
-To find the UNIX socket file, you have to acquire the database id and task id.
+To find the UNIX socket file, you must acquire the database and task id.
 
 ![The issue detail page with task and task id highlighted](/static/docs/gh-ost-step-5-1.webp)
 ![The database detail page with database id highlighted](/static/docs/gh-ost-step-5-2.webp)
