@@ -10,21 +10,26 @@ The first registered account after deployment will be granted a **Workspace Owne
 
 ![welcome-page](/docs/en/get-started/configure-workspace/register-accounts/welcome-page.webp)
 
-## **Register an account**
+## **Register a regular account**
 
-After the admin account is created, you can register a normal account and will be granted **Workspace Developer** role.
+After the admin account is created, you can register a regular account and will be granted **Workspace Developer** role.
 
 ![normal-account](/docs/en/get-started/configure-workspace/register-accounts/normal-account.webp)
 
 ## Login with GitLab
 
+<hint-block type="info">
+
 This feature is only available in the **Team** or **Enterprise** plan.
+
+</hint-block>
 
 In order to log in with Gitlab:
 
 1. In Bytebase, the **Workspace Owner** completes [VCS configuration](/docs/vcs-integration/add-git-provider).
 2. In GitLab, set the public email the same as the registered email in Bytebase.
-![gitlab-public-email](/docs/en/get-started/configure-workspace/register-accounts/gitlab-public-email.webp)
+
+   ![gitlab-public-email](/docs/en/get-started/configure-workspace/register-accounts/gitlab-public-email.webp)
 
 ## Update password
 
