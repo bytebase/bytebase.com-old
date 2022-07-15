@@ -79,6 +79,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Migration History](/change-database/migration-history)
 
+### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
+
 ## [VCS Integration](/vcs-integration/overview)
 
 ### [Add Git Provider](/vcs-integration/add-git-provider)
@@ -92,8 +94,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
 
 ## [Multi-Tenancy](/tenant-database-management)
-
-## [gh-ost Integration](/gh-ost-integration)
 
 ## Disaster Recovery
 

@@ -1,11 +1,15 @@
 ---
-title: Use gh-ost in Bytebase
+title: Online Schema Migration for MySQL
 description: This guide shows you how to use gh-ost to migrate your MySQL databases in Bytebase. 
 ---
 
-gh-ost is a triggerless online schema migration tool for MySQL.
+[gh-ost](https://github.com/github/gh-ost) is a triggerless online schema migration tool for MySQL.
 
-All existing online-schema-change tools operate similarly: they create a ghost table in the likeness of your original table, migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table. Finally, at the right time, they replace your original table with the ghost table.
+All existing online schema change tools operate similarly:
+
+1. Create a ghost table in the likeness of your original table.
+1. Migrate that table while empty, slowly and incrementally copy data from your original table to the ghost table, meanwhile propagating ongoing changes (any INSERT, DELETE, UPDATE applied to your table) to the ghost table.
+1. Finally, at the right time, they replace your original table with the ghost table.
 
 Bytebase uses the power of gh-ost to help users migrate MySQL databases with little downtime.
 
@@ -88,7 +92,7 @@ Gh-ost listens on a UNIX socket file.
 
 The UNIX socket file name is `/tmp/gh-ost.{taskID}.{databaseID}.{databaseName}.{tableName}.sock`
 
-To find the UNIX socket file, we must acquire the database id and task id.
+To find the UNIX socket file, you have to acquire the database id and task id.
 
 ![The issue detail page with task and task id highlighted](/static/docs/gh-ost-step-5-1.webp)
 ![The database detail page with database id highlighted](/static/docs/gh-ost-step-5-2.webp)
@@ -128,7 +132,7 @@ Replace taskID, databaseID, databaseName and tableName accordingly.
 </hint-block>
 
 Sometimes you want to kill gh-ost. Maybe it’s because gh-ost is so slow, or you find a typo in your sql statement.
-To kill gh-ost, we issue “panic” to the UNIX socket file on which gh-ost listens.
+To kill gh-ost, you issue “panic” to the UNIX socket file on which gh-ost listens.
 
 If Bytebase is running on docker, execute the command below to kill gh-ost:
 
