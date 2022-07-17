@@ -125,3 +125,11 @@ Should se InnoDB as MySQL storage engine. Check [Require InnoDB](/docs/sql-revie
 ### 601 - Table missing primary key
 
 The table needs a primary key. Check [Require primary key](/docs/sql-review/review-rules/table-require-pk) for details.
+
+### 602 - Table disallow foreign key
+
+The table disallow the foreign key. Check [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk) for details.
+
+### 603 - Table drop naming convention mismatch
+
+The table mismatch the naming convention for drop table operation. Check [Drop table naming convention](/docs/sql-review/review-rules/table-drop-naming) for details.

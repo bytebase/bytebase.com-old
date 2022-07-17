@@ -10,6 +10,8 @@ The unified naming convention is desired by developers. And the same applies to 
 
 For example, `^fk_{{referencing_table}}_{{referencing_column}}_{{referenced_table}}_{{referenced_column}}$` is a `template` where `{{referencing_table}}` is the name of the referencing table, `{{referencing_column}}` is the list of the referencing column name, `{{referenced_table}}` is the name of the referenced table and `{{referenced_column}}` is the list of the referencing column name. So for unique key on `user(id, name)`, the legal name is `uk_user_id_name`.
 
+It also limits the naming max length. The default maximum length is 64 characters.
+
 ![schema-review-naming-index-fk](/static/docs/schema-review-naming-index-fk.webp)
 
 ## How the rule works

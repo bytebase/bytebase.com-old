@@ -59,6 +59,8 @@ curl http://localhost:8080/v1/sql/advise \
   - [`statement.where.require`](/docs/sql-review/review-rules/query-where-require)
   - [`statement.where.no-leading-wildcard-like`](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
   - [`table.require-pk`](/docs/sql-review/review-rules/table-require-pk)
+  - [`table.no-fk`](/docs/sql-review/review-rules/table-no-fk)
+  - [`table.drop-naming-convention`](/docs/sql-review/review-rules/table-drop-naming)
   - [`column.required`](/docs/sql-review/review-rules/column-required)
   - [`schema.backward-compatibility`](/docs/sql-review/review-rules/schema-migration-compatibility)
 

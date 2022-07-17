@@ -29,6 +29,8 @@ It currently supports following SQL review rules:
   - [Disallow leading % in LIKE](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
 - Table
   - [Require primary key](/docs/sql-review/review-rules/table-require-pk)
+  - [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk)
+  - [Drop naming convention](/docs/sql-review/review-rules/table-drop-naming)
 - Schema
   - [Backward incompatible schema change](/docs/sql-review/review-rules/schema-migration-compatibility)
 - Column
