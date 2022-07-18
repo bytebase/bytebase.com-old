@@ -75,9 +75,7 @@ function webhookRouteList() {
 
 async function getChineseBlogRouteList() {
   const { $content } = require("@nuxt/content");
-  const data = await $content("blog", {
-    deep: true,
-  }).fetch();
+  const data = await $content("blog").fetch();
 
   const list = [];
   for (const item of data) {
