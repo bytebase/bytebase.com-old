@@ -73,6 +73,22 @@ function webhookRouteList() {
   return list;
 }
 
+async function getChineseBlogRouteList() {
+  const { $content } = require("@nuxt/content");
+  const data = await $content("blog", {
+    deep: true,
+  }).fetch();
+
+  const list = [];
+  for (const item of data) {
+    if (item.tags.includes("Chinese")) {
+      list.push(`/blog/${item.slug}`);
+    }
+  }
+
+  return list;
+}
+
 function mergedLocalMessages(folder) {
   const message = {};
   const pathes = fse.readdirSync(folder);
@@ -190,11 +206,14 @@ export default {
 
   generate: {
     routes: async () => {
+      const chineseBlogRouteList = await getChineseBlogRouteList();
+
       return []
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
-        .concat(webhookRouteList());
+        .concat(webhookRouteList())
+        .concat(chineseBlogRouteList);
     },
   },
 
