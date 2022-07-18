@@ -7,7 +7,7 @@ tags: Education
 description: Explain and address the confusion between Developer (Dev), Site Reliability Engineer (SRE), (Operations) Ops and DevOps.
 ---
 
-Developers (Dev), Site Reliability Engineer (SRE), and Operations (Ops) are job types, while DevOps is a system. If we take a soccer analogy, Dev, SRE, and Ops correspond to positions like forward, midfield, and back, while DevOps is a formation like 4-3-3.
+Developers (Dev), Site Reliability Engineer (SRE), and Operations (Ops) are job types, while DevOps is a system. If we take a soccer analogy, Dev, SRE, and Ops correspond to positions like forward, midfield, and back, while DevOps is a formation like [4-3-3](<https://en.wikipedia.org/wiki/Formation_(association_football)#4%E2%80%933%E2%80%933>).
 
 ## Dev
 
@@ -48,5 +48,5 @@ DevOps is a system. As just mentioned, there is no intersection between Dev and 
 ## Why People Get Confused
 
 1. Confused about the difference between SRE and Ops. Simply put, SRE is Ops who can code.
-1. Confused about whether DevOps is a system or a job function. This depends on the context. Initially, DevOps represented the system combining Dev and Ops work. This system may have both Dev and SRE roles, or it may only have a Dev role. In the latter case, the system name, DevOps, is also used to indicate the job function, the so-called DevOps engineer. After all, if a soccer formation blurs the boundaries of the forward, midfield, and back, the formation will become a free formation, and all players can be called free men.
+1. Confused about whether DevOps is a system or a job function. This depends on the context. Initially, DevOps represented the system combining Dev and Ops work. This system may have both Dev and SRE roles, or it may only have a Dev role. When the system only has a Dev role, the system name, DevOps, is also used to indicate the job function, the so-called DevOps engineer. After all, if a soccer formation blurs the boundaries of the forward, midfield, and back, the formation will become a free formation, and all players can be called free men.
 1. Confused about the difference between DevOps and SRE when DevOps is treated as a job function. Simply put, DevOps is the Dev that does Ops work, while SRE is the Ops that does Dev work.
