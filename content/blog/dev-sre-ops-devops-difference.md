@@ -35,7 +35,7 @@ Simply put, SRE is an upgraded version of traditional Operations. SRE differs fr
 
 1. SRE no longer deals with physical equipment which is taken care of by the cloud services.
 1. Employs a more systematic approach to ensure service stability, such as building automation tools, and working with the development team together to develop [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service-level_objective) / [Service Level Agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) / [Service Level Indicator (SLI)](https://en.wikipedia.org/wiki/Service_level_indicator). This triplet serves as the contract between SREs and Developers to work towards a shared goal of providing a better service.
-1. Stronger engineering background. Some SREs possess quite strong engineering skills. For example, the author of the monitoring software Prometheus was an SRE at Google.
+1. Stronger engineering background. Some SREs possess quite strong engineering skills. For example, the creator of the monitoring software [Prometheus](https://prometheus.io/) was an SRE at Google.
 
 ![dev-sre-ops-intersection](/static/blog/dev-sre-ops-devops-difference/dev-sre-ops.webp)
 
@@ -43,7 +43,7 @@ The above diagram depicts the boundary between Dev, SRE, and Ops. There is basic
 
 ## DevOps
 
-DevOps is a system. As just mentioned, there is no intersection between Dev and Ops work, while DevOps is to combine these 2 work types together. More precisely, DevOps is to let Dev take on the Ops work. Under DevOps, there is no traditional Ops role, and the Ops responsibility may be shared by Dev and SRE, or the work may be carried out by Dev alone. This further eliminates the SRE role.
+DevOps is a system. As just mentioned, there is no intersection between Dev and Ops work, while DevOps is to combine these two work types together. More precisely, DevOps is to let Dev take on the Ops work. Under DevOps, there is no traditional Ops role, and the Ops responsibility may be shared by Dev and SRE, or the work may be carried out by Dev alone. This further eliminates the SRE role.
 
 ## Why People Get Confused
 
