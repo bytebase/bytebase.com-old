@@ -21,11 +21,29 @@ function getContentOfNode(node) {
   }
 }
 
+const generateSitemap = async (routes) => {
+  const baseUrl = "https://www.bytebase.com";
+  const routeXMLTagSet = new Set();
+
+  for (const route of routes) {
+    routeXMLTagSet.add(`<url>
+  <loc>${baseUrl}${route}</loc>
+</url>`);
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+${Array.from(routeXMLTagSet).join("\n")}
+</urlset>`;
+
+  fse.appendFileSync("./dist/sitemap.xml", xml);
+};
+
 function glossaryRouteList() {
   const list = [];
   for (const alpha of ALPHA_LIST) {
     for (const glossary of alpha.list) {
-      list.push(`database-glossary/${slug(glossary.name)}`);
+      list.push(`/database-glossary/${slug(glossary.name)}`);
     }
   }
   return list;
@@ -34,7 +52,7 @@ function glossaryRouteList() {
 function databaseFeatureRouteList() {
   const list = [];
   for (const feature of databaseFeatureList()) {
-    list.push(`database-feature/${feature.slug}`);
+    list.push(`/database-feature/${feature.slug}`);
   }
   return list;
 }
@@ -42,7 +60,7 @@ function databaseFeatureRouteList() {
 function databaseVCSRouteList() {
   const list = [];
   for (const feature of databaseVCSList()) {
-    list.push(`vcs/${feature.slug}`);
+    list.push(`/vcs/${feature.slug}`);
   }
   return list;
 }
@@ -50,7 +68,7 @@ function databaseVCSRouteList() {
 function webhookRouteList() {
   const list = [];
   for (const webhook of databaseWebhookList()) {
-    list.push(`webhook/${webhook.slug}`);
+    list.push(`/webhook/${webhook.slug}`);
   }
   return list;
 }
@@ -205,12 +223,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    "vue-plausible",
-    "@nuxtjs/sitemap",
-    "@nuxt/content",
-    "@nuxtjs/i18n",
-  ],
+  modules: ["vue-plausible", "@nuxt/content", "@nuxtjs/i18n"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -229,11 +242,6 @@ export default {
 
   googleAnalytics: {
     id: "UA-202806916-1",
-  },
-
-  sitemap: {
-    hostname: "https://www.bytebase.com",
-    gzip: true,
   },
 
   env: {
@@ -259,7 +267,10 @@ export default {
     },
     // copy /static to ./dist/static in generation folder.
     generate: {
-      async done() {
+      async done(generator) {
+        // Generate `sitemap.xml`
+        generateSitemap(Array.from(generator.generatedRoutes));
+
         try {
           // Patch docs index objects of algolia.
           const { $content } = require("@nuxt/content");
