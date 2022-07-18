@@ -22,11 +22,6 @@ function getContentOfNode(node) {
 }
 
 const generateSitemap = async (routes) => {
-  routes = routes
-    .concat(glossaryRouteList())
-    .concat(databaseFeatureRouteList())
-    .concat(databaseVCSRouteList())
-    .concat(webhookRouteList());
   const baseUrl = "https://www.bytebase.com";
   const routeXMLTagSet = new Set();
 
@@ -190,6 +185,16 @@ export default {
       demo: {
         en: false,
       },
+    },
+  },
+
+  generate: {
+    routes: async () => {
+      return []
+        .concat(glossaryRouteList())
+        .concat(databaseFeatureRouteList())
+        .concat(databaseVCSRouteList())
+        .concat(webhookRouteList());
     },
   },
 
