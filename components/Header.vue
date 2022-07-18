@@ -133,7 +133,7 @@
               :to="localePath('/demo')"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
               @click.native="track('demo.header')"
-              >{{ $t("common.demo") }}</nuxt-link
+              >{{ $t("common.live-demo") }}</nuxt-link
             >
             <a
               v-else
@@ -141,14 +141,10 @@
               target="_blank"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
               @click="track('demo.header')"
-              >{{ $t("common.demo") }}</a
+              >{{ $t("common.live-demo") }}</a
             >
             <nuxt-link
-              :to="
-                localePath(
-                  '/docs/get-started/install/deploy-with-docker'
-                )
-              "
+              :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
               >{{ $t("header.deploy-now") }}</nuxt-link
