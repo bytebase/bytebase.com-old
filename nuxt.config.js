@@ -204,14 +204,11 @@ export default {
 
   generate: {
     routes: async () => {
-      const chineseBlogRouteList = await getChineseBlogRouteList();
-
       return []
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
-        .concat(webhookRouteList())
-        .concat(chineseBlogRouteList);
+        .concat(webhookRouteList());
     },
   },
 
@@ -285,8 +282,11 @@ export default {
     // copy /static to ./dist/static in generation folder.
     generate: {
       async done(generator) {
-        // Generate `sitemap.xml`
-        generateSitemap(Array.from(generator.generatedRoutes));
+        // Generate `sitemap.xml` with chinese blogs.
+        const chineseBlogRouteList = await getChineseBlogRouteList();
+        generateSitemap(
+          Array.from(generator.generatedRoutes).concat(chineseBlogRouteList)
+        );
 
         try {
           // Patch docs index objects of algolia.
