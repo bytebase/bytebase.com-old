@@ -2,7 +2,7 @@
 title: Drop naming convention for Table
 ---
 
-Only tables named with specific naming convention can be deleted. This requires users to do a rename then drop the table.
+Only tables named with specific naming patterns can be deleted. This requires users to do a rename and then drop the table.
 
 The naming convention uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format. By default the table name must have `_delete` suffix.
 
