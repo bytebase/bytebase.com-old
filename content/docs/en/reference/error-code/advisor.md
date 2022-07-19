@@ -132,7 +132,7 @@ The table disallows the foreign key. Check [Disallow foreign key](/docs/sql-revi
 
 ### 603 - Table drop naming convention mismatch
 
-The table mismatch the naming convention for drop table operation. Check [Drop table naming convention](/docs/sql-review/review-rules/table-drop-naming) for details.
+The table name mismatches with the naming convention for drop table operation. Check [Drop table naming convention](/docs/sql-review/review-rules/table-drop-naming) for details.
 
 ### 701 - Drop database restriction
 
