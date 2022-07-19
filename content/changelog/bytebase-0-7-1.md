@@ -7,7 +7,7 @@ This is a security fix release. Please consider upgrading it.
 
 ## 🎄 Enhancement
 
-- Fixed a bunch of security issues found by [huntr.dev](huntr.dev)
+- Fixed a bunch of security issues found by [huntr.dev](https://huntr.dev)
 
 1. Reject the current user operation if the user has just been de-activated.
 

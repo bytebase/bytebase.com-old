@@ -8,7 +8,7 @@ description: Snowflake support
 
 ### Support Snowflake ❄️
 
-[Snowflake®](snowflake.com) is a cloud-based data storage and analytics service. It allows corporate users to store and analyze data using cloud-based hardware and software.
+[Snowflake®](https://snowflake.com) is a cloud-based data storage and analytics service. It allows corporate users to store and analyze data using cloud-based hardware and software.
 
 ## 🐞 Notable Bug Fixes
 

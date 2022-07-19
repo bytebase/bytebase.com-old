@@ -37,7 +37,7 @@ Users whose roles are Owner and DBA in Workspace can view all projects under `Se
 
 ### Added /healthz health check endpoint
 
-This enables serverless platforms like [render.com](render.com) to point its health check endpoint to /healthy.
+This enables serverless platforms like [render.com](https://render.com) to point its health check endpoint to /healthy.
 
 ## 🎄 Enhancement
 

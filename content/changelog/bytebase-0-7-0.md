@@ -52,7 +52,7 @@ Owner and DBA can now enforce backup schedule policy for the specific environmen
 
 ![_](/static/changelog/0.7.0/frontpage.webp)
 
-- We have open sourced our [take-home interview assignment](https://github.com/bytebase/interview).  And yes, we are looking for talented frontend engineer and full-stack engineer to join our remote team. Checkout [job details](http://localhost:57598/jobs).
+- We have open sourced our [take-home interview assignment](https://github.com/bytebase/interview).  And yes, we are looking for talented frontend engineer and full-stack engineer to join our remote team. Checkout [job details](https://bytebase.com/jobs).
 
 ### 📕 Upgrade instruction
 

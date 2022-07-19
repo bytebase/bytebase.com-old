@@ -11,14 +11,14 @@ description: We recently moved most of our hosted service to render.com and also
 
 Bytebase is a start-up I currently take internship at. Its aspiration is to build an open-source, web-based database schema change and version control tool for team collaboration. We are a remote team and most of our development happens on GitHub.
 
-We recently moved most of our hosted service to [render.com](render.com) and also leverage its unique capability to improve our dev workflow. I was responsible for this task.
+We recently moved most of our hosted service to [render.com](https://render.com) and also leverage its unique capability to improve our dev workflow. I was responsible for this task.
 ![_](/static/blog/how-bytebase-uses-render/render-dashboard.webp)
 
 ## Problems we faced
 
 1. **The demo page is stale**
 
-   Our demo page ([demo.bytebase.com](demo.bytebase.com)) was deployed on AWS EC2 . There is an extra step to manually update it during each release.
+   Our demo page ([demo.bytebase.com](https://demo.bytebase.com)) was deployed on AWS EC2 . There is an extra step to manually update it during each release.
 
 2. **No staging environment for each release**
 
@@ -62,7 +62,7 @@ After the setup, our demo page is updated automatically whenever a new commit is
 
 #### Staging environment for pre-release
 
-Every pre-release will also trigger an update for our staging environment ([staging.bytebase.com](staging.bytebase.com)). (We can also update this environment manually via [the action page](https://github.com/bytebase/bytebase/actions/workflows/staging.yml))
+Every pre-release will also trigger an update for our staging environment ([staging.bytebase.com](https://staging.bytebase.com)). (We can also update this environment manually via [the action page](https://github.com/bytebase/bytebase/actions/workflows/staging.yml))
 ![_](/static/blog/how-bytebase-uses-render/github-create-release.png)
 
 #### Preview for each PR
