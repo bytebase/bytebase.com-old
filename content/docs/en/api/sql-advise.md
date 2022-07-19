@@ -36,7 +36,7 @@ curl http://localhost:8080/v1/sql/advise \
 
 Once you have created the schema review policy in the Bytebase UX, you can call the SQL advise API with `environment`, `statement`, and `databaseType` parameters. This will take the SQL check for statements without database catalog information.
 
-You can also create the instance and database in the UX, then call the API with `environment`, `statement`, `host`, `port`, and `databaseName` parameters. This will connect to the specific database to get the catalog.
+You can also create the instance and database in the UX, then call the API with `environment`, `statement`, `host`, `port`, and `databaseName` parameters. This will allow the API to retrieve the database catalog information and assist the SQL check.
 
 ### Response body
 
