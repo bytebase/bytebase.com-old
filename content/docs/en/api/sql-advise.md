@@ -34,9 +34,9 @@ curl http://localhost:8080/v1/sql/advise \
 | `databaseName` | **Optional** | The database name in the instance.                                                                                                  | DB Name                  |
 | `databaseType` | **Optional** | The database type. Required if the port, host and database name is not specified. Available values : `MySQL`, `PostgreSQL`, `TiDB`. | MySQL                    |
 
-Once created the schema review policy in Bytebase UX, you can call the SQL advise API with `environment`, `statement`, and `databaseType` parameters. This will take the SQL check for statements without database catalog information.
+Once you have created the schema review policy in the Bytebase UX, you can call the SQL advise API with `environment`, `statement`, and `databaseType` parameters. This will take the SQL check for statements without database catalog information.
 
-You can also create the instance and database in Bytebase UX, then call the API with `environment`, `statement`, `host`, `port`, and `databaseName` parameters. This will connect to the specific database to get the catalog.
+You can also create the instance and database in the UX, then call the API with `environment`, `statement`, `host`, `port`, and `databaseName` parameters. This will connect to the specific database to get the catalog.
 
 ### Response body
 
