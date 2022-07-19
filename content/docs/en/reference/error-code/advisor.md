@@ -128,7 +128,7 @@ The table needs a primary key. Check [Require primary key](/docs/sql-review/revi
 
 ### 602 - Table disallow foreign key
 
-The table disallow the foreign key. Check [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk) for details.
+The table disallows the foreign key. Check [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk) for details.
 
 ### 603 - Table drop naming convention mismatch
 
