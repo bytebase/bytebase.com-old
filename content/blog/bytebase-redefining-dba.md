@@ -13,7 +13,7 @@ Ever since the 0.1.0 open source version went public on July 9th, 2021, we basic
 
 ## A Bespoke Product for DBA
 
-[Bytebase.com](http://bytebase.com/), among all the database-related products, might be the most vocal one to put DBA at the center stage. Those who came to visit our website could be divided into two groups. The first group consists of developers, many of whom may not understand the value of Bytebase . While the other group, the DBAs, got their eyes lightened up--finally, a professional team stands up to build a tool for **THEM**. But some DBAs still hold a doubtful opinion. How come this tool runs on 150,000 lines of code? Isn’t this a 2-week job if our fellow DBAs use Django to build practically the same thing (DBAs are indeed quite productive, we’ll come back to this point later)?
+[Bytebase.com](https://bytebase.com/), among all the database-related products, might be the most vocal one to put DBA at the center stage. Those who came to visit our website could be divided into two groups. The first group consists of developers, many of whom may not understand the value of Bytebase . While the other group, the DBAs, got their eyes lightened up--finally, a professional team stands up to build a tool for **THEM**. But some DBAs still hold a doubtful opinion. How come this tool runs on 150,000 lines of code? Isn’t this a 2-week job if our fellow DBAs use Django to build practically the same thing (DBAs are indeed quite productive, we’ll come back to this point later)?
 
 We understand all these reactions from the developers. But for the DBAs having doubts, I think the value of Bytebase to the target users, that is, the DBAs, is not clear enough, so here comes ourkey message:
 
