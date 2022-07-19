@@ -3,7 +3,7 @@ title: Drop database restriction
 ---
 
 Can only drop the database if there's no table in it.
-It requires users to drop tables first before dropping the database.
+It requires users to drop all containing tables first before dropping the database.
 
 ![schema-review-drop-empty-db](/static/docs/schema-review-drop-empty-db.webp)
 
