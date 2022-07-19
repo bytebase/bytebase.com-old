@@ -2,6 +2,8 @@
 title: Disallow Foreign Key in Table
 ---
 
+This rule disallows users to create foreign key in the table.
+
 A foreign key is a logical association of rows between two tables, in a parent-child relationship. A row in a "parent" table may be referenced by one or more rows in a "child" table.
 
 `FOREIGN KEY` constraints are impossible to maintain once your data grows and is split over multiple database servers. This typically happens when you introduce functional partitioning/sharding and/or horizontal sharding.
