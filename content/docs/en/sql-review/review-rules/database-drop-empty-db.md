@@ -9,7 +9,7 @@ It requires users to drop all containing tables first before dropping the databa
 
 ## How the rule works
 
-Bytebase checks if exist any table in the specific database.
+Bytebase checks if there exists any table in the specific database.
 
 Specifically, Bytebase checks:
 
