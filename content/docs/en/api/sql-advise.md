@@ -63,6 +63,7 @@ curl http://localhost:8080/v1/sql/advise \
   - [`table.drop-naming-convention`](/docs/sql-review/review-rules/table-drop-naming)
   - [`column.required`](/docs/sql-review/review-rules/column-required)
   - [`schema.backward-compatibility`](/docs/sql-review/review-rules/schema-migration-compatibility)
+  - [`database.drop-empty-database`](/docs/sql-review/review-rules/database-drop-empty-db)
 
 ### Response Codes
 

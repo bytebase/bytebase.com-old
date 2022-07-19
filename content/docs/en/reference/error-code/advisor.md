@@ -133,3 +133,7 @@ The table disallow the foreign key. Check [Disallow foreign key](/docs/sql-revie
 ### 603 - Table drop naming convention mismatch
 
 The table mismatch the naming convention for drop table operation. Check [Drop table naming convention](/docs/sql-review/review-rules/table-drop-naming) for details.
+
+### 701 - Drop database restriction
+
+Can only drop the database if there's no table in it. Check [Drop database restriction](/docs/sql-review/review-rules/database-drop-empty-db) for details.
