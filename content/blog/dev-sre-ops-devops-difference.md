@@ -27,15 +27,15 @@ Site Reliability Engineer (SRE), coined by Google in 2003. The following factors
 
 1. Large-scale online services like Google are complex and require high service stability.
 1. Developers are usually more concerned about delivering software, but less interested in the ongoing maintenance after launch. Moreover, in order to launch the feature sooner, Developers are inclined to ignore the maintenance aspect of the software. This is mostly represented by Facebook’s infamous motto ["Move fast and break things"](https://en.wikipedia.org/wiki/Meta_Platforms#History).
-1. Traditional Operations need to transition to a new role.
+1. Traditional Ops need to transition to a new role.
 
-1 and 2 prompted the need for a specialized job function, of which 2 also serves to balance the development pace (please do not break that much), while 3 provides the labor supply for SRE. Since SRE’s main responsibility is to ensure service stability, it’s a natural transition for Operations to move into an SRE role.
+1 and 2 prompted the need for a specialized job function, of which 2 also serves to balance the development pace (please do not break that much), while 3 provides the labor supply for SRE. Since SRE’s main responsibility is to ensure service stability, it’s a natural transition for Ops to move into an SRE role.
 
-Simply put, SRE is an upgraded version of traditional Operations. SRE differs from Operations in the following ways:
+Simply put, SRE is an upgraded version of traditional Ops. SRE differs from Ops in the following ways:
 
 1. SRE no longer deals with physical equipment which is taken care of by the cloud services.
-1. Employs a more systematic approach to ensure service stability, such as building automation tools, and working with the development team together to develop [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service-level_objective) / [Service Level Agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) / [Service Level Indicator (SLI)](https://en.wikipedia.org/wiki/Service_level_indicator). This triplet serves as the contract between SREs and Developers to work towards a shared goal of providing a better service.
-1. Stronger engineering background. Some SREs possess quite strong engineering skills. For example, the creator of the monitoring software [Prometheus](https://prometheus.io/) was an SRE at Google.
+1. SRE employs a more systematic approach to ensure service stability, such as building automation tools, and working with the development team together to develop [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service-level_objective) / [Service Level Agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) / [Service Level Indicator (SLI)](https://en.wikipedia.org/wiki/Service_level_indicator). This triplet serves as the contract between SREs and Developers to work towards a shared goal of providing a better service.
+1. SRE has stronger engineering background. Some SREs possess quite strong engineering skills. For example, the creator of the monitoring software [Prometheus](https://prometheus.io/) was an SRE at Google.
 
 ![dev-sre-ops-intersection](/static/blog/dev-sre-ops-devops-difference/dev-sre-ops.webp)
 
