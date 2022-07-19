@@ -147,7 +147,7 @@
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
               @click.native="track('deploy.header')"
-              >{{ $t("header.deploy-now") }}</nuxt-link
+              >{{ $t("common.deploy-now") }}</nuxt-link
             >
           </div>
         </div>

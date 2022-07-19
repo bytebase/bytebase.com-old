@@ -70,17 +70,13 @@
             class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
             @click="track('demo.header')"
           >
-            Demo
+            {{ $t("common.live-demo") }}
           </a>
           <nuxt-link
-            :to="
-              localePath(
-                '/docs/get-started/install/deploy-with-docker'
-              )
-            "
+            :to="localePath('/docs/get-started/install/deploy-with-docker')"
             class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
-            >Deploy now</nuxt-link
+            >{{ $t("common.deploy-now") }}</nuxt-link
           >
         </div>
         <div id="algolia-search-container" class="ml-2"></div>

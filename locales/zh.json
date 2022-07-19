@@ -6,6 +6,7 @@
     "documentation": "文档",
     "demo": "Demo",
     "live-demo": "在线 Demo",
+    "deploy-now": "立即部署",
     "about": "关于",
     "changelog": "更新日志",
     "company": "公司",
@@ -32,7 +33,6 @@
     "enterprise-price-intro": "自定义实例数，按年付费",
     "cancel": "取消",
     "announcement": "您可以随时升级、降级或{cancel}。没有任何隐藏费用。",
-    "deploy-now": "立即部署",
     "contact-us": "联系我们",
     "free-trial": "无需信用卡即可免费试用",
     "start-trial": "免费试用",
@@ -209,8 +209,7 @@
     "join-us": "加入我们"
   },
   "header": {
-    "solutions": "解决方案",
-    "deploy-now": "立即部署"
+    "solutions": "解决方案"
   },
   "footer": {
     "brand": "品牌",
