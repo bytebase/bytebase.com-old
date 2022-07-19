@@ -21,14 +21,27 @@ function getContentOfNode(node) {
   }
 }
 
+// unwantedRouteListForSitemap is the unwanted url(prefix) for sitemap.
+const unwantedRouteListForSitemap = ["/zh/docs", "/zh/changelog", "/zh/blog"];
+
 const generateSitemap = async (routes) => {
   const baseUrl = "https://www.bytebase.com";
   const routeXMLTagSet = new Set();
 
   for (const route of routes) {
-    routeXMLTagSet.add(`<url>
+    let isUnwantedRoute = false;
+    for (const item of unwantedRouteListForSitemap) {
+      if (route.startsWith(item)) {
+        isUnwantedRoute = true;
+        break;
+      }
+    }
+
+    if (isUnwantedRoute === false) {
+      routeXMLTagSet.add(`<url>
   <loc>${baseUrl}${route}</loc>
 </url>`);
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
