@@ -565,7 +565,7 @@ export default defineComponent({
 
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
-        return app.i18n.t("pricing.deploy-now") as string;
+        return app.i18n.t("common.deploy-now") as string;
       if (plan.type === PlanType.ENTERPRISE)
         return app.i18n.t("pricing.contact-us") as string;
       if (plan.trialDays) {

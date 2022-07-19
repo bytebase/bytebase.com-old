@@ -6,6 +6,7 @@
     "documentation": "Documentation",
     "demo": "Demo",
     "live-demo": "Live demo",
+    "deploy-now": "Deploy now",
     "about": "About",
     "changelog": "Changelog",
     "company": "Company",
@@ -32,7 +33,6 @@
     "enterprise-price-intro": "Customized, billed annually",
     "cancel": "cancel",
     "announcement": "You can upgrade, downgrade, or {cancel} anytime. No hidden charges.",
-    "deploy-now": "Deploy now",
     "contact-us": "Contact us",
     "free-trial": "Your first 14 days are free - no credit card required",
     "start-trial": "Try free now",
@@ -209,8 +209,7 @@
     "join-us": "Join us"
   },
   "header": {
-    "solutions": "Solutions",
-    "deploy-now": "Deploy now"
+    "solutions": "Solutions"
   },
   "footer": {
     "brand": "Brand",
