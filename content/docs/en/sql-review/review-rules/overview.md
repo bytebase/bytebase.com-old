@@ -29,11 +29,15 @@ It currently supports following SQL review rules:
   - [Disallow leading % in LIKE](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
 - Table
   - [Require primary key](/docs/sql-review/review-rules/table-require-pk)
+  - [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk)
+  - [Drop naming convention](/docs/sql-review/review-rules/table-drop-naming)
 - Schema
   - [Backward incompatible schema change](/docs/sql-review/review-rules/schema-migration-compatibility)
 - Column
   - [Enforce the required columns in each table](/docs/sql-review/review-rules/column-required)
   - [Columns no NULL value](/docs/sql-review/review-rules/column-no-null)
+- Database
+  - [Drop database restriction](/docs/sql-review/review-rules/database-drop-empty-db)
 
 ## How it works
 
