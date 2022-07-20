@@ -8,6 +8,28 @@
       id="content"
       class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
     >
+      <div
+        v-if="breadcrumbRouteList.length > 1"
+        class="w-full flex flex-row justify-start items-center mt-4 flex-wrap"
+      >
+        <div
+          v-for="(item, index) in breadcrumbRouteList"
+          :key="item.path"
+          class="flex flex-row justify-start items-center flex-wrap leading-6"
+        >
+          <nuxt-link
+            :to="localePath(`/docs${item.path}`)"
+            class="text-base text-gray-500 no-underline hover:text-accent"
+          >
+            <span>{{ item.title }}</span>
+          </nuxt-link>
+          <span
+            v-if="index !== breadcrumbRouteList.length - 1"
+            class="font-mono mx-2 text-gray-300"
+            >/</span
+          >
+        </div>
+      </div>
       <div class="w-full markdown-body nuxt-content pt-6">
         <h1>{{ document.title }}</h1>
       </div>
@@ -115,6 +137,7 @@ export default defineComponent({
     const ducumentContainerRef = ref<HTMLDivElement>();
     const prev = ref<any>(undefined);
     const next = ref<any>(undefined);
+    const breadcrumbRouteList = ref<any[]>([]);
     const githubFilePath = `/content${props.document?.path}${props.document?.extension}`;
 
     useFetch(async () => {
@@ -159,6 +182,20 @@ export default defineComponent({
       );
       prev.value = nodes[index - 1];
       next.value = nodes[index + 1];
+      const currentNode = nodes[index];
+      for (let i = index - 1; i >= 0; i--) {
+        const node = nodes[i];
+        if (node.level < currentNode.level) {
+          let nodePath = node.path;
+          if (nodePath.endsWith("/overview")) {
+            nodePath = nodePath.slice(0, nodePath.length - 9);
+          }
+          if (currentNode.path.startsWith(nodePath)) {
+            breadcrumbRouteList.value.push(node);
+          }
+        }
+      }
+      breadcrumbRouteList.value.push(currentNode);
     });
 
     onMounted(() => {
@@ -226,6 +263,7 @@ export default defineComponent({
 
     return {
       state,
+      breadcrumbRouteList,
       prev,
       next,
       ducumentContainerRef,
