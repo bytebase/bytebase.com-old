@@ -2,6 +2,7 @@
 title: How to Configure ClickHouse SSL Connection
 author: zp
 published_at: 2022/07/20 10:37:00
+feature_image: /static/blog/how-to-configure-clickhouse-ssl-connection/lock.webp
 tags: Education
 description: Configure ClickHouse SSL connection and test it by using self-signed CA.
 ---
@@ -304,6 +305,6 @@ Congratulations, you have now successfully connected to your ClickHouse server u
 | 4.a - Copy SSL files to the Client | None | ca.pem client.key client.pem |
 | 4.b - Set-up ClickHouse Client config | None | None |
 | 4.c - Use ClickHouse Client to connect to ClickHouse Server | None | None |
-| 4.d - Use MySQL Client to connect to ClickHouse Server | None | ca.pem client.key client.pem |
+| 4.d - Use MySQL Client to connect to ClickHouse Server | None | ca.pem client.key client.pem |  
 
 If you find this tutorial helpful, you might also be interested in our product [Bytebase](https://bytebase.com/), an open-source, web-based schema change management tool, which helps your data team or DevOps team manage ClickHouse schema change with UI-based or VCS-based (GitOps) schema change workflow.
