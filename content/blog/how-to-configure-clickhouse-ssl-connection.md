@@ -2,7 +2,6 @@
 title: How to Configure ClickHouse SSL Connection
 author: zp
 published_at: 2022/07/20 10:37:00
-feature_image: /static/blog/how-to-run-clickhouse-with-docker-and-connect-using-mysql-client/docker-and-clickhouse.webp
 tags: Education
 description: Configure ClickHouse SSL connection and test it by using self-signed CA.
 ---
