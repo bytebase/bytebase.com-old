@@ -24,7 +24,7 @@ If no errors occur, you will see something like below:
 
 ### Install OpenSSL
 
-Follow the [OpenSSL’s official site](https://www.openssl.org/source/). Depending on the machine environment, there may be different ways to achieve this.
+Follow the [OpenSSL's official site](https://www.openssl.org/source/). Depending on the machine environment, there may be different ways to achieve this.
 
 If no errors occur, you will see something like below:
 
