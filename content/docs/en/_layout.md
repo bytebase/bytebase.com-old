@@ -57,6 +57,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Tenant Database](/concepts/tenant-database)
 
+---
+
 ## SQL Review
 
 ### [SQL Advisor](/sql-review/sql-advisor)
