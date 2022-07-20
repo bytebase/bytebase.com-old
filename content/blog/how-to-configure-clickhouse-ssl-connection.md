@@ -41,7 +41,7 @@ We will generate the following certificate chain:
 
 ### OpenSSL Config
 
-To generate Root CA certificate and other peers' certificate request, you need to set up a configure file as below:
+To generate Root CA certificate and other peer's certificate request, you need to set up a configure file as below:
 
 ```bash
 cat >req.conf <<EOF
