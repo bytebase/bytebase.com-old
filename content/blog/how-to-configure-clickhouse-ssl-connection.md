@@ -36,7 +36,7 @@ OpenSSL 1.1.1f  31 Mar 2020
 
 We will generate the following certificate chain:
 
-![Certificate chain](/static/blog/how-to-configure-clickhouse-ssl-connection/ssl-key-chain.webp)
+![Certificate chain](/static/blog/how-to-configure-clickhouse-ssl-connection/key-chain.webp)
 
 ### OpenSSL Config
 
