@@ -45,6 +45,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
+---
+
 ## 🔑 Concepts
 
 ### [Data Model](/concepts/data-model)
@@ -56,8 +58,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Migration Types](/concepts/migration-types)
 
 ### [Tenant Database](/concepts/tenant-database)
-
----
 
 ## SQL Review
 
