@@ -160,7 +160,7 @@ After completion, modify the configuration file to indicate the location of the 
 
 ### Configure CA Certificate, Server Key and Server Certificate Path
 
-You need to specify the path of CA Certificate, Server Key, Server Certificate in the configuration file:
+You need to specify the path of CA Certificate, Server Key, Server Certificate in the configuration file, for example:
 
 ```xml
 <clickHouse>
@@ -184,24 +184,26 @@ Then, enable SSL related port by uncommenting on the following lines:
    ...
    <https_port>8443</https_port>
    <tcp_port_secure>9440</tcp_port_secure>
+   <interserver_https_port>9010</interserver_https_port>
    ...
 </clickHouse>
 ```
 
-Optionally, you can disable the default non-secure port by commenting out the corresponding lines.
+Then disable the default non-secure port by commenting out the corresponding lines.
 
 ```xml
 <clickHouse>
    ...
    <!-- <http_port>8123</http_port> -->
    <!-- <tcp_port>9000</tcp_port> -->
+   <!-- <<interserver_https_port>9009</interserver_https_port> -->
    ...
 </clickHouse>
 ```
 
-### Enable Remote Login
+### Enable Remote Login (Optional)
 
-You need to enable Remote Login for ClickHouse so that you can test the SSL connection on a different machine than the ClickHouse Server.
+If you want to test the ClickHouse SSL connection on a different machine than the ClickHouse Server, you need to enable Remote Login for ClickHouse.
 Uncommenting the listen_host tag:
 
 ```xml
@@ -211,6 +213,8 @@ Uncommenting the listen_host tag:
    ...
 </clickHouse>
 ```
+
+### Restart the ClickHouse Service
 
 Then, restart the ClickHouse server. For example, on Ubuntu:
 
@@ -222,7 +226,7 @@ sudo service clickhouse-server restart
 
 ### Copy SSL Files to the Client
 
-Copy the ca.pem,client.pem,client.key from the machine that runs ClickHouse server (i.e.: the machine generated them) to directory `/etc/ssl` on the machine that you will run the client.
+You don't need to do anything in this step if you only test it on the machine that Clickhouse server runs on. Copy the ca.pem,client.pem,client.key from the machine that runs ClickHouse server (i.e.: the machine generated them) to directory `/etc/ssl` on the machine that you will run the client.
 
 ### Through ClickHouse Client
 
