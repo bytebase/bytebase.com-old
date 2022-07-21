@@ -15,14 +15,18 @@
         <div
           v-for="(item, index) in breadcrumbRouteList"
           :key="item.path"
-          class="flex flex-row justify-start items-center flex-wrap leading-6"
+          class="flex flex-row justify-start items-center flex-wrap text-base leading-7"
         >
           <nuxt-link
+            v-if="item.path"
             :to="localePath(`/docs${item.path}`)"
-            class="text-base text-gray-500 no-underline hover:text-accent"
+            class="text-gray-500 no-underline hover:text-accent"
           >
             <span>{{ item.title }}</span>
           </nuxt-link>
+          <span v-else class="text-gray-500">
+            {{ item.title }}
+          </span>
           <span
             v-if="index !== breadcrumbRouteList.length - 1"
             class="font-mono mx-2 text-gray-300"
@@ -143,10 +147,16 @@ export default defineComponent({
     useFetch(async () => {
       const locale = "en";
       const category = route.value.params.category;
+      const validDocsCategoryPathList = validDocsCategoryList.map(
+        (t) => t.category
+      );
+      const currentCategory = validDocsCategoryPathList.includes(category)
+        ? category
+        : "";
       const layout = (await $content(
         "docs",
         locale,
-        validDocsCategoryList.includes(category) ? category : "",
+        currentCategory,
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
@@ -174,28 +184,45 @@ export default defineComponent({
             title,
             path,
           };
-        })
-        .filter((n) => n.path !== undefined);
+        });
 
       const index = nodes.findIndex((n) =>
         props?.document?.path.endsWith(n.path)
       );
-      prev.value = nodes[index - 1];
-      next.value = nodes[index + 1];
-      const currentNode = nodes[index];
+      let currentNodeLevel = nodes[index].level;
       for (let i = index - 1; i >= 0; i--) {
         const node = nodes[i];
-        if (node.level < currentNode.level) {
-          let nodePath = node.path;
-          if (nodePath.endsWith("/overview")) {
-            nodePath = nodePath.slice(0, nodePath.length - 9);
-          }
-          if (currentNode.path.startsWith(nodePath)) {
-            breadcrumbRouteList.value.push(node);
-          }
+        if (node.level < currentNodeLevel) {
+          currentNodeLevel = node.level;
+          breadcrumbRouteList.value.unshift(node);
+        }
+        if (currentNodeLevel === 1) {
+          break;
         }
       }
-      breadcrumbRouteList.value.push(currentNode);
+      if (validDocsCategoryPathList.includes(currentCategory)) {
+        const temp = validDocsCategoryList.find(
+          (t) => t.category === currentCategory
+        );
+        if (temp) {
+          breadcrumbRouteList.value.unshift({
+            title: temp.name,
+            path: temp.path,
+          });
+        }
+      }
+      breadcrumbRouteList.value.unshift({
+        title: "Docs",
+        path: "/",
+      });
+      breadcrumbRouteList.value.push(nodes[index]);
+
+      const linkableNodes = nodes.filter((n) => n.path !== undefined);
+      const linkableIndex = linkableNodes.findIndex((n) =>
+        props?.document?.path.endsWith(n.path)
+      );
+      prev.value = linkableNodes[linkableIndex - 1];
+      next.value = linkableNodes[linkableIndex + 1];
     });
 
     onMounted(() => {
