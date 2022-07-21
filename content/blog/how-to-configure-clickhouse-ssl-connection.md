@@ -7,6 +7,15 @@ tags: Education
 description: Configure ClickHouse SSL connection and test it by using self-signed CA.
 ---
 
+## Overview
+
+Follow this tutorial, you can configure the ClickHouse SSL connection and test it by using self-signed CA easily. The general steps are:
+
+1. Install ClickHouse and OpenSSL
+2. Generate SSL Realated Files
+3. Configure ClickHouse Server
+4. Test SSL Connection from Client
+
 ## Background
 
 ClickHouse® is an open-source, high-performance columnar OLAP database management system for real-time analytics using SQL. It supports SSL connection like most databases do.
