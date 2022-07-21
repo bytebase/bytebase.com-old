@@ -211,11 +211,10 @@ export default defineComponent({
           });
         }
       }
-      breadcrumbRouteList.value.unshift({
-        title: "Docs",
-        path: "/",
+      breadcrumbRouteList.value.push({
+        ...nodes[index],
+        title: props.document?.title,
       });
-      breadcrumbRouteList.value.push(nodes[index]);
 
       const linkableNodes = nodes.filter((n) => n.path !== undefined);
       const linkableIndex = linkableNodes.findIndex((n) =>
