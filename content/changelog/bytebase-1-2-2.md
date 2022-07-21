@@ -7,7 +7,7 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
 
 ## 🚀 New Features
 
-- 👻 Added support for [gh-ost](https://github.com/github/gh-ost), online schema migration for large tables (beta).
+- 👻 Added support for [gh-ost](https://github.com/github/gh-ost), online schema migration for large tables (Beta).
   
  ![gh-ost](/static/changelog/1.2.2/gh-ost.webp)
 
