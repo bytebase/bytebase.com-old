@@ -59,6 +59,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Tenant Database](/concepts/tenant-database)
 
+---
+
 ## SQL Review
 
 ### [SQL Advisor](/sql-review/sql-advisor)
@@ -127,6 +129,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Anomaly Center](/anomaly-detection/anomaly-center)
 
+---
+
 ## 🔧 Administration
 
 ### [Environment Policy](/administration/environment-policy/overview)
@@ -147,6 +151,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Backup Data Directory](/administration/backup-data-directory)
 
+---
+
 ## 📖 Reference
 
 ### [Server Startup Options](/reference/command-line)
@@ -157,7 +163,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Error Code for SQL Advisor](/reference/error-code/advisor)
 
+---
+
 ## [❓ FAQ](/faq)
+
+---
 
 ## [✍️ Document Write Guide](/document-write-guide)
 
