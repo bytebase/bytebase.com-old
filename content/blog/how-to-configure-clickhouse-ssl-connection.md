@@ -196,14 +196,14 @@ Then disable the default non-secure port by commenting out the corresponding lin
    ...
    <!-- <http_port>8123</http_port> -->
    <!-- <tcp_port>9000</tcp_port> -->
-   <!-- <<interserver_https_port>9009</interserver_https_port> -->
+   <!-- <interserver_https_port>9009</interserver_https_port> -->
    ...
 </clickHouse>
 ```
 
 ### Enable Remote Login (Optional)
 
-If you want to test the ClickHouse SSL connection on a different machine than the ClickHouse Server, you need to enable Remote Login for ClickHouse.
+If you want to test the ClickHouse SSL connection on a different machine than the ClickHouse Server, you need to enable remote login for ClickHouse.
 Uncommenting the listen_host tag:
 
 ```xml
