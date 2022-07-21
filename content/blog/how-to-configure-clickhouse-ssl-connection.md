@@ -100,7 +100,7 @@ openssl x509 -req -days 36500 -sha256 -extensions v3_req -CA ca.pem -CAkey ca.ke
 
 ### Generate Client Key and Certificate
 
-From the SSL authentication perspective, Client an Server are equal partners, so you use the same steps as the server to generate client-related SSL files.
+From the SSL authentication perspective, Client and Server are equal partners, so you use the same steps as the server to generate client-related SSL files.
 
 ```bash
 openssl genrsa -out client.key 2048
@@ -246,7 +246,7 @@ cat >clickhouse-client-ssl.xml <<EOF
 EOF
 ```
 
-**Replace YOUR_PASSWORD with the real password of the default user of ClickHouse and replace YOUR_CLICKHOUSE_SERVER_IP with the real IP of the machine that runs ClickHouse server.**
+**Replace YOUR_PASSWORD with the real default user password of your ClickHouse server and replace YOUR_CLICKHOUSE_SERVER_IP with the real IP of the machine that runs the ClickHouse server.**
 
 Run the following command, and you are expected to get some output like below:
 
@@ -258,7 +258,7 @@ clickhouse-client –-config=clickhouse-client-ssl.xml
 
 ### Through MySQL Client
 
-Use MySQL client to connect the ClickHouse server via SSL.Run the following command, and you are expected to get some output like below:
+Use MySQL client to connect the ClickHouse server via SSL. Run the following command, and you are expected to get some output like below:
 
 ```bash
 mysql -u default -p -h YOUR_SERVER_IP -P 9004 --ssl-ca=/etc/ssl/ca.pem --ssl-cert=/etc/ssl/client.pem --ssl-key=/etc/ssl/client.key --execute="STATUS"
