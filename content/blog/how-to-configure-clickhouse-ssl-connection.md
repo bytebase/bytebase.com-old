@@ -213,7 +213,7 @@ Then disable the default non-secure port by commenting out the corresponding lin
 ### Enable Remote Login (Optional)
 
 If you want to test the ClickHouse SSL connection on a different machine than the ClickHouse Server, you need to enable remote login for ClickHouse.
-Uncommenting the listen_host tag:
+Uncommenting the `listen_host` tag:
 
 ```xml
 <clickHouse>
