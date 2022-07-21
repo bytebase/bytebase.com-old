@@ -12,7 +12,7 @@ description: Configure ClickHouse SSL connection and test it by using self-signe
 Follow this tutorial, you can configure the ClickHouse SSL connection and test it by using self-signed CA easily. The general steps are:
 
 1. Install ClickHouse and OpenSSL
-2. Generate SSL Realated Files
+2. Generate SSL Related Files
 3. Configure ClickHouse Server
 4. Test SSL Connection from Client
 
