@@ -1,6 +1,6 @@
 ---
 title: How to Configure ClickHouse SSL Connection
-author: zp
+author: Zipeng
 published_at: 2022/07/20 10:37:00
 feature_image: /static/blog/how-to-configure-clickhouse-ssl-connection/lock.webp
 tags: Education
