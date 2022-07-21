@@ -17,16 +17,13 @@ This tutorial will show you how to configure the ClickHouse SSL connection using
 
 ### Install ClickHouse
 
-Follow the [ClickHouse official document](https://clickhouse.com/docs/en/getting-started/install/).  
-If no errors occur, you will see something like below:
+Follow the [ClickHouse official document](https://clickhouse.com/docs/en/getting-started/install/). If no errors occur, you will see something like below:
 
 ![Install ClickHouse successfully](/static/blog/how-to-configure-clickhouse-ssl-connection/install-clickhouse.webp)
 
 ### Install OpenSSL
 
-Follow the [OpenSSL's official site](https://www.openssl.org/source/). Depending on the machine environment, there may be different ways to achieve this.
-
-If no errors occur, you will see something like below:
+Follow the [OpenSSL's official site](https://www.openssl.org/source/). Depending on the machine environment, there may be different ways to achieve this. If no errors occur, you will see something like below:
 
 ```plain
 $ openssl version
@@ -254,7 +251,7 @@ EOF
 Run the following command, and you are expected to get some output like below:
 
 ```bash
-clickhouse-client –config=clickhouse-client-ssl.xml
+clickhouse-client –-config=clickhouse-client-ssl.xml
 ```
 
 ![_](/static/blog/how-to-configure-clickhouse-ssl-connection/test-through-clickhouse-client.webp)
