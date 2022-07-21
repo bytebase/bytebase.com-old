@@ -235,7 +235,7 @@ sudo service clickhouse-server restart
 
 ### Copy SSL Files to the Client
 
-You don't need to do anything in this step if you only test it on the machine that Clickhouse server runs on. Copy the ca.pem,client.pem,client.key from the machine that runs ClickHouse server (i.e.: the machine generated them) to directory `/etc/ssl` on the machine that you will run the client.
+You don't need to do anything in this step if you only test it on the machine that Clickhouse server runs on. Copy the `ca.pem`, `client.pem`, `client.key` from the machine that runs ClickHouse server (i.e.: the machine generated them) to directory `/etc/ssl` on the machine that you will run the client.
 
 ### Through ClickHouse Client
 
