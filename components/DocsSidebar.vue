@@ -213,8 +213,11 @@ export default defineComponent({
     const documentTreeRoot = ref<DocumentTreeNode>();
 
     const category = route.value.params.category;
+    const validDocsCategoryPathList = validDocsCategoryList.map(
+      (t) => t.category
+    );
     const shouldShowBackToMainDocs = computed(() =>
-      validDocsCategoryList.includes(category)
+      validDocsCategoryPathList.includes(category)
     );
 
     useFetch(async () => {
@@ -224,7 +227,7 @@ export default defineComponent({
       const layout = (await $content(
         "docs",
         locale,
-        validDocsCategoryList.includes(category) ? category : "",
+        validDocsCategoryPathList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
 
