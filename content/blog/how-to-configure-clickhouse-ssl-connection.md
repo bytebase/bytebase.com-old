@@ -89,7 +89,7 @@ Generate Server Key without the passphrase, too:
 openssl genrsa -out server.key 2048
 ```
 
-Use the server key and OpenSSL config above to generate the certificate of server like what you have done for CA. But the difference is that at this time you need to request the CA's Key for signing.
+Use the server key and OpenSSL config above to generate the server certificate like what you have done for CA. But the difference is that at this time you need to request the CA's Key for signing.
 
 ```bash
 openssl req -new -sha256 -key server.key -out server.csr -subj "/C=CN/ST=GD/O=Bytebase/CN=YOUR_SERVER_IP"
