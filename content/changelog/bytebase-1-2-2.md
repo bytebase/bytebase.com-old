@@ -7,7 +7,7 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
 
 ## 🚀 New Features
 
-- 👻 Added support for [gh-ost](https://github.com/github/gh-ost), online schema migration for large tables (Beta).
+- 👻 Added support for [gh-ost](https://github.com/github/gh-ost), online schema migration for large MySQL tables (Beta).
   
  ![gh-ost](/static/changelog/1.2.2/gh-ost.webp)
 
@@ -15,7 +15,7 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
   
  ![side-drawer-help-tip](/static/changelog/1.2.2/side-drawer-help-tip.gif)
 
-- Added length limit for table/column/index/foreign key/unique key names.
+- Added length limit for table, column, index, foreign key, unique key names.
   
  ![table-naming-check](/static/changelog/1.2.2/table-naming-check.webp)
 
@@ -35,11 +35,11 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
 
 ## 🎄 Enhancements
 
-- The issue creator filter now supports "All" and "Bytebase".
+- The issue creator filter supports "All" and "Bytebase" now.
   
  ![issue-creator-filter](/static/changelog/1.2.2/issue-creator-filter.webp)
 
-- The issue list now shows issue id.  
+- Added issue ID to issue panel.  
   
  ![issue-list-with-id](/static/changelog/1.2.2/issue-list-with-id.webp)
 
@@ -47,14 +47,14 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
 
  ![sql-statement-guide](/static/changelog/1.2.2/sql-statement-guide.webp)
 
-- [SQL Advise API] Enable database connection.
+- [SQL Advise API] Enabled database connection.
 
  ![database-connection-for-sql-advise-api](/static/changelog/1.2.2/database-connection-for-sql-advise-api.webp)
 
 
 ## 🐞 Notable bug fixes
 
-- Fixed the inability to correctly perform point-in-time recovery on databases, if the database name includes capitalized letters.
+- Fixed the inability to correctly perform point-in-time recovery on databases, if the database name includes capitalized letters on certain platforms.
 - [VCS workflow] Dedup issue creation when the webhook push event contains the same file multiple times.
 - [VCS workflow] Handle OAuth token expiration when reading VCS file content.
 
