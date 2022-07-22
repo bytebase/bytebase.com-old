@@ -2,7 +2,7 @@
 title: Production Setup
 ---
 
-### Setup https
+## Setup https
 
 You can setup a reverse proxy using [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy).
 
