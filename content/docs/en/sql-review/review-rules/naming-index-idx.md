@@ -10,6 +10,8 @@ The unified naming convention is desired by developers. And the same applies to 
 
 For example, `^idx_{{table}}_{{column_list}}$` is a `template` where `{{table}}` is the table name and `{{column_list}}` is the list of the column name. So for index on `user(id, name)`, the legal name is `idx_user_id_name`.
 
+It also limits the naming max length. The default maximum length is 64 characters.
+
 ![schema-review-naming-index-idx](/static/docs/schema-review-naming-index-idx.webp)
 
 ## How the rule works

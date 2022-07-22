@@ -25,11 +25,18 @@ curl http://localhost:8080/v1/sql/advise \
 
 ### Query parameters
 
-| Parameter      | Required?    | Description                                                            | Example                  |
-| -------------- | ------------ | ---------------------------------------------------------------------- | ------------------------ |
-| `environment`  | **Required** | The environment name for your schema review policy. **Case sensitive** | Dev                      |
-| `databaseType` | **Required** | The database type. Available values : `MySQL`, `PostgreSQL`, `TiDB`.   | MySQL                    |
-| `statement`    | **Required** | The SQL statement.                                                     | SELECT \* FROM \`table\` |
+| Parameter      | Required?    | Description                                                                                                                         | Example                  |
+| -------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `environment`  | **Required** | The environment name for your schema review policy. **Case sensitive**                                                              | Dev                      |
+| `statement`    | **Required** | The SQL statement.                                                                                                                  | SELECT \* FROM \`table\` |
+| `host`         | **Optional** | The instance host. Available values : `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 127.0.0.1                |
+| `port`         | **Optional** | The instance port. Available values : `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 3306                     |
+| `databaseName` | **Optional** | The database name in the instance.                                                                                                  | DB Name                  |
+| `databaseType` | **Optional** | The database type. Required if the port, host and database name is not specified. Available values : `MySQL`, `PostgreSQL`, `TiDB`. | MySQL                    |
+
+Once you have created the schema review policy in the Bytebase UX, you can call the SQL Advise API with `environment`, `statement`, and `databaseType` parameters. This will conduct the SQL check against statements without database catalog information.
+
+You can also create the instance and database in the UX, then call the API with `environment`, `statement`, `host`, `port`, and `databaseName` parameters. This will allow the API to retrieve the database catalog information and assist the SQL check.
 
 ### Response body
 
@@ -59,8 +66,11 @@ curl http://localhost:8080/v1/sql/advise \
   - [`statement.where.require`](/docs/sql-review/review-rules/query-where-require)
   - [`statement.where.no-leading-wildcard-like`](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
   - [`table.require-pk`](/docs/sql-review/review-rules/table-require-pk)
+  - [`table.no-fk`](/docs/sql-review/review-rules/table-no-fk)
+  - [`table.drop-naming-convention`](/docs/sql-review/review-rules/table-drop-naming)
   - [`column.required`](/docs/sql-review/review-rules/column-required)
   - [`schema.backward-compatibility`](/docs/sql-review/review-rules/schema-migration-compatibility)
+  - [`database.drop-empty-database`](/docs/sql-review/review-rules/database-drop-empty-db)
 
 ### Response Codes
 

@@ -8,6 +8,32 @@
       id="content"
       class="flex flex-col justify-start items-center w-full mx-auto lg:max-w-3xl 2xl:max-w-4xl"
     >
+      <div
+        v-if="breadcrumbRouteList.length > 1"
+        class="w-full flex flex-row justify-start items-center mt-4 flex-wrap"
+      >
+        <div
+          v-for="(item, index) in breadcrumbRouteList"
+          :key="item.path"
+          class="flex flex-row justify-start items-center flex-wrap text-base leading-7"
+        >
+          <nuxt-link
+            v-if="item.path"
+            :to="localePath(`/docs${item.path}`)"
+            class="text-gray-500 no-underline hover:text-accent"
+          >
+            <span>{{ item.title }}</span>
+          </nuxt-link>
+          <span v-else class="text-gray-500">
+            {{ item.title }}
+          </span>
+          <span
+            v-if="index !== breadcrumbRouteList.length - 1"
+            class="font-mono mx-2 text-gray-300"
+            >/</span
+          >
+        </div>
+      </div>
       <div class="w-full markdown-body nuxt-content pt-6">
         <h1>{{ document.title }}</h1>
       </div>
@@ -115,15 +141,22 @@ export default defineComponent({
     const ducumentContainerRef = ref<HTMLDivElement>();
     const prev = ref<any>(undefined);
     const next = ref<any>(undefined);
+    const breadcrumbRouteList = ref<any[]>([]);
     const githubFilePath = `/content${props.document?.path}${props.document?.extension}`;
 
     useFetch(async () => {
       const locale = "en";
       const category = route.value.params.category;
+      const validDocsCategoryPathList = validDocsCategoryList.map(
+        (t) => t.category
+      );
+      const currentCategory = validDocsCategoryPathList.includes(category)
+        ? category
+        : "";
       const layout = (await $content(
         "docs",
         locale,
-        validDocsCategoryList.includes(category) ? category : "",
+        currentCategory,
         "_layout"
       ).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
@@ -151,14 +184,44 @@ export default defineComponent({
             title,
             path,
           };
-        })
-        .filter((n) => n.path !== undefined);
+        });
 
       const index = nodes.findIndex((n) =>
         props?.document?.path.endsWith(n.path)
       );
-      prev.value = nodes[index - 1];
-      next.value = nodes[index + 1];
+      let currentNodeLevel = nodes[index].level;
+      for (let i = index - 1; i >= 0; i--) {
+        const node = nodes[i];
+        if (node.level < currentNodeLevel) {
+          currentNodeLevel = node.level;
+          breadcrumbRouteList.value.unshift(node);
+        }
+        if (currentNodeLevel === 1) {
+          break;
+        }
+      }
+      if (validDocsCategoryPathList.includes(currentCategory)) {
+        const temp = validDocsCategoryList.find(
+          (t) => t.category === currentCategory
+        );
+        if (temp) {
+          breadcrumbRouteList.value.unshift({
+            title: temp.name,
+            path: temp.path,
+          });
+        }
+      }
+      breadcrumbRouteList.value.push({
+        ...nodes[index],
+        title: props.document?.title,
+      });
+
+      const linkableNodes = nodes.filter((n) => n.path !== undefined);
+      const linkableIndex = linkableNodes.findIndex((n) =>
+        props?.document?.path.endsWith(n.path)
+      );
+      prev.value = linkableNodes[linkableIndex - 1];
+      next.value = linkableNodes[linkableIndex + 1];
     });
 
     onMounted(() => {
@@ -226,6 +289,7 @@ export default defineComponent({
 
     return {
       state,
+      breadcrumbRouteList,
       prev,
       next,
       ducumentContainerRef,

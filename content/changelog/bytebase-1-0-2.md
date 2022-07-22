@@ -4,7 +4,7 @@ published_at: 2022/03/31 10:26:51
 description: Our official documentation switches from gitbook to bytebase.com/docs. Support branding customization. Highlight the editing SQL query block. Add SQL query format button.
 ---
 
-​💡 Our official documentation switches from gitbook to [bytebase.com/docs](http://bytebase.com/docs). All the documents are now in our Github repository. This will help improve our coordination efficiency in documentation greatly. Now developers can follow https://bytebase.com/docs/document-write-guide to commit your changes.
+​💡 Our official documentation switches from gitbook to [bytebase.com/docs](https://bytebase.com/docs). All the documents are now in our Github repository. This will help improve our coordination efficiency in documentation greatly. Now developers can follow https://bytebase.com/docs/document-write-guide to commit your changes.
 
 ## 🚀 Features
 

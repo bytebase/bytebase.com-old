@@ -22,7 +22,56 @@
 
       <div>
         <div class="relative max-w-lg mx-auto lg:max-w-7xl">
-          <div class="mt-12 space-y-20">
+          <div class="mt-12 space-y-16">
+            <div class="flex flex-col col-span-3 overflow-hidden">
+              <nuxt-link
+                :to="localePath(`/changelog/${latestChangelog.slug}`)"
+                class="flex-1 flex flex-col justify-between"
+              >
+                <div
+                  class="pt-6 prose sm:prose-xl md:prose-2xl mx-auto text-center hover:underline"
+                >
+                  <h1>{{ latestChangelog.title }}</h1>
+                </div>
+                <span
+                  class="pt-4 flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
+                >
+                  <div class="ml-2 flex space-x-1 text-gray-500 items-center">
+                    <time :datetime="latestChangelog.publishedAt">
+                      {{ latestChangelog.formatedPublishedAt }}
+                    </time>
+                    <span aria-hidden="true">&middot;</span>
+                    <span>{{ latestChangelog.readingTime }}</span>
+                    <template v-if="latestChangelog.author">
+                      <span aria-hidden="true">&middot;</span>
+                      <img
+                        v-if="latestChangelog.author.avatar"
+                        :src="latestChangelog.author.avatar"
+                        class="w-6 h-6"
+                      />
+                      <span>{{ latestChangelog.author.name }}</span>
+                    </template>
+                  </div>
+                </span>
+              </nuxt-link>
+              <nuxt-link
+                v-if="latestChangelog.featureImage"
+                :to="localePath(`/changelog/${latestChangelog.slug}`)"
+                class="flex-shrink-0 py-6"
+              >
+                <div class="flex justify-center items-center">
+                  <img
+                    class="mx-auto object-cover"
+                    :src="latestChangelog.featureImage"
+                  />
+                </div>
+              </nuxt-link>
+              <nuxt-content
+                class="w-full py-6 prose prose-indigo prose-xl mx-auto"
+                :document="latestChangelog"
+              />
+            </div>
+            <hr />
             <div
               v-for="changelog in changelogList"
               :key="changelog.slug"
@@ -32,21 +81,17 @@
                 :to="localePath(`/changelog/${changelog.slug}`)"
                 class="flex-1 flex flex-col justify-between"
               >
-                <div
-                  class="pt-6 prose sm:prose-xl md:prose-2xl mx-auto text-center hover:underline"
-                >
+                <div class="pt-4 prose mx-auto text-center hover:underline">
                   <h1>{{ changelog.title }}</h1>
                 </div>
                 <span
-                  class="pt-4 flex flex-row items-center justify-center text-base text-gray-900 font-semibold tracking-wide uppercase"
+                  class="pt-4 flex flex-row items-center justify-center text-base text-gray-800 tracking-wide uppercase"
                 >
                   <div class="ml-2 flex space-x-1 text-gray-500 items-center">
                     <time :datetime="changelog.publishedAt">
                       {{ changelog.formatedPublishedAt }}
                     </time>
-                    <span aria-hidden="true">&middot;</span>
-                    <span>{{ changelog.readingTime }}</span>
-                    <template v-if="changelog.author">
+                    <template v-if="changelog.author.name">
                       <span aria-hidden="true">&middot;</span>
                       <img
                         v-if="changelog.author.avatar"
@@ -58,22 +103,6 @@
                   </div>
                 </span>
               </nuxt-link>
-              <nuxt-link
-                v-if="changelog.featureImage"
-                :to="localePath(`/changelog/${changelog.slug}`)"
-                class="flex-shrink-0 py-6"
-              >
-                <div class="flex justify-center items-center">
-                  <img
-                    class="mx-auto object-cover"
-                    :src="changelog.featureImage"
-                  />
-                </div>
-              </nuxt-link>
-              <nuxt-content
-                class="w-full py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
-                :document="changelog"
-              />
             </div>
           </div>
         </div>
@@ -123,7 +152,9 @@ export default {
         };
       });
 
+    const latestChangelog = changelogList.shift();
     return {
+      latestChangelog,
       changelogList,
     };
   },

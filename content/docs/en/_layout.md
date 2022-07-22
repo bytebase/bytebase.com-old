@@ -45,6 +45,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
+---
+
 ## 🔑 Concepts
 
 ### [Data Model](/concepts/data-model)
@@ -56,6 +58,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Migration Types](/concepts/migration-types)
 
 ### [Tenant Database](/concepts/tenant-database)
+
+---
 
 ## SQL Review
 
@@ -78,6 +82,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ### [Change Workflow](/change-database/change-workflow)
 
 ### [Migration History](/change-database/migration-history)
+
+### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
 ## [VCS Integration](/vcs-integration/overview)
 
@@ -123,6 +129,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Anomaly Center](/anomaly-detection/anomaly-center)
 
+---
+
 ## 🔧 Administration
 
 ### [Environment Policy](/administration/environment-policy/overview)
@@ -143,6 +151,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Backup Data Directory](/administration/backup-data-directory)
 
+---
+
 ## 📖 Reference
 
 ### [Server Startup Options](/reference/command-line)
@@ -153,7 +163,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Error Code for SQL Advisor](/reference/error-code/advisor)
 
+---
+
 ## [❓ FAQ](/faq)
+
+---
 
 ## [✍️ Document Write Guide](/document-write-guide)
 

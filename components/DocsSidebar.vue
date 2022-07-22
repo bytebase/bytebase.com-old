@@ -14,12 +14,15 @@
     </a>
     <!-- Render document tree. We only support 3 level folder. -->
     <div
-      v-for="node in documentTreeRoot.children"
-      :key="node.title"
+      v-for="(node, index) in documentTreeRoot.children"
+      :key="index"
       class="w-full flex flex-col justify-start items-start"
     >
+      <!-- separator -->
+      <hr v-if="node.type === 'hr'" class="w-full my-1 mt-3" />
       <!-- root node -->
       <div
+        v-if="node.type !== 'hr'"
         class="pl-3 mt-3 w-full flex flex-row justify-between cursor-pointer items-start"
         @click="
           node.displayChildren = !node.displayChildren;
@@ -210,8 +213,11 @@ export default defineComponent({
     const documentTreeRoot = ref<DocumentTreeNode>();
 
     const category = route.value.params.category;
+    const validDocsCategoryPathList = validDocsCategoryList.map(
+      (t) => t.category
+    );
     const shouldShowBackToMainDocs = computed(() =>
-      validDocsCategoryList.includes(category)
+      validDocsCategoryPathList.includes(category)
     );
 
     useFetch(async () => {
@@ -221,18 +227,27 @@ export default defineComponent({
       const layout = (await $content(
         "docs",
         locale,
-        validDocsCategoryList.includes(category) ? category : "",
+        validDocsCategoryPathList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;
 
       const nodes = layout.body.children
-        .filter((n) => n.tag === "h2" || n.tag === "h3" || n.tag === "h4")
+        .filter(
+          (n) =>
+            n.tag === "h2" || n.tag === "h3" || n.tag === "h4" || n.tag === "hr"
+        )
         .map((n) => {
           let level = 1;
           if (n.tag === "h3") {
             level = 2;
           } else if (n.tag === "h4") {
             level = 3;
+          } else if (n.tag === "hr") {
+            return {
+              level: 1,
+              type: n.tag,
+              displayChildren: false,
+            };
           }
 
           const child = n.children[1];
