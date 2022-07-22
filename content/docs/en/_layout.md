@@ -23,6 +23,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Option 3 Build from Source Code](/get-started/install/build-from-source-code)
 
+#### [Option 4 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
+
 #### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
 ### [Configure Workspace](/get-started/configure-workspace/overview)
