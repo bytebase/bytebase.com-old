@@ -40,6 +40,10 @@ We plan to support more Git providers roughly in the following order:
 - GitLab.com
 - GitHub.com
 
+## How to enable https
+
+You can setup a reverse proxy using [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy).
+
 ## How to enable debug mode
 
 Debug mode emits more detailed logs on the backend as well as returning more verbose logs to the frontend.
