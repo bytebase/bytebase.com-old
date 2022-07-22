@@ -8,7 +8,7 @@
       >Table of Contents</span
     >
     <div
-      class="flex flex-col w-52 h-auto max-h-screen md:h-112 overflow-y-auto"
+      class="flex flex-col w-52 h-auto max-h-screen md:h-112 overflow-y-auto hide-scrollbar"
     >
       <a
         v-for="item of tocList"
@@ -80,3 +80,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+/* Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+</style>
