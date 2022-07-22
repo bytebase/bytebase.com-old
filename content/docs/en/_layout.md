@@ -133,6 +133,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## 🔧 Administration
 
+### [Production Setup](/administration/production-setup)
+
 ### [Environment Policy](/administration/environment-policy/overview)
 
 #### [Approval Policy](/administration/environment-policy/approval-policy)
@@ -146,8 +148,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Database Webhook](/administration/webhook-integration/database-webhook)
 
 ### [Archive](/administration/archive)
-
-### [Production Setup](/administration/production-setup)
 
 ### [Backup Data Directory](/administration/backup-data-directory)
 
