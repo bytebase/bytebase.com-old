@@ -10,7 +10,7 @@ Before starting, make sure you are familiar with [Docker](https://www.docker.com
 
 ## Run on localhost
 
-Here is a sample Kubernetes YAML file describing the minimal components and configuration required to run Bytebase locally.
+Here is a sample Kubernetes YAML file `bb.yaml` describing the minimal components and configuration required to run Bytebase locally.
 
 <pre lang="yaml">
 apiVersion: apps/v1
@@ -46,13 +46,13 @@ metadata:
   name: bytebase-entrypoint
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: bytebase
   ports:
-  - port: 8080
+  - protocol: TCP
+    port: 8080
     targetPort: 8080
-    nodePort: 30001
 </pre>
 
 1. Start Bytebase with the following command:
@@ -90,50 +90,27 @@ spec:
    if all is well too, you should see output that looks like the following:
 
    ```plain
-   NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-   bytebase-entrypoint   NodePort    10.106.30.235   <none>        8080:30001/TCP   107s
-   kubernetes            ClusterIP   10.96.0.1       <none>        443/TCP          9d
+   NAME                  TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+   bytebase-entrypoint   LoadBalancer   10.100.36.246   localhost     8080:30254/TCP   72s
+   kubernetes            ClusterIP      10.96.0.1       <none>        443/TCP          9d
    ```
 
-3. Open a browser and visit [localhost:30001](http://localhost:30001), you should see Bytebase.
+3. Open a browser and visit [localhost:8080](http://localhost:8080), you should see Bytebase.
 
 <hint-block type="info">
 
-For production setup, you need to re-write the container args [--host](/docs/reference/command-line#--host-string) match exactly to the address where Bytebase supposed to be visited.
+For production setup, you need to make sure the container args [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/administration/production-setup) for more advice.
 
 </hint-block>
 
-## More configuration in production
+## Persistent Volume
 
-Kubernetes has many components and plugins that can make your services more efficient.
+To keep data persistence in production, you need to use the [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes) in the cluster. Each cloud provider has its own solution.
 
-### Persistent Volume
+### For Amazon Elastic Kubernetes Service(EKS)
 
-For keeping data persistence in production, you need to use the [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes). For example, in AWS EKS, you can use its CSI driver like below:
+In AWS EKS, you can use the [Amazon EBS CSI driver](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for persistent volumes. Follow the [managing EBS CSI](https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html) to add it as an Amazon EKS add-on.
 
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: efs-pv
-spec:
-  capacity:
-    storage: 5Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: efs-sc
-  csi:
-    driver: efs.csi.aws.com
-    volumeHandle: fs-582a03f3
-```
+### For Google Kubernetes Engine(GKE)
 
-Then create its claim and change the `volumes` field in `bb.yaml`
-
-```yaml
-volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: data-pv-claim
-```
+Please follow this [Persistent volumes and dynamic provisioning](https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes)

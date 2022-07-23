@@ -19,11 +19,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
 
-#### [Option 2 Installation Script](/get-started/install/installation-script)
+#### [Option 2 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
 
-#### [Option 3 Build from Source Code](/get-started/install/build-from-source-code)
+#### [Option 3 Installation Script](/get-started/install/installation-script)
 
-#### [Option 4 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
+#### [Option 4 Build from Source Code](/get-started/install/build-from-source-code)
 
 #### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
