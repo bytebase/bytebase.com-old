@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: bytebase
-        image: bytebase/bytebase:1.2.2
+        image: bytebase/bytebase:<version></version>
         args: ["--data", "/var/opt/bytebase", "--host", "http://localhost", "--port", "8080"]
         ports:
         - containerPort: 8080
@@ -113,4 +113,4 @@ In AWS EKS, you can use the [Amazon EBS CSI driver](https://docs.aws.amazon.com/
 
 ### For Google Kubernetes Engine(GKE)
 
-Please follow this [Persistent volumes and dynamic provisioning](https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes)
+Please follow the [Persistent volumes and dynamic provisioning](https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes).
