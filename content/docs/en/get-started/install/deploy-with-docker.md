@@ -5,10 +5,13 @@ title: Docker (5 seconds)
 This document guides you to run Bytebase in docker, which takes less than 5 seconds.
 
 ## Prerequisites
-Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/). 
+
+Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/).
 
 ## Run on localhost:8080 or localhost:xxxx
+
 Run the following command to start Bytebase locally on localhost:8080.
+
 <pre>
 docker run --init \
   --name bytebase \
@@ -22,11 +25,10 @@ docker run --init \
   --port 8080
 </pre>
 
-
-
 You can change `8080` to `5678` or something else, however, make sure these three ports are the same:
+
 - --publish {{hostport}}
-- :{{containerport}} 
+- :{{containerport}}
 - --port {{port}}}
 
 <pre>
@@ -43,8 +45,8 @@ docker run --init \
 </pre>
 
 Bytebase will store its data under `~/.bytebase/data` , you can reset all data by running command:
-  
-```
+
+```bash
 rm -rf ~/.bytebase/data
 ```
 
@@ -76,7 +78,8 @@ For production setup, you need to make sure [--host](/docs/reference/command-lin
 ## Troubleshoot
 
 Run the following if something goes wrong.
-```
+
+```bash
 docker logs bytebase
 ```
 
