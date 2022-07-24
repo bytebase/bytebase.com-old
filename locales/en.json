@@ -249,25 +249,7 @@
       },
       "all-in-one-sql-editor": {
         "title": "All-in-one SQL Editor",
-        "description": "Inspect records, explore schema, sharing SQL scripts, and more.",
-        "features": {
-          "explore-the-schema": {
-            "title": "Explore the Schema",
-            "description": "Explore the database record and schema guarded by the project-level access control."
-          },
-          "smooth-query-editing-experience": {
-            "title": "Smooth query editing experience",
-            "description": "Autocomplete suggestions, SQL format, shortcuts, and more."
-          },
-          "never-miss-your-work": {
-            "title": "Never miss your work",
-            "description": "Save your favorite sheets and auto-record the execution history."
-          },
-          "share-sheet-with-teammates": {
-            "title": "Share sheet with teammates",
-            "description": "Share the sheet link with your teammates, with configurable access levels."
-          }
-        }
+        "description": "Inspect records, explore schema, sharing SQL scripts, and more."
       }
     },
     "a-complete-rethink-to-deliver-experience": {
