@@ -19,13 +19,13 @@ output=(
 
 for i in {0..2}
 do
-    echo "Start to fetch SQL Review config file from ${input[$i]} to ${output[$i]}."
+    echo "Start to fetch the SQL Review config file from ${input[$i]} to ${output[$i]}."
     response=$(curl -w "%{http_code}" -o ${output[$i]} ${input[$i]})
     http_code=$(tail -n1 <<< "$response")
 
     if [ $http_code != 200 ]
     then
-        echo "Failed to download SQL Review config file."
+        echo "Failed to download the SQL Review config file from ${input[$i]}."
         exit 1
     fi
 done
