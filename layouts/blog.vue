@@ -15,9 +15,6 @@
         <nuxt-link :to="localePath('/sql-review-guide')" class="nav-link">
           <span>Database Review Guide</span>
         </nuxt-link>
-        <nuxt-link :to="localePath('/brand')" class="nav-link">
-          <span>Brand</span>
-        </nuxt-link>
       </div>
     </div>
     <div
