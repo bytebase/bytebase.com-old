@@ -137,3 +137,7 @@ The table name mismatches with the naming convention for drop table operation. C
 ### 701 - Drop database restriction
 
 Can only drop the database if there's no table in it. Check [Drop database restriction](/docs/sql-review/review-rules/database-drop-empty-db) for details.
+
+### 702 - Not current database
+
+The database in your SQL statement mismatch the database in the catalog. Please check the statement to ensure the database name is correct.
