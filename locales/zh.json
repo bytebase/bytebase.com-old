@@ -249,25 +249,7 @@
       },
       "all-in-one-sql-editor": {
         "title": "SQL 编辑器",
-        "description": "查看数据，探索表结构，共享 SQL 脚本，以及更多功能",
-        "features": {
-          "explore-the-schema": {
-            "title": "查询 schema",
-            "description": "探索数据库记录与表结构。"
-          },
-          "smooth-query-editing-experience": {
-            "title": "顺畅的 SQL 语句编辑体验",
-            "description": "语法自动补全，SQL 一键格式化，快捷键，以及更多功能。"
-          },
-          "never-miss-your-work": {
-            "title": "工作成果永不丢失",
-            "description": "将您的成果保存为工作表，并自动记录执行历史。"
-          },
-          "share-sheet-with-teammates": {
-            "title": "与团队分享工作表",
-            "description": "与您的同事共享工作表链接，并具有可配置的访问级别。"
-          }
-        }
+        "description": "查看数据，探索表结构，共享 SQL 脚本，以及更多功能"
       }
     },
     "a-complete-rethink-to-deliver-experience": {
