@@ -15,24 +15,24 @@ For now, Bytebase only supports self-host GitLab EE/CE, we have plans to support
 
 </hint-block>
 
-## Prerequisites
+## Self-host GitLab EE/CE
+
+### Prerequisites
 
 - You should be the **Workspace Owner** to be able to see the "Version Control" sidebar item and add Git Provider.
 - You should have a project created in GitLab.
 
-## Procedure
+### Step 1 - Setting up
 
 Go to "**Settings**" from the top nav bar, select "**Version Control**" under "**Workspace**", and then click on the "**Add a Git provider**" button.
 
 ![add-git-provider](/static/docs/en/vcs-integration/add-git-provider/add-git-provider.webp)
 
-### Step 1 - Setting up
-
 Fill in the URL where the GitLab instance is running.
 
 ![add-git-provider-steps](/static/docs/en/vcs-integration/add-git-provider/add-git-provider-step1.webp)
 
-## Step 2 - OAuth application info
+### Step 2 - OAuth application info
 
 <hint-block type="warning">
 
@@ -48,7 +48,7 @@ A common mistake is when a user misconfigures the port when using port forwardin
 
 </hint-block>
 
-### Step 2.1 - Register GitLab instance-wide OAuth application (performed by GitLab Admin)
+#### Step 2.1 - Register GitLab instance-wide OAuth application (performed by GitLab Admin)
 
 Login the GitLab instance specified in Step 1 as an Admin user. The admin user will see a wrench icon on the top nav bar like below:
 
@@ -74,7 +74,7 @@ Click the "**Submit**" button after filling the info on GitLab and you will see 
 
 ![vcs-gitlab-step](/static/docs/en/vcs-integration/add-git-provider/vcs-gitlab-step3.webp)
 
-### Step 2.2 - Verify setup
+#### Step 2.2 - Verify setup
 
 Fill in the **Application ID** and **Secret** onto the corresponding fields on the Bytebase setup wizard:
 
@@ -92,7 +92,7 @@ If you get an error in the OAuth popup window. Please double-check the following
 
 </hint-block>
 
-## Step 3 - Confirm and add
+### Step 3 - Confirm and add
 
 When everything is setup properly, you will be informed that the setup is correct. Click "**Confirm and add**".
 
@@ -100,6 +100,6 @@ When everything is setup properly, you will be informed that the setup is correc
 
 Now we have successfully added a Git provider, developers can now link their Bytebase projects with one of their owned repositories from this Git provider.
 
-## References
+### References
 
 1. [GitLab instance-wide applications](https://docs.gitlab.com/ee/integration/oauth_provider.html#instance-wide-applications). For GitLab, this is the OAuth application type Bytebase needs to register.
