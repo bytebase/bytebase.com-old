@@ -34,7 +34,7 @@ From their website, render ([https://render.com](https://render.com)) is a unifi
 
 ## How do we use render?
 
-### Continuous deployment for [demo.bytebase.com](http://demo.bytebase.com/)
+### Continuous deployment for [demo.bytebase.com](https://demo.bytebase.com/)
 
 Bytebase employs monolithic architecture using Vue + Golang + SQLite. Our team adopts a trunk-based development workflow and we require our main branch to be deployable at every commit. We decided to use our demo site to validate this promise.
 
