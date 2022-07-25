@@ -28,13 +28,11 @@
         >
         <a
           :href="
-            localePath(
-              '/docs/database-how-to/clickhouse/how-to-run-clickhouse-docker'
-            )
+            localePath('/docs/how-to/clickhouse/how-to-run-clickhouse-docker')
           "
           class="header-link"
           @click="track('database-how-to.header')"
-          >Database How-To</a
+          >How-To</a
         >
         <nuxt-link
           to="/blog"
