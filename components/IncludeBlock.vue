@@ -8,9 +8,9 @@
 <script lang="ts">
 import {
   defineComponent,
-  onMounted,
   useContext,
   ref,
+  useFetch,
 } from "@nuxtjs/composition-api";
 import { ContentDocument } from "~/types/docs";
 
@@ -29,7 +29,7 @@ export default defineComponent({
     const { $content } = useContext();
     const documentRef = ref();
 
-    onMounted(async () => {
+    useFetch(async () => {
       documentRef.value = (await $content(props.url)
         .limit(1)
         .fetch()) as any as ContentDocument;
