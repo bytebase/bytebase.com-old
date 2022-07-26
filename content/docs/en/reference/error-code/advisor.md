@@ -140,4 +140,4 @@ Can only drop the database if there's no table in it. Check [Drop database restr
 
 ### 702 - Not current database
 
-The database in your SQL statement mismatch the database in the catalog. Please check the statement to ensure the database name is correct.
+The database in your SQL statement mismatches with the database in the catalog. Please check the statement to ensure the database name is correct.
