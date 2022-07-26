@@ -1,4 +1,4 @@
-export type PostTag = "Announcement" | "Education" | "Productivity";
+export type PostTag = "Announcement" | "Education";
 
 export function postTagStyle(tag: PostTag): string {
   switch (tag) {
@@ -6,10 +6,8 @@ export function postTagStyle(tag: PostTag): string {
       return "bg-indigo-100 text-indigo-800";
     case "Education":
       return "bg-green-100 text-green-800";
-    case "Productivity":
-      return "bg-blue-100 text-blue-800";
     default:
-      return "bg-gray-100 text-gray-800";
+      return "bg-blue-100 text-blue-800";
   }
 }
 
