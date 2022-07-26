@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from "@nuxtjs/composition-api";
-import { RuleLevel } from "../../common/schemaSystem";
+import { RuleLevel } from "../../common/sqlReview";
 import Badge from "../Badge.vue";
 
 export default defineComponent({

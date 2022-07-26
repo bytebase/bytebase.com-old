@@ -95,7 +95,7 @@ import {
   RuleTemplate,
   GuidelineTemplate,
   guidelineTemplateList,
-} from "../../common/schemaSystem";
+} from "../../common/sqlReview";
 import Modal from "../../components/Modal.vue";
 
 interface LocalState {

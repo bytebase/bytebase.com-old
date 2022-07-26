@@ -130,7 +130,7 @@ import {
   RuleLevel,
   RuleConfigComponent,
   getRuleLocalizationKey,
-} from "../../common/schemaSystem";
+} from "../../common/sqlReview";
 import Badge from "../Badge.vue";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import InputWithTemplate from "../InputWithTemplate";
