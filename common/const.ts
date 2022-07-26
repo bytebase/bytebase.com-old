@@ -11,8 +11,8 @@ export const validDocsCategoryList = [
     path: "/api/overview",
   },
   {
-    category: "database-how-to",
-    name: "Database How-To",
-    path: "/database-how-to/clickhouse/how-to-run-clickhouse-docker",
+    category: "how-to",
+    name: "How-To",
+    path: "/how-to/clickhouse/how-to-run-clickhouse-docker",
   },
 ];
