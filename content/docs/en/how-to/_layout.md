@@ -9,6 +9,8 @@ expand_section_list: ["ClickHouse"]
 
 ### [How to Run ClickHouse with Docker](/how-to/clickhouse/how-to-run-clickhouse-docker)
 
+### [How to Connect ClickHouse with SSL](/how-to/clickhouse/how-to-connect-clickhouse-ssl)
+
 ### [How to Create a Database](/how-to/clickhouse/how-to-create-a-database-clickhouse)
 
 ### [How to Create a Table](/how-to/clickhouse/how-to-create-a-table-clickhouse)
