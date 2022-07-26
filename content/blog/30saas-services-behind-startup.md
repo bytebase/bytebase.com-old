@@ -2,10 +2,10 @@
 title: 20-Person Start-Up, 30+ SaaS Services, and $1,183 Monthly Bill
 author: Tianzhou
 published_at: 2022/7/26 17:00:00
-feature_image: /static/blog/30+saas-services-behind-startup/30+saas-services-behind-startup.webp
+feature_image: /static/blog/30saas-services-behind-startup/30saas-services-behind-startup.webp
 tags: Productivity
 featured: true
-description: A breakdown of the 30+ SaaS services that we use daily at Bytebase, a 20-person/18-month tech startup, plus how much they cost us monthly.
+description: A breakdown of the 30+ SaaS services that we use daily at Bytebase, a 20-person 18-month tech startup, and how much they cost us monthly.
 ---
 
 At [Bytebase](https://bytebase.com), we believe tools make life easier or even redefine how the world works. Thanks to Figma, designers are now more empowered than ever to collaborate with product managers and front-end engineers; thanks to GitLab/GitHub and their ecosystems, the lives and the workflows of the application development engineers, the operations engineers, and the security engineers, have been revamped. Examples like this inspire us to build Bytebase, an open-source database tool to help DevOps teams manage databases throughout the application development lifecycle and hopefully to make the DevOps engineers’ lives easier. 
@@ -18,7 +18,7 @@ Currently, we are a 20-member team based in 4 different cities. As tool-makers, 
 - [Linear](https://linear.app) - project management
 - [Neat](https://neat.run/) - GitHub / Linear notifications
 - [Sourcegraph](https://sourcegraph.com) - code searching
-- [Gitpod](http://gitpod.io) - cloud-based development environment
+- [Gitpod](https://gitpod.io) - cloud-based development environment
 - [Excalidraw](https://excalidraw.com/) - prototype/sketch diagrams
 - [Figma](https://figma.com) - design
 - [Better Uptime](https://betteruptime.com/) - monitoring and alarming on service status
@@ -26,11 +26,11 @@ Currently, we are a 20-member team based in 4 different cities. As tool-makers, 
 - [Render](https://render.com) - service deployment
 - [Vercel](https://vercel.com) - website hosting
 - [AWS](https://aws.com) - service deployment
-- [Cloudflare](http://cloudflare.com) - domain name hosting
+- [Cloudflare](https://cloudflare.com) - domain name hosting
 - [Segment](https://segment.com) - data integration
 - [Metabase](https://Metabase.com) - dashboard
 - [Paddle](https://Paddle.com) - payment collection
-- [Retool](http://retool.com) - internal development tool
+- [Retool](https://retool.com) - internal development tool
 - [Algolia](https://algolia.com) - document searching
 
 ## Marketing
@@ -49,7 +49,7 @@ Currently, we are a 20-member team based in 4 different cities. As tool-makers, 
 - [Google Workspace](https://workspace.google.com/) - company Email
 - [Lark](https://www.larksuite.com/en_us/) - IM, documentation, office automation
 - [Slack](https://slack.com) - IM
-- [Grammarly](http://Grammarly.com) - English writing assistant
+- [Grammarly](https://Grammarly.com) - English writing assistant
 - [OSlash](https://oslash.com) - shortcuts
 - [Causal](https://causal.app) - financial analysis
 - [Pulley](https://Pulley.com) - equity management
@@ -72,19 +72,19 @@ Neat is not exactly a SaaS service but more of a Mac-native application and show
 
 GitHub has a search function, but it’s far from satisfactory. So we use Sourecegraph for code searching.
 
-### [Gitpod](http://gitpod.io)
+### [Gitpod](https://gitpod.io)
 
 From our Github project page,  we provide a 1-click button allowing users to deploy Bytebase on Gitpod.
 
-![_](/static/blog/30+saas-services-behind-startup/bytebase-on-gitpod.webp)
+![_](/static/blog/30saas-services-behind-startup/bytebase-on-gitpod.webp)
 
 ### [Excalidraw](https://excalidraw.com/)
 
 Excalidraw is a virtual whiteboard tool with a hand-drawn feel. We use it to sketch  wireframes, architecture diagrams, or feature explanation diagrams.
 
-![_](/static/blog/30+saas-services-behind-startup/excalidraw-bytebase-console.webp)
+![_](/static/blog/30saas-services-behind-startup/excalidraw-bytebase-console.webp)
 
-![_](/static/blog/30+saas-services-behind-startup/excalidraw-bytebase-architecture.webp)
+![_](/static/blog/30saas-services-behind-startup/excalidraw-bytebase-architecture.webp)
 
 ### [Figma](https://figma.com)
 
@@ -92,32 +92,32 @@ Figma manages our design materials.
 
 ### [Better Uptime](https://betteruptime.com/)
 
-Better Uptime monitors our website in real-time and sends an alarm in case of any anomalies. It also provides a service status dashboard. See our status on [status.bytebase.com](status.bytebase.com).
+Better Uptime monitors our website in real-time and sends an alarm in case of any anomalies. It also provides a service status dashboard. See our status on [status.bytebase.com](https://status.bytebase.com).
 
-![_](/static/blog/30+saas-services-behind-startup/website-status.webp)
+![_](/static/blog/30saas-services-behind-startup/website-status.webp)
 
 ### [Auth0](https://auth0.com)
 
-To activate Bytebase Team or Enterprise Edition, users need to register on our [Hub](http://hub.bytebase.com) and purchase a license. We use Auth0 to enable registering with GitHub accounts.
+To activate Bytebase Team or Enterprise Edition, users need to register on our [Hub](https://hub.bytebase.com) and purchase a license. We use Auth0 to enable registering with GitHub accounts.
 
 ### [Render](https://render.com)
 
-The Bytebase [demo site](http://demo.bytebase.com), Bytebase [Hub](http://hub.bytebase.com), and all our databases are hosted on Render, the new Heroku. It provides web service and PostgreSQL hosting.
+The Bytebase [demo site](https://demo.bytebase.com), Bytebase [Hub](https://hub.bytebase.com), and all our databases are hosted on Render, the new Heroku. It provides web service and PostgreSQL hosting.
 
 ### [Vercel](https://vercel.com)
 
-Our official website: [bytebase.com](https://www.bytebase.com/) is hosted separately on Vercel. We use Vercel because it has an extensive edge network, making access fast for people worldwide.
+Our official website [bytebase.com](https://www.bytebase.com/) is hosted separately on Vercel. We use Vercel because it has an extensive edge network, making access fast for people worldwide.
 
 ### [AWS](https://aws.com)
 
-We host [gitlab.bytebase.com](gitlab.bytebase.com) for testing our [VCS integration](https://www.bytebase.com/docs/vcs-integration/overview) and demo site. We didn’t use Render for two reasons:
+We host [gitlab.bytebase.com](https://gitlab.bytebase.com) for testing our [VCS integration](https://www.bytebase.com/docs/vcs-integration/overview) and demo site. We didn’t use Render for two reasons:
 
 1. We built GitLab early on, so it is difficult to migrate data.
 2. GitLab requires more resources. There will be a decent increase in cost if we deploy t3a.large (2C8G) on Render.
 
-### [Cloudflare](http://cloudflare.com)
+### [Cloudflare](https://cloudflare.com)
 
-Bytebase-related domain names are hosted on Cloudflare. Previously, we purchased our domain names on [name.com](http://name.com/), and plan to consolidate them on Cloudflare later.
+Bytebase-related domain names are hosted on Cloudflare. Previously, we purchased our domain names on [name.com](https://name.com), and plan to consolidate them on Cloudflare later.
 
 ### [Segment](https://segment.com)
 
@@ -127,13 +127,13 @@ We collect anonymous data for our products and website, which are sent to Segmen
 
 We use Metabase to build a dashboard for internal data visualization. The data is collected through Segment and saved in the PostgreSQL database on Render.
 
-![_](/static/blog/30+saas-services-behind-startup/metabase.webp)
+![_](/static/blog/30saas-services-behind-startup/metabase.webp)
 
 ### [Paddle](https://Paddle.com)
 
 Paddle is where we collect payments from users. We didn't choose Stripe because Paddle  can save our tax problems as a Merchant of Record (MoR). As a tradeoff, it is more costly than Stripe in commission fees.
 
-### [Retool](http://retool.com)
+### [Retool](https://retool.com)
 
 We use Retool to build a list for displaying registered users, with which our team members can process user refunds instantly.
 
@@ -141,7 +141,7 @@ We use Retool to build a list for displaying registered users, with which our te
 
 It is used to search for content on our [docs site](https://www.bytebase.com/docs/introduction/what-is-bytebase).
 
-![_](/static/blog/30+saas-services-behind-startup/algolia-search.webp)
+![_](/static/blog/30saas-services-behind-startup/algolia-search.webp)
 
 ## Marketing
 
@@ -149,13 +149,13 @@ It is used to search for content on our [docs site](https://www.bytebase.com/doc
 
 Some users may contact us through the small bubble in the lower right corner of the official website.
 
-![_](/static/blog/30+saas-services-behind-startup/intercom-bot.webp)
+![_](/static/blog/30saas-services-behind-startup/intercom-bot.webp)
 
 ### [Mailchimp](https://mailchimp.com)
 
 Mailchimp manages our newsletter subscriptions. It also sends some admin emails, such as informing users when the trial period is ending.
 
-### [Orbit](http://orbit.love)
+### [Orbit](https://orbit.love)
 
 Orbit observes user engagements on our GitHub repositories.
 
@@ -193,7 +193,7 @@ Lark is responsible for our internal activities, including IM, documentation, me
 
 Slack is used to communicate with our customers. We also thought about building a community on Slack. However, different Slack spaces require registration, which brings an unsatisfactory user experience, and the overall vibe on Slack feels more professional. 
 
-### [Grammarly](http://Grammarly.com)
+### [Grammarly](https://grammarly.com)
 
 We purchased Grammarly Business Edition to assist in English writing.
 
@@ -201,19 +201,19 @@ We purchased Grammarly Business Edition to assist in English writing.
 
 From Google's go/ to the famous Stripe's o/, shortcut service is regarded as a must for Silicon Valley companies. Bytebase uses many SaaS services and creates many internal documents, which makes it difficult to remember all kinds of links. However, OSlash can convert these page links into more memorable ones. We also made an internal document on Lark noting all our shortcuts, which opens by o/link. 
 
-![_](/static/blog/30+saas-services-behind-startup/oslash.webp)
+![_](/static/blog/30saas-services-behind-startup/oslash.webp)
 
 ### [Causal](https://causal.app)
 
 Casual is used for financial model analysis. An intuitive model of financial reports is built after filling in the financial figures and making a few simple drag-and-drop operations, which is much easier to learn than Excel.
 
-![_](/static/blog/30+saas-services-behind-startup/casual-dashboard.webp)
+![_](/static/blog/30saas-services-behind-startup/casual-dashboard.webp)
 
 ### [Pulley](https://Pulley.com)
 
 Pulley is used to manage the company's equity. It helps us track the company's cap table, issue and manage employee equities. 
 
-![_](/static/blog/30+saas-services-behind-startup/pulley.webp)
+![_](/static/blog/30saas-services-behind-startup/pulley.webp)
 
 ## Monthly Spending
 
