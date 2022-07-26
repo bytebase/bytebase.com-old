@@ -6,6 +6,8 @@ export function postTagStyle(tag: PostTag): string {
       return "bg-indigo-100 text-indigo-800";
     case "Education":
       return "bg-green-100 text-green-800";
+    default:
+      return "bg-blue-100 text-blue-800";
   }
 }
 

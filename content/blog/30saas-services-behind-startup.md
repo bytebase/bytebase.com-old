@@ -3,12 +3,12 @@ title: 20-Person Start-Up, 30+ SaaS Services, and $1,183 Monthly Bill
 author: Tianzhou
 published_at: 2022/7/26 17:00:00
 feature_image: /static/blog/30saas-services-behind-startup/30saas-services-behind-startup.webp
-tags: Productivity
+tags: Education
 featured: true
 description: A breakdown of the 30+ SaaS services that we use daily at Bytebase, a 20-person 18-month tech startup, and how much they cost us monthly.
 ---
 
-At [Bytebase](https://bytebase.com), we believe tools make life easier or even redefine how the world works. Thanks to Figma, designers are now more empowered than ever to collaborate with product managers and front-end engineers; thanks to GitLab/GitHub and their ecosystems, the lives and the workflows of the application development engineers, the operations engineers, and the security engineers, have been revamped. Examples like this inspire us to build Bytebase, an open-source database tool to help DevOps teams manage databases throughout the application development lifecycle and hopefully to make the DevOps engineers’ lives easier. 
+At [Bytebase](https://bytebase.com), we believe tools make life easier or even redefine how the world works. Thanks to Figma, designers are now more empowered than ever to collaborate with product managers and front-end engineers; thanks to GitLab/GitHub and their ecosystems, the lives and the workflows of the application development engineers, the operations engineers, and the security engineers, have been revamped. Examples like this inspire us to build Bytebase, an open-source database tool to help DevOps teams manage databases throughout the application development lifecycle and hopefully to make the DevOps engineers’ lives easier.
 
 Currently, we are a 20-member team based in 4 different cities. As tool-makers, we are particular about selecting the best tools for our own use from day 1. But there are too many of them! Some are no-brainers, but some are just too difficult to decide. So we decided to share our list of tools and SaaS services that are helping us grow to serve as a reference for other tech startups of similar or smaller sizes. These tools include what we use for **_R&D_**, **_Marketing_**, and **_General Administration_**. At the end of the blog, you can also find the breakdown of the monthly cost of these tools. I hope this helps!
 
@@ -74,13 +74,13 @@ GitHub has a search function, but it’s far from satisfactory. So we use Sourec
 
 ### [Gitpod](https://gitpod.io)
 
-From our Github project page,  we provide a 1-click button allowing users to deploy Bytebase on Gitpod.
+From our Github project page, we provide a 1-click button allowing users to deploy Bytebase on Gitpod.
 
 ![_](/static/blog/30saas-services-behind-startup/bytebase-on-gitpod.webp)
 
 ### [Excalidraw](https://excalidraw.com/)
 
-Excalidraw is a virtual whiteboard tool with a hand-drawn feel. We use it to sketch  wireframes, architecture diagrams, or feature explanation diagrams.
+Excalidraw is a virtual whiteboard tool with a hand-drawn feel. We use it to sketch wireframes, architecture diagrams, or feature explanation diagrams.
 
 ![_](/static/blog/30saas-services-behind-startup/excalidraw-bytebase-console.webp)
 
@@ -131,7 +131,7 @@ We use Metabase to build a dashboard for internal data visualization. The data i
 
 ### [Paddle](https://Paddle.com)
 
-Paddle is where we collect payments from users. We didn't choose Stripe because Paddle  can save our tax problems as a Merchant of Record (MoR). As a tradeoff, it is more costly than Stripe in commission fees.
+Paddle is where we collect payments from users. We didn't choose Stripe because Paddle can save our tax problems as a Merchant of Record (MoR). As a tradeoff, it is more costly than Stripe in commission fees.
 
 ### [Retool](https://retool.com)
 
@@ -191,7 +191,7 @@ Lark is responsible for our internal activities, including IM, documentation, me
 
 ### [Slack](https://slack.com)
 
-Slack is used to communicate with our customers. We also thought about building a community on Slack. However, different Slack spaces require registration, which brings an unsatisfactory user experience, and the overall vibe on Slack feels more professional. 
+Slack is used to communicate with our customers. We also thought about building a community on Slack. However, different Slack spaces require registration, which brings an unsatisfactory user experience, and the overall vibe on Slack feels more professional.
 
 ### [Grammarly](https://grammarly.com)
 
@@ -199,7 +199,7 @@ We purchased Grammarly Business Edition to assist in English writing.
 
 ### [OSlash](https://oslash.com)
 
-From Google's go/ to the famous Stripe's o/, shortcut service is regarded as a must for Silicon Valley companies. Bytebase uses many SaaS services and creates many internal documents, which makes it difficult to remember all kinds of links. However, OSlash can convert these page links into more memorable ones. We also made an internal document on Lark noting all our shortcuts, which opens by o/link. 
+From Google's go/ to the famous Stripe's o/, shortcut service is regarded as a must for Silicon Valley companies. Bytebase uses many SaaS services and creates many internal documents, which makes it difficult to remember all kinds of links. However, OSlash can convert these page links into more memorable ones. We also made an internal document on Lark noting all our shortcuts, which opens by o/link.
 
 ![_](/static/blog/30saas-services-behind-startup/oslash.webp)
 
@@ -211,7 +211,7 @@ Casual is used for financial model analysis. An intuitive model of financial rep
 
 ### [Pulley](https://Pulley.com)
 
-Pulley is used to manage the company's equity. It helps us track the company's cap table, issue and manage employee equities. 
+Pulley is used to manage the company's equity. It helps us track the company's cap table, issue and manage employee equities.
 
 ![_](/static/blog/30saas-services-behind-startup/pulley.webp)
 
@@ -219,53 +219,53 @@ Pulley is used to manage the company's equity. It helps us track the company's c
 
 ### R&D
 
-| Service          | Cost             |
-| ---------------- | ---------------- |
-| GitHub           | $0               |
-| Linear           | $180             |
-| Neat             | $0               |
-| Sourcegraph      | $0               |
-| Gitpod           | $0               |
-| Excalidraw       | $60              |
-| Figma            | $15              |
-| Better Uptime    | $0               |
-| Auth0            | $0               |
-| Render           | $50              |
-| Vercel           | $20              |
-| AWS              | $100             |
-| Cloudflare       | $0               |
-| Segment          | $0               |
-| Metabase         | $0               |
-| Paddle           | $0               |
-| Retool           | $0               |
-| Algolia          | $0               |
-| **Total**        | **$425**         |
+| Service       | Cost     |
+| ------------- | -------- |
+| GitHub        | $0       |
+| Linear        | $180     |
+| Neat          | $0       |
+| Sourcegraph   | $0       |
+| Gitpod        | $0       |
+| Excalidraw    | $60      |
+| Figma         | $15      |
+| Better Uptime | $0       |
+| Auth0         | $0       |
+| Render        | $50      |
+| Vercel        | $20      |
+| AWS           | $100     |
+| Cloudflare    | $0       |
+| Segment       | $0       |
+| Metabase      | $0       |
+| Paddle        | $0       |
+| Retool        | $0       |
+| Algolia       | $0       |
+| **Total**     | **$425** |
 
 ### Marketing
 
-| Service          | Cost             |
-| ---------------- | ---------------- |
-| Intercom         | $70              |
-| Mailchimp        | $20              |
-| Orbit            | $0               |
-| Ahrefs           | $80              |
-| Searchramen      | $20              |
-| Google Analytics | $0               |
-| Plausible        | $8               |
-| **Total**        | **$208**         |
+| Service          | Cost     |
+| ---------------- | -------- |
+| Intercom         | $70      |
+| Mailchimp        | $20      |
+| Orbit            | $0       |
+| Ahrefs           | $80      |
+| Searchramen      | $20      |
+| Google Analytics | $0       |
+| Plausible        | $8       |
+| **Total**        | **$208** |
 
 ### General Administration
 
-| Service          | Cost             |
-| ---------------- | ---------------- |
-| Google Workspace | $130             |
-| Lark             | $0               |
-| Slack            | $50              |
-| Grammarly        | $200             |
-| OSlash           | $50              |
-| Casual           | $0               |
-| Pulley           | $120             |
-| **Total**        | **$550**         |
+| Service          | Cost     |
+| ---------------- | -------- |
+| Google Workspace | $130     |
+| Lark             | $0       |
+| Slack            | $50      |
+| Grammarly        | $200     |
+| OSlash           | $50      |
+| Casual           | $0       |
+| Pulley           | $120     |
+| **Total**        | **$550** |
 
 The total monthly spending is **$1,183**!
 
@@ -279,6 +279,6 @@ Here are some data to show how these tools have improved our efficiency:
 
 2. The developer marketing team, consisting of 3 members, produces 3 - 5 articles weekly. In addition, they are responsible for maintaining [technical documents](https://docs.bytebase.com) and all marketing activities.
 
-3. A part-time administrative/HR, dealing with all affairs in the company's back office, aside from R&D and marketing (of course, we also hired external financial and legal advisers). 
+3. A part-time administrative/HR, dealing with all affairs in the company's back office, aside from R&D and marketing (of course, we also hired external financial and legal advisers).
 
-Inevitably,  we have made detours in terms of tool selection and also grew out of certain tools as the company grows. We will share more thoughts behind our choice of specific tools in a future post. Stay tuned.
+Inevitably, we have made detours in terms of tool selection and also grew out of certain tools as the company grows. We will share more thoughts behind our choice of specific tools in a future post. Stay tuned.
