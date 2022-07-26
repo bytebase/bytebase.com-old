@@ -105,7 +105,7 @@ Include another markdown and render inline.
 #### Usage
 
 ```markdown
-<include-block url="features/archive"></include-block>
+<include-block url="/docs/en/document-write-guide"></include-block>
 ```
 
 #### Props

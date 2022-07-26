@@ -2,8 +2,7 @@
 title: How to Create a Table in ClickHouse
 ---
 
-
-The `CREATE TABLE` command is used create a new **table** in an existing **database**. 
+The `CREATE TABLE` command is used create a new **table** in an existing **database**.
 
 Here is an example of creating an `employee` table in `db_how_to`:
 

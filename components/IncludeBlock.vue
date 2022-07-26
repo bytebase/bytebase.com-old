@@ -1,6 +1,6 @@
 <template>
   <div v-if="documentRef">
-    <h1>{{ documentRef.title }}</h1>
+    <h1 v-if="showTitle">{{ documentRef.title }}</h1>
     <nuxt-content :document="documentRef" />
   </div>
 </template>
@@ -8,9 +8,9 @@
 <script lang="ts">
 import {
   defineComponent,
-  onMounted,
   useContext,
   ref,
+  useFetch,
 } from "@nuxtjs/composition-api";
 import { ContentDocument } from "~/types/docs";
 
@@ -20,14 +20,17 @@ export default defineComponent({
       type: String,
       default: "info",
     },
+    showTitle: {
+      type: Boolean,
+      default: true,
+    },
   },
   setup(props) {
     const { $content } = useContext();
     const documentRef = ref();
 
-    onMounted(async () => {
-      const locale = "en";
-      documentRef.value = (await $content("docs", locale, props.url)
+    useFetch(async () => {
+      documentRef.value = (await $content(props.url)
         .limit(1)
         .fetch()) as any as ContentDocument;
     });
