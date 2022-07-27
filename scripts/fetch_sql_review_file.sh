@@ -26,7 +26,7 @@ output=(
     "$LOCALIZATION_FOLDER/zh.json"
 )
 
-for i in {0..2}
+for (( i=0; i<${#input[@]}; i++ ));
 do
     echo "Start to fetch the SQL Review config file from ${input[$i]} to ${output[$i]}."
     response=$(curl -w "%{http_code}" -o ${output[$i]} ${input[$i]})

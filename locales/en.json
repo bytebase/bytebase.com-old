@@ -309,11 +309,11 @@
     "rules": "Rules",
     "filter": "Filter",
     "template": {
-      "mysql-prod": {
+      "bb-sql-review-mysql-prod": {
         "env": "Prod",
         "title": "Database Review Guide for MySQL"
       },
-      "mysql-dev": {
+      "bb-sql-review-mysql-dev": {
         "env": "Dev",
         "title": "Database Review Guide for MySQL"
       }
