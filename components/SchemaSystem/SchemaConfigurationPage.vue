@@ -119,7 +119,7 @@ import {
   RuleConfigComponent,
   convertToCategoryList,
   getRuleLocalizationKey,
-} from "../../common/schemaSystem";
+} from "../../common/sqlReview";
 import Modal from "../Modal.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
 

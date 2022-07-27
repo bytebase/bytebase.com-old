@@ -89,5 +89,7 @@ sw.*
 
 # Vim swap files
 *.swp
-common/sqlReviewConfig.yaml
+common/sql-review-schema.yaml
+common/sql-review.mysql.dev.yaml
+common/sql-review.mysql.prod.yaml
 locales/sql-review

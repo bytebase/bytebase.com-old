@@ -1,4 +1,6 @@
-import schemaSystemConfig from "./sqlReviewConfig.yaml";
+import sqlReviewSchema from "./sql-review-schema.yaml";
+import sqlReviewProdTemplate from "./sql-review.mysql.prod.yaml";
+import sqlReviewDevTemplate from "./sql-review.mysql.dev.yaml";
 
 export enum RuleLevel {
   DISABLED = "DISABLED",
@@ -71,13 +73,64 @@ export interface GuidelineTemplate {
   ruleList: RuleTemplate[];
 }
 
-export const guidelineTemplateList =
-  schemaSystemConfig.templateList as GuidelineTemplate[];
+// Build the frontend template list based on schema and template.
+export const guidelineTemplateList: GuidelineTemplate[] = (function () {
+  const ruleSchemaMap = (sqlReviewSchema.ruleList as RuleTemplate[]).reduce(
+    (map, ruleSchema) => {
+      map.set(ruleSchema.type, ruleSchema);
+      return map;
+    },
+    new Map<string, RuleTemplate>()
+  );
+  const templateList = [sqlReviewProdTemplate, sqlReviewDevTemplate] as {
+    id: string;
+    ruleList: {
+      type: string;
+      level: RuleLevel;
+      payload?: { [key: string]: any };
+    }[];
+  }[];
+
+  return templateList.map((template) => {
+    const ruleList: RuleTemplate[] = [];
+
+    for (const rule of template.ruleList) {
+      const ruleTemplate = ruleSchemaMap.get(rule.type);
+      if (!ruleTemplate) {
+        continue;
+      }
+
+      // Using template rule payload to override the component list.
+      const componentList = ruleTemplate.componentList.map((component) => {
+        if (rule.payload && rule.payload[component.key]) {
+          return {
+            ...component,
+            payload: {
+              ...component.payload,
+              default: rule.payload[component.key],
+            },
+          };
+        }
+        return component;
+      });
+      ruleList.push({
+        ...ruleTemplate,
+        level: rule.level,
+        componentList,
+      });
+    }
+
+    return {
+      id: template.id,
+      ruleList,
+    };
+  });
+})();
 
 export const convertToCategoryList = (
   ruleList: RuleTemplate[]
 ): RuleCategory[] => {
-  const categoryList = schemaSystemConfig.categoryList as CategoryType[];
+  const categoryList = sqlReviewSchema.categoryList as CategoryType[];
   const categoryOrder = categoryList.reduce((map, category, index) => {
     map.set(category, index);
     return map;

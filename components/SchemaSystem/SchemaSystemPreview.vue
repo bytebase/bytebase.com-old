@@ -116,10 +116,7 @@
 <script lang="ts">
 import { defineComponent, PropType, computed } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
-import {
-  RuleCategory,
-  getRuleLocalizationKey,
-} from "../../common/schemaSystem";
+import { RuleCategory, getRuleLocalizationKey } from "../../common/sqlReview";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import Pencil from "../Icons/Pencil.vue";
 
