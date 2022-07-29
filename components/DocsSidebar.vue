@@ -19,7 +19,7 @@
       class="w-full flex flex-col justify-start items-start"
     >
       <!-- separator -->
-      <hr v-if="node.type === 'hr'" class="w-full my-1 mt-3" />
+      <hr v-if="node.type === 'hr'" class="w-full my-1 mt-4" />
       <!-- root node -->
       <div
         v-if="node.type !== 'hr'"
