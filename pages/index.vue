@@ -360,7 +360,7 @@ export default defineComponent({
         hid: "bytebase",
         name: "Bytebase | Safe Database Change and Version Control for Teams",
         content:
-          "Safer and faster database change and version control for DBAs and Developers",
+          "Bytebase is a database change and version control tool for the DevOps team. It provides a collaboration workspace to help Developers and DBAs manage the database development lifecycle.",
       },
       {
         hid: "og:image",
