@@ -343,7 +343,7 @@
                 </template>
                 <template #vite-link>
                   <a
-                    href="https://typescriptlang.org/"
+                    href="https://vitejs.dev/"
                     target="_blank"
                     class="text-blue-600"
                     style="
