@@ -226,7 +226,7 @@
   },
   "index-page": {
     "title": "{slogan}专为{teams}协同设计{br}数据库变更{br}以及版本控制",
-    "description": "Bytebase 是一个开源数据库 DevOps 工具，帮助 {dbas} 和{developers}管理数据库 Schema (DDL) 和数据 (DML) 的生命周期。",
+    "description": "Bytebase 是一个开源数据库 DevOps 工具，帮助{developers}和 {dbas} 管理数据库 Schema (DDL) 和数据 (DML) 的生命周期。",
     "features": {
       "database-migration": {
         "slogan": "更安全、更高效的数据库变更 - DDL、DML",

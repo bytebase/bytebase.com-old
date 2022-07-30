@@ -226,7 +226,7 @@
   },
   "index-page": {
     "title": "{slogan}Database Change {br}and Version Control {br}for {teams}",
-    "description": "Bytebase offers a web-based collaboration workspace to help {dbas} and {developers} manage the lifecycle of application database schemas (DDL) and data (DML).",
+    "description": "Bytebase offers a web-based collaboration workspace to help {developers} and {dbas} manage the lifecycle of application database schemas (DDL) and data (DML).",
     "features": {
       "database-migration": {
         "slogan": "Safer and faster database migration - DDL and DML",
