@@ -1,6 +1,6 @@
 import sqlReviewSchema from "./sql-review-schema.yaml";
-import sqlReviewProdTemplate from "./sql-review.mysql.prod.yaml";
-import sqlReviewDevTemplate from "./sql-review.mysql.dev.yaml";
+import sqlReviewProdTemplate from "./sql-review.prod.yaml";
+import sqlReviewDevTemplate from "./sql-review.dev.yaml";
 
 export enum RuleLevel {
   DISABLED = "DISABLED",
@@ -44,8 +44,6 @@ export interface RuleConfigComponent {
   payload: StringPayload | NumberPayload | TemplatePayload | StringArrayPayload;
 }
 
-type SchemaRuleEngineType = "MYSQL" | "COMMON";
-
 // The category type for rule template
 export type CategoryType =
   | "ENGINE"
@@ -58,7 +56,7 @@ export type CategoryType =
 export interface RuleTemplate {
   type: string;
   category: CategoryType;
-  engine: SchemaRuleEngineType;
+  engineList: string[];
   componentList: RuleConfigComponent[];
   level: RuleLevel;
 }

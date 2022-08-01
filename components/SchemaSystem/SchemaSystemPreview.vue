@@ -39,6 +39,12 @@
           </a>
           <div class="mt-3 flex items-center space-x-4 sm:mt-0">
             <SchemaRuleLevelBadge :level="rule.level" />
+            <img
+              v-for="engine in rule.engineList"
+              :key="engine"
+              class="h-4 w-auto"
+              :src="require(`~/assets/logo/db-${engine.toLowerCase()}.png`)"
+            />
             <div @click="$emit('select', rule)">
               <Pencil
                 class="w-5 h-5 cursor-pointer opacity-0 group-hover:opacity-100"

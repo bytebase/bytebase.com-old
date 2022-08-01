@@ -143,12 +143,17 @@ const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
 
 const filterOptionList: FilterItem[] = [
   {
-    id: "COMMON",
+    id: "MYSQL",
     type: "engine",
     checked: false,
   },
   {
-    id: "MYSQL",
+    id: "TIDB",
+    type: "engine",
+    checked: false,
+  },
+  {
+    id: "POSTGRES",
     type: "engine",
     checked: false,
   },
@@ -195,7 +200,7 @@ export default defineComponent({
             filter.checked) ||
           (filter.type === "engine" &&
             filter.checked &&
-            rule.engine === filter.id)
+            rule.engineList.some((engine) => engine === filter.id))
         );
       });
     };
@@ -207,7 +212,8 @@ export default defineComponent({
       return props.selectedRuleList.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
-          (filter.type === "engine" && r.engine === filter.id)
+          (filter.type === "engine" &&
+            r.engineList.some((engine) => engine === filter.id))
         );
       }).length;
     };

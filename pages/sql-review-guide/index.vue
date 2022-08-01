@@ -20,7 +20,11 @@
         :class="state.template.id === template.id ? 'bg-gray-100' : ''"
         @click="onGuidelineChange(template)"
       >
-        <img class="h-24" src="~/assets/schema-system/mysql.webp" alt="" />
+        <img
+          class="h-24"
+          alt=""
+          :src="require(`~/assets/sql-review/${template.id}.webp`)"
+        />
         <div class="mt-4">
           <span class="text-lg lg:text-xl">{{
             $t("sql-review-guide.guideline-for")
@@ -44,13 +48,6 @@
           v-if="state.template.id === template.id"
           class="w-7 h-7 text-gray-500 absolute top-3 left-3"
         />
-      </div>
-
-      <div class="rounded-lg p-6 flex flex-col justify-center items-center">
-        <img class="h-24" src="~/assets/schema-system/postgres.webp" alt="" />
-        <div class="mt-4 text-lg lg:text-xl">
-          {{ $t("sql-review-guide.coming-soon") }}
-        </div>
       </div>
     </div>
     <div class="mt-10 pt-10 border-t border-gray-200">

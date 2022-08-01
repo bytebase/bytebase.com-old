@@ -1,7 +1,7 @@
 #!/bin/sh
 SCHEMA_FILE="sql-review-schema.yaml"
-PROD_TEMPLATE="sql-review.mysql.prod.yaml"
-DEV_TEMPLATE="sql-review.mysql.dev.yaml"
+PROD_TEMPLATE="sql-review.prod.yaml"
+DEV_TEMPLATE="sql-review.dev.yaml"
 
 LOCALIZATION_FOLDER="./locales/sql-review"
 mkdir -p $LOCALIZATION_FOLDER
