@@ -2,7 +2,8 @@
 title: 5 Mins Quick Start
 ---
 
-In this guide, you'll use **"Bytebase Test Suite"** (one Bytebase and two MySQL instances) to get familiar with the product in the quickest way.
+In this guide, you'll use **"Bytebase Test Suite"** to get familiar with the product in the quickest way. This suite includes one Bytebase <version></version> instance and two MySQL 8.0.29 instances.
+The task here is to add `nickname` column to `employee` table for both dev and prod environments.
 
 ## Prerequisites
 
@@ -15,15 +16,29 @@ Before starting, make sure you have installed [Docker](https://www.docker.com/ge
 1. Start Docker.
 2. Open Terminal to run the command:
 
+#### MacOS & Linux
+
 <pre>
 curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=<version></version> docker-compose -f - up
 </pre>
-
-If the above command doesn't work, use the proxy version:
-
+#### Windows
 <pre>
-curl -fsS https://ghproxy.com/https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=<version></version> docker-compose -f - up
+BB_VERSION=<version></version>
 </pre>
+<pre>
+curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | docker-compose -f - up
+</pre>
+
+<hint-block type="info">
+
+If the above commands doesn't work, instead of:<br/>
+https://raw.githubusercontent.com/bytebase...<br />
+use the proxy version: <br />
+https://ghproxy.com/https://raw.githubusercontent.com/bytebase...
+
+
+</hint-block>
+
 
 When the Terminal shows the following message, the execution is successful.
 
@@ -49,7 +64,7 @@ bytebase         |
 employee-test_1  | [Entrypoint] Database initialized
 </pre>
 
-Now you have three Docker containers running:
+Now you have three containers running in Docker:
 
 - A Bytebase instance
 - A MySQL instance for the Test environment
@@ -57,13 +72,13 @@ Now you have three Docker containers running:
 
 ![3-containers-in-docker](/docs/en/get-started/quick-start/3-containers-in-docker.webp)
 
-Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_small from [open-source database "employee"](https://github.com/bytebase/employee-sample-database-mysql).
+Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_small from [open-source database `employee`](https://github.com/bytebase/employee-sample-database-mysql).
 
 3. Open Bytebase in [localhost:5678](http://localhost:5678/), and you can see the following page in the browser.
 
 ![welcome-page](/docs/en/get-started/quick-start/welcome-page.webp)
 
-1. Create an admin account, and you are in the workspace.
+4. Create an admin account, and you are in the workspace.
 
 ### Step 2 - Prepare the workspace
 
@@ -100,7 +115,7 @@ Prod environment requires manual approval while Test environment skips that.
 - **Username**: root
 - **Password**: [empty]
 
-Now, you have configured two instances for Test and Prod environment containing copies of the same sample dataset.
+Now, you have configured two instances for **Test** and **Prod** environment containing copies of the same sample dataset.
 
 ### Step 3 - Add a coloumn `nickname` to `employee` table
 
@@ -109,18 +124,18 @@ Now, you have configured two instances for Test and Prod environment containing 
 In Bytebase, **Project** is the unit to contain and manage databases. Therefore, before dealing with the sample databases, you need to transfer them into a project first.
 
 1. Click **Projects** > **New Project** , you will find **Create Project** dialog box.
-2. Fill in **Project Name** with Employee, **Key** with T8T, and Select **Mode** as Standard.
-3. The "Employee" project is created successfully and you are on its detail page.
+2. Fill in **Project Name** with `Employee`, **Key** with the randomly generated one, and select **Mode** as Standard.
+3. The `Employee` project is created successfully and you are on its detail page.
 
 ![create-a-project](/docs/en/get-started/quick-start/create-a-project.webp)
 
-4. Choose **Transfer DB** to transfer in the two "Employee" databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
+4. Choose **Transfer DB** to transfer in the two `Employee` databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
 
-Now you are ready to manage these two "employee" databases in your project.Your next task is to add a column named "nickname" to the "employee" table.
+Now you are ready to manage these two `employee` databases in your project.Your next task is to add a column named `nickname` to the `employee` table.
 
 #### 3.2 Create an SQL issue to alter schema
 
-1. Go to "Employee" project page.
+1. Go to `Employee` project page.
 2. Click **Alter Schema**, you will find an **Alter Schema** dialog box.
 3. Choose **Alter multiple databases**, select **Test > employee, Prod > employee**, and click **Next**.
 4. An issue is created, and you will be navigated to the new issue page. On top of **SQL** box, You can find that the issue has a pipeline with two stages - Test and Prod. Test stage is active by default.
@@ -130,7 +145,7 @@ Now you are ready to manage these two "employee" databases in your project.Your 
 5. Fill the fields as follows:
 
 - **Title**: "Alter Schema: Add a column nickname".
-- **SQL**:`ALTER TABLE employee ADD nickname VARCHAR(255) ;`.
+- **SQL**:"ALTER TABLE employee ADD nickname VARCHAR(255) ;".
 - **Description**(option): "Add a column nickname".
 - **Assignee**: [yourself]
 
@@ -144,3 +159,7 @@ Now you are ready to manage these two "employee" databases in your project.Your 
 2. Click **Resolve issue**, and the issue is **Done**.
 
 ![issue-done](/docs/en/get-started/quick-start/issue-done.webp)
+
+
+### Step 4 - Verify the change is applied
+- Choose the two `employee` databases and view the `employee` tables, you will see `nickname` column is added.
