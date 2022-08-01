@@ -141,25 +141,6 @@ const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
   checked: false,
 }));
 
-const filterOptionList: FilterItem[] = [
-  {
-    id: "MYSQL",
-    type: "engine",
-    checked: false,
-  },
-  {
-    id: "TIDB",
-    type: "engine",
-    checked: false,
-  },
-  {
-    id: "POSTGRES",
-    type: "engine",
-    checked: false,
-  },
-  ...baseFilterOptionList,
-];
-
 export default defineComponent({
   components: {
     Modal,
@@ -183,9 +164,22 @@ export default defineComponent({
   },
   emits: ["change", "reset"],
   setup(props, { emit }) {
+    const engineSet = new Set<string>();
+    for (const rule of props.selectedRuleList) {
+      for (const engine of rule.engineList) {
+        engineSet.add(engine);
+      }
+    }
+    const engineFilterOptionList: FilterItem[] = [...engineSet.keys()].map(
+      (engine) => ({
+        id: engine,
+        type: "engine",
+        checked: false,
+      })
+    );
     const state = reactive<LocalState>({
       openConfigModal: false,
-      filterOptionList,
+      filterOptionList: [...engineFilterOptionList, ...baseFilterOptionList],
     });
 
     const isFilteredRule = (rule: RuleTemplate): boolean => {
