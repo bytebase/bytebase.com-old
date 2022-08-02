@@ -141,20 +141,6 @@ const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
   checked: false,
 }));
 
-const filterOptionList: FilterItem[] = [
-  {
-    id: "COMMON",
-    type: "engine",
-    checked: false,
-  },
-  {
-    id: "MYSQL",
-    type: "engine",
-    checked: false,
-  },
-  ...baseFilterOptionList,
-];
-
 export default defineComponent({
   components: {
     Modal,
@@ -178,9 +164,22 @@ export default defineComponent({
   },
   emits: ["change", "reset"],
   setup(props, { emit }) {
+    const engineSet = new Set<string>();
+    for (const rule of props.selectedRuleList) {
+      for (const engine of rule.engineList) {
+        engineSet.add(engine);
+      }
+    }
+    const engineFilterOptionList: FilterItem[] = [...engineSet.keys()].map(
+      (engine) => ({
+        id: engine,
+        type: "engine",
+        checked: false,
+      })
+    );
     const state = reactive<LocalState>({
       openConfigModal: false,
-      filterOptionList,
+      filterOptionList: [...engineFilterOptionList, ...baseFilterOptionList],
     });
 
     const isFilteredRule = (rule: RuleTemplate): boolean => {
@@ -195,7 +194,7 @@ export default defineComponent({
             filter.checked) ||
           (filter.type === "engine" &&
             filter.checked &&
-            rule.engine === filter.id)
+            rule.engineList.some((engine) => engine === filter.id))
         );
       });
     };
@@ -207,7 +206,8 @@ export default defineComponent({
       return props.selectedRuleList.filter((r) => {
         return (
           (filter.type === "level" && filter.id === r.level) ||
-          (filter.type === "engine" && r.engine === filter.id)
+          (filter.type === "engine" &&
+            r.engineList.some((engine) => engine === filter.id))
         );
       }).length;
     };
