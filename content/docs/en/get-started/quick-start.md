@@ -31,11 +31,7 @@ curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/ge
 
 <hint-block type="info">
 
-If the above commands doesn't work, instead of:<br/>
-https://raw.githubusercontent.com/bytebase...<br />
-use the proxy version: <br />
-https://ghproxy.com/https://raw.githubusercontent.com/bytebase...
-
+If the above command doesn't work, replace https://raw.githubusercontent.com/bytebase/... with the proxy version: https://ghproxy.com/https://raw.githubusercontent.com/bytebase/...
 
 </hint-block>
 
