@@ -313,11 +313,11 @@
     "template": {
       "bb-sql-review-prod": {
         "env": "Prod",
-        "title": "MySQL 审查规则"
+        "title": "SQL 审查规则"
       },
       "bb-sql-review-dev": {
         "env": "Dev",
-        "title": "MySQL 审查规则"
+        "title": "SQL 审查规则"
       }
     }
   },
