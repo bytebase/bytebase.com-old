@@ -31,7 +31,7 @@
     <div id="content" class="flex flex-row">
       <aside class="w-52 hidden xl:flex" />
       <nuxt-content
-        class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
+        class="changelog-content w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
         :document="changelog"
       />
       <Toc :content="changelog" :scroll-offset="135" />
@@ -117,3 +117,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* overwrite prose default styles */
+.changelog-content img {
+  width: auto !important;
+  margin: 0 auto;
+  box-shadow: 0px 36px 89px rgb(0 0 0 / 4%),
+    0px 23.3333px 52.1227px rgb(0 0 0 / 3%),
+    0px 13.8667px 28.3481px rgb(0 0 0 / 2%), 0px 7.2px 14.4625px rgb(0 0 0 / 2%),
+    0px 2.93333px 7.25185px rgb(0 0 0 / 2%),
+    0px 0.666667px 3.50231px rgb(0 0 0 / 1%) !important;
+}
+</style>
