@@ -50,3 +50,22 @@ DevOps is a system. As just mentioned, there is no intersection between Dev and 
 1. Confused about the difference between SRE and Ops. Simply put, SRE is Ops who can code.
 1. Confused about whether DevOps is a system or a job function. This depends on the context. Initially, DevOps represented the system combining Dev and Ops work. This system may have both Dev and SRE roles, or it may only have a Dev role. When the system only has a Dev role, the system name, DevOps, is also used to indicate the so-called DevOps engineer’s job function. After all, if a soccer formation blurs the boundaries of the forward, midfield, and back, the formation will become a free formation, and all players can be called free men.
 1. Confused about the difference between DevOps and SRE when DevOps is treated as a job function. Simply put, DevOps is the Dev that does Ops work, while SRE is the Ops that does Dev work.
+
+## The Road Ahead
+
+With the advent of Cloud computing, many Ops job duties no longer exist, and the pure Ops role will cease. But there remains the question of the dynamics among Dev, SRE, and DevOps roles. Which mix will become the mainstream in the next ten years?
+
+Let’s look at Dev and SRE first.
+
+Dev and SRE belong to different groups and always have a love and hate relationship. On the one hand, they share the same goal to deliver a better service to the end user. On the other hand, they achieve the goal from a different angle. If we take a look at the [DORA](https://www.devops-research.com/research.html) four key metrics:
+
+1. Deployment frequency
+1. Lead Time for Changes
+1. Change Failure Rate
+1. Time to Restore Services
+
+The first two measure velocity, and the last two measure stability. In a group containing both Dev and SRE, Dev optimizes for velocity, and SRE optimizes stability. Some elite groups can simultaneously achieve better velocity and stability by delivering frequent incremental changes. However, many groups are battling between velocity and stability. As we all know, push to production is the No 1 reason causing production outages. That’s also why many engineering teams employ the no Friday release policy.
+
+This battle would never end as long as there are separate Dev and SRE teams. But there is a light ahead thanks to the proliferation of Cloud infrastructure, SaaS, and Open Source.
+
+Devs are now quite capable of taking over Ops work. First, much less firefighting since the Cloud service is much more stable than the in-house one. Second, tools to handle Ops work are more accessible to average engineers. Thus we believe DevOps will further thrive and become dominant, and the pure Dev and SRE role will diminish and only be observed in very large engineering shops down the road.
