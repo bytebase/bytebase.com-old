@@ -11,7 +11,8 @@ First, check [System Requirement and Support](/docs/faq#system-requirements-and-
 There are three different ways to deploy Bytebase to production:
 
 1. [Docker](deploy-with-docker)
-2. [One-Liner Installation Script](installation-script)
-3. [Build from Source Code](build-from-source-code)
+2. [Deploy to Kubernetes](deploy-to-kubernetes)
+3. [One-Liner Installation Script](installation-script)
+4. [Build from Source Code](build-from-source-code)
 
-By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. However，you can choose to store the metadata in [an external PostgreSQL database](/docs/get-started/install/external-postgres).
+By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. However, you can choose to store the metadata in [an external PostgreSQL database](/docs/get-started/install/external-postgres).
