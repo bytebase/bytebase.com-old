@@ -47,8 +47,8 @@
           type="email"
           autocomplete="email"
           required
-          class="w-auto border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 mr-3 sm:max-w-xs rounded-md"
-          :class="size === 'lg' ? 'px-5 py-3 w-24' : 'px-4 py-2'"
+          class="w-80 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 mr-3 sm:max-w-xs rounded-md"
+          :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
           :placeholder="$t('subscribe.enter-your-email')"
         />
         <button
