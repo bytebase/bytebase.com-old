@@ -90,30 +90,28 @@ Prod environment requires manual approval while Test environment skips that.
 2. Click **Add Instance** on the instances page, and you will see **Create Instance** dialog box.
    ![add-instance](/docs/en/get-started/quick-start/add-instance.webp)
 3. Fill the fields as follows:
-
-- Choose **MySQL**
-- **Instance Name**: Sample Instance Test
-- **Environment**: Test
-- **Host or Socket**: host.docker.internal
-- **Port**: 3307
-- **Username**: root
-- **Password**: [empty]
+    - Choose **MySQL**
+    - **Instance Name**: Sample Instance Test
+    - **Environment**: Test
+    - **Host or Socket**: host.docker.internal
+    - **Port**: 3307
+    - **Username**: root
+    - **Password**: [empty]
 
 4. Click **Create**, and the instance is created.
 5. Roll down to the bottom, you can find a section showing **Databases** and **Users** from this instance.
-6. Repeat the operation with another instance and :
-
-- Choose **MySQL**
-- **Instance Name**: Sample Instance Prod
-- **Environment**: Prod
-- **Host or Socket**: host.docker.internal
-- **Port**: 3306
-- **Username**: root
-- **Password**: [empty]
+6. Repeat the operation with another instance and:
+   - Choose **MySQL**
+   - **Instance Name**: Sample Instance Prod
+   - **Environment**: Prod
+   - **Host or Socket**: host.docker.internal
+   - **Port**: 3306
+   - **Username**: root
+   - **Password**: [empty]
 
 Now, you have configured two instances for **Test** and **Prod** environment containing copies of the same sample dataset.
 
-### Step 3 - Add a coloumn `nickname` to `employee` table
+### Step 3 - Add a column `nickname` to the `employee` table
 
 #### 3.1 Create a project
 
@@ -127,7 +125,7 @@ In Bytebase, **Project** is the unit to contain and manage databases. Therefore,
 
 4. Choose **Transfer DB** to transfer in the two `Employee` databases from Test and Prod environment. They’re in the default project since they have not been transferred into any specific project yet.
 
-Now you are ready to manage these two `employee` databases in your project.Your next task is to add a column named `nickname` to the `employee` table.
+Now you are ready to manage these two `employee` databases in your project. Your next task is to add a column named `nickname` to the `employee` table.
 
 #### 3.2 Create an SQL issue to alter schema
 
@@ -139,11 +137,10 @@ Now you are ready to manage these two `employee` databases in your project.Your 
 ![create-an-issue](/docs/en/get-started/quick-start/create-an-issue.webp)
 
 5. Fill the fields as follows:
-
-- **Title**: "Alter Schema: Add a column nickname".
-- **SQL**:"ALTER TABLE employee ADD nickname VARCHAR(255) ;".
-- **Description**(option): "Add a column nickname".
-- **Assignee**: [yourself]
+   - **Title**: "Alter Schema: Add a column nickname".
+   - **SQL**:"ALTER TABLE employee ADD nickname VARCHAR(255) ;".
+   - **Description**(option): "Add a column nickname".
+   - **Assignee**: [yourself]
 
 6. Click **Apply to other stages**, the SQL will be applied to **Prod** as well.
 7. Click **Create**, and you will see the **SQL Advisor** kicks off automatically — checks the SQL statements against various rules.
@@ -155,7 +152,6 @@ Now you are ready to manage these two `employee` databases in your project.Your 
 2. Click **Resolve issue**, and the issue is **Done**.
 
 ![issue-done](/docs/en/get-started/quick-start/issue-done.webp)
-
 
 ### Step 4 - Verify the change is applied
 - Choose the two `employee` databases and view the `employee` tables, you will see `nickname` column is added.
