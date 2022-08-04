@@ -6,9 +6,7 @@ DEV_TEMPLATE="sql-review.dev.yaml"
 LOCALIZATION_FOLDER="./locales/sql-review"
 mkdir -p $LOCALIZATION_FOLDER
 
-# TODO: change to version after next release
-# VERSION=`cat ./VERSION`
-VERSION="main"
+VERSION=`cat ./VERSION`
 URL="https://raw.githubusercontent.com/bytebase/bytebase/$VERSION"
 
 input=(
