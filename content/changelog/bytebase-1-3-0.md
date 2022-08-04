@@ -14,15 +14,12 @@ description: "- Support SQL review for PostgreSQL. - GitHub.com VCS integration 
 ![git-provider-github](/static/changelog/1.3.0/git-provider-github.webp)
 
 - Restore a database to the time point before the last migration with one click.
-![restore-before-migration](/static/changelog/1.3.0/restore-before-migration.webp)
+![restore-before-migration](/static/changelog/1.3.0/restore-before-migration.gif)
 
 ## 🎄 Enhancements
 
 - Support to set "day of the week" and "backup retention period" for database backup settings.
-![backup-retention](/static/changelog/1.3.0/backup-retention.webp)
-
-- Change the way help tips are displayed - a right-side drawer instead of the pop-up tips.
-![drawer-display](/static/changelog/1.3.0/drawer-display.webp)
+![backup-retention](/static/changelog/1.3.0/backup-retention.gif)
 
 - When VCS has a new commit, the corresponding issue created by Bytebase will try to display the creator by matching the email account.
 - Allow modifying task SQL statements in tenant mode.
@@ -38,7 +35,7 @@ description: "- Support SQL review for PostgreSQL. - GitHub.com VCS integration 
 
 ## 🎠 Community
 
-- Added interactive source code tour via [SourceGraph](https://sourcegraph.com/github.com/bytebase/bytebase/-/blob/docs/design/source-code-tour.snb.md).
+- Added interactive source code tour via [Sourcegraph](https://sourcegraph.com/github.com/bytebase/bytebase/-/blob/docs/design/source-code-tour.snb.md).
 
 - Thanks to [@unknwon](https://github.com/unknwon) for implementing [issue #928 ☂️ GitHub Git provider](https://github.com/bytebase/bytebase/issues/928).
 
