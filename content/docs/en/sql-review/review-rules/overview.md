@@ -13,31 +13,32 @@ This document is to show how to configure review rules.
 
 ## Supported rules
 
-It currently supports following SQL review rules:
+It currently supports following SQL review rules and see [Supported Rules](/docs/sql-review/review-rules/supported-rules) for details:
 
 - Engine
-  - [Require InnoDB](/docs/sql-review/review-rules/engine-mysql-use-innodb)
+  - Require InnoDB
 - Naming
-  - [Table naming convention](/docs/sql-review/review-rules/naming-table)
-  - [Column naming convention](/docs/sql-review/review-rules/naming-column)
-  - [Index naming convention](/docs/sql-review/review-rules/naming-index-idx)
-  - [Unique key naming convention](/docs/sql-review/review-rules/naming-index-uk)
-  - [Foreign key naming convention](/docs/sql-review/review-rules/naming-index-fk)
+  - Table naming convention
+  - Column naming convention
+  - Index naming convention
+  - Primary key naming convention
+  - Unique key naming convention
+  - Foreign key naming convention
 - Query
-  - [Disallow SELECT \*](/docs/sql-review/review-rules/query-select-no-select-all)
-  - [Require WHERE](/docs/sql-review/review-rules/query-where-require)
-  - [Disallow leading % in LIKE](/docs/sql-review/review-rules/query-where-no-leading-wildcard-like)
+  - Disallow SELECT *
+  - Require WHERE
+  - Disallow leading % in LIKE
 - Table
-  - [Require primary key](/docs/sql-review/review-rules/table-require-pk)
-  - [Disallow foreign key](/docs/sql-review/review-rules/table-no-fk)
-  - [Drop naming convention](/docs/sql-review/review-rules/table-drop-naming)
+  - Require primary key
+  - Disallow foreign key
+  - Drop naming convention
 - Schema
-  - [Backward incompatible schema change](/docs/sql-review/review-rules/schema-migration-compatibility)
+  - Backward incompatible schema change
 - Column
-  - [Enforce the required columns in each table](/docs/sql-review/review-rules/column-required)
-  - [Columns no NULL value](/docs/sql-review/review-rules/column-no-null)
+  - Enforce the required columns in each table
+  - Columns no NULL value
 - Database
-  - [Drop database restriction](/docs/sql-review/review-rules/database-drop-empty-db)
+  - Drop database restriction
 
 ## How it works
 
@@ -54,3 +55,4 @@ Bytebase defines **Schema Review Policy** for each **Environment**. The **Schema
 - [View Schema Review Policy](/docs/sql-review/review-rules/view-schema-review-policy)
 - [Edit Schema Review Policy](/docs/sql-review/review-rules/edit-schema-review-policy)
 - [Disable and Delete Schema Review Policy](/docs/sql-review/review-rules/disable-delete-policy)
+- [Supported Rules](/docs/sql-review/review-rules/supported-rules)
