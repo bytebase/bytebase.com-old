@@ -14,7 +14,7 @@ This document guides you to install the latest Bytebase via the one-liner instal
 Using install script to install the latest release version:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/bytebase/install/main/install.sh)"
 ```
 
 If no error occurs, you should see something like this in the console:
