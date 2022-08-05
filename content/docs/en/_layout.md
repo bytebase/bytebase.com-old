@@ -79,6 +79,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Disable and Delete Schema Review Policy](/sql-review/review-rules/disable-delete-policy)
 
+#### [Supported Rules](/sql-review/review-rules/supported-rules)
+
 ## Change Database
 
 ### [Change Workflow](/change-database/change-workflow)
