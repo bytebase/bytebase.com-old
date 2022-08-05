@@ -6,6 +6,7 @@
     <img class="h-14" src="~/assets/logo/db-tidb.png" alt="tidb" />
     <img class="h-14" src="~/assets/logo/db-snowflake.png" alt="snowflake" />
     <img class="h-14" src="~/assets/logo/gitlab-logo.svg" alt="gitlab" />
+    <img class="h-14" src="~/assets/logo/github-logo.svg" alt="github" />
   </div>
 </template>
 
