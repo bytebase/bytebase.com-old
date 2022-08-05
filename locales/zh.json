@@ -394,6 +394,8 @@
       }
     },
     "learn-more": "视频演示",
-    "try-it-now": "马上试试"
+    "appoint-demo": "预约演示",
+    "appointment-success": "预约成功",
+    "appointment-success-description": "我们将尽快联系你"
   }
 }
