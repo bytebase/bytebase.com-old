@@ -24,4 +24,4 @@ The SQL Review Action is free to use, you don't need any subscription plan.
 </hint-block>
 
 1. [Configure and download as YAML](https://www.bytebase.com/sql-review-guide) for SQL review rules.
-2. Use the [Bytebase SQL Review Action](https://github.com/marketplace/actions/sql-review) in your GitHub repository.
+2. Use the [SQL Review Action](https://github.com/marketplace/actions/sql-review) in your GitHub repository.
