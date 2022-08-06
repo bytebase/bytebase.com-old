@@ -279,8 +279,6 @@ export default defineComponent({
     };
 
     const onPayloadChange = (data: { [val: string]: any }) => {
-      console.log("onPayloadChange");
-      console.log(data);
       if (!state.selectedRule || !state.selectedRule.componentList) {
         return;
       }
