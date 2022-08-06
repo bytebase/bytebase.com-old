@@ -15,13 +15,13 @@ It currently supports following checks:
 
 ## SQL Review Action
 
-Bytebase also provide the [SQL Review Action](https://github.com/bytebase/sql-review-action) to let users integrate the SQL review into their GitHub CI.
+Bytebase also provides the [SQL Review Action](https://github.com/marketplace/actions/sql-review) to let users integrate the SQL review into their GitHub CI.
 
 <hint-block type="info">
 
-The SQL Review Action is free to use, don't need any subscription plan.
+The SQL Review Action is free to use, you don't need any subscription plan.
 
 </hint-block>
 
-1. [Configure and download](https://www.bytebase.com/sql-review-guide) the SQL review rules.
-2. Use the [Bytebase SQL Review Action](https://github.com/marketplace/actions/bytebase-sql-review) in your GitHub repository.
+1. [Configure and download as YAML](https://www.bytebase.com/sql-review-guide) for SQL review rules.
+2. Use the [Bytebase SQL Review Action](https://github.com/marketplace/actions/sql-review) in your GitHub repository.

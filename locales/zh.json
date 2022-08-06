@@ -306,7 +306,7 @@
     "reset-changes": "重置更改",
     "download-as-image": "保存为图片",
     "download-as-yaml": "保存为 YAML 文件",
-    "download-as-yaml-tooltip": "YAML 配置可用于 github.com/bytebase/sql-review-action",
+    "download-as-yaml-tooltip": "YAML 配置可用于 github.com/marketplace/actions/sql-review",
     "rules": "规则",
     "filter": "筛选",
     "configure-rule": "规则配置",
