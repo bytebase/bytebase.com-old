@@ -8,14 +8,67 @@
       >
         {{ $t("sql-review-guide.reset-changes") }}
       </ActionButton>
-      <ActionButton
-        :class-names="[
-          'text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-700',
-        ]"
-        @click="downConfiguration"
-      >
-        {{ $t("sql-review-guide.download-as-image") }}
-      </ActionButton>
+      <div class="relative z-0 inline-flex shadow-sm rounded-md">
+        <button
+          type="button"
+          class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+          @click="downloadAsYAML"
+        >
+          {{ $t("sql-review-guide.download-as-yaml") }}
+          <span class="tooltip-wrapper ml-1">
+            <QuestinIcon class="h-5 w-5" />
+            <span class="tooltip whitespace-nowrap">{{
+              $t("sql-review-guide.download-as-yaml-tooltip")
+            }}</span>
+          </span>
+        </button>
+        <div class="-ml-px relative block">
+          <button
+            type="button"
+            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+            id="option-menu-button"
+            aria-expanded="true"
+            aria-haspopup="true"
+            @click="state.openDownloadMenu = !state.openDownloadMenu"
+          >
+            <span class="sr-only">Open options</span>
+            <!-- Heroicon name: solid/chevron-down -->
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div
+            v-if="state.openDownloadMenu"
+            class="origin-top-right absolute right-0 mt-2 -mr-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="option-menu-button"
+            tabindex="-1"
+          >
+            <div class="py-1" role="none">
+              <button
+                class="text-gray-700 block px-4 py-2 w-full text-sm hover:bg-gray-100"
+                role="menuitem"
+                tabindex="-1"
+                @click="downloadAsImage"
+              >
+                {{ $t("sql-review-guide.download-as-image") }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="lg:grid lg:grid-cols-6 lg:gap-x-8">
       <aside class="hidden mt-2 lg:block lg:col-span-2 p-5">
@@ -122,6 +175,7 @@ import {
 } from "../../common/sqlReview";
 import Modal from "../Modal.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
+import QuestinIcon from "~/components/QuestinIcon.vue";
 
 interface FilterItem {
   id: string;
@@ -133,6 +187,7 @@ interface LocalState {
   openConfigModal: boolean;
   selectedRule?: RuleTemplate;
   filterOptionList: FilterItem[];
+  openDownloadMenu: boolean;
 }
 
 const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
@@ -144,6 +199,7 @@ const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
 export default defineComponent({
   components: {
     Modal,
+    QuestinIcon,
     ActionButton,
     SchemaRuleConfig,
     SchemaSystemPreview,
@@ -160,6 +216,10 @@ export default defineComponent({
     ruleChanged: {
       required: true,
       type: Boolean,
+    },
+    templateId: {
+      required: true,
+      type: String,
     },
   },
   emits: ["change", "reset"],
@@ -180,6 +240,7 @@ export default defineComponent({
     const state = reactive<LocalState>({
       openConfigModal: false,
       filterOptionList: [...engineFilterOptionList, ...baseFilterOptionList],
+      openDownloadMenu: false,
     });
 
     const isFilteredRule = (rule: RuleTemplate): boolean => {
@@ -218,6 +279,8 @@ export default defineComponent({
     };
 
     const onPayloadChange = (data: { [val: string]: any }) => {
+      console.log("onPayloadChange");
+      console.log(data);
       if (!state.selectedRule || !state.selectedRule.componentList) {
         return;
       }
@@ -275,7 +338,7 @@ export default defineComponent({
       });
     };
 
-    const downConfiguration = () => {
+    const downloadAsImage = () => {
       const node = document.getElementById("preview");
       if (!node) return;
 
@@ -297,8 +360,49 @@ export default defineComponent({
             if (element) {
               element.style.removeProperty("display");
             }
+            state.openDownloadMenu = false;
           })
       );
+    };
+
+    const downloadAsYAML = () => {
+      const content = [`template: ${props.templateId}`, "ruleList:"];
+
+      for (const rule of props.selectedRuleList) {
+        const type = `  - type: ${rule.type}`;
+        const level = `    level: ${rule.level}`;
+        content.push(type, level);
+
+        if (rule.componentList.length > 0) {
+          content.push("    payload:");
+          for (const component of rule.componentList) {
+            const value = component.payload.value ?? component.payload.default;
+            if (component.payload.type === "STRING_ARRAY") {
+              content.push(`      ${component.key}:`);
+              for (const data of value as string[]) {
+                content.push(`        - ${data}`);
+              }
+            } else {
+              content.push(`      ${component.key}: ${value}`);
+            }
+          }
+        }
+      }
+
+      var element = document.createElement("a");
+      element.setAttribute(
+        "href",
+        "data:text/plain;charset=utf-8," +
+          encodeURIComponent(content.join("\n"))
+      );
+      element.setAttribute("download", "sql-review.yml");
+
+      element.style.display = "none";
+      document.body.appendChild(element);
+
+      element.click();
+
+      document.body.removeChild(element);
     };
 
     return {
@@ -308,9 +412,25 @@ export default defineComponent({
       onRuleSelect,
       onPayloadChange,
       onLevelChange,
-      downConfiguration,
+      downloadAsYAML,
+      downloadAsImage,
       getRuleLocalizationKey,
     };
   },
 });
 </script>
+
+<style scoped>
+.tooltip-wrapper {
+  @apply relative;
+}
+
+.tooltip {
+  @apply hidden absolute -top-10 left-4 px-2 py-1 rounded bg-black bg-opacity-80 text-white;
+  transform: translateX(-50%);
+}
+
+.tooltip-wrapper:hover .tooltip {
+  @apply block z-50;
+}
+</style>
