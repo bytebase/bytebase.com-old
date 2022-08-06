@@ -54,6 +54,7 @@
       <SchemaConfigurationPage
         :selected-rule-list="state.ruleList"
         :rule-changed="state.ruleChanged"
+        :template-id="state.template.id"
         :title="
           $t(
             `sql-review-guide.template.${state.template.id
@@ -84,7 +85,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from "@nuxtjs/composition-api";
+import { defineComponent, reactive, onMounted } from "@nuxtjs/composition-api";
 import ActionButton from "../../components/ActionButton.vue";
 import CheckCircleIcon from "../../components/Icons/CheckCircle.vue";
 import SchemaConfigurationPage from "../../components/SchemaSystem/SchemaConfigurationPage.vue";
@@ -115,6 +116,15 @@ export default defineComponent({
       ruleList: guidelineTemplateList[0].ruleList,
       ruleChanged: false,
       openWarningModal: false,
+    });
+
+    onMounted(() => {
+      const params = new URLSearchParams(window.location.search);
+      const templateId = params.get("templateId") ?? "";
+      const template = guidelineTemplateList.find((t) => t.id === templateId);
+      if (template) {
+        onGuidelineChange(template);
+      }
     });
 
     const onGuidelineChange = (guideline: GuidelineTemplate) => {

@@ -188,9 +188,11 @@ export default defineComponent({
 
       const values = state.payload[i] as string[];
       const index = values.indexOf(val);
-      state.payload[i] = [
-        ...values.slice(0, index),
-        ...values.slice(index + 1),
+
+      state.payload = [
+        ...state.payload.slice(0, i),
+        [...values.slice(0, index), ...values.slice(index + 1)],
+        ...state.payload.slice(i + 1),
       ];
     };
 

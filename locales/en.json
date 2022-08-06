@@ -302,10 +302,11 @@
     "title": "SQL Review Guide",
     "description": "An online tool for DBA to generate the SQL review / DDL guideline. Support MySQL now, PostgreSQL later.",
     "guideline-for": "Guideline for",
-    "coming-soon": "coming soon",
     "your-changes-will-be-reset": "Your changes will be reset.",
     "reset-changes": "Reset changes",
     "download-as-image": "Download as image",
+    "download-as-yaml": "Download as YAML",
+    "download-as-yaml-tooltip": "Use the YAML file with github.com/marketplace/actions/sql-review",
     "rules": "Rules",
     "filter": "Filter",
     "template": {
