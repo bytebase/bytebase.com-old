@@ -300,7 +300,7 @@
   },
   "sql-review-guide": {
     "title": "SQL 审核规则",
-    "description": "SQL 审核规则在线生成工具。当前已支持 MySQL，后续会支持 PostgreSQL。",
+    "description": "SQL 审核规则在线生成工具",
     "guideline-for": "指导方针",
     "your-changes-will-be-reset": "您的更改将被重置。",
     "reset-changes": "重置更改",
