@@ -23,7 +23,7 @@ export const PRICING_EVENT = {
 export interface Metric {
   page: (name: string | null | undefined) => void;
   track: (name: string) => void;
-  identify: (email: string) => void;
+  identify: (email: string, options: any) => void;
 }
 
 const analytics = ref<Metric>();
@@ -58,11 +58,14 @@ class SegmentMetric implements Metric {
     });
   }
 
-  identify(email: string) {
-    this.analytics?.identify({
-      email: email,
-      ...this.metricParamater,
-    });
+  identify(email: string, options: any) {
+    this.analytics?.identify(
+      {
+        email: email,
+        ...this.metricParamater,
+      },
+      options
+    );
   }
 
   private get metricParamater() {
