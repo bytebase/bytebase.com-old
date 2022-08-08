@@ -300,7 +300,7 @@
   },
   "sql-review-guide": {
     "title": "SQL Review Guide",
-    "description": "An online tool for DBA to generate the SQL review / DDL guideline. Support MySQL now, PostgreSQL later.",
+    "description": "An online tool for DBA to generate the SQL review / DDL guideline.",
     "guideline-for": "Guideline for",
     "your-changes-will-be-reset": "Your changes will be reset.",
     "reset-changes": "Reset changes",
