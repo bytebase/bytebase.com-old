@@ -17,7 +17,7 @@ Bytebase is lightweight and has no external dependency. For normal workload, it 
 
 Bytebase officially supports the following major versions for each supported database engine:
 
-- MySQL - 8.0 and 5.7
+- MySQL - 5.7 and 8.0
 - PostgreSQL - 12.0, 13.0, 14.0
 - TiDB - 5.0
 - Snowflake
