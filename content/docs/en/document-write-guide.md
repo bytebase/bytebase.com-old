@@ -15,7 +15,7 @@ description: This section shows the steps of writing a document.
 
 # How to write a document?
 
-First, you need to write down the main concept of your documention.
+First, you need to write down the main concept of your documentation.
 ```
 
 To optimize documentation SEO, we should save its metadata between the `--- xxx ---` block. Typically used fields are:
