@@ -121,7 +121,15 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent(props.moduleName);
-      analytics.value?.identify(email.value);
+      // Manually updating user subscription status to re-subscribe
+      // Doc: https://segment.com/docs/connections/destinations/catalog/mailchimp/#manually-updating-user-subscription-status
+      analytics.value?.identify(email.value, {
+        integrations: {
+          MailChimp: {
+            subscriptionStatus: "subscribed",
+          },
+        },
+      });
       subscribed.value = true;
       emit("subscribed");
       e.preventDefault();
