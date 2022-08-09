@@ -15,30 +15,7 @@ This document is to show how to configure review rules.
 
 It currently supports following SQL review rules and see [Supported Rules](/docs/sql-review/review-rules/supported-rules) for details:
 
-- Engine
-  - Require InnoDB
-- Naming
-  - Table naming convention
-  - Column naming convention
-  - Index naming convention
-  - Primary key naming convention
-  - Unique key naming convention
-  - Foreign key naming convention
-- Query
-  - Disallow SELECT *
-  - Require WHERE
-  - Disallow leading % in LIKE
-- Table
-  - Require primary key
-  - Disallow foreign key
-  - Drop naming convention
-- Schema
-  - Backward incompatible schema change
-- Column
-  - Enforce the required columns in each table
-  - Columns no NULL value
-- Database
-  - Drop database restriction
+<include-block url="/docs/en/sql-review/rules"></include-block>
 
 ## How it works
 

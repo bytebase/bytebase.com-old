@@ -364,10 +364,15 @@ export default defineComponent({
     };
 
     const downloadAsYAML = () => {
-      const content = [`template: ${props.templateId}`, "ruleList:"];
+      const content = [
+        `# This file is generated on https://www.bytebase.com/sql-review-guide#${props.templateId}`,
+        "# You can use it with the SQL Review Action https://github.com/marketplace/actions/sql-review",
+        `template: ${props.templateId}`,
+        "ruleList:",
+      ];
 
       for (const rule of props.selectedRuleList) {
-        const type = `  - type: ${rule.type}`;
+        const type = `  - type: ${rule.type} # Doc: https://www.bytebase.com/docs/sql-review/review-rules/supported-rules#${rule.type}`;
         const level = `    level: ${rule.level}`;
         content.push(type, level);
 

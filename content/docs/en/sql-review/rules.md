@@ -1,0 +1,24 @@
+- Engine
+  - [Require InnoDB](/docs/sql-review/review-rules/supported-rules#engine.mysql.use-innodb)
+- Naming
+  - [Table naming convention](/docs/sql-review/review-rules/supported-rules#naming.table)
+  - [Column naming convention](/docs/sql-review/review-rules/supported-rules#naming.column)
+  - [Index naming convention](/docs/sql-review/review-rules/supported-rules#naming.index.idx)
+  - [Primary key naming convention](/docs/sql-review/review-rules/supported-rules#naming.index.pk)
+  - [Unique key naming convention](/docs/sql-review/review-rules/supported-rules#naming.index.uk)
+  - [Foreign key naming convention](/docs/sql-review/review-rules/supported-rules#naming.index.fk)
+- Query
+  - [Disallow SELECT \*](/docs/sql-review/review-rules/supported-rules#statement.select.no-select-all)
+  - [Require WHERE](/docs/sql-review/review-rules/supported-rules#statement.where.require)
+  - [Disallow leading % in LIKE](/docs/sql-review/review-rules/supported-rules#statement.where.no-leading-wildcard-like)
+- Table
+  - [Require primary key](/docs/sql-review/review-rules/supported-rules#table.require-pk)
+  - [Disallow foreign key](/docs/sql-review/review-rules/supported-rules#table.no-foreign-key)
+  - [Drop naming convention](/docs/sql-review/review-rules/supported-rules#table.drop-naming-convention)
+- Schema
+  - [Backward incompatible schema change](/docs/sql-review/review-rules/supported-rules#schema.backward-compatibility)
+- Column
+  - [Enforce the required columns in each table](/docs/sql-review/review-rules/supported-rules#column.required)
+  - [Columns no NULL value](/docs/sql-review/review-rules/supported-rules#column.no-null)
+- Database
+  - [Drop database restriction](/docs/sql-review/review-rules/supported-rules#database.drop-empty-database)

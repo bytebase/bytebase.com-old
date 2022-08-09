@@ -2,36 +2,9 @@
 title: Supported Rules
 ---
 
-Bytebase currently supports following SQL review rules:
-
-- Engine
-  - Require InnoDB
-- Naming
-  - Table naming convention
-  - Column naming convention
-  - Index naming convention
-  - Primary key naming convention
-  - Unique key naming convention
-  - Foreign key naming convention
-- Query
-  - Disallow SELECT *
-  - Require WHERE
-  - Disallow leading % in LIKE
-- Table
-  - Require primary key
-  - Disallow foreign key
-  - Drop naming convention
-- Schema
-  - Backward incompatible schema change
-- Column
-  - Enforce the required columns in each table
-  - Columns no NULL value
-- Database
-  - Drop database restriction
-
 ## Engine
 
-### Require InnoDB
+<h3 id="engine.mysql.use-innodb">Require InnoDB</h3>
 
 InnoDB is the default storage engine of MySQL 5.5+. It provides powerful transaction features. Normally, using InnoDB as the storage engine is the only option. Bytebase provides this rule to catch all scenarios where other engines are attempted.
 
@@ -53,7 +26,7 @@ So if the following situation occurs, Bytebase considers this rule to be violate
 
 ## Naming
 
-### Table naming convention
+<h3 id="naming.table">Table naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the table naming convention.
 
@@ -88,7 +61,7 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
-### Column naming convention
+<h3 id="naming.column">Column naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the column naming convention.
 
@@ -124,7 +97,7 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
-### Index naming convention
+<h3 id="naming.index.idx">Index naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the index naming convention.
 
@@ -162,7 +135,7 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
-### Primary key naming convention
+<h3 id="naming.index.pk">Primary key naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the primary key naming convention.
 This rule does **NOT** support MySQL and TiDB. Because the name of a PRIMARY KEY is always PRIMARY in MySQL and TiDB.
@@ -196,7 +169,7 @@ Specifically, Bytebase checks:
 
 - PostgreSQL
 
-### Unique key naming convention
+<h3 id="naming.index.uk">Unique key naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the unique key naming convention.
 
@@ -234,7 +207,7 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
-### Foreign key naming convention
+<h3 id="naming.index.fk">Foreign key naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the foreign key naming convention.
 
@@ -272,7 +245,7 @@ Specifically, Bytebase checks:
 
 ## Query
 
-### Disallow SELECT *
+<h3 id="statement.select.no-select-all">Disallow SELECT \*</h3>
 
 `SELECT *` introduces additional performance cost or ambiguous semantics.
 
@@ -292,7 +265,7 @@ Bytebase considers this rule to be violated if the SQL has `SELECT *`.
 - TiDB
 - PostgreSQL
 
-### Require WHERE
+<h3 id="statement.where.require">Require WHERE</h3>
 
 There are countless stories about people forgetting the WHERE clause in an UPDATE or DELETE and losing data. In queries, not using WHERE can also cause performance issues.
 
@@ -310,7 +283,7 @@ Bytebase considers this rule to be violated if the SQL has no WHERE clause.
 - TiDB
 - PostgreSQL
 
-### Disallow leading % in LIKE
+<h3 id="statement.where.no-leading-wildcard-like">Disallow leading % in LIKE</h3>
 
 Database cannot use an index to match entries when there is a leading wildcard. It can cause serious performance problems because it may scan the entire table.
 
@@ -328,7 +301,7 @@ Bytebase considers this rule to be violated if the SQL has leading wildcard LIKE
 
 ## Table
 
-### Require primary key
+<h3 id="table.require-pk">Require primary key</h3>
 
 In almost all cases, each table needs a primary key.
 
@@ -346,7 +319,7 @@ Bytebase considers this rule to be violated if the SQL tries to create a no prim
 - TiDB
 - PostgreSQL
 
-### Disallow foreign key
+<h3 id="table.no-foreign-key">Disallow foreign key</h3>
 
 This rule disallows users to create foreign key in the table.
 
@@ -370,7 +343,7 @@ Bytebase considers this rule to be violated if the SQL tries to:
 
 Support for PostgreSQL is coming soon.
 
-### Drop naming convention
+<h3 id="table.drop-naming-convention">Drop naming convention</h3>
 
 Only tables named with specific naming patterns can be deleted. This requires users to do a rename and then drop the table.
 
@@ -395,7 +368,7 @@ Support for PostgreSQL is coming soon.
 
 ## Schema
 
-### Backward incompatible schema change
+<h3 id="schema.backward-compatibility">Backward incompatible schema change</h3>
 
 Introducing backward incompatible schema changes is one of the most common mistakes made by developers. And enforcing backward compatible schema change is the standard practice adopted by many engineering organizations. Bytebase provides the built-in backward compatible check to catch all common incompatible schema change [scenarios](https://www.bytebase.com/doc/error#backward-incompatible-migration).
 
@@ -426,7 +399,7 @@ If the following situation occurs, Bytebase considers this rule to be violated:
 
 ## Column
 
-### Enforce the required columns in each table
+<h3 id="column.required">Enforce the required columns in each table</h3>
 
 For most projects, you may want to enforce some columns for every table. For example, need `id` as identification and the primary key for each table or need `created_ts` and `updated_ts` to record creation and modification times.
 
@@ -444,7 +417,7 @@ Bytebase defaults all tables to meet the requirements. If the SQL tries to defin
 - TiDB
 - PostgreSQL
 
-### Columns no NULL value
+<h3 id="column.no-null">Columns no NULL value</h3>
 
 NULL is a special value. It can cause confusion or performance issues. Bytebase provides this rule to enforce that all columns cannot have NULL value.
 
@@ -462,7 +435,7 @@ Bytebase considers this rule to be violated if the SQL defines a column allowing
 
 ## Database
 
-### Drop database restriction
+<h3 id="database.drop-empty-database">Drop database restriction</h3>
 
 Can only drop the database if there's no table in it.
 It requires users to drop all containing tables first before dropping the database.
