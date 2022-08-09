@@ -45,7 +45,7 @@ The screenshot below shows the table “sbtest1” information before applying s
 1. Click **Alter Schema** on the database details page. 
 ![step_1_1](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_1.webp)
 
-2. Select **Online migration**and click **Next.**
+2. Select **Online migration** and click **Next.**
 ![step_1_2](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_2.webp)
 
 3. Enter SQL statements for the task “Sync data”, and click **Create** after selecting a reviewer to approve the issue.
