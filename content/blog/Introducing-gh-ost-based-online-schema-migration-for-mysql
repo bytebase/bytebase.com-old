@@ -1,4 +1,4 @@
-- - - -
+---
 title: “Introducing gh-ost Based Online Schema Migration for MySQLL”
 author: Candy
 published_at: 2022/08/09 16:37:17
@@ -6,7 +6,7 @@ feature_image: /static/blog/Introducing-gh-ost-based-online-schema-migration-for
 tags: Education
 featured: true
 description: This article explains why we introduce gh-ost based online schema migration and how to perform an online schema migration without downtime in Bytebase.
-- - - -
+---
 
 Bytebase is an open-source database DevOps tool; it’s the GitLab for managing databases throughout the software development lifecycle (SDLC). It offers a web-based workspace for Developers and DBAs to collaborate and execute database changes safely and efficiently.
 
@@ -26,11 +26,11 @@ In this blog post, we will introduce you to the beta release of Bytebase online 
 All existing online schema change solutions share a similar workflow:
 ![online-schema-migration](/static/blog/Introducing-gh-ost-based-online-schema-migration-for-mysql/online-schema-migration.webp)
 
-1 Create a new, empty table (called ghost/shadow table) with an exact copy of the original table’s schema
-2 Apply schema migration to the ghost table
-3 Copy the existing rows from the original table to the ghost table
-4 Capture the ongoing changes to the original table and continuously apply them to the ghost table
-5 Swap the original table with the ghost table
+1. Create a new, empty table (called ghost/shadow table) with an exact copy of the original table’s schema
+2. Apply schema migration to the ghost table
+3. Copy the existing rows from the original table to the ghost table
+4. Capture the ongoing changes to the original table and continuously apply them to the ghost table
+5. Swap the original table with the ghost table
 
 Why do we decide to integrate gh-ost into Bytebase? The most crucial factor is that gh-ost is a triggerless online schema migration solution for MySQL. gh-ost uses the binary log stream to capture table changes and asynchronously applies them to the ghost table. As a result, it avoids the performance overhead due to trigger and lock contention. Secondly, gh-ost has greater control over the migration process. Bytebase can leverage it to expose the migration progress and provide a better user experience with parameters supported by gh-ost.
 
