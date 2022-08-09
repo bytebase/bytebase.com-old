@@ -93,6 +93,10 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Add Git Provider](/vcs-integration/add-git-provider)
 
+#### [Self-host GitLab EE/CE](/vcs-integration/self-host-gitlab)
+
+#### [GitHub.com](/vcs-integration/github-com)
+
 ### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
