@@ -2,7 +2,7 @@
 title: “gh-ost Based Online Schema Migration for MySQL”
 author: Candy
 published_at: 2022/08/09 16:37:17
-feature_image: /static/blog/Introducing-gh-ost-based-online-schema-migration-for-mysql/cover.webp
+feature_image: /static/blog/gh-ost-based-online-schema-migration-for-mysql/cover.webp
 tags: Education
 featured: true
 description: This article explains why we introduce gh-ost based online schema migration and how to perform an online schema migration without downtime in Bytebase.
