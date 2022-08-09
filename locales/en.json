@@ -394,6 +394,8 @@
       }
     },
     "learn-more": "Learn More",
-    "try-it-now": "Try it now"
+    "appoint-demo": "Appoint Demo",
+    "appointment-success": "Congratulations!",
+    "appointment-success-description": "We will contact you in 1 business day!"
   }
 }

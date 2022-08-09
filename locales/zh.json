@@ -5,7 +5,7 @@
     "docs": "文档",
     "documentation": "文档",
     "demo": "Demo",
-    "live-demo": "在线 Demo",
+    "live-demo": "体验 Demo",
     "deploy-now": "立即部署",
     "about": "关于",
     "changelog": "更新日志",
@@ -394,6 +394,8 @@
       }
     },
     "learn-more": "视频演示",
-    "try-it-now": "马上试试"
+    "appoint-demo": "预约演示",
+    "appointment-success": "预约成功",
+    "appointment-success-description": "我们将在 1 个工作日内联系您！"
   }
 }

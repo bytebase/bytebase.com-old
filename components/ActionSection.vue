@@ -4,11 +4,7 @@
       class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center whitespace-nowrap"
     >
       <nuxt-link
-        :to="
-          localePath(
-            '/docs/get-started/install/deploy-with-docker'
-          )
-        "
+        :to="localePath('/docs/get-started/install/deploy-with-docker')"
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
         @click="track('deploy')"
       >
@@ -31,7 +27,15 @@
           ></path>
         </svg>
       </nuxt-link>
+      <nuxt-link
+        v-if="currentLocale === 'zh'"
+        :to="localePath('/demo')"
+        class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300 md:py-4 md:text-2xl md:px-8"
+        @click.native="track('demo.header')"
+        >{{ $t("common.live-demo") }}</nuxt-link
+      >
       <a
+        v-else
         href="https://demo.bytebase.com?ref=bytebase.com"
         target="_blank"
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300 md:py-4 md:text-2xl md:px-8"
@@ -68,6 +72,8 @@ export default defineComponent({
     const { app } = useContext();
     const analytics = ref<Metric>();
 
+    const currentLocale = computed(() => app.i18n.locale);
+
     onMounted(() => {
       watchEffect(() => {
         analytics.value = useSegment().analytics;
@@ -87,7 +93,7 @@ export default defineComponent({
       return app.i18n.t("slogan.deploy-bytebase-in-5-seconds");
     });
 
-    return { track, actionSentence };
+    return { track, actionSentence, currentLocale };
   },
 });
 </script>
