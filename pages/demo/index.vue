@@ -147,7 +147,13 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent("demo");
-      analytics.newsletter.identify(email.value);
+      analytics.newsletter.identify(email.value, {
+        integrations: {
+          MailChimp: {
+            subscriptionStatus: "subscribed",
+          },
+        },
+      });
       subscribed.value = true;
       e.preventDefault();
     };
