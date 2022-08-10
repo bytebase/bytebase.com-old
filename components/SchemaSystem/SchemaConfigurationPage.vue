@@ -29,7 +29,7 @@
                     class="ml-1 flex flex-row justify-start items-center underline hover:opacity-80"
                     target="_blank"
                     @click.stop
-                    >GitHub Action SQL Review<svg
+                    >SQL Review GitHub Action<svg
                       class="w-4 h-auto"
                       fill="none"
                       stroke="currentColor"
