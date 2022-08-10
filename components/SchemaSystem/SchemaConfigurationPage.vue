@@ -16,17 +16,43 @@
         >
           {{ $t("sql-review-guide.download-as-yaml") }}
           <span class="tooltip-wrapper ml-1">
-            <QuestinIcon class="h-5 w-5" />
-            <span class="tooltip whitespace-nowrap">{{
-              $t("sql-review-guide.download-as-yaml-tooltip")
-            }}</span>
+            <QuestionIcon class="h-5 w-5" />
+            <div class="tooltip-container whitespace-nowrap">
+              <i18n
+                path="sql-review-guide.download-as-yaml-tooltip"
+                tag="span"
+                class="tooltip-content w-full flex flex-row justify-start items-center"
+              >
+                <template #link>
+                  <a
+                    href="https://github.com/marketplace/actions/sql-review"
+                    class="ml-1 flex flex-row justify-start items-center underline hover:opacity-80"
+                    target="_blank"
+                    @click.stop
+                    >SQL Review GitHub Action<svg
+                      class="w-4 h-auto"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      /></svg
+                  ></a>
+                </template>
+              </i18n>
+            </div>
           </span>
         </button>
         <div class="-ml-px relative block">
           <button
+            id="option-menu-button"
             type="button"
             class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-            id="option-menu-button"
             aria-expanded="true"
             aria-haspopup="true"
             @click="state.openDownloadMenu = !state.openDownloadMenu"
@@ -175,7 +201,7 @@ import {
 } from "../../common/sqlReview";
 import Modal from "../Modal.vue";
 import SchemaRuleConfig from "./SchemaRuleConfig.vue";
-import QuestinIcon from "~/components/QuestinIcon.vue";
+import QuestionIcon from "~/components/QuestionIcon.vue";
 
 interface FilterItem {
   id: string;
@@ -199,7 +225,7 @@ const baseFilterOptionList: FilterItem[] = LEVEL_LIST.map((level) => ({
 export default defineComponent({
   components: {
     Modal,
-    QuestinIcon,
+    QuestionIcon,
     ActionButton,
     SchemaRuleConfig,
     SchemaSystemPreview,
@@ -428,12 +454,16 @@ export default defineComponent({
   @apply relative;
 }
 
-.tooltip {
-  @apply hidden absolute -top-10 left-4 px-2 py-1 rounded bg-black bg-opacity-80 text-white;
-  transform: translateX(-50%);
+.tooltip-container {
+  @apply hidden absolute -top-12 -right-4 pb-5 bg-transparent;
 }
 
-.tooltip-wrapper:hover .tooltip {
+.tooltip-container > .tooltip-content {
+  @apply px-2 py-2 rounded bg-black bg-opacity-80 text-white whitespace-nowrap;
+}
+
+.tooltip-wrapper:hover .tooltip-container,
+.tooltip-container:hover {
   @apply block z-50;
 }
 </style>
