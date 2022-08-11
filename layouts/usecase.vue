@@ -8,6 +8,7 @@
       class="pt-8 sm:pt-16 w-full h-auto overflow-y-auto overflow-x-hidden"
     >
       <main class="max-w-7xl mx-auto px-4">
+        <QrcodeBlock />
         <Nuxt />
         <div class="flex mt-6 justify-center">
           <DatabaseBar />
@@ -42,8 +43,10 @@ import {
 } from "@nuxtjs/composition-api";
 import { useCookie } from "../plugin/cookie";
 import { useSegment } from "~/plugin/segment";
+import QrcodeBlock from "~/components/QrcodeBlock.vue";
 
 export default defineComponent({
+  components: { QrcodeBlock },
   setup() {
     const route = useRoute();
     const contentElementRef = ref<HTMLDivElement>();

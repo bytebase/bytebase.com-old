@@ -9,6 +9,7 @@
       ref="contentElementRef"
       class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
     >
+      <QrcodeBlock />
       <Nuxt />
       <Footer />
     </div>
@@ -26,8 +27,10 @@ import {
 } from "@nuxtjs/composition-api";
 import { useCookie } from "~/plugin/cookie";
 import { useSegment } from "~/plugin/segment";
+import QrcodeBlock from "~/components/QrcodeBlock.vue";
 
 export default defineComponent({
+  components: { QrcodeBlock },
   setup() {
     const route = useRoute();
     const contentElementRef = ref<HTMLDivElement>();
