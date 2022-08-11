@@ -8,7 +8,13 @@ If you have enabled the version control workflow for a project, Bytebase will ob
 
 Bytebase allows user to customize the file path of the schema file. This file path is relative to the base directory.
 
-The default file path template is `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
+The default file path template is `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`.
+
+<hint-block type="info">
+
+The default separator is double underscore `__`.
+
+</hint-block>
 
 Let's say the base directory is `bytebase` :
 
