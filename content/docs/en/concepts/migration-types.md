@@ -26,6 +26,10 @@ See further details in
 
 Normal migration is just the usual migration scripts containing DDL statements. Please also follow the [naming convention](/docs/vcs-integration/name-and-organize-schema-files) so that Bytebase can recognize and figure out which database the migration script applies to.
 
+## Data Change
+
+Data change is the migration type for data, i.e. a script consisting of DML statements.
+
 ## Branch Migration
 
 A branch migration history is recorded when a database is restored from a backup. See [Restore from Backup](/docs/disaster-recovery/backup-restore-database/restore-from-backup#step-4-view-the-restored-database) for details.
