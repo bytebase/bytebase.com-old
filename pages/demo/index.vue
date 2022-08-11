@@ -161,10 +161,9 @@ export default defineComponent({
     onMounted(() => {
       watchEffect(() => {
         analytics.newsletter = useSegment().analyticsForNewsletter as Metric;
+        auth0.value = useAuth0();
+        analytics.other = useSegment().analytics as Metric;
       });
-
-      auth0.value = useAuth0();
-      analytics.other = useSegment().analytics as Metric;
     });
 
     return {
