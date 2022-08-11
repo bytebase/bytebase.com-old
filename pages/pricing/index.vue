@@ -85,9 +85,7 @@
                 <nuxt-link
                   v-if="plan.type == 'FREE'"
                   :to="
-                    localePath(
-                      '/docs/get-started/install/deploy-with-docker'
-                    )
+                    localePath('/docs/get-started/install/deploy-with-docker')
                   "
                   class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
@@ -173,11 +171,7 @@
             <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
             <nuxt-link
               v-if="plan.type == 'FREE'"
-              :to="
-                localePath(
-                  '/docs/get-started/install/deploy-with-docker'
-                )
-              "
+              :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
@@ -336,11 +330,7 @@
               </p>
               <nuxt-link
                 v-if="plan.type == 'FREE'"
-                :to="
-                  localePath(
-                    '/docs/get-started/install/deploy-with-docker'
-                  )
-                "
+                :to="localePath('/docs/get-started/install/deploy-with-docker')"
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
                 >{{ plan.buttonText }}</nuxt-link
               >
@@ -447,7 +437,7 @@
                         </span>
                       </template>
                       <span v-if="tier.tooltip" class="tooltip-wrapper ml-1">
-                        <QuestinIcon class="h-5 w-5" />
+                        <QuestionIcon class="h-5 w-5" />
                         <!-- class="h-5 w-5" -->
                         <span class="tooltip whitespace-nowrap">{{
                           $t(tier.tooltip)
@@ -473,11 +463,7 @@
           >
             <nuxt-link
               v-if="plan.type == 'FREE'"
-              :to="
-                localePath(
-                  '/docs/get-started/install/deploy-with-docker'
-                )
-              "
+              :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
@@ -527,7 +513,7 @@ import {
 import { Plan, PlanType, FEATURE_SECTIONS, PLANS } from "~/common/plan";
 import XIcon from "~/components/XIcon.vue";
 import CheckIcon from "~/components/CheckIcon.vue";
-import QuestinIcon from "~/components/QuestinIcon.vue";
+import QuestionIcon from "~/components/QuestionIcon.vue";
 import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 import { useCookie } from "~/plugin/cookie";
 
@@ -555,7 +541,7 @@ interface LocalFeatureSection {
 export default defineComponent({
   components: {
     CheckIcon,
-    QuestinIcon,
+    QuestionIcon,
     XIcon,
   },
   setup() {

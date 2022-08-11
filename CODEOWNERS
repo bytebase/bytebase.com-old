@@ -1,5 +1,5 @@
 # These owners will be the default owners for everything in the repo.
-*                            @ecmadao @boojack @tianzhou
+*                            @ecmadao @boojack
 
 # Content such as docs.
 /content/                    @adela-bytebase @tianzhou

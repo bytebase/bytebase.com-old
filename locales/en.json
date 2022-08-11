@@ -306,7 +306,7 @@
     "reset-changes": "Reset changes",
     "download-as-image": "Download as image",
     "download-as-yaml": "Download as YAML",
-    "download-as-yaml-tooltip": "Use the YAML file with github.com/marketplace/actions/sql-review",
+    "download-as-yaml-tooltip": "Use the YAML file with {link}",
     "rules": "Rules",
     "filter": "Filter",
     "template": {
@@ -394,6 +394,8 @@
       }
     },
     "learn-more": "Learn More",
-    "try-it-now": "Try it now"
+    "appoint-demo": "Appoint Demo",
+    "appointment-success": "Congratulations!",
+    "appointment-success-description": "We will contact you in 1 business day!"
   }
 }
