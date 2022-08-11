@@ -77,6 +77,14 @@
         </nuxt-link>
         <span v-else></span>
       </div>
+      <!-- Ads tracking -->
+      <iframe
+        v-if="document.slug === 'deploy-with-docker'"
+        height="0"
+        width="0"
+        frameborder="0"
+        src="https://wwads.cn/code/tracking/66"
+      ></iframe>
     </div>
 
     <!-- TOC -->
