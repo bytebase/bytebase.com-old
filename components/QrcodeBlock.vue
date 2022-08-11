@@ -5,13 +5,13 @@
   >
     <div
       class="w-6 h-10 flex justify-center items-center bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-l-full text-white pl-1"
-      @click="open = !open"
+      @click="store.toggleQrcode"
     >
-      <chevron-right v-show="open" />
-      <chevron-left v-show="!open" />
+      <chevron-right v-show="store.showQrcode" />
+      <chevron-left v-show="!store.showQrcode" />
     </div>
     <Transition name="slide">
-      <div v-show="open" class="flex flex-row w-40 h-24 bg-white">
+      <div v-show="store.showQrcode" class="flex flex-row w-40 h-24 bg-white">
         <div class="qrcode">
           <img src="~/assets/wechat-official-qrcode.webp" alt="" /><span
             >公众号</span
@@ -28,24 +28,21 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  ref,
-  useContext,
-  computed,
-} from "@nuxtjs/composition-api";
+import { defineComponent, useContext, computed } from "@nuxtjs/composition-api";
 import ChevronLeft from "~/components/Icons/ChevronDoubleLeft.vue";
 import ChevronRight from "~/components/Icons/ChevronDoubleRight.vue";
+import { useStore } from "~/store";
 
 export default defineComponent({
   components: { ChevronLeft, ChevronRight },
   setup() {
     const { app } = useContext();
+    const store = useStore();
     const currentLocale = computed(() => app.i18n.locale);
-    const open = ref(true);
+
     return {
-      open,
       currentLocale,
+      store,
     };
   },
 });
