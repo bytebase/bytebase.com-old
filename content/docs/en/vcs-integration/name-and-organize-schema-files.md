@@ -29,7 +29,7 @@ Database name should exactly match the destined database name. The match is **ca
 Bytebase currently supports following migration types:
 
 - [Normal migration](/docs/concepts/migration-types#normal-migration) - in this case, the file needs to use `migrate` as the keyword.
-- [Baseline migration](/docs/concepts/migration-types#baseline-migration) - in this case, the file needs to use `baseline`as the keyword. The first version of the migration script should **always be a baseline migration** so that Bytebase can establish the current state (the baseline) of the corresponding live database.
+- [Baseline migration](/docs/concepts/migration-types#baseline-migration) - in this case, the file needs to use `baseline` as the keyword. The first version of the migration script should **always be a baseline migration** so that Bytebase can establish the current state (the baseline) of the corresponding live database.
 - [Data change](/docs/concepts/migration-types#data-change) - in this case, the file needs to use `data` as the keyword.
 
 #### Environment Name (Optional)
