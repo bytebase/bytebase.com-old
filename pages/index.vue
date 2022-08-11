@@ -300,10 +300,6 @@
       </div>
     </div>
     <!-- end of/SQL Editor Section -->
-
-    <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <ActionSection class="sm:justify-center" :module-name="'footer'" />
-    </div>
   </div>
 </template>
 
