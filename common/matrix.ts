@@ -8,7 +8,7 @@ export const databaseList: string[] = [
   "ClickHouse",
 ];
 
-export const vcsList: string[] = ["GitLab"];
+export const vcsList: string[] = ["GitLab", "GitHub"];
 
 export const imList: string[] = [
   "Slack",
