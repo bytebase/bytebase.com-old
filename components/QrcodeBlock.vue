@@ -11,7 +11,10 @@
       <chevron-left v-show="!store.showQrcode" />
     </div>
     <Transition name="slide">
-      <div v-show="store.showQrcode" class="flex flex-row w-40 h-24 bg-white">
+      <div
+        v-show="store.showQrcode"
+        class="flex flex-row w-40 h-24 bg-white shadow"
+      >
         <div class="qrcode">
           <img src="~/assets/wechat-official-qrcode.webp" alt="" /><span
             >公众号</span
