@@ -4,8 +4,12 @@
       <h2
         class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
       >
-        <span class="block">Review, change, version and restore.</span>
-        <span class="block">Database DevOps with ease.</span>
+        <span class="block">{{
+          $t("slogan.review-change-version-restore")
+        }}</span>
+        <span class="block">{{
+          $t("slogan.database-devops-best-practice")
+        }}</span>
       </h2>
       <div class="mt-8 flex">
         <nuxt-link
@@ -62,8 +66,6 @@ export default defineComponent({
     const { app } = useContext();
     const analytics = ref<Metric>();
 
-    const currentLocale = computed(() => app.i18n.locale);
-
     onMounted(() => {
       watchEffect(() => {
         analytics.value = useSegment().analytics;
@@ -80,7 +82,7 @@ export default defineComponent({
       return app.i18n.t("slogan.deploy-bytebase-in-5-seconds");
     });
 
-    return { track, actionSentence, currentLocale };
+    return { track, actionSentence };
   },
 });
 </script>
