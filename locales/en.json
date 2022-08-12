@@ -21,6 +21,8 @@
   "slogan": {
     "safer-and-faster": "Safer and Faster",
     "mission": "Database change and version control for DBAs and Developers",
+    "review-change-version-restore": "Review, change, version and restore.",
+    "database-devops-best-practice": "The database DevOps best practice from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
   },

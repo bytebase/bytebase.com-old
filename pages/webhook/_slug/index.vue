@@ -69,12 +69,6 @@
         Features
       </h2>
       <FeatureSection />
-      <div class="border mt-8">
-        <ActionSection
-          class="sm:justify-center"
-          :module-name="'feature-detail'"
-        />
-      </div>
     </div>
   </main>
 </template>
