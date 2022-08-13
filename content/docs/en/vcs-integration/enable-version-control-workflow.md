@@ -67,7 +67,7 @@ This is the branch where Bytebase observes the migration SQL file changes.
 
 <hint-block type="info">
 
-For GitLab, you can specify wildcards, such as "**feature/***" to match branches starting with "feature/".
+For GitLab, you can specify wildcards, such as "**feature/\***" to match branches starting with "feature/".
 
 </hint-block>
 
@@ -89,7 +89,7 @@ Required placeholders (must present in the template):
 
 - {{DB_NAME}} - Specify the database name.
 - {{VERSION}} - Specify the migration version.
-- {{TYPE}} - Specify the migration type. Can be either "migrate" for [normal migration](/docs/concepts/migration-types#normal-migration), "baseline" for [baseline migration](/docs/concepts/migration-types#baseline-migration), or "data" for [data change](/docs/concepts/migration-types#data-change).
+- {{TYPE}} - Specify the migration type. Can be either "migrate" for [schema migration](/docs/concepts/migration-types#schema-migration), "baseline" for [baseline migration](/docs/concepts/migration-types#baseline-migration), or "data" for [data migration](/docs/concepts/migration-types#data-migration).
 
 Optional placeholders
 

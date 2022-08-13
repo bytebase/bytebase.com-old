@@ -101,8 +101,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
-### [Create the First Baseline Migration](/vcs-integration/create-the-first-baseline-migration)
-
 ### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
 
 ## [Multi-Tenancy](/tenant-database-management)

@@ -10,28 +10,35 @@ In a Git feature branch workflow, all feature development takes place in a dedic
 ## Prerequisites
 
 - You have two branches:
+
 1. One `main` branch corresponds to the `prod` envrionment, and it has a `db_prod` database.
 2. One `dev` branch for the feature work corresponds to the `dev` environment, and it has a `db_dev` database.
-![feature-branch-original-setup](/docs/en/how-to/workflow/gitops-feature-branch/original-setup.webp)
+   ![feature-branch-original-setup](/docs/en/how-to/workflow/gitops-feature-branch/original-setup.webp)
+
 - You [installed](/docs/get-started/install/overview) Bytebase and have **Workspace Owner** role.
 
 ## The Procedure
 
 ### Step 1 - Configure the workspace
+
 1. Go to **Settings** > **Workspace** > **Version Control** to [add a VCS provider](/docs/vcs-integration/add-git-provider).
 2. Click **Environments** and create two environments `Dev` and `Prod`. You can configure **approval policy** as require or skip manual approval.
 3. Click **Instances** > **Add Instance** to add instances where `db_prod` and `db_dev` are located.
+
 ### Step 2 - Create `Dev Project`
+
 1. Click **Projects** > **New Project** and enter `Dev Project` in **Project Name**.
 2. In `Dev Project`, click **Transfer in DB** and choose `db_dev` database.
 3. Click **Version Control** on the project tab bar, and choose **GitOps workflow** and [enable version control workflow](/docs/vcs-integration/enable-version-control-workflow).
-  ![feature-branch-setup](/docs/en/how-to/workflow/gitops-feature-branch/branch-setting.webp)
+   ![feature-branch-setup](/docs/en/how-to/workflow/gitops-feature-branch/branch-setting.webp)
 
 ### Step 3 - Create `Prod Project`
+
 - Repeat Step 2, but with **Prod** instead of **Dev**, e.g. `Prod Project` instead of `Dev Project`.
 
 ### Step 4 - Create SQL migration file
-- Name and organize SQL migration files like [this](/docs/vcs-integration/name-and-organize-schema-files). Remember to firstly [create a baseline migration](/docs/vcs-integration/create-the-first-baseline-migration) for both `Dev` and `Prod` environments.
+
+- Name and organize SQL migration files like [this](/docs/vcs-integration/name-and-organize-schema-files).
 
 ## Final Setup
 

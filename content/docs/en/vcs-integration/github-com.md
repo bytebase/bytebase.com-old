@@ -1,5 +1,5 @@
 ---
-title:  GitHub.com
+title: GitHub.com
 ---
 
 ## Prerequisites
@@ -72,4 +72,4 @@ When everything is setup properly, you will be informed that the setup is correc
 
 ![vcs-github-step](/static/docs/en/vcs-integration/add-git-provider/vcs-github-step5.webp)
 
-Now we have successfully added a Git provider, developers can now link their Bytebase projects with one of their owned repositories from this Git provider.
+Now you have successfully added a Git provider, developers can now link their Bytebase projects with one of their owned repositories from this Git provider.
