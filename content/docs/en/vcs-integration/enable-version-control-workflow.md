@@ -89,7 +89,7 @@ Required placeholders (must present in the template):
 
 - {{DB_NAME}} - Specify the database name.
 - {{VERSION}} - Specify the migration version.
-- {{TYPE}} - Specify the migration type. Can be either "migrate" for [schema migration](/docs/concepts/migration-types#schema-migration), "baseline" for [baseline migration](/docs/concepts/migration-types#baseline-migration), or "data" for [data migration](/docs/concepts/migration-types#data-migration).
+- {{TYPE}} - Specify the migration type. Can be either "migrate" for [schema migration](/docs/concepts/migration-types#schema-migration) or "data" for [data migration](/docs/concepts/migration-types#data-migration).
 
 Optional placeholders
 

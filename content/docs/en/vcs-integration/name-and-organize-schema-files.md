@@ -19,7 +19,6 @@ The default separator is double underscore `__`.
 Let's say the base directory is `bytebase` :
 
 - An example file path for [schema migration type](/docs/concepts/migration-types#schema-migration): `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
-- An example file path for [baseline migration type](/docs/concepts/migration-types#baseline-migration): `bytebase/env1/db1__202101131000__baseline__create_tablefoo_for_bar.sql`
 - An example file path for [data migration type](/docs/concepts/migration-types#data-migration): `bytebase/env1/db1__202101131000__data__change_for_bar_data.sql`
 
 #### Version (Required)
@@ -35,7 +34,6 @@ Database name should exactly match the destined database name. The match is **ca
 Bytebase currently supports following migration types:
 
 - [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `migrate` as the keyword.
-- [Baseline migration](/docs/concepts/migration-types#baseline-migration) - in this case, the file needs to use `baseline` as the keyword. The first version of the migration script should **always be a baseline migration** so that Bytebase can establish the current state (the baseline) of the corresponding live database.
 - [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `data` as the keyword.
 
 #### Environment Name (Optional)
