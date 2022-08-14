@@ -38,10 +38,6 @@ The database has already applied the version.
 
 The version for migration is out of order. The database has already applied a newer version.
 
-<h3 id="204">204 - Migration missing baseline</h3>
-
-For version control (VCS) based migration, we require the database to establish a basline first. See [help doc](/docs/vcs-integration/create-the-first-baseline-migration) for more details.
-
 <h3 id="205">205 - Migration pending</h3>
 
 The database migration is already in progress.

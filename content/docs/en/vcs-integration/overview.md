@@ -1,6 +1,7 @@
 ---
 title: VCS Integration (GitOps)
 ---
+
 "**Version controlled schema**" aka "**Database-as-code**" is a practice to store the database schema in a version control system (VCS) just like how application code is stored. The database schema consists of a bunch of database migration scripts. These scripts usually follow a naming convention to identify the order of their relative execution sequence. After executing all the migration scripts, it will produce an exact copy of the database schema to the corresponding live database. In this model, the migration scripts are the source of truth of the database schema. You can check the reference for a detailed writeup on this topic.
 
 **Reference**: [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html).
@@ -20,9 +21,5 @@ Configure project to use "Version control workflow" and link the project with a 
 ### [Step 3 - Name and Organize Schema Files](/docs/vcs-integration/name-and-organize-schema-files)
 
 Organize the repository schema files according to the configured base directory and file path template in step 2. Afterwards, the file changes can be observed and identified by Bytebase to apply the schema changes to the corresponding database.
-
-### [Step 4 - Create the First Baseline Migration](/docs/vcs-integration/create-the-first-baseline-migration)
-
-To bootstrap the VCS integration, Bytebase needs to know the current schema of the corresponding live database. This is achieved by using a baseline migration script which includes the entire schema of that live database. The first migration script after the setup should always be a baseline migration script so that Bytebase can establish the baseline of the current schema in the corresponding live database.
 
 ### [Troubleshoot](/docs/vcs-integration/troubleshoot)

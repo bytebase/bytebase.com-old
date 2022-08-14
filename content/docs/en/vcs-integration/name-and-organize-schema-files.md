@@ -18,9 +18,8 @@ The default separator is double underscore `__`.
 
 Let's say the base directory is `bytebase` :
 
-- An example file path for [normal migration type](/docs/concepts/migration-types#normal-migration): `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
-- An example file path for [baseline migration type](/docs/concepts/migration-types#baseline-migration): `bytebase/env1/db1__202101131000__baseline__create_tablefoo_for_bar.sql`
-- An example file path for [data migration type](/docs/concepts/migration-types#data-change): `bytebase/env1/db1__202101131000__data__change_for_bar_data.sql`
+- An example file path for [schema migration type](/docs/concepts/migration-types#schema-migration): `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
+- An example file path for [data migration type](/docs/concepts/migration-types#data-migration): `bytebase/env1/db1__202101131000__data__change_for_bar_data.sql`
 
 #### Version (Required)
 
@@ -28,15 +27,14 @@ Version can be an arbitrary string as long as it's unique among all SQL files. B
 
 #### Database Name (Required)
 
-Database name should exactly match the destined database name. The match is **case-sensitive.** However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. we give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
+Database name should exactly match the destined database name. The match is **case-sensitive.** However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
 #### Migration Type (Required)
 
 Bytebase currently supports following migration types:
 
-- [Normal migration](/docs/concepts/migration-types#normal-migration) - in this case, the file needs to use `migrate` as the keyword.
-- [Baseline migration](/docs/concepts/migration-types#baseline-migration) - in this case, the file needs to use `baseline` as the keyword. The first version of the migration script should **always be a baseline migration** so that Bytebase can establish the current state (the baseline) of the corresponding live database.
-- [Data change](/docs/concepts/migration-types#data-change) - in this case, the file needs to use `data` as the keyword.
+- [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `migrate` as the keyword.
+- [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `data` as the keyword.
 
 #### Environment Name (Optional)
 
@@ -65,7 +63,7 @@ Let's say the base directory is `bytebase`
 
 #### Database Name (Required)
 
-Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. we give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
+Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
 #### Environment Name (Optional)
 
@@ -112,6 +110,6 @@ The pros and cons are the opposite of Approach 1. Though this approach brings le
 
 ![organize-schema-files-step](/static/docs/en/vcs-integration/name-and-organize-schema-files/organize-schema-files-step5.webp)
 
-This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since we want the migration files to be the source of truth of the database schema.
+This means the divergence lasts until the the pipeline finishes applying the change to the last environment. This defeats much of the purpose of storing the migration files in the repository since you want the migration files to be the source of truth of the database schema.
 
-After settling down the file structure, now we can go ahead to [creating the first baseline migration](/docs/vcs-integration/create-the-first-baseline-migration).
+After settling down the file structure, your are ready to create the first migration.
