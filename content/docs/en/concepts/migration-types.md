@@ -2,7 +2,7 @@
 title: Migration Types
 ---
 
-Bytebase records the migration history with the migration type info.
+Bytebase records the migration history with the migration type information.
 
 ## Schema Migration
 
