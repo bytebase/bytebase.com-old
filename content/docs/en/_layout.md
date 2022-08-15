@@ -65,7 +65,10 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## SQL Review
 
-### [SQL Advisor](/sql-review/sql-advisor)
+### [SQL Advisor](/sql-review/sql-advisor/overview)
+#### [UI](/sql-review/sql-advisor/ui)
+#### [API](/sql-review/sql-advisor/api)
+#### [GitHub Action](/sql-review/sql-advisor/github-action)
 
 ### [Review Rules](/sql-review/review-rules/overview)
 
