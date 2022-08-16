@@ -31,7 +31,15 @@ Site Reliability Engineer (SRE), coined by Google in 2003. The following factors
 
 1 and 2 prompted the need for a specialized job function, of which 2 also balances the development pace (please do not break that much), while 3 provides the labor supply for SRE. Since SRE’s primary responsibility is to ensure service stability, it’s a natural transition for Ops to move into an SRE role.
 
-Simply put, SRE is an upgraded version of traditional Ops. SRE differs from Ops in the following ways:
+Simply put, SRE is an upgraded version of traditional Ops. Google invents an accurate name:
+
+- Site infers scale.
+- Reliability defines the responsibility.
+- Engineering dictates methodology.
+
+**Thus SRE is to address the reliability issue for large scale service in a systematic way.**
+
+SRE differs from Ops in the following ways:
 
 1. SRE no longer deals with physical equipment that the cloud services take care of.
 1. SRE employs a more systematic approach to ensure service stability, such as building automation tools and working with the development team together to develop [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service-level_objective) / [Service Level Agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) / [Service Level Indicator (SLI)](https://en.wikipedia.org/wiki/Service_level_indicator). This triplet is the contract between SREs and Developers to work towards a shared goal of providing a better service.
@@ -41,9 +49,11 @@ Simply put, SRE is an upgraded version of traditional Ops. SRE differs from Ops 
 
 The above diagram depicts the boundary between Dev, SRE, and Ops. There is no intersection between Dev and Ops, while SRE, as mentioned earlier, is Ops with Dev skillset, but still a bit more on the Ops side.
 
+SRE gradually takes over the Ops role and become the one carrying the pager.
+
 ## DevOps
 
-DevOps is a system. As just mentioned, there is no intersection between Dev and Ops work, while DevOps is to combine these two work types. More precisely, DevOps is to let Dev take on the Ops work. Under DevOps, there is no traditional Ops role, and Dev and SRE may share the Ops responsibility, or the work may be carried out by Dev alone. This further eliminates the SRE role.
+DevOps is a system. As just mentioned, there is no intersection between Dev and Ops work, while DevOps is to combine these two work types. More precisely, DevOps is to let Dev take on the Ops work. Under DevOps, there is no traditional Ops role, and Dev and SRE may share the Ops responsibility. And there is a trend that more organizations adopt pure DevOps. These engineering shops assign all Ops responsibility to the Dev team, which further eliminates the SRE role. Under such setup, it's the Dev team carrying the pager.
 
 ## Why People Get Confused
 
@@ -52,6 +62,8 @@ DevOps is a system. As just mentioned, there is no intersection between Dev and 
 1. Confused about the difference between DevOps and SRE when DevOps is treated as a job function. Simply put, DevOps is the Dev that does Ops work, while SRE is the Ops that does Dev work.
 
 ## The Road Ahead
+
+_Old Ops never die, they simply fade away._
 
 With the advent of Cloud computing, many Ops job duties no longer exist, and the pure Ops role will cease. But there remains the question of the dynamics among Dev, SRE, and DevOps roles. Which mix will become the mainstream in the next ten years?
 
@@ -67,5 +79,7 @@ Dev and SRE belong to different groups and always have a love and hate relations
 The first two measure velocity, and the last two measure stability. In a group containing both Dev and SRE, Dev optimizes for velocity, and SRE optimizes stability. Some elite groups can simultaneously achieve better velocity and stability by delivering frequent incremental changes. However, many groups are battling between velocity and stability. As we all know, push to production is the No 1 reason causing production outages. That’s also why many engineering teams employ the no Friday release policy.
 
 This battle would never end as long as there are separate Dev and SRE teams. But there is a light ahead thanks to the proliferation of Cloud infrastructure, SaaS, and Open Source.
+
+While the physical pagers can only be memorized in the computer science museum nowadays, the Ops responsibility and spirit are carried over by services like [PagerDuty](https://pagerduty.com), [Datadog](https://datadog.com).
 
 Devs are now quite capable of taking over Ops work. First, much less firefighting since the Cloud service is much more stable than the in-house one. Second, tools to handle Ops work are more accessible to average engineers. Thus we believe DevOps will further thrive and become dominant, and the pure Dev and SRE role will diminish and only be observed in very large engineering shops down the road.
