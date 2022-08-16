@@ -30,7 +30,7 @@ spec:
       containers:
       - name: bytebase
         image: bytebase/bytebase:<version></version>
-        args: ["--data", "/var/opt/bytebase", "--host", "http://localhost", "--port", "8080"]
+        args: ["--data", "/var/opt/bytebase", "--host", "http://localhost", "--port", "8080", "--pg", "postgresql://user:secret@host:port/dbname"]
         ports:
         - containerPort: 8080
         volumeMounts:
