@@ -78,7 +78,7 @@
                 <button type="submit" class="enter-btn">
                   <div class="flex flex-row justify-center items-center">
                     <Calendar class="w-4 h-4 mr-2" />{{
-                      $t("demo.appoint-demo")
+                      $t("demo.book-a-demo")
                     }}
                   </div>
                 </button>
