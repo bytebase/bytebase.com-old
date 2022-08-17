@@ -74,7 +74,7 @@ GitHub has a search function, but it’s far from satisfactory. So we use Sourec
 
 ### [Gitpod](https://gitpod.io)
 
-From our Github project page, we provide a 1-click button allowing users to deploy Bytebase on Gitpod.
+From our GitHub project page, we provide a 1-click button allowing users to deploy Bytebase on Gitpod.
 
 ![_](/static/blog/30saas-services-behind-startup/bytebase-on-gitpod.webp)
 

@@ -75,7 +75,7 @@ Splice 推行的是一个混合型 DBMS。它结合了针对事务型任务的 H
 
 ### Andy 观点
 
-看到数据库项目和公司走上下坡路总归让人伤心，但这就是数据库产业内部的厮杀博弈。开源也许能让一款 DBMS 在母公司消失之后也能继续存在，但事实并不总是如此。由于数据库本身的复杂性，它必须要有全职员工进行维护，修正 bug 并添加新功能。不是说把破产 DBMS 的源代码权限和控制交到[Apache 基金会](https://www.apache.org/)和 [CNCF](https://www.cncf.io/) 这样的开源软件基金会手中，这个项目就会奇迹般复活了。举例来说，[公司破产](https://rethinkdb.com/blog/rethinkdb-shutdown/)后，[RethinkDB 被捐赠给了 Linux 基金会](https://rethinkdb.com/blog/rethinkdb-joins-linux-foundation/)。但从 Github 的各项表现看，它已经死透了（基本没有提交，PR 也不并入）。有类似遭遇的还有 DeepDB：它的母公司在倒闭后为它[创立了自己的非盈利基金会](https://www.businesswire.com/news/home/20170502005138/en/Deep-Information-Sciences-Goes-Open-Source-Relaunches-as-Deep-Software-Foundation)，但没有人再去维护这个项目了。在下一年里，预计还会有更多的数据库公司因无力与大型云服务商和之前提到的众多资金充裕的创业公司抗衡而走上下坡路。
+看到数据库项目和公司走上下坡路总归让人伤心，但这就是数据库产业内部的厮杀博弈。开源也许能让一款 DBMS 在母公司消失之后也能继续存在，但事实并不总是如此。由于数据库本身的复杂性，它必须要有全职员工进行维护，修正 bug 并添加新功能。不是说把破产 DBMS 的源代码权限和控制交到[Apache 基金会](https://www.apache.org/)和 [CNCF](https://www.cncf.io/) 这样的开源软件基金会手中，这个项目就会奇迹般复活了。举例来说，[公司破产](https://rethinkdb.com/blog/rethinkdb-shutdown/)后，[RethinkDB 被捐赠给了 Linux 基金会](https://rethinkdb.com/blog/rethinkdb-joins-linux-foundation/)。但从 GitHub 的各项表现看，它已经死透了（基本没有提交，PR 也不并入）。有类似遭遇的还有 DeepDB：它的母公司在倒闭后为它[创立了自己的非盈利基金会](https://www.businesswire.com/news/home/20170502005138/en/Deep-Information-Sciences-Goes-Open-Source-Relaunches-as-Deep-Software-Foundation)，但没有人再去维护这个项目了。在下一年里，预计还会有更多的数据库公司因无力与大型云服务商和之前提到的众多资金充裕的创业公司抗衡而走上下坡路。
 
 ## 野火烧不尽
 
