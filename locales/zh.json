@@ -396,8 +396,11 @@
       }
     },
     "learn-more": "视频演示",
-    "appoint-demo": "预约演示",
-    "appointment-success": "预约成功",
-    "appointment-success-description": "我们将在 1 个工作日内联系您！"
+    "book-a-demo": "预约演示",
+    "book-success": "预约成功",
+    "book-success-with-punctuation": "预约成功！",
+    "book-success-description": "我们将在 1 个工作日内联系你",
+    "book-success-description-with-punctuation": "我们将在 1 个工作日内联系你！",
+    "book-success-message": "{success}{description}"
   }
 }

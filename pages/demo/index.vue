@@ -53,10 +53,10 @@
             class="flex flex-col items-center -mt-10 text-justify"
           >
             <div class="mb-6 text-2xl font-semibold text-indigo-600">
-              {{ $t("demo.appointment-success") }}
+              {{ $t("demo.book-success") }}
             </div>
             <div class="mb-6 text-lg text-gray-500">
-              {{ $t("demo.appointment-success-description") }}
+              {{ $t("demo.book-success-description") }}
             </div>
           </div>
           <form v-else @submit="subscribe">
@@ -78,7 +78,7 @@
                 <button type="submit" class="enter-btn">
                   <div class="flex flex-row justify-center items-center">
                     <Calendar class="w-4 h-4 mr-2" />{{
-                      $t("demo.appoint-demo")
+                      $t("demo.book-a-demo")
                     }}
                   </div>
                 </button>

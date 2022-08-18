@@ -60,10 +60,7 @@
                 <DatabaseBar />
               </div>
               <div class="mt-12">
-                <ActionSection
-                  class="justify-center xl:justify-start"
-                  :module-name="'main'"
-                />
+                <BookDemoSection class="justify-center xl:justify-start" />
               </div>
             </div>
           </div>
