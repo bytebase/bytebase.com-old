@@ -1,12 +1,19 @@
 <template>
   <div class="my-5 sm:flex md:my-8">
     <div v-if="subscribed" class="flex flex-row items-center mt-8">
-      <div class="mr-6 text-3xl font-semibold text-indigo-600">
-        {{ $t("demo.appointment-success") }}
-      </div>
-      <div class="h-6 text-xl leading-6 text-gray-500">
-        {{ $t("demo.appointment-success-description") }}
-      </div>
+      <span class="text-2xl">🎉</span>
+      <i18n path="demo.book-success-message" class="text-2xl">
+        <template #success>
+          <span class="ml-2 text-2xl font-semibold text-indigo-600">{{
+            $t("demo.book-success-with-punctuation")
+          }}</span>
+        </template>
+        <template #description>
+          <span class="text-2xl text-gray-500">{{
+            $t("demo.book-success-description-with-punctuation")
+          }}</span>
+        </template>
+      </i18n>
     </div>
     <form v-else @submit="subscribe">
       <div
@@ -55,7 +62,7 @@ export default defineComponent({
   setup() {
     const analytics = ref<Metric>();
     const email = ref("");
-    const subscribed = ref(true);
+    const subscribed = ref(false);
 
     const subscribe = (e: any) => {
       trackEvent("demo");

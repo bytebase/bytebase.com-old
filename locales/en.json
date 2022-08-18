@@ -397,7 +397,10 @@
     },
     "learn-more": "Learn More",
     "book-a-demo": "Book a Demo",
-    "appointment-success": "Congratulations!",
-    "appointment-success-description": "We will contact you in 1 business day!"
+    "book-success": "Congratulations",
+    "book-success-with-punctuation": "Congratulations!",
+    "book-success-description": "We will contact you in 1 business day",
+    "book-success-description-with-punctuation": "We will contact you in 1 business day!",
+    "book-success-message": "{success} {description}"
   }
 }
