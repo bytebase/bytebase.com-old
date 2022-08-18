@@ -170,7 +170,7 @@ Oh my GoSH
 虽然 curl 的作者[未必同意](https://daniel.haxx.se/blog/2021/10/21/the-most-used-software-components-in-the-world/) SQLite 是全世界部署最多的软件组件，但 SQLite 毫无疑问是被部署最多的数据库，光一个手机上可能就有几十上百个，从笔记到微信，几乎每一个应用里都有 SQLite 的身影。SQLite 虽然不是一个完整的数据库系统 (DBMS)，但是拥有着完整的存储引擎和 SQL 接口，也有着足够的性能支撑起绝大部分的服务。又因为他是一个库 (library) 和单文件保存数据的特性，使得应用接入和数据管理都很简单。而 21 年 SQLite 的生态里，一下子出现了好几个有意思的项目:
 
 1. [Litestream](https://litestream.io/)，基于 WAL 做的 SQLite 灾备方案 (就是前面那位 Ben Johnson 写的，他同时也是 Golang BoltDB 的作者)。
-2. [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)，非常巧妙地使用 HTTP Range requests 实现了一个支持 block read 的 VFS。
+2. [Hosting SQLite databases on GitHub Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)，非常巧妙地使用 HTTP Range requests 实现了一个支持 block read 的 VFS。
 3. [Serverless SQLite](https://sql.lspgn.workers.dev/),   通过 Cloudflare workers + WASM 部署的 SQLite 服务。
 4. [Datasette](https://datasette.io/),   基于 SQLite 的数据探索，分析和发布工具。
 

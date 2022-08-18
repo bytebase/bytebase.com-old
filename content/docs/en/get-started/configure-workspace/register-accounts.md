@@ -24,7 +24,7 @@ This feature is only available in the **Team** or **Enterprise** plan.
 
 </hint-block>
 
-In order to log in with Gitlab:
+In order to log in with GitLab:
 
 1. In Bytebase, the **Workspace Owner** completes [VCS configuration](/docs/vcs-integration/add-git-provider).
 2. In GitLab, set the public email the same as the registered email in Bytebase.
