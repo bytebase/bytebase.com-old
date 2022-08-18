@@ -4,7 +4,7 @@ export const useStore = defineStore("mainStore", {
   state: () => {
     return {
       hasRedirectLocale: false,
-      showQrcode: true,
+      showQrcode: false,
     };
   },
   actions: {
