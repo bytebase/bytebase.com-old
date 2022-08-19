@@ -148,6 +148,7 @@ export default defineComponent({
     const subscribe = (e: any) => {
       trackEvent("demo");
       analytics.newsletter.identify(email.value, {
+        category: "request-demo",
         integrations: {
           MailChimp: {
             subscriptionStatus: "subscribed",
