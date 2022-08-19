@@ -10,10 +10,10 @@ Structure: `Instance > Database > Table`
 
 eg: `Localhost Staging MySQL > world > city
 
-![Databases](/static/docs/sql-editor_databases-search.webp)
+![Databases](/static/docs/sql-editor-database-search.webp)
 
 ## Table Schema
 
 Click the leaf nodes of the tree structure to check table schemas.
 
-![Table Schema](/static/docs/sql-editor_databases-table-schema.webp)
+![Table Schema](/static/docs/sql-editor-database-table-schema.webp)
