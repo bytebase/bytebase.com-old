@@ -2,7 +2,7 @@
 title: 5 Mins Quick Start
 ---
 
-In this guide, you'll use **"Bytebase Test Suite"** to get familiar with the product in the quickest way. This suite includes one Bytebase <version></version> instance and two MySQL 8.0.29 instances.
+In this guide, you'll use **"Bytebase Test Suite"** to get familiar with the product in the quickest way. This suite includes one Bytebase %%bb_version%% instance and two MySQL 8.0.29 instances.
 The task here is to add `nickname` column to `employee` table for both dev and prod environments.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lav1JaaTLMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -20,16 +20,16 @@ Before starting, make sure you have installed [Docker](https://www.docker.com/ge
 
 #### MacOS & Linux
 
-<pre>
-curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=<version></version> docker-compose -f - up
-</pre>
+```bash
+curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | BB_VERSION=%%bb_version%% docker-compose -f - up
+```
 #### Windows
-<pre>
-BB_VERSION=<version></version>
-</pre>
-<pre>
+```powershell
+BB_VERSION=%%bb_version%%
+```
+```powershell
 curl -fsS https://raw.githubusercontent.com/bytebase/bytebase/main/quickstart/getting-started.docker-compose.yml | docker-compose -f - up
-</pre>
+```
 
 <hint-block type="info">
 
@@ -40,7 +40,7 @@ If the above command doesn't work, replace https://raw.githubusercontent.com/byt
 
 When the Terminal shows the following message, the execution is successful.
 
-<pre>
+```
 employee-prod_1  | 2022-06-21T02:35:01.128005Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.29) starting as process 63
 employee-prod_1  | 2022-06-21T02:35:01.150847Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
 bytebase         | 2022-06-21T02:35:01.449Z	INFO	Completed database initial migration with version 1.1.2.
@@ -56,11 +56,11 @@ bytebase         | ██╔══██╗  ╚██╔╝     ██║   █
 bytebase         | ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
 bytebase         | ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
 bytebase         |
-bytebase         | Version <version></version> has started at http://localhost:5678
+bytebase         | Version %%bb_version%% has started at http://localhost:5678
 bytebase         | ___________________________________________________________________________________________
 bytebase         |
 employee-test_1  | [Entrypoint] Database initialized
-</pre>
+```
 
 Now you have three containers running in Docker:
 

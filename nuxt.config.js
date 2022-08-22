@@ -9,6 +9,8 @@ import {
 } from "./common/matrix";
 import { ALPHA_LIST } from "./common/glossary";
 
+const VERSION = fse.readFileSync("VERSION").toString();
+
 function getContentOfNode(node) {
   if (node.type === "text") {
     return node.value;
@@ -399,6 +401,11 @@ export default {
           console.error("Copy failed, err", error);
         }
       },
+    },
+    "content:file:beforeParse": (file) => {
+      if (file.extension === ".md" && file.path.includes("docs")) {
+        file.data = file.data.replace(/%%bb_version%%/g, VERSION);
+      }
     },
     "content:file:beforeInsert": (document) => {
       if (document.extension === ".md") {

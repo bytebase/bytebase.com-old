@@ -12,7 +12,7 @@ Before starting, make sure you are familiar with [Docker](https://www.docker.com
 
 Here is a sample Kubernetes YAML file `bb.yaml` describing the minimal components and configuration required to run Bytebase locally.
 
-<pre lang="yaml">
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: bytebase
-        image: bytebase/bytebase:<version></version>
+        image: bytebase/bytebase:%%bb_version%%
         args: ["--data", "/var/opt/bytebase", "--host", "http://localhost", "--port", "8080", "--pg", "postgresql://user:secret@host:port/dbname"]
         ports:
         - containerPort: 8080
@@ -53,7 +53,7 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-</pre>
+```
 
 1. Start Bytebase with the following command:
 
