@@ -2,7 +2,7 @@
 title: Deploy to Production
 ---
 
-**Latest release version:** [**<version></version>**](https://github.com/bytebase/bytebase/releases/latest)
+**Latest release version:** [**%%bb_version%%**](https://github.com/bytebase/bytebase/releases/latest)
 
 You have tried Bytebase via [quick start](../quick-start), now it's time to deploy it to production.
 

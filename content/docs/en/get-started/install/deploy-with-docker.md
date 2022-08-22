@@ -12,18 +12,18 @@ Before starting, make sure you have installed [Docker](https://www.docker.com/ge
 
 Run the following command to start Bytebase locally on localhost:8080.
 
-<pre>
+```bash
 docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
   --publish 8080:8080 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:<version></version> \
+  bytebase/bytebase:%%bb_version%% \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 8080
-</pre>
+```
 
 You can change `8080` to `5678` or something else, however, make sure these three ports are the same:
 
@@ -31,18 +31,18 @@ You can change `8080` to `5678` or something else, however, make sure these thre
 - :{{containerport}}
 - --port {{port}}}
 
-<pre>
+```bash
 docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
   --publish 5678:5678 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:<version></version> \
+  bytebase/bytebase:%%bb_version%% \
   --data /var/opt/bytebase \
   --host http://localhost \
   --port 5678
-</pre>
+```
 
 Bytebase will store its data under `~/.bytebase/data` , you can reset all data by running command:
 
@@ -56,18 +56,18 @@ Check [Server Startup Options](./reference/command-line) for other startup optio
 
 Run the following command to start Bytebase on [https://bytebase.example.com](https://bytebase.example.com/)
 
-<pre>
+```bash
 docker run --init \
   --name bytebase \
   --restart always \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
   --volume ~/.bytebase/data:/var/opt/bytebase \
-  bytebase/bytebase:<version></version> \
+  bytebase/bytebase:%%bb_version%% \
   --data /var/opt/bytebase \
   --host https://bytebase.example.com \
   --port 80
-</pre>
+```
 
 <hint-block type="info">
 
@@ -85,7 +85,7 @@ docker logs bytebase
 
 Normally you should see this:
 
-<pre>
+```
 -----Config BEGIN-----
 mode=release
 host=http://example.com
@@ -109,8 +109,8 @@ debug=false
 ██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
 ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
 
-Version <version></version> has started at http://example.com:8080
-</pre>
+Version %%bb_version%% has started at http://example.com:8080
+```
 
 ### Unable to start Bytebase with Docker
 
