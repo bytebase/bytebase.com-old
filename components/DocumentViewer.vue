@@ -124,6 +124,7 @@ import {
   useContext,
   useMeta,
   watch,
+  nextTick,
 } from "@nuxtjs/composition-api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -271,6 +272,14 @@ export default defineComponent({
           });
         }
       }
+
+      nextTick(() => {
+        const idValue = route.value.hash.slice(1);
+        const targetEl = document.body.querySelector(`[id='${idValue}']`);
+        if (targetEl) {
+          targetEl.scrollIntoView();
+        }
+      });
     });
 
     watch(route, () => {
