@@ -36,6 +36,13 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /var/opt/bytebase
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 300
+          periodSeconds: 300
+          timeoutSeconds: 60
       volumes:
       - name: data
         emptyDir: {}
