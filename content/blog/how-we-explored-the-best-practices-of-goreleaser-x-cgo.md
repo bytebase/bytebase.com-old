@@ -98,9 +98,9 @@ Up to this point, we can use GoReleaser to compile when CGO is on, but the story
 
 The main idea here is simple: separate the building process from the release.
 
-- In job one, build Linux binaries.
-- In job two, build macOS binaries.
-- Job three depends on job one and job two. Then it does the final release.
+- Job one builds all Linux binaries.
+- Job two builds all macOS binaries.
+- Job three packages the binaries from job one and two into the final release.
 
 Job one and two skip the release with the skip-publish argument. Job three skips the building and uses the files generated in jobs one and two with the extra_files setting.
 
