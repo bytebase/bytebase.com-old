@@ -16,7 +16,9 @@ In the [1.2.1 release](/changelog/bytebase-1-2-1), we found that the [GoReleaser
 ## Clue One
 ![exclude-all-go-files-error](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/exclude-all-go-files-error.webp)
 
-"build constraints exclude all Go files in /go/pkg/mod/github.com/pganalyze/pg_query_go/v2@2.1.2/parser"
+```
+build constraints exclude all Go files in /go/pkg/mod/github.com/pganalyze/pg_query_go/v2@2.1.2/parser
+```
 
 This error message may seem a bit puzzling, but it points to exactly what’s wrong. So let's go to the package "pg_query_go/parser" and find out.
 ![pg-query-go](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/pg-query-go.webp)
