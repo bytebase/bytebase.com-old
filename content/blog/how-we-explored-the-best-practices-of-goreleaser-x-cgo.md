@@ -96,7 +96,7 @@ Up to this point, we can use GoReleaser to compile when CGO is on, but the story
 
 ## Release!
 
-The main idea here is simple: separate the building and the release.
+The main idea here is simple: separate the building process from the release.
 
 - In job one, build Linux binaries.
 - In job two, build macOS binaries.
