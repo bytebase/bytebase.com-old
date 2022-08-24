@@ -122,4 +122,5 @@ The reason why we didn't encounter problems is that Bytebase had already [migrat
 
 - Don't try to introduce a cross-compilation toolchain unless you absolutely have to. It will incur additional verification and maintenance costs.
 - Cross-architecture and cross-platform complicate things and make life harder. Please stay away from them as much as possible.
+- Thank you, Github Action.
 - Thank you, LLVM-Clang.
