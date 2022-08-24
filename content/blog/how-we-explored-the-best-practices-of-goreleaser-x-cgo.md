@@ -111,7 +111,7 @@ Job one and two skip the release with the skip-publish argument. Job three skips
 
 Bytebase already depended on [go-sqlite3](https://github.com/mattn/go-sqlite3), which is also a CGO-dependent package. So why didn't it cause problems before?
 
-The thing is CGO was not opened in GoReleaser. And go-sqlite3 did a [mock](https://github.com/mattn/go-sqlite3/blob/master/static_mock.go) when CGO was not opened, which means that the go-sqlite3 compiled without CGO was an empty package.
+The thing is CGO was not enabled in GoReleaser. And go-sqlite3 did a [mock](https://github.com/mattn/go-sqlite3/blob/master/static_mock.go) when CGO was not enabled, which means that the go-sqlite3 compiled without CGO was an empty package.
 ![go_sqlite3_mock](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/go_sqlite3_mock.webp)
 
 The reason why we didn't encounter problems is that Bytebase had already [migrated from SQLite to PostgreSQL](https://www.bytebase.com/blog/database-migration-sqlite-to-postgresql) before GoReleaser was introduced. So it really didn't use go-sqlite3 and GoReleaser at the same time.
