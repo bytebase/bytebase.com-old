@@ -11,7 +11,7 @@ description: We meet some trouble using goreleaser and cgo at the same time. Thi
 
 When implementing [SQL Review for PostgreSQL](/docs/sql-review/review-rules/supported-rules), we introduced [pg_query_go](https://github.com/pganalyze/pg_query_go) as the PostgreSQL parser. The pg_query_go uses the native PostgreSQL parser via C bind, which naturally requires CGO support.
 
-In the [1.2.1 release](https://github.com/Bytebase/Bytebase/tree/release/1.2.1), we found that the [GoReleaser](https://github.com/goreleaser/goreleaser) did not work correctly, and the error message pointed to pg_query_go. Fortunately, this version did not use pg_query_go. So we first added the "!release" Golang tag to ensure a successful release. Then we started the long road to fight against GoReleaser and CGO.
+In the [1.2.1 release](/changelog/bytebase-1-2-1), we found that the [GoReleaser](https://github.com/goreleaser/goreleaser) did not work correctly, and the error message pointed to pg_query_go. Fortunately, this version did not use pg_query_go. So we first added the "!release" Golang tag to ensure a successful release. Then we started the long road to fight against GoReleaser and CGO.
 
 ## Clue One
 ![exclude-all-go-files-error](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/exclude-all-go-files-error.webp)
