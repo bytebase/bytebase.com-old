@@ -1,5 +1,5 @@
 ---
-title: How We Explored the Best Practices of GoReleaser X CGO
+title: How to cross compile with CGO using GoReleaser and GitHub Action
 author: Junyi
 published_at: 2022/08/24 15:17
 feature_image: /static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/banner.webp
