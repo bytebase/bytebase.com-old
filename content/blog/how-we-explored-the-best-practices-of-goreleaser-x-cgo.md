@@ -102,7 +102,7 @@ The main idea here is simple: separate the building process from the release.
 - Job two builds all macOS binaries.
 - Job three packages the binaries from job one and two into the final release.
 
-Job one and two skip the release with the skip-publish argument. Job three skips the building and uses the files generated in jobs one and two with the extra_files setting.
+Job one and two skip the release with the skip-publish argument. Job three skips the building stage and uses the files generated in jobs one and two with the extra_files setting.
 
 🚀End of story!
 ![end_of_story](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/end_of_story.webp)
