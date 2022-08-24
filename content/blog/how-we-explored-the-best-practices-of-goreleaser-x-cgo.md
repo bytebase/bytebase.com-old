@@ -58,7 +58,7 @@ In other words, we may need four compilation toolchains for the target platform.
 Now it looks like the problem is solved, but it is not perfect. The goreleaser/goreleaser-cross repo has only 26 stars, while goreleaser/goreleaser has 10k+ stars. It could mean that using goeleaser-cross have some risks.
 ![star-history](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/star-history.webp)
 
-If the cross-compilation toolchain is well maintained, the risk is relatively small. The main problem is when the target platform is Darwin. Anyone who has tried to cross-compile from Linux to Darwin knows this is a challenging task. The difficulty is that there is no readily available, well-maintained cross-compilation toolchain. You often need to build your cross-compilation toolchain. It's had to verify the compatibility of the cross-compilation toolchain, and some of them are not well-maintained. The o64-clang/oa64-clang cross-compilation toolchain used by the GoReleaser-cross is built based on the [osxcross](https://github.com/tpoechtrager/osxcross).
+If the cross-compilation toolchain is well maintained, the risk is relatively small. The main problem is when the target platform is Darwin. Anyone who has tried to cross-compile from Linux to Darwin knows this is a challenging task. The difficulty is that there is no readily available, well-maintained cross-compilation toolchain. You often need to build your cross-compilation toolchain. It's had to verify the compatibility of the cross-compilation toolchain, and some of them are not well-maintained.
 
 So is there a way to avoid this risk? Yes.
 
