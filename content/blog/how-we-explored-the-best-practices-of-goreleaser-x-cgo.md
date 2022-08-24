@@ -27,7 +27,7 @@ We can easily verify it by Googling or by manual testing. There, we got our clue
 
 ## Clue Two
 
-To open CGO in GoReleaser, you only need to add "CGO_ENABLED=1" to the corresponding "env" entry in the GoReleaser configuration file.
+To enable CGO in GoReleaser, you only need to add "CGO_ENABLED=1" to the corresponding "env" entry in the GoReleaser configuration file.
 ![goreleaser_enable_cgo](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/goreleaser_enable_cgo.webp)
 
 Let's retry.
