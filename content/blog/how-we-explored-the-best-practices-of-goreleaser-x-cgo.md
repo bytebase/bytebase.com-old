@@ -92,7 +92,7 @@ For the Linux platform GoReleaser configuration file, it's a bit more complicate
 
 We used GoReleaser's ["overrides"](https://goreleaser.com/customization/build/) feature here.
 
-Up to this point, we can use GoReleaser to compile when CGO is on, but the story is not over yet. The ultimate goal of GoReleaser is to release, and if we use GoReleaser twice as we currently do, we will have two release messages. But this step is easier than before.
+Up to this point, we can use GoReleaser to compile when CGO is on, but the story is not over yet. The ultimate goal of GoReleaser is to release, and if we use GoReleaser twice as we currently do, we will generate two releases. But compared to the cross-compilation headache, this is a piece of cake.
 
 ## Release!
 
