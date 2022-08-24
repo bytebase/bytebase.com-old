@@ -84,7 +84,7 @@ After some work, the GitHub Action configuration looks like this.
 
 Two jobs are used to compile binaries on different platforms.
 
-For the Darwin platform GoReleaser configuration file, we just need to open CGO.
+For the Darwin platform GoReleaser configuration file, we just need to enable CGO.
 ![goreleaser_configuration_darwin](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/goreleaser_configuration_darwin.webp)
 
 For the Linux platform GoReleaser configuration file, it's a bit more complicated, and we need to use the corresponding compilation toolchain for the corresponding architecture.
