@@ -645,6 +645,12 @@
   margin-bottom: 0;
 }
 
+.markdown-body li ul,
+.markdown-body li ol {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
 .markdown-body li > p {
   margin-top: 16px;
 }
