@@ -56,7 +56,7 @@ Bytebase will store its data under `~/.bytebase/data` , you can reset all data b
 rm -rf ~/.bytebase/data
 ```
 
-Check [Server Startup Options](./reference/command-line) for other startup options.
+Check [Server Startup Options](/docs/reference/command-line) for other startup options.
 
 ## Run on [https://bytebase.example.com](https://bytebase.example.com/)
 
