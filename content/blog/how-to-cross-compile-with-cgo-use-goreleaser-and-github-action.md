@@ -1,5 +1,5 @@
 ---
-title: How to cross compile with CGO using GoReleaser and GitHub Action
+title: How to cross compile with CGO using GoReleaser and GitHub Actions
 author: Junyi
 published_at: 2022/08/24 15:17
 feature_image: /static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/banner.webp
@@ -50,7 +50,7 @@ The cross-compiler is used in scenarios where binaries must be compiled on platf
 So why do we need this here? You may have noticed that we have specified four target platforms in the GoReleaser configuration file.
 ![target-platforms](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/target-platforms.webp)
 
-Our build environment is Ubuntu x64 on GitHub Action. Before turning on CGO, we only need to handle the parameters for cross-platform Go compilation. And this step is handled by the Go compiler and GoReleaser. But after CGO is introduced, we also need to compile C/C++ code, so we need the corresponding C/C++ cross-compilation toolchain.
+Our build environment is Ubuntu x64 on GitHub Actions. Before turning on CGO, we only need to handle the parameters for cross-platform Go compilation. And this step is handled by the Go compiler and GoReleaser. But after CGO is introduced, we also need to compile C/C++ code, so we need the corresponding C/C++ cross-compilation toolchain.
 
 In other words, we may need four compilation toolchains for the target platform. Fortunately,  goreleaser-cross supports them all.
 ![goreleaser-cross-supported-platforms](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/goreleaser-cross-supported-platforms.webp)
@@ -64,7 +64,7 @@ So is there a way to avoid this risk? Yes.
 
 ## Let’s Try Another Way
 
-As mentioned before, we are using Ubuntu x64 on GitHub Action. The easiest way to avoid using the cross-compilation toolchain is to compile on the same platform. Does GitHub Action provide any other environment? Yes, it does!
+As mentioned before, we are using Ubuntu x64 on GitHub Actions. The easiest way to avoid using the cross-compilation toolchain is to compile on the same platform. Does GitHub Actions provide any other environment? Yes, it does!
 ![github-action-platforms](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/github-action-platforms.webp)
 
 Note that the macOS supported are all x64 architecture. We still need to compile across the architectures but no need to cross the platforms!
@@ -81,7 +81,7 @@ sudo apt-get -y install gcc-aarch64-linux-gnu
 
 For the Darwin platform, it's even easier. The clang supports cross-architecture natively. Thanks to LLVM!
 
-After some work, the GitHub Action configuration looks like this.
+After some work, the GitHub Actions configuration looks like this.
 ![github-workflow](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/github-workflow.webp)
 
 Two jobs are used to compile binaries on different platforms.
@@ -122,5 +122,5 @@ The reason why we didn't encounter problems is that Bytebase had already [migrat
 
 - Don't try to introduce a cross-compilation toolchain unless you absolutely have to. It will incur additional verification and maintenance costs.
 - Cross-architecture and cross-platform complicate things and make life harder. Please stay away from them as much as possible.
-- Thank you, Github Action.
+- Thank you, Github Actions.
 - Thank you, LLVM-Clang.
