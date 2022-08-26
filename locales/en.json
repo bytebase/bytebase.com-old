@@ -356,9 +356,10 @@
   "about": {
     "why-we-build-title": "Why we build",
     "why-we-build": "While we have a plethora of commercial and open-source database engines serving billions of users, our tooling around making {reliable} {consistent} {auditable} application database schema changes is embarrassing. And today many teams are still connecting to the production DB and applying changes directly. Quick and dirty, until BOMB!",
-    "reliable": "reliable,",
-    "consistent": "consistent,",
+    "reliable": "reliable",
+    "consistent": "consistent",
     "auditable": "auditable",
+    "comma": ",",
     "what-is": "What's the",
     "gitlab-for-database": "for database instead of code?",
     "figma-for-dba": "for DBAs instead of designers?",

@@ -356,9 +356,10 @@
   "about": {
     "why-we-build-title": "我们为什么要建立",
     "why-we-build": "虽然已经有很多商业和开源数据库引擎来服务亿万用户，但是还没有一款工具能做到 {reliable} {consistent} {auditable} 的数据库 Schema 改动。并且现在还有很多团队直接连接到数据库进行操作。这么操作是挺快的，直到出事故！",
-    "reliable": "稳定、",
-    "consistent": "一致、",
+    "reliable": "稳定",
+    "consistent": "一致",
     "auditable": "可审计",
+    "comma": "、",
     "what-is": "什么是",
     "gitlab-for-database": "对应数据库而不是代码？",
     "figma-for-dba": "对应 DBAs 而不是设计师？",
