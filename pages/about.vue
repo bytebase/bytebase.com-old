@@ -27,13 +27,17 @@
                     <span class="underline inline font-semibold">{{
                       $t("about.reliable")
                     }}</span>
-                    <span>$t("about.comma")</span>
+                    <span class="inline font-semibold">{{
+                      $t("about.comma")
+                    }}</span>
                   </template>
                   <template #consistent>
                     <span class="underline inline font-semibold">{{
                       $t("about.consistent")
                     }}</span>
-                    <span>$t("about.comma")</span>
+                    <span class="inline font-semibold">{{
+                      $t("about.comma")
+                    }}</span>
                   </template>
                   <template #auditable>
                     <span class="underline inline font-semibold"></span
