@@ -8,7 +8,7 @@
       >
         <template #deliver-experience>
           <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
             >{{
               $t(
                 "index-page.a-complete-rethink-to-deliver-experience.deliver-experience"

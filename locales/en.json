@@ -16,11 +16,11 @@
     "for": "for",
     "teams": "Teams",
     "dbas": "DBAs",
-    "developers": "Developers"
+    "developers": "Devs"
   },
   "slogan": {
-    "safer-and-faster": "Safer and Faster",
-    "mission": "Database change and version control for DBAs and Developers",
+    "reliable": "Reliable",
+    "mission": "Database change for DevOps and DBA teams",
     "review-change-version-restore": "Review, change, version and restore.",
     "database-devops-best-practice": "Adopt the database DevOps best practice {br}from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
@@ -227,8 +227,7 @@
     "all-rights-reserved": "All rights reserved."
   },
   "index-page": {
-    "title": "{slogan}Database Change {br}and Version Control {br}for {teams}",
-    "description": "Bytebase offers a web-based collaboration workspace to help {developers} and {dbas} manage the lifecycle of application database schemas (DDL) and data (DML).",
+    "title": "{slogan}Database Change {br}for {developers}",
     "features": {
       "database-migration": {
         "slogan": "Safer and faster database migration - DDL and DML",

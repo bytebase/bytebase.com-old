@@ -8,8 +8,8 @@
           class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
         >
           <span
-            class="text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >{{ $t("slogan.safer-and-faster") }}</span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
+            >{{ $t("slogan.reliable") }}</span
           ><br />
           <span class="block xl:inline">
             {{ $t("slogan.mission") }}
