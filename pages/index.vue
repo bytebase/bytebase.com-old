@@ -47,51 +47,32 @@
       </div>
     </div>
 
-    <div class="max-w-7xl w-full mx-auto px-4 mt-12">
+    <div class="max-w-7xl w-full mx-auto px-4 mt-8">
       <BookDemoSection />
     </div>
 
-    <div class="mt-16 relative">
-      <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6">
-        <img
-          class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-144"
-          src="~/assets/screenshot_home.webp"
-          alt="App screenshot"
-          width="1200"
-          height="675"
-        />
-        <img
-          class="order-1 relative shadow-md -ml-2 lg:mb-12"
-          src="~/assets/screenshot_task.webp"
-          alt="App screenshot"
-          width="1200"
-          height="900"
-        />
-      </div>
-    </div>
-
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 mt-6 lg:mt-72"
-    >
+    <div class="max-w-7xl mt-12 sm:mt-24 mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
+        <i18n
+          path="index-page.gitlab-for-database-devops"
+          tag="h2"
+          class="mt-2 text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900"
         >
-          {{
-            $t("index-page.features.database-change-and-version-control.title")
-          }}
-        </h2>
-        <div class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
-          {{
-            $t(
-              "index-page.features.database-change-and-version-control.description"
-            )
-          }}
-        </div>
+          <template #database-devops>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
+              >{{ $t("index-page.database-devops") }}</span
+            >
+          </template>
+        </i18n>
+      </div>
+
+      <div class="mt-12">
+        <img src="~/assets/screenshot.webp" alt="App screenshot" />
       </div>
     </div>
 
-    <div class="relative bg-white mt-16 pb-8 overflow-hidden">
+    <div class="relative bg-white mt-12 sm:mt-24 pb-8 overflow-hidden">
       <div class="relative">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"

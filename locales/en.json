@@ -22,7 +22,7 @@
   "slogan": {
     "reliable": "Reliable",
     "mission": "Database change for DevOps and DBA teams",
-    "review-change-version-restore": "Review, change, version and restore.",
+    "review-change-version-rollback": "Review, change, version and rollback.",
     "database-devops-best-practice": "Adopt the database DevOps best practice {br}from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
@@ -219,11 +219,9 @@
   },
   "index-page": {
     "title": "{slogan} {br}Database Change {br}for {developers}",
+    "gitlab-for-database-devops": "The missing {database-devops} for GitLab",
+    "database-devops": "Database DevOps",
     "features": {
-      "database-change-and-version-control": {
-        "title": "Database change ❤️ version control",
-        "description": "GUI-based + GitOps-based DDL and DML workflow with change version history"
-      },
       "review-board": {
         "title": "Review Board",
         "description": "All-in-one SQL review board to provide a holistic view of the database change."
