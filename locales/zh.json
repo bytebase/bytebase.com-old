@@ -227,7 +227,7 @@
     "all-rights-reserved": "版权所有。"
   },
   "index-page": {
-    "title": "{slogan}数据库变更{br}面向{developers}",
+    "title": "面向{developers}{br}{slogan}{br}数据库变更",
     "features": {
       "database-migration": {
         "slogan": "更安全、更高效的数据库变更 - DDL、DML",

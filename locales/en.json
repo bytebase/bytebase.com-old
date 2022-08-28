@@ -227,7 +227,7 @@
     "all-rights-reserved": "All rights reserved."
   },
   "index-page": {
-    "title": "{slogan}Database Change {br}for {developers}",
+    "title": "{slogan} {br}Database Change {br}for {developers}",
     "features": {
       "database-migration": {
         "slogan": "Safer and faster database migration - DDL and DML",

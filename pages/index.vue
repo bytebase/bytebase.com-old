@@ -18,7 +18,6 @@
                     class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
                     >{{ $t("slogan.reliable") }}</span
                   >
-                  <br />
                 </template>
                 <template #br>
                   <br class="hidden sm:block" />
