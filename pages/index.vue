@@ -81,17 +81,21 @@
       <PastCompanyBar />
     </div>
 
-    <div class="mt-12 relative">
+    <div class="mt-16 relative">
       <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6">
         <img
-          class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-96"
-          src="~/assets/screenshot_task.webp"
-          alt=" App screenshot"
-        />
-        <img
-          class="order-1 relative shadow-md -ml-2 lg:mb-48"
+          class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-144"
           src="~/assets/screenshot_home.webp"
           alt="App screenshot"
+          width="1200"
+          height="675"
+        />
+        <img
+          class="order-1 relative shadow-md -ml-2 lg:mb-12"
+          src="~/assets/screenshot_task.webp"
+          alt="App screenshot"
+          width="1200"
+          height="900"
         />
       </div>
     </div>
@@ -196,6 +200,8 @@
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~/assets/sqlreview.webp"
                 alt="Inbox user interface"
+                width="600"
+                height="400"
               />
             </div>
           </div>
@@ -269,6 +275,8 @@
                 class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="~/assets/versioncontrol.webp"
                 alt="Customer profile user interface"
+                width="500"
+                height="400"
               />
             </div>
           </div>
