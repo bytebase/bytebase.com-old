@@ -70,57 +70,28 @@
       </div>
     </div>
 
-    <div class="relative bg-white py-16 sm:py-24 lg:py-32 mt-6 lg:mt-72">
-      <div
-        class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
-      >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 mt-6 lg:mt-72"
+    >
+      <div class="text-center">
         <h2
-          class="text-base sm:text-2xl font-semibold tracking-wider text-indigo-600 uppercase"
+          class="mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
-          {{ $t("index-page.features.database-migration.slogan") }}
+          {{
+            $t("index-page.features.database-change-and-version-control.title")
+          }}
         </h2>
-        <i18n
-          path="index-page.features.database-migration.description"
-          tag="h2"
-          class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
-        >
-          <template #devops>
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-700"
-              >{{ $t("index-page.features.database-migration.devops") }}</span
-            >
-          </template>
-          <template #collaboration>
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
-              >{{
-                $t("index-page.features.database-migration.collaboration")
-              }}</span
-            >
-          </template>
-        </i18n>
-        <div class="mt-12">
-          <FeatureSection />
+        <div class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
+          {{
+            $t(
+              "index-page.features.database-change-and-version-control.description"
+            )
+          }}
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
-        >
-          {{ $t("index-page.features.sql-review-and-version-control.title") }}
-        </h2>
-        <h3 class="mt-4 max-w-3xl text-left text-xl text-gray-500 lg:mx-auto">
-          {{
-            $t("index-page.features.sql-review-and-version-control.description")
-          }}
-        </h3>
-      </div>
-    </div>
-
-    <div class="relative bg-white pt-16 pb-32 overflow-hidden">
+    <div class="relative bg-white mt-16 pb-8 overflow-hidden">
       <div class="relative">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -129,13 +100,13 @@
             class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
           >
             <div>
-              <div>
+              <div class="flex flex-row lg:justify-end space-x-4">
                 <span
-                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                  class="w-12 h-12 flex items-center justify-center p-2 bg-white border-2 border-gray-900 rounded-md shadow-lg"
                 >
                   <!-- Heroicon name: outline/inbox -->
                   <svg
-                    class="w-6 h-6 text-white"
+                    class="w-10 h-10 text-gray-900"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -149,31 +120,25 @@
                     />
                   </svg>
                 </span>
+                <h3
+                  class="text-5xl font-extrabold tracking-tight text-gray-900"
+                >
+                  {{ $t("index-page.features.review-board.title") }}
+                </h3>
               </div>
               <div class="mt-6">
-                <h2
-                  class="text-3xl font-extrabold tracking-tight text-gray-900"
-                >
-                  {{ $t("index-page.features.ui-workflow.title") }}
-                </h2>
-                <h3 class="mt-4 text-lg text-gray-500">
-                  {{ $t("index-page.features.ui-workflow.description") }}
-                </h3>
+                <div class="mt-4 lg:text-right text-lg text-gray-500">
+                  {{ $t("index-page.features.review-board.description") }}
+                </div>
               </div>
             </div>
           </div>
-          <div class="mt-12 sm:mt-16 lg:mt-0">
-            <div
-              class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
-            >
-              <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/sqlreview.webp"
-                alt="Inbox user interface"
-                width="600"
-                height="400"
-              />
-            </div>
+          <div class="mt-12 px-4 sm:mt-16 lg:mt-0">
+            <img
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+              src="~/assets/feature-review-board.webp"
+              alt="Inbox user interface"
+            />
           </div>
         </div>
       </div>
@@ -185,12 +150,12 @@
             class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
           >
             <div>
-              <div>
+              <div class="flex flex-row space-x-4">
                 <span
-                  class="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600"
+                  class="w-12 h-12 flex items-center justify-center p-2 bg-white border-2 border-gray-900 rounded-md shadow-lg"
                 >
                   <svg
-                    class="w-6 h-6 text-white"
+                    class="w-10 h-10 text-gray-900"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -204,33 +169,146 @@
                     />
                   </svg>
                 </span>
+                <h3
+                  class="text-5xl font-extrabold tracking-tight text-gray-900"
+                >
+                  {{ $t("index-page.features.gitops.title") }}
+                </h3>
               </div>
               <div class="mt-6">
-                <h2
-                  class="text-3xl font-extrabold tracking-tight text-gray-900"
-                >
-                  {{
-                    $t(
-                      "index-page.features.version-control-workflow-gitops.title"
-                    )
-                  }}
-                </h2>
-                <h3 class="mt-4 text-lg text-gray-500">
-                  {{
-                    $t(
-                      "index-page.features.version-control-workflow-gitops.description"
-                    )
-                  }}
-                </h3>
+                <div class="mt-4 text-lg text-gray-500">
+                  {{ $t("index-page.features.gitops.description") }}
+                </div>
                 <div class="mt-6">
                   <nuxt-link
                     :to="localePath('/docs/vcs-integration/overview')"
-                    class="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                    class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
                     @click="track('docs.version-control')"
+                    >{{ $t("index-page.features.gitops.see-guide") }}</nuxt-link
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <img
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+              src="~/assets/feature-version-control.webp"
+              alt="Customer profile user interface"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0"
+          >
+            <div>
+              <div class="flex flex-row lg:justify-end space-x-4">
+                <span
+                  class="w-12 h-12 flex items-center justify-center p-2 bg-white border-2 border-gray-900 rounded-md shadow-lg"
+                >
+                  <!-- Heroicon name: outline/inbox -->
+                  <svg
+                    class="w-10 h-10 text-gray-900"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                    />
+                  </svg>
+                </span>
+                <h3
+                  class="text-5xl font-extrabold tracking-tight text-gray-900"
+                >
+                  {{ $t("index-page.features.tenant-mode.title") }}
+                </h3>
+              </div>
+              <div class="mt-6">
+                <div class="mt-4 lg:text-right text-lg text-gray-500">
+                  {{ $t("index-page.features.tenant-mode.description") }}
+                </div>
+                <div class="mt-6 lg:text-right">
+                  <nuxt-link
+                    :to="localePath('/docs/tenant-database-management')"
+                    class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
+                    @click="track('docs.tenant-mode')"
                     >{{
-                      $t(
-                        "index-page.features.version-control-workflow-gitops.see-guide"
-                      )
+                      $t("index-page.features.sql-review.see-guide")
+                    }}</nuxt-link
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 px-4 sm:mt-16 lg:mt-0">
+            <img
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+              src="~/assets/feature-tenant-mode.webp"
+              alt="Inbox user interface"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-24">
+        <div
+          class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        >
+          <div
+            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-24 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+          >
+            <div>
+              <div class="flex flex-row space-x-4">
+                <span
+                  class="w-12 h-12 flex items-center justify-center p-2 bg-white border-2 border-gray-900 rounded-md shadow-lg"
+                >
+                  <svg
+                    class="w-10 h-10 text-gray-900"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    ></path>
+                  </svg>
+                </span>
+                <h3
+                  class="text-5xl font-extrabold tracking-tight text-gray-900"
+                >
+                  {{ $t("index-page.features.sql-review.title") }}
+                </h3>
+              </div>
+              <div class="mt-6">
+                <div class="mt-4 text-lg text-gray-500">
+                  {{ $t("index-page.features.sql-review.description") }}
+                </div>
+                <div class="mt-6">
+                  <nuxt-link
+                    :to="localePath('/docs/sql-review/sql-advisor/overview')"
+                    class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
+                    @click="track('docs.sql-review')"
+                    >{{
+                      $t("index-page.features.sql-review.see-guide")
                     }}</nuxt-link
                   >
                 </div>
@@ -238,31 +316,25 @@
             </div>
           </div>
           <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-            <div
-              class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
-            >
-              <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="~/assets/versioncontrol.webp"
-                alt="Customer profile user interface"
-                width="500"
-                height="400"
-              />
-            </div>
+            <img
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+              src="~/assets/feature-sql-review-policy.webp"
+              alt="Customer profile user interface"
+            />
           </div>
         </div>
       </div>
     </div>
 
     <!-- begin/SQL Editor Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
+    <div class="max-w-7xl mx-auto mt-16 px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
         <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
+          class="mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
         >
           {{ $t("index-page.features.all-in-one-sql-editor.title") }}
         </h2>
-        <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 lg:mx-auto">
+        <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 mx-auto">
           {{ $t("index-page.features.all-in-one-sql-editor.description") }}
         </h3>
       </div>
@@ -275,6 +347,15 @@
       </div>
     </div>
     <!-- end of/SQL Editor Section -->
+
+    <div class="my-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2
+        class="text-center mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
+      >
+        {{ $t("common.features") }}
+      </h2>
+      <FeatureSection />
+    </div>
   </div>
 </template>
 
