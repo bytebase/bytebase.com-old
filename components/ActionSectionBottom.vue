@@ -1,15 +1,21 @@
 <template>
-  <div class="bg-indigo-700 rounded-lg">
+  <div class="bg-indigo-700 rounded-3xl">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-12">
       <h2
-        class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+        class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-6xl"
       >
         <span class="block">{{
           $t("slogan.review-change-version-restore")
         }}</span>
-        <span class="block">{{
-          $t("slogan.database-devops-best-practice")
-        }}</span>
+        <i18n
+          path="slogan.database-devops-best-practice"
+          tag="h2"
+          class="block"
+        >
+          <template #br>
+            <br />
+          </template>
+        </i18n>
       </h2>
       <div class="mt-8 flex">
         <nuxt-link

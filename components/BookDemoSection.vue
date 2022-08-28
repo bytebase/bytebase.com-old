@@ -1,46 +1,99 @@
 <template>
-  <div class="my-5 sm:flex md:my-8">
-    <div v-if="subscribed" class="flex flex-row items-center mt-8">
-      <span class="text-2xl">🎉</span>
-      <i18n path="demo.book-success-message" class="text-2xl">
-        <template #success>
-          <span class="ml-2 text-2xl font-semibold text-indigo-600">{{
-            $t("demo.book-success-with-punctuation")
-          }}</span>
-        </template>
-        <template #description>
-          <span class="text-2xl text-gray-500">{{
-            $t("demo.book-success-description-with-punctuation")
-          }}</span>
-        </template>
-      </i18n>
-    </div>
-    <form v-else @submit="subscribe">
-      <div
-        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center whitespace-nowrap"
-      >
-        <input
-          id="email-address"
-          v-model="email"
-          name="email-address"
-          type="email"
-          autocomplete="email"
-          required
-          class="w-full md:w-96 px-8 py-2 text-sm md:text-2xl border border-gray-300 flex-1 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md md:py-4"
-          :placeholder="$t('subscribe.enter-your-email')"
-        />
-        <div class="flex flex-row justify-center w-full sm:w-56">
-          <button
-            type="submit"
-            class="w-full flex items-center justify-center px-8 py-2 md:py-4 md:text-2xl border border-transparent text-sm rounded-md border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700"
-          >
-            <div class="flex flex-row justify-center items-center">
-              <Calendar class="w-4 h-4 mr-2" />{{ $t("demo.book-a-demo") }}
+  <div class="bg-indigo-700 rounded-3xl">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 xl:px-12">
+      <div class="xl:grid xl:grid-cols-2 xl:gap-8 xl:items-center">
+        <div>
+          <h2 class="text-3xl tracking-tight font-bold text-white sm:text-6xl">
+            {{ $t("past-company.built-by") }}
+          </h2>
+          <div class="my-5 flex md:my-8 justify-center xl:justify-start">
+            <div
+              v-if="subscribed"
+              class="flex flex-row items-center mt-4 text-white"
+            >
+              <i18n path="demo.book-success-message" class="text-2xl">
+                <template #success>
+                  <span class="ml-2 text-2xl font-semibol">{{
+                    $t("demo.book-success")
+                  }}</span>
+                </template>
+                <template #description>
+                  <span class="text-2xl">{{
+                    $t("demo.book-success-description")
+                  }}</span>
+                </template>
+              </i18n>
             </div>
-          </button>
+            <form v-else @submit="subscribe">
+              <div class="flex space-x-8 items-center whitespace-nowrap">
+                <input
+                  id="email-address"
+                  v-model="email"
+                  name="email-address"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  class="w-72 px-8 py-4 text-xl md:text-2xl flex-1 shadow-sm placeholder-gray-400 rounded-md"
+                  :placeholder="$t('subscribe.enter-your-email')"
+                />
+                <div class="flex flex-row justify-center w-full sm:w-56">
+                  <button
+                    type="submit"
+                    class="flex items-center justify-center px-8 py-4 border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:text-2xl"
+                  >
+                    <div class="flex flex-row justify-center items-center">
+                      <Calendar class="w-4 h-4 mr-2" />{{
+                        $t("demo.book-a-demo")
+                      }}
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="mt-8 grid grid-cols-2 gap-0.5 sm:gap-2 xl:mt-0 xl:grid-cols-2"
+        >
+          <div
+            class="col-span-1 flex justify-center py-4 px-4 sm:py-8 sm:px-8 bg-white rounded-tl-lg"
+          >
+            <img
+              class="max-h-8 sm:max-h-14 object-scale-down"
+              src="~/assets/logo/google-logo.svg"
+              alt="google"
+            />
+          </div>
+          <div
+            class="col-span-1 flex justify-center py-4 px-4 sm:py-8 sm:px-8 bg-white rounded-tr-lg"
+          >
+            <img
+              class="max-h-8 sm:max-h-14 object-scale-down"
+              src="~/assets/logo/microsoft-logo.png"
+              alt="microsoft"
+            />
+          </div>
+          <div
+            class="col-span-1 flex justify-center py-4 px-4 sm:py-8 sm:px-8 bg-white rounded-bl-lg"
+          >
+            <img
+              class="max-h-8 sm:max-h-14 object-scale-down"
+              src="~/assets/logo/pingcap-logo.png"
+              alt="pingcap"
+            />
+          </div>
+          <div
+            class="col-span-1 flex justify-center py-4 px-4 sm:py-8 sm:px-8 bg-white rounded-br-lg"
+          >
+            <img
+              class="max-h-8 sm:max-h-14 object-scale-down"
+              src="~/assets/logo/ant-group-logo.png"
+              alt="ant group"
+            />
+          </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 

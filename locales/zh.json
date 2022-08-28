@@ -187,7 +187,7 @@
     "learn-product-updates-and-everything-about-database": "了解我们的产品更新和有关数据库的实时消息。",
     "email-subscription-success-message": "您已成功订阅我们的 Newsletter~",
     "email-address": "邮箱地址",
-    "enter-your-email": "输入你的邮箱"
+    "enter-your-email": "输入您的邮箱"
   },
   "team": {
     "meet-our-crew": "认识我们的团队",
@@ -397,11 +397,9 @@
       }
     },
     "learn-more": "视频演示",
-    "book-a-demo": "预约演示",
-    "book-success": "预约成功",
-    "book-success-with-punctuation": "预约成功！",
-    "book-success-description": "我们将在 1 个工作日内联系你",
-    "book-success-description-with-punctuation": "我们将在 1 个工作日内联系你！",
+    "book-a-demo": "预约专家演示",
+    "book-success": "🎉预约成功!",
+    "book-success-description": "我们将在 1 个工作日内联系你.",
     "book-success-message": "{success}{description}"
   }
 }
