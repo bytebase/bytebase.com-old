@@ -22,7 +22,7 @@
     "safer-and-faster": "Safer and Faster",
     "mission": "Database change and version control for DBAs and Developers",
     "review-change-version-restore": "Review, change, version and restore.",
-    "database-devops-best-practice": "The database DevOps best practice from Google.",
+    "database-devops-best-practice": "Adopt the database DevOps best practice {br}from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
   },
@@ -372,7 +372,7 @@
     "download-brand-kit": "Download Brand Kit"
   },
   "past-company": {
-    "built-by": "We are veteran software engineers knowing database"
+    "built-by": "Built by the veterans knowing database development flow"
   },
   "demo": {
     "features": {
@@ -397,11 +397,9 @@
       }
     },
     "learn-more": "Learn More",
-    "book-a-demo": "Book a Demo",
-    "book-success": "Congratulations",
-    "book-success-with-punctuation": "Congratulations!",
-    "book-success-description": "We will contact you in 1 business day",
-    "book-success-description-with-punctuation": "We will contact you in 1 business day!",
+    "book-a-demo": "Request Demo",
+    "book-success": "🎉Booked!",
+    "book-success-description": "We will contact you in 1 business day.",
     "book-success-message": "{success} {description}"
   }
 }

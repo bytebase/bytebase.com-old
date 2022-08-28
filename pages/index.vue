@@ -59,9 +59,6 @@
               <div class="flex mt-8 justify-center xl:justify-start">
                 <DatabaseBar />
               </div>
-              <div class="mt-12">
-                <BookDemoSection class="justify-center xl:justify-start" />
-              </div>
             </div>
           </div>
         </div>
@@ -77,8 +74,8 @@
       </div>
     </div>
 
-    <div class="flex mt-8 justify-center">
-      <PastCompanyBar />
+    <div class="max-w-7xl w-full mx-auto px-4 mt-12">
+      <BookDemoSection />
     </div>
 
     <div class="mt-16 relative">
