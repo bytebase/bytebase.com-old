@@ -3,60 +3,33 @@
   <div class="xl:-mt-8 overflow-hidden">
     <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto xl:pt-16 2xl:pt-24">
+      <div class="max-w-7xl mx-auto xl:py-32">
         <!-- Set z-10 so the action buttons won't be covered by the illustration -->
-        <div class="z-10 relative pb-8 xl:max-w-2xl xl:w-full">
+        <div class="z-10 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center xl:text-left">
               <i18n
                 path="index-page.title"
                 tag="h1"
-                class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+                class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-8xl xl:text-9xl"
               >
                 <template #slogan>
                   <span
-                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >{{ $t("slogan.safer-and-faster") }}</span
+                    class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
+                    >{{ $t("slogan.reliable") }}</span
                   >
-                  <br />
                 </template>
                 <template #br>
-                  <br class="hidden xl:block" />
-                </template>
-                <template #teams>
-                  <span
-                    class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-                    >{{ $t("common.teams") }}</span
-                  >
-                </template>
-              </i18n>
-              <i18n
-                path="index-page.description"
-                tag="h2"
-                class="tracking-tight mt-2 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-2xl xl:mx-0"
-              >
-                <template #dbas>
-                  <span
-                    class="text-blue-600"
-                    style="
-                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                    "
-                    >{{ $t("common.dbas") }}</span
-                  >
+                  <br class="hidden sm:block" />
                 </template>
                 <template #developers>
                   <span
-                    class="text-blue-600"
-                    style="
-                      box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
-                        rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
-                    "
+                    class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
                     >{{ $t("common.developers") }}</span
                   >
                 </template>
               </i18n>
-              <div class="flex mt-8 justify-center xl:justify-start">
+              <div class="flex mt-8 md:mt-12 justify-center xl:justify-start">
                 <DatabaseBar />
               </div>
             </div>
@@ -64,12 +37,12 @@
         </div>
       </div>
       <div
-        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-24 xl:w-2/3 2xl:w-3/4"
+        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-48 xl:w-3/4"
       >
         <img
           class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
           src="~/assets/illustration/main.webp"
-          alt
+          alt="Developer and DBA collaboration"
         />
       </div>
     </div>
@@ -119,7 +92,7 @@
           </template>
           <template #collaboration>
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
+              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
               >{{
                 $t("index-page.features.database-migration.collaboration")
               }}</span

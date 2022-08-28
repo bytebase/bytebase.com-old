@@ -16,11 +16,11 @@
     "for": "专为",
     "teams": "团队",
     "dbas": "DBA",
-    "developers": "应用开发者"
+    "developers": "开发者"
   },
   "slogan": {
-    "safer-and-faster": "安全高效",
-    "mission": "专为 DBA 和应用开发者打造的数据库变更和版本管理工具",
+    "reliable": "可靠的",
+    "mission": "为 DevOps 和 DBA 团队打造的数据库变更工具",
     "review-change-version-restore": "审核，变更，版本，恢复。",
     "database-devops-best-practice": "源自 Google 的数据库 DevOps 最佳实践。",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
@@ -226,8 +226,7 @@
     "all-rights-reserved": "版权所有。"
   },
   "index-page": {
-    "title": "{slogan}专为{teams}协同设计{br}数据库变更{br}以及版本控制",
-    "description": "Bytebase 是一个开源数据库 DevOps 工具，帮助{developers}和 {dbas} 管理数据库 Schema (DDL) 和数据 (DML) 的生命周期。",
+    "title": "面向{developers}{br}{slogan}{br}数据库变更",
     "features": {
       "database-migration": {
         "slogan": "更安全、更高效的数据库变更 - DDL、DML",

@@ -10,8 +10,8 @@
         </h1>
         <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
           <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-indigo-700"
-            >{{ $t("slogan.safer-and-faster") }}</span
+            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
+            >{{ $t("slogan.reliable") }}</span
           >
           {{ $t("slogan.mission") }}
         </h2>
