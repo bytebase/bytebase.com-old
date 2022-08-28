@@ -10,6 +10,7 @@
     "about": "About",
     "changelog": "Changelog",
     "company": "Company",
+    "features": "Features",
     "pricing": "Pricing",
     "subscribe": "Subscribe",
     "databases": "Databases",
@@ -142,40 +143,31 @@
   },
   "features": {
     "sql-review": {
-      "title": "SQL Review",
-      "description": "A dedicated review workflow and UI for Developers and DBAs to collaborate on schema changes. Assisted by built-in advisor such as backward compatibility checks."
+      "title": "SQL Review"
     },
-    "database-as-code": {
-      "title": "Database-as-Code",
-      "description": "Integrate with VCS hosting the migration scripts. Migration pipeline is triggered on observing new script push event."
-    },
-    "streamlined-deployment": {
-      "title": "Streamlined Deployment",
-      "description": "Support multi-tenant (M), multi-environment (N) schema change in a single M*N change matrix pipeline."
+    "sql-advisor": {
+      "title": "SQL Advisor"
     },
     "sql-editor": {
-      "title": "SQL Editor",
-      "description": "Easy-to-use query interface to SELECT database records."
+      "title": "SQL Editor"
     },
-    "migration-history": {
-      "title": "Migration History",
-      "description": "Record the full migration history with side-by-side diff comparison between versions."
+    "gitops": {
+      "title": "Database-as-Code"
     },
-    "anomaly-center": {
-      "title": "Anomaly Center",
-      "description": "Periodically scan all managed instances and databases and provide user a holistic view to see all anomalies."
+    "tenent-mode": {
+      "title": "Multi-Tenant Change"
+    },
+    "online-schema-change": {
+      "title": "Online Schema Change"
+    },
+    "pitr": {
+      "title": "PITR"
     },
     "drift-detection": {
-      "title": "Drift Detection",
-      "description": "Automatically detect schema drift by comparing the recorded schema and actual schema. Catch any unexpected schema changes."
-    },
-    "backup-and-restore": {
-      "title": "Backup and Restore",
-      "description": "Per-database automatic and manual backup. Environment specific backup schedule policy. Restore to new database with the entire restored migration history chain."
+      "title": "Drift Detection"
     },
     "role-based-access-control": {
-      "title": "Role-based Access Control",
-      "description": "Two role set. Owner, DBA, Developer for workspace. Owner, Developer for project."
+      "title": "RBAC"
     }
   },
   "banner": {
@@ -228,24 +220,28 @@
   "index-page": {
     "title": "{slogan} {br}Database Change {br}for {developers}",
     "features": {
-      "database-migration": {
-        "slogan": "Safer and faster database migration - DDL and DML",
-        "description": "Industry first database {devops} solution for DBA & Developer {collaboration}",
-        "devops": "DevOps",
-        "collaboration": "collaboration"
+      "database-change-and-version-control": {
+        "title": "Database change ❤️ version control",
+        "description": "GUI-based + GitOps-based DDL and DML workflow with change version history"
       },
-      "sql-review-and-version-control": {
-        "title": "SQL review and version control",
-        "description": "Ease the most stressful and dangerous change process in the application development cycle. Bytebase supports 2 most typical schema change workflow. Team can choose whatever fits the best."
+      "review-board": {
+        "title": "Review Board",
+        "description": "All-in-one SQL review board to provide a holistic view of the database change."
       },
-      "ui-workflow": {
-        "title": "UI workflow",
-        "description": "Classic SQL Review workflow where the developer submits a SQL review ticket directly from Bytebase and waits for the assigned DBA or peer developer to review. Bytebase applies the SQL change after review approved."
+      "gitops": {
+        "title": "GitOps Workflow",
+        "description": "Point-and-click GitHub and GitLab integration to enable GitOps workflow for changing database.",
+        "see-guide": "See Setup Guide"
       },
-      "version-control-workflow-gitops": {
-        "title": "Version control workflow #GitOps",
-        "description": "Database migration scripts are stored in a git repository. To make schema changes, a developer would create a migration script and submit for review in the corresponding VCS such as GitLab. After the script is approved and merged into the configured branch, Bytebase will automatically kicks off the task to apply the new schema change.",
-        "see-guide": "See Guide"
+      "tenant-mode": {
+        "title": "Multi-Tenant Rollout",
+        "description": "Help SaaS provider to manage database changes across all tenants.",
+        "see-guide": "See Setup Guide"
+      },
+      "sql-review": {
+        "title": "SQL Review Lint",
+        "description": "Automatically check SQL anti-patterns. Also available as GitHub Action and API.",
+        "see-guide": "See Setup Guide"
       },
       "all-in-one-sql-editor": {
         "title": "All-in-one SQL Editor",

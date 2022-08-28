@@ -10,6 +10,7 @@
     "about": "关于",
     "changelog": "更新日志",
     "company": "公司",
+    "features": "功能点",
     "pricing": "价格",
     "subscribe": "订阅",
     "databases": "数据库",
@@ -142,40 +143,31 @@
   },
   "features": {
     "sql-review": {
-      "title": "SQL 审核",
-      "description": "专为 DBA 与应用开发者进行 Schema 变更协作而设计的审核工作流程，内置可配置的 SQL 质量规则。"
+      "title": "SQL 审核"
     },
-    "database-as-code": {
-      "title": "Database-as-Code",
-      "description": "可与版本控制系统（VCS）集成以托管 Schema 变更文件。每当新的变更文件提交后，会自动触发变更流水线。"
-    },
-    "streamlined-deployment": {
-      "title": "流水线部署",
-      "description": "针对多租户（M）、多环境（N）的情况，支持在单个变更流水线中实现 M*N 的矩阵式变更。"
+    "sql-advisor": {
+      "title": "SQL 建议"
     },
     "sql-editor": {
-      "title": "SQL 编辑器",
-      "description": "一个易于使用的查询界面用于查看数据库记录。"
+      "title": "SQL 编辑器"
     },
-    "migration-history": {
-      "title": "变更历史",
-      "description": "通过相邻版本间的比对，来展示每次变更产生的差异。"
+    "gitops": {
+      "title": "Database-as-Code"
     },
-    "anomaly-center": {
-      "title": "异常中心",
-      "description": "定期扫描所有托管实例和数据库，并为用户提供整体视图以查看所有异常情况。"
+    "tenent-mode": {
+      "title": "多租户变更"
+    },
+    "online-schema-change": {
+      "title": "大表变更"
+    },
+    "pitr": {
+      "title": "PITR"
     },
     "drift-detection": {
-      "title": "Drift 检测",
-      "description": "定期扫描所有托管的实例与数据库，并为用户提供整体视图以查看所有异常事项。"
-    },
-    "backup-and-restore": {
-      "title": "备份与恢复",
-      "description": "支持数据库级别的定时自动、手动备份。可按开发、生产等不同环境制定差异化备份策略。"
+      "title": "Drift 检测"
     },
     "role-based-access-control": {
-      "title": "基于角色的访问控制",
-      "description": "提供两类角色集。Owner, DBA, Developer 用于全局平台管理。Owner, Developer 用于应用开发者在各自项目内管理。"
+      "title": "RBAC"
     }
   },
   "banner": {
@@ -228,24 +220,28 @@
   "index-page": {
     "title": "面向{developers}{br}{slogan}{br}数据库变更",
     "features": {
-      "database-migration": {
-        "slogan": "更安全、更高效的数据库变更 - DDL、DML",
-        "description": "行业首个面向 DBA 和应用开发者{collaboration}的数据库 {devops} 解决方案",
-        "devops": "DevOps",
-        "collaboration": "协同场景"
+      "database-change-and-version-control": {
+        "title": "数据库变更 ❤️ 版本控制",
+        "description": "基于 GUI + 基于 GitOps 的 DDL/DML 变更，详细的变更记录"
       },
-      "sql-review-and-version-control": {
-        "title": "SQL 审核与版本控制",
-        "description": "降低应用研发生命周期中最危险的变更风险。Bytebase 支持两种最典型的 Schema 变更流程，用户可以任意选择更适合的一种。"
+      "review-board": {
+        "title": "审核面板",
+        "description": "一站式 SQL 审核面板。直观看到所有数据库变更相关信息。"
       },
-      "ui-workflow": {
-        "title": "UI 工作流",
-        "description": "经典的 SQL 审核流程。开发人员直接在 Bytebase 平台提交 SQL 审核工单，等待指定的 DBA 或其他开发者的审核，一旦审核通过，Bytebase 将执行该语句进行变更。"
+      "gitops": {
+        "title": "GitOps 工作流",
+        "description": "点击式配置 GitHub 和 GitLab 集成。使用 GitOps 工作流进行数据库变更。",
+        "see-guide": "查看配置指南"
       },
-      "version-control-workflow-gitops": {
-        "title": "版本控制工作流 #GitOps",
-        "description": "数据库变更文件被存储在代码仓库库中。当需要进行 Schema 变更时，开发人员可以创建一个变更文件，并在相应的 VCS（例如 GitLab）中提交审核。当文件审核通过并被合并到指定分支后，Bytebase 将自动发起任务以执行该 Schema 变更。",
-        "see-guide": "查看指南"
+      "tenant-mode": {
+        "title": "多租户变更",
+        "description": "帮助 SaaS 提供商统一管理所有租户的数据库变更。",
+        "see-guide": "查看配置指南"
+      },
+      "sql-review": {
+        "title": "SQL Review 规则",
+        "description": "自动检查 SQL 语句规范。额外提供 GitHub Action 和 API 接入方式。",
+        "see-guide": "查看配置指南"
       },
       "all-in-one-sql-editor": {
         "title": "SQL 编辑器",

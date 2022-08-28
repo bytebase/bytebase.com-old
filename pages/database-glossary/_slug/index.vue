@@ -117,7 +117,7 @@
       <h2
         class="mt-16 text-center text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight"
       >
-        Features
+        {{ $t("common.features") }}
       </h2>
       <FeatureSection />
     </div>
