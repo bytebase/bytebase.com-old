@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="flex mt-12 px-4 justify-center">
+    <div class="max-w-7xl w-full mx-auto px-4 mt-12">
       <BookDemoSection />
     </div>
 
