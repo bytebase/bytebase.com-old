@@ -3,7 +3,7 @@
     ref="containerRef"
     class="w-full border mx-auto px-8 sm:px-12 py-8 sm:py-12 flex flex-wrap bg-indigo-700 rounded-3xl flex-col justify-start"
   >
-    <div class="flex flex-col justify-start text-white">
+    <div class="w-full flex flex-col justify-start text-white">
       <p class="text-3xl font-semibold tracking-tight text-white sm:text-6xl">
         {{
           $t("subscribe.learn-product-updates-and-everything-about-database")
