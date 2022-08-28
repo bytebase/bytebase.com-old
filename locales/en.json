@@ -163,8 +163,8 @@
     "pitr": {
       "title": "PITR"
     },
-    "drift-detection": {
-      "title": "Drift Detection"
+    "backup-restore": {
+      "title": "Backup & Restore"
     },
     "role-based-access-control": {
       "title": "RBAC"

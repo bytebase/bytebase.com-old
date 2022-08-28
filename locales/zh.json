@@ -163,8 +163,8 @@
     "pitr": {
       "title": "PITR"
     },
-    "drift-detection": {
-      "title": "Drift 检测"
+    "backup-restore": {
+      "title": "备份恢复"
     },
     "role-based-access-control": {
       "title": "RBAC"
