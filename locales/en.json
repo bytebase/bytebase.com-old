@@ -183,8 +183,7 @@
     "view-the-plan": "view the plan"
   },
   "subscribe": {
-    "get-database-insight": "Get Database Insight",
-    "learn-product-updates-and-everything-about-database": "Learn product updates and everything about database.",
+    "learn-product-updates-and-everything-about-database": "Learn product updates and database insight.",
     "email-subscription-success-message": "You've successfully subscribed to our newsletter.",
     "email-address": "Email address",
     "enter-your-email": "Enter your email"

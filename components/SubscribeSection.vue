@@ -1,34 +1,17 @@
 <template>
   <div
     ref="containerRef"
-    class="w-full border mx-auto py-8 flex items-center flex-wrap"
-    :class="
-      size === 'lg'
-        ? 'px-8 flex-row justify-between space-x-4'
-        : 'px-4 flex-col justify-start'
-    "
+    class="w-full border mx-auto px-8 sm:px-12 py-8 sm:py-12 flex flex-wrap bg-indigo-700 rounded-3xl flex-col justify-start"
   >
-    <div
-      class="flex flex-col justify-start"
-      :class="size === 'lg' ? 'items-start' : 'items-center'"
-    >
-      <h2
-        class="font-extrabold text-gray-900"
-        :class="size === 'lg' ? 'text-4xl' : 'text-3xl'"
-      >
-        {{ $t("subscribe.get-database-insight") }} 💡
-      </h2>
-      <p class="mt-3 text-lg leading-8 text-gray-500">
+    <div class="flex flex-col justify-start text-white">
+      <p class="text-3xl font-semibold tracking-tight text-white sm:text-6xl">
         {{
           $t("subscribe.learn-product-updates-and-everything-about-database")
         }}
       </p>
     </div>
-    <div
-      class="flex-shrink-0 flex flex-row justify-center flex-wrap py-3"
-      :class="size === 'lg' ? 'mt-0' : 'mt-4'"
-    >
-      <div v-if="subscribed" class="text-xl font-semibold text-indigo-600">
+    <div class="flex-shrink-0 flex flex-row flex-wrap py-3 text-white mt-4">
+      <div v-if="subscribed" class="text-xl font-semibold">
         <span class="text-3xl mr-2">🎉</span>
         {{ $t("subscribe.email-subscription-success-message") }}
       </div>
@@ -47,13 +30,13 @@
           type="email"
           autocomplete="email"
           required
-          class="w-80 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 mr-3 sm:max-w-xs rounded-md"
+          class="w-64 sm:w-80 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 mr-3 sm:max-w-xs text-xl rounded-md"
           :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
           :placeholder="$t('subscribe.enter-your-email')"
         />
         <button
           type="submit"
-          class="w-auto flex items-center justify-center border border-transparent text-base font-medium rounded-md shadow text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          class="w-auto flex items-center justify-center border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
           :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
         >
           {{ $t("common.subscribe") }}

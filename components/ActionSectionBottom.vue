@@ -1,6 +1,6 @@
 <template>
   <div class="bg-indigo-700 rounded-3xl">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-12">
+    <div class="max-w-7xl mx-auto py-8 sm:py-12 px-8 sm:px-12">
       <h2
         class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-6xl"
       >
