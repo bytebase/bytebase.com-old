@@ -1,6 +1,6 @@
 <template>
   <div class="bg-indigo-700 rounded-3xl">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 xl:px-12">
+    <div class="max-w-7xl mx-auto py-8 sm:py-12 px-8 sm:px-12">
       <div class="xl:grid xl:grid-cols-2 xl:gap-8 xl:items-center">
         <div>
           <h2
@@ -8,7 +8,7 @@
           >
             {{ $t("past-company.built-by") }}
           </h2>
-          <div class="my-5 flex md:my-8 justify-center xl:justify-start">
+          <div class="my-5 flex md:my-8 justify-start">
             <div
               v-if="subscribed"
               class="flex flex-row items-center mt-4 text-white"
@@ -27,7 +27,9 @@
               </i18n>
             </div>
             <form v-else @submit="subscribe">
-              <div class="flex space-x-8 items-center whitespace-nowrap">
+              <div
+                class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 whitespace-nowrap"
+              >
                 <input
                   id="email-address"
                   v-model="email"
@@ -35,21 +37,19 @@
                   type="email"
                   autocomplete="email"
                   required
-                  class="w-48 sm:w-72 px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl flex-1 shadow-sm placeholder-gray-400 rounded-md"
+                  class="w-full sm:w-72 px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl flex-1 shadow-sm placeholder-gray-400 rounded-md"
                   :placeholder="$t('subscribe.enter-your-email')"
                 />
-                <div class="flex flex-row justify-center w-full sm:w-56">
-                  <button
-                    type="submit"
-                    class="flex items-center justify-center px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
-                  >
-                    <div class="flex flex-row justify-center items-center">
-                      <Calendar class="w-4 h-4 mr-2" />{{
-                        $t("demo.book-a-demo")
-                      }}
-                    </div>
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  class="w-full sm:w-56 flex items-center justify-center px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
+                >
+                  <div class="flex flex-row justify-center items-center">
+                    <Calendar class="w-4 h-4 mr-2" />{{
+                      $t("demo.book-a-demo")
+                    }}
+                  </div>
+                </button>
               </div>
             </form>
           </div>

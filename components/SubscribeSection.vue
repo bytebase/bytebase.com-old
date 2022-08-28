@@ -17,7 +17,7 @@
       </div>
       <form
         v-else
-        class="flex flex-row justify-start items-center"
+        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 justify-start sm:items-center"
         @submit="subscribe"
       >
         <label for="email-address" class="sr-only">{{
@@ -30,13 +30,13 @@
           type="email"
           autocomplete="email"
           required
-          class="w-64 sm:w-80 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 mr-3 sm:max-w-xs text-xl rounded-md"
+          class="w-72 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 mr-3 sm:max-w-xs text-xl rounded-md"
           :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
           :placeholder="$t('subscribe.enter-your-email')"
         />
         <button
           type="submit"
-          class="w-auto flex items-center justify-center border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
+          class="w-36 flex items-center justify-center border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
           :class="size === 'lg' ? 'px-5 py-3' : 'px-4 py-2'"
         >
           {{ $t("common.subscribe") }}
