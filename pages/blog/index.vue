@@ -89,25 +89,18 @@
     </div>
 
     <!-- Full width subscribtion section -->
-    <div
-      class="w-full pt-2 bg-yellow-100 flex flex-row justify-center items-center"
-    >
-      <div class="w-160 h-auto">
-        <SubscribeSection
-          class="border-none flex-col justify-start"
-          :module-name="'subscribe.blog'"
-        />
-      </div>
+    <div class="max-w-7xl mx-auto px-4">
+      <SubscribeSection :module-name="'subscribe.blog'" />
     </div>
 
     <!-- Other post list section -->
     <div
-      class="relative w-full mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl mt-12 mb-8 grid grid-cols-1 p-4 gap-6 md:grid-cols-2 lg:grid-cols-3"
+      class="relative w-full mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl mt-8 mb-8 grid grid-cols-1 p-4 gap-6 md:grid-cols-2 lg:grid-cols-3"
     >
       <div
         v-for="(blog, index) in blogList"
         :key="index"
-        class="flex flex-col border-none rounded-lg shadow-lg overflow-hidden"
+        class="flex flex-col border shadow-md overflow-hidden"
       >
         <nuxt-link :to="localePath(`/blog/${blog.slug}`)" class="flex-shrink-0">
           <img class="h-48 w-full object-cover" :src="blog.featureImage" />
@@ -144,7 +137,7 @@
                 v-if="blog.author.avatar"
                 class="h-10 w-10 rounded-full"
                 :src="blog.author.avatar"
-                alt
+                alt="avatar"
               />
             </div>
             <div class="ml-3">
