@@ -70,6 +70,13 @@
             </li>
             <li>
               <nuxt-link
+                :to="localePath('/integration/github')"
+                class="text-base text-gray-500 hover:text-gray-900"
+                >GitHub</nuxt-link
+              >
+            </li>
+            <li>
+              <nuxt-link
                 :to="localePath('/integration/slack')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 >Slack</nuxt-link

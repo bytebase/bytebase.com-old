@@ -320,8 +320,9 @@
     "dingtalk-feature": "Bytebase 支持 webhook 将数据库架构相关的事件发布到配置的钉钉组。 这些 webhook 事件是专门为钉钉定制的，以显示最佳格式。",
     "discord-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Discord 通道。 这些 webhook 事件是专门为 Discord 定制的，以显示最佳格式。",
     "feishu-feature": "Bytebase 支持 webhook 将数据库模式相关的事件发布到配置的飞书组。 这些 webhook 事件是专门为飞书定制的，以显示最佳格式。",
-    "gitlab-feature": "Bytebase 与 GitLab 集成，允许团队管理 GitLab 存储库中的数据库变更脚本。 在观察到新的变更脚本推送事件时触发变更管道，",
-    "view-detailed-guide": "查看详细指南",
+    "gitlab-feature": "Bytebase 与 GitLab 集成，允许团队管理 GitLab 存储库中的数据库变更脚本。在观察到新的变更脚本推送事件时触发变更管道。",
+    "github-feature": "Bytebase 与 GitHub 集成，允许团队管理 GitHub 存储库中的数据库变更脚本。在观察到新的变更脚本推送事件时触发变更管道。",
+    "view-detailed-guide": "查看详细指南。",
     "slack-feature": "Bytebase 支持 webhook 将与数据库模式相关的事件发布到配置的 Slack 通道。 这些 webhook 事件是专门为 Slack 定制的，以显示最佳格式。",
     "teams-feature": "Bytebase 支持 webhook 将与数据库架构相关的事件发布到配置的 Microsoft Teams 通道。 这些 webhook 事件是专门为 Teams 定制的，以显示最佳格式。",
     "wecom-feature": "Bytebase 支持 webhook 将数据库模式相关事件发布到配置的 WeCom 组。 这些 webhook 事件是专门为 WeCom 定制的，以显示最佳格式。"

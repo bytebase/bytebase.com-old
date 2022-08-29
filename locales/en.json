@@ -320,8 +320,9 @@
     "dingtalk-feature": "Bytebase supports webhook to post database schema related events to the configured DingTalk group. Those webhook events are specifically customized for DingTalk in order to display the optimal format.",
     "discord-feature": "Bytebase supports webhook to post database schema related events to the configured Discord channel. Those webhook events are specifically customized for Discord in order to display the optimal format.",
     "feishu-feature": "Bytebase supports webhook to post database schema related events to the configured Feishu group. Those webhook events are specifically customized for Feishu in order to display the optimal format.",
-    "gitlab-feature": "Bytebase integrates with GitLab to allow team to manage database migration scripts in the GitLab repository. Migration pipeline is triggered on observing new migration script push event,",
-    "view-detailed-guide": "View detailed guide",
+    "gitlab-feature": "Bytebase integrates with GitLab to allow team to manage database migration scripts in the GitLab repository. Migration pipeline is triggered on observing new migration script push event.",
+    "github-feature": "Bytebase integrates with GitHub to allow team to manage database migration scripts in the GitHub repository. Migration pipeline is triggered on observing new migration script push event.",
+    "view-detailed-guide": "View detailed guide.",
     "slack-feature": "Bytebase supports webhook to post database schema related events to the configured Slack channel. Those webhook events are specifically customized for Slack in order to display the optimal format.",
     "teams-feature": "Bytebase supports webhook to post database schema related events to the configured Microsoft Teams channel. Those webhook events are specifically customized for Teams in order to display the optimal format.",
     "wecom-feature": "Bytebase supports webhook to post database schema related events to the configured WeCom group. Those webhook events are specifically customized for WeCom in order to display the optimal format."
