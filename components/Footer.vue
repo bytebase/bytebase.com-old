@@ -3,7 +3,7 @@
     class="w-full relative bg-white px-4 pb-8"
     aria-labelledby="footer-heading"
   >
-    <div class="max-w-7xl w-full mx-auto mt-12">
+    <div class="max-w-7xl w-full mx-auto mt-16">
       <ActionSectionBottom class="sm:justify-center" :module-name="'footer'" />
     </div>
     <h2 id="footer-heading" class="sr-only">Footer</h2>
