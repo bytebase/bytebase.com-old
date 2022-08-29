@@ -218,7 +218,7 @@
     "all-rights-reserved": "版权所有。"
   },
   "index-page": {
-    "title": "面向{developers}{br}{slogan}{br}数据库变更",
+    "title": "面向{developers}{br}{slogan}{br}数据库变更{br}管理工具",
     "gitlab-for-database-devops": "GitLab 所没有的 {database-devops} ",
     "database-devops": "Database DevOps",
     "features": {

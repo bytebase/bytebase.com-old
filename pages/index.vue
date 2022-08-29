@@ -3,7 +3,7 @@
   <div class="xl:-mt-8 overflow-hidden">
     <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto xl:py-32">
+      <div class="max-w-7xl mx-auto xl:py-48">
         <!-- Set z-10 so the action buttons won't be covered by the illustration -->
         <div class="z-10 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
@@ -11,7 +11,7 @@
               <i18n
                 path="index-page.title"
                 tag="h1"
-                class="mt-2 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-8xl xl:text-9xl"
+                class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl sm:text-8xl"
               >
                 <template #slogan>
                   <span
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div
-        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-48 xl:w-3/4"
+        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-32 xl:w-3/4"
       >
         <img
           class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
