@@ -22,7 +22,7 @@
   "slogan": {
     "reliable": "可靠的",
     "mission": "为 DevOps 和 DBA 团队打造的数据库变更工具",
-    "review-change-version-restore": "审核，变更，版本，恢复。",
+    "review-change-version-rollback": "审核，变更，留档，回滚。",
     "database-devops-best-practice": "源自 Google 的数据库 DevOps 最佳实践。",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase"
@@ -163,8 +163,8 @@
     "pitr": {
       "title": "PITR"
     },
-    "drift-detection": {
-      "title": "Drift 检测"
+    "backup-restore": {
+      "title": "备份恢复"
     },
     "role-based-access-control": {
       "title": "RBAC"
@@ -219,11 +219,9 @@
   },
   "index-page": {
     "title": "面向{developers}{br}{slogan}{br}数据库变更",
+    "gitlab-for-database-devops": "GitLab 所没有的 {database-devops} ",
+    "database-devops": "Database DevOps",
     "features": {
-      "database-change-and-version-control": {
-        "title": "数据库变更 ❤️ 版本控制",
-        "description": "基于 GUI + 基于 GitOps 的 DDL/DML 变更，详细的变更记录"
-      },
       "review-board": {
         "title": "审核面板",
         "description": "一站式 SQL 审核面板。直观看到所有数据库变更相关信息。"

@@ -5,7 +5,7 @@
         class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-6xl"
       >
         <span class="block">{{
-          $t("slogan.review-change-version-restore")
+          $t("slogan.review-change-version-rollback")
         }}</span>
         <i18n
           path="slogan.database-devops-best-practice"

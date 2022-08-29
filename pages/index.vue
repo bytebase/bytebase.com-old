@@ -47,51 +47,32 @@
       </div>
     </div>
 
-    <div class="max-w-7xl w-full mx-auto px-4 mt-12">
+    <div class="max-w-7xl w-full mx-auto px-4 mt-8">
       <BookDemoSection />
     </div>
 
-    <div class="mt-16 relative">
-      <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6">
-        <img
-          class="order-2 relative lg:absolute shadow-lg mt-6 -ml-2 lg:ml-16 xl:ml-64 lg:z-10 lg:mt-144"
-          src="~/assets/screenshot_home.webp"
-          alt="App screenshot"
-          width="1200"
-          height="675"
-        />
-        <img
-          class="order-1 relative shadow-md -ml-2 lg:mb-12"
-          src="~/assets/screenshot_task.webp"
-          alt="App screenshot"
-          width="1200"
-          height="900"
-        />
-      </div>
-    </div>
-
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 mt-6 lg:mt-72"
-    >
+    <div class="max-w-7xl mt-12 sm:mt-24 mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
+        <i18n
+          path="index-page.gitlab-for-database-devops"
+          tag="h2"
+          class="mt-2 text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900"
         >
-          {{
-            $t("index-page.features.database-change-and-version-control.title")
-          }}
-        </h2>
-        <div class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
-          {{
-            $t(
-              "index-page.features.database-change-and-version-control.description"
-            )
-          }}
-        </div>
+          <template #database-devops>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
+              >{{ $t("index-page.database-devops") }}</span
+            >
+          </template>
+        </i18n>
+      </div>
+
+      <div class="mt-12">
+        <img src="~/assets/screenshot.webp" alt="App screenshot" />
       </div>
     </div>
 
-    <div class="relative bg-white mt-16 pb-8 overflow-hidden">
+    <div class="relative bg-white mt-12 sm:mt-24 pb-8 overflow-hidden">
       <div class="relative">
         <div
           class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -127,7 +108,7 @@
                 </h3>
               </div>
               <div class="mt-6">
-                <div class="mt-4 lg:text-right text-lg text-gray-500">
+                <div class="mt-4 lg:text-right text-xl text-gray-500">
                   {{ $t("index-page.features.review-board.description") }}
                 </div>
               </div>
@@ -176,7 +157,7 @@
                 </h3>
               </div>
               <div class="mt-6">
-                <div class="mt-4 text-lg text-gray-500">
+                <div class="mt-4 text-xl text-gray-500">
                   {{ $t("index-page.features.gitops.description") }}
                 </div>
                 <div class="mt-6">
@@ -234,7 +215,7 @@
                 </h3>
               </div>
               <div class="mt-6">
-                <div class="mt-4 lg:text-right text-lg text-gray-500">
+                <div class="mt-4 lg:text-right text-xl text-gray-500">
                   {{ $t("index-page.features.tenant-mode.description") }}
                 </div>
                 <div class="mt-6 lg:text-right">
@@ -299,7 +280,7 @@
                 </h3>
               </div>
               <div class="mt-6">
-                <div class="mt-4 text-lg text-gray-500">
+                <div class="mt-4 text-xl text-gray-500">
                   {{ $t("index-page.features.sql-review.description") }}
                 </div>
                 <div class="mt-6">
@@ -328,17 +309,35 @@
 
     <!-- begin/SQL Editor Section -->
     <div class="max-w-7xl mx-auto mt-16 px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
+      <div class="flex flex-row space-x-4 justify-center">
+        <span
+          class="w-12 h-12 flex items-center justify-center p-2 bg-white border-2 border-gray-900 rounded-md shadow-lg"
+        >
+          <svg
+            class="w-10 h-10 text-gray-900"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+        </span>
+        <h3
+          class="text-center text-5xl font-extrabold tracking-tight text-gray-900"
         >
           {{ $t("index-page.features.all-in-one-sql-editor.title") }}
-        </h2>
-        <h3 class="mt-4 max-w-3xl text-center text-xl text-gray-500 mx-auto">
-          {{ $t("index-page.features.all-in-one-sql-editor.description") }}
         </h3>
       </div>
-      <div class="py-16">
+      <div class="mt-4 max-w-3xl text-center text-xl text-gray-500 mx-auto">
+        {{ $t("index-page.features.all-in-one-sql-editor.description") }}
+      </div>
+      <div class="pt-12">
         <img
           class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
           src="~/static/docs/sql-editor-preview.webp"
@@ -348,7 +347,7 @@
     </div>
     <!-- end of/SQL Editor Section -->
 
-    <div class="my-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2
         class="text-center mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
       >
