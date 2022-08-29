@@ -17,7 +17,7 @@
           <ScreenshotSection />
         </div>
         <h2
-          class="mt-16 lg:mt-56 text-center text-3xl sm:text-5xl font-extrabold text-gray-900"
+          class="mt-16 sm:mt-24 text-center text-3xl sm:text-5xl font-extrabold text-gray-900"
         >
           {{ $t("common.features") }}
         </h2>
