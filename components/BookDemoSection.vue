@@ -37,12 +37,12 @@
                   type="email"
                   autocomplete="email"
                   required
-                  class="w-full sm:w-72 px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl flex-1 shadow-sm placeholder-gray-400 rounded-md"
+                  class="w-full sm:w-64 px-6 py-4 border border-transparent text-xl md:text-2xl flex-1 shadow-sm placeholder-gray-400 rounded-md"
                   :placeholder="$t('subscribe.enter-your-email')"
                 />
                 <button
                   type="submit"
-                  class="w-full sm:w-56 flex items-center justify-center px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
+                  class="w-full sm:w-64 flex items-center justify-center px-4 sm:px-8 py-4 border border-transparent text-xl md:text-2xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
                 >
                   <div class="flex flex-row justify-center items-center">
                     <Calendar class="w-4 h-4 mr-2" />{{
