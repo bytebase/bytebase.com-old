@@ -71,7 +71,7 @@
                 type="email"
                 autocomplete="email"
                 required
-                class="w-54 mb-8 px-4 py-2 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md"
+                class="w-48 mb-8 px-4 py-2 border border-gray-300 flex-grow shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md"
                 :placeholder="$t('subscribe.enter-your-email')"
               />
               <div class="flex flex-row justify-center w-full">
@@ -198,6 +198,6 @@ export default defineComponent({
   min-width: 16rem;
 }
 .enter-btn {
-  @apply bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent w-36 inline-block py-3 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-lg font-medium;
+  @apply bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent w-48 inline-block py-3 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-lg font-medium;
 }
 </style>
