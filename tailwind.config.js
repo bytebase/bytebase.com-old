@@ -24,6 +24,9 @@ module.exports = {
         192: "48rem",
         208: "52rem",
       },
+      lineHeight: {
+        tight: "1.15",
+      },
       typography: {
         // These configs are to override the default `prose` theme.
         DEFAULT: {
