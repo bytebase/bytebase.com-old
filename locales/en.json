@@ -219,7 +219,7 @@
   },
   "index-page": {
     "title": "{slogan} {br}Database Change {br}for {developers}",
-    "gitlab-for-database-devops": "The missing {database-devops} for GitLab",
+    "gitlab-for-database-devops": "The GitLab for {database-devops}",
     "database-devops": "Database DevOps",
     "features": {
       "review-board": {
