@@ -3,7 +3,7 @@
   <div class="xl:-mt-8 overflow-hidden">
     <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto xl:py-48">
+      <div class="max-w-7xl mx-auto xl:py-40">
         <!-- Set z-10 so the action buttons won't be covered by the illustration -->
         <div class="z-10 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
