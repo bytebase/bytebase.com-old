@@ -137,7 +137,7 @@ export default defineComponent({
       {
         hid: "about",
         name: "about",
-        content: "Built by the engineers behind Google Cloud SQL",
+        content: "Built by engineers knowing database development flow",
       },
     ],
   },
