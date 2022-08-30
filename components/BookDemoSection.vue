@@ -8,7 +8,7 @@
           >
             {{ $t("past-company.built-by") }}
           </h2>
-          <div class="my-5 flex md:my-8 justify-start">
+          <div class="my-8 flex xl:mt-8 xl:mb-0 justify-start">
             <div
               v-if="subscribed"
               class="flex flex-row items-center mt-4 text-white"
