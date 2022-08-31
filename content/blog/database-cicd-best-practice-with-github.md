@@ -84,6 +84,6 @@ Here, we present a complete Database DevOps workflow:
 7. The latest database schema is automatically written back to the code repository after applying changes. With this, the Dev team always has a copy of the latest schema. Furthermore, they can configure downstream pipelines based on the change of that latest schema.
 8. Confirm the migration and proceed to the corresponding application rollout.
 
-This workflow fits in nicely with the existing CI/CD process and is natural to the Developers. And if you are an acute reader, you may have already spotted the described steps above are a state-of-the-art implementation of the landmark article [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) written in 2016 by Martin Fowler.
+This workflow fits in nicely with the existing CI/CD process and is natural to the Developers. Acute readers may have already spotted the described steps are an implementation of the landmark article [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html).
 
 Ready to taste this Database DevOps workflow yourself? Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
