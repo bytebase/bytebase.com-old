@@ -2,7 +2,7 @@
   <!-- xl:-mt-8 is negating the empty space used in the hero section  -->
   <div class="xl:-mt-8 overflow-hidden">
     <!-- Hero section -->
-    <div class="mx-auto relative bg-white overflow-hidden">
+    <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto xl:py-40">
         <!-- Set z-10 so the action buttons won't be covered by the illustration -->
         <div class="z-10 xl:max-w-2xl xl:w-full">
@@ -12,11 +12,6 @@
                 path="index-page.title"
                 tag="h1"
                 class="mt-2 tracking-tight font-extrabold text-gray-900 text-4xl sm:text-8xl"
-                :class="
-                  currentLocale === 'zh'
-                    ? 'leading-tight sm:leading-tight xl:-mt-6'
-                    : ''
-                "
               >
                 <template #slogan>
                   <span
@@ -42,10 +37,10 @@
         </div>
       </div>
       <div
-        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-36 xl:w-3/4"
+        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-32 xl:w-3/4"
       >
         <img
-          class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-auto"
+          class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
           src="~/assets/illustration/main.webp"
           alt="Developer and DBA collaboration"
         />
@@ -368,7 +363,6 @@ import {
   defineComponent,
   useContext,
   onMounted,
-  computed,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
 import { useStore } from "~/store";
@@ -380,8 +374,6 @@ export default defineComponent({
   setup() {
     const { app } = useContext();
     const store = useStore();
-    const currentLocale = computed(() => app.i18n.locale);
-
     const track = (name: string) => {
       trackEvent(name);
     };
@@ -409,7 +401,6 @@ export default defineComponent({
     });
 
     return {
-      currentLocale,
       track,
     };
   },

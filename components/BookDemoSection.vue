@@ -5,9 +5,6 @@
         <div>
           <h2
             class="text-3xl tracking-tight font-semibold text-white sm:text-6xl"
-            :class="
-              currentLocale === 'zh' ? 'leading-tight sm:leading-tight' : ''
-            "
           >
             {{ $t("past-company.built-by") }}
           </h2>
@@ -108,8 +105,6 @@ import {
   ref,
   onMounted,
   watchEffect,
-  useContext,
-  computed,
 } from "@nuxtjs/composition-api";
 import { Metric, useSegment } from "~/plugin/segment";
 import Plausible from "plausible-tracker";
@@ -120,9 +115,6 @@ const { trackEvent } = Plausible();
 export default defineComponent({
   components: { Calendar },
   setup() {
-    const { app } = useContext();
-    const currentLocale = computed(() => app.i18n.locale);
-
     const analytics = ref<Metric>();
     const email = ref("");
     const subscribed = ref(false);
@@ -148,10 +140,9 @@ export default defineComponent({
     });
 
     return {
-      currentLocale,
-      email,
       subscribed,
       subscribe,
+      email,
     };
   },
 });
