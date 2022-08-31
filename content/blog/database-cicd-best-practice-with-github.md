@@ -10,7 +10,7 @@ description: We already have CI/CD for code delivery, why not the database? Imag
 
 Database change is a tricky part of the application development process: it usually involves multiple databases from different environments and cross-team collaboration, to add on top of it, databases are touch and go. It got us thinking: **can we treat database the same way we treat application code?**
 
-DORA (DevOps Research & Assessment) [pointed out](https://cloud.google.com/architecture/devops/devops-tech-database-change-management) that integrating database work into the software delivery process positively contributes to continuous delivery. It’s about time to make databases a part of the DevOps cycle. 
+DORA (DevOps Research & Assessment) [pointed out](https://cloud.google.com/architecture/devops/devops-tech-database-change-management) that integrating database work into the software delivery process positively contributes to continuous delivery. It’s about time to make databases a part of the CI/CD cycle.
 
 But how does it work, really?
 
@@ -37,7 +37,7 @@ This step is to make sure that:
 
 To avoid change-related errors, reducing the manual aspects is also crucial: the more things are automated, the fewer chances for mistakes to happen. Pre-configured pipelines to automatically apply SQL to the databases? That sounds rad. In order to avoid affecting regular business operations negatively, various zero-downtime change techniques should be adopted, especially for databases with large datasets.
 
-Thus, the critical elements for implementing Database DevOps should **enable dev teams to perform SQL reviews** and **streamlined SQL change rollout**.
+Thus, the critical elements for implementing Database CI/CD should **enable dev teams to perform SQL reviews** and **streamlined SQL change rollout**.
 
 ## SQL Review and Change Rollout with VCS Integration
 
@@ -63,15 +63,15 @@ We need a more efficient and automated release process. Let’s recall the class
 
 Well, yes, we can!
 
-A SQL change rollout tool for Database DevOps should have the ability to integrate with VCS. Once your SQL scripts have been vetted and merged into the target branch, the release process is triggered, and the scripts are automatically pushed to Bytebase. Of course, the DBA can perform another sanity check before executing the SQL against the target database.
+A SQL change rollout tool for Database CI/CD should have the ability to integrate with VCS. Once your SQL scripts have been vetted and merged into the target branch, the release process is triggered, and the scripts are automatically pushed to Bytebase. Of course, the DBA can perform another sanity check before executing the SQL against the target database.
 
 ![create-table-github](/static/blog/database-cicd-best-practice-with-github/create-table-github.webp)
 
 ![bytebase-vcs-issue](/static/blog/database-cicd-best-practice-with-github/bytebase-vcs-issue.webp)
 
-## A Complete Database DevOps Workflow
+## A Complete Database CI/CD Workflow
 
-Here, we present **a complete Database DevOps workflow**:
+Here, we present **a complete Database CI/CD workflow**:
 
 ![database-devops-workflow](/static/blog/database-cicd-best-practice-with-github/database-devops-workflow.webp)
 
@@ -86,4 +86,4 @@ Here, we present **a complete Database DevOps workflow**:
 
 This workflow fits in nicely with the existing CI/CD process and is natural to the Developers. Acute readers may have already spotted the described steps are an implementation of the landmark article [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html).
 
-Ready to taste this Database DevOps workflow yourself? Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
+Ready to taste this Database CI/CD workflow yourself? Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
