@@ -3,7 +3,6 @@
     <div class="max-w-7xl mx-auto py-8 sm:py-12 px-8 sm:px-12">
       <h2
         class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-6xl"
-        :class="currentLocale === 'zh' ? 'leading-tight sm:leading-tight' : ''"
       >
         <span class="block">{{
           $t("slogan.review-change-version-rollback")
@@ -71,7 +70,6 @@ export default defineComponent({
   },
   setup(props) {
     const { app } = useContext();
-    const currentLocale = computed(() => app.i18n.locale);
     const analytics = ref<Metric>();
 
     onMounted(() => {
@@ -90,11 +88,7 @@ export default defineComponent({
       return app.i18n.t("slogan.deploy-bytebase-in-5-seconds");
     });
 
-    return {
-      actionSentence,
-      currentLocale,
-      track,
-    };
+    return { track, actionSentence };
   },
 });
 </script>
