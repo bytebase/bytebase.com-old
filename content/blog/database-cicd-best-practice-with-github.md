@@ -1,8 +1,8 @@
 ---
-title: The Database DevOps Best Practice with GitHub
+title: The Database CI/CD Best Practice with GitHub
 author: Changyu
 published_at: 2022/08/31 15:15
-feature_image: /static/blog/database-devops-best-practice-with-github/database-devops-best-practice-with-github.webp
+feature_image: /static/blog/database-cicd-best-practice-with-github/database-cicd-best-practice-with-github.webp
 tags: Education
 featured: true
 description: We already have CI/CD for code delivery, why not the database? Imagine applying and deploying database changes the same way you would application code.
@@ -14,9 +14,9 @@ DORA (DevOps Research & Assessment) [pointed out](https://cloud.google.com/archi
 
 But how does it work, really?
 
-## Critical Elements of Database DevOps
+## Critical Elements of Database CI/CD
 
-To answer the "how", we first need to sort out the typical database change workflow. Before SQL statements can be safely applied to the database, there are two key steps: review & execute.
+To answer the "how", we first need to sort out the typical database change workflow. Before SQL statements can be safely applied to the database, there are two key steps: review & change.
 
 ### SQL Review
 
@@ -27,19 +27,19 @@ This step is to make sure that the changes:
 
 Here, the devs are generally responsible for the former task and the DBAs for the latter. The DevOps philosophy looks to solve this problem by integrating Ops and Devs. The reality is that when DBA exists in an organization, it is difficult to merge the two teams directly. One potential solution is to retain the DBA’s task while enabling dev teams to pre-review the SQL. This **shift-left approach** can significantly reduce the chance of release delays. Moreover, if there are no DBAs in an organization, then it is even more crucial to empower the dev team with the capability to make sure the SQL doesn’t wreak havoc on the database.
 
-### SQL Execution
+### SQL Change
 
 This step is to make sure that:
 
-- Statements are executed correctly. We don’t want to connect to wrong databases, insufficient permissions, object name conflicts, or basic syntax errors on our hands.
+- Statements are executed correctly. We don’t want wrong database connections, insufficient permissions, object name conflicts, or basic syntax errors on our hands.
 - All planned statements are executed. Omissions may occur when there are many scripts to be executed or if there are multiple target databases for batch execution.
 - The execution process should not impact the business. Hardware resource exhaustion and locking the table for an extended period are not pleasant for the company.
 
 To avoid execution-related errors, reducing the manual aspects is also crucial: the more things are automated, the fewer chances for mistakes to happen. Pre-configured pipelines to automatically apply SQL to the databases? That sounds rad. In order to avoid affecting regular business operations negatively, various zero-downtime change techniques should be adopted, especially for databases with large datasets.
 
-Thus, the critical elements for implementing Database DevOps should **enable dev teams to perform SQL reviews** and **automated releases**.
+Thus, the critical elements for implementing Database DevOps should **enable dev teams to perform SQL reviews** and **streamlined SQL change rollout**.
 
-## SQL Review with VCS Integration
+## SQL Review and Change Rollout with VCS Integration
 
 Let’s first explore how to enable the dev teams to perform SQL reviews themselves.
 
@@ -49,31 +49,31 @@ However, these tools have one common problem - they are all designed for the DBA
 
 So what should a developer-friendly SQL review tool look like?
 
-We usually perform the traditional code review process on version control systems (VCS), and the same should be valid for SQL. Therefore, SQL review tools should be integrated into the code review workflow. Bytebase has made [SQL Review Action available on the GitHub Marketplace](https://github.com/marketplace/actions/sql-review); once enabled, SQL Review Actions will be triggered as you submit PR on GitHub.
+We usually perform the traditional code review process on version control systems (VCS), and the same should be applied to SQL. Therefore, SQL review tools should be integrated into the code review workflow. Bytebase has made [SQL Review Action available on the GitHub Marketplace](https://github.com/marketplace/actions/sql-review); once enabled, SQL Review Actions will be triggered as you submit PR on GitHub.
 
-![sql-review-gha](/static/blog/database-devops-best-practice-with-github/sql-review-gha.webp)
+![sql-review-gha](/static/blog/database-cicd-best-practice-with-github/sql-review-gha.webp)
 
-![sql-review-actions](/static/blog/database-devops-best-practice-with-github/sql-review-actions.webp)
+![sql-review-actions](/static/blog/database-cicd-best-practice-with-github/sql-review-actions.webp)
 
-Let’s look at how to implement automated change releases.
+Let’s look at how to implement streamlined SQL change rollouts.
 
 Standalone SQL deployment tools are not uncommon. These tools typically upload SQL scripts manually, proceed with the deployment via an approval flow, and then provide feedback after the rollout is complete. This model accurately depicts how the developers and the DBAs work independently, and the fragmented process is one of the most common reasons for delayed releases. After all, who can guarantee that there will never be a mistake when you are constantly moving SQL scripts between multiple systems manually?
 
-We need a more efficient and automated release process. Let’s recall the classic CI/CD workflow for application code: commit changes > code review > merge branch > auto-build > auto-deploy. Since we’ve already implemented SQL review on GitHub Actions, why can’t we include the subsequent execution process?
+We need a more efficient and automated release process. Let’s recall the classic CI/CD workflow for application code: commit changes > code review > merge branch > auto-build > auto-deploy. Since we’ve already implemented SQL review on GitHub Actions, why can’t we include the subsequent rollout process?
 
 Well, yes, we can!
 
-A SQL execution tool for Database DevOps should have the ability to integrate with VCS. Once your SQL scripts have been vetted and merged into the target branch, the release process is triggered, and the scripts are automatically pushed to Bytebase. Of course, the DBA can perform another sanity check before the rollout.
+A SQL change rollout tool for Database DevOps should have the ability to integrate with VCS. Once your SQL scripts have been vetted and merged into the target branch, the release process is triggered, and the scripts are automatically pushed to Bytebase. Of course, the DBA can perform another sanity check before executing the SQL against the target database.
 
-![create-table-github](/static/blog/database-devops-best-practice-with-github/create-table-github.webp)
+![create-table-github](/static/blog/database-cicd-best-practice-with-github/create-table-github.webp)
 
-![bytebase-vcs-issue](/static/blog/database-devops-best-practice-with-github/bytebase-vcs-issue.webp)
+![bytebase-vcs-issue](/static/blog/database-cicd-best-practice-with-github/bytebase-vcs-issue.webp)
 
 ## A Complete Database DevOps Workflow
 
 Here, we present a complete Database DevOps workflow:
 
-![database-devops-workflow](/static/blog/database-devops-best-practice-with-github/database-devops-workflow.webp)
+![database-devops-workflow](/static/blog/database-cicd-best-practice-with-github/database-devops-workflow.webp)
 
 1. The developer creates a Merge Request / Pull Request containing the SQL migration script;
 2. SQL Review Action is automatically triggered to review SQL and offers suggestions to assist the code review;
@@ -82,7 +82,8 @@ Here, we present a complete Database DevOps workflow:
 5. (Optional) A DBA or a designated reviewer may review the change scripts via Bytebase’s built-in UI;
 6. Approved scripts are executed gradually according to the configured rollout stages;
 7. The latest database schema is automatically written back to the code repository after applying changes. With this, the Dev team always has a copy of the latest schema. Furthermore, they can configure downstream pipelines based on the change of that latest schema.
+8. Confirm the migration and proceed to the corresponding application rollout.
 
-This workflow fits in nicely with the existing CI/CD process and is natural to the Developers.
+This workflow fits in nicely with the existing CI/CD process and is natural to the Developers. And if you are an acute reader, you may have already spotted the described steps above are a state-of-the-art implementation of the landmark article [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) written in 2016 by Martin Fowler.
 
 Ready to taste this Database DevOps workflow yourself? Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
