@@ -8,7 +8,7 @@ featured: true
 description: We already have CI/CD for code delivery, why not the database? Imagine applying and deploying database changes the same way you would application code.
 ---
 
-Database change is a tricky part of the application development process: it usually involves multiple databases from different environments and cross-team collaboration, to add on top of it, databases are touch and go. It got us thinking: can we treat database the same way we treat application code?
+Database change is a tricky part of the application development process: it usually involves multiple databases from different environments and cross-team collaboration, to add on top of it, databases are touch and go. It got us thinking: **can we treat database the same way we treat application code?**
 
 DORA (DevOps Research & Assessment) [pointed out](https://cloud.google.com/architecture/devops/devops-tech-database-change-management) that integrating database work into the software delivery process positively contributes to continuous delivery. It’s about time to make databases a part of the DevOps cycle. 
 
@@ -16,7 +16,7 @@ But how does it work, really?
 
 ## Critical Elements of Database CI/CD
 
-To answer the "how", we first need to sort out the typical database change workflow. Before SQL statements can be safely applied to the database, there are two key steps: review & change.
+To answer the "how", we first need to sort out the typical database change workflow. Before SQL statements can be safely applied to the database, there are two key steps: **review & change**.
 
 ### SQL Review
 
@@ -31,9 +31,9 @@ Here, the devs are generally responsible for the former task and the DBAs for th
 
 This step is to make sure that:
 
-- Statements are executed correctly. We don’t want wrong database connections, insufficient permissions, object name conflicts, or basic syntax errors on our hands.
-- All planned statements are executed. Omissions may occur when there are many scripts to be executed or if there are multiple target databases for batch execution.
-- The change execution process should not impact the business. Hardware resource exhaustion and locking the table for an extended period are not pleasant for the company.
+- **Statements are executed correctly.** We don’t want wrong database connections, insufficient permissions, object name conflicts, or basic syntax errors on our hands.
+- **All planned statements are executed.** Omissions may occur when there are many scripts to be executed or if there are multiple target databases for batch execution.
+- **The change executions process should not impact the business.** Hardware resource exhaustion and locking the table for an extended period are not pleasant for the company.
 
 To avoid change-related errors, reducing the manual aspects is also crucial: the more things are automated, the fewer chances for mistakes to happen. Pre-configured pipelines to automatically apply SQL to the databases? That sounds rad. In order to avoid affecting regular business operations negatively, various zero-downtime change techniques should be adopted, especially for databases with large datasets.
 
@@ -59,7 +59,7 @@ Let’s look at how to implement streamlined SQL change rollouts.
 
 Standalone SQL deployment tools are not uncommon. These tools typically upload SQL scripts manually, proceed with the deployment via an approval flow, and then provide feedback after the rollout is complete. This model accurately depicts how the developers and the DBAs work independently, and the fragmented process is one of the most common reasons for delayed releases. After all, who can guarantee that there will never be a mistake when you are constantly moving SQL scripts between multiple systems manually?
 
-We need a more efficient and automated release process. Let’s recall the classic CI/CD workflow for application code: commit changes > code review > merge branch > auto-build > auto-deploy. Since we’ve already implemented SQL review on GitHub Actions, why can’t we include the subsequent rollout process?
+We need a more efficient and automated release process. Let’s recall the classic CI/CD workflow for application code: commit changes > code review > merge branch > auto-build > auto-deploy. **Since we’ve already implemented SQL review on GitHub Actions, why can’t we include the subsequent rollout process?**
 
 Well, yes, we can!
 
@@ -71,7 +71,7 @@ A SQL change rollout tool for Database DevOps should have the ability to integra
 
 ## A Complete Database DevOps Workflow
 
-Here, we present a complete Database DevOps workflow:
+Here, we present **a complete Database DevOps workflow**:
 
 ![database-devops-workflow](/static/blog/database-cicd-best-practice-with-github/database-devops-workflow.webp)
 
@@ -81,7 +81,7 @@ Here, we present a complete Database DevOps workflow:
 4. The merge event automatically triggers the release pipeline in Bytebase and creates a release ticket capturing the intended change;
 5. (Optional) A DBA or a designated reviewer may review the change scripts via Bytebase’s built-in UI;
 6. Approved scripts are executed gradually according to the configured rollout stages;
-7. The latest database schema is automatically written back to the code repository after applying changes. With this, the Dev team always has a copy of the latest schema. Furthermore, they can configure downstream pipelines based on the change of that latest schema.
+7. The latest database schema is automatically written back to the code repository after applying changes. With this, the Dev team always has a copy of the latest schema. Furthermore, they can configure downstream pipelines based on the change of that latest schema;
 8. Confirm the migration and proceed to the corresponding application rollout.
 
 This workflow fits in nicely with the existing CI/CD process and is natural to the Developers. Acute readers may have already spotted the described steps are an implementation of the landmark article [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html).
