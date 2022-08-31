@@ -27,15 +27,15 @@ This step is to make sure that the changes:
 
 Here, the devs are generally responsible for the former task and the DBAs for the latter. The DevOps philosophy looks to solve this problem by integrating Ops and Devs. The reality is that when DBA exists in an organization, it is difficult to merge the two teams directly. One potential solution is to retain the DBA’s task while enabling dev teams to pre-review the SQL. This **shift-left approach** can significantly reduce the chance of release delays. Moreover, if there are no DBAs in an organization, then it is even more crucial to empower the dev team with the capability to make sure the SQL doesn’t wreak havoc on the database.
 
-### SQL Change
+### SQL Change Execution
 
 This step is to make sure that:
 
 - Statements are executed correctly. We don’t want wrong database connections, insufficient permissions, object name conflicts, or basic syntax errors on our hands.
 - All planned statements are executed. Omissions may occur when there are many scripts to be executed or if there are multiple target databases for batch execution.
-- The execution process should not impact the business. Hardware resource exhaustion and locking the table for an extended period are not pleasant for the company.
+- The change execution process should not impact the business. Hardware resource exhaustion and locking the table for an extended period are not pleasant for the company.
 
-To avoid execution-related errors, reducing the manual aspects is also crucial: the more things are automated, the fewer chances for mistakes to happen. Pre-configured pipelines to automatically apply SQL to the databases? That sounds rad. In order to avoid affecting regular business operations negatively, various zero-downtime change techniques should be adopted, especially for databases with large datasets.
+To avoid change-related errors, reducing the manual aspects is also crucial: the more things are automated, the fewer chances for mistakes to happen. Pre-configured pipelines to automatically apply SQL to the databases? That sounds rad. In order to avoid affecting regular business operations negatively, various zero-downtime change techniques should be adopted, especially for databases with large datasets.
 
 Thus, the critical elements for implementing Database DevOps should **enable dev teams to perform SQL reviews** and **streamlined SQL change rollout**.
 
