@@ -30,7 +30,7 @@ description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place back
 - Add SQL Review rule: Allow empty for the index name.
 - Assign newly-created issues to a DBA or owner if possible in GitOps Workflow.
 - Add option to show password on sign-in and sign-up pages. 
-- There should be at least one active owner for each workspace. 
+- Prevent a workspace from removing the last active owner.
 
 ## 🐞 Notable bug fixes
 
