@@ -46,7 +46,7 @@ An optional description string can be included in the file name. If provided, By
 
 #### Supported Placeholders
 
-- All placeholder can contain one or more characters **other than** character in \[/?%*:|"<>\\] (whitespace allowed).
+- All placeholder can contain one or more UTF-8 characters in UTF-8 **except** character in \[/?%*:|"<>\\] (whitespace allowed).
 - To improve readability, we recommend to use separator between different placeholders and one common separator is `__ (two underscores).`
 
 #### Supported wildcard
