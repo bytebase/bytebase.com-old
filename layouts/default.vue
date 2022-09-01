@@ -18,9 +18,11 @@
 
 <script lang="ts">
 import {
+  computed,
   defineComponent,
   onMounted,
   ref,
+  useContext,
   useRoute,
   watch,
   watchEffect,
@@ -32,11 +34,21 @@ import QrcodeBlock from "~/components/QrcodeBlock.vue";
 export default defineComponent({
   components: { QrcodeBlock },
   setup() {
+    const { app } = useContext();
+    const currentLocale = computed(() => app.i18n.locale);
     const route = useRoute();
     const contentElementRef = ref<HTMLDivElement>();
     const stickyHeaderAdditionClass = ref<string>();
 
     onMounted(() => {
+      watchEffect(() => {
+        if (currentLocale.value === "zh") {
+          document.body.classList.add("locale-zh");
+        } else {
+          document.body.classList.remove("locale-zh");
+        }
+      });
+
       useCookie().setURLParams();
 
       watchEffect(() => {
