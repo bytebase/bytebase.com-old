@@ -43,7 +43,7 @@ description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place back
 - Add SQL review source code tour [https://sourcegraph.com/github.com/bytebase/bytebase/-/blob/docs/design/sql-review-source-code-tour.snb.md](https://sourcegraph.com/github.com/bytebase/bytebase/-/blob/docs/design/sql-review-source-code-tour.snb.md).
 ![sql-review-tour](/static/changelog/1.3.2/sql-review-tour.webp)
   
-- Refresh our marketing site [https://bytebase.com](https://bytebase.com).
+- Refresh marketing site [https://bytebase.com](https://bytebase.com).
 - Thanks to [@KaiNiao](https://github.com/KaiNiao) for opening the issue (Schema Review) Add MySQL "Not Null field must provide default value" Rule [#2327](https://github.com/bytebase/bytebase/issues/2327)
 
 ## 📕 Installation and Upgrade
