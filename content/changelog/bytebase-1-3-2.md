@@ -2,14 +2,14 @@
 title: Bytebase 1.3.2
 author: Adela
 published_at: 2022/9/1 17:20
-description: "- Integrate PostgreSQL Explain Visualizer. - Support PITR to the original database for PostgreSQL. - Support PITR to a new database for MySQL. - Users can mark an environment as protected, and a shield badge will show up next to its name."
+description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place backup restore for PostgreSQL. - Support PITR to a new database for MySQL. - Users can mark an environment as protected, and a shield badge will show up next to its name."
 ---
 
 ## 🚀 New Features
 
 - Integrate PostgreSQL Explain Visualizer 👀.
 ![pg-explain-visualizer](/static/changelog/1.3.2/pg-explain-visualizer.gif)
-- Support PITR to the original database for PostgreSQL.
+- Support in-place backup restore for PostgreSQL.
 - Support PITR to a new database for MySQL.
 - Users can mark an environment as "protected", and a shield badge 🛡️ will show up next to its name.
 ![environment-protected](/static/changelog/1.3.2/environment-protected.webp)
@@ -24,8 +24,8 @@ description: "- Integrate PostgreSQL Explain Visualizer. - Support PITR to the o
 - Improve the SQL editor auto-completion experience.
 - Improve performance when initializing SQL editor.
 - Improve the performance of syncing PostgreSQL instances.
-- SQL Review adds the rule: Support naming length limit (default 63 characters) for MySQL and PostgreSQL.
-- SQL Review adds the rule: Allow empty for the index name.
+- Add SQL Review rule: Support naming length limit (default 63 characters) for MySQL and PostgreSQL.
+- Add SQL Review rule: Allow empty for the index name.
 - Assign newly-created issues to a DBA or owner if possible in GitOps Workflow.
 - Add option to show password on sign-in and sign-up pages. 
 - There should be at least one active owner for each workspace. 
