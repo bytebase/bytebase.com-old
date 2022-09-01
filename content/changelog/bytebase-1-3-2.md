@@ -1,6 +1,6 @@
 ---
 title: Bytebase 1.3.2
-author: Adela
+author: Ningjing
 published_at: 2022/9/1 17:20
 description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place backup restore for PostgreSQL. - Support PITR to a new database for MySQL. - Users can mark an environment as protected, and a shield badge will show up next to its name."
 ---
@@ -13,7 +13,7 @@ description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place back
 - Support PITR to a new database for MySQL.
 - Users can mark an environment as "protected", and a shield badge 🛡️ will show up next to its name.
 ![environment-protected](/static/changelog/1.3.2/environment-protected.webp)
-- Users can view, copy and export server-side error info on Settings -> Workspace -> Debug Logs.
+- Users can view, copy and export server-side error info on Settings > Workspace > Debug Log.
 ![debug-log](/static/changelog/1.3.2/debug-log.webp)
 
 ## 🎄 Enhancements
