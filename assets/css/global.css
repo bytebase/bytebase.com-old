@@ -2,3 +2,15 @@ html,
 body {
   font-family: "Inter", "Noto Sans SC", sans-serif, system-ui;
 }
+
+/* Override tailwind default line-height value from 1 to 1.15 in Chinese locale */
+body.locale-zh .text-5xl,
+body.locale-zh .text-6xl,
+body.locale-zh .text-7xl,
+body.locale-zh .text-8xl,
+body.locale-zh .sm\:text-5xl,
+body.locale-zh .sm\:text-6xl,
+body.locale-zh .sm\:text-7xl,
+body.locale-zh .sm\:text-8xl {
+  line-height: 1.15;
+}
