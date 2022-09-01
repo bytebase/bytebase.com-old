@@ -46,8 +46,15 @@ An optional description string can be included in the file name. If provided, By
 
 #### Supported Placeholders
 
-- All placeholder can contain one or more characters in \[a-zA-Z0-9+-=/\_#?!\$. ] (whitespace allowed)
+- All placeholder can contain one or more characters **other than** character in \[/?%*:|"<>\\] (whitespace allowed).
 - To improve readability, we recommend to use separator between different placeholders and one common separator is `__ (two underscores).`
+
+#### Supported wildcard
+
+- Use '*' to match one directory. For example:
+`{{ENV_NAME}}/*/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/db1__202101131000__migrate__create_tablefoo_for_bar.sql`.
+- Use '**' to match one or more directories. For example:
+`{{ENV_NAME}}/**/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/bar/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
 
 ## Schema Path Template
 
