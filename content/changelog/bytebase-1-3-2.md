@@ -13,6 +13,8 @@ description: "- Integrate PostgreSQL Explain Visualizer. - Support in-place back
 - Support PITR to a new database for MySQL.
 - Users can mark an environment as "protected", and a shield badge 🛡️ will show up next to its name.
 ![environment-protected](/static/changelog/1.3.2/environment-protected.webp)
+- Users can view, copy and export server-side error info on Settings -> Workspace -> Debug Logs.
+![debug-log](/static/changelog/1.3.2/debug-log.webp)
 
 ## 🎄 Enhancements
 
