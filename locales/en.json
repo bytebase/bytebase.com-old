@@ -172,7 +172,9 @@
   },
   "banner": {
     "announce-bytebase-1-0-and-our-team-plan": "Announce Bytebase 1.0 and our Team Plan",
-    "view-the-plan": "view the plan"
+    "database-ci-cd-with-github": "Database CI/CD Best Practice with GitHub",
+    "view-the-plan": "view the plan",
+    "checkout-now": "Check Now"
   },
   "subscribe": {
     "learn-product-updates-and-everything-about-database": "Learn product updates and database insight.",

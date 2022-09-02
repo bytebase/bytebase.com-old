@@ -4,14 +4,14 @@
       <div class="text-center sm:px-16">
         <p class="font-medium text-white">
           <span class="inline">{{
-            $t("banner.announce-bytebase-1-0-and-our-team-plan")
+            $t("banner.database-ci-cd-with-github")
           }}</span>
           <span class="block sm:ml-2 sm:inline-block">
             <nuxt-link
-              :to="localePath('/pricing')"
+              :to="localePath('/blog/database-cicd-best-practice-with-github')"
               class="text-white font-bold underline"
             >
-              {{ $t("banner.view-the-plan") }}
+              {{ $t("banner.checkout-now") }}
               <span aria-hidden="true">&rarr;</span>
             </nuxt-link>
           </span>

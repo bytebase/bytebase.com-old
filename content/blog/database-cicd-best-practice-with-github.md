@@ -8,6 +8,17 @@ featured: true
 description: We already have CI/CD for code delivery, why not the database? Imagine applying and deploying database changes the same way you would application code.
 ---
 
+This is a series of articles about Database CI/CD with GitHub
+
+- The Database CI/CD Best Practice with GitHub (this one)
+
+- How to Setup Database CI/CD with GitHub Part 1-3
+  - [Part 1: Enable SQL Review with GitHub Actions](/blog/github-database-cicd-part-1-sql-review-github-actions)
+  - Part 2: GitHub.com Database GitOps
+  - Part 3: Put Them Together
+
+---
+
 Database change is a tricky part of the application development process: it usually involves multiple databases from different environments and cross-team collaboration, to add on top of it, databases are touch and go. It got us thinking: **can we treat database the same way we treat application code?**
 
 DORA (DevOps Research & Assessment) [pointed out](https://cloud.google.com/architecture/devops/devops-tech-database-change-management) that integrating database work into the software delivery process positively contributes to continuous delivery. It’s about time to make databases a part of the CI/CD cycle.

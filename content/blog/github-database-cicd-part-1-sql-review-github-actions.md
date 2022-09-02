@@ -10,12 +10,12 @@ description: This first article will guide you to enable SQL Review GitHub actio
 
 This is a series of articles about Database CI/CD with GitHub
 
-* [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github)  
+- [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github)
 
-* How to Setup Database CI/CD with GitHub Part 1-3
-    *   Part 1: Enable SQL Review with GitHub Actions (this one)
-    *   Part 2: GitHub.com Database GitOps
-    *   Part 3: Put Them Together
+- How to Setup Database CI/CD with GitHub Part 1-3
+  - Part 1: Enable SQL Review with GitHub Actions (this one)
+  - Part 2: GitHub.com Database GitOps
+  - Part 3: Put Them Together
 
 ---
 
@@ -31,7 +31,7 @@ You can choose to implement GitHub actions, GitOps, or both by following all thr
 
 This first article will guide you to enable SQL Review GitHub actions (developed by Bytebase) when there is a pull request in your repository.
 
-*Bytebase deployment is not needed for this tutorial.*
+_Bytebase deployment is not needed for this tutorial._
 
 ![divided-workflow](/static/blog/github-database-cicd-part-1-sql-review-github-actions/divided-workflow.webp)
 
@@ -50,16 +50,13 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 
 ![sql-review-guide](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-guide.webp)
 
-
 2. Filter with **MySQL**, now you have all the available SQL review rules. Click **Download as YAML** and you will get a YAML file called `sql-review.yml`. Rename it to `bb.sql-review.dev.yml`.
 
 ![sql-review-guide-filter](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-guide-filter.webp)
 
-
 2. Move the `bb.sql-review.dev.yml` file under your repo's root directory. Theoretically, you can put it anywhere within the project (just to make sure it's outside of .github/).
 
 ![move-template](/static/blog/github-database-cicd-part-1-sql-review-github-actions/move-template.webp)
-
 
 ## Step 3 - Configure sql-review.yml
 
@@ -67,18 +64,15 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 
 ![sql-review-actions](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-actions.webp)
 
-
 2. Configure the file to fit your need.
 
 ![configure-sql-review](/static/blog/github-database-cicd-part-1-sql-review-github-actions/configure-sql-review.webp)
-
 
 ## Step 4 - Open a PR (Pull Request) to trigger the SQL Review Github Actions
 
 1. Create a new branch.
 
 ![new-branch](/static/blog/github-database-cicd-part-1-sql-review-github-actions/new-branch.webp)
-
 
 2. Add a `.sql` file under the `github-action-test` folder.
 
@@ -88,26 +82,22 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 
 ![sql-review-run](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-run.webp)
 
-
 4. Click on **Actions** tab, and you will see there are two warnings regarding this particular SQL.
 
 ![sql-review-detail](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-detail.webp)
-
 
 5. Because they’re **warning** level, you can still merge the PR.
 
 ![sql-review-complete](/static/blog/github-database-cicd-part-1-sql-review-github-actions/sql-review-complete.webp)
 
-
 6. However, if you want this “fail” to block the merge, you can do either of the following:
+
 - Adjust the rule to `Error` level on [bytebase.com/sql-review-guide](/sql-review-guide) before downloading the template file.
 
 ![configure-guideline](/static/blog/github-database-cicd-part-1-sql-review-github-actions/configure-guideline.webp)
 
-
 - Or edit the level field on the review rule list directly in your YAML file.
 
 ![edit-yaml](/static/blog/github-database-cicd-part-1-sql-review-github-actions/edit-yaml.webp)
-
 
 Congratulations! Now you have enabled SQL Review GitHub Actions for your GitHub repo. In the next series, we’ll explore part 2: GitHub.com Database GitOps. Stay tuned!
