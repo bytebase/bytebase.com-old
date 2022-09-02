@@ -172,10 +172,12 @@
   },
   "banner": {
     "announce-bytebase-1-0-and-our-team-plan": "Bytebase 1.0 和团队版已发布",
-    "view-the-plan": "查看计划"
+    "database-ci-cd-with-github": "基于 GitHub 的数据库 CI/CD 最佳实践",
+    "view-the-plan": "查看计划",
+    "checkout-now": "现在查看"
   },
   "subscribe": {
-    "learn-product-updates-and-everything-about-database": "了解数据库行业洞见和产品更新。",
+    "learn-product-updates-and-everything-about-database": "了解数据库行业洞见和产品更新",
     "email-subscription-success-message": "您已成功订阅我们的 Newsletter~",
     "email-address": "邮箱地址",
     "enter-your-email": "输入您的邮箱"
