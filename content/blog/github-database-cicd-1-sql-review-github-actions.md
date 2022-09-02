@@ -45,7 +45,7 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 ![sql-review-guide-filter](/static/blog/github-database-cicd-1-sql-review-github-actions/sql-review-guide-filter.webp)
 
 
-2. Move the `bb.sql-review.dev.yml` file under root directory. Theoretically, you can put it anywhere within the project, however, if it’s under the `.github/workflow/` folder, GitHub might mistake it as a configuration file which can leads to extra chaos.
+2. Move the `bb.sql-review.dev.yml` file under your repo's root directory. Theoretically, you can put it anywhere within the project (just to make sure it's outside of .github/).
 
 ![move-template](/static/blog/github-database-cicd-1-sql-review-github-actions/move-template.webp)
 
