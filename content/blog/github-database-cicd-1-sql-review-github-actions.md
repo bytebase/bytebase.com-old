@@ -1,5 +1,5 @@
 ---
-title: How to Setup Database CI/CD with GitHub, Part 1: Enable SQL Review with GitHub Actions
+title: "How to Setup Database CI/CD with GitHub, Part 1: Enable SQL Review with GitHub Actions"
 author: Ningjing
 published_at: 2022/9/2 13:00:00
 feature_image: /static/blog/github-database-cicd-1-sql-review-github-actions/howto-github-1.webp
@@ -7,6 +7,18 @@ tags: Education
 featured: true
 description: This first article will guide you to enable SQL Review GitHub actions (developed by Bytebase) when there is a pull request in your repository.
 ---
+
+This is a series of articles about Database CI/CD with GitHub
+
+ - [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github)
+  
+  
+- How to Setup Database CI/CD with GitHub Part 1-3
+- Part 1: Enable SQL Review with GitHub Actions (this one)
+- Part 2: GitHub.com Database GitOps
+- Part 3: Put Them Together
+
+
 
 In the last article [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github), we raised a question: "can we treat database the same way we treat application code?" and presented a complete database CI/CD workflow with GitHub.
 
