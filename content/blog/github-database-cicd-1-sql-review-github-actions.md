@@ -1,5 +1,5 @@
 ---
-title: How to Setup Database CI/CD with GitHub -  1) Enable SQL Review with GitHub Actions
+title: How to Setup Database CI/CD with GitHub, Part 1: Enable SQL Review with GitHub Actions
 author: Ningjing
 published_at: 2022/9/2 13:00:00
 feature_image: /static/blog/github-database-cicd-1-sql-review-github-actions/howto-github-1.webp
