@@ -99,4 +99,4 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 ![edit-yaml](/static/blog/github-database-cicd-1-sql-review-github-actions/edit-yaml.webp)
 
 
-Congratulations! Now you enabled SQL Review GitHub Actions for your GitHub repo. In the next article of this series, we’ll explore the core part: 2) GitHub.com Database GitOps. Stay tuned!
+Congratulations! Now you have enabled SQL Review GitHub Actions for your GitHub repo. In the next series, we’ll explore part 2 GitHub.com Database GitOps. Stay tuned!
