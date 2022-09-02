@@ -52,7 +52,7 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 
 ## Step 3 - Configure sql-review.yml
 
-1. Go to [GitHub marketplace](https://github.com/marketplace/actions/sql-review), and follow the **Usage** section: Create a file `sql-review.yml` under the `.github/workflows` folder, and paste the content template.
+1. Go to [SQL Review GitHub Action on GitHub marketplace](https://github.com/marketplace/actions/sql-review), and follow the **Usage** section: Create a file `sql-review.yml` under the `.github/workflows` folder, and paste the content template.
 
 ![sql-review-actions](/static/blog/github-database-cicd-1-sql-review-github-actions/sql-review-actions.webp)
 
