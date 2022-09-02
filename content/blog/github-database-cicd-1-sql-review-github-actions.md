@@ -94,7 +94,7 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 ![configure-guideline](/static/blog/github-database-cicd-1-sql-review-github-actions/configure-guideline.webp)
 
 
-- Or edit the review rule list directly in your YAML file.
+- Or edit the level field on the review rule list directly in your YAML file.
 
 ![edit-yaml](/static/blog/github-database-cicd-1-sql-review-github-actions/edit-yaml.webp)
 
