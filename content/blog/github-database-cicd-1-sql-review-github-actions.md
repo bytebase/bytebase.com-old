@@ -88,7 +88,7 @@ Here is a completed example repository: [https://github.com/Bytebase/sql-review-
 ![sql-review-complete](/static/blog/github-database-cicd-1-sql-review-github-actions/sql-review-complete.webp)
 
 
-6. However, iIf you want this “fail” to block the merge, you can do either of the following:
+6. However, if you want this “fail” to block the merge, you can do either of the following:
 - Adjust the levels on [https://www.bytebase.com/sql-review-guide](https://www.bytebase.com/sql-review-guide) before downloading the template file.
 
 ![configure-guideline](/static/blog/github-database-cicd-1-sql-review-github-actions/configure-guideline.webp)
