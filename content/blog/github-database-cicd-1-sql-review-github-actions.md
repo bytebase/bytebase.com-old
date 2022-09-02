@@ -8,7 +8,7 @@ featured: true
 description: This first article will guide you to enable SQL Review GitHub actions (developed by Bytebase) when there is a pull request in your repository.
 ---
 
-In the last article [<The Database CI/CD Best Practice with GitHub>](https://www.bytebase.com/blog/database-cicd-best-practice-with-github), we raised a question: “can we treat database the same way we treat application code?” and presented a complete database CI/CD workflow with GitHub idea.
+In the last article [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github), we raised a question: "can we treat database the same way we treat application code?" and presented a complete database CI/CD workflow with GitHub.
 
 To bring the idea into reality, we broke it down into a three-part tutorial series <How to Setup Database CI/CD with GitHub>:
 
