@@ -54,7 +54,7 @@ You can also create the instance and database in the UX, then call the API with 
 - `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details.
 - `content`: The error message.
 - `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
-- `title`: The schema review rule type. See the [list of supported rules](https://www.bytebase.com/docs/sql-review/review-rules/supported-rules).
+- `title`: The schema review rule type. See the [list of supported rules](/docs/sql-review/review-rules/supported-rules).
   - `OK`: No errors.
 
 ### Response Codes
