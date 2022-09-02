@@ -19,6 +19,7 @@ This is a series of articles about Database CI/CD with GitHub
 - Part 3: Put Them Together
 
 
+---
 
 In the last article [The Database CI/CD Best Practice with GitHub](/blog/database-cicd-best-practice-with-github), we raised a question: "can we treat database the same way we treat application code?" and presented a complete database CI/CD workflow with GitHub.
 
