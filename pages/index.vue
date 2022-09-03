@@ -347,7 +347,7 @@
     </div>
     <!-- end of/SQL Editor Section -->
 
-    <div class="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mt-24 mb-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2
         class="text-center mt-2 text-3xl sm:text-5xl lg:text-7xl leading-8 font-extrabold tracking-tight text-gray-900"
       >
