@@ -139,4 +139,4 @@ bytebase/bytebase:1.3.0 \
 
 ![repeat-product](/static/blog/github-database-cicd-part-2-github-database-gitops/repeat-product.webp)
 
-Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. In the next part, we’ll put these two parts together: GitHub.com Database GitOps. Stay tuned!
+Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. In the next part, we’ll put these two parts together. Stay tuned!
