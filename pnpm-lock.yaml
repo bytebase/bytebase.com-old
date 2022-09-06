@@ -45,7 +45,7 @@ specifiers:
   postcss: ^8.3.5
   prettier: ^2.6.2
   remove-markdown: ^0.5.0
-  slug: ^5.2.0
+  slug: 8.0.0
   tailwindcss: ^2.2.19
   tiny-cookie: ^2.3.2
   typescript: ^4.6.4
@@ -61,7 +61,7 @@ dependencies:
   '@nuxt/typescript-runtime': 2.1.0_@nuxt+types@2.15.8
   '@nuxt/vue-app': 2.15.8
   '@nuxtjs/composition-api': 0.32.0_kyrhbzwnikicxahddidell2iai
-  '@nuxtjs/i18n': 7.2.2
+  '@nuxtjs/i18n': 7.2.2_vue@2.6.14
   '@pinia/nuxt': 0.1.9_pinia@2.0.14+vue@2.6.14
   '@segment/analytics-next': 1.36.0
   '@tailwindcss/aspect-ratio': 0.4.0_tailwindcss@2.2.19
@@ -80,7 +80,7 @@ dependencies:
   plausible-tracker: 0.3.5
   prettier: 2.6.2
   remove-markdown: 0.5.0
-  slug: 5.3.0
+  slug: 8.0.0
   tailwindcss: 2.2.19_cr4sis33dk4di3xnobyqnqmrf4
   tiny-cookie: 2.3.2
   typescript: 4.6.4
@@ -1997,7 +1997,7 @@ packages:
       vue-client-only: 2.1.0
       vue-meta: 2.4.0
       vue-no-ssr: 1.1.1
-      vue-router: 3.5.3
+      vue-router: 3.5.3_vue@2.6.14
       vue-template-compiler: 2.6.14
       vuex: 3.6.2_vue@2.6.14
     transitivePeerDependencies:
@@ -2166,7 +2166,7 @@ packages:
       vue-analytics: 5.22.1
     dev: true
 
-  /@nuxtjs/i18n/7.2.2:
+  /@nuxtjs/i18n/7.2.2_vue@2.6.14:
     resolution: {integrity: sha512-rLbJ1Mn22QeDXa0znWag4RiNafUTnYFO2+F4z/+gYOuJuOzLWMJJXtCGkVP2U0Jaq8xF1hvfpJzfGTVIv0Ik+Q==}
     dependencies:
       '@babel/parser': 7.17.10
@@ -2180,9 +2180,10 @@ packages:
       klona: 2.0.5
       lodash.merge: 4.6.2
       ufo: 0.8.4
-      vue-i18n: 8.27.1
+      vue-i18n: 8.27.1_vue@2.6.14
     transitivePeerDependencies:
       - supports-color
+      - vue
     dev: false
 
   /@nuxtjs/tailwindcss/4.2.1_webpack@4.46.0:
@@ -4410,6 +4411,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     optional: true
@@ -6402,6 +6404,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     optional: true
 
   /fill-range/4.0.0:
@@ -8452,6 +8455,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     optional: true
 
   /nanoid/3.3.4:
@@ -10797,8 +10801,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  /slug/5.3.0:
-    resolution: {integrity: sha512-h7yD2UDVyMcQRv/WLSjq7HDH6ToO/22MB381zfx6/ebtdWUlGcyxpJNVHl6WFvKjIMHf5ZxANFp/srsy4mfT/w==}
+  /slug/8.0.0:
+    resolution: {integrity: sha512-aIDda8JjwGHPPVHRAusym8OmXhw1PnM6P28/ShUUv/4RsUVYwxwL0eljtcBDg0yI4UbW7YADrZTWp1bLqa7+DQ==}
     dev: false
 
   /snake-case/3.0.4:
@@ -11584,6 +11588,7 @@ packages:
   /unified/9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5
@@ -11933,8 +11938,12 @@ packages:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
     dev: false
 
-  /vue-i18n/8.27.1:
+  /vue-i18n/8.27.1_vue@2.6.14:
     resolution: {integrity: sha512-lWrGm4F25qReJ7XxSnFVb2h3PfW54ldnM4C+YLBGGJ75+Myt/kj4hHSTKqsyDLamvNYpvINMicSOdW+7yuqgIQ==}
+    peerDependencies:
+      vue: ^2
+    dependencies:
+      vue: 2.6.14
     dev: false
 
   /vue-loader/15.9.8_tboltkh4nvujjylnelozzgcdxm:
@@ -12035,8 +12044,12 @@ packages:
       plausible-tracker: 0.3.5
     dev: false
 
-  /vue-router/3.5.3:
+  /vue-router/3.5.3_vue@2.6.14:
     resolution: {integrity: sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg==}
+    peerDependencies:
+      vue: ^2
+    dependencies:
+      vue: 2.6.14
     dev: false
 
   /vue-server-renderer/2.6.14:
