@@ -31,6 +31,8 @@ In this tutorial, you’ll run Bytebase locally using Docker.
 
 [ngrok](https://ngrok.com/) is a reverse proxy tunnel, and in our case, we need it for a public network address in order to receive webhooks from GitHub.com. ngrok we used here is for demonstration purposes. For production use, we recommend using [Caddy](https://caddyserver.com/).
 
+![ngrok-reverse-proxy](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok-reverse-proxy.webp)
+
 1. Login to [ngrok Dashboard](https://dashboard.ngrok.com/get-started/setup) and follow its **Get Started** steps to install and configure.
 2. Run `ngrok http 8080` and obtain the public URL:
 
