@@ -59,7 +59,7 @@ bytebase/bytebase:1.3.0 \
 
 ## Step 2 - Add GitHub.com as a Git provider in Bytebase
 
-1. Open Bytebase, go to **Settings -> Version Control**, choose GitHub.com, and click **Next**.
+1. Open Bytebase, go to **Settings** > **Version Control**, choose **GitHub.com**, and click **Next**.
 
 ![bb-vc](/static/blog/github-database-cicd-part-2-github-database-gitops/bb-vc.webp)
 
@@ -67,7 +67,7 @@ bytebase/bytebase:1.3.0 \
 
 ![fill-id-secret](/static/blog/github-database-cicd-part-2-github-database-gitops/fill-id-secret.webp)
 
-3. Open GitHub, and go to **Settings -> Developer Settings -> OAuth Apps**. Click **New OAuth App**.
+3. Open GitHub, and go to **Settings > Developer Settings > OAuth Apps**. Click **New OAuth App**.
 ![github-oauth](/static/blog/github-database-cicd-part-2-github-database-gitops/github-oauth.webp)
 
 4. Scroll down on the new OAuth App page, paste the **Authorization callback URL**, then click **Update Application**.
@@ -93,11 +93,11 @@ bytebase/bytebase:1.3.0 \
 
 1. Go to **Instances** to add two instances for **Test** and **Prod** environments respectively. In our case, we use two AWS RDS MySQL instances with the same employee data set.
 - If you don’t have any database to use, check our docs to run MySQL in docker: [https://www.bytebase.com/docs/get-started/configure-workspace/add-a-mysql-instance-for-testing](https://www.bytebase.com/docs/get-started/configure-workspace/add-a-mysql-instance-for-testing)
-- We also open sourced the sample employee data set for MySQL, which you can import: [https://github.com/bytebase/employee-sample-database-mysql](https://github.com/bytebase/employee-sample-database-mysql). If you don't import this, empty database can also work too. 
+- We also open sourced the sample employee data set for MySQL, which you can import: [https://github.com/bytebase/employee-sample-database-mysql](https://github.com/bytebase/employee-sample-database-mysql). If you don't import this, you can also create databases and tables manually for your needs.
 
 ![add-two-instances](/static/blog/github-database-cicd-part-2-github-database-gitops/add-two-instances.webp)
 
-1. Create a Project, click **Transfer in DB** and choose two identical databases.
+2. Create a Project, click **Transfer in DB** and choose two identical databases belonging to **Test** and **Prod** environments respectively.
 
 ![transfer-in-db](/static/blog/github-database-cicd-part-2-github-database-gitops/transfer-in-db.webp)
 
@@ -144,10 +144,10 @@ bytebase/bytebase:1.3.0 \
 
 ![table-employee](/static/blog/github-database-cicd-part-2-github-database-gitops/table-employee.webp)
 
-1.  Switch to your code editor, and you will find there is an auto-generated file `.employeeGitHub__LATEST.sql`, which is the latest schema written back by Bytebase.
+12. Switch to your code editor, and you will find there is an auto-generated file `.employeeGitHub__LATEST.sql`, which is the latest schema written back by Bytebase.
 ![latest](/static/blog/github-database-cicd-part-2-github-database-gitops/latest.webp)
 
-13.  Copy the migrate script file `employeeGitHub__202208171630__migrate__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
+13. Copy the migrate script file `employeeGitHub__202208171630__migrate__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
 
 
 Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. Next in the final part, we’ll put these two together. Stay tuned!
