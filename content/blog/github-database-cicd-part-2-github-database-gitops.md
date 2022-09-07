@@ -135,7 +135,7 @@ bytebase/bytebase:1.3.0 \
 
 ![new-issue](/static/blog/github-database-cicd-part-2-github-database-gitops/new-issue.webp)
 
-10.  Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the ** Test** environment, and it shows **Done**. You may skip this manual approval step [by customization](/docs/get-started/configure-workspace/set-up-environments).
+10.  Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the `Test` environment, and it shows **Done**. You may also [configure the environment](/docs/get-started/configure-workspace/set-up-environments) to skip this manual approval step..
 
 ![issue-waiting](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-waiting.webp)
 ![issue-done](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-done.webp)
