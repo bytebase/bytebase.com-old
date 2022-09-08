@@ -33,11 +33,10 @@ In this tutorial, you’ll run Bytebase locally using Docker.
 
 ![ngrok-reverse-proxy](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok-reverse-proxy.webp)
 
-1. Login to [ngrok Dashboard](https://dashboard.ngrok.com/get-started/setup) and follow its **Get Started** steps to install and configure.
+1. Login to [ngrok Dashboard](https://dashboard.ngrok.com/get-started/setup) and follow its **Getting Started** steps to install and configure.
 2. Run `ngrok http 8080` and obtain the public URL:
 
 ![ngrok](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok.webp)
-
 
 3. Run Bytebase in Docker with the following command.
 ```bash
@@ -53,6 +52,7 @@ bytebase/bytebase:1.3.0 \
 --port 8080 \
 --frontend-port 80
 ```
+
 4. Bytebase is running successfully in Docker, and you can visit it via [https://03f1-103-102-7-52.ngrok.io](https://03f1-103-102-7-52.ngrok.io/)
 
 ![docker-running](/static/blog/github-database-cicd-part-2-github-database-gitops/docker-running.webp)
@@ -135,7 +135,7 @@ bytebase/bytebase:1.3.0 \
 
 ![new-issue](/static/blog/github-database-cicd-part-2-github-database-gitops/new-issue.webp)
 
-10.  Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the `Test` environment, and it shows **Done**. You may also [configure the environment](/docs/get-started/configure-workspace/set-up-environments) to skip this manual approval step..
+10.  Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the `Test` environment, and it shows **Done**. You may also [configure the environment](/docs/get-started/configure-workspace/set-up-environments) to skip this manual approval step.
 
 ![issue-waiting](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-waiting.webp)
 ![issue-done](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-done.webp)
@@ -149,5 +149,6 @@ bytebase/bytebase:1.3.0 \
 
 13. Copy the migrate script file `employeeGitHub__202208171630__migrate__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
 
+Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. In the upcoming final part, we’ll put these two together, and thus, implementing a complete database CI/CD workflow.
 
-Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. Next in the final part, we’ll put these two together. Stay tuned!
+Ready to try out this workflow yourself? Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
