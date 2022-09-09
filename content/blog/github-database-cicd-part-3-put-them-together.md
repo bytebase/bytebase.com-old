@@ -36,10 +36,7 @@ Here is a demo repo:
 Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-database-cicd-part-1-sql-review-github-actions) to configure the **prod** environment. You now have two GitHub Actions configure files. Pay attention to **paths**, and **file-pattern**.
 
 ![conf-prod](/static/blog/github-database-cicd-part-3-put-them-together/conf-prod.webp)
-
 ![conf-test](/static/blog/github-database-cicd-part-3-put-them-together/conf-test.webp)
-
-
 ## Step 2 - Create a PR, and add your SQL scripts
 
 1. Create a new branch `testboth`.
@@ -48,32 +45,33 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 ![add-script](/static/blog/github-database-cicd-part-3-put-them-together/add-script.webp)
 
 3. Commit and push this to the `testboth` branch, and create a PR in GitHub. The SQL review GitHub Actions will run automatically.
-   
-5. After the SQL review completes, the PR becomes mergeable.
+
+4. After the SQL review completes, the PR becomes mergeable.
 
 ![mergeable](/static/blog/github-database-cicd-part-3-put-them-together/mergeable.webp)
 
-6. After you merge the PR in GitHub, there will be a new issue generated in Bytebase console.
+5. After you merge the PR in GitHub, there will be a new issue generated in Bytebase console.
 
 ![waiting-approval](/static/blog/github-database-cicd-part-3-put-them-together/waiting-approval.webp)
 
-7. Approve this issue, and the SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub__LATEST.sql` will be generated to record the current state of the database.
-8. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx__LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
+6. Approve this issue, and the SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub__LATEST.sql` will be generated to record the current state of the database.
+7. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx__LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
 
 ![last-status](/static/blog/github-database-cicd-part-3-put-them-together/last-status.webp)
 
 
+
+Congratulations! Now you have implemented a complete database CI/CD workflow! Let's go over the steps in the picture again:
+
 ![workflow](/static/blog/github-database-cicd-part-3-put-them-together/workflow.webp)
-Let's go over the steps in the picture again:
+
 1. You add a SQL script on a branch, push it, and create a PR on GitHub.
 2. The configured SQL review GitHub Actions runs automatically.
 3. If the SQL script passed that, you can merge it into the main branch.
 4. Since your running Bytebase is configured to watch main branch, it will trigger to create an issue there.
-5. The SQL review check will run on the issue again. After its run, you can approve it(You can skip manual approval by customization).
+5. The SQL review check will run on the issue again. After its run, you can approve it (You can skip manual approval by customization).
 6. The SQL script will run on your database, and the migration is done.
 7. There will be an auto-generated file `.xxx__LATEST.sql`, which is the latest schema written back by Bytebase.
 8. After all migrations are done, now you can deploy your application code.
 
-Congratulations! Now you have implemented a complete database CI/CD workflow! Customize the structure to fit your own needs!
-
-Feel free to Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
+Customize the structure to fit your own needs! Feel free to Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
