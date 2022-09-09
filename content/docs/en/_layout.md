@@ -21,9 +21,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Option 2 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
 
-#### [Option 3 Installation Script](/get-started/install/installation-script)
+#### [Option 3 Deploy to render](/get-started/install/deploy-to-render)
 
-#### [Option 4 Build from Source Code](/get-started/install/build-from-source-code)
+#### [Option 4 Installation Script](/get-started/install/installation-script)
+
+#### [Option 5 Build from Source Code](/get-started/install/build-from-source-code)
 
 #### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
@@ -66,8 +68,11 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 ## SQL Review
 
 ### [SQL Advisor](/sql-review/sql-advisor/overview)
+
 #### [UI](/sql-review/sql-advisor/ui)
+
 #### [API](/sql-review/sql-advisor/api)
+
 #### [GitHub Action](/sql-review/sql-advisor/github-action)
 
 ### [Review Rules](/sql-review/review-rules/overview)
