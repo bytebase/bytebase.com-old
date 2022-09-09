@@ -15,7 +15,7 @@ This is a series of articles about Database CI/CD with GitHub
 - How to Setup Database CI/CD with GitHub Part 1-3
   - Part 1: Enable SQL Review with GitHub Actions (this one)
   - [Part 2: GitHub.com Database GitOps](/blog/github-database-cicd-part-2-github-database-gitops)
-- [Part 3: Put Them Together](/blog/github-database-cicd-part-3-put-them-together)
+  - [Part 3: Put Them Together](/blog/github-database-cicd-part-3-put-them-together)
 
 ---
 

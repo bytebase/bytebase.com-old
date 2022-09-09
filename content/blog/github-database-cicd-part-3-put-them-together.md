@@ -5,7 +5,7 @@ published_at: 2022/9/9 13:00:00
 feature_image: /static/blog/github-database-cicd-part-3-put-them-together/github-howto-3.webp
 tags: Education
 featured: true
-description: This second part will guide you through configuring GitHub.com database GitOps with Bytebase. After following these steps, you can trigger database changes by merging sql files into your GitHub repository.
+description: Now that you have finished Part 1 SQL Review GitHub Actions and Part 2 GitOps workflow, this final part will guide you through putting them together to run the whole process.
 ---
 
 This is a series of articles about Database CI/CD with GitHub
@@ -19,15 +19,15 @@ This is a series of articles about Database CI/CD with GitHub
 
 ---
 
-Now that you have finished [Part One: SQL Review GitHub Actions](/blog/github-database-cicd-part-1-sql-review-github-actions) and [Part Two: GitOps workflow](/blog/github-database-cicd-part-2-github-database-gitops), this final part will guide you through putting them together to run the whole process.
+Now that you have finished [Part 1: SQL Review GitHub Actions](/blog/github-database-cicd-part-1-sql-review-github-actions) and [Part 2: GitOps workflow](/blog/github-database-cicd-part-2-github-database-gitops), this final part will guide you through putting them together to run the whole process.
 
 ![workflow](/static/blog/github-database-cicd-part-3-put-them-together/workflow.webp)
 
-As you may ask, during the GitOps process, we can configure SQL review in Bytebase console (the UI version), why do we need SQL review GitHub Actions? Actually, in real-world scenarios, code review including SQL files is done by **technical leaders** for business logic accuracy, while **DBAs** review the SQL for database mechanism optimization. Both these parties need SQL review as a tool. (Of course, you can skip either of them.)
+As you may ask, during the GitOps process, we can configure SQL review in Bytebase console UI version, why do we need SQL review GitHub Actions? Actually, in real-world scenarios, code review including SQL files is conducted by **technical leaders** to cover the business domain, while **DBAs** review the SQL to cover the database domain. Both parties need SQL review, they just look after different aspects.
 
-Let’s dig in and see how to do this! The detailed configuration was introduced in the previous two tutorials, refer to them first if you come across directly to this one.
+Let’s dig in and see how to do this! The detailed configuration is based on the previous two tutorials, check out them first if you come across directly to this one.
 
-## Step 1 - Reorganize the Folder and Files
+## Step 1 - Add Configure file for Prod Environment
 
 Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-database-cicd-part-1-sql-review-github-actions) to configure the **prod** environment. You now have two GitHub Actions configure files. Pay attention to **paths**, and **file-pattern**.
 
@@ -39,9 +39,7 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 ## Step 2 - Create a PR, and add your SQL scripts
 
 1. Create a new branch `testboth`.
-2. Add a migration script under `bytebase/test` folder following the name convention.
-
-`{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
+2. Add a migration script under `bytebase/test` folder following the name convention `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`. Here we name it `employeeGitHub__202208211500__migrate__add_nickname.sql`.
 
 ![add-script](/static/blog/github-database-cicd-part-3-put-them-together/add-script.webp)
 
@@ -55,10 +53,22 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 
 ![waiting-approval](/static/blog/github-database-cicd-part-3-put-them-together/waiting-approval.webp)
 
-7. Approve the issue, and this SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub__LATEST.sql` will be generated to record the current state of the database.
+7. Approve this issue, and the SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub__LATEST.sql` will be generated to record the current state of the database.
 8. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx__LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
 
 ![last-status](/static/blog/github-database-cicd-part-3-put-them-together/last-status.webp)
+
+
+![workflow](/static/blog/github-database-cicd-part-3-put-them-together/workflow.webp)
+Let's go over the steps in the picture again:
+1. You add a SQL script on a branch, push it, and create a PR on GitHub.
+2. The configured SQL review GitHub Actions runs automatically.
+3. If the SQL script passed that, you can merge it into the main branch.
+4. Since your running Bytebase is configured to watch main branch, it will trigger to create an issue there.
+5. The SQL review check will run on the issue again. After its run, you can approve it(You can skip manual approval by customization).
+6. The SQL script will run on your database, and the migration is done.
+7. There will be an auto-generated file `.xxx__LATEST.sql`, which is the latest schema written back by Bytebase.
+8. After all migrations are done, now you can deploy your application code.
 
 Congratulations! Now you have implemented a complete database CI/CD workflow! Customize the structure to fit your own needs!
 
