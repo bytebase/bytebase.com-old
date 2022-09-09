@@ -37,6 +37,7 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 
 ![conf-prod](/static/blog/github-database-cicd-part-3-put-them-together/conf-prod.webp)
 ![conf-test](/static/blog/github-database-cicd-part-3-put-them-together/conf-test.webp)
+
 ## Step 2 - Create a PR, and add your SQL scripts
 
 1. Create a new branch `testboth`.
@@ -58,8 +59,6 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 7. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx__LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
 
 ![last-status](/static/blog/github-database-cicd-part-3-put-them-together/last-status.webp)
-
-
 
 Congratulations! Now you have implemented a complete database CI/CD workflow! Let's go over the steps in the picture again:
 
