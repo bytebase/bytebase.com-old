@@ -27,6 +27,10 @@ As you may ask, during the GitOps process, we can configure SQL review in Byteba
 
 Let’s dig in and see how to do this! The detailed configuration is based on the previous two tutorials, check out them first if you come across directly to this one.
 
+Here is a demo repo:
+[https://github.com/adela-bytebase/bytebase-gitops-sample](https://github.com/adela-bytebase/bytebase-gitops-sample) with an open PR
+[https://github.com/adela-bytebase/bytebase-gitops-sample/pull/11](https://github.com/adela-bytebase/bytebase-gitops-sample)
+
 ## Step 1 - Add Configure file for Prod Environment
 
 Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-database-cicd-part-1-sql-review-github-actions) to configure the **prod** environment. You now have two GitHub Actions configure files. Pay attention to **paths**, and **file-pattern**.
