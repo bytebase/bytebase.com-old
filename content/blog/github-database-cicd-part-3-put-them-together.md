@@ -33,7 +33,7 @@ Here is a demo repo:
 
 ## Step 1 - Add Configure file for Prod Environment
 
-Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-database-cicd-part-1-sql-review-github-actions) to configure the **prod** environment. You now have two GitHub Actions configure files. Pay attention to **paths**, and **file-pattern**.
+Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-database-cicd-part-1-sql-review-github-actions) to configure the **prod** environment. You now have two GitHub Actions config files for **test** and **prod** environments respectively. Pay attention to **paths**, and **file-pattern**.
 
 ![conf-prod](/static/blog/github-database-cicd-part-3-put-them-together/conf-prod.webp)
 ![conf-test](/static/blog/github-database-cicd-part-3-put-them-together/conf-test.webp)
