@@ -66,7 +66,7 @@ Congratulations! Now you have implemented a complete database CI/CD workflow! Le
 ![workflow](/static/blog/github-database-cicd-part-3-put-them-together/workflow.webp)
 
 1. You add a SQL script on a branch, push it, and create a PR on GitHub.
-2. The configured SQL review GitHub Actions runs automatically.
+2. The configured [SQL Review GitHub Action](https://github.com/marketplace/actions/sql-review) run automatically.
 3. If the SQL script passes that, you can merge it into the main branch.
 4. Since your running Bytebase is configured to watch main branch, it will trigger to create an issue there.
 5. The SQL review check will run on the issue again. After its run, you can approve it (You can change the settings to skip manual approval if needed).
