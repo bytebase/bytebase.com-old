@@ -72,6 +72,6 @@ Congratulations! Now you have implemented a complete database CI/CD workflow! Le
 5. The SQL review check will run on the issue again. After its run, you can approve it (You can change the settings to skip manual approval if needed).
 6. The SQL script will run on your database, and the migration is done.
 7. There will be an auto-generated file `.xxx__LATEST.sql`, which is the latest schema written back by Bytebase.
-8. After all migrations are done, now you can deploy your application code.
+8. After all migrations are done, you can now deploy your application code that is dependent on the new schema.
 
 Customize the structure to fit your own needs! Feel free to Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
