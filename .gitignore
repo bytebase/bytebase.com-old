@@ -92,3 +92,5 @@ sw.*
 common/sql-review-schema.yaml
 common/sql-review.*.yaml
 locales/sql-review
+common/plan.yaml
+locales/subscription
