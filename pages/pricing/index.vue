@@ -50,7 +50,7 @@
                 <h2
                   class="text-indigo-600 text-sm font-semibold uppercase tracking-wide"
                 >
-                  {{ $t(plan.title) }}
+                  {{ $t(`subscription.plan.${plan.title}.title`) }}
                 </h2>
                 <span
                   v-if="plan.label"
@@ -59,7 +59,7 @@
                 >
               </div>
               <img
-                :src="require(`~/assets/plans/${plan.imagePath}`)"
+                :src="require(`~/assets/plans/plan-${plan.title}.webp`)"
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
@@ -76,14 +76,15 @@
                     </p>
                   </div>
                   <p class="text-gray-400">
-                    {{ $t("pricing.per-instance-per-month") }}
+                    {{ $t("subscription.per-instance") }}
+                    {{ $t("subscription.per-month") }}
                   </p>
                   <p class="text-gray-400">
-                    {{ $t(`pricing.${plan.priceDescription}`) }}
+                    {{ $t(`subscription.${plan.title}-price-intro`) }}
                   </p>
                 </div>
                 <nuxt-link
-                  v-if="plan.type == 'FREE'"
+                  v-if="plan.type == 0"
                   :to="
                     localePath('/docs/get-started/install/deploy-with-docker')
                   "
@@ -107,7 +108,7 @@
                   v-if="plan.trialDays"
                   class="font-bold text-sm my-2 text-center"
                 >
-                  {{ $t("pricing.free-trial") }}
+                  {{ $t("subscription.free-trial") }}
                 </div>
               </div>
             </div>
@@ -117,7 +118,7 @@
               class="border-gray-200 divide-gray-200 mt-7 border-t divide-y lg:border-t-0"
             >
               <li
-                v-for="(feature, index) in plan.mainFeatures"
+                v-for="(feature, index) in plan.mainFeatureList"
                 :key="index"
                 class="py-3 flex items-center"
               >
@@ -126,7 +127,7 @@
                   aria-hidden="true"
                 />
                 <span class="text-gray-600 ml-3 text-sm font-medium">
-                  {{ $t(`pricing.subscription.main-features.${feature}`) }}
+                  {{ $t(`subscription.main-features.${feature}`) }}
                 </span>
               </li>
             </ul>
@@ -134,10 +135,10 @@
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 py-12 text-center text-gray-400">
-        <i18n path="pricing.announcement" for="cancel">
+        <i18n path="subscription.announcement" for="cancel">
           <template #cancel>
             <nuxt-link :to="localePath('/refund')" class="underline">{{
-              $t("pricing.cancel")
+              $t("subscription.cancel")
             }}</nuxt-link>
           </template>
         </i18n>
@@ -166,11 +167,13 @@
                 'text-sm font-bold',
               ]"
             >
-              {{ $t(plan.title) }}
+              {{ $t(`subscription.plan.${plan.title}.title`) }}
             </h3>
-            <p class="mt-2 text-sm text-gray-500">{{ $t(plan.description) }}</p>
+            <p class="mt-2 text-sm text-gray-500">
+              {{ $t(`subscription.plan.${plan.title}.desc`) }}
+            </p>
             <nuxt-link
-              v-if="plan.type == 'FREE'"
+              v-if="plan.type == 0"
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
@@ -191,11 +194,7 @@
 
           <div v-for="section in sections" :key="section.title">
             <h4 class="mt-10 text-sm font-bold text-gray-900">
-              {{
-                $t(
-                  `pricing.subscription.feature-sections.${section.title}.title`
-                )
-              }}
+              {{ $t(`subscription.feature-sections.${section.title}.title`) }}
             </h4>
 
             <div class="mt-6 relative">
@@ -229,7 +228,7 @@
                     <dt class="pr-4 text-sm font-medium text-gray-600">
                       {{
                         $t(
-                          `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
+                          `subscription.feature-sections.${section.title}.features.${feature.title}`
                         )
                       }}
                     </dt>
@@ -237,14 +236,14 @@
                       class="flex items-center justify-end sm:px-4 sm:justify-center"
                     >
                       <span
-                        v-if="typeof feature.tiers[index].value === 'string'"
+                        v-if="feature.tiers[index].content"
                         :class="[
                           feature.tiers[index].featured
                             ? 'text-indigo-600'
                             : 'text-gray-900',
                           'text-sm font-medium',
                         ]"
-                        >{{ $t(feature.tiers[index].value) }}</span
+                        >{{ $t(`${feature.tiers[index].content}`) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -317,7 +316,7 @@
                     'text-sm font-bold',
                   ]"
                 >
-                  {{ $t(plan.title) }}
+                  {{ $t(`subscription.plan.${plan.title}.title`) }}
                 </p>
                 <span
                   v-if="plan.label"
@@ -326,10 +325,10 @@
                 >
               </div>
               <p class="mt-2 text-sm text-gray-500 h-10">
-                {{ $t(plan.description) }}
+                {{ $t(`subscription.plan.${plan.title}.desc`) }}
               </p>
               <nuxt-link
-                v-if="plan.type == 'FREE'"
+                v-if="plan.type == 0"
                 :to="localePath('/docs/get-started/install/deploy-with-docker')"
                 class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
                 >{{ plan.buttonText }}</nuxt-link
@@ -350,7 +349,7 @@
                 v-if="plan.trialDays"
                 class="font-bold text-sm my-2 text-center"
               >
-                {{ $t("pricing.free-trial") }}
+                {{ $t("subscription.free-trial") }}
               </div>
             </div>
           </div>
@@ -358,9 +357,7 @@
 
         <div v-for="section in sections" :key="section.title">
           <h3 class="text-xl font-bold text-gray-900 text-left my-5">
-            {{
-              $t(`pricing.subscription.feature-sections.${section.title}.title`)
-            }}
+            {{ $t(`subscription.feature-sections.${section.title}.title`) }}
           </h3>
           <div class="relative">
             <!-- Fake card backgrounds -->
@@ -390,7 +387,9 @@
                     <span class="sr-only">{{ section.title }}</span>
                   </th>
                   <th v-for="plan in plans" :key="plan.title" scope="col">
-                    <span class="sr-only">{{ $t(plan.title) }} plan</span>
+                    <span class="sr-only">{{
+                      $t(`subscription.plan.${plan.title}.title`)
+                    }}</span>
                   </th>
                 </tr>
               </thead>
@@ -402,7 +401,7 @@
                   >
                     {{
                       $t(
-                        `pricing.subscription.feature-sections.${section.title}.features.${feature.title}`
+                        `subscription.feature-sections.${section.title}.features.${feature.title}`
                       )
                     }}
                   </th>
@@ -417,9 +416,9 @@
                   >
                     <span class="w-full h-full py-3 flex justify-center">
                       <span
-                        v-if="typeof tier.value === 'string'"
+                        v-if="tier.content"
                         :class="['text-sm font-medium']"
-                        >{{ $t(tier.value) }}</span
+                        >{{ $t(tier.content) }}</span
                       >
                       <template v-else>
                         <CheckIcon
@@ -462,7 +461,7 @@
             ]"
           >
             <nuxt-link
-              v-if="plan.type == 'FREE'"
+              v-if="plan.type == 0"
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
               class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
               >{{ plan.buttonText }}</nuxt-link
@@ -484,10 +483,10 @@
       </div>
     </section>
     <div class="max-w-7xl mx-auto px-4 py-4 pb-24 text-right text-gray-400">
-      <i18n path="pricing.announcement" for="cancel">
+      <i18n path="subscription.announcement" for="cancel">
         <template #cancel>
           <nuxt-link :to="localePath('/refund')" class="underline">{{
-            $t("pricing.cancel")
+            $t("subscription.cancel")
           }}</nuxt-link>
         </template>
       </i18n>
@@ -518,19 +517,23 @@ import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 import { useCookie } from "~/plugin/cookie";
 
 interface LocalPlan extends Plan {
+  label?: string;
   featured: boolean;
   buttonText: string;
   pricePrefix: string;
   priceSuffix: string;
 }
 
+interface LocalFeatureTier {
+  value: boolean;
+  featured?: boolean;
+  content?: string;
+  tooltip?: string;
+}
+
 interface LocalFeature {
   title: string;
-  tiers: {
-    value: boolean | string;
-    featured?: boolean;
-    tooltip?: string;
-  }[];
+  tiers: LocalFeatureTier[];
 }
 
 interface LocalFeatureSection {
@@ -553,19 +556,20 @@ export default defineComponent({
       if (plan.type === PlanType.FREE)
         return app.i18n.t("common.deploy-now") as string;
       if (plan.type === PlanType.ENTERPRISE)
-        return app.i18n.t("pricing.contact-us") as string;
+        return app.i18n.t("subscription.contact-us") as string;
       if (plan.trialDays) {
-        return app.i18n.t("pricing.start-trial") as string;
+        return app.i18n.t("subscription.start-trial") as string;
       }
-      return app.i18n.t("pricing.subscribe-now") as string;
+      return app.i18n.t("subscription.subscribe") as string;
     };
 
     const plans: LocalPlan[] = PLANS.map((plan) => ({
       ...plan,
+      label: app.i18n.t(`subscription.plan.${plan.title}.label`) as string,
       featured: plan.type === PlanType.TEAM,
       buttonText: getButtonText(plan),
       pricePrefix:
-        plan.type === PlanType.ENTERPRISE ? "pricing.start-from" : "",
+        plan.type === PlanType.ENTERPRISE ? "subscription.start-from" : "",
       priceSuffix:
         plan.type === PlanType.ENTERPRISE
           ? "pricing.price-suffix-for-enterprise"
@@ -574,21 +578,26 @@ export default defineComponent({
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
       return {
-        title: section.id,
-        features: section.features.map((feature) => ({
+        title: section.type,
+        features: section.featureList.map((feature) => ({
           title: feature,
           tiers: plans.map((p) => {
-            const supportFeature = p.features.find(
-              (planFeature) => planFeature.id === feature
+            const supportFeature = p.featureList.find(
+              (planFeature) => planFeature.type === feature
             );
-            const value = supportFeature
-              ? supportFeature.content || true
-              : false;
-            return {
-              value,
+            const res: LocalFeatureTier = {
+              value: !!supportFeature,
               featured: p.featured,
-              tooltip: supportFeature?.tooltip,
             };
+
+            if (supportFeature?.content) {
+              res.content = `subscription.feature-sections.${section.type}.features.${supportFeature.content}`;
+            }
+
+            if (supportFeature?.tooltip) {
+              res.tooltip = `subscription.feature-sections.${section.type}.features.${supportFeature.tooltip}`;
+            }
+            return res;
           }),
         })),
       };
@@ -624,7 +633,7 @@ export default defineComponent({
         utm_medium: cookie.get("utm_medium"),
         utm_campaign: cookie.get("utm_campaign"),
         source: PAGE.PRICING,
-        trial: PlanType.TEAM,
+        trial: `${PlanType.TEAM}`,
       };
       return new URLSearchParams(queryObj).toString();
     };
