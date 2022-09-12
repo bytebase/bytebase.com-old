@@ -42,7 +42,7 @@ We plan to support more Git providers roughly in the following order:
 
 ## How to enable https
 
-You can setup a reverse proxy using [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy).
+You can use [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) or [Nginx](https://www.nginx.com/).
 
 ## How to enable debug mode
 

@@ -28,11 +28,8 @@ Flags:
                       bytebase is under (default ".")
       --debug         whether to enable debug level logging
       --demo          whether to run using demo data
+      --external-url  the external URL where user visits Bytebase, must start with http:// or https://
   -h, --help          help for bytebase
-      --host string   host where Bytebase is accessed from, must start with
-                      http:// or https://. This is used by Bytebase to create the
-                      webhook callback endpoint for VCS integration (default
-                      "https://localhost")
       --pg string     optional external PostgreSQL instance connection url; for
                       example postgresql://user:secret@masterhost:5432/dbname?sslrootcert=cert
       --port int      port where Bytebase is accessed from. This is also used by
@@ -59,17 +56,13 @@ default: **false**
 
 If specified, Bytebase will load the demo data instead of the real data. The data is the same used by [https://demo.bytebase.com](https://demo.bytebase.com). This is a quick way to test the product yourself or demonstrate it to your peers. When Bytebase is started with --demo, it stores the data in a separate file, which means the demo data and real data never interferes with each other.
 
-## --host <\<string>>
+## --external-url <\<string>>
 
-default: **http://localhost**
+default: **https://www.bytebase.com/docs/get-started/install/external-url**
 
-Must start with http:// or https://. Together with --port, the **host:port** should be the address your user visiting Bytebase. It's also used by Bytebase to create the webhook callback endpoint for VCS integration.
+The external URL where user visits Bytebase, must start with http:// or https://.
 
-<hint-block type="warning">
-
-Because --host is part of the webhook callback endpoint. If the same Bytebase instance is brought up with a different --host, the webhook for the VCS integration created before will likely have a stale callback endpoint.
-
-</hint-block>
+See [Configure External URL](/docs/get-started/install/external-url).
 
 ## --pg <\<string>>
 
@@ -81,7 +74,7 @@ Optional external PostgreSQL instance connection url. If specified, Bytebase wil
 
 default: **80**
 
-The port where Bytebase is running. See --host for more info.
+The port where Bytebase is running. Bytebase listens on all network interfaces for the specified port. For production setup, see [Configure External URL](/docs/get-started/install/external-url).
 
 ## --readonly
 
