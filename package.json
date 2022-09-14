@@ -38,7 +38,7 @@
     "tailwindcss": "^2.2.19",
     "tiny-cookie": "^2.3.2",
     "typescript": "^4.8.3",
-    "vue": "^2.7.10",
+    "vue": "3.2.39",
     "vue-gtag": "1.16.1",
     "vue-plausible": "^1.3.2",
     "webpack": "^4.46.0"
