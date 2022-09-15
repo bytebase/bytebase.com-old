@@ -7,14 +7,14 @@ description: "- AWS S3 is now supported as a backup storage backend for MySQL. -
 
 ## 🚀 New Features
 
-- AWS S3 is now supported as a backup storage backend for MySQL.
+- AWS S3 is now supported as a backup storage backend.
 - Added a new onboarding guide.
     ![onboarding-guide](/static/changelog/1.4.0/onboarding-guide.gif)
 
 ## 🎄 Enhancements
 
-- Introduced `--external-url` and removed `--host` in the startup option. We have consolidated the way to configure the external visible URL. Check out [Configure External URL](https://www.bytebase.com/docs/get-started/install/external-url) for details.
-- Added support for DDL/DML aliasing for GitOps name template
+- Introduced `--external-url` and removed `--host` in the startup option. We have consolidated the way to configure the external visible URL. Check out [Configure External URL](/docs/get-started/install/external-url) for details.
+- Added support for DDL/DML aliasing for GitOps name template.
 - Added "view" in MySQL backup.
 - Progress is now displayed for PITR restore tasks.
 - Improved the performance of SQL Editor query result table.
@@ -31,11 +31,11 @@ description: "- AWS S3 is now supported as a backup storage backend for MySQL. -
 ## 🎠 Community
 
 - Added tutorial series for **How to set up Database CI/CD with GitHub**:
-  - [Part 1: Enable SQL Review with GitHub Actions](https://www.bytebase.com/blog/github-database-cicd-part-1-sql-review-github-actions)
-  - [Part 2: GitHub.com Database GitOps](https://www.bytebase.com/blog/github-database-cicd-part-2-github-database-gitops)
-  - [Put Them Together](https://www.bytebase.com/blog/github-database-cicd-part-3-put-them-together)
+  - [Part 1: Enable SQL Review with GitHub Actions](/blog/github-database-cicd-part-1-sql-review-github-actions)
+  - [Part 2: GitHub.com Database GitOps](/blog/github-database-cicd-part-2-github-database-gitops)
+  - [Part 3: Put Them Together](/blog/github-database-cicd-part-3-put-them-together)
 
 ## 📕 Installation and Upgrade
 
 - For a fresh installation, follow [https://github.com/bytebase/bytebase#installation](https://github.com/bytebase/bytebase#installation).
-- For upgrading, we removed the `--host` flag, you need to remove it from the startup flag, and replace it with `--external-url` in this version. And if your port is not `80` or `443`, the `--external-url` needs to include the port number as well. Please check [Configure External URL](https://www.bytebase.com/docs/get-started/install/external-url) for details.
+- For upgrading, we removed the `--host` flag, you need to remove it from the startup flag, and replace it with `--external-url` in this version. And if your port is not `80` or `443`, the `--external-url` needs to include the port number as well. Please check [Configure External URL](/docs/get-started/install/external-url) for details.
