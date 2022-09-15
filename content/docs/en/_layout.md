@@ -29,6 +29,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
+#### [Configure External URL](/get-started/install/external-url)
+
 ### [Configure Workspace](/get-started/configure-workspace/overview)
 
 #### [Register Accounts](/get-started/configure-workspace/register-accounts)

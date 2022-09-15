@@ -46,44 +46,21 @@ If `out_directory`is not specified, the default directory is `./bytebase-build`
 Suppose you run `scripts/build.sh foo` After build completes, run:
 
 ```bash
-foo/bytebase --host http://localhost --port 8080
+foo/bytebase --port 8080
 ```
 
 (check [Server Startup Options](/docs/reference/command-line) for other startup options)
 
 You should see something like this in the console:
 
-```plain
------Config BEGIN-----
-mode=release
-host=http://localhost
-port=8080
-dsn=file:/var/opt/bytebase/bytebase.db
-seedDir=seed/release
-readonly=false
-demo=false
-debug=false
------Config END-------
-2021-07-07T16:56:02.812Z        INFO    store/sqlite.go:213     Apply database migration if needed...
-2021-07-07T16:56:02.821Z        INFO    store/sqlite.go:220     Current schema version before migration: 1.1
-2021-07-07T16:56:02.821Z        INFO    store/sqlite.go:247     Skip this migration file: migration/10001__init_schema.sql. The corresponding migration version 1.1 has already been applied.
-2021-07-07T16:56:02.828Z        INFO    store/sqlite.go:255     Current schema version after migration: 1.1
-2021-07-07T16:56:02.828Z        INFO    store/sqlite.go:263     Completed database migration.
+<include-block url="/docs/en/get-started/install/terminal-output"  :show-title="false"></include-block>
 
-██████╗ ██╗   ██╗████████╗███████╗██████╗  █████╗ ███████╗███████╗
-██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
-██████╔╝ ╚████╔╝    ██║   █████╗  ██████╔╝███████║███████╗█████╗
-██╔══██╗  ╚██╔╝     ██║   ██╔══╝  ██╔══██╗██╔══██║╚════██║██╔══╝
-██████╔╝   ██║      ██║   ███████╗██████╔╝██║  ██║███████║███████╗
-╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+## Troubleshoot
 
-Version 0.1.0 has started at http://localhost.com:8080
-```
+### error: too many open files
 
-Change the open file limit if your encounter "error: too many open files".
+Change the open file limit:
 
 ```bash
 ulimit -n 10240
 ```
-
-Open [http://localhost:8080](http://localhost:8080) in you browser and create the admin account.

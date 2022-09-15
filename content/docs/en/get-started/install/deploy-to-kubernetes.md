@@ -28,24 +28,34 @@ spec:
         app: bytebase
     spec:
       containers:
-      - name: bytebase
-        image: bytebase/bytebase:%%bb_version%%
-        args: ["--data", "/var/opt/bytebase", "--host", "http://localhost", "--port", "8080", "--pg", "postgresql://user:secret@host:port/dbname"]
-        ports:
-        - containerPort: 8080
-        volumeMounts:
-        - name: data
-          mountPath: /var/opt/bytebase
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 300
-          periodSeconds: 300
-          timeoutSeconds: 60
+        - name: bytebase
+          image: bytebase/bytebase:%%bb_version%%
+          args:
+            [
+              "--data",
+              "/var/opt/bytebase",
+              "--external-url",
+              "https://bytebase.example.com",
+              "--port",
+              "8080",
+              "--pg",
+              "postgresql://user:secret@host:port/dbname",
+            ]
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: data
+              mountPath: /var/opt/bytebase
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 300
+            periodSeconds: 300
+            timeoutSeconds: 60
       volumes:
-      - name: data
-        emptyDir: {}
+        - name: data
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
@@ -57,9 +67,9 @@ spec:
   selector:
     app: bytebase
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
 ```
 
 1. Start Bytebase with the following command:
@@ -106,7 +116,7 @@ spec:
 
 <hint-block type="info">
 
-For production setup, you need to make sure the container args [--host](/docs/reference/command-line#--host-string), [--port](/docs/reference/command-line#--port-number) match exactly to the host:port address where Bytebase supposed to be visited. Please check [Production Setup](/docs/administration/production-setup) for more advice.
+For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
 
 </hint-block>
 
