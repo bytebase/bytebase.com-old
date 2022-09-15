@@ -27,7 +27,7 @@ specifiers:
   '@vue/eslint-config-typescript': 9.1.0
   '@vue/runtime-dom': 3.2.39
   algoliasearch: 4.14.2
-  autoprefixer: 10.4.10
+  autoprefixer: 10.4.11
   consola: 2.15.3
   core-js: 3.25.1
   dayjs: 1.11.5
@@ -67,7 +67,7 @@ dependencies:
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@2.2.19
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   algoliasearch: 4.14.2
-  autoprefixer: 10.4.10_postcss@8.4.16
+  autoprefixer: 10.4.11_postcss@8.4.16
   consola: 2.15.3
   core-js: 3.25.1
   dayjs: 1.11.5
@@ -81,7 +81,7 @@ dependencies:
   prettier: 2.7.1
   remove-markdown: 0.5.0
   slug: 5.3.0
-  tailwindcss: 2.2.19_wh6birz6bzek2zjlzgyc32cby4
+  tailwindcss: 2.2.19_6b4luod745iryv24jvdbvzbbsa
   tiny-cookie: 2.3.2
   typescript: 4.8.3
   vue: 2.7.10
@@ -1887,7 +1887,7 @@ packages:
   /@nuxt/postcss8/1.1.3_webpack@5.74.0:
     resolution: {integrity: sha512-CdHtErhvQwueNZPBOmlAAKrNCK7aIpZDYhtS7TzXlSgPHHox1g3cSlf+Ke9oB/8t4mNNjdB+prclme2ibuCOEA==}
     dependencies:
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.11_postcss@8.4.16
       css-loader: 5.2.7_webpack@5.74.0
       defu: 3.2.2
       postcss: 8.4.16
@@ -2216,7 +2216,7 @@ packages:
     resolution: {integrity: sha512-Sku7VETunn5YmvzkXFDuRdP1gUGau02eh5HtcAsI9//1hpSuEN49n3XhatBrPOXQ57WhUlnjXf0/LjT9KQH0+A==}
     dependencies:
       '@nuxt/postcss8': 1.1.3_webpack@5.74.0
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.11_postcss@8.4.16
       chalk: 4.1.2
       clear-module: 4.1.2
       consola: 2.15.3
@@ -2225,7 +2225,7 @@ packages:
       postcss-custom-properties: 11.0.0_postcss@8.4.16
       postcss-nesting: 8.0.1_postcss@8.4.16
       tailwind-config-viewer: 1.7.2_tailwindcss@2.2.19
-      tailwindcss: 2.2.19_wh6birz6bzek2zjlzgyc32cby4
+      tailwindcss: 2.2.19_6b4luod745iryv24jvdbvzbbsa
       ufo: 0.7.11
     transitivePeerDependencies:
       - supports-color
@@ -3301,7 +3301,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 2.2.19_wh6birz6bzek2zjlzgyc32cby4
+      tailwindcss: 2.2.19_6b4luod745iryv24jvdbvzbbsa
     dev: false
 
   /@tailwindcss/typography/0.4.1_tailwindcss@2.2.19:
@@ -3313,7 +3313,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.19_wh6birz6bzek2zjlzgyc32cby4
+      tailwindcss: 2.2.19_6b4luod745iryv24jvdbvzbbsa
     dev: false
 
   /@types/anymatch/3.0.0:
@@ -4495,8 +4495,8 @@ packages:
     hasBin: true
     dev: false
 
-  /autoprefixer/10.4.10_postcss@8.4.16:
-    resolution: {integrity: sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==}
+  /autoprefixer/10.4.11_postcss@8.4.16:
+    resolution: {integrity: sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -11561,12 +11561,12 @@ packages:
       open: 7.4.2
       portfinder: 1.0.32
       replace-in-file: 6.3.5
-      tailwindcss: 2.2.19_wh6birz6bzek2zjlzgyc32cby4
+      tailwindcss: 2.2.19_6b4luod745iryv24jvdbvzbbsa
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /tailwindcss/2.2.19_wh6birz6bzek2zjlzgyc32cby4:
+  /tailwindcss/2.2.19_6b4luod745iryv24jvdbvzbbsa:
     resolution: {integrity: sha512-6Ui7JSVtXadtTUo2NtkBBacobzWiQYVjYW0ZnKaP9S1ZCKQ0w7KVNz+YSDI/j7O7KCMHbOkz94ZMQhbT9pOqjw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -11575,7 +11575,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.11_postcss@8.4.16
       bytes: 3.1.2
       chalk: 4.1.2
       chokidar: 3.5.3
