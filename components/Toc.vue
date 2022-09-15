@@ -8,6 +8,7 @@
       >Table of Contents</span
     >
     <div
+      ref="container"
       class="flex flex-col w-52 h-full overflow-y-auto hide-scrollbar"
     >
       <a
@@ -42,6 +43,9 @@ interface TOC {
   text: string;
 }
 
+const ACTIVE_TITLE_OFFSET = 4
+const TITLE_HEIGHT = 28;
+
 export default defineComponent({
   props: {
     content: { type: Object, required: true },
@@ -49,6 +53,7 @@ export default defineComponent({
   },
   setup(props: { content: any; scrollOffset: number }) {
     const activeHashId = ref("");
+    const container = ref<HTMLElement>()
     const tocList = computed(() =>
       (props.content.toc as TOC[]).filter((t) => t.depth >= 2 && t.depth <= 3)
     );
@@ -56,18 +61,22 @@ export default defineComponent({
       // eslint-disable-next-line no-undef
       if (process.client) {
         const contentContainer = document.querySelector("#content-container");
-        const titleElementList: any = Array.from(
+        const titleElementList: HTMLElement[] = Array.from(
           document.querySelectorAll("#content h2, #content h3")
         );
         const onScroll = () => {
           const scrollTop = contentContainer?.scrollTop || 0;
           const titleOffsetTops = titleElementList
-            .map((el: any) => el.offsetTop)
+            .map((el: HTMLElement) => el.offsetTop)
             .sort((a: number, b: number) => a - b);
           const activeIndex =
             sortedIndex(titleOffsetTops, scrollTop + props.scrollOffset) - 1;
           if (activeIndex >= 0) {
             activeHashId.value = titleElementList[activeIndex].id;
+            container.value?.scrollTo({
+              top: (activeIndex - ACTIVE_TITLE_OFFSET) * TITLE_HEIGHT,
+              behavior: "smooth"
+            })
           }
         };
         contentContainer?.addEventListener("scroll", throttle(onScroll, 100));
@@ -76,6 +85,7 @@ export default defineComponent({
     return {
       activeHashId,
       tocList,
+      container
     };
   },
 });
