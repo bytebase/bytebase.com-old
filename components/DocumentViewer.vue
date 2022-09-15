@@ -89,7 +89,7 @@
 
     <!-- TOC -->
     <div
-      class="hidden fixed right-0 top-32 w-60 py-2 pt-12 h-auto max-h-full flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
+      class="hidden fixed right-0 top-32 w-60 py-2 pt-12 h-full flex-shrink-0 lg:flex flex-col justify-start items-start overflow-y-auto text-sm"
     >
       <Toc :content="document" :scroll-offset="20" class="md:flex" />
     </div>
