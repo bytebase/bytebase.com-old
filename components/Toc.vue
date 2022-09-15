@@ -2,13 +2,13 @@
   <!-- Table of Contents-->
   <aside
     v-show="tocList.length > 0"
-    class="hidden xl:flex flex-col justify-start items-start sticky w-52 top-0 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm"
+    class="hidden xl:flex flex-col justify-start items-start sticky w-52 top-0 pb-36 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm"
   >
     <span class="text-black pb-2 pl-4 border-l border-gray-200 truncate"
       >Table of Contents</span
     >
     <div
-      class="flex flex-col w-52 h-auto max-h-screen md:h-112 overflow-y-auto hide-scrollbar"
+      class="flex flex-col w-52 h-full overflow-y-auto hide-scrollbar"
     >
       <a
         v-for="item of tocList"
