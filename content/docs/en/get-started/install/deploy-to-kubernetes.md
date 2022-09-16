@@ -8,9 +8,9 @@ This document guides you to deploy Bytebase docker image to Kubernetes.
 
 Before starting, make sure you are familiar with [Docker](https://www.docker.com/get-started/) and [Kubernetes](https://kubernetes.io/docs/setup/).
 
-## Run on localhost
+## Deploy to Kubernetes
 
-Here is a sample Kubernetes YAML file `bb.yaml` describing the minimal components and configuration required to run Bytebase locally.
+Here is a sample Kubernetes YAML file `bb.yaml` describing the minimal components and configuration required to run Bytebase in Kubernetes.
 
 ```yaml
 apiVersion: apps/v1
@@ -30,6 +30,7 @@ spec:
       containers:
         - name: bytebase
           image: bytebase/bytebase:%%bb_version%%
+          imagePullPolicy: Always
           args:
             [
               "--data",
@@ -119,6 +120,26 @@ spec:
 For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
 
 </hint-block>
+
+## Upgrade
+
+When a new Bytebase release is published, you can change the image version in the yaml file
+
+```yaml
+      containers:
+        - name: bytebase
+          image: bytebase/bytebase:%%bb_version%%
+```
+
+Sometimes we need to update the image to the latest digest without changing the image name and version. Or you may want to trigger a restart of all the Bytebase pods without changing the yaml.
+
+In this case, you can run this command:
+
+```bash
+kubectl rollout restart deployment/bytebase
+```
+
+Kubernetes will rolling restart the pods of the deployment. Because we set `imagePullPolicy: Always`, the new pods will always use the latest image digest.
 
 ## Persistent Volume
 
