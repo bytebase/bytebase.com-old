@@ -2,7 +2,7 @@
 title: SQL Advisor GitHub Action
 ---
 
-Bytebase also provides the [SQL Review Action](https://github.com/marketplace/actions/sql-review) to let users integrate the SQL review into their GitHub CI.
+Bytebase also provides the [SQL Review Action](https://github.com/marketplace/actions/sql-review) to let users integrate the SQL review into their GitHub PR workflow.
 
 <hint-block type="info">
 
