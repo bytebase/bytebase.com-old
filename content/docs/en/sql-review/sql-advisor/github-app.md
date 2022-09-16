@@ -2,7 +2,7 @@
 title: SQL Advisor GitHub App
 ---
 
-Bytebase also provides the [GitHub App](https://github.com/marketplace/bytebase) to let users integrate the SQL review into their GitHub CI.
+Bytebase also provides the [GitHub App](https://github.com/marketplace/bytebase) to let users integrate the SQL review into their GitHub PR workflow.
 
 The App allows you to create the SQL review policy for your repositories and trigger the SQL check in the pull request.
 
