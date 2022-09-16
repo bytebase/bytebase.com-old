@@ -128,10 +128,10 @@ When a new Bytebase release is published, you can change the image version in th
 ```yaml
       containers:
         - name: bytebase
-          image: bytebase/bytebase:<PUT THE NEXT VERSION HERE>
+          image: bytebase/bytebase:%%bb_version%%
 ```
 
-Sometimes we need to update the image to the latest digest, but without changing the image name and version. For example, you are using the `bytebase/bytebase:release-ci` image, whose version never changes.
+Sometimes we need to update the image to the latest digest without changing the image name and version. Or you may want to trigger a restart of all the Bytebase pods without changing the yaml.
 
 In this case, you can run this command:
 
