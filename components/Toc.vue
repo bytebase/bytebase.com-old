@@ -79,6 +79,8 @@ export default defineComponent({
             })
           }
         };
+        // Manually trigger onScroll on mount.
+        onScroll()
         contentContainer?.addEventListener("scroll", throttle(onScroll, 100));
       }
     });
