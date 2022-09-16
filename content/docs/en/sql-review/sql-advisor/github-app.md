@@ -30,7 +30,11 @@ Specify the basic information, including display name, target repositories, and 
 
 Repository configuration:
 
-- **Database dialect**: the database dialect for your repository. For now we support MySQL (including TiDB) and PostgreSQL (including CockroachDB)
+- **Database dialect**: for now, we support
+
+  - **MySQL** dialect, vanilla MySQL, and other database engines adopting its dialect such as TiDB.
+  - **PostgreSQL** dialect, vanilla PostgreSQL, and other database engines adopting its dialect such as CockroachDB.
+
 - **SQL file path**: the file path for the SQL files in the regex format. Only matched files will be checked in the pull request. We
   will subscribe all SQL files in the repository by default.
 
@@ -38,7 +42,7 @@ Repository configuration:
 
 ### Step 2 - Configure rules
 
-You can customize the rule level and payload in step 2. You can [follow this doc](/docs/sql-review/review-rules/create-schema-review-policy#step-2) for details about rule configuration.
+You can customize the rule level and payload in step 2. You can [follow this doc](/docs/sql-review/review-rules/create-schema-review-policy#step-2) for details about the rule configuration.
 
 ![app-policy-step2](/static/docs/app-policy-step2.webp)
 
