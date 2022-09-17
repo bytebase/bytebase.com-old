@@ -7,9 +7,14 @@ title: Add an Instance
 Currently Bytebase supports **MySQL**, **PostgreSQL**, **TiDB**, **Snowflake** and **ClickHouse** instances.
 
 This document describes how to add an instance in order to synchronize databases.
+
 ## Prerequisites
+
 - **Workspace Owner** or **Workspace DBA** role
+- If you don't have an existing instance on hand, you can [add a local MySQL instance](/docs/get-started/install/local-mysql-instance).
+
 ## Add an instance
+
 1. Click **Instances** on the top bar.
 2. Click **Add Instance**.
 3. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
@@ -17,11 +22,12 @@ This document describes how to add an instance in order to synchronize databases
 5. If the instance is of very large size, uncheck **Sync schema now**, and click **Create**. You can see the new instance in the table.
 6. Choose one instance, scroll down, here you can see all the databases in that instance. If you unchecked **Sync schema now** in the previous step, now you can click **Sync now** to wait for all databases to appear.
 
-![create-an-instance](/docs/en/get-started/configure-workspace/add-an-instance/create-an-instance.webp)
+![create-an-instance](/docs/en/get-started/configure-workspace/add-an-instance/add-an-instance.webp)
 
 <hint-block type="info">
 
-Environment can not be changed once the Instance has been created.
+1. Environment can not be changed once the Instance has been created.
+2. The screeshot assumes you run Bytebase inside Docker and try to connect to a database instance on the same host. Thus it uses `host.docker.internal`. If Bytebase is not running inside Docker, you should supply the normal `127.0.0.1` to connect the instance on the same host [(detailed explanation)](https://stackoverflow.com/a/24326540/235983).
 
 </hint-block>
 

@@ -31,6 +31,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Configure External URL](/get-started/install/external-url)
 
+#### [Configure Testing MySQL Instance](/get-started/install/local-mysql-instance)
+
 ### [Configure Workspace](/get-started/configure-workspace/overview)
 
 #### [Register Accounts](/get-started/configure-workspace/register-accounts)
@@ -40,8 +42,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Set up Environments](/get-started/configure-workspace/set-up-environments)
 
 #### [Add an Instance](/get-started/configure-workspace/add-an-instance)
-
-#### [Add a MySQL Instance for Testing](/get-started/configure-workspace/add-a-mysql-instance-for-testing)
 
 #### [Customize the Logo](/get-started/configure-workspace/customize-the-logo)
 

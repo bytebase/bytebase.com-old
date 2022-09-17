@@ -1,16 +1,14 @@
 ---
-title: Add a MySQL Instance for Testing
+title: Configure a Local MySQL Instance for Testing
 ---
 
-This document describes how to run a MySQL instance with or without Docker and how to add it as an **Instance** for testing purpose.
+This document describes how to run a MySQL instance locally with Docker and how to add it as an **Instance** for testing purpose.
 
 ## Prerequisites
 
 Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/).
 
-## Option 1 - Run MySQL in Docker
-
-### Step 1 - Start a local MySQL server in Docker
+## Step 1 - Start a local MySQL server in Docker
 
 1. Start Docker.
 2. Run the command in the terminal
@@ -29,7 +27,7 @@ The setup below is for testing purpose and should NOT be used in production setu
 
 </hint-block>
 
-### Step 2 - Add the MySQL Server as an Instance
+## Step 2 - Add the MySQL Server as an Instance
 
 1. Click **Instances** on the top bar.
 2. Click **Add Instance** on the instances page, and you will see **Create Instance** dialog box.
@@ -44,7 +42,3 @@ The setup below is for testing purpose and should NOT be used in production setu
 - **Password**: testpwd1
 
 4. Click **Create**, and you can see the newly added instance in the table.
-
-## Option 2 - Run MySQL without Docker
-
-If you run MySQL without Docker, you need to set **`host.docker.internal`** as the host to configure the instance.
