@@ -23,7 +23,7 @@
     "algoliasearch": "4.14.2",
     "autoprefixer": "10.4.11",
     "consola": "2.15.3",
-    "core-js": "3.25.1",
+    "core-js": "3.25.2",
     "dayjs": "1.11.5",
     "dom-to-image": "2.6.0",
     "dotenv": "16.0.2",
