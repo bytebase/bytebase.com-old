@@ -119,12 +119,12 @@ bytebase/bytebase:1.3.0 \
 
 ![bytebase-folder](/static/blog/github-database-cicd-part-2-github-database-gitops/bytebase-folder.webp)
 
-7. Create a sql script following the name convention `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`, and here we create `employeeGitHub__202208171630__migrate__add_nickname.sql` under the `test` directory.
+7. Create a sql script following the name convention `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`, and here we create `employeeGitHub__202208171630__ddl__add_nickname.sql` under the `test` directory.
 
 - `test` corresponds to {{ENV_NAME}}
 - `employeeGitHub` corresponds to {{DB_NAME}}
 - `202208171630` corresponds to {{VERSION}}
-- `migrate` corresponds to {{TYPE}}
+- `ddl` corresponds to {{TYPE}}
 - `add_nickname` corresponds to {{DESCRIPTION}}
 
 ![create-migration-sql](/static/blog/github-database-cicd-part-2-github-database-gitops/create-migration-sql.webp)
@@ -146,7 +146,7 @@ bytebase/bytebase:1.3.0 \
 12. Switch to your code editor, and you will find there is an auto-generated file `.employeeGitHub__LATEST.sql`, which is the latest schema written back by Bytebase.
     ![latest](/static/blog/github-database-cicd-part-2-github-database-gitops/latest.webp)
 
-13. Copy the migrate script file `employeeGitHub__202208171630__migrate__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
+1.  Copy the migration script file `employeeGitHub__202208171630__ddl__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
 
 Congratulations! Now you have 1) Enabled SQL Review GitHub Actions for your GitHub repo, 2) Tried out database GitOps with GitHub. In the upcoming final part, we’ll put these two together, and thus, implementing a complete database CI/CD workflow.
 
