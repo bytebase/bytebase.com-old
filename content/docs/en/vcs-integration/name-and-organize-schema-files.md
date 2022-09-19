@@ -18,8 +18,8 @@ The default separator is double underscore `__`.
 
 Let's say the base directory is `bytebase` :
 
-- An example file path for [schema migration type](/docs/concepts/migration-types#schema-migration): `bytebase/env1/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
-- An example file path for [data migration type](/docs/concepts/migration-types#data-migration): `bytebase/env1/db1__202101131000__data__change_for_bar_data.sql`
+- An example file path for [schema migration type](/docs/concepts/migration-types#schema-migration): `bytebase/env1/db1__202101131000__ddl__create_tablefoo_for_bar.sql`
+- An example file path for [data migration type](/docs/concepts/migration-types#data-migration): `bytebase/env1/db1__202101131000__dml__change_for_bar_data.sql`
 
 #### Version (Required)
 
@@ -33,8 +33,8 @@ Database name should exactly match the destined database name. The match is **ca
 
 Bytebase currently supports following migration types:
 
-- [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `migrate` as the keyword.
-- [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `data` as the keyword.
+- [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `ddl` as the keyword.
+- [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `dml` as the keyword.
 
 #### Environment Name (Optional)
 
@@ -52,9 +52,9 @@ An optional description string can be included in the file name. If provided, By
 #### Supported wildcard
 
 - Use '*' to match one directory. For example:
-`{{ENV_NAME}}/*/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/db1__202101131000__migrate__create_tablefoo_for_bar.sql`.
+`{{ENV_NAME}}/*/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/db1__202101131000__ddl__create_tablefoo_for_bar.sql`.
 - Use '**' to match one or more directories. For example:
-`{{ENV_NAME}}/**/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/bar/db1__202101131000__migrate__create_tablefoo_for_bar.sql`
+`{{ENV_NAME}}/**/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql` matches `env1/foo/bar/db1__202101131000__ddl__create_tablefoo_for_bar.sql`
 
 ## Schema Path Template
 
