@@ -39,16 +39,16 @@ In this tutorial, you’ll run Bytebase locally using Docker.
 ![ngrok](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok.webp)
 
 3. Run Bytebase in Docker with the following command.
+
 ```bash
 docker run --init \
 --name bytebase-github \
 --restart always \
---add-host host.docker.internal:host-gateway \
 --publish 8080:8080 \
 --volume ~/.bytebase/data:/var/opt/bytebase \
 bytebase/bytebase:1.3.0 \
 --data /var/opt/bytebase \
---host https://03f1-103-102-7-52.ngrok.io \
+--external-url https://03f1-103-102-7-52.ngrok.io \
 --port 8080 \
 --frontend-port 80
 ```
@@ -68,22 +68,19 @@ bytebase/bytebase:1.3.0 \
 ![fill-id-secret](/static/blog/github-database-cicd-part-2-github-database-gitops/fill-id-secret.webp)
 
 3. Open GitHub, and go to **Settings > Developer Settings > OAuth Apps**. Click **New OAuth App**.
-![github-oauth](/static/blog/github-database-cicd-part-2-github-database-gitops/github-oauth.webp)
+   ![github-oauth](/static/blog/github-database-cicd-part-2-github-database-gitops/github-oauth.webp)
 
 4. Scroll down on the new OAuth App page, paste the **Authorization callback URL**, then click **Update Application**.
 
 ![auth-callback](/static/blog/github-database-cicd-part-2-github-database-gitops/auth-callback.webp)
 
-
 5. On the same page, you can also find **Client ID** and **Client secrets**.
 
 ![client-id-secrets](/static/blog/github-database-cicd-part-2-github-database-gitops/client-id-secrets.webp)
 
-
 6. Switch back to the Bytebase console, fill Client ID and Client secrets in the form as **Application ID** and **Secret**.
 
 ![fill-id-secret](/static/blog/github-database-cicd-part-2-github-database-gitops/fill-id-secret.webp)
-
 
 6. Click **Next**. You will be redirected to the confirmation page. Click **Confirm and add**, and the Git provider is successfully added.
 
@@ -92,7 +89,8 @@ bytebase/bytebase:1.3.0 \
 ## Step 3 - Use GitOps workflow to apply Schema Change
 
 1. Go to **Instances** to add two instances for **Test** and **Prod** environments respectively. In our case, we use two AWS RDS MySQL instances with the same employee data set.
-- If you don’t have any database to use, check our docs to run MySQL in docker: [https://www.bytebase.com/docs/get-started/configure-workspace/add-a-mysql-instance-for-testing](https://www.bytebase.com/docs/get-started/configure-workspace/add-a-mysql-instance-for-testing)
+
+- If you don’t have any database to use, check our docs to [run MySQL in docker](/docs/get-started/install/local-mysql-instance).
 - We also open sourced the sample employee data set for MySQL, which you can import: [https://github.com/bytebase/employee-sample-database-mysql](https://github.com/bytebase/employee-sample-database-mysql). If you don't import this, you can also create databases and tables manually for your needs.
 
 ![add-two-instances](/static/blog/github-database-cicd-part-2-github-database-gitops/add-two-instances.webp)
@@ -122,6 +120,7 @@ bytebase/bytebase:1.3.0 \
 ![bytebase-folder](/static/blog/github-database-cicd-part-2-github-database-gitops/bytebase-folder.webp)
 
 7. Create a sql script following the name convention `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`, and here we create `employeeGitHub__202208171630__ddl__add_nickname.sql` under the `test` directory.
+
 - `test` corresponds to {{ENV_NAME}}
 - `employeeGitHub` corresponds to {{DB_NAME}}
 - `202208171630` corresponds to {{VERSION}}
@@ -135,7 +134,7 @@ bytebase/bytebase:1.3.0 \
 
 ![new-issue](/static/blog/github-database-cicd-part-2-github-database-gitops/new-issue.webp)
 
-10.  Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the `Test` environment, and it shows **Done**. You may also [configure the environment](/docs/get-started/configure-workspace/set-up-environments) to skip this manual approval step.
+10. Visit this issue, and click **Approve**. The SQL will execute against the `employeeGitHub` database in the `Test` environment, and it shows **Done**. You may also [configure the environment](/docs/get-started/configure-workspace/set-up-environments) to skip this manual approval step.
 
 ![issue-waiting](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-waiting.webp)
 ![issue-done](/static/blog/github-database-cicd-part-2-github-database-gitops/issue-done.webp)
@@ -145,7 +144,7 @@ bytebase/bytebase:1.3.0 \
 ![table-employee](/static/blog/github-database-cicd-part-2-github-database-gitops/table-employee.webp)
 
 12. Switch to your code editor, and you will find there is an auto-generated file `.employeeGitHub__LATEST.sql`, which is the latest schema written back by Bytebase.
-![latest](/static/blog/github-database-cicd-part-2-github-database-gitops/latest.webp)
+    ![latest](/static/blog/github-database-cicd-part-2-github-database-gitops/latest.webp)
 
 1.  Copy the migration script file `employeeGitHub__202208171630__ddl__add_nickname.sql` and paste it into `prod` directory, and repeat the process. The schema change will execute on **Prod** environment.
 
