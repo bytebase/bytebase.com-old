@@ -8,6 +8,14 @@ This document guides you to run Bytebase in docker, which takes less than 5 seco
 
 Before starting, make sure you have installed [Docker](https://www.docker.com/get-started/).
 
+### Special notes for running on Linux
+
+<hint-block type="warning">
+
+If you run Bytebase inside Docker on Linux and want to connect the database intance on the same host, then you need to supply the additional `--add-host host.docker.internal:host-gateway --host network` flags.
+
+</hint-block>
+
 ## Run on localhost:5678
 
 Run the following command to start Bytebase on container port 8080 and bind to localhost:5678.
@@ -16,7 +24,6 @@ Run the following command to start Bytebase on container port 8080 and bind to l
 docker run --init \
   --name bytebase \
   --restart always \
-  --add-host host.docker.internal:host-gateway \
   --publish 5678:8080 \
   --health-cmd "curl --fail http://localhost:5678/healthz || exit 1" \
   --health-interval 5m \
@@ -43,7 +50,6 @@ Run the following command to start Bytebase on port 80 and visit Bytebase from h
 docker run --init \
   --name bytebase \
   --restart always \
-  --add-host host.docker.internal:host-gateway \
   --publish 80:8080 \
   --health-cmd "curl --fail http://localhost:80/healthz || exit 1" \
   --health-interval 5m \
@@ -82,5 +88,5 @@ Due to the vm mechanism of colima, try to use the `--mount` option when starting
 ```bash
 mkdir ~/volumes
 colima start --mount ~/volumes:w
-docker run --init --name bytebase --restart always --add-host host.docker.internal:host-gateway --publish 80:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:%%bb_version%% --data /var/opt/bytebase --external-url https://bytebase.example.com --port 8080
+docker run --init --name bytebase --restart always --publish 80:8080 --volume ~/.bytebase/data:/var/opt/bytebase bytebase/bytebase:%%bb_version%% --data /var/opt/bytebase --external-url https://bytebase.example.com --port 8080
 ```

@@ -12,5 +12,5 @@ At workspace level, you can
 
 - [Register accounts](register-accounts) or [Add Owners, DBAs and Developers](manage-members) to the workspace.
 - [Set up environments](set-up-environments) (e.g. Test, Prod) to fit your working process.
-- [Add instances](add-an-instance) to make it possible to synchronize databases - the quickest way to test MySQL Instace is to [Run a MySQL in Docker](add-a-mysql-instance-for-testing).
+- [Add instances](add-an-instance) to make it possible to synchronize databases - if you don't have an existing instance on hand, you can [add a local MySQL instance](/docs/get-started/install/local-mysql-instance).
 - [Customize the Logo](customize-the-logo).
