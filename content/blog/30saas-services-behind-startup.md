@@ -139,7 +139,7 @@ We use Retool to build a list for displaying registered users, with which our te
 
 ### [Algolia](https://algolia.com)
 
-It is used to search for content on our [docs site](/introduction/what-is-bytebase).
+It is used to search for content on our [docs site](/docs/introduction/what-is-bytebase).
 
 ![_](/static/blog/30saas-services-behind-startup/algolia-search.webp)
 
