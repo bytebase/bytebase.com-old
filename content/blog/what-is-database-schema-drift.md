@@ -30,7 +30,7 @@ While the **source of truth part** is more complex...
 
 One may first wonder why we need to keep a separate source of truth. The reason is because the schema in the live database may not always be the desired state. Human error or software bugs could both accidentally change the database schema. So it's better to have a separate source of truth, this idea is similar to the classic [double-entry bookkeeping](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) used in accounting.
 
-Naturally, a good place to store this source of truth is the version control system (VCS), the same place where the application code is stored. This is known as [database-as-code](database-as-code), a GitOps practice. Solutions like Liquibase, Flyway and etc all support this approach. Bytebase also supports this and even go a step further to provide point-and-click UI to configure this [VCS integration](https://docs.bytebase.com/use-bytebase/vcs-integration).
+Naturally, a good place to store this source of truth is the version control system (VCS), the same place where the application code is stored. This is known as [database-as-code](database-as-code), a GitOps practice. Solutions like Liquibase, Flyway and etc all support this approach. Bytebase also supports this and even go a step further to provide point-and-click UI to configure this [VCS integration](/docs/vcs-integration/overview).
 ![_](/static/blog/what-is-database-schema-drift/project-vcs.webp)
 
 ## The format of source of truth
@@ -61,4 +61,4 @@ The detailed drift👇
 
 Database schema drift is one of the most frequent root causes of the database related outages. Recording the desired database schema state in the version control system like GitLab is the first stepping stone to tackle it. Bytebase takes the extra mile to present an easy-to-use UI for users to adopt this practice and surfaces detailed schema drift info once detected.
 
-If this interests you, please do check out our [demo](https://demo.bytebase.com) or use 1 line command to [deploy yourself](https://docs.bytebase.com/install/docker).
+If this interests you, please do check out our [demo](https://demo.bytebase.com) or use 1 line command to [deploy yourself](/docs/get-started/install/deploy-with-docker).

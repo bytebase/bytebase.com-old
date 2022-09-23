@@ -11,9 +11,10 @@ description: Introduce gh-ost based online schema migration and how to perform a
 Bytebase is an open-source database DevOps tool; it’s the GitLab for managing databases throughout the software development lifecycle (SDLC). It offers a web-based workspace for Developers and DBAs to collaborate and execute database changes safely and efficiently.
 
 Database schema migration is one of the most common operations for developers and DBAs. However, it is one of the most challenging operations as well. What’s more painful, it will take hours, even days to migrate schema for large tables. Regular schema migration must lock the database table and render the service offline. For most businesses, it’s unacceptable to endure such extended downtime. To solve it, the industry has developed various online schema change solutions:
-* [gh-ost](https://github.com/github/gh-ost)
-* [Pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
-* [Facebook OSC](https://github.com/facebookincubator/OnlineSchemaChange)
+
+- [gh-ost](https://github.com/github/gh-ost)
+- [Pt-online-schema-change](https://www.percona.com/doc/percona-toolkit/3.0/pt-online-schema-change.html)
+- [Facebook OSC](https://github.com/facebookincubator/OnlineSchemaChange)
 
 By adopting these tools, teams can reduce schema migration downtime from days and hours to seconds. On the other hand, operating these tools still requires a lot of expertise. And their usage is limited to the seasoned DBAs, while Developers still need to ask their DBA peers to perform online schema changes on their behalf.
 
@@ -42,17 +43,18 @@ The screenshot below shows the table “sbtest1” information before applying s
 ![overview](/static/blog/gh-ost-based-online-schema-migration-for-mysql/overview.webp)
 
 **Step 1**. Create a gh-ost issue
-1. Click **Alter Schema** on the database details page. 
-![step_1_1](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_1.webp)
+
+1. Click **Alter Schema** on the database details page.
+   ![step_1_1](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_1.webp)
 
 2. Select **Online migration** and click **Next.**
-![step_1_2](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_2.webp)
+   ![step_1_2](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_2.webp)
 
 3. Enter SQL statements for the task “Sync data”, and click **Create** after selecting a reviewer to approve the issue.
-![step_1_3](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_3.webp)
+   ![step_1_3](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_1_3.webp)
 
 **Step 2**. Execute the task “Sync data”.
-The task “Sync data” runs after the designated reviewer clicks **Approve**. See the screenshot below, it shows that the progress of “Sync data” is 59%. 
+The task “Sync data” runs after the designated reviewer clicks **Approve**. See the screenshot below, it shows that the progress of “Sync data” is 59%.
 ![step_3](/static/blog/gh-ost-based-online-schema-migration-for-mysql/step_3.webp)
 
 **Step 3**. Perform the task “Switch tables”.
@@ -64,9 +66,9 @@ Then the designated reviewer clicks **Approve** to execute the second task “Sw
 
 Here is the result of gh-ost. It says that the database performs gh-ost successfully.
 ![result](/static/blog/gh-ost-based-online-schema-migration-for-mysql/result.webp)
- 
+
 ## Learn More
 
-Bytebase supports online schema migration for large tables based on gh-ost, a triggerless online schema migration solution that can reduce the application downtime from hours to seconds. It offers a step-by-step interface with continuous progress update to oversee the entire migration process. You can check out the [documentation](https://www.bytebase.com/docs/change-database/online-schema-migration-for-mysql) to learn more.
+Bytebase supports online schema migration for large tables based on gh-ost, a triggerless online schema migration solution that can reduce the application downtime from hours to seconds. It offers a step-by-step interface with continuous progress update to oversee the entire migration process. You can check out the [documentation](/docs/change-database/online-schema-migration-for-mysql) to learn more.
 
 If you have any feedback, we’d love to hear from you. You can find us on our [GitHub issue board](https://github.com/bytebase/bytebase/issues).

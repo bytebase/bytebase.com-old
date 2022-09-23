@@ -21,7 +21,7 @@ On your GitLab Runner shell prompt, paste the following command:
 
 Run `bb --version` to check if `bb` is installed.
 
-You can go back to [overview](https://www.bytebase.com/docs/cli/overview) for more installation details.
+You can go back to [overview](/docs/cli/overview) for more installation details.
 
 ## Register GitLab Runner to a GitLab Project
 
