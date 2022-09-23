@@ -110,7 +110,7 @@ Our official website [bytebase.com](https://www.bytebase.com/) is hosted separat
 
 ### [AWS](https://aws.com)
 
-We host [gitlab.bytebase.com](https://gitlab.bytebase.com) for testing our [VCS integration](https://www.bytebase.com/docs/vcs-integration/overview) and demo site. We didn’t use Render for two reasons:
+We host [gitlab.bytebase.com](https://gitlab.bytebase.com) for testing our [VCS integration](/docs/vcs-integration/overview) and demo site. We didn’t use Render for two reasons:
 
 1. We built GitLab early on, so it is difficult to migrate data.
 2. GitLab requires more resources. There will be a decent increase in cost if we deploy t3a.large (2C8G) on Render.
@@ -139,7 +139,7 @@ We use Retool to build a list for displaying registered users, with which our te
 
 ### [Algolia](https://algolia.com)
 
-It is used to search for content on our [docs site](https://www.bytebase.com/docs/introduction/what-is-bytebase).
+It is used to search for content on our [docs site](/introduction/what-is-bytebase).
 
 ![_](/static/blog/30saas-services-behind-startup/algolia-search.webp)
 
