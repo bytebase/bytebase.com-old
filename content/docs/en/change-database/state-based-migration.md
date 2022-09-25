@@ -20,18 +20,27 @@ It is a better and future-proof approach to manage schema changes for being repe
 
 ### Step 1 - Enable the setting
 
-Once enabled [GitOps workflow](../vcs-integration/enable-version-control-workflow), in the project's **Version Control > Schema change type** option, select "**State-based**".
+Once enabled [GitOps workflow](../vcs-integration/enable-version-control-workflow), in the project's **Version Control > Schema change type** option, select **State-based**.
 
 ![select-schema-change-type](/static/docs/en/change-database/state-based-migration/select-schema-change-type.webp)
 
 ### Step 2 - Update schema file
 
-TODO
+In our example with GitLab self-hosted as our VCS, we create a new schema file in the connected repository whose path is matching the **Schema path template** we have configured as `.{{DB_NAME}}__LATEST.sql`, where `{{DB_NAME}}` is `mydb`. It is noteable that we have also configured `bytebase` as the **Base directory**, so all files need to reside under this directory.
 
-### Step 3 - Approve generated migration diff
+![commit-new-schema-file](/static/docs/en/change-database/state-based-migration/commit-new-schema-file.webp)
 
-TODO
+Once committed the schema file to the target branch `main`, a new migration issue is created automatically with only the differentiate part of the schema.
+
+![new-migration-issue](/static/docs/en/change-database/state-based-migration/new-migration-issue.webp)
+
+You may notice only the DDL for creating the new `users` table is shown here because the `mydb` database already has the `emails` table.
+
+Subsequent updates to the schema file without actually changing the database schema will not generate new migration issues.
 
 ## Caveats
 
-TODO DDL is disallowed, only new tables, PostgreSQL
+As the state-based migration is in beta stage, there are still few things to watch out:
+
+- Typical migration-based schema change is disallowed, where you would have each file containing DDL statements for imperative migrations.
+- Only PostgreSQL database backend and creating new tables are currently supported. The support of other database backends (including MySQL) and more schema change semantics (including drop tables, changing columns) are well underway.
