@@ -100,7 +100,7 @@ Now Bytebase will start with all backup files stored in the cloud. All operation
 
 <hint-block type="warning">
 
-Caveat: If you used to run Bytebase without these flags, you might already have backups in your local disk. They can be successfully restored even if you run Bytebase with the new flags to store new backups in the AWS S3. But we still recommend that you do at least one backup for the production databases after the new Bytebase deployment. This ensure that there are backups in the cloud storage and that your data is safe.
+Caveat: If you used to run Bytebase without these flags, you might already have backups in your local disk. They can be successfully restored even if you run Bytebase with the new flags to store new backups in the AWS S3. But we still recommend that you do at least one backup for the production databases after Bytebase switches to the cloud backup. This ensures that there are backups in the cloud storage and that your data is safe.
 
 </hint-block>
 
