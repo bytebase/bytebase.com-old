@@ -127,6 +127,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [Restore from Backup](/disaster-recovery/backup-restore-database/restore-from-backup)
 
+#### [Backup to the Cloud](/disaster-recovery/backup-restore-database/cloud-backup)
+
 ### [Point-in-time Recovery for MySQL](/disaster-recovery/point-in-time-recovery-for-mysql)
 
 ## [SQL Editor](/sql-editor/overview)
