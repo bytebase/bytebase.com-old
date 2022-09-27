@@ -88,7 +88,7 @@ docker run --init \
   --health-timeout 60s \
   --volume ~/.bytebase/data:/var/opt/bytebase \
   --volume ~/.aws:/var/opt/bytebase/.aws \
-  bytebase/bytebase:1.4.0 \
+  bytebase/bytebase:%%bb_version%% \
   --data /var/opt/bytebase \
   --port 8080 \
   --backup-region us-east-1 \
