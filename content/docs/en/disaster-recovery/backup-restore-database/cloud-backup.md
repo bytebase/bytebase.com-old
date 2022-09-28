@@ -41,7 +41,7 @@ Firstly, we need to create a policy to grant access permissions to the newly cre
 }
 ```
 
-Please substitute the `<YOUR-BUCKET-NAME-HERE>` part with your actual bucket name. Do not change the Version field’s value, which is the newest version of the AWS policy language.
+Please substitute the `<YOUR-BUCKET-NAME-HERE>` part with your actual bucket name. Do not change the "Version" field’s value, which is the newest version of the AWS policy language.
 
 We suggest using a name such as “bytebase-backup-s3-xxx” to distinguish it from your other policies.
 
