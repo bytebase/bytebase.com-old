@@ -2,7 +2,7 @@
 title: Bytebase 1.5.0
 author: Candy
 published_at: 2022/09/29 16:00:00
-description: - Added "LGTM" inspection for issues, allowing multiple members to review the same issue. - Improved the latency of syncing or adding PostgreSQL databases. - Added the "disallow commit" SQL review rule for MySQL. It will disallow users to use "commit" in SQL statements if enabled.
+description: "- Added \"LGTM\" inspection for issues, allowing multiple members to review the same issue. - Improved the latency of syncing or adding PostgreSQL databases. - Added the \"disallow commit\" SQL review rule for MySQL. It will disallow users to use \"commit\" in SQL statements if enabled."
 ---
 
 ## 🚀 New Features
