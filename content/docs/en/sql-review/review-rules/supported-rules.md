@@ -245,7 +245,7 @@ Specifically, Bytebase checks:
 
 ## Query
 
-<h3 id="statement.select.no-select-all">Disallow SELECT \*</h3>
+<h3 id="statement.select.no-select-all">Disallow SELECT *</h3>
 
 `SELECT *` introduces additional performance cost or ambiguous semantics.
 

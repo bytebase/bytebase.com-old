@@ -101,6 +101,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
+### [State-based Migration](/change-database/state-based-migration)
+
 ## [VCS Integration](/vcs-integration/overview)
 
 ### [Add Git Provider](/vcs-integration/add-git-provider)
@@ -124,6 +126,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [Backup](/disaster-recovery/backup-restore-database/backup)
 
 #### [Restore from Backup](/disaster-recovery/backup-restore-database/restore-from-backup)
+
+#### [Backup to the Cloud](/disaster-recovery/backup-restore-database/cloud-backup)
 
 ### [Point-in-time Recovery for MySQL](/disaster-recovery/point-in-time-recovery-for-mysql)
 

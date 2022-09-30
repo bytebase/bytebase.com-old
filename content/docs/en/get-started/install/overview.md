@@ -8,7 +8,7 @@ You have tried Bytebase via [quick start](../quick-start), now it's time to depl
 
 First, check [System Requirement and Support](/docs/faq#system-requirements-and-supported-versions).
 
-There are three different ways to deploy Bytebase to production:
+There are four different ways to deploy Bytebase to production:
 
 1. [Docker](deploy-with-docker)
 2. [Deploy to Kubernetes](deploy-to-kubernetes)
