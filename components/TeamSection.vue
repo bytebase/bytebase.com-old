@@ -144,7 +144,7 @@ export default defineComponent({
     const founderNameList = founder.map((person) => person.name);
     const people = teammateList
       .filter((t) => {
-        return !founderNameList.includes(t.name);
+        return !t.emeritus && !founderNameList.includes(t.name);
       })
       .map((t) => {
         return {
