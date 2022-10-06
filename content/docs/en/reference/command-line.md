@@ -70,6 +70,12 @@ default: ""
 
 Optional external PostgreSQL instance connection url. If specified, Bytebase will store its own metadata there. Check [setup guide](/docs/get-started/install/external-postgres) for details.
 
+<hint-block type="info">
+
+Alternatively, you can also pass PG_URL environment variable.
+
+</hint-block>
+
 ## --port <\<number>>
 
 default: **80**
