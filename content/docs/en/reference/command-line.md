@@ -79,7 +79,7 @@ If specified, Bytebase will load the demo data instead of the real data. The dat
 
 default: **""**
 
-If not specified, the demo name will be "dev", and Bytebase will load data from the "dev" demo dir embedded in the binary.
+If not specified, the demo name will be "dev".
 
 The current available demo names are "dev", "prod", and "schema-migration-history".
 
