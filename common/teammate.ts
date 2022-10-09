@@ -20,6 +20,16 @@ const teammateList = [
   {
     name: "Zilong",
     role: "team.roles.engineering-intern",
+    emeritus: true,
+  },
+  {
+    name: "Yunwei",
+    role: "team.roles.engineering",
+    emeritus: true,
+  },
+  {
+    name: "007",
+    role: "team.roles.special-agent",
   },
   {
     name: "Ji",
@@ -34,20 +44,23 @@ const teammateList = [
     role: "team.roles.engineering-intern",
   },
   {
-    name: "Lucy",
+    name: "Ray",
     role: "team.roles.community-intern",
+    emeritus: true,
   },
   {
-    name: "Grace",
-    role: "team.roles.community-intern",
+    name: "Qiaosheng",
+    role: "team.roles.engineering-intern",
+    emeritus: true,
   },
   {
     name: "Elon",
     role: "team.roles.engineering",
   },
   {
-    name: "Zipeng",
-    role: "team.roles.engineering-intern",
+    name: "Lucy",
+    role: "team.roles.community-intern",
+    emeritus: true,
   },
   {
     name: "Junyi",
@@ -58,6 +71,10 @@ const teammateList = [
     role: "team.roles.solution-architect",
   },
   {
+    name: "Zipeng",
+    role: "team.roles.engineering-intern",
+  },
+  {
     name: "Candy",
     role: "team.roles.product-manager",
   },
@@ -66,12 +83,18 @@ const teammateList = [
     role: "team.roles.community-manager",
   },
   {
+    name: "Queeny",
+    role: "team.roles.advisor",
+    emeritus: true,
+  },
+  {
     name: "Zhengx",
     role: "team.roles.engineering-intern",
   },
   {
-    name: "Queeny",
-    role: "team.roles.advisor",
+    name: "Grace",
+    role: "team.roles.community-intern",
+    emeritus: true,
   },
 ];
 

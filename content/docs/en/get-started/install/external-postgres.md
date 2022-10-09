@@ -4,7 +4,7 @@ title: Configure External PostgreSQL
 
 By default, Bytebase bundles an embedded PostgreSQL instance for storing its own metadata. The metadata is stored under the [--data](/docs/reference/command-line#--data-directory) directory.
 
-Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) to store these metadata in an external PostgreSQL database.
+Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) or pass PG_URL environment variable to store these metadata in an external PostgreSQL database.
 
 ## Prerequisites
 
@@ -24,6 +24,12 @@ Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) t
    - USAGE
 
 ## --pg connection string
+
+<hint-block type="info">
+
+Alternatively, you can also pass PG_URL environment variable.
+
+</hint-block>
 
 Supported format:
 
