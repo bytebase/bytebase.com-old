@@ -27,7 +27,7 @@ docker run --init \
  --port 8080
 ```
 
-But at Bytebase, we release a new version every two weeks, which means we need to update the latest version here (currently %%bb_version%%) every two weeks.
+But at Bytebase, we release a new version biweekly, which means we need to update the latest version here (currently %%bb_version%%) every two weeks.
 
 ![_](/static/blog/global-variable-support-in-nuxt/upgrade-in-the-old-way.webp)
 
@@ -121,11 +121,13 @@ However, the solution of using a version component has some limitations:
 
 ```markdown
 ...
+
   <pre>
       ...
       <version></version>
       ...
   </pre>
+
 ...
 ```
 
