@@ -206,7 +206,7 @@ Now there's no need for `<pre>` tags or extra loader packages, and the placehold
 
 ## Result
 
-[This](https://github.com/bytebase/bytebase.com/pull/506/files) is how we update our docs now. Concise and effective.
+[This](https://github.com/bytebase/bytebase.com/pull/506/files) is how we update our docs now. Just a single line change to update the version string and all version references scattered over the doc will get updated. Concise and effective.
 
 ![_](/static/blog/global-variable-support-in-nuxt/upgrade-in-the-new-way.webp)
 
