@@ -416,8 +416,13 @@ export default {
       },
     },
     "content:file:beforeParse": (file) => {
-      if (file.extension === ".md" && file.path.includes("docs")) {
+      if (
+        file.extension === ".md" &&
+        ["docs", "blog"].some((dir) => file.path.includes(dir))
+      ) {
         file.data = file.data.replace(/%%bb_version%%/g, VERSION);
+        // Use `$$bb_version$$` to escape `%%bb_version%%`.
+        file.data = file.data.replace(/\$\$bb_version\$\$/g, "%%bb_version%%");
       }
     },
     "content:file:beforeInsert": (document) => {

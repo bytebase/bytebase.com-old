@@ -88,7 +88,7 @@ const teammateList = [
     emeritus: true,
   },
   {
-    name: "Zhengx",
+    name: "Xiong",
     role: "team.roles.engineering-intern",
   },
   {
