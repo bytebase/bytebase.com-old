@@ -4,7 +4,7 @@ author: Xiong
 published_at: 2022/10/9 12:00:00
 feature_image: /static/blog/global-variable-support-in-nuxt/deliver-versions.webp
 tags: Education
-description: We recently introduced a global variable in our Nuxt docs to boost our productivity and enhance the experience. I was responsible for this task.
+description: We recently introduced a global version variable in our Nuxt docs to ease the documentation update during release. This article describes how we implement this feature.
 ---
 
 ## Background
