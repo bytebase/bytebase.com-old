@@ -121,13 +121,11 @@ However, the solution of using a version component has some limitations:
 
 ```markdown
 ...
-
   <pre>
       ...
       <version></version>
       ...
   </pre>
-
 ...
 ```
 
