@@ -14,7 +14,7 @@ Note that you can only restore to the point of time after a valid backup.
 
 ## Restore in place
 
-Follow this section if you want to restore the database to a point in time in place. After the restoration, the database will be at the state of the specified point in time.
+Follow this section if you want to perform an in-place database restore to a point in time. After the restoration, the database will be at the state of the specified point in time.
 
 The in-place restoration process involves the following steps.
 
@@ -64,7 +64,7 @@ Now you have successfully performed a Point-in-time Recovery to your database!
 
 ## Restore to a new database
 
-Follow this section if you want to create a new database at a specific point in time of an existing database. This is very useful when you want to get a snapshot of a database in the history.
+Follow this section if you want to create a new database at a specific point in time of an existing database. This is very useful when you want to get a snapshot of a database in the past.
 
 The restoration process involves the following steps.
 
