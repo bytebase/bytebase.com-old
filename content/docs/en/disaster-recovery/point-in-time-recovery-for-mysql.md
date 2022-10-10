@@ -12,9 +12,11 @@ It’s recommended to follow the [doc for backup](/docs/disaster-recovery/backup
 
 Note that you can only restore to the point of time after a valid backup.
 
-## Restore
+## Restore in place
 
-The restoration process involves several steps.
+Follow this section if you want to perform an in-place database restore to a point in time. After the restoration, the database will be at the state of the specified point in time.
+
+The in-place restoration process involves the following steps.
 
 ### Step 1 - Click the **Restore to point in time** button on the database page.
 
@@ -59,3 +61,41 @@ It should succeed like this.
 ![pitr-restore-step-5](/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-step-5.webp)
 
 Now you have successfully performed a Point-in-time Recovery to your database!
+
+## Restore to a new database
+
+Follow this section if you want to create a new database at a specific point in time of an existing database. This is very useful when you want to get a snapshot of a database in the past.
+
+The restoration process involves the following steps.
+
+### Step 1 - Click the **Restore to point in time** button on the database page.
+
+![pitr-restore-step-1](/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-step-1.webp)
+
+### Step 2 - Chose "To new database"
+
+Choose the target time to restore. Note that the time is at the local timezone of your browser.
+
+Choose the instance of the new database, and fill in the name of the new database.
+
+Click the "Confirm" button to create the PITR issue.
+
+<img alt="pitr-restore-new-db-step-2" src="../../../../static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-2.webp" style="max-width: 540px">
+
+### Step 3 - Approve the Create database task.
+
+The first task is to create a new database using the information you just provided.
+
+![pitr-restore-to-new-db-step-3](/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-3.webp)
+
+### Step 4 - Approve the Restore to new database task.
+
+![pitr-restore-to-new-db-step-4](/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-4.webp)
+
+Click the Approve button to approve the second task.
+
+It should succeed like this.
+
+![pitr-restore-to-new-db-step-5](/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-5.webp)
+
+Now you have successfully performed a Point-in-time Recovery to a new database!
