@@ -12,7 +12,7 @@ When running Bytebase in production, you should not make the node that's running
 
 <hint-block type="info">
 
-If the exposed port is not 80 or 443, please include the port number in --external-url as well.
+If the exposed port is not 80 or 443, please include the port number in --external-url as well. e.g. --external-url=http://bytebase.example.com:8080 instead of --external-url=http://bytebase.example.com.
 
 </hint-block>
 
