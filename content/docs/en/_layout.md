@@ -131,6 +131,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Point-in-time Recovery for MySQL](/disaster-recovery/point-in-time-recovery-for-mysql)
 
+### [Backup Retention Policy](/disaster-recovery/backup-retention-policy)
+
 ## [SQL Editor](/sql-editor/overview)
 
 ### [Compose a Query](/sql-editor/writing-a-query)
