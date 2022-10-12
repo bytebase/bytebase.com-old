@@ -80,7 +80,7 @@ Choose the instance of the new database, and fill in the name of the new databas
 
 Click the "Confirm" button to create the PITR issue.
 
-<img alt="pitr-restore-new-db-step-2" src="../../../../static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-2.webp" style="max-width: 540px">
+<img alt="pitr-restore-new-db-step-2" src="/static/docs/en/disaster-recovery/point-in-time-recovery-for-mysql/pitr-restore-to-new-db-step-2.webp" style="max-width: 540px;">
 
 ### Step 3 - Approve the Create database task.
 
