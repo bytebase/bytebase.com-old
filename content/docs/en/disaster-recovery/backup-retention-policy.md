@@ -14,7 +14,7 @@ If you have not enabled automatic backup for the database, click the "Enable bac
 
 ### Step 2 - Set retention period
 
-Set the days you want to preserve the backup. Bytebase will automatically delete the expired backups after the configuration.
+Set the days you want to preserve the backup. Bytebase will automatically delete the expired backups after the configured retention period.
 
 <img alt="set-retention-period" src="/docs/en/disaster-recovery/retention-policy/retention-policy-step-2.webp" style="max-width: 540px;">
 
