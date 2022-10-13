@@ -30,4 +30,4 @@ description: "- Support read-only data source for read-replica instance. - SQL E
 
 ## 📕 Installation and Upgrade
 
-For a fresh installation, follow https://github.com/bytebase/bytebase#installation.
+Follow https://github.com/bytebase/bytebase#installation. If you upgrade from a previous version, just restart after obtaining the new release binary.
