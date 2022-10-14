@@ -26,7 +26,7 @@ Once enabled [GitOps workflow](../vcs-integration/enable-version-control-workflo
 
 ### Step 2 - Update schema file
 
-In our example with GitLab self-hosted as our VCS, we create a new schema file in the connected repository whose path is matching the **Schema path template** we have configured as `.{{DB_NAME}}__LATEST.sql`, where `{{DB_NAME}}` is `mydb`. It is notable that we have also configured `bytebase` as the **Base directory**, so all files need to reside under this directory.
+In our example with GitLab self-hosted as our VCS, we create a new schema file in the connected repository whose path is matching the **Schema path template** we have configured as `.{{DB_NAME}}##LATEST.sql`, where `{{DB_NAME}}` is `mydb`. It is notable that we have also configured `bytebase` as the **Base directory**, so all files need to reside under this directory.
 
 ![commit-new-schema-file](/static/docs/en/change-database/state-based-migration/commit-new-schema-file.webp)
 
