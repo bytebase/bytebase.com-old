@@ -41,7 +41,7 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 ## Step 2 - Create a PR, and add your SQL scripts
 
 1. Create a new branch `testboth`.
-2. Add a migration script under `bytebase/test` folder following the name convention `{{ENV_NAME}}/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`. Here we name it `employeeGitHub__202208211500__ddl__add_nickname.sql`.
+2. Add a migration script under `bytebase/test` folder following the name convention `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. Here we name it `employeeGitHub##202208211500##ddl##add_nickname.sql`.
 
 ![add-script](/static/blog/github-database-cicd-part-3-put-them-together/add-script.webp)
 
@@ -55,8 +55,8 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 
 ![waiting-approval](/static/blog/github-database-cicd-part-3-put-them-together/waiting-approval.webp)
 
-6. Approve this issue, and the SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub__LATEST.sql` will be generated to record the current state of the database.
-7. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx__LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
+6. Approve this issue, and the SQL script will run against the **test** environment. When the issue status turns into **Done**, a file `.employeeGitHub##LATEST.sql` will be generated to record the current state of the database.
+7. If everything seems OK for you for the **test** environment, you can then copy your SQL file (except the `xx##LATEST.sql`) and paste them under the **prod** folder, to trigger the schema changes on **prod** environment. Good Luck!
 
 ![last-status](/static/blog/github-database-cicd-part-3-put-them-together/last-status.webp)
 
@@ -70,7 +70,7 @@ Congratulations! Now you have implemented a complete database CI/CD workflow! Le
 4. Since your running Bytebase is configured to watch main branch, it will trigger to create an issue there.
 5. The SQL review check will run on the issue again. After its run, you can approve it (You can change the settings to skip manual approval if needed).
 6. The SQL script will run on your database, and the migration is done.
-7. There will be an auto-generated file `.xxx__LATEST.sql`, which is the latest schema written back by Bytebase after the migration.
+7. There will be an auto-generated file `.xxx##LATEST.sql`, which is the latest schema written back by Bytebase after the migration.
 8. After all migrations are done, you can now deploy your application code that is dependent on the new schema.
 
 Customize the structure to fit your own needs! Feel free to Join our [Discord channel](https://discord.gg/6JYYBXvMDF) and share your experience.
