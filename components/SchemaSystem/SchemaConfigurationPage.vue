@@ -333,6 +333,15 @@ export default defineComponent({
                   },
                 });
                 break;
+              case "BOOLEAN":
+                list.push({
+                  ...component,
+                  payload: {
+                    ...component.payload,
+                    value: data[index] as boolean,
+                  },
+                });
+                break;
               default:
                 list.push({
                   ...component,
