@@ -120,6 +120,34 @@ Optional placeholders
 
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
-![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
+#### Enable SQL Review CI - Optional
+
+<hint-block type="warning">
+
+This feature requires Enterprise Plan.
+
+</hint-block>
+
+When checked, we will create a pull request/merge request for your repository to set up the SQL review CI, and redirect you to the pull request page. Please review and merge this pull request.
+
+![vcs-sql-review-prepare](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-prepare.webp)
+
+![vcs-sql-review-pr](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-pr.webp)
+
+After the setup, in every pull request, the SQL review policy will check against changed files matching the file path template.
+
+SQL Review CI via GitHub Action
+
+![vcs-sql-review-github](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-github.webp)
+
+SQL Review CI via GitLab CI
+
+![vcs-sql-review-gitlab](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-gitlab.webp)
+
+And you can follow the doc [Create Schema Review Policy](/docs/sql-review/review-rules/create-schema-review-policy) to create the SQL review policy.
+
+---
 
 Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
+
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
