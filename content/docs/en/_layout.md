@@ -117,7 +117,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
 
-## [Multi-Tenancy](/tenant-database-management)
+## [Tenant Database Management](/tenant-database-management)
 
 ## Disaster Recovery
 
