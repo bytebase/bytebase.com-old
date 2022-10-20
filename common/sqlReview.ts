@@ -39,9 +39,20 @@ interface TemplatePayload {
   value?: string;
 }
 
+interface BooleanPayload {
+  type: "BOOLEAN";
+  default: boolean;
+  value?: boolean;
+}
+
 export interface RuleConfigComponent {
   key: string;
-  payload: StringPayload | NumberPayload | TemplatePayload | StringArrayPayload;
+  payload:
+    | StringPayload
+    | NumberPayload
+    | TemplatePayload
+    | StringArrayPayload
+    | BooleanPayload;
 }
 
 // The category type for rule template
@@ -51,7 +62,10 @@ export type CategoryType =
   | "STATEMENT"
   | "TABLE"
   | "COLUMN"
-  | "SCHEMA";
+  | "SCHEMA"
+  | "DATABASE"
+  | "INDEX"
+  | "SYSTEM";
 
 export interface RuleTemplate {
   type: string;

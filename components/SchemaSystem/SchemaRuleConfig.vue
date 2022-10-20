@@ -74,11 +74,23 @@
             :placeholder="config.payload.default"
           />
           <input
-            v-if="config.payload.type === 'NUMBER'"
+            v-else-if="config.payload.type === 'NUMBER'"
             v-model="state.payload[index]"
             type="text"
             class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
             :placeholder="`${config.payload.default}`"
+          />
+          <BBCheckbox
+            v-else-if="config.payload.type === 'BOOLEAN'"
+            :title="
+              $t(
+                `sql-review.rule.${getRuleLocalizationKey(
+                  rule.type
+                )}.component.${config.key}.title`
+              )
+            "
+            :value="state.payload[index]"
+            @toggle="(on) => (state.payload[index] = on)"
           />
           <div v-else-if="config.payload.type === 'STRING_ARRAY'">
             <div class="flex flex-wrap gap-4 mb-4">
@@ -134,8 +146,9 @@ import {
 import Badge from "../Badge.vue";
 import SchemaRuleLevelBadge from "./SchemaRuleLevelBadge.vue";
 import InputWithTemplate from "../InputWithTemplate";
+import BBCheckbox from "../BBCheckbox.vue";
 
-type PayloadValueList = (string | number | string[])[];
+type PayloadValueList = (boolean | string | number | string[])[];
 
 interface LocalState {
   level: RuleLevel;
@@ -156,6 +169,7 @@ export default defineComponent({
     Badge,
     SchemaRuleLevelBadge,
     InputWithTemplate,
+    BBCheckbox,
   },
   props: {
     rule: {

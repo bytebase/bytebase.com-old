@@ -105,6 +105,7 @@
                 v-if="
                   config.payload.type === 'STRING' ||
                   config.payload.type === 'NUMBER' ||
+                  config.payload.type === 'BOOLEAN' ||
                   config.payload.type === 'TEMPLATE'
                 "
                 class="bg-gray-100 rounded text-sm p-2"
