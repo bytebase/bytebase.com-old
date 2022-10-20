@@ -7,8 +7,11 @@
     <div class="max-w-7xl mx-auto py-2 px-2 sm:px-6 lg:px-8">
       <div class="text-center sm:px-16">
         <p class="font-medium text-slate-900">
-          <span class="inline"
+          <span class="hidden sm:inline"
             >DevJoy 开发者游园会｜ 上海 WeWork 中国旗舰店 ｜ 2022.11.05 ~ 06
+          </span>
+          <span class="inline sm:hidden"
+            >DevJoy 开发者游园会 | 上海 2022.11.05 ~ 06
           </span>
           <span class="block sm:ml-2 sm:inline-block">
             <a
