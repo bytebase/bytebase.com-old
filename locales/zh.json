@@ -25,7 +25,8 @@
     "review-change-version-rollback": "审核，变更，留档，回滚。",
     "database-devops-best-practice": "源自 Google 的数据库 DevOps 最佳实践。",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
-    "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase"
+    "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase",
+    "better-way": "Bytebase 不是一个更好的数据库变更工具，他是一个更好的数据库变更方法"
   },
   "pricing": {
     "price-suffix-for-enterprise": "起"

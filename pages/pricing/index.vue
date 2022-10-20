@@ -4,17 +4,27 @@
       <div
         class="relative max-w-2xl mx-auto px-4 py-8 text-center sm:px-6 lg:max-w-7xl lg:px-8"
       >
-        <h2
-          class="mt-2 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
-        >
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-indigo-700"
-            >{{ $t("slogan.reliable") }}</span
-          ><br />
-          <span class="block xl:inline">
-            {{ $t("slogan.mission") }}
-          </span>
-        </h2>
+        <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+          <div class="relative">
+            <svg
+              class="absolute top-0 left-0 h-36 w-36 -translate-x-8 -translate-y-24 transform text-indigo-200 opacity-50"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 144 144"
+              aria-hidden="true"
+            >
+              <path
+                stroke-width="2"
+                d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z"
+              />
+            </svg>
+            <p
+              class="relative text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight"
+            >
+              {{ $t("slogan.better-way") }}
+            </p>
+          </div>
+        </blockquote>
       </div>
 
       <div class="flex justify-center">

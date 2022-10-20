@@ -25,7 +25,8 @@
     "review-change-version-rollback": "Review, Change, Version and Rollback.",
     "database-devops-best-practice": "The Database DevOps Best Practice {br}from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
-    "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds"
+    "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds",
+    "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes."
   },
   "pricing": {
     "price-suffix-for-enterprise": ""
