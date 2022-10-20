@@ -8,6 +8,41 @@
         <div class="z-10 xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center xl:text-left">
+              <div>
+                <nuxt-link
+                  :to="localePath(changelogVersion)"
+                  class="inline-flex space-x-4"
+                >
+                  <span
+                    class="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-700"
+                  >
+                    {{ $t("changelog.whats-new") }}</span
+                  >
+                  <span
+                    class="inline-flex items-center space-x-1 text-sm font-medium text-indigo-700"
+                  >
+                    <span>{{
+                      $t("changelog.version-release", {
+                        version: version,
+                      })
+                    }}</span>
+                    <!-- Heroicon name: mini/chevron-right -->
+                    <svg
+                      class="h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </nuxt-link>
+              </div>
               <i18n
                 path="index-page.title"
                 tag="h1"
@@ -402,6 +437,9 @@ export default defineComponent({
 
     return {
       track,
+      version: process.env.version,
+      changelogVersion:
+        "/changelog/bytebase-" + process.env.version!.replaceAll(".", "-"),
     };
   },
   head: {

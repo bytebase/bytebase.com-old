@@ -175,7 +175,8 @@
     }
   },
   "changelog": {
-    "next-page": "Next page"
+    "whats-new": "What's new",
+    "version-release": "{version} Released"
   },
   "database": {
     "clickhouse-feature": "is an open-source, high performance columnar OLAP database management system for real-time analytics using SQL.",

@@ -110,7 +110,7 @@
     "all-rights-reserved": "版权所有。"
   },
   "index-page": {
-    "title": "面向{developers}{br}{slogan}{br}数据库变更{br}管理工具",
+    "title": "面向{developers}{br}{slogan}{br}数据库 CI/CD",
     "gitlab-for-database-devops": "GitLab 所没有的 {database-devops} ",
     "database-devops": "Database DevOps",
     "features": {
@@ -175,7 +175,8 @@
     }
   },
   "changelog": {
-    "next-page": "下一页"
+    "whats-new": "最近更新",
+    "version-release": "{version} 发布"
   },
   "database": {
     "clickhouse-feature": "是一个开源、高性能的柱状 OLAP 数据库管理系统，用于使用 SQL 进行实时分析。",
