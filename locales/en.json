@@ -207,7 +207,9 @@
       }
     },
     "configure-rule": "Configure rule",
-    "input-then-press-enter": "Input the value then press enter to add"
+    "input-then-press-enter": "Input the value then press enter to add",
+    "try-our": "Try our",
+    "sql-review-github-app": "SQL Review GitHub App"
   },
   "integration": {
     "dingtalk-feature": "Bytebase supports webhook to post database schema related events to the configured DingTalk group. Those webhook events are specifically customized for DingTalk in order to display the optimal format.",
