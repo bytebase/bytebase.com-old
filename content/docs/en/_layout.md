@@ -113,6 +113,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
 
+### [Enable GitOps SQL Review CI](/vcs-integration/enable-vcs-sql-review-ci)
+
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
 ### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
