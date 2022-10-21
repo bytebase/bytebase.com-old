@@ -207,7 +207,9 @@
         "env": "Dev",
         "title": "SQL 审查规则"
       }
-    }
+    },
+    "try-our": "试试我们的",
+    "sql-review-github-app": "SQL 审核 GitHub 应用"
   },
   "integration": {
     "dingtalk-feature": "Bytebase 支持 webhook 将数据库架构相关的事件发布到配置的钉钉组。 这些 webhook 事件是专门为钉钉定制的，以显示最佳格式。",
