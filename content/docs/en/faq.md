@@ -4,8 +4,10 @@ title: FAQ
 
 ## How to reach us?
 
-- 🤠 Follow us on [@Bytebase](https://twitter.com/bytebase)
+- 💬 Join our [Discord Community](https://discord.gg/huyw7gRsyA)
 - 📧 Email us at [support@bytebase.com](mailto:support@bytebase.com)
+- 🎫 Open [GitHub Issue](https://github.com/bytebase/bytebase/issues)
+- 🤠 Find us on [@Bytebase](https://twitter.com/bytebase)
 
 ## System requirements and supported versions
 
