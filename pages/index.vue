@@ -10,7 +10,7 @@
               <div>
                 <nuxt-link
                   :to="localePath(changelogVersion)"
-                  class="inline space-x-4"
+                  class="inline-flex space-x-4"
                 >
                   <span
                     class="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-700"
