@@ -120,6 +120,12 @@ Optional placeholders
 
 - {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
-![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
+#### Enable SQL Review CI - Optional
+
+You can follow [GitOps SQL Review CI](/docs/sql-review/sql-advisor/gitops-ci) to set up.
+
+---
 
 Now the project has enabled version control workflow. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
+
+![project-vcs-step](/static/docs/en/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)

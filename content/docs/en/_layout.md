@@ -79,6 +79,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [GitHub App](/sql-review/sql-advisor/github-app)
 
+#### [GitOps CI](/sql-review/sql-advisor/gitops-ci)
+
 ### [Review Rules](/sql-review/review-rules/overview)
 
 #### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
