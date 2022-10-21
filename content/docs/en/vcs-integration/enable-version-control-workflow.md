@@ -137,7 +137,7 @@ When checked, Bytebase will create a merge request (MR) for your repository to s
 
 ![vcs-sql-review-pr](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-pr.webp)
 
-After the setup, in every pull request, the SQL review policy will check against changed files matching the file path template.
+After the setup, in every MR, the SQL review policy will check against changed files matching the file path template.
 
 SQL Review CI via GitHub Action
 
