@@ -79,6 +79,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 #### [GitHub App](/sql-review/sql-advisor/github-app)
 
+#### [GitOps CI](/sql-review/sql-advisor/gitops-ci)
+
 ### [Review Rules](/sql-review/review-rules/overview)
 
 #### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
@@ -112,8 +114,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 #### [GitHub.com](/vcs-integration/github-com)
 
 ### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
-
-### [Enable GitOps SQL Review CI](/vcs-integration/enable-vcs-sql-review-ci)
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 

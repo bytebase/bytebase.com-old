@@ -122,7 +122,7 @@ Optional placeholders
 
 #### Enable SQL Review CI - Optional
 
-You can follow [Enable GitOps SQL Review CI](/docs/vcs-integration/enable-vcs-sql-review-ci) to enable it.
+You can follow [GitOps SQL Review CI](/docs/sql-review/sql-advisor/gitops-ci) to set up.
 
 ---
 

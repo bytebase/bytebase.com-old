@@ -1,5 +1,5 @@
 ---
-title: Enable GitOps SQL Review CI
+title: GitOps SQL Review CI
 ---
 
 <hint-block type="warning">
@@ -7,6 +7,8 @@ title: Enable GitOps SQL Review CI
 This feature requires Enterprise Plan.
 
 </hint-block>
+
+This feature requires **Version Control Workflow**. You can follow [VCS Integration (GitOps)](/docs/vcs-integration) to set up.
 
 ## Set up SQL Review CI
 
