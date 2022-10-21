@@ -4,14 +4,13 @@
     <!-- Hero section -->
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto xl:py-40">
-        <!-- Set z-10 so the action buttons won't be covered by the illustration -->
-        <div class="z-10 xl:max-w-2xl xl:w-full">
+        <div class="xl:max-w-2xl xl:w-full">
           <div class="mx-auto max-w-6xl px-4">
             <div class="sm:text-center xl:text-left">
               <div>
                 <nuxt-link
                   :to="localePath(changelogVersion)"
-                  class="inline-flex space-x-4"
+                  class="inline space-x-4"
                 >
                   <span
                     class="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-700"
@@ -72,7 +71,7 @@
         </div>
       </div>
       <div
-        class="hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-32 xl:w-3/4"
+        class="pointer-events-none hidden xl:flex justify-center xl:absolute xl:inset-y-0 xl:-right-32 xl:w-3/4"
       >
         <img
           class="object-contain h-56 sm:h-72 md:h-96 xl:w-full xl:h-full"
