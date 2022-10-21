@@ -128,7 +128,10 @@ This feature requires Enterprise Plan.
 
 </hint-block>
 
-When checked, we will create a pull request/merge request for your repository to set up the SQL review CI, and redirect you to the pull request page. Please review and merge this pull request.
+
+Below use GitLab as an example. GitHub works in a similar way.
+
+When checked, Bytebase will create a merge request (MR) for your repository to set up the SQL review CI, and redirect you to the MR page. To finish the setup, please should review and merge this MR.
 
 ![vcs-sql-review-prepare](/static/docs/en/vcs-integration/enable-version-control-workflow/vcs-sql-review-prepare.webp)
 
