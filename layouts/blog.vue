@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper absolute w-full h-screen overflow-hidden">
     <div class="w-full bg-white z-20" :class="stickyHeaderAdditionClass">
-      <MainBanner class="mb-2 hidden sm:block" />
+      <MainBanner class="mb-2" />
       <Header />
       <div
         class="max-w-full w-full mx-auto border border-t border-b text-base py-2 px-4 sm:px-6 hidden flex-wrap sm:grid sm:grid-flow-col justify-start lg:justify-center sm:space-x-4 lg:space-x-8"

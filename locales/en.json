@@ -63,6 +63,7 @@
   "banner": {
     "announce-bytebase-1-0-and-our-team-plan": "Announce Bytebase 1.0 and our Team Plan",
     "database-ci-cd-with-github": "Database CI/CD Best Practice with GitHub",
+    "cncf-landscape": "CNCF Landscape includes Bytebase as the first-ever database CI/CD solution",
     "view-the-plan": "view the plan",
     "checkout-now": "Check Now"
   },
