@@ -99,6 +99,9 @@
             >
           </template>
         </i18n>
+        <h3 class="mt-4 text-xl lg:text-3xl text-gray-500 mx-auto">
+          {{ $t("index-page.accelerate-software-release") }}
+        </h3>
       </div>
 
       <div class="mt-12">
