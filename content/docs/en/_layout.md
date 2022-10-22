@@ -161,6 +161,8 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Environment Policy](/administration/environment-policy/overview)
 
+#### [Environment Tier](/administration/environment-policy/tier)
+
 #### [Approval Policy](/administration/environment-policy/approval-policy)
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
