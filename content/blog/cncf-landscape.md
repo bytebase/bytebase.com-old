@@ -12,7 +12,7 @@ Bytebase has recently been included in the CNCF Landscape [Continuous Integratio
 
 ## Bytebase Introduction
 
-Bytebase is an all-in-one database development tool for developers and DBAs, integrating SQL review, database change and query, versioning, and rollback. Bytebase currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake, and also supports GitOps workflow with native GitLab, GitHub integration. The code is fully open sourced at https://github.com/bytebase/bytebase.
+Bytebase is an all-in-one database development tool for developers and DBAs, integrating SQL review, database change and query, versioning, and rollback. Bytebase currently supports MySQL, PostgreSQL, TiDB, ClickHouse, Snowflake, and also supports GitOps workflow with native GitLab, and GitHub integration. The code is fully open sourced at https://github.com/bytebase/bytebase.
 
 ## CNCF Introduction
 
