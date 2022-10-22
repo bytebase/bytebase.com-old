@@ -113,6 +113,7 @@
   "index-page": {
     "title": "面向{developers}{br}{slogan}{br}数据库 CI/CD",
     "gitlab-for-database-devops": "GitLab 所没有的 {database-devops} ",
+    "accelerate-software-release": "引入 database CI/CD 来加快软件发布",
     "database-devops": "Database DevOps",
     "features": {
       "review-board": {

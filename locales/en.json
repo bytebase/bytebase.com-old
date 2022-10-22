@@ -113,6 +113,7 @@
   "index-page": {
     "title": "{slogan} {br}Database {br}CI/CD for {br}{developers}",
     "gitlab-for-database-devops": "The GitLab for {database-devops}",
+    "accelerate-software-release": "Accelerate software release by adopting database CI/CD",
     "database-devops": "Database DevOps",
     "features": {
       "review-board": {
