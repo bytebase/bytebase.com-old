@@ -113,3 +113,18 @@ Include another markdown and render inline.
 | Name | Type     | Default | Description                                                                            |
 | ---- | -------- | ------- | -------------------------------------------------------------------------------------- |
 | url  | `string` | `''`    | Set the markdown file url, which should be an absolute path without the `/docs` prefix |
+
+## How to run the site locally
+
+1. Set up your [development environment](https://github.com/bytebase/bytebase.com#-development).
+1. Write the full content in any editor that supports Markdown. e.g. [VSCode](https://code.visualstudio.com/), [Typora](https://typora.io/), or [Notion](https://notion.so/).
+1. Run `pnpm dev` start the review server.
+1. Go to [localhost:3000/docs](http://localhost:3000/docs) and check your creation.
+1. If everything looks fine, submit a PR with the changes to [our repo in GitHub](https://github.com/bytebase/bytebase.com).
+
+## How to add a new page
+
+1. Add your .md file to the folder `/content/docs/en/xxx`.
+1. Add your images to the folder `/static/docs/xxx`.
+1. Add an entry for the document in `_layout.md`, under the proper section.
+1. Submit a PR with the changes to [our repo in GitHub](https://github.com/bytebase/bytebase.com).

@@ -193,8 +193,4 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ## [❓ FAQ](/faq)
 
----
-
 ## [✍️ Document Write Guide](/document-write-guide)
-
-## [🕊 How to Contribute](/how-to-contribute)
