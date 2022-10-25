@@ -5,13 +5,13 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 # docs_layout
 
-## 👀 Introduction
+## Introduction
 
 ### [What is Bytebase](/introduction/what-is-bytebase)
 
 ### [Use Cases](/introduction/use-cases)
 
-## 🐣 Get Started
+## Get Started
 
 ### [5 Mins Quick Start](/get-started/quick-start)
 
@@ -53,7 +53,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ---
 
-## 🔑 Concepts
+## Concepts
 
 ### [Data Model](/concepts/data-model)
 
@@ -117,7 +117,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
-### [🐞 Troubleshoot](/vcs-integration/troubleshoot)
+### [Troubleshoot](/vcs-integration/troubleshoot)
 
 ## [Tenant Database Management](/tenant-database-management)
 
@@ -157,7 +157,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ---
 
-## 🔧 Administration
+## Administration
 
 ### [Production Setup](/administration/production-setup)
 
@@ -181,7 +181,7 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ---
 
-## 📖 Reference
+## Reference
 
 ### [Server Startup Options](/reference/command-line)
 
@@ -193,6 +193,6 @@ expand_section_list: ["👀 Introduction", "🐣 Get Started"]
 
 ---
 
-## [❓ FAQ](/faq)
+## [FAQ](/faq)
 
-## [✍️ Document Write Guide](/document-write-guide)
+## [Document Write Guide](/document-write-guide)
