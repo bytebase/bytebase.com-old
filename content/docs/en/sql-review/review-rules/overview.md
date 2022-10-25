@@ -8,7 +8,7 @@ This document is to show how to configure review rules.
 
 ## Prerequisites
 
-- **Team** or **Enterprise** plan
+- **Free** version allows to configure limited review rules. **Team** or **Enterprise** version unlocks all review rules.
 - **Workspace Owner** or **Workspace DBA** role
 
 ## Supported rules
