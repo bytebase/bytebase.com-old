@@ -97,6 +97,35 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
+<h3 id="naming.column.auto-increment">Auto-increment column naming convention</h3>
+
+The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the auto-increment column naming convention.
+
+#### About convention format
+
+`Auto-increment Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format for naming pattern, and also limits the naming max length. The default maximum length is 64 characters.
+
+##### Some typical format
+
+| Name   | Regular Expression       |
+| ------ | ------------------------ |
+| id     | `^id$`                   |
+
+
+#### How the rule works
+
+Bytebase checks that all auto-increment column names in DDL conform to the naming conventions.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
 <h3 id="naming.index.idx">Index naming convention</h3>
 
 The unified naming convention is desired by developers. And the same applies to the database space. Bytebase provides this rule to unify the index naming convention.
@@ -243,7 +272,7 @@ Specifically, Bytebase checks:
 - TiDB
 - PostgreSQL
 
-## Query
+## Statement
 
 <h3 id="statement.select.no-select-all">Disallow SELECT *</h3>
 
@@ -298,6 +327,149 @@ Bytebase considers this rule to be violated if the SQL has leading wildcard LIKE
 - MySQL
 - TiDB
 - PostgreSQL
+
+<h3 id="statement.disallow-commit">Disallow COMMIT</h3>
+
+Disallow using commit in the issue.
+
+#### How the rule works
+
+Bytebase alert users if there are COMMIT statements.
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.disallow-limit">Disallow LIMIT</h3>
+
+Disallow LIMIT clause for INSERT, UPDATE and DELETE statements.
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `INSERT` statements
+- `UPDATE` statements
+- `DELETE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.disallow-order-by">Disallow ORDER BY</h3>
+
+Disallow ORDER BY clause for UPDATE and DELETE statements.
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `UPDATE` statements
+- `DELETE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.merge-alter-table">Merge ALTER TABLE</h3>
+
+For more readability, it's better to not using multiply `ALTER TABLE` statements for same table.
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.insert.must-specify-column">INSERT statements must specify columns</h3>
+
+For more readability, it's better to specify columns for INSERT statements, such as `INSERT INTO table_t(id, name) VALUES(...)`.
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `INSERT` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.insert.disallow-order-by-rand">Disallow ORDER BY RAND in INSERT statements</h3>
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `INSERT` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="statement.insert.row-limit">Limit the inserted rows</h3>
+
+Alert users if the inserted rows exceeds the limit.
+
+#### How the rule works
+
+- For `INSERT INTO ... VALUES(...)` statements, Bytebase checks the count of value list.
+- For `INSERT INTO ... SELECT ...` statements, Bytebase runs `EXPLAIN` statements for them and check the rows in `EXPLAIN` statement results.
+
+#### Support database engine
+
+- MySQL
+
+<h3 id="statement.affected-row-limit">Limit affected row limit</h3>
+
+Alert users if the affected rows in `UPDATE` or `DELETE` exceeds the limit.
+
+#### How the rule works
+
+For `UPDATE` and `DELETE` statements, Bytebase runs `EXPLAIN` statements for them and check the rows in `EXPLAIN` statement results.
+
+#### Support database engine
+
+- MySQL
+
+<h3 id="statement.dml-dry-run">Dry run DML statements</h3>
+
+Dry run DML statements for validation.
+
+#### How the rule works
+
+Dry run DML statements by `EXPLAIN` statements. Specifically, Bytebase checks:
+
+- `INSERT` statements
+- `UPDATE` statements
+- `DELETE` statements
+
+#### Support database engine
+
+- MySQL
 
 ## Table
 
@@ -366,6 +538,41 @@ Specifically, Bytebase checks:
 
 Support for PostgreSQL is coming soon.
 
+<h3 id="table.disallow-partition">Disallow partition table</h3>
+
+#### How the rule works
+
+Bytebase checks if SQLs creating the partition table.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="table.comment">Table comment convention</h3>
+
+Configure whether the table requires comments and the maximum comment length.
+
+#### How the rule works
+
+Bytebase checks the table comment convention.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
 ## Schema
 
 <h3 id="schema.backward-compatibility">Backward incompatible schema change</h3>
@@ -417,6 +624,26 @@ Bytebase defaults all tables to meet the requirements. If the SQL tries to defin
 - TiDB
 - PostgreSQL
 
+<h3 id="column.disallow-list">Column type disallow list</h3>
+
+Set column type disallow list to ban column types.
+
+#### How the rule works
+
+Bytebase checks if SQLs use the column type in disallow list.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
 <h3 id="column.no-null">Columns no NULL value</h3>
 
 NULL is a special value. It can cause confusion or performance issues. Bytebase provides this rule to enforce that all columns cannot have NULL value.
@@ -432,6 +659,340 @@ Bytebase considers this rule to be violated if the SQL defines a column allowing
 - MySQL
 - TiDB
 - PostgreSQL
+
+<h3 id="column.disallow-change-type">Disallow changing column type</h3>
+
+Changing column type may fail because the data cannot be converted. Bytebase provides this rule to alert you that a type changing has occurred.
+
+#### How the rule works
+
+Bytebase checks if SQLs change the column type.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="column.set-default-for-not-null">Set DEFAULT value for NOT NULL columns</h3>
+
+NOT NULL columns have no default value. It requires users to manually set default values for NOT NULL columns.
+
+#### How the rule works
+
+Bytebase checks if setting default values for NOT NULL columns.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="column.disallow-change">Disallow ALTER TABLE CHANGE COLUMN statements</h3>
+
+CHANGE COLUMN is a MySQL extension to standard SQL. CHANGE COLUMN can change column definition and names, or both.
+Most of the time, you just want to change the one of two. So you need to use RENAME COLUMN and MODIFY COLUMN instead of CHANGE COLUMN to avoid unexpected modifications.
+
+#### How the rule works
+
+Bytebase checks if using `ALTER TABLE CHANGE COLUMN` statements.
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.disallow-changing-order">Disallow changing column order</h3>
+
+Changing column order may cause performance issues. Users should be cautious about this.
+
+#### How the rule works
+
+Bytebase checks if changing column order.
+
+Specifically, Bytebase checks:
+
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.auto-increment-must-integer">Use integer for auto-increment columns</h3>
+
+The auto-increment column must integer in MySQL.
+
+#### How the rule works
+
+Bytebase checks the auto-increment column type.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="column.disallow-set-charset">Disallow set charset for columns</h3>
+
+It's better to set the charset in the table or database.
+
+#### How the rule works
+
+Bytebase checks if setting charset for columns.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.auto-increment-must-unsigned">Set unsigned attribute on auto-increment columns</h3>
+
+Setting unsigned attribute on auto-increment columns to avoid negative numbers.
+
+#### How the rule works
+
+Bytebase checks the unsigned attribute for auto-increment columns.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.comment">Column comment convention</h3>
+
+Configure whether the column requires comments and the maximum comment length.
+
+#### How the rule works
+
+Bytebase checks the column comment.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.maximum-character-length">Maximum CHAR length</h3>
+
+The VARCHAR type is the variable-length type but the CHAR is not. When users need a long CHAR type, it's better to use VARCHAR instead of CHAR.
+
+#### How the rule works
+
+Bytebase checks the length for the CHAR type.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="column.auto-increment-initial-value">Auto-increment initial value</h3>
+
+Set initial value for auto-increment columns.
+
+#### How the rule works
+
+Bytebase checks the initial value for auto-increment columns.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.current-time-count-limit">Limit the count of current time columns</h3>
+
+Limit the count of `NOW()`, `CURRENT_TIME()` and `CURRENT_TIMESTAMP()` columns.
+
+#### How the rule works
+
+This rule will count the two types of the columns:
+
+1. the column with default current time , such as `DEFAULT NOW()`
+2. the column with ON UPDATE current time, such as `ON UPDATE NOW()`
+
+If the count of type one columns is more than two or the count of type two columns is more than one, this rule will alert users.
+
+The meaning of the number is:
+
+1. A table usually has `created_ts` and `updated_ts` column with `DEFAULT NOW()`.
+2. A table usually has `updated_ts` column with `ON UPDATE NOW()`
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+<h3 id="column.require-default">Require column default value</h3>
+
+Require default value for all columns, except PRIMARY KEY, JSON, BLOB, TEXT, GEOMETRY, AUTO_INCREMENT, GENERATED columns.
+
+#### How the rule works
+
+Bytebase checks the column default value.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+## Index
+
+<h3 id="index.no-duplicate-column">Disallow duplicate column in index keys</h3>
+
+#### How the rule works
+
+Bytebase checks if there exists duplicate column in index keys.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="index.key-number-limit">Limit the count of index keys</h3>
+
+Limit the count of index keys in one index.
+
+#### How the rule works
+
+Bytebase checks the count of index keys in each index.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="index.pk-type-limit">Limit key type for primary keys</h3>
+
+Alert users if key type is not ING or BIGINT in primary keys.
+
+#### How the rule works
+
+Bytebase checks the key type for primary keys.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="index.type-no-blob">Disallow BLOB and TEXT for index keys</h3>
+
+Disallow using BLOB and TEXT type as index keys.
+
+#### How the rule works
+
+Bytebase checks the key type for index keys.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="index.total-number-limit">Index count limit</h3>
+
+Limit the index count in one table.
+
+#### How the rule works
+
+Bytebase checks the index count for each table.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
 
 ## Database
 
@@ -449,6 +1010,44 @@ Bytebase checks if there exists any table in the specific database.
 Specifically, Bytebase checks:
 
 - `DROP DATABASE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+## System
+
+<h3 id="system.charset.allowlist">Charset allow list</h3>
+
+#### How the rule works
+
+Bytebase checks if SQLs use the charset not in allow list.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
+
+#### Support database engine
+
+- MySQL
+- TiDB
+
+Support for PostgreSQL is coming soon.
+
+<h3 id="system.collation.allowlist">Collation allow list</h3>
+
+#### How the rule works
+
+Bytebase checks if SQLs use the collation not in allow list.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE` statements
 
 #### Support database engine
 
