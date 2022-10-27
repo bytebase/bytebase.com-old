@@ -2,7 +2,7 @@
 title: Tenant Database
 ---
 
-Tenant databases are the homogeneous databases (with identical schema) in a tenant project, where each individual database corresponds to the combination of a tenant, location and deployment environment.
+Tenant databases are the homogeneous databases with identical schema in a tenant project. Each individual database corresponds to the combination of a tenant, location, and deployment environment.
 
 Typical scenarios of tenant databases are:
 
