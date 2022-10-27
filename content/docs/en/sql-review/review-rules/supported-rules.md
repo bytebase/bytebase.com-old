@@ -703,7 +703,7 @@ Support for PostgreSQL is coming soon.
 <h3 id="column.disallow-change">Disallow ALTER TABLE CHANGE COLUMN statements</h3>
 
 CHANGE COLUMN is a MySQL extension to standard SQL. CHANGE COLUMN can change column definition and names, or both.
-Most of the time, you just want to change the one of two. So you need to use RENAME COLUMN and MODIFY COLUMN instead of CHANGE COLUMN to avoid unexpected modifications.
+Most of the time, you just want to change one of two. So you need to use RENAME COLUMN and MODIFY COLUMN instead of CHANGE COLUMN to avoid unexpected modifications.
 
 #### How the rule works
 
