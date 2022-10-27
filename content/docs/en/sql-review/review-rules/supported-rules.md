@@ -542,7 +542,7 @@ Support for PostgreSQL is coming soon.
 
 #### How the rule works
 
-Bytebase checks if SQLs creating the partition table.
+Bytebase checks if the SQL statement will create the partition table.
 
 Specifically, Bytebase checks:
 
