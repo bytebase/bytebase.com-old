@@ -445,7 +445,7 @@ Alert users if the inserted rows exceed the limit.
 
 <h3 id="statement.affected-row-limit">Limit affected row limit</h3>
 
-Alert users if the affected rows in `UPDATE` or `DELETE` exceeds the limit.
+Alert users if the affected rows in `UPDATE` or `DELETE` exceed the limit.
 
 #### How the rule works
 
