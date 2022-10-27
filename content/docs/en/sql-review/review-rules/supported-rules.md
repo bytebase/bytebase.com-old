@@ -630,7 +630,7 @@ Set column type disallow list to ban column types.
 
 #### How the rule works
 
-Bytebase checks if SQLs use the column type in disallow list.
+Bytebase checks if the SQL statement creates the column type in the disallow list.
 
 Specifically, Bytebase checks:
 
