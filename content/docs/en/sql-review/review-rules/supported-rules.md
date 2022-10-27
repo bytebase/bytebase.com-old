@@ -432,7 +432,7 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="statement.insert.row-limit">Limit the inserted rows</h3>
 
-Alert users if the inserted rows exceeds the limit.
+Alert users if the inserted rows exceed the limit.
 
 #### How the rule works
 
