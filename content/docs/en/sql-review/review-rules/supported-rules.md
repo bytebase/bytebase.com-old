@@ -334,7 +334,7 @@ Disallow using COMMIT statement.
 
 #### How the rule works
 
-Bytebase alert users if there are COMMIT statements.
+Bytebase alerts users if there exists COMMIT statement.
 
 #### Support database engine
 
