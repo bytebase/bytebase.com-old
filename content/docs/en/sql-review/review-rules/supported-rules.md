@@ -417,6 +417,8 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="statement.insert.disallow-order-by-rand">Disallow ORDER BY RAND in INSERT statements</h3>
 
+The `ORDER BY RAND()` clause is not necessary for INSERT statements.
+
 #### How the rule works
 
 Specifically, Bytebase checks:
@@ -567,6 +569,7 @@ Bytebase checks the table comment convention.
 Specifically, Bytebase checks:
 
 - `CREATE TABLE` statements
+- `ALTER TABLE` statements
 
 #### Support database engine
 
@@ -807,7 +810,7 @@ Specifically, Bytebase checks:
 
 <h3 id="column.maximum-character-length">Maximum CHAR length</h3>
 
-The VARCHAR type is the variable-length type but the CHAR is not. When users need a long CHAR type, it's better to use VARCHAR instead of CHAR.
+The CHAR type is the fixed-length type. A longer CHAR will require more storage space. 
 
 #### How the rule works
 
