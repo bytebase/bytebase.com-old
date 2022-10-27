@@ -1042,7 +1042,7 @@ Support for PostgreSQL is coming soon.
 
 #### How the rule works
 
-Bytebase checks if SQLs use the collation not in allow list.
+Bytebase checks if the SQL statement uses the collation outside of the allow list.
 
 Specifically, Bytebase checks:
 
