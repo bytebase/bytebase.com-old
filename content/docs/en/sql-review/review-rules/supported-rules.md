@@ -400,7 +400,7 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="statement.insert.must-specify-column">INSERT statements must specify columns</h3>
 
-For more readability, it's better to specify columns for INSERT statements, such as `INSERT INTO table_t(id, name) VALUES(...)`.
+For readability, it's better to explicitly specify columns for INSERT statements, such as `INSERT INTO table_t(id, name) VALUES(...)`.
 
 #### How the rule works
 
