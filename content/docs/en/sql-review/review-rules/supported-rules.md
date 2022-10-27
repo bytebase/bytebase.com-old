@@ -382,7 +382,7 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="statement.merge-alter-table">Merge ALTER TABLE</h3>
 
-For more readability, it's better to not using multiply `ALTER TABLE` statements for same table.
+For readability, it's better not to use multiple `ALTER TABLE` statements for the same table.
 
 #### How the rule works
 
