@@ -1024,7 +1024,7 @@ Support for PostgreSQL is coming soon.
 
 #### How the rule works
 
-Bytebase checks if SQLs use the charset not in allow list.
+Bytebase checks if the SQL statement uses the charset outside of the allow list.
 
 Specifically, Bytebase checks:
 
