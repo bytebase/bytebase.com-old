@@ -103,7 +103,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 #### About convention format
 
-`Auto-increment Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format for naming pattern, and also limits the naming max length. The default maximum length is 64 characters.
+`Auto-increment Column Naming Convention` uses [regular expression](https://en.wikipedia.org/wiki/Regular_expression) format for naming pattern, and also limits the naming maximum length. The default maximum length is 64 characters.
 
 ##### Some typical format
 
