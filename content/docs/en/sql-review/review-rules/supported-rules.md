@@ -114,7 +114,7 @@ The unified naming convention is desired by developers. And the same applies to 
 
 #### How the rule works
 
-Bytebase checks that all auto-increment column names in DDL conform to the naming conventions.
+Bytebase checks all auto-increment column names in DDL conforming to the naming conventions.
 
 Specifically, Bytebase checks:
 
