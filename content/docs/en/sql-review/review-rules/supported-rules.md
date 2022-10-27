@@ -330,7 +330,7 @@ Bytebase considers this rule to be violated if the SQL has leading wildcard LIKE
 
 <h3 id="statement.disallow-commit">Disallow COMMIT</h3>
 
-Disallow using commit in the issue.
+Disallow using COMMIT statement.
 
 #### How the rule works
 
