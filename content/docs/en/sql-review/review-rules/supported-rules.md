@@ -662,7 +662,7 @@ Bytebase considers this rule to be violated if the SQL defines a column allowing
 
 <h3 id="column.disallow-change-type">Disallow changing column type</h3>
 
-Changing column type may fail because the data cannot be converted. Bytebase provides this rule to alert you that a type changing has occurred.
+Changing column type may fail because the data cannot be converted. Bytebase provides this rule to alert you that the SQL statement would change the column type.
 
 #### How the rule works
 
