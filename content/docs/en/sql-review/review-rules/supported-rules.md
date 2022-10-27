@@ -666,7 +666,7 @@ Changing column type may fail because the data cannot be converted. Bytebase pro
 
 #### How the rule works
 
-Bytebase checks if SQLs change the column type.
+Bytebase checks if the SQL statement will change the column type.
 
 Specifically, Bytebase checks:
 
