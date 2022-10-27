@@ -934,7 +934,7 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="index.pk-type-limit">Limit key type for primary keys</h3>
 
-Alert users if key type is not ING or BIGINT in primary keys.
+Alert users if key type is not INT or BIGINT in primary keys.
 
 #### How the rule works
 
