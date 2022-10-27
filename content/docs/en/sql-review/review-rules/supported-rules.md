@@ -733,7 +733,7 @@ Specifically, Bytebase checks:
 
 <h3 id="column.auto-increment-must-integer">Use integer for auto-increment columns</h3>
 
-The auto-increment column must integer in MySQL.
+The auto-increment column must be integer.
 
 #### How the rule works
 
