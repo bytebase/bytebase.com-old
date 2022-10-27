@@ -111,6 +111,7 @@ The unified naming convention is desired by developers. And the same applies to 
 | ------ | ------------------------ |
 | id     | `^id$`                   |
 
+![sql-review-naming-auto-increment](/static/docs/sql-reivew-naming-auto-increment.webp)
 
 #### How the rule works
 
@@ -332,6 +333,8 @@ Bytebase considers this rule to be violated if the SQL has leading wildcard LIKE
 
 Disallow using COMMIT statement.
 
+![sql-review-statement-disallow-commit](/static/docs/sql-review-statement-disallow-commit.webp)
+
 #### How the rule works
 
 Bytebase alerts users if there exists COMMIT statement.
@@ -346,6 +349,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="statement.disallow-limit">Disallow LIMIT</h3>
 
 Disallow LIMIT clause for INSERT, UPDATE and DELETE statements.
+
+![sql-review-statement-disallow-limit](/static/docs/sql-review-statement-disallow-limit.webp)
 
 #### How the rule works
 
@@ -366,6 +371,8 @@ Support for PostgreSQL is coming soon.
 
 Disallow ORDER BY clause for UPDATE and DELETE statements.
 
+![sql-review-statement-disallow-order-by](/static/docs/sql-review-statement-disallow-order-by.webp)
+
 #### How the rule works
 
 Specifically, Bytebase checks:
@@ -383,6 +390,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="statement.merge-alter-table">Merge ALTER TABLE</h3>
 
 For readability, it's better not to use multiple `ALTER TABLE` statements for the same table.
+
+![sql-review-statement-merge-alter-table](/static/docs/sql-review-statement-merge-alter-table.webp)
 
 #### How the rule works
 
@@ -402,6 +411,8 @@ Support for PostgreSQL is coming soon.
 
 For readability, it's better to explicitly specify columns for INSERT statements, such as `INSERT INTO table_t(id, name) VALUES(...)`.
 
+![sql-review-statement-insert-must-specify-column](/static/docs/sql-review-statement-insert-must-specify-column.webp)
+
 #### How the rule works
 
 Specifically, Bytebase checks:
@@ -418,6 +429,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="statement.insert.disallow-order-by-rand">Disallow ORDER BY RAND in INSERT statements</h3>
 
 The `ORDER BY RAND()` clause is not necessary for INSERT statements.
+
+![sql-review-statement-insert-disallow-order-by-rand](/static/docs/sql-review-statement-insert-disallow-order-by-rand.webp)
 
 #### How the rule works
 
@@ -436,6 +449,8 @@ Support for PostgreSQL is coming soon.
 
 Alert users if the inserted rows exceed the limit.
 
+![sql-review-statement-statement-insert-row-limit](/static/docs/sql-review-statement-insert-row-limit.webp)
+
 #### How the rule works
 
 - For `INSERT INTO ... VALUES(...)` statements, Bytebase checks the count of value list.
@@ -449,6 +464,8 @@ Alert users if the inserted rows exceed the limit.
 
 Alert users if the affected rows in `UPDATE` or `DELETE` exceed the limit.
 
+![sql-review-statement-affected-row-limit](/static/docs/sql-review-statement-affected-row-limit.webp)
+
 #### How the rule works
 
 For `UPDATE` and `DELETE` statements, Bytebase runs `EXPLAIN` statements for them and check the rows in `EXPLAIN` statement results.
@@ -460,6 +477,8 @@ For `UPDATE` and `DELETE` statements, Bytebase runs `EXPLAIN` statements for the
 <h3 id="statement.dml-dry-run">Dry run DML statements</h3>
 
 Dry run DML statements for validation.
+
+![sql-review-statement-dml-dry-run](/static/docs/sql-review-statement-dml-dry-run.webp)
 
 #### How the rule works
 
@@ -542,6 +561,8 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="table.disallow-partition">Disallow partition table</h3>
 
+![sql-review-table-disallow-partition](/static/docs/sql-review-table-disallow-partition.webp)
+
 #### How the rule works
 
 Bytebase checks if the SQL statement will create the partition table.
@@ -561,6 +582,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="table.comment">Table comment convention</h3>
 
 Configure whether the table requires comments and the maximum comment length.
+
+![sql-review-table-comment](/static/docs/sql-review-table-comment.webp)
 
 #### How the rule works
 
@@ -631,6 +654,8 @@ Bytebase defaults all tables to meet the requirements. If the SQL tries to defin
 
 Set column type disallow list to ban column types.
 
+![sql-review-column-disallow-list](/static/docs/sql-review-column-disallow-list.webp)
+
 #### How the rule works
 
 Bytebase checks if the SQL statement creates the column type in the disallow list.
@@ -667,6 +692,8 @@ Bytebase considers this rule to be violated if the SQL defines a column allowing
 
 Changing column type may fail because the data cannot be converted. Bytebase provides this rule to alert you that the SQL statement would change the column type.
 
+![sql-review-column-disallow-change-type](/static/docs/sql-review-column-disallow-changing-type.webp)
+
 #### How the rule works
 
 Bytebase checks if the SQL statement will change the column type.
@@ -686,6 +713,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="column.set-default-for-not-null">Set DEFAULT value for NOT NULL columns</h3>
 
 NOT NULL columns have no default value. It requires users to manually set default values for NOT NULL columns.
+
+![sql-review-column-set-default-for-not-null](/static/docs/sql-review-column-set-default-for-not-null.webp)
 
 #### How the rule works
 
@@ -708,6 +737,8 @@ Support for PostgreSQL is coming soon.
 CHANGE COLUMN is a MySQL extension to standard SQL. CHANGE COLUMN can change column definition and names, or both.
 Most of the time, you just want to change one of two. So you need to use RENAME COLUMN and MODIFY COLUMN instead of CHANGE COLUMN to avoid unexpected modifications.
 
+![sql-review-column-disallow-change](/static/docs/sql-review-column-disallow-change.webp)
+
 #### How the rule works
 
 Bytebase checks if using `ALTER TABLE CHANGE COLUMN` statements.
@@ -720,6 +751,8 @@ Bytebase checks if using `ALTER TABLE CHANGE COLUMN` statements.
 <h3 id="column.disallow-changing-order">Disallow changing column order</h3>
 
 Changing column order may cause performance issues. Users should be cautious about this.
+
+![sql-review-column-disallow-changing-order](/static/docs/sql-review-column-disallow-changing-order.webp)
 
 #### How the rule works
 
@@ -737,6 +770,8 @@ Specifically, Bytebase checks:
 <h3 id="column.auto-increment-must-integer">Use integer for auto-increment columns</h3>
 
 The auto-increment column must be integer.
+
+![sql-review-column-auto-increment-must-integer](/static/docs/sql-review-column-auto-increment-must-integer.webp)
 
 #### How the rule works
 
@@ -758,6 +793,8 @@ Support for PostgreSQL is coming soon.
 
 It's better to set the charset in the table or database.
 
+![sql-review-column-disallow-set-charset](/static/docs/sql-review-column-disallow-set-charset.webp)
+
 #### How the rule works
 
 Bytebase checks if setting charset for columns.
@@ -775,6 +812,8 @@ Specifically, Bytebase checks:
 <h3 id="column.auto-increment-must-unsigned">Set unsigned attribute on auto-increment columns</h3>
 
 Setting unsigned attribute on auto-increment columns to avoid negative numbers.
+
+![sql-review-column-auto-increment-must-unsigned](/static/docs/sql-review-column-auto-increment-must-unsigned.webp)
 
 #### How the rule works
 
@@ -794,6 +833,8 @@ Specifically, Bytebase checks:
 
 Configure whether the column requires comments and the maximum comment length.
 
+![sql-review-column-comment](/static/docs/sql-review-column-comment.webp)
+
 #### How the rule works
 
 Bytebase checks the column comment.
@@ -811,6 +852,8 @@ Specifically, Bytebase checks:
 <h3 id="column.maximum-character-length">Maximum CHAR length</h3>
 
 The CHAR type is the fixed-length type. A longer CHAR will require more storage space. 
+
+![sql-review-column-maximum-character-length](/static/docs/sql-review-column-maximum-character-length.webp)
 
 #### How the rule works
 
@@ -832,6 +875,8 @@ Support for PostgreSQL is coming soon.
 
 Set initial value for auto-increment columns.
 
+![sql-review-column-auto-increment-initial-value](/static/docs/sql-review-column-auto-increment-initial-value.webp)
+
 #### How the rule works
 
 Bytebase checks the initial value for auto-increment columns.
@@ -848,6 +893,8 @@ Specifically, Bytebase checks:
 <h3 id="column.current-time-count-limit">Limit the count of current time columns</h3>
 
 Limit the count of `NOW()`, `CURRENT_TIME()` and `CURRENT_TIMESTAMP()` columns.
+
+![sql-review-column-current-time-count-limit](/static/docs/sql-review-column-current-time-count-limit.webp)
 
 #### How the rule works
 
@@ -877,6 +924,8 @@ Specifically, Bytebase checks:
 
 Require default value for all columns, except PRIMARY KEY, JSON, BLOB, TEXT, GEOMETRY, AUTO_INCREMENT, GENERATED columns.
 
+![sql-review-column-require-default](/static/docs/sql-review-column-require-default.webp)
+
 #### How the rule works
 
 Bytebase checks the column default value.
@@ -896,6 +945,8 @@ Support for PostgreSQL is coming soon.
 ## Index
 
 <h3 id="index.no-duplicate-column">Disallow duplicate column in index keys</h3>
+
+![sql-review-index-no-duplicate-column](/static/docs/sql-review-index-no-duplicate-column.webp)
 
 #### How the rule works
 
@@ -918,6 +969,8 @@ Support for PostgreSQL is coming soon.
 
 Limit the count of index keys in one index.
 
+![sql-review-index-key-number-limit](/static/docs/sql-review-index-key-number-limit.webp)
+
 #### How the rule works
 
 Bytebase checks the count of index keys in each index.
@@ -939,6 +992,8 @@ Support for PostgreSQL is coming soon.
 
 Alert users if key type is not INT or BIGINT in primary keys.
 
+![sql-review-index-pk-type-limit](/static/docs/sql-review-index-pk-type-limit.webp)
+
 #### How the rule works
 
 Bytebase checks the key type for primary keys.
@@ -958,6 +1013,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="index.type-no-blob">Disallow BLOB and TEXT for index keys</h3>
 
 Disallow using BLOB and TEXT type as index keys.
+
+![sql-review-index-type-no-blob](/static/docs/sql-review-index-disallow-blob.webp)
 
 #### How the rule works
 
@@ -979,6 +1036,8 @@ Support for PostgreSQL is coming soon.
 <h3 id="index.total-number-limit">Index count limit</h3>
 
 Limit the index count in one table.
+
+![sql-review-index-total-number-limit](/static/docs/sql-review-index-total-number-limit.webp)
 
 #### How the rule works
 
@@ -1025,6 +1084,8 @@ Support for PostgreSQL is coming soon.
 
 <h3 id="system.charset.allowlist">Charset allow list</h3>
 
+![sql-review-system-charset-allowlist](/static/docs/sql-review-system-charset-allow-list.webp)
+
 #### How the rule works
 
 Bytebase checks if the SQL statement uses the charset outside of the allow list.
@@ -1042,6 +1103,8 @@ Specifically, Bytebase checks:
 Support for PostgreSQL is coming soon.
 
 <h3 id="system.collation.allowlist">Collation allow list</h3>
+
+![sql-review-system-collation-allowlist](/static/docs/sql-review-system-collation-allowlist.webp)
 
 #### How the rule works
 
