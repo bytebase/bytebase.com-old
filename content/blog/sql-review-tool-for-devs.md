@@ -5,7 +5,7 @@ published_at: 2022/10/28 18:00
 feature_image: /static/blog/sql-review-tool-for-devs/dev-fighting-dba.webp
 tags: Announcement
 featured: true
-description: SQL reviewing can be somewhat tedious, yet is essential to keeping your database fleet reliable. At Bytebase, we are building a developer-first SQL review tool to top off the DevOps system.
+description: Reviewing SQL can be somewhat tedious, yet is essential to keep your database fleet reliable. At Bytebase, we are building a developer-first SQL review tool to empower the DevOps system.
 ---
 
 Treat SQL as code "([Why](https://blog.devgenius.io/why-google-treats-sql-like-code-and-you-should-too-53f97925037e)?", you may ask), which means all the reasons why we review other codes need to apply to SQL scripts. They interact straight with databases, and databases are too important. No matter how database vendors promise their products are stable and robust, databases are still pretty fragile. Even if we disregard the accidental "DROP TABLE" fiasco, ordinary queries like "SELECT FROM" can also overwhelm a database and bring it down. Let’s face it: databases are delicate, yet very few users understand how to treat them properly - meaning we should discipline the users’ behavior to some degree.
@@ -22,16 +22,16 @@ From the tooling’s point of view, what can be done to help the development tea
 
 ## Customizable Capability
 
-For most developers, databases seem too complex and mysterious.  For example, they know all about the business logic yet lack understanding of whether specific changes affect performance and maintainability. Fortunately, many tools have built-in policies for common issues and can give recommendations automatically. But database types are diverse, and database engines are advancing rapidly, policies for a specific database, and a specific version can be harmful. Using the set of policies meant for the last MySQL version on the newest version may seriously affect the efficiency of application development, which is a source of conflict between the development team and the DBAs. When the reviewer's ability is insufficient, it puts higher requirements on the review tool. An excellent SQL review tool should have a more refined capability of being able to:
+For most developers, databases seem too complex and mysterious.  For example, they know all about the business logic yet lack understanding of whether specific changes affect performance and maintainability. Fortunately, many tools have built-in policies for common issues and can give recommendations automatically. But database types are diverse, and database engines are advancing rapidly, policies for a specific database, and a specific version may become outdated. Using the set of policies meant for the last MySQL version on the newest version may seriously affect the efficiency of application development, which is a source of conflict between the development team and the DBAs. When the reviewer's ability is limited, it puts higher requirements on the review tool. An excellent SQL review tool should have a more refined capability of being able to:
 
 - Apply to different database types;
 - Apply to different workload types, such as OLTP, OLAP, or HTAP;
-- Apply to different environments, such as dev, test, or staging environment;
+- Apply to different environments, such as dev, test, staging or prod environment;
 - Follow the database version update policy timely.
 
 ## A Coherent Development Experience: the Shift-left Approach
 
-A developer-friendly tool needs to integrate as much as possible into the working habits of the developers. For example, if SQL scripts are managed on a VCS (version control system), it's not pleasant to log into there and paste SQL for review in a different place. It should be integrated into the existing R&D process: the support for GitHub and GitLab is a no-brainer. This [shift-left approach](https://devopedia.org/shift-left) makes it possible for the SQL scripts to be reviewed as they are submitted to VCS, rather than at the end of the development cycle, right before the deployment of a new application. 
+A developer-friendly tool needs to integrate as much as possible into the working habits of the developers. For example, if SQL scripts are managed on a VCS (version control system), it's not pleasant to log into there and paste SQL for review in a different place. It should be integrated into the existing developer workflow: the support for GitHub and GitLab is a no-brainer. This [shift-left approach](https://devopedia.org/shift-left) makes it possible for the SQL scripts to be reviewed as they are submitted to VCS, rather than at the end of the development cycle, right before the deployment of a new application. 
 
 ## End-to-End CI/CD Workflow
 
@@ -45,10 +45,10 @@ When we use the shift-left approach, and SQL is reviewed at the beginning of a w
 
 SQL review aims to help users better use the database, not be a constraint on their business. When non-development teams are responsible for database stability, it is often easy to create a one-size-fits-all mechanism. Under a DevOps system, where development teams need to balance efficiency and stability, it is necessary to implement some flexible reviewing mechanisms:
 
-- The policies are adaptive to the business load. For example, queries that deliver business value but consume more resources can be released during low business hours.
+- The policies are adaptive to the business load. For example, queries that deliver business value but consume more resources can be relaxed during low business hours.
 - Have different thresholds for different data sizes. For smaller databases or tables, some policies can be relaxed.
 - Allow occasional violations, but there should be a bottom line. As long as the behavior is not forbidden or certain conditions are met, occasional violations should be allowed.
-- Encourage compliance with rules that are non-compulsory. Let’s be real, when rules are not mandatory, they don’t exist. Imposing soft penalties can help reduce such problems, for example, by dynamically adding the approval process when non-mandatory rules are frequently violated.
+- Encourage compliance with non-compulsory rules. Let’s be real, when rules are not mandatory, no one will comply with them. Imposing soft penalties can help reduce such problems, for example, by dynamically adding the approval process when non-mandatory rules are frequently violated.
 
 ## Knowing What’s Right and Wrong
 
@@ -56,7 +56,7 @@ Like driving cars, we all need to get a license before legally driving. As a rev
 
 ## An Open Community
 
-The combination of database engine type, version, business application, etc.,  generates a plethora of SQL review rules, which are difficult to support by a single vendor. At the same time, much wisdom is developed from production practice. Therefore, the only way to keep the tool alive and thriving is to attract more organizations and individuals to maintain a shared SQL review rule repository through open source. If the code can be shared globally, so can the SQL review rules.
+The combination of database engine type, version, business application, etc., generates a plethora of SQL review rules, which are difficult to support by a single vendor. At the same time, much wisdom is developed from production practice. Therefore, the only way to keep the tool alive and thriving is to attract more organizations and individuals to maintain a shared SQL review rule repository through open source. If the code can be shared globally, so can the SQL review rules.
 
 ## Where is SQL Review Headed?
 
