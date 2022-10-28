@@ -18,7 +18,7 @@ With the proliferation of DevOps, the R&D process is also evolving, and many tra
 
 ![_](/static/blog/sql-review-tool-for-devs/devops-view.webp)
 
-From the tooling’s point o f view, what can be done to help the development teams complete the DevOps lifecycle? For example, how should the review process evolve? How to make it developer-friendly? Let’s break it down into the following six parts.
+From the tooling’s point of view, what can be done to help the development teams complete the DevOps lifecycle? For example, how should the review process evolve? How to make it developer-friendly? Let’s break it down into the following six parts.
 
 ## Customizable Capability
 
