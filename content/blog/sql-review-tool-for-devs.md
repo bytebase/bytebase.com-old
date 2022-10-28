@@ -2,7 +2,7 @@
 title: The SQL Review Tool for Developers
 author: Changyu
 published_at: 2022/10/28 18:00
-feature_image: /static/blog/sql-review-tool-for-devs/sql-review-tool-for-devs.webp
+feature_image: /static/blog/sql-review-tool-for-devs/dev-fighting-dba.webp
 tags: Announcement
 featured: true
 description: SQL reviewing can be somewhat tedious, yet is essential to keeping your database fleet reliable. At Bytebase, we are building a developer-first SQL review tool to top off the DevOps system.
