@@ -11,7 +11,7 @@ Bytebase has two disjoint set of roles:
 
 By default, the first registered user is granted the `Owner` role, all following registered users are granted `Developer` role. `Owner` can update any user's role later.
 
-|                   Workspace level permission | Developer | DBA | Owner |
+|                         Workspace Permission | Developer | DBA | Owner |
 | -------------------------------------------: | :-------: | :-: | :---: |
 |                 Change own name and password |    ✔️     | ✔️  |  ✔️   |
 |                             View all members |    ✔️     | ✔️  |  ✔️   |
@@ -47,32 +47,29 @@ Any user can create project. By default, the project creator is granted the `Pro
 
 <hint-block type="info">
 
-Project Developer grants a project membership and does not grant any additional project level permissions. If the user is a project member, that project and the project's databases will be listed on the user's left sidebar.
+`Project Developer` grants a project membership and does not grant any additional project level permissions. If the user is a project member, that project and the project's databases will be listed on the user's left sidebar.
 
 </hint-block>
 
 <hint-block type="info">
 
-Workspace role and project role are **disjoint**, which means a Workspace Owner does not automatically assume a Project Owner. One must be granted a separate project role in order to obtain project specific permissions and Workspace Owner can grant any project role.
-
-We design this way because for most of the time, the Workspace Owner should not interfere with a particular project, so it's prudent to limit the permissions to prevent mistakes. On the other hand, if emergency happens and all existing Project Owners are not available, then the Workspace Owner can jump in.
+`Workspace DBA` and `Workspace Owner` assume the `Project Owner` role for all projects.
 
 </hint-block>
 
-|              Project level permission | Project Developer | Project Owner | Workspace Owner |
-| ------------------------------------: | :---------------: | :-----------: | :-------------: |
-|               Change any project role |                   |               |       ✔️        |
-|                   Change project role |                   |      ✔️       |                 |
-|                          Edit project |                   |      ✔️       |                 |
-|                       Archive project |                   |      ✔️       |                 |
-| Configure UI/Version control workflow |                   |      ✔️       |                 |
+|                    Project Permission | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
+| ------------------------------------: | :---------------: | :-----------: | :-----------: | :-------------: |
+|                   Change project role |                   |      ✔️       |      ✔️       |       ✔️        |
+|                          Edit project |                   |      ✔️       |      ✔️       |       ✔️        |
+|                       Archive project |                   |      ✔️       |      ✔️       |       ✔️        |
+| Configure UI/Version control workflow |                   |      ✔️       |      ✔️       |       ✔️        |
 
 ## Database permissions
 
 Bytebase does not define database specific roles. Whether a user can perform certain action to the database is based on the user's Workspace role and the role of the project owning the database.
 
-| Database level permission | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
-| ------------------------: | :---------------: | :-----------: | :-----------: | :-------------: |
-|        Take manual backup |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
-|             Enable backup |                   |      ✔️       |      ✔️       |       ✔️        |
-|         Transfer database |                   |      ✔️       |      ✔️       |       ✔️        |
+| Database Permission | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
+| ------------------: | :---------------: | :-----------: | :-----------: | :-------------: |
+|  Take manual backup |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
+|       Enable backup |                   |      ✔️       |      ✔️       |       ✔️        |
+|   Transfer database |                   |      ✔️       |      ✔️       |       ✔️        |
