@@ -31,6 +31,6 @@ Bytebase keeps the complete schema change history. It also integrates with VCS s
 
 Bytebase supports database-level manual and periodical backup.
 
-### Tenant Support
+### Tenant Database Management
 
-A multi-tenant service may create a separate database for each of its tenants. Bytebase can manage a specific database change deployment for all tenants in a single workflow.
+A multi-tenant service may provision separate [tenant databases](/docs/concepts/tenant-database) for each of its tenants. Bytebase comes with the [management capability](/docs/tenant-database-management) to provide robust schema change rollout for all tenants in a single workflow.

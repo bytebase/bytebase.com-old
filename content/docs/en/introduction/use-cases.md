@@ -21,7 +21,7 @@ As the engineering team grows, there will form a platform team or a dedicated DB
 
 ## Multi-Tenant Service
 
-A SaaS service may provision separate databases for each of its tenants. It's painful and error-prone to make sure a database change is consistently applied to each individual tenant's database. Bytebase provides a tenant mode to group those databases and can manage the lifecycle of those databases as a single unit.
+A SaaS service may provision separate [tenant databases](/docs/concepts/tenant-database) for each of its tenants. It's painful and error-prone to make sure a database change is consistently applied to each individual tenant's database. Bytebase provides [management capability](/docs/tenant-database-management) to group those databases and manages the lifecycle of those databases in a single workflow.
 
 ## Schema Enforcement and Engineering Excellence
 
