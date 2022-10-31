@@ -43,4 +43,4 @@ In the formal definition, a database schema is a set of formulas called integrit
 
 Above is a database schema for a database storing the employee data. The database schema is the **most critical** information because it’s the blueprint of how the database data is organized. A DBMS can have a database schema with empty data, but not vice versa. The database data is meaningless without the database schema.
 
-Database schema evolves as the business evolves. In the next post, we will explain that evoluation process, the database schema change.
+Database schema evolves as the business evolves. In the next post, we will explain the evolution process, the database schema change.
