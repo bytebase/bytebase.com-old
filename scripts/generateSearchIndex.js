@@ -88,7 +88,7 @@ async function generateSearchIndex() {
     }
   }
 
-  fse.writeFileSync("./log", JSON.stringify(objects));
+  fse.writeFileSync("./.log", JSON.stringify(objects));
 
   // const algoliasearch = require("algoliasearch");
   // const client = algoliasearch(
