@@ -23,13 +23,15 @@ A database management system (DBMS) consists of three main components:
 - The database data
 - The database schema
 
+The database server is a computation component and is stateless. The database data holds the state while the database schema holds the structure of the state (metadata). Database users often use SQL to instruct the database server to manipulate the underlying database data. SQL stands for _Structured Query Language_ which is based on the structure that the database schema provides.
+
 ## The Database Server
 
 The database server is a process or a set of processes running inside a computation environment. The computation environment provides processing power. It could be a physical computer, a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) or a lightweight [container](https://en.wikipedia.org/wiki/OS-level_virtualization).
 
 ## The Database Data
 
-The database data records the business application information such as order information, customer profile, etc. The database data is stored on the physical disk. Database users often use SQL to instruct the database server to manipulate the underlying database data. People always use a cylinder to represent a database because, in old days, database data is stored there. Oracle, the world’s largest database company, headquarters are a set of cylinder buildings.
+The database data records the business application information such as order information, customer profile, etc. The database data is stored on the physical disk. People always use a cylinder to represent a database because, in old days, database data is stored there. Oracle, the world’s largest database company, headquarters are a set of cylinder buildings.
 
 ![_](/static/blog/what-is-database-schema/oracle-headquarter.webp)
 
