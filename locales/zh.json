@@ -202,11 +202,13 @@
     "input-then-press-enter": "输入后按下回车来添加",
     "template": {
       "bb-sql-review-prod": {
-        "env": "Prod",
+        "template": "进阶模板",
+        "desc": "为您的数据库提供全面保护和最佳实践。",
         "title": "SQL 审查规则"
       },
       "bb-sql-review-dev": {
-        "env": "Dev",
+        "template": "基础模板",
+        "desc": "保证变更可正确地应用到数据库。",
         "title": "SQL 审查规则"
       }
     },
