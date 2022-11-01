@@ -49,7 +49,7 @@ As revealed from the [leaked Google BigQuery revenue](https://www.theinformation
 
 We can see that the profits/revenue/growth of database cloud services are extremely impressive. It’s not whether to go cloud, but whether to embrace cloud from Day 1.
 
-In particular, in the OLAP space, while the market is betting on the next Snowflake, Databricks, the two just have a benchmark fight.
+In particular, in the OLAP space, while the market is betting on the next Snowflake, Databricks, the two just had a benchmark fight.
 
 ## OLAP
 
@@ -74,9 +74,9 @@ Any of the above can boost performance significantly, which would probably offse
 
 And performance is just one aspect of the database system. The core part of the database is called Engine, just like a car engine, in addition to speed, specs such as stability, fuel consumption, durability, and maintenance cost are also important, along with tires, bearings, exterior polish, interior decoration, and steering, to deliver the entire driving experience.
 
-In fact, Snowflake and Databricks are both product-oriented companies. If you have a chance to read Snowflake's documentation and use its Cloud portal / SQL Editor, you can feel that this is a well-designed product, ranging from data modeling (the virtual dataware concept) to the UX. As for Databricks, it also has a taste for tools as they have acquired products like [Redash](https://databricks.com/blog/2020/06/24/welcoming-redash-to-databricks.html), readers who are interested can also search ``developer experience site:databricks` on Google.
+In fact, Snowflake and Databricks are both product-oriented companies. If you have a chance to read Snowflake's documentation and use its Cloud portal / SQL Editor, you can feel that this is a well-designed product, ranging from data modeling (the virtual dataware concept) to the UX. As for Databricks, it also has a taste for tools as they have acquired products like [Redash](https://databricks.com/blog/2020/06/24/welcoming-redash-to-databricks.html), readers who are interested can also search `developer experience site: databricks` on Google.
 
-Of course, it could be a key differentiator if the performance is way better. In 2021, there happened to be such a product emerged.
+Of course, it could be a key differentiator if the performance is way better. In 2021, such a product happened to emerge.
 
 ### ClickHouse
 
@@ -103,7 +103,7 @@ Let’s take a look at the Firebolt manifesto:
 ![_](/static/blog/database-review-2021-bytebase/firebolt-leap.webp)
 ![_](/static/blog/database-review-2021-bytebase/snowflake-firebolt.webp)
 
-Of course Snowflake is a great product, and over the years it has grown into a one-stop platform that Firebolt, as a startup, is nowhere near in terms of breadth of product. But Firebolt is targeting Snowflake's core competence Price / Performance / Usability, and their website claims:
+Of course, Snowflake is a great product, and over the years it has grown into a one-stop platform that Firebolt, as a startup, is nowhere near in terms of product breadth. But Firebolt is targeting Snowflake's core competence Price / Performance / Usability, and their website claims:
 
 > Firebolt has shown that you can have the speed of ClickHouse or Druid with the simplicity and flexibility of Snowflake, and about 1/10th the cost of Snowflake, from gigabyte to petabyte scale.
 
@@ -134,17 +134,11 @@ In fact, PG has won the DB-Engine DBMS of the year award 3 times in the last 5 y
 1. Licensing concern after Oracle acquires MySQL. Personally, I think Oracle has made a lot of important improvements to MySQL after the acquisition, but licensing is a real risk, especially if the other side is Oracle.
 2. PG has the inherent architecture advantage, its advanced/extended features are much ahead of MySQL. For example, although MySQL also has Geospatial, JSON functionality, it is still quite inferior to PG's PostGIS, JSON-B.
 3. PG has a much more sophisticated query engine than MySQL. Not long ago, a former MySQL query engine engineer [ranted](https://blog.sesse.net/blog/tech/2021-12-05-16-41_leaving_mysql.html) before leaving the MySQL team. In fact, PG can have above average AP capabilities with a little tuning (many OLAP products like AWS Redshift are based on PostgreSQL).
-4. The logical isolation of PG is at the database level, where a PG instance can create many databases and then assign each database to a different tenant. Although MySQL instances can also create multiple databases, because the databases are connected by default, this makes it necessary to assign a separate MySQL instance to each tenant. In single-tenant mode, MySQL's ease of use is superior, but in today's SaaS, multi-tenant service scenario, PG has a big advantage. That's why PG has been adopted from the earliest Heroku, to the new Heroku-like render, and Supabase. They can offer a low or even free database plan because they can serve many users with a single PG instance.
+4. The logical isolation of PG is at the database level, where a PG instance can create many databases and then assign each database to a different tenant. Although MySQL instances can also create multiple databases, because the databases are connected by default, this makes it necessary to assign a separate MySQL instance to each tenant. In single-tenant mode, MySQL's ease of use is superior, but in today's SaaS, multi-tenant service scenario, PG has a big advantage. That's why PG has been adopted by Heroku early on, to the new Heroku-like render, and Supabase. They can offer a low or even free database plan because they can serve many users with a single PG instance.
 
 PS is batteries included. When a company chooses PG, it gets a database with OLTP, OLAP, Document (JSON-B), FTS (tsvector/tsquery), Time-series (TimescaleDB), Geospatial (PostGIS), Multi-tenancy capabilities (batteries included). To summarize it in a simple formula:
 
 PostgreSQL = MySQL + Poor man version of (ClickHouse + MongoDB\* + Elasticsearch + InfluxDB) + Geospatial + Multi-tenancy
-
-- MongoDB 有分布式能力，这点比 PG 要强，但是论单机 KV 能力的话，PG 不少点其实更强。
-
-- Geospatial 在开源届公认的方案就是 PostGIS，所以如果业务上地理信息处理是核心，那 PostgreSQL 其实也是唯一的选择。
-
-- Multi-tenancy 这里指的更多是应用逻辑上的隔离，但还做不到像 Google Spanner 那样真正租户级别的物理隔离。
 
 Although PG can't compete with the ClickHouse in single-table query performance, or Elasticsearch in text retrieval, and even in transactional processing capabilities, it’s also [inferior to MySQL](https://eng.uber.com/postgres-to-mysql-migration), but the premise of having a single database system to serve all scenarios is too attractive.
 
@@ -178,7 +172,7 @@ Oh my **GoSH**.
 
 ### SQLite
 
-While the authors of curl [may not agree](https://daniel.haxx.se/blog/2021/10/21/the-most-used-software-components-in-the-world/) that SQLite is the most deployed software component in the world, SQLite is undoubtedly the most deployed database, with perhaps dozens or hundreds on a single phone, and in almost every app from Notes to WhatsApp. SQLite is not a complete database system (DBMS), but it has a complete storage engine and SQL interface, and it has goode enough performance for most application needs. It's a library and use a single file to hold data, which makes application access and manage data very easy. In 2021, several interesting projects have emerged from the SQLite ecosystem:
+While the authors of curl [may not agree](https://daniel.haxx.se/blog/2021/10/21/the-most-used-software-components-in-the-world/) that SQLite is the most deployed software component in the world, SQLite is undoubtedly the most deployed database, with perhaps dozens or hundreds on a single phone, and in almost every app from Notes to WhatsApp. SQLite is not a complete database system (DBMS), but it has a complete storage engine and SQL interface, and it has good enough performance for most application needs. It's a library and uses a single file to hold data, which makes application access and data management very easy. In 2021, several interesting projects have emerged from the SQLite ecosystem:
 
 1. [Litestream](https://litestream.io/)，SQLite disaster recovery solution based on WAL (written by Ben Johnson, who is also the author of Golang BoltDB).
 2. [Hosting SQLite databases on GitHub Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)，A very clever implementation of VFS with block read support using HTTP Range requests.
