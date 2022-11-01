@@ -1,5 +1,5 @@
 import algoliasearch from "algoliasearch";
-import { findLast, last } from "lodash";
+import { findLast, last, unionBy, uniqBy } from "lodash";
 import { $content } from "@nuxt/content";
 
 const DOC_PATH_PREFIX = "/docs/en";
@@ -112,11 +112,7 @@ async function generateSearchIndex() {
     objects.push(dataObject);
 
     for (const node of item.body.children) {
-      if (
-        node.type === "element" &&
-        node.tag.length === 2 &&
-        node.tag.startsWith("h")
-      ) {
+      if (node.type === "element" && HEAD_TAG_REGEX.test(node.tag)) {
         const level = node.tag.slice(1);
         const type = `lvl${level}`;
         const title = getContentOfNode(node);
@@ -178,8 +174,9 @@ async function generateSearchIndex() {
   );
   objects.push(...howtoLayoutSearchIndexList);
 
-  const resultObjects = objects.filter(
-    (data) => typeof data.objectID === "string"
+  const resultObjects = uniqBy(
+    objects.filter((data) => typeof data.objectID === "string"),
+    "url"
   );
 
   const client = algoliasearch("2M7XI1QIDY", process.env.ALGOLIA_ADMIN_API_KEY);
