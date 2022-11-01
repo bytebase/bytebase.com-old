@@ -85,7 +85,7 @@ async function generateSearchIndexForLayout(category, indexName) {
 }
 
 async function generateSearchIndex() {
-  const objects = [];
+  const contentSearchIndexList = [];
   const contentNodes = await $content("docs", {
     deep: true,
   })
@@ -109,7 +109,7 @@ async function generateSearchIndex() {
       },
       type: "lvl1",
     };
-    objects.push(dataObject);
+    contentSearchIndexList.push(dataObject);
 
     for (const node of item.body.children) {
       if (node.type === "element" && HEAD_TAG_REGEX.test(node.tag)) {
@@ -117,14 +117,14 @@ async function generateSearchIndex() {
         const type = `lvl${level}`;
         const title = getContentOfNode(node);
         const dataObject = {
-          objectID: path + objects.length,
+          objectID: path + contentSearchIndexList.length,
           url: `/docs${path}#${node.props.id}`,
           hierarchy: {},
           type: type,
           content: getContentOfNode(node),
         };
         const lastObject = findLast(
-          objects,
+          contentSearchIndexList,
           (o) => o.type === `lvl${level - 1}`
         );
         if (lastObject) {
@@ -133,20 +133,20 @@ async function generateSearchIndex() {
           };
         }
         dataObject.hierarchy[type] = title;
-        objects.push(dataObject);
+        contentSearchIndexList.push(dataObject);
       } else {
-        const lastObject = last(objects);
+        const lastObject = last(contentSearchIndexList);
         if (lastObject && lastObject.type === "content") {
           lastObject.content = lastObject.content + getContentOfNode(node);
         } else {
           const dataObject = {
-            objectID: path + objects.length,
+            objectID: path + contentSearchIndexList.length,
             url: `/docs${path}`,
             hierarchy: lastObject.hierarchy,
             type: "content",
             content: getContentOfNode(node),
           };
-          objects.push(dataObject);
+          contentSearchIndexList.push(dataObject);
         }
       }
     }
@@ -157,32 +157,34 @@ async function generateSearchIndex() {
     "",
     "Documentation"
   );
-  objects.push(...docsLayoutSearchIndexList);
   const cliLayoutSearchIndexList = await generateSearchIndexForLayout(
     "cli",
     "CLI"
   );
-  objects.push(...cliLayoutSearchIndexList);
   const apiLayoutSearchIndexList = await generateSearchIndexForLayout(
     "api",
     "API"
   );
-  objects.push(...apiLayoutSearchIndexList);
   const howtoLayoutSearchIndexList = await generateSearchIndexForLayout(
     "how-to",
     "How-To"
   );
-  objects.push(...howtoLayoutSearchIndexList);
 
-  const resultObjects = uniqBy(
-    objects.filter((data) => typeof data.objectID === "string"),
+  const resultSearchIndexList = uniqBy(
+    [
+      ...docsLayoutSearchIndexList,
+      ...cliLayoutSearchIndexList,
+      ...apiLayoutSearchIndexList,
+      ...howtoLayoutSearchIndexList,
+      ...contentSearchIndexList,
+    ].filter((data) => typeof data.objectID === "string"),
     "url"
   );
 
   const client = algoliasearch("2M7XI1QIDY", process.env.ALGOLIA_ADMIN_API_KEY);
   const index = client.initIndex("bytebase-docs");
   await index.clearObjects();
-  await index.saveObjects(resultObjects);
+  await index.saveObjects(resultSearchIndexList);
 }
 
 export default generateSearchIndex;
