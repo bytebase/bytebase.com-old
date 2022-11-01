@@ -16,7 +16,7 @@
       <div
         v-for="template in guidelineTemplateList"
         :key="template.id"
-        class="cursor-pointer bg-transparent border border-gray-300 hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col justify-center items-center w-full sm:max-w-xs relative"
+        class="cursor-pointer bg-transparent border border-gray-300 hover:bg-gray-100 rounded-lg p-6 transition-all flex flex-col sm:flex-row justify-center items-center w-full sm:max-w-md relative sm:h-36"
         :class="state.template.id === template.id ? 'bg-gray-100' : ''"
         @click="onGuidelineChange(template)"
       >
@@ -26,27 +26,34 @@
           :src="require(`~/assets/sql-review/${template.id}.webp`)"
         />
         <div class="mt-4">
-          <span class="text-lg lg:text-xl">{{
-            $t("sql-review-guide.guideline-for")
-          }}</span>
-          <span
+          <p
             class="text-indigo-600 text-lg lg:text-xl"
             style="
               box-shadow: rgb(255, 255, 255) 0px -0.166667em 0px 0px inset,
                 rgb(186, 230, 253) 0px -0.333333em 0px 0px inset;
             "
-            >{{
+          >
+            {{
               $t(
                 `sql-review-guide.template.${template.id
                   .split(".")
-                  .join("-")}.env`
+                  .join("-")}.template`
               )
-            }}</span
-          >
+            }}
+          </p>
+          <p class="text-sm">
+            {{
+              $t(
+                `sql-review-guide.template.${template.id
+                  .split(".")
+                  .join("-")}.desc`
+              )
+            }}
+          </p>
         </div>
         <CheckCircleIcon
           v-if="state.template.id === template.id"
-          class="w-7 h-7 text-gray-500 absolute top-3 left-3"
+          class="w-7 h-7 text-gray-500 absolute top-3 right-3"
         />
       </div>
     </div>

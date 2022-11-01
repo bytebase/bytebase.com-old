@@ -200,11 +200,13 @@
     "filter": "Filter",
     "template": {
       "bb-sql-review-prod": {
-        "env": "Prod",
+        "template": "Advanced Template",
+        "desc": "Comprehensive policy where you have total protection and best practices for your databases.",
         "title": "Database Review Guide"
       },
       "bb-sql-review-dev": {
-        "env": "Dev",
+        "template": "Basic Template",
+        "desc": "Basic coverage to defend your databases from common misusage.",
         "title": "Database Review Guide"
       }
     },
