@@ -3,8 +3,6 @@
 expand_section_list: ["Workflow", "ClickHouse"]
 ---
 
-# how_to_layout
-
 ## Workflow
 
 ### [GitOps with Feature Branch](/how-to/workflow/gitops-feature-branch)

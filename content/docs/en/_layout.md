@@ -3,8 +3,6 @@
 expand_section_list: ["Introduction", "Get Started"]
 ---
 
-# docs_layout
-
 ## Introduction
 
 ### [What is Bytebase](/introduction/what-is-bytebase)
