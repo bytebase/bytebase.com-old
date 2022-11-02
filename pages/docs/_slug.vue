@@ -10,9 +10,11 @@ export default {
   layout: "content",
   async asyncData({ $content, params, error }) {
     const locale = "en";
-    const document = await $content("docs", locale, params.slug)
+    const pathArgs = ["docs", locale, params.slug];
+    const document = await $content(...pathArgs)
       .fetch()
-      .catch(() => {
+      .catch((err) => {
+        console.error("Not found with path args", pathArgs, err);
         error({ statusCode: 404, message: "Page not found" });
       });
 

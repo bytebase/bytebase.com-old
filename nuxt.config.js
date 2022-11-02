@@ -91,6 +91,23 @@ async function getChineseBlogRouteList() {
   return list;
 }
 
+async function getDocsRouteList() {
+  const { $content } = require("@nuxt/content");
+  const list = await $content("docs", {
+    deep: true,
+  }).fetch();
+  const routeList = [];
+
+  for (const item of list) {
+    if (item.path.endsWith("_layout")) {
+      continue;
+    }
+    routeList.push(item.path.replace("/docs/en", "/docs"));
+  }
+
+  return routeList;
+}
+
 function mergedLocalMessages(folder) {
   const message = {};
   const pathes = fse.readdirSync(folder);
@@ -223,7 +240,11 @@ export default {
 
   generate: {
     routes: async () => {
-      return []
+      const routeList = [];
+      const docsRouteList = await getDocsRouteList();
+
+      return routeList
+        .concat(docsRouteList)
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
