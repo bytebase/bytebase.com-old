@@ -68,11 +68,12 @@ Any user can create project. By default, the project creator is granted the `Pro
 
 Bytebase does not define database specific roles. Whether a user can perform certain action to the database is based on the user's Workspace role and the role of the project owning the database.
 
-| Database Permission | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
-| ------------------: | :---------------: | :-----------: | :-----------: | :-------------: |
-|  Take manual backup |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
-|       Enable backup |                   |      ✔️       |      ✔️       |       ✔️        |
-|   Transfer database |                   |      ✔️       |      ✔️       |       ✔️        |
+| Database Permission |     Project Developer     | Project Owner | Workspace DBA | Workspace Owner |
+| ------------------: | :-----------------------: | :-----------: | :-----------: | :-------------: |
+|  Take manual backup |            ✔️             |      ✔️       |      ✔️       |       ✔️        |
+|       Enable backup |                           |      ✔️       |      ✔️       |       ✔️        |
+| Edit database label |                           |      ✔️       |      ✔️       |       ✔️        |
+|   Transfer database | Not allowed in Enterprise |      ✔️       |      ✔️       |       ✔️        |
 
 ## Sheet permissions
 
