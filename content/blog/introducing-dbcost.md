@@ -11,7 +11,7 @@ description: DB Cost is an open source project built by the Bytebase team. We ex
 
 As FinOps rises, teams become more sensitive to the cloud resource pricing than ever. Major public cloud vendors do provide pricing for their offerings, however, that pricing information is usually hard to consume. Moreover, there is no straightforward way to compare similar offerings across different cloud providers.
 
-3rd party pricing calculator site has emerged to fill such a gap. Yet, we couldn't find a site dedicated to providing database pricing info. Being a database tooling shop ourselves, we'd like to take a shot. So today, we are announcing [DB Cost](https://dbcost.com), a simple pricing calculator and comparison tool for the cloud databases. Major features include:
+3rd party pricing calculator site has emerged to fill such a gap. Yet, we couldn't find a site dedicated to providing database pricing info. Being a database tooling shop ourselves, we'd like to take a shot. So today, we are announcing [DB Cost (https://dbcost.com)](https://dbcost.com), a simple pricing calculator and comparison tool for the cloud databases. Major features include:
 
 1. Support different cloud providers, starting from AWS RDS and GCP Cloud SQL.
 2. Support different database engines, starting from MySQL and PostgreSQL.
