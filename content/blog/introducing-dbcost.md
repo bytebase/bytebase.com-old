@@ -4,7 +4,7 @@ author: Xiong
 published_at: 2022/11/02 14:00
 feature_image: /static/blog/introducing-dbcost/background.webp
 tags: Announcement
-description: DB Cost is an open source project built by the Bytebase team. We expect it to be a tool for developers to compare different database products before making a final decision, where all cloud database instance performance and cost info are clearly presented.
+description: DB Cost is a tool for developers to compare performance and cost differences among cloud database providers.
 ---
 
 ## 💸 What is DB Cost?
