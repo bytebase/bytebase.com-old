@@ -73,3 +73,35 @@ Bytebase does not define database specific roles. Whether a user can perform cer
 |  Take manual backup |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
 |       Enable backup |                   |      ✔️       |      ✔️       |       ✔️        |
 |   Transfer database |                   |      ✔️       |      ✔️       |       ✔️        |
+
+## Sheet permissions
+
+User can save sheets from [SQL Editor](/docs/sql-editor/overview). A sheet always belongs to a project. Sheet has three visibility levels:
+
+- Private
+- Project
+- Public
+
+### Private Sheet
+
+| Permission | Creator | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
+| ---------: | :-----: | :---------------: | :-----------: | ------------- | --------------- |
+|       Read |   ✔️    |                   |               |               |                 |
+|      Write |   ✔️    |                   |               |               |                 |
+|     Delete |   ✔️    |                   |               |               |                 |
+
+### Project Sheet
+
+| Permission | Creator | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
+| ---------: | :-----: | :---------------: | :-----------: | :-----------: | :-------------: |
+|       Read |   ✔️    |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
+|      Write |   ✔️    |                   |      ✔️       |      ✔️       |       ✔️        |
+|     Delete |   ✔️    |                   |      ✔️       |      ✔️       |       ✔️        |
+
+### Public Sheet
+
+| Permission | Creator | Project Developer | Project Owner | Others |
+| ---------: | :-----: | :---------------: | :-----------: | :----: |
+|       Read |   ✔️    |        ✔️         |      ✔️       |   ✔️   |
+|      Write |   ✔️    |                   |      ✔️       |        |
+|     Delete |   ✔️    |                   |      ✔️       |        |
