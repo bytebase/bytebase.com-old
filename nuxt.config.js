@@ -241,6 +241,9 @@ export default {
   },
 
   generate: {
+    // Generate the docs routes manually instead of using nuxt crawler, 
+    // which can cause 404 errors with dynamic routes in production.
+    // Reference: https://stackoverflow.com/a/73790178
     crawler: false,
     routes: async () => {
       const routeList = [];
