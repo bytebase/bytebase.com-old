@@ -95,7 +95,9 @@ async function getDocsRouteList() {
   const { $content } = require("@nuxt/content");
   const list = await $content("docs", {
     deep: true,
-  }).fetch();
+  })
+    .only(["path"])
+    .fetch();
   const routeList = [];
 
   for (const item of list) {
@@ -239,16 +241,17 @@ export default {
   },
 
   generate: {
+    crawler: false,
     routes: async () => {
       const routeList = [];
       const docsRouteList = await getDocsRouteList();
 
       return routeList
-        .concat(docsRouteList)
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
-        .concat(webhookRouteList());
+        .concat(webhookRouteList())
+        .concat(docsRouteList);
     },
   },
 
