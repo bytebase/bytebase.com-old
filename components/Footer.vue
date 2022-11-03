@@ -150,7 +150,7 @@
             </li>
             <li>
               <nuxt-link
-                :to="localePath('/docs')"
+                :to="localePath('/docs/introduction/what-is-bytebase')"
                 class="text-base text-gray-500 hover:text-gray-900"
                 @click="track('blog.footer')"
                 >{{ $t("common.documentation") }}</nuxt-link
