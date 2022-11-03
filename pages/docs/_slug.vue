@@ -9,8 +9,7 @@ export default {
   components: { DocumentViewer },
   layout: "content",
   async asyncData({ $content, params, error }) {
-    const locale = "en";
-    const pathArgs = ["docs", locale, params.slug];
+    const pathArgs = ["docs", params.slug];
     const document = await $content(...pathArgs)
       .fetch()
       .catch((err) => {

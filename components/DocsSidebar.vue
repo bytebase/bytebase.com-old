@@ -223,10 +223,8 @@ export default defineComponent({
     useFetch(async () => {
       // Valid category for separate menu items. e.g. "cli"
       // Now we don't have a needed and finished submenus, so it's empty.
-      const locale = "en";
       const layout = (await $content(
         "docs",
-        locale,
         validDocsCategoryPathList.includes(category) ? category : "",
         "_layout"
       ).fetch()) as any as ContentDocument;

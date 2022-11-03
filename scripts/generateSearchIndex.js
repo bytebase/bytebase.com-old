@@ -1,8 +1,7 @@
 import algoliasearch from "algoliasearch";
-import { findLast, last, unionBy, uniqBy } from "lodash";
+import { findLast, last, uniqBy } from "lodash";
 import { $content } from "@nuxt/content";
 
-const DOC_PATH_PREFIX = "/docs/en";
 const HEAD_TAG_REGEX = /^h\d$/;
 
 function getContentOfNode(node) {
@@ -19,7 +18,7 @@ function getContentOfNode(node) {
 
 async function generateSearchIndexForLayout(category, indexName) {
   const objects = [];
-  const layout = await $content("docs", "en", category, "_layout").fetch();
+  const layout = await $content("docs", category, "_layout").fetch();
   const dataObject = {
     objectID: undefined,
     hierarchy: {
@@ -93,11 +92,11 @@ async function generateSearchIndex() {
     .fetch();
 
   for (const item of contentNodes) {
-    const path = item.path.slice(DOC_PATH_PREFIX.length);
+    const path = item.path;
 
     const dataObject = {
       objectID: path,
-      url: `/docs${path}`,
+      url: path,
       hierarchy: {
         lvl0: "Documentation",
         lvl1: item.title,
