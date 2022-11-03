@@ -33,14 +33,13 @@ On the other hand, we do not plan to support any commercial databases such as Or
 
 Bytebase only supports Git-based VCS. It currently supports:
 
-- GitLab Enterprise Edition (EE)
-- Community Edition (CE)
+- Self-host GitLab EE/CE
+- GitHub.com
 
 We plan to support more Git providers roughly in the following order:
 
 - GitHub Enterprise
 - GitLab.com
-- GitHub.com
 
 ## How to enable https
 
