@@ -99,14 +99,12 @@ async function getDocsRouteList() {
     .only(["path"])
     .fetch();
   const routeList = [];
-
   for (const item of list) {
     if (item.path.endsWith("_layout")) {
       continue;
     }
-    routeList.push(item.path.replace("/docs/en", "/docs"));
+    routeList.push(item.path);
   }
-
   return routeList;
 }
 

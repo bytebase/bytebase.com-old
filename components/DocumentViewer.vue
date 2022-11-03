@@ -154,7 +154,6 @@ export default defineComponent({
     const githubFilePath = `/content${props.document?.path}${props.document?.extension}`;
 
     useFetch(async () => {
-      const locale = "en";
       const category = route.value.params.category;
       const validDocsCategoryPathList = validDocsCategoryList.map(
         (t) => t.category
@@ -164,7 +163,6 @@ export default defineComponent({
         : "";
       const layout = (await $content(
         "docs",
-        locale,
         currentCategory,
         "_layout"
       ).fetch()) as any as ContentDocument;

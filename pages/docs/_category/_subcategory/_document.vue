@@ -9,10 +9,8 @@ export default {
   components: { DocumentViewer },
   layout: "content",
   async asyncData({ $content, params, error }) {
-    const locale = "en";
     const pathArgs = [
       "docs",
-      locale,
       params.category,
       params.subcategory,
       params.document,
