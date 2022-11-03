@@ -11,35 +11,39 @@ Bytebase has two disjoint set of roles:
 
 By default, the first registered user is granted the `Owner` role, all following registered users are granted `Developer` role. `Owner` can update any user's role later.
 
-|                         Workspace Permission | Developer | DBA | Owner |
-| -------------------------------------------: | :-------: | :-: | :---: |
-|                 Change own name and password |    ✔️     | ✔️  |  ✔️   |
-|                             View all members |    ✔️     | ✔️  |  ✔️   |
-|                        View all environments |    ✔️     | ✔️  |  ✔️   |
-|                           View all instances |    ✔️     | ✔️  |  ✔️   |
-|                              Create database |    ✔️     | ✔️  |  ✔️   |
-|                           View all databases |    ✔️     | ✔️  |  ✔️   |
-|                            View all projects |    ✔️     | ✔️  |  ✔️   |
-|                               Create project |    ✔️     | ✔️  |  ✔️   |
-|                              View all issues |    ✔️     | ✔️  |  ✔️   |
-|                    Add comment to all issues |    ✔️     | ✔️  |  ✔️   |
-|                      Subscribe to all issues |    ✔️     | ✔️  |  ✔️   |
-|                                 Alter schema |    ✔️     | ✔️  |  ✔️   |
-|                              Add environment |           | ✔️  |  ✔️   |
-|                             Edit environment |           | ✔️  |  ✔️   |
-|                          Reorder environment |           | ✔️  |  ✔️   |
-|                          Archive environment |           | ✔️  |  ✔️   |
-|                                 Add instance |           | ✔️  |  ✔️   |
-|                                Edit instance |           | ✔️  |  ✔️   |
-|                             Archive instance |           | ✔️  |  ✔️   |
-|                         Sync instance schema |           | ✔️  |  ✔️   |
-|                              Re-assign issue |           | ✔️  |  ✔️   |
-|                        Become issue assignee |           | ✔️  |  ✔️   |
-|                                 Add new user |           |     |  ✔️   |
-|                       Change any user's role |           |     |  ✔️   |
-|                 De-activate/re-activate user |           |     |  ✔️   |
-|          Change any user's name and password |           |     |  ✔️   |
-| Manage version control system (VCS) provider |           |     |  ✔️   |
+|                         Workspace Permission |         Developer         | DBA | Owner |
+| -------------------------------------------: | :-----------------------: | :-: | :---: |
+|                 Change own name and password |            ✔️             | ✔️  |  ✔️   |
+|                                 Add new user |                           |     |  ✔️   |
+|                             View all members |            ✔️             | ✔️  |  ✔️   |
+|                       Change any user's role |                           |     |  ✔️   |
+|                 De-activate/re-activate user |                           |     |  ✔️   |
+|          Change any user's name and password |                           |     |  ✔️   |
+|                              Add environment |                           | ✔️  |  ✔️   |
+|                        View all environments |            ✔️             | ✔️  |  ✔️   |
+|                             Edit environment |                           | ✔️  |  ✔️   |
+|                          Reorder environment |                           | ✔️  |  ✔️   |
+|                          Archive environment |                           | ✔️  |  ✔️   |
+|                           View all instances |            ✔️             | ✔️  |  ✔️   |
+|                                 Add instance |                           | ✔️  |  ✔️   |
+|                                Edit instance |                           | ✔️  |  ✔️   |
+|                             Archive instance |                           | ✔️  |  ✔️   |
+|                         Sync instance schema |                           | ✔️  |  ✔️   |
+|                              Create database | Not allowed in Enterprise | ✔️  |  ✔️   |
+|                           View all databases |                           | ✔️  |  ✔️   |
+|                               Create project |            ✔️             | ✔️  |  ✔️   |
+|                            View all projects |                           | ✔️  |  ✔️   |
+|                                 Create issue |            ✔️             | ✔️  |  ✔️   |
+|                              View all issues |                           | ✔️  |  ✔️   |
+|                        Become issue assignee |                           | ✔️  |  ✔️   |
+|                              Re-assign issue |                           | ✔️  |  ✔️   |
+|                    Add comment to all issues |            ✔️             | ✔️  |  ✔️   |
+|                      Subscribe to all issues |            ✔️             | ✔️  |  ✔️   |
+|                                 Alter schema |            ✔️             | ✔️  |  ✔️   |
+|                                  Change data |            ✔️             | ✔️  |  ✔️   |
+|                  Configure SQL Review Policy |                           | ✔️  |  ✔️   |
+| Manage version control system (VCS) provider |                           |     |  ✔️   |
+|                                  Change logo |                           |     |  ✔️   |
 
 ## Project roles
 
