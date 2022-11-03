@@ -14,32 +14,36 @@ By default, the first registered user is granted the `Owner` role, all following
 |                         Workspace Permission |         Developer         | DBA | Owner |
 | -------------------------------------------: | :-----------------------: | :-: | :---: |
 |                 Change own name and password |            ✔️             | ✔️  |  ✔️   |
+|                                 Add new user |                           |     |  ✔️   |
 |                             View all members |            ✔️             | ✔️  |  ✔️   |
-|                        View all environments |            ✔️             | ✔️  |  ✔️   |
-|                           View all instances |            ✔️             | ✔️  |  ✔️   |
-|                              Create database | Not allowed in Enterprise | ✔️  |  ✔️   |
-|                           View all databases |            ✔️             | ✔️  |  ✔️   |
-|                            View all projects |            ✔️             | ✔️  |  ✔️   |
-|                               Create project |            ✔️             | ✔️  |  ✔️   |
-|                              View all issues |            ✔️             | ✔️  |  ✔️   |
-|                    Add comment to all issues |            ✔️             | ✔️  |  ✔️   |
-|                      Subscribe to all issues |            ✔️             | ✔️  |  ✔️   |
-|                                 Alter schema |            ✔️             | ✔️  |  ✔️   |
+|                       Change any user's role |                           |     |  ✔️   |
+|                 De-activate/re-activate user |                           |     |  ✔️   |
+|          Change any user's name and password |                           |     |  ✔️   |
 |                              Add environment |                           | ✔️  |  ✔️   |
+|                        View all environments |            ✔️             | ✔️  |  ✔️   |
 |                             Edit environment |                           | ✔️  |  ✔️   |
 |                          Reorder environment |                           | ✔️  |  ✔️   |
 |                          Archive environment |                           | ✔️  |  ✔️   |
+|                           View all instances |            ✔️             | ✔️  |  ✔️   |
 |                                 Add instance |                           | ✔️  |  ✔️   |
 |                                Edit instance |                           | ✔️  |  ✔️   |
 |                             Archive instance |                           | ✔️  |  ✔️   |
 |                         Sync instance schema |                           | ✔️  |  ✔️   |
-|                              Re-assign issue |                           | ✔️  |  ✔️   |
+|                              Create database | Not allowed in Enterprise | ✔️  |  ✔️   |
+|                           View all databases |                           | ✔️  |  ✔️   |
+|                               Create project |            ✔️             | ✔️  |  ✔️   |
+|                            View all projects |                           | ✔️  |  ✔️   |
+|                                 Create issue |            ✔️             | ✔️  |  ✔️   |
+|                              View all issues |                           | ✔️  |  ✔️   |
 |                        Become issue assignee |                           | ✔️  |  ✔️   |
-|                                 Add new user |                           |     |  ✔️   |
-|                       Change any user's role |                           |     |  ✔️   |
-|                 De-activate/re-activate user |                           |     |  ✔️   |
-|          Change any user's name and password |                           |     |  ✔️   |
+|                              Re-assign issue |                           | ✔️  |  ✔️   |
+|                    Add comment to all issues |            ✔️             | ✔️  |  ✔️   |
+|                      Subscribe to all issues |            ✔️             | ✔️  |  ✔️   |
+|                                 Alter schema |            ✔️             | ✔️  |  ✔️   |
+|                                  Change data |            ✔️             | ✔️  |  ✔️   |
+|                  Configure SQL Review Policy |                           | ✔️  |  ✔️   |
 | Manage version control system (VCS) provider |                           |     |  ✔️   |
+|                                  Change logo |                           |     |  ✔️   |
 
 ## Project roles
 
