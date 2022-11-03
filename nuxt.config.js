@@ -12,27 +12,14 @@ import generateSearchIndex from "./scripts/generateSearchIndex";
 
 const VERSION = fse.readFileSync("VERSION").toString();
 
-// unwantedRouteListForSitemap is the unwanted url(prefix) for sitemap.
-const unwantedRouteListForSitemap = ["/zh/docs", "/zh/changelog", "/zh/blog"];
-
 const generateSitemap = async (routes) => {
   const baseUrl = "https://www.bytebase.com";
   const routeXMLTagSet = new Set();
 
   for (const route of routes) {
-    let isUnwantedRoute = false;
-    for (const item of unwantedRouteListForSitemap) {
-      if (route.startsWith(item)) {
-        isUnwantedRoute = true;
-        break;
-      }
-    }
-
-    if (isUnwantedRoute === false) {
-      routeXMLTagSet.add(`<url>
+    routeXMLTagSet.add(`<url>
   <loc>${baseUrl}${route}</loc>
 </url>`);
-    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -91,15 +78,18 @@ async function getChineseBlogRouteList() {
   return list;
 }
 
-async function getDocsRouteList() {
+async function getContentRouteList() {
   const { $content } = require("@nuxt/content");
-  const list = await $content("docs", {
+  const list = await $content("", {
     deep: true,
   })
     .only(["path"])
     .fetch();
   const routeList = [];
   for (const item of list) {
+    if (item.path === "/README") {
+      continue;
+    }
     if (item.path.endsWith("_layout")) {
       continue;
     }
@@ -239,20 +229,20 @@ export default {
   },
 
   generate: {
-    // Generate the docs routes manually instead of using nuxt crawler, 
+    // Generate the docs routes manually instead of using nuxt crawler,
     // which may cause 404 errors with dynamic routes in production.
     // Reference: https://stackoverflow.com/a/73790178
     crawler: false,
     routes: async () => {
       const routeList = [];
-      const docsRouteList = await getDocsRouteList();
+      const contentRouteList = await getContentRouteList();
 
       return routeList
         .concat(glossaryRouteList())
         .concat(databaseFeatureRouteList())
         .concat(databaseVCSRouteList())
         .concat(webhookRouteList())
-        .concat(docsRouteList);
+        .concat(contentRouteList);
     },
   },
 
