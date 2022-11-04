@@ -34,7 +34,7 @@ After adding an instance and syncing the schema, click **Databases** on the navi
 
 ## Configure read-only connection
 
-To separate from admin connection, you can configure a read-only connection used by SQL Editor once an instance is added. This separation can be configured at the level of role access control level or replication instance level.
+To separate from admin connection, you can configure a read-only connection used by SQL Editor once an instance is added. This separation can be configured at the database user/role access control level or replication instance level.
 
 1. Create a new role with read-only access or a read-replica instance.
 1. Click **Create** on **Connection info**.
