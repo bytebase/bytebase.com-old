@@ -64,20 +64,6 @@ function webhookRouteList() {
   return list;
 }
 
-async function getChineseBlogRouteList() {
-  const { $content } = require("@nuxt/content");
-  const data = await $content("blog").fetch();
-
-  const list = [];
-  for (const item of data) {
-    if (item.tags.includes("Chinese")) {
-      list.push(`/blog/${item.slug}`);
-    }
-  }
-
-  return list;
-}
-
 async function getContentRouteList() {
   const { $content } = require("@nuxt/content");
   const list = await $content("", {
@@ -317,11 +303,8 @@ export default {
     // copy /static to ./dist/static in generation folder.
     generate: {
       async done(generator) {
-        // Generate `sitemap.xml` with chinese blogs.
-        const chineseBlogRouteList = await getChineseBlogRouteList();
-        generateSitemap(
-          Array.from(generator.generatedRoutes).concat(chineseBlogRouteList)
-        );
+        // Generate `sitemap.xml`.
+        generateSitemap(Array.from(generator.generatedRoutes));
 
         // Patch docs index objects of algolia.
         try {

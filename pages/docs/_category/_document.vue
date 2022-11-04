@@ -10,7 +10,9 @@ export default {
   layout: "content",
   async asyncData({ $content, params, error }) {
     const pathArgs = ["docs", params.category, params.document];
-    const document = await $content(...pathArgs)
+    const document = await $content(...pathArgs, {
+      deep: true,
+    })
       .fetch()
       .catch((err) => {
         console.error("Not found with path args", pathArgs, err);

@@ -18,7 +18,9 @@ function getContentOfNode(node) {
 
 async function generateSearchIndexForLayout(category, indexName) {
   const objects = [];
-  const layout = await $content("docs", category, "_layout").fetch();
+  const layout = await $content("docs", category, "_layout", {
+    deep: true,
+  }).fetch();
   const dataObject = {
     objectID: undefined,
     hierarchy: {
