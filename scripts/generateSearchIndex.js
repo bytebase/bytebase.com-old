@@ -119,7 +119,7 @@ async function generateSearchIndex() {
         const title = getContentOfNode(node);
         const dataObject = {
           objectID: path + contentSearchIndexList.length,
-          url: `/docs${path}#${node.props.id}`,
+          url: `${path}#${node.props.id}`,
           hierarchy: {},
           type: type,
           content: getContentOfNode(node),
@@ -142,7 +142,7 @@ async function generateSearchIndex() {
         } else {
           const dataObject = {
             objectID: path + contentSearchIndexList.length,
-            url: `/docs${path}`,
+            url: `${path}`,
             hierarchy: lastObject.hierarchy,
             type: "content",
             content: getContentOfNode(node),
