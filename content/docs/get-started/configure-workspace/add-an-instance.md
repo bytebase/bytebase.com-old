@@ -16,19 +16,27 @@ This document describes how to add an instance in order to synchronize databases
 ## Add an instance
 
 1. Click **Instances** on the top bar.
-2. Click **Add Instance**.
-3. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
-4. Enter connection info: **Username** and **Password**, and click **Test Connection**.
-5. If the instance is of very large size, uncheck **Sync schema now**, and click **Create**. You can see the new instance in the table.
-6. Choose one instance, scroll down, here you can see all the databases in that instance. If you unchecked **Sync schema now** in the previous step, now you can click **Sync now** to wait for all databases to appear.
+1. Click **Add Instance**.
+1. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
+1. Enter connection info: **Username** and **Password**, and click **Test Connection**.
+1. Choose one instance, scroll down and see all the databases for that instance. You can click **Sync now** to synchronize its databases.
 
 ![create-an-instance](/docs/get-started/configure-workspace/add-an-instance/add-an-instance.webp)
 
 <hint-block type="info">
 
 1. Environment can not be changed once the Instance has been created.
-2. The screenshot assumes you run Bytebase inside Docker and try to connect to a database instance on the same host. Thus it uses `host.docker.internal`. If Bytebase is not running inside Docker, you should supply the normal `127.0.0.1` to connect the instance on the same host [(detailed explanation)](https://stackoverflow.com/a/24326540/235983).
+1. The screenshot assumes you run Bytebase inside Docker and try to connect to a database instance on the same host. Thus it uses `host.docker.internal`. If Bytebase is not running inside Docker, you should supply the normal `127.0.0.1` to connect the instance on the same host [(detailed explanation)](https://stackoverflow.com/a/24326540/235983).
 
 </hint-block>
 
 After adding an instance and syncing the schema, click **Databases** on the navigation bar. You can find the table is still empty. It’s because you haven’t created any project yet. In Bytebase, only databases belong to a user project will show up on the Databases page.
+
+## Configure read-only connection
+
+To separate from admin connection, you can configure a read-only connection used by SQL Editor once an instance is added. This separation can be configured at the database user/role access control level or replication instance level.
+
+1. Create a new role with read-only access or a read-replica instance.
+1. Click **Create** on **Connection info**.
+1. Enter read-only connection info. If this is a read-replica instance, you need to enter its host and port information.
+1. Click **Update** to finish the configuration.
