@@ -161,11 +161,9 @@ export default defineComponent({
       const currentCategory = validDocsCategoryPathList.includes(category)
         ? category
         : "";
-      const layout = (await $content(
-        "docs",
-        currentCategory,
-        "_layout"
-      ).fetch()) as any as ContentDocument;
+      const layout = (await $content("docs", currentCategory, "_layout", {
+        deep: true,
+      }).fetch()) as any as ContentDocument;
       const nodes = layout.body.children
         .filter((n) => n.tag === "h2" || n.tag === "h3" || n.tag === "h4")
         .map((n) => {

@@ -226,7 +226,10 @@ export default defineComponent({
       const layout = (await $content(
         "docs",
         validDocsCategoryPathList.includes(category) ? category : "",
-        "_layout"
+        "_layout",
+        {
+          deep: true,
+        }
       ).fetch()) as any as ContentDocument;
 
       const nodes = layout.body.children

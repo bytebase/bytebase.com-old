@@ -30,7 +30,9 @@ export default defineComponent({
     const documentRef = ref();
 
     useFetch(async () => {
-      documentRef.value = (await $content(props.url)
+      documentRef.value = (await $content(props.url, {
+        deep: true,
+      })
         .limit(1)
         .fetch()) as any as ContentDocument;
     });
