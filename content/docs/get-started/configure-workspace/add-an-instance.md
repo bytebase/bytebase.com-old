@@ -19,7 +19,7 @@ This document describes how to add an instance in order to synchronize databases
 1. Click **Add Instance**.
 1. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
 1. Enter connection info: **Username** and **Password**, and click **Test Connection**.
-2. Choose one instance, scroll down and see all the databases for that instance. You can click **Sync now** to synchronize its databases.
+1. Choose one instance, scroll down and see all the databases for that instance. You can click **Sync now** to synchronize its databases.
 
 ![create-an-instance](/docs/get-started/configure-workspace/add-an-instance/add-an-instance.webp)
 
