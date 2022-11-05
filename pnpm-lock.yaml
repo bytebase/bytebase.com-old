@@ -50,7 +50,7 @@ specifiers:
   tiny-cookie: 2.3.2
   typescript: 4.8.3
   vue: 2.7.10
-  vue-gtag: 1.16.1
+  vue-gtag: 2.0.1
   vue-plausible: 1.3.2
   webpack: 5.74.0
   yaml-loader: 0.8.0
@@ -85,7 +85,7 @@ dependencies:
   tiny-cookie: 2.3.2
   typescript: 4.8.3
   vue: 2.7.10
-  vue-gtag: 1.16.1_vue@2.7.10
+  vue-gtag: 2.0.1_vue@2.7.10
   vue-plausible: 1.3.2
   webpack: 5.74.0
 
@@ -12321,10 +12321,10 @@ packages:
       - supports-color
     dev: true
 
-  /vue-gtag/1.16.1_vue@2.7.10:
-    resolution: {integrity: sha512-5vs0pSGxdqrfXqN1Qwt0ZFXG0iTYjRMu/saddc7QIC5yp+DKgjWQRpGYVa7Pq+KbThxwzzMfo0sGi7ISa6NowA==}
+  /vue-gtag/2.0.1_vue@2.7.10:
+    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
     peerDependencies:
-      vue: ^2.0.0
+      vue: ^3.0.0
     dependencies:
       vue: 2.7.10
     dev: false
