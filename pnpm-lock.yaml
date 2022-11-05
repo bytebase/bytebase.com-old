@@ -18,7 +18,7 @@ specifiers:
   '@tailwindcss/typography': 0.4.1
   '@types/dom-to-image': 2.6.4
   '@types/fs-extra': 9.0.13
-  '@types/lodash': 4.14.187
+  '@types/lodash': 4.14.188
   '@types/slug': 5.0.3
   '@types/tryghost__content-api': 1.3.11
   '@typescript-eslint/eslint-plugin': 5.38.1
@@ -97,7 +97,7 @@ devDependencies:
   '@nuxtjs/web-vitals': 0.1.10
   '@types/dom-to-image': 2.6.4
   '@types/fs-extra': 9.0.13
-  '@types/lodash': 4.14.187
+  '@types/lodash': 4.14.188
   '@types/slug': 5.0.3
   '@types/tryghost__content-api': 1.3.11
   '@typescript-eslint/eslint-plugin': 5.38.1_4jgaz6bkvacbqtnhthyjxk2op4
@@ -3527,8 +3527,8 @@ packages:
   /@types/less/3.0.2:
     resolution: {integrity: sha512-62vfe65cMSzYaWmpmhqCMMNl0khen89w57mByPi1OseGfcV/LV03fO8YVrNj7rFQsRWNJo650WWyh6m7p8vZmA==}
 
-  /@types/lodash/4.14.187:
-    resolution: {integrity: sha512-MrO/xLXCaUgZy3y96C/iOsaIqZSeupyTImKClHunL5GrmaiII2VwvWmLBu2hwa0Kp0sV19CsyjtrTc/Fx8rg/A==}
+  /@types/lodash/4.14.188:
+    resolution: {integrity: sha512-zmEmF5OIM3rb7SbLCFYoQhO4dGt2FRM9AMkxvA3LaADOF1n8in/zGJlWji9fmafLoNyz+FoL6FE0SLtGIArD7w==}
     dev: true
 
   /@types/mdast/3.0.10:
