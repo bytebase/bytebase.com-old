@@ -40,7 +40,7 @@ specifiers:
   fs-extra: 10.1.0
   lodash: 4.17.21
   nuxt: 2.15.8
-  pinia: 2.0.22
+  pinia: 2.0.23
   plausible-tracker: 0.3.8
   postcss: 8.4.18
   prettier: 2.7.1
@@ -62,7 +62,7 @@ dependencies:
   '@nuxt/vue-app': 2.15.8
   '@nuxtjs/composition-api': 0.33.1_cche4dkf5nk7uchm2m2hnrg5am
   '@nuxtjs/i18n': 7.3.0_vue@2.7.10
-  '@pinia/nuxt': 0.1.9_pinia@2.0.22+vue@2.7.10
+  '@pinia/nuxt': 0.1.9_pinia@2.0.23+vue@2.7.10
   '@segment/analytics-next': 1.43.0
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@2.2.19
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
@@ -76,7 +76,7 @@ dependencies:
   fs-extra: 10.1.0
   lodash: 4.17.21
   nuxt: 2.15.8_jymkt7cgmjbl6smi7bhxhojrkm
-  pinia: 2.0.22_2yy4t5siusazdnz3rivdy3cuzy
+  pinia: 2.0.23_2yy4t5siusazdnz3rivdy3cuzy
   plausible-tracker: 0.3.8
   prettier: 2.7.1
   remove-markdown: 0.5.0
@@ -2249,12 +2249,12 @@ packages:
       stack-trace: 0.0.10
     dev: false
 
-  /@pinia/nuxt/0.1.9_pinia@2.0.22+vue@2.7.10:
+  /@pinia/nuxt/0.1.9_pinia@2.0.23+vue@2.7.10:
     resolution: {integrity: sha512-5YmfBOxXHM5eA5pE4mq5opJnSmVYn2qYJ2ak01FrCww0esxfRLkmuu4emynu0Ar5eQ/DDz9wI3ukgRwAubXqmg==}
     peerDependencies:
       pinia: '>=2.0.14'
     dependencies:
-      pinia: 2.0.22_2yy4t5siusazdnz3rivdy3cuzy
+      pinia: 2.0.23_2yy4t5siusazdnz3rivdy3cuzy
       vue-demi: 0.13.11_vue@2.7.10
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -3944,8 +3944,8 @@ packages:
       - whiskers
     dev: false
 
-  /@vue/devtools-api/6.2.1:
-    resolution: {integrity: sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==}
+  /@vue/devtools-api/6.4.5:
+    resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
     dev: false
 
   /@vue/eslint-config-typescript/9.1.0_qsuozpi4wlxh6rbxm6nkeernrm:
@@ -9502,8 +9502,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /pinia/2.0.22_2yy4t5siusazdnz3rivdy3cuzy:
-    resolution: {integrity: sha512-u+b8/BC+tmvo3ACbYO2w5NfxHWFOjvvw9DQnyT0dW8aUMCPRQT5QnfZ5R5W2MzZBMTeZRMQI7V/QFbafmM9QHw==}
+  /pinia/2.0.23_2yy4t5siusazdnz3rivdy3cuzy:
+    resolution: {integrity: sha512-N15hFf4o5STrxpNrib1IEb1GOArvPYf1zPvQVRGOO1G1d74Ak0J0lVyalX/SmrzdT4Q0nlEFjbURsmBmIGUR5Q==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -9514,7 +9514,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@vue/devtools-api': 6.2.1
+      '@vue/devtools-api': 6.4.5
       typescript: 4.8.3
       vue: 2.7.10
       vue-demi: 0.13.11_vue@2.7.10
