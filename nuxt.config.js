@@ -361,4 +361,8 @@ export default {
       }
     },
   },
+
+  // Enable nuxt bridge explicitly.
+  // https://github.com/nuxt/bridge/issues/411
+  bridge: {},
 };
