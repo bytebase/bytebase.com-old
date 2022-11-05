@@ -15,7 +15,7 @@ specifiers:
   '@pinia/nuxt': 0.4.3
   '@segment/analytics-next': 1.45.0
   '@tailwindcss/aspect-ratio': 0.4.2
-  '@tailwindcss/typography': 0.4.1
+  '@tailwindcss/typography': 0.5.7
   '@types/dom-to-image': 2.6.4
   '@types/fs-extra': 9.0.13
   '@types/lodash': 4.14.188
@@ -65,7 +65,7 @@ dependencies:
   '@pinia/nuxt': 0.4.3_g4iikuymb6pidzv5sr4utozm4a
   '@segment/analytics-next': 1.45.0
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@2.2.19
-  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
+  '@tailwindcss/typography': 0.5.7_tailwindcss@2.2.19
   algoliasearch: 4.14.2
   autoprefixer: 10.4.13_postcss@8.4.18
   consola: 2.15.3
@@ -3407,15 +3407,15 @@ packages:
       tailwindcss: 2.2.19_lycaqaeny3mp632atgvyvqdgwe
     dev: false
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.19:
-    resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
+  /@tailwindcss/typography/0.5.7_tailwindcss@2.2.19:
+    resolution: {integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==}
     peerDependencies:
-      tailwindcss: '>=2.0.0'
+      tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
+      postcss-selector-parser: 6.0.10
       tailwindcss: 2.2.19_lycaqaeny3mp632atgvyvqdgwe
     dev: false
 
