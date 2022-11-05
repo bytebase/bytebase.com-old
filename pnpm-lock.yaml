@@ -13,7 +13,7 @@ specifiers:
   '@nuxtjs/tailwindcss': 4.2.1
   '@nuxtjs/web-vitals': 0.1.10
   '@pinia/nuxt': 0.4.3
-  '@segment/analytics-next': 1.43.0
+  '@segment/analytics-next': 1.45.0
   '@tailwindcss/aspect-ratio': 0.4.2
   '@tailwindcss/typography': 0.4.1
   '@types/dom-to-image': 2.6.4
@@ -63,7 +63,7 @@ dependencies:
   '@nuxtjs/composition-api': 0.33.1_cche4dkf5nk7uchm2m2hnrg5am
   '@nuxtjs/i18n': 7.3.0_vue@2.7.10
   '@pinia/nuxt': 0.4.3_2yy4t5siusazdnz3rivdy3cuzy
-  '@segment/analytics-next': 1.43.0
+  '@segment/analytics-next': 1.45.0
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@2.2.19
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   algoliasearch: 4.14.2
@@ -2329,17 +2329,19 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /@segment/analytics-core/1.0.1:
-    resolution: {integrity: sha512-aty64DNqhigwnKYWR5YFYV5t61x8KfVKM5w9M25Cpxoy8UPz5pnCNl7+leGHJlnIUO5ULQ2PH7Db+LF10apuYA==}
+  /@segment/analytics-core/1.1.0:
+    resolution: {integrity: sha512-Ccjt0cewP9QQU7g2p342QQ48mOaGlFNa9DTyQlEDoyRuInnVDcW6mPFS7RlNXEnmw3F2fi3YONNktn5Ja63xcw==}
     dependencies:
+      '@lukeed/uuid': 2.0.0
+      dset: 3.1.2
       tslib: 2.4.0
     dev: false
 
-  /@segment/analytics-next/1.43.0:
-    resolution: {integrity: sha512-jGj+9Iv3rKYmXqCkF0bPnXIOS1QasCvPOjSkjUkU6o4JlAtDQ0DuuKej5N3NOATD3F3ckeL4cwMcuSh+s+MD3A==}
+  /@segment/analytics-next/1.45.0:
+    resolution: {integrity: sha512-dgMo5epHmQnQjtEWSSmFmWWq4lsaxoKlhJcfcVJ91CNuCDnGCZyjubL9I6F7A+3AydIpptzJKo+b7zztC/2Lew==}
     dependencies:
       '@lukeed/uuid': 2.0.0
-      '@segment/analytics-core': 1.0.1
+      '@segment/analytics-core': 1.1.0
       '@segment/analytics.js-video-plugins': 0.2.1
       '@segment/facade': 3.4.9
       '@segment/tsub': 0.1.12

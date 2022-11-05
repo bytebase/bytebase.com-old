@@ -17,7 +17,7 @@
     "@nuxtjs/composition-api": "0.33.1",
     "@nuxtjs/i18n": "7.3.0",
     "@pinia/nuxt": "0.4.3",
-    "@segment/analytics-next": "1.43.0",
+    "@segment/analytics-next": "1.45.0",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.4.1",
     "algoliasearch": "4.14.2",
