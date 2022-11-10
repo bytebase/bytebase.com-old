@@ -2,8 +2,18 @@
 title: Tenant Database Management
 ---
 
-Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**.
+Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
 
+Typical scenarios of tenant databases are:
+
+- A Software as a Service (SaaS) provider provides separate database instances for each of its customers (aka. tenants) alongside their application deployments.
+- An internal platform team provides multi-region database deployments (e.g. US, EU), and have separate database instances in different deployment environments (e.g. Staging, Prod).
+
+It is often desired to apply schema changes to databases across all tenants since these databases are homogeneous, but in a staged rollout fashion (aka. canary deployment) to minimize the risk of breaking all deployments.
+
+You can easily manage your tenant databases through [tenant projects](/docs/tenant-database-management/tenant-project) in Bytebase, either for different customer deployments, or different stages for a single team.
+
+You should consider using tenant databases when there are multiple database instances alongside multiple deployments for the same application.
 For example, a software company offers medical record storage services for its customers, hospitals. Each hospital is considered as a tenant, and each tenant has to store their patient data in its own database for regulation or privacy purposes. This feature allows updating database schema for all tenants in a simple and consistent way. Other use cases include multi-location databases for supporting highly-available services where each location is a tenant.
 
 Let's take the hospital example to follow the steps below.
