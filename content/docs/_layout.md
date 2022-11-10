@@ -117,7 +117,9 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Troubleshoot](/vcs-integration/troubleshoot)
 
-## [Tenant Database Management](/tenant-database-management)
+## [Tenant Database Management](/tenant-database-management/overview)
+
+### [Tenant Project](/tenant-database-management/tenant-project)
 
 ## Disaster Recovery
 
