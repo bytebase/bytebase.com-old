@@ -2,7 +2,7 @@
 title: Tenant Database Management
 ---
 
-Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**, thses databases are often referred as [tenant databases](/docs/concepts/tenant-database).
+Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
 
 Typical scenarios of tenant databases are:
 
