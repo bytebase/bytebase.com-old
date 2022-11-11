@@ -16,7 +16,7 @@ Bytebase can synchronize one database schema to another database. To synchronize
 
 1. Select project
 
-2. Select schema
+2. Select schema version
 
    The schema should be one of the database's migration history. The default is the latest.
 
