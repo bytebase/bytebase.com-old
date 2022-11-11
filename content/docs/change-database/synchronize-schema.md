@@ -36,4 +36,4 @@ Bytebase can synchronize one database schema to another database. To synchronize
 
 5. Preview issue
 
-   With the generated DDL statement, you can preview and create an "Alter Schema" issue for the selected database.
+   With the generated DDL statements, you can preview and create an "Alter Schema" issue. This kicks off the [change workflow](/docs/change-database/change-workflow) for the applied database.
