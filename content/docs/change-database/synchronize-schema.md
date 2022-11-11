@@ -22,7 +22,7 @@ Bytebase can synchronize one database schema to another database. To synchronize
 
    <hint-block type="info">
 
-   In the Enterprise Plan, you can set a special schema version from migration history list.
+   In the Enterprise Plan, you can select an arbitrary schema version from the migration history. In other plans, you can only select the latest schema version.
 
    </hint-block>
 
