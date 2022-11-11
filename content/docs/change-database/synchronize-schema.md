@@ -8,7 +8,7 @@ This feature is in beta and only available for MySQL.
 
 </hint-block>
 
-Synchronize schema can identify the inconsistent database schema and get the DDL statements through the structure comparison function. The user can synchronize one database schema to another database.
+Bytebase can synchronize one database schema to another database. To synchronize the schema, Bytebase calculates the schema diff between the two databases and generates the required DDL statements (e.g. ALTER TABLE).
 
 ## How to use
 
