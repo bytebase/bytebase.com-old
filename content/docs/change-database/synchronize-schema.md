@@ -30,7 +30,7 @@ Bytebase can synchronize one database schema to another database. To synchronize
 
    Select the database that will be synchronized with the previously selected schema.
 
-4. The generated DDL statement
+4. Generated DDL statements
 
    Bytebase will show a schema diff between two databases and generate the DDL statements. You can further edit the generated content.
 
