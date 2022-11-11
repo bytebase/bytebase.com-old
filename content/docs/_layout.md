@@ -99,6 +99,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Migration History](/change-database/migration-history)
 
+### [Synchronize Schema](/change-database/synchronize-schema)
+
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
 ### [State-based Migration](/change-database/state-based-migration)
