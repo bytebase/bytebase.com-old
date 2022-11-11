@@ -28,7 +28,7 @@ Bytebase can synchronize one database schema to another database. To synchronize
 
 3. Apply to database
 
-   Select the database that will be synchronized with the previously selected schema.
+   Select the database that will be synchronized with the chosen schema version in the last step.
 
 4. Generated DDL statements
 
