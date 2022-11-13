@@ -185,7 +185,7 @@ While the authors of curl [may not agree](https://daniel.haxx.se/blog/2021/10/21
 
 One of the nice features of SQLite is that it keeps all the data on a single file. Even though Apple is trying to hide the concept of files from users on mobile devices, the entire computer world, especially the developer world, operates on files as the atomic unit. AWS oldest service S3, provides the hosted files; Code repos tracks version info per file.
 
-SQLite's slogan. Fast. Reliable. Choose any three.
+SQLite's slogan - Small. Fast. Reliable. Choose any three.
 
 ![_](/static/blog/database-review-2021-bytebase/sqlite.webp)
 
