@@ -63,6 +63,7 @@ Any user can create project. By default, the project creator is granted the `Pro
 
 |                    Project Permission | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
 | ------------------------------------: | :---------------: | :-----------: | :-----------: | :-------------: |
+|                   Sync sheet from VCS |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
 |                   Change project role |                   |      ✔️       |      ✔️       |       ✔️        |
 |                          Edit project |                   |      ✔️       |      ✔️       |       ✔️        |
 |                       Archive project |                   |      ✔️       |      ✔️       |       ✔️        |
@@ -91,6 +92,7 @@ User can save sheets from [SQL Editor](/docs/sql-editor/overview). A sheet alway
 
 | Permission | Creator | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
 | ---------: | :-----: | :---------------: | :-----------: | ------------- | --------------- |
+|       Star |   ✔️    |                   |               |               |                 |
 |       Read |   ✔️    |                   |               |               |                 |
 |      Write |   ✔️    |                   |               |               |                 |
 |     Delete |   ✔️    |                   |               |               |                 |
@@ -99,6 +101,7 @@ User can save sheets from [SQL Editor](/docs/sql-editor/overview). A sheet alway
 
 | Permission | Creator | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
 | ---------: | :-----: | :---------------: | :-----------: | :-----------: | :-------------: |
+|       Star |   ✔️    |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
 |       Read |   ✔️    |        ✔️         |      ✔️       |      ✔️       |       ✔️        |
 |      Write |   ✔️    |                   |      ✔️       |      ✔️       |       ✔️        |
 |     Delete |   ✔️    |                   |      ✔️       |      ✔️       |       ✔️        |
@@ -107,6 +110,7 @@ User can save sheets from [SQL Editor](/docs/sql-editor/overview). A sheet alway
 
 | Permission | Creator | Project Developer | Project Owner | Others |
 | ---------: | :-----: | :---------------: | :-----------: | :----: |
+|       Star |   ✔️    |        ✔️         |      ✔️       |   ✔️   |
 |       Read |   ✔️    |        ✔️         |      ✔️       |   ✔️   |
 |      Write |   ✔️    |                   |      ✔️       |        |
 |     Delete |   ✔️    |                   |      ✔️       |        |
