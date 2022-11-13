@@ -115,13 +115,7 @@ spec:
 
 3. Open a browser and visit [localhost:8080](http://localhost:8080), you should see Bytebase.
 
-<hint-block type="info">
-
-For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
-
-</hint-block>
-
-## Upgrade
+### Upgrade
 
 When a new Bytebase release is published, you can change the image version in the yaml file
 
@@ -140,6 +134,55 @@ kubectl rollout restart deployment/bytebase
 ```
 
 Kubernetes will rolling restart the pods of the deployment. Because we set `imagePullPolicy: Always`, the new pods will always use the latest image digest.
+
+## Deploy to Kubernetes with Helm
+
+### Installing the Chart
+
+```bash
+helm -n <YOUR_NAMESPACE> \
+--set "bytebase.option.port"={PORT} \
+--set "bytebase.option.external-url"={EXTERNAL_URL} \
+--set "bytebase.option.pg"={PGDSN} \
+--set "bytebase.version"={VERSION} \
+install <RELEASE_NAME> bytebase-repo/bytebase
+```
+
+For example:
+
+```bash
+helm -n bytebase \
+--set "bytebase.option.port"=443 \
+--set "bytebase.option.external-url"="https://bytebase.com" \
+--set "bytebase.option.pg"="postgresql://bytebase:bytebase@database.bytebase.ap-east-1.rds.amazonaws.com/bytebase" \
+--set "bytebase.version"=1.7.0 \
+install bytebase-release bytebase-repo/bytebase
+```
+
+### Uninstalling the Chart
+
+```bash
+helm delete --namespace <YOUR_NAMESPACE> <RELEASE_NAME>
+```
+
+### Upgrade Bytebase Version/Configuration
+
+Use `helm upgrade` command to upgrade the bytebase version or configuration.
+
+```bash
+helm -n <YOUR_NAMESPACE> \
+--set "bytebase.option.port"={NEW_PORT} \
+--set "bytebase.option.external-url"={NEW_EXTERNAL_URL} \
+--set "bytebase.option.pg"={NEW_PGDSN} \
+--set "bytebase.version"={NEW_VERSION} \
+upgrade bytebase-release bytebase-repo/bytebase
+```
+
+<hint-block type="info">
+
+For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
+
+</hint-block>
 
 ## Persistent Volume
 
