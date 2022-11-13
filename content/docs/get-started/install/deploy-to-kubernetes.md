@@ -153,7 +153,7 @@ For example:
 ```bash
 helm -n bytebase \
 --set "bytebase.option.port"=443 \
---set "bytebase.option.external-url"="https://bytebase.com" \
+--set "bytebase.option.external-url"="https://bytebase.example.com" \
 --set "bytebase.option.pg"="postgresql://bytebase:bytebase@database.bytebase.ap-east-1.rds.amazonaws.com/bytebase" \
 --set "bytebase.version"=1.7.0 \
 install bytebase-release bytebase-repo/bytebase
