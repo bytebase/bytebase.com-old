@@ -137,6 +137,14 @@ Kubernetes will rolling restart the pods of the deployment. Because we set `imag
 
 ## Deploy to Kubernetes with Helm
 
+### 
+
+<hint-block type="info">
+
+For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
+
+</hint-block>
+
 ### Installing the Chart
 
 ```bash
@@ -177,12 +185,6 @@ helm -n <YOUR_NAMESPACE> \
 --set "bytebase.version"={NEW_VERSION} \
 upgrade bytebase-release bytebase-repo/bytebase
 ```
-
-<hint-block type="info">
-
-For production setup, you should [configure a proper --external-url](/docs/get-started/install/external-url).
-
-</hint-block>
 
 ## Persistent Volume
 
