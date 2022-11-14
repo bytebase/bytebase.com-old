@@ -8,7 +8,7 @@ This feature is in beta and only available for MySQL.
 
 </hint-block>
 
-Bytebase can synchronize one database schema to another database. To synchronize the schema, Bytebase calculates the schema diff between the two databases and generates the required DDL statements (e.g. ALTER TABLE).
+Bytebase supports synchronizing a specified schema version of one database to another. To provide a better user experience, Bytebase displays the schema differences between the two selected databases and generates the suggested DDL statements (e.g. ALTER TABLE).
 
 ## How to use
 
