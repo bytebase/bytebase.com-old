@@ -175,6 +175,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Database Webhook](/administration/webhook-integration/database-webhook)
 
+#### [External Approval](/administration/webhook-integration/external-approval)
+
 ### [Archive](/administration/archive)
 
 ### [Backup Data Directory](/administration/backup-data-directory)
