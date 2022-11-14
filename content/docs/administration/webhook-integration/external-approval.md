@@ -9,7 +9,7 @@ Users should create a custom App for obtaining the Application ID and Secret.
 
 1. Create a Custom App at [Feishu Open Platform](https://open.feishu.cn/app).
 1. Fill in App Name and Description such as Bytebase Approval.
-1. Add [Bytebase icon](https://www.bytebase.com/_nuxt/img/logo-icon.3e0dcc1.svg) in the General info section of Credentials & Basic Info page. You can get the App ID and App Secret on the same page.
+1. Add [Bytebase icon](https://www.bytebase.com/brand) in the General info section of Credentials & Basic Info page. You can get the App ID and App Secret on the same page.
 1. In the Manage scopes section of Permissions & Scopes page, add the following scopes.
     - approval:approval (View, create, update, and delete info of Approval app).
     - approval:approval:readonly (Access Approval).
