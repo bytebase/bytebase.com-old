@@ -137,7 +137,7 @@ Kubernetes will rolling restart the pods of the deployment. Because we set `imag
 
 ## Deploy to Kubernetes with Helm
 
-### 
+### Production Setup External URL
 
 <hint-block type="info">
 
