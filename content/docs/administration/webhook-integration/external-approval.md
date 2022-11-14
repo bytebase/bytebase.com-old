@@ -15,7 +15,7 @@ Users should create a custom App for obtaining the Application ID and Secret.
     - approval:approval:readonly (Access Approval).
     - contact:user.id:readonly (Obtain user ID via email or mobile number).
 1. In the Version Management & Release page of App Release, create a Version. You can use 1.0.0 for App version and set availability to all members.
-1. Let your organization administrator to approve the custom application in [Workspace / App review](https://bytebase.feishu.cn/admin/appCenter/audit).
+1. Ask your organization administrator to approve the custom application in [Workspace / App review](https://bytebase.feishu.cn/admin/appCenter/audit).
 
 ## Setup
 
