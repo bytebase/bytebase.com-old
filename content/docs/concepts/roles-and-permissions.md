@@ -114,3 +114,17 @@ User can save sheets from [SQL Editor](/docs/sql-editor/overview). A sheet alway
 |       Read |   ✔️    |        ✔️         |      ✔️       |   ✔️   |
 |      Write |   ✔️    |                   |      ✔️       |        |
 |     Delete |   ✔️    |                   |      ✔️       |        |
+
+## Issue permissions
+
+|          Issue Permission | Assignee | Creator | Project Developer | Project Owner | Workspace DBA | Workspace Owner |
+| ------------------------: | :------: | :-----: | :---------------: | :-----------: | ------------- | --------------- |
+|              Create issue |   N/A    |   N/A   |        ✔️         |      ✔️       | ✔️            | ✔️              |
+|           Re-assign issue |    ✔️    |   ✔️    |                   |               | ✔️            | ✔️              |
+|       Change issue status |    ✔️    |         |                   |   Depends\*   | ✔️            | ✔️              |
+| Edit name and description |    ✔️    |   ✔️    |                   |               | ✔️            | ✔️              |
+|        Edit SQL Statement |          |   ✔️    |                   |               |               |                 |
+|     Subscribe/Unsubscribe |    ✔️    |   ✔️    |        ✔️         |      ✔️       | ✔️            | ✔️              |
+|               Add comment |    ✔️    |   ✔️    |        ✔️         |      ✔️       | ✔️            | ✔️              |
+
+\* `Project Owner` can change issue status when the current active [Environment Approval Policy](/docs/administration/environment-policy/approval-policy) is set to _Require manual approval_.
