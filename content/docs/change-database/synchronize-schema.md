@@ -14,26 +14,24 @@ Bytebase supports synchronizing a specified schema version of one database to an
 
 ![sync-schema-dialog](/static/docs/change-database/synchronize-schema/sync-schema-dialog.webp)
 
-1. Select project
+### Step 1 - Select project
 
-2. Select schema version
+### Step 2 - Select schema version
 
-   The schema version is selected from the database's migration history.
+The schema version is selected from the database's migration history.
 
-   <hint-block type="info">
+<hint-block type="info">
 
-   In the Enterprise Plan, you can select an arbitrary schema version from the migration history. In other plans, you can only select the latest schema version.
+In the Enterprise Plan, you can select an arbitrary schema version from the migration history. In other plans, you can only select the latest schema version.
 
-   </hint-block>
+</hint-block>
 
-3. Apply to database
+### Step 3 - Apply to database
 
-   Select the database that will be synchronized with the chosen schema version in the last step.
+Select the database that will be synchronized with the chosen schema version in the previous step.
 
-4. Generated DDL statements
+After you have selected a schema and database, Bytebase will show a schema diff between two databases and generate the DDL statements. And you can further edit the generated content.
 
-   Bytebase will show a schema diff between two databases and generate the DDL statements. You can further edit the generated content.
+### Step 4 - Preview issue
 
-5. Preview issue
-
-   With the generated DDL statements, you can preview and create an "Alter Schema" issue. This kicks off the [change workflow](/docs/change-database/change-workflow) for the applied database.
+With the generated DDL statements, you can preview and create an "Alter Schema" issue. This kicks off the [change workflow](/docs/change-database/change-workflow) for the applied database.
