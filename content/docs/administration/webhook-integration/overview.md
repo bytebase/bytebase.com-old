@@ -19,3 +19,6 @@ For example, **[Better Uptime Heartbeats](https://docs.betteruptime.com/monitori
 ![Integrate with Better Uptime Heartbeats](/static/docs/webhook-integrate-example.png)
 
 Read [Database Webhook](/docs/administration/webhook-integration/database-webhook) in detail.
+
+## External approval
+Alongside project webhook notifications, users can configure issues to be approved by external systems by following [External Approval](/docs/administration/webhook-integration/external-approval).
