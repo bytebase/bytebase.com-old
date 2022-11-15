@@ -3,12 +3,12 @@ title: The SQL Review Tool for Developers
 author: Changyu
 published_at: 2022/10/28 18:00
 feature_image: /static/blog/sql-review-tool-for-devs/dev-fighting-dba.webp
-tags: Announcement
+tags: Education
 featured: true
 description: Reviewing SQL can be somewhat tedious, yet is essential to keep your database fleet reliable. At Bytebase, we are building a developer-first SQL review tool to empower the DevOps system.
 ---
 
-Treat SQL as code "([Why](https://blog.devgenius.io/why-google-treats-sql-like-code-and-you-should-too-53f97925037e)?", you may ask), which means all the reasons why we review other codes need to apply to SQL scripts. They interact straight with databases, and databases are too important. No matter how database vendors promise their products are stable and robust, databases are still pretty fragile. Even if we disregard the accidental "DROP TABLE" fiasco, ordinary queries like "SELECT FROM" can also overwhelm a database and bring it down. Let’s face it: databases are delicate, yet very few users understand how to treat them properly - meaning we should discipline the users’ behavior to some degree.
+Treat SQL as code ("[Why](https://blog.devgenius.io/why-google-treats-sql-like-code-and-you-should-too-53f97925037e)?", you may ask), which means all the reasons why we review other codes need to apply to SQL scripts. They interact straight with databases, and databases are too important. No matter how database vendors promise their products are stable and robust, databases are still pretty fragile. Even if we disregard the accidental "DROP TABLE" fiasco, ordinary queries like "SELECT FROM" can also overwhelm a database and bring it down. Let’s face it: databases are delicate, yet very few users understand how to treat them properly - meaning we should discipline the users’ behavior to some degree.
 
 Here’s where SQL review comes in. It is the practice of reviewing DDL and DML statements before applying them to the database. It is one of the most critical aspects of database schema management. In the past, DBAs were in charge of the database. They know the database best, and thus should be the ones reviewing the SQL. This is reasonable, but there is a contradiction: developers (database users) cannot understand the many restrictions and want the most freedom. At the same time, DBAs insist that stability triumphs over everything.
 
