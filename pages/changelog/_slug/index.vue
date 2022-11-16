@@ -51,7 +51,7 @@ export default {
     const data = await $content("changelog", params.slug, {
       deep: true,
     }).fetch();
-    let author: any = {
+    const author: any = {
       name: data.author,
     };
     const teammate = getTeammateByName(author.name) as any;
@@ -79,6 +79,8 @@ export default {
   },
   head() {
     const changelog = (this as any).changelog;
+    const route = (this as any).$route;
+    const link = process.env.hostname + route.fullPath;
     let featureImage = changelog.featureImage;
     if (startsWith(featureImage, "/")) {
       featureImage = process.env.hostname + featureImage;
@@ -111,6 +113,11 @@ export default {
           hid: "og:image",
           name: "og:image",
           content: featureImage,
+        },
+        {
+          hid: "og:url",
+          name: "og:url",
+          content: link,
         },
       ],
     };

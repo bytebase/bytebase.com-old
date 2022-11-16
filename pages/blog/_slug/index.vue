@@ -66,7 +66,7 @@ export default {
     const data = await $content("blog", params.slug, {
       deep: true,
     }).fetch();
-    let author: any = {
+    const author: any = {
       name: data.author,
     };
     const teammate = getTeammateByName(author.name) as any;
@@ -94,6 +94,8 @@ export default {
   },
   head() {
     const blog = (this as any).blog;
+    const route = (this as any).$route;
+    const link = process.env.hostname + route.fullPath;
     let featureImage = blog.featureImage;
     if (startsWith(featureImage, "/")) {
       featureImage = process.env.hostname + featureImage;
@@ -126,6 +128,11 @@ export default {
           hid: "og:image",
           name: "og:image",
           content: featureImage,
+        },
+        {
+          hid: "og:url",
+          name: "og:url",
+          content: link,
         },
       ],
     };
