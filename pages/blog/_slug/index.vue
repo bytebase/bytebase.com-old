@@ -106,32 +106,32 @@ export default {
       meta: [
         {
           hid: "description",
-          name: "description",
+          property: "description",
           content: blog.description,
         },
         {
           hid: "twitter:card",
-          name: "twitter:card",
+          property: "twitter:card",
           content: "summary_large_image",
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: blog.title,
         },
         {
           hid: "og:description",
-          name: "og:description",
+          property: "og:description",
           content: blog.description,
         },
         {
           hid: "og:image",
-          name: "og:image",
+          property: "og:image",
           content: featureImage,
         },
         {
           hid: "og:url",
-          name: "og:url",
+          property: "og:url",
           content: link,
         },
       ],
