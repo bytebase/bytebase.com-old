@@ -113,6 +113,12 @@ export default {
           content: featureImage,
         },
         {
+          hid: "type",
+          name: "og:type",
+          property: "og:type",
+          content: "article",
+        },
+        {
           hid: "url",
           property: "og:url",
           content: link,

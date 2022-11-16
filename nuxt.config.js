@@ -126,7 +126,6 @@ export default {
     title: "Bytebase | Database DevOps",
     htmlAttrs: {
       lang: "en",
-      prefix: "og: http://ogp.me/ns#",
     },
     meta: [
       { charset: "utf-8" },
