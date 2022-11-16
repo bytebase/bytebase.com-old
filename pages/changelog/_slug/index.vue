@@ -90,27 +90,25 @@ export default {
       title: changelog.title,
       meta: [
         {
-          hid: "description",
-          property: "description",
-          content: changelog.description,
-        },
-        {
           hid: "twitter:card",
-          property: "twitter:card",
+          name: "twitter:card",
           content: "summary_large_image",
         },
         {
           hid: "og:title",
+          name: "title",
           property: "og:title",
           content: changelog.title,
         },
         {
-          hid: "og:description",
+          hid: "description",
+          name: "description",
           property: "og:description",
           content: changelog.description,
         },
         {
           hid: "og:image",
+          name: "image",
           property: "og:image",
           content: featureImage,
         },
