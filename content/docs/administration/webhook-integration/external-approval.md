@@ -21,4 +21,4 @@ Users should create a custom App for obtaining the Application ID and Secret.
 
 1. Go to Bytebase Settings, click on IM Integration.
 1. Fill in Application ID and Secret from the previous section. Click on Enable and Create button.
-1. It's all set. Remember, the registered Bytebase account must have an identical email at Feishu to receive Approval requests.
+1. It's all set. **Remember**, the registered Bytebase account must have an identical email at Feishu to receive Approval requests.
