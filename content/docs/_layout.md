@@ -149,6 +149,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Share Sheet with Teammates](/sql-editor/share-sheet-with-teammates)
 
+### [Admin Mode](/sql-editor/admin-mode)
+
 ## Anomaly Detection
 
 ### [Drift Detection](/anomaly-detection/drift-detection)
