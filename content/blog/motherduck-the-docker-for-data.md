@@ -73,8 +73,8 @@ MotherDuck's idea is novel, also the timing is perfect. The data analytics space
 
 ## Parting Thought
 
-People exchanges the data with Snowflake alike for the processing power. With MotherDuck, they can acquire similar processing power while still controlling the data themselves. They can keep the data wherever they want, share it with whoever they like, and use it whenever they need.
+People give away the data to Snowflake alike for the processing power. With MotherDuck, they can acquire similar processing power while still controlling the data themselves. They can keep the data wherever they want, share it with whoever they like, and use it whenever they need.
 
-While Docker has become the runtime and standard to make applications universally accessible, MotherDuck could become the runtime and standard to make data universally accessible. And the team surely knows [the Docker company's story](https://www.infoworld.com/article/3632142/how-docker-broke-in-half.html) and can dodge the bullets this time.
+**While Docker has become the runtime and standard to make applications universally accessible, MotherDuck could become the runtime and standard to make data universally accessible.** The team surely knows [the Docker company's story](https://www.infoworld.com/article/3632142/how-docker-broke-in-half.html) and can dodge the bullets this time.
 
 Good luck and just wondering would `Ducker` be a better name :)
