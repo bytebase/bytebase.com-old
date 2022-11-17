@@ -4,9 +4,15 @@ title: External Approval
 
 Users can configure Bytebase issues to be approved by external systems. Feishu (Lark) is the only supported external systems at the moment, but stay tuned for more.
 
-Users should create a custom App, granting it necessary permissions and obtaining the Application ID and Secret.
+<hint-block type="info">
 
-## Setup Feishu Custom App 
+Bytebase will approve the **whole stage of tasks** instead of a single task if it is approved on the IM side.
+
+</hint-block>
+
+## Setup Feishu Custom App
+
+Users should create a custom App, granting it necessary permissions and obtaining the Application ID and Secret.
 
 ### Step 1 - Create a Custom App
 
@@ -53,6 +59,6 @@ Get the **App ID** and **App Secret** in the General info section of Credentials
 
 <hint-block type="warning">
 
-The registered Bytebase account must have an <b>identical</b> email at Feishu to receive Approval requests.
+The registered Bytebase account must have an **identical** email at Feishu to receive Approval requests.
 
 </hint-block>
