@@ -80,6 +80,7 @@ async function getContentRouteList() {
       continue;
     }
     routeList.push(item.path);
+    routeList.push(`/zh${item.path}`);
   }
   return routeList;
 }
