@@ -8,7 +8,7 @@ You must configure the correct --external-url before configuring [VCS integratio
 
 </hint-block>
 
-When running Bytebase in production, you should not make the node that's running the Bytebase server directly accessible to the public internet. Instead, you should set up an internet gateway such as Ngnix or Caddy by configuring [--external-url](/docs/reference/command-line#--external-url-string) to the endpoint exposed by the gateway.
+When running Bytebase in production, you should not make the node that's running the Bytebase server directly accessible to the public internet. Instead, you should set up an internet gateway such as Nginx or Caddy by configuring [--external-url](/docs/reference/command-line#--external-url-string) to the endpoint exposed by the gateway.
 
 <hint-block type="info">
 

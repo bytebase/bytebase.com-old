@@ -1,5 +1,5 @@
 ---
-title: Database Review 2021
+title: Database Review 2021 and 2022 Prediction
 author: Tianzhou
 published_at: 2022/02/01 10:00:00
 feature_image: /static/blog/database-review-2021-bytebase/uncharted-waters.webp
@@ -31,7 +31,7 @@ The AI hype is cooling down, the blockchain opportunists jump from Bitcoin to th
 
 ## Proven Technology
 
-There has been underlying technology breakthrough in the database industry in these two years. After a round of NoSQL fuss 10 years ago, we have returned to the relational model with SQL as the interface. The only notable addition is the distributed architecture inspired by Google Spanner.
+There has been no underlying technology breakthrough in the database industry in these two years. After a round of NoSQL fuss 10 years ago, we have returned to the relational model with SQL as the interface. The only notable addition is the distributed architecture inspired by Google Spanner.
 
 Although the concept of autonomous/self-driving DB has been around for many years, the database still needs DBAsit. Query and Index Optimization, the most suitable scenario for AI, has not been applied in the mainstream database since [Google's 2018 paper](https://research.google/pubs/pub46518/).
 
@@ -134,9 +134,9 @@ In fact, PG has won the DB-Engine DBMS of the year award 3 times in the last 5 y
 1. Licensing concern after Oracle acquires MySQL. Personally, I think Oracle has made a lot of important improvements to MySQL after the acquisition, but licensing is a real risk, especially if the other side is Oracle.
 2. PG has the inherent architecture advantage, its advanced/extended features are much ahead of MySQL. For example, although MySQL also has Geospatial, JSON functionality, it is still quite inferior to PG's PostGIS, JSON-B.
 3. PG has a much more sophisticated query engine than MySQL. Not long ago, a former MySQL query engine engineer [ranted](https://blog.sesse.net/blog/tech/2021-12-05-16-41_leaving_mysql.html) before leaving the MySQL team. In fact, PG can have above average AP capabilities with a little tuning (many OLAP products like AWS Redshift are based on PostgreSQL).
-4. The logical isolation of PG is at the database level, where a PG instance can create many databases and then assign each database to a different tenant. Although MySQL instances can also create multiple databases, because the databases are connected by default, this makes it necessary to assign a separate MySQL instance to each tenant. In single-tenant mode, MySQL's ease of use is superior, but in today's SaaS, multi-tenant service scenario, PG has a big advantage. That's why PG has been adopted by Heroku early on, to the new Heroku-like render, and Supabase. They can offer a low or even free database plan because they can serve many users with a single PG instance.
+4. The logical isolation of PG is at the database level, where a PG instance can create many databases and then assign each database to a different tenant. Although MySQL instances can also create multiple databases, because the databases are connected by default, this makes it necessary to assign a separate MySQL instance to each tenant. In single-tenant mode, MySQL's ease of use is superior, but in today's SaaS, multi-tenant service scenario, PG has a big advantage. That's why PG has been adopted by [Heroku](https://www.heroku.com) early on, to the new Heroku-like [render](https://render.com), and [Supabase](https://supabase.com). They can offer a low or even free database plan because they can serve many users with a single PG instance.
 
-PS is batteries included. When a company chooses PG, it gets a database with OLTP, OLAP, Document (JSON-B), FTS (tsvector/tsquery), Time-series (TimescaleDB), Geospatial (PostGIS), Multi-tenancy capabilities (batteries included). To summarize it in a simple formula:
+PG is batteries included. When a company chooses PG, it gets a database with OLTP, OLAP, Document (JSON-B), FTS (tsvector/tsquery), Time-series (TimescaleDB), Geospatial (PostGIS), Multi-tenancy capabilities (batteries included). To summarize it in a simple formula:
 
 PostgreSQL = MySQL + Poor man version of (ClickHouse + MongoDB\* + Elasticsearch + InfluxDB) + Geospatial + Multi-tenancy
 
@@ -185,7 +185,7 @@ While the authors of curl [may not agree](https://daniel.haxx.se/blog/2021/10/21
 
 One of the nice features of SQLite is that it keeps all the data on a single file. Even though Apple is trying to hide the concept of files from users on mobile devices, the entire computer world, especially the developer world, operates on files as the atomic unit. AWS oldest service S3, provides the hosted files; Code repos tracks version info per file.
 
-SQLite's slogan. Fast. Reliable. Choose any three.
+SQLite's slogan - Small. Fast. Reliable. Choose any three.
 
 ![_](/static/blog/database-review-2021-bytebase/sqlite.webp)
 
