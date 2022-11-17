@@ -54,7 +54,7 @@ statement: |
 
 Please be noted that the database name in the file path ("store") is now completely ignored.
 
-Both SQL files and YAML manifests can co-exist and be used on per-migration basis depending on your needs. Your VCS repository for storing migartion scripts could look like follows after several migrations:
+Both SQL files and YAML manifests can co-exist and be used on per-migration basis depending on your needs. After several migrations, your VCS repository for storing migration scripts could look like follows:
 
 ```
 bytebase/Staging/store##0001##ddl##add-company-table.sql
