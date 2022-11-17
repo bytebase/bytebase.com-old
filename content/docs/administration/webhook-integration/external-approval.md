@@ -6,7 +6,7 @@ Users can configure Bytebase issues to be approved by external systems. Feishu (
 
 <hint-block type="info">
 
-Bytebase will approve the whole **stage** of tasks if it is approved on the IM side.
+Bytebase will approve the **whole stage of tasks** instead of a single task if it is approved on the IM side.
 
 </hint-block>
 
