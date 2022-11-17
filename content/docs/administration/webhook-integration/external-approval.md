@@ -46,9 +46,10 @@ Get the **App ID** and **App Secret** in the General info section of Credentials
 
 ## Setup Bytebase
 
+![external approval bytebase setting page](/static/docs/external-approval-bytebase-setting.webp)
+
 1. Go to Bytebase Settings, click on IM Integration.
 1. Fill in Application ID and Secret from the previous section. Click on Enable and Create button.
-1. It's all set.
 
 <hint-block type="warning">
 
