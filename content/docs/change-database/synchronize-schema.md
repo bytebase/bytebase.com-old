@@ -32,7 +32,7 @@ In the Enterprise Plan, you can select an arbitrary schema version from the migr
 
 Select the database that will be synchronized with the chosen schema version in the previous step.
 
-After you have selected a schema and database, Bytebase will show a schema diff between two databases and generate the DDL statements. And you can further edit the generated content.
+After you have selected a schema and database, Bytebase will show a schema diff between the two databases and generate the DDL statements. And you can further edit the generated content.
 
 ### Step 4 - Preview issue
 
