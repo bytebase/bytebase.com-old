@@ -43,6 +43,7 @@ By default, the first registered user is granted the `Owner` role, all following
 |                                  Change data |            ✔️             | ✔️  |  ✔️   |
 |                  Configure SQL Review Policy |                           | ✔️  |  ✔️   |
 | Manage version control system (VCS) provider |                           |     |  ✔️   |
+|                               Manage IM integration |                           |     |  ✔️   |
 |                                  Change logo |                           |     |  ✔️   |
 
 ## Project roles
