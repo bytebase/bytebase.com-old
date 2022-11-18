@@ -26,7 +26,7 @@ Fill in App Name and Description such as Bytebase Approval.
 
 ![Bytebase logo icon](/static/docs/logo-icon.svg)
 
-In the General info section of Credentials & Basic Info page, add [Bytebase icon](https://www.bytebase.com/brand).
+In the General info section of Credentials & Basic Info page, add the above Bytebase icon.
 
 ![feishu app upload icon](/static/docs/external-approval-feishu-icon.webp)
 
