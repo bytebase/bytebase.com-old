@@ -14,7 +14,7 @@ Bytebase will approve the **whole stage of tasks** instead of a single task if i
 
 Users should create a custom App, granting it necessary permissions, enabling it and obtaining the Application ID and Secret.
 
-### Step 1 - Create a Custom App
+### Step 1 - Create a custom app
 
 Create a Custom App at [Feishu Open Platform](https://open.feishu.cn/app).
 
@@ -22,7 +22,7 @@ Fill in App Name and Description such as Bytebase Approval.
 
 ![feishu app creation page](/static/docs/external-approval-feishu-create.webp)
 
-### Step 2 - Upload Icon
+### Step 2 - Upload icon
 
 ![Bytebase logo icon](/static/docs/logo-icon.svg)
 
