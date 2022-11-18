@@ -24,6 +24,8 @@ Fill in App Name and Description such as Bytebase Approval.
 
 ### Step 2 - Upload Icon
 
+![Bytebase logo icon](/static/docs/logo-icon.svg)
+
 In the General info section of Credentials & Basic Info page, add [Bytebase icon](https://www.bytebase.com/brand).
 
 ![feishu app upload icon](/static/docs/external-approval-feishu-icon.webp)
@@ -64,6 +66,7 @@ Move to the next step when you see the app status is **"Enabled"**.
 ### Step 5 - Obtain credentials
 
 Get the **App ID** and **App Secret** in the General info section of Credentials & Basic Info page.
+
 ![feishu app credential page](/static/docs/external-approval-feishu-credential.webp)
 
 ## Setup Bytebase
