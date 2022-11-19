@@ -1,11 +1,34 @@
 ---
-title: Roles and Permissions
+title: Roles and Permissions (RBAC)
 ---
 
-Bytebase has two disjoint set of roles:
+<hint-block type="info">
 
-1. Workspace roles: `Owner`, `DBA`, `Developer`
-2. Project roles: `Owner`, `Developer`
+RBAC is only available in Team and Enterprise plan. In Free plan, Bytebase does not enforce RBAC and every user has full permissions.
+
+</hint-block>
+
+## Overview
+
+Bytebase employs RBAC (Role-Based-Access-Control) and provides two role sets at the workspace and project level:
+
+- Workspace roles: `Owner`, `DBA`, `Developer`
+- Project roles: `Owner`, `Developer`
+
+The workspace role maps to the role in an engineering organization, while the project level role maps to the role in a specific team or project. Every user is assigned a workspace role, and if a particular user is involved in a particular project, then she will also be assigned a project role accordingly.
+
+![org-role-mapping](/static/docs/rbac/org-role-mapping.webp)
+
+Above diagram describes the mapping between an engineering org and the corresponding roles in the Bytebase workspace. Note, a particular user can be assigned multiple roles as well:
+
+- A user can only be assigned one of the workspace roles.
+- In a particular project, a user can be assigned one of the project roles, while a user can be assigned different project roles in the different projects.
+
+Real-world scenarios:
+
+- Engineering orgs may not establish a dedicated DBA or platform engineering group. In such case, usaually the application engineering group head and the tech leads will wear those hats. Say a user named Alice can be a `Workspace DBA` and a `Project Owner` for Project Apollo at the same time.
+
+- An application developer could be involved in multiple projects. In such case, that engineer would also be assigned project roles in different projects respectively. Say a user named Bob can be a `Workspace Developer`, a `Project Owner` for Project Apollo and a `Project Developer` for Project Mars at the same time.
 
 ## Workspace roles
 
@@ -15,7 +38,7 @@ By default, the first registered user is granted the `Owner` role, all following
 | -------------------------------------------: | :-----------------------: | :-: | :---: |
 |                 Change own name and password |            ✔️             | ✔️  |  ✔️   |
 |                                 Add new user |                           |     |  ✔️   |
-|                             View all members |            ✔️             | ✔️  |  ✔️   |
+|                               View all users |            ✔️             | ✔️  |  ✔️   |
 |                       Change any user's role |                           |     |  ✔️   |
 |                 De-activate/re-activate user |                           |     |  ✔️   |
 |          Change any user's name and password |                           |     |  ✔️   |
@@ -43,7 +66,7 @@ By default, the first registered user is granted the `Owner` role, all following
 |                                  Change data |            ✔️             | ✔️  |  ✔️   |
 |                  Configure SQL Review Policy |                           | ✔️  |  ✔️   |
 | Manage version control system (VCS) provider |                           |     |  ✔️   |
-|                               Manage IM integration |                           |     |  ✔️   |
+|                        Manage IM integration |                           |     |  ✔️   |
 |                                  Change logo |                           |     |  ✔️   |
 
 ## Project roles
