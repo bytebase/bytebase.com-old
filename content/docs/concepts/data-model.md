@@ -16,12 +16,7 @@ Internally, Bytebase uses term `Principal` instead of `User` because former is m
 
 ## Role
 
-`Role` is granted to a `User`. Bytebase has two disjoint set of roles:
-
-1. Workspace roles: `Owner`, `DBA`, `Developer`
-2. Project roles: `Owner`, `Developer`
-
-Check [Roles and Permissions](/docs/concepts/roles-and-permissions) for details.
+See [Roles and Permissions](/docs/concepts/roles-and-permissions).
 
 ## Environment
 
