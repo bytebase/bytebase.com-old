@@ -194,7 +194,7 @@ export default defineComponent({
     auto;
 }
 .main-wrapper {
-  grid-template-columns: 280px auto;
+  grid-template-columns: 300px auto;
   @apply flex sm:grid;
 }
 .header-link {

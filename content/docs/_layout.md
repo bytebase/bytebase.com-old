@@ -107,7 +107,23 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [State-based Migration](/change-database/state-based-migration)
 
-## [VCS Integration](/vcs-integration/overview)
+## [SQL Editor](/sql-editor/overview)
+
+### [Compose a Query](/sql-editor/writing-a-query)
+
+### [Run and EXPLAIN Query](/sql-editor/run-queries)
+
+### [Query Results](/sql-editor/query-results)
+
+### [Explore the Schema](/sql-editor/explore-the-schema)
+
+### [Admin Mode](/sql-editor/admin-mode)
+
+### [Saved Sheet and Query History](/sql-editor/never-miss-your-works)
+
+### [Share Sheet with Teammates](/sql-editor/share-sheet-with-teammates)
+
+## [VCS Integration (GitOps)](/vcs-integration/overview)
 
 ### [Add Git Provider](/vcs-integration/add-git-provider)
 
@@ -139,22 +155,6 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Backup Retention Policy](/disaster-recovery/backup-retention-policy)
 
-## [SQL Editor](/sql-editor/overview)
-
-### [Compose a Query](/sql-editor/writing-a-query)
-
-### [Run and EXPLAIN Query](/sql-editor/run-queries)
-
-### [Query Results](/sql-editor/query-results)
-
-### [Explore the Schema](/sql-editor/explore-the-schema)
-
-### [Saved Sheet and Query History](/sql-editor/never-miss-your-works)
-
-### [Share Sheet with Teammates](/sql-editor/share-sheet-with-teammates)
-
-### [Admin Mode](/sql-editor/admin-mode)
-
 ## Anomaly Detection
 
 ### [Drift Detection](/anomaly-detection/drift-detection)
@@ -166,6 +166,8 @@ expand_section_list: ["Introduction", "Get Started"]
 ## Administration
 
 ### [Production Setup](/administration/production-setup)
+
+### [Back up Data Directory](/administration/back-up-data-directory)
 
 ### [Environment Policy](/administration/environment-policy/overview)
 
@@ -184,8 +186,6 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [External Approval](/administration/webhook-integration/external-approval)
 
 ### [Archive](/administration/archive)
-
-### [Backup Data Directory](/administration/backup-data-directory)
 
 ---
 
