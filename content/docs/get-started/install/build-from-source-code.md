@@ -38,12 +38,12 @@ git checkout tags/x.y.z
 Build the source
 
 ```bash
-scripts/build.sh [<<out_directory>>]
+scripts/build_bytebase.sh [<<out_directory>>]
 ```
 
 If `out_directory`is not specified, the default directory is `./bytebase-build`
 
-Suppose you run `scripts/build.sh foo` After build completes, run:
+Suppose you run `scripts/build_bytebase.sh foo` After build completes, run:
 
 ```bash
 foo/bytebase --port 8080
