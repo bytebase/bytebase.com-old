@@ -4,7 +4,6 @@ author: Mila
 published_at: 2022/09/29 15:15
 feature_image: /static/blog/hacktoberfest-2022/bytebase-hacktoberfest-2022.webp
 tags: Education
-featured: true
 description: Bytebase is participating in Hacktoberfest 2022! Join the month long celebration of open source with us.
 ---
 

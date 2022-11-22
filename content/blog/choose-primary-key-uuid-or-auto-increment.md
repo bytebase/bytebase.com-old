@@ -4,7 +4,6 @@ author: Tianzhou
 published_at: 2021/08/24 08:37:00
 feature_image: /static/blog/choose-primary-key-uuid-or-auto-incement/uuid.webp
 tags: Education
-featured: true
 description: Pros and Cons between choosing UUID or auto increment integer / serial for SQL database.
 ---
 
