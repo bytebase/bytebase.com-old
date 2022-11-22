@@ -4,7 +4,7 @@ author: Tianzhou
 published_at: 2022/11/22 17:21:21
 feature_image: /static/blog/1-8-0-new-features/1-8-0-new-feature-banner.webp
 tags: Education
-description: Last week, we released Bytebase 1.8.0. Let's take a deeper look into the new features: MySQL Sync Schema, Admin Mode for SQL Editor, External Approval via Feishu, and more.
+description: Last week, we released Bytebase 1.8.0. Let's take a deeper look into the new features: MySQL Sync Schema, Admin Mode for SQL Editor, and External Approval via Feishu.
 ---
 
 Last week, we released [Bytebase 1.8.0](/changelog/bytebase-1-8-0). Let's take a deeper look into some of the new features.
