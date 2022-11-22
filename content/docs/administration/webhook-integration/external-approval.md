@@ -42,9 +42,7 @@ In the Manage scopes section of Permissions & Scopes page, add the following sco
 
 <hint-block type="warn">
 
-Make sure that you have added all three scopes before moving on.
-
-The "approval:approval" scope may seem to contain "approval:approval:readonly", but you have to add both.
+Make sure that you have added all three scopes before moving on. In particular, you must add both "approval:approval" and "approval:approval:readonly".
 
 </hint-block>
 
