@@ -4,7 +4,6 @@ author: Danny
 published_at: 2022/04/15 06:37:17
 feature_image: /static/blog/database-migration-sqlite-to-postgresql/migration.webp
 tags: Education
-featured: true
 description: This article describes the story of Bytebase migrating its storage from SQLite to PostgreSQL and the challenges on the way.
 ---
 

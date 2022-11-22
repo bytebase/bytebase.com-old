@@ -4,17 +4,17 @@ author: Candy
 published_at: 2022/07/11 16:30:17
 feature_image: /static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-cover.webp
 tags: Education
-featured: true
 description: This article describes how Point-in-Time-Recovery (PITR) works in Bytebase and the steps to restore a database using this feature.
 ---
 
-Bytebase is an open source database DevOps tool, it's the GitLab for managing databases throughout the software development lifecycle (SDLC). It offers a web-based workspace for Developers and DBAs to collaborate and execute database changes safely and efficiently. 
+Bytebase is an open source database DevOps tool, it's the GitLab for managing databases throughout the software development lifecycle (SDLC). It offers a web-based workspace for Developers and DBAs to collaborate and execute database changes safely and efficiently.
 
 As an application developer, what would you do if you encountered these scenarios in your daily work?
-* Someone accidentally drops a table or deletes a bunch of customer data.
-* Team releases a bad version with database changes.
 
-You want a time travel. 
+- Someone accidentally drops a table or deletes a bunch of customer data.
+- Team releases a bad version with database changes.
+
+You want a time travel.
 
 For MySQL, this means you would look for the valid backup and the relevant binlog files to recover to a point in the past before the incident occurred. This is a complicated process that requires an experienced DBA to operate. Today, we are introducing Point-in-Time Recovery (PITR) Beta in Bytebase, which enables users to perform this error-prone operation with just a few clicks.
 
@@ -29,7 +29,7 @@ The last step means Bytebase is doing an in-place database recovery and does not
 
 ## How to Restore a Database to a Point in Time?
 
-Let’s say there is a MySQL database `db_pitr_example` that has two tables `pitr_one` and `pitr_two`. 
+Let’s say there is a MySQL database `db_pitr_example` that has two tables `pitr_one` and `pitr_two`.
 ![original](/static/blog/restoring-a-mysql-database-to-a-point-in-time/original.webp)
 
 Suddenly, the application goes down since someone accidentally deletes the table `pitr_two`. Then, the DBA or the on-call developer needs to restore that deleted table.
@@ -43,10 +43,10 @@ The following steps demonstrate how to restore the database `db_pitr_example` wi
 **Step2**. Choose a point in time to restore the database, and click **Confirm**.
 ![pitr-step2](/static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-step2.webp)
 
-**Step3**. Click **Approve** to execute the first task, or reassign it to someone else to review the task first. 
+**Step3**. Click **Approve** to execute the first task, or reassign it to someone else to review the task first.
 ![pitr-step3](/static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-step3.webp)
 
-After the first task is completed, click **Approve** again to execute the second task. 
+After the first task is completed, click **Approve** again to execute the second task.
 ![pitr-step4](/static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-step4.webp)
 
 Now, the point-in-time recovery for the database is done. The result says that the database `db_pitr_example` has performed point-in-time recovery successfully.
