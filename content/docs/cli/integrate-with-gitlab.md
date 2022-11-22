@@ -89,4 +89,4 @@ The schema snapshots before and after the migration are stored in artifacts:
 
 ![gitlab job result](/static/docs/gitlab-job-result-2.png)
 
-You can browse this [job detail](https://gitlab.com/bytebase-sample/tutorial-bb-ci/-/jobs/2472815264) on GitHub.com.
+You can browse this [job detail](https://gitlab.com/bytebase-sample/tutorial-bb-ci/-/jobs/2472815264) on GitLab.com.
