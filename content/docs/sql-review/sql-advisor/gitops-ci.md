@@ -10,13 +10,13 @@ This feature requires Enterprise Plan.
 
 ## Set up SQL Review CI
 
-This feature requires **Version Control Workflow**. You can follow [VCS Integration (GitOps)](/docs/vcs-integration) to set up.
+This feature requires **Version Control Workflow**. You can follow [VCS Integration (GitOps)](/docs/vcs-integration/overview) to set up.
 
 ![vcs-sql-review](/static/docs/vcs-integration/enable-version-control-workflow/vcs-sql-review.webp)
 
 Below use GitLab as an example. GitHub works in a similar way.
 
-When checked, Bytebase will create a merge request (MR) for your repository to set up the SQL review CI, and redirect you to the MR page. To finish the setup, please should review and merge this MR.
+When the box `Enable SQL Review CI via GitLab CI` is checked, Bytebase will create a merge request (MR) for your repository to set up the SQL review CI, and redirect you to the MR page. To finish the setup, you should review and merge this MR.
 
 ![vcs-sql-review-prepare](/static/docs/vcs-integration/enable-version-control-workflow/vcs-sql-review-prepare.webp)
 
