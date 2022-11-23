@@ -40,6 +40,12 @@ In the Manage scopes section of Permissions & Scopes page, add the following sco
 
 ![feishu app permission page](/static/docs/external-approval-feishu-permission.webp)
 
+<hint-block type="warn">
+
+Make sure that you have added all three scopes before moving on. In particular, you must add both "approval:approval" and "approval:approval:readonly".
+
+</hint-block>
+
 ### Step 4 - Enable app
 
 In the Version Management & Release page of App Release, create a Version.
