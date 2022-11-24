@@ -124,7 +124,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Bytebase | Database DevOps",
+    title: "Database CI/CD | Database DevOps | Bytebase",
     htmlAttrs: {
       lang: "en",
     },
