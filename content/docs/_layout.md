@@ -177,6 +177,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
+### [Sensitive Data](/administration/sensitive-data)
+
 ### [Webhook Integration](/administration/webhook-integration/overview)
 
 #### [Project Webhook](/administration/webhook-integration/project-webhook)
