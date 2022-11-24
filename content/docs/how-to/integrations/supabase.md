@@ -38,7 +38,7 @@ If you stick with the default postgres user provided by Supabase, you will need 
 
 ### Step 3 - Add the Supabase database instance to Bytebase
 
-Copy the `Host`, `Port`, `User` and `Password` from the last two steps to the form and click "Create". See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for more details.
+Choose `PostgreSQL`, and copy the `Host`, `Port`, `User` and `Password` from the last two steps to the form and click "Create". See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for more details.
 
 ![supabase-bytebase-create-instance](/docs/how-to/integrations/supabase-bytebase-create-instance.webp)
 
@@ -48,6 +48,6 @@ All databases should be sycned properly. Expect some delay if the database insta
 
 ![supabase-bytebase-instance](/docs/how-to/integrations/supabase-bytebase-instance.webp)
 
-So are the tables under the databases.
+So should the tables under the databases.
 
 ![supabase-bytebase-database](/docs/how-to/integrations/supabase-bytebase-database.webp)
