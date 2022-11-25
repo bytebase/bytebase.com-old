@@ -34,7 +34,7 @@ In the General info section of Credentials & Basic Info page, add the above Byte
 
 In the Bot page of Features, click "Enable bot".
 
-![feishu app upload icon](/static/docs/external-approval-feishu-bot.webp)
+![feishu app features bot page, with "Enable bot" highlighted](/static/docs/external-approval-feishu-bot.webp)
 
 ### Step 4 - Grant permissions
 
