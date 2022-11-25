@@ -20,7 +20,7 @@ Install the [Terraform](https://developer.hashicorp.com/terraform/downloads?prod
 
 ### Config options
 
-- `bytebase_url`: The OpenAPI URL for your Bytebase server. If not provided in the configuration, you must set the `BYTEBASE_URL` variable in the environment.
+- `bytebase_url`: The OpenAPI full URL for your Bytebase server. If not provided in the configuration, you must set the `BYTEBASE_URL` variable in the environment. The URL should like `<external url>/v1`
 - `email`: The Bytebase user account email. The user must have **DB** or **Owner** role. If not provided in the configuration, you must set the `BYTEBASE_USER_EMAIL` variable in the environment.
 - `password`: The Bytebase user account password. If not provided in the configuration, you must set the `BYTEBASE_USER_PASSWORD` variable in the environment.
 
@@ -41,7 +41,7 @@ terraform {
 provider "bytebase" {
   email        = "<Your Bytebase account email>"
   password     = "<Your Bytebase account password>"
-  bytebase_url = "<Your Bytebase OpenAPI URL>"
+  bytebase_url = "<Your Bytebase OpenAPI full URL, like <external url>/v1>"
 }
 ```
 
