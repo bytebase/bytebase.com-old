@@ -4,10 +4,10 @@ author: Ningjing
 published_at: 2022/11/24 18:00
 feature_image: /static/blog/database-schema-synchronization-in-5-mins/sync-schema.webp
 tags: Education
-description: This article briefly describes the general scenario of database schema synchronization and how to use this feature smoothly in Bytebase with pure UI operations.
+description: This article briefly describes the general scenarios of database schema synchronization and how to use this feature smoothly in Bytebase with pure UI operations.
 ---
 
-This article briefly describes the general scenario of **database schema synchronization** and how to use this feature smoothly in Bytebase with **pure UI operations**.
+This article briefly describes the general scenarios of **database schema synchronization** and how to use this feature smoothly in Bytebase with **pure UI operations**.
 
 ## General Scenarios
 
