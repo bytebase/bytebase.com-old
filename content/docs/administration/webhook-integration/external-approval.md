@@ -30,7 +30,13 @@ In the General info section of Credentials & Basic Info page, add the above Byte
 
 ![feishu app upload icon](/static/docs/external-approval-feishu-icon.webp)
 
-### Step 3 - Grant permissions
+### Step 3 - Enable bot
+
+In the Bot page of Features, click "Enable bot".
+
+![feishu app upload icon](/static/docs/external-approval-feishu-bot.webp)
+
+### Step 4 - Grant permissions
 
 In the Manage scopes section of Permissions & Scopes page, add the following scopes.
 
@@ -46,7 +52,7 @@ Make sure that you have added all three scopes before moving on. In particular, 
 
 </hint-block>
 
-### Step 4 - Enable app
+### Step 5 - Enable app
 
 In the Version Management & Release page of App Release, create a Version.
 
@@ -64,14 +70,14 @@ Submit for release.
 
 ![feishu app release submission page](/static/docs/external-approval-feishu-enable-3.webp)
 
-### Step 5 - Wait for approval
+### Step 6 - Wait for approval
 
 Ask your **organization administrator** to approve the custom application in [Workspace / App review](https://feishu.cn/admin/appCenter/audit).
 
 Move to the next step when you see the app status is **"Enabled"**.
 ![In feishu app page, you can see that the app is activated](/static/docs/external-approval-feishu-enable-4.webp)
 
-### Step 6 - Obtain credentials
+### Step 7 - Obtain credentials
 
 Get the **App ID** and **App Secret** in the General info section of Credentials & Basic Info page.
 
