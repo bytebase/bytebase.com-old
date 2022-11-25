@@ -111,7 +111,7 @@ CREATE TABLE t2 (
 ## Enterprise Plan
 With **Free** or **Team Plan**, you can only choose the latest version of history; Only with **Enterprise Plan** can you freely choose from the full migration history.
 
-From Bytebase [v1.8.0](/changelog/bytebase-1-8-0), you can run a 14-day **Team Plan** trial without hub registration. While having **Team Plan** trial, you can upgrade to the **Enterprise Plan** trial by clicking a specific feature.
+From Bytebase [v1.8.0](/changelog/bytebase-1-8-0), you can run a 14-day **Team Plan** trial without hub registration. While having **Team Plan** trial, you can upgrade to the **Enterprise Plan** trial by clicking **Upgrade** in a specific feature.
 ![dbprod t1](/static/blog/database-schema-synchronization-in-5-mins/dbprod-t1.webp)
 
 Is the experience smooth? Or do you encounter any problems? Feel free to join the [discord user group](https://discord.gg/Fac9nmZ95j) to talk about it!
