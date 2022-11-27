@@ -1,8 +1,8 @@
 ---
-title: How does sync schema work in Bytebase
+title: How schema sync works in Bytebase
 author: Zipeng
 published_at: 2022/11/27 15:40:00
-feature_image: /static/blog/how-does-sync-schema-work-in-Bytebase/feature.webp
+feature_image: /static/blog/how-schema-sync-work/feature.webp
 tags: Education
 description: Technical contents of Bytebase sync schema for MySQL.
 ---
@@ -15,7 +15,7 @@ Schema synchronization can calculate the difference between two databases and gi
 
 Bytebase has supported MySQL schema synchronization since v1.8.0. The data pipeline for this module in Bytebase is shown as follows.
 
-![schema-diff-data-flow](/static/blog/how-does-sync-schema-work-in-Bytebase/schema-diff-data-flow.webp)
+![schema-diff-data-flow](/static/blog/how-schema-sync-work/schema-diff-data-flow.webp)
 
 ## Schema Diff Engine
 
@@ -23,13 +23,13 @@ Bytebase has supported MySQL schema synchronization since v1.8.0. The data pipel
 
 Bytebase can dump the database schema and process them into [abstract syntax tree (AST)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) via a parser.
 
-![SQL-AST](/static/blog/how-does-sync-schema-work-in-Bytebase/sql-ast.webp)
+![SQL-AST](/static/blog/how-schema-sync-work/sql-ast.webp)
 
 ### Diff on SQL AST
 
 We can get object properties in AST. Compare two corresponding entities (which may not exist). The following chart shows a simple example:
 
-![diff-on-sql-ast](/static/blog/how-does-sync-schema-work-in-Bytebase/diff-on-sql-ast.webp)
+![diff-on-sql-ast](/static/blog/how-schema-sync-work/diff-on-sql-ast.webp)
 
 ### Safe Order
 
