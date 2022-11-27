@@ -71,4 +71,3 @@ After, we get the processed ASTs, we convert them back to SQLs.
 ## Learn more
 
 You can follow [docs](/docs/change-database/synchronize-schema) to learn more about using synchronizing schema.
-If you find this article helpful, you might also be interested in our product [Bytebase](https://bytebase.com/), a Database CI/CD tool for DevOps teams, built for Developers and DBAs, which is the only Database CI/CD product included by [CNCF Landscape](https://landscape.cncf.io/?selected=bytebase).
