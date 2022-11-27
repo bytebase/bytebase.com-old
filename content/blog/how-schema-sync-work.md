@@ -45,7 +45,7 @@ There are many dependencies between database objects, like constraints depending
 4. Index
 5. Constraint
 
-Function, trigger, and procedure do not validate at creation time, so we can create them anywhere after deleting them.
+Function, trigger, and procedure will be not validated at creation time, so we can create them anywhere after deleting the origin one.
 
 #### Dependencies between different operation types
 
