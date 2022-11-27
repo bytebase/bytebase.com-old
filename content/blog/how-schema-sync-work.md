@@ -64,9 +64,9 @@ After, we get the processed ASTs, we convert them back to SQLs.
 ### Recap
 
 1. Convert SQLs to ASTs.
-2. Compare the ASTs.
-3. Adjust diff result orders.
-4. Convert diff result to SQLs.
+2. Compare the ASTs to generate diff result AST nodes.
+3. Adjust the ordering of result AST nodes to keep safe orders.
+4. Convert diff result AST nodes to SQLs.
 
 ## Learn more
 
