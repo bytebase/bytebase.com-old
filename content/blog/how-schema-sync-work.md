@@ -57,8 +57,6 @@ Also, we should sort dependencies among operation types. Below lists the orderin
 4. Addition triggered destructive node updates.
 5. Node deletion.
 
-This sequence is correct in most cases.
-
 ### Deparse
 
 After, we get the processed ASTs, we convert them back to SQLs.
