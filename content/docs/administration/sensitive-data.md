@@ -18,7 +18,7 @@ You may also manage all "Sensitive" columns in "Settings / Workspace / Sensitive
 
 ![workspace setting](/static/docs/administration/sensitive-data/sensitive-data-workspace-setting.webp)
 
-Then, the query result of "Sensitive" columns from the [SQL Editor](/docs/sql-editor/overview) will be displayed as "\*\*\*\*\*\*".
+Then, the query result of `Sensitive` columns from the [SQL Editor](/docs/sql-editor/overview) will be masked as "\*\*\*\*\*\*".
 
 ![query result](/static/docs/administration/sensitive-data/sensitive-data-masked.webp)
 
