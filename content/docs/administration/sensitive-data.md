@@ -8,7 +8,7 @@ This feature is only available in the Enterprise plan.
 
 </hint-block>
 
-DBAs and workspace owners can mark multiple database table columns as "Sensitive".
+Workspace Owners and DBAs can mark table columns as `Sensitive`.
 
 See the following example, the "salary" column is marked as "Sensitive".
 
