@@ -12,7 +12,7 @@ Migration scripts are stored in the VCS repository for a GitOps-enabled tenant p
 
 Typically, SQL files are used as migration scripts for both schema (DDL) and data (DML) changes.
 
-For example, to add a new table in the "Staging" envrionment for the database "store" using the default **File path template** (`{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/Staging/store##0001##ddl##add-company-table.sql` with the following content:
+For example, to add a new table in the `Staging` envrionment for the database `store` using the default **File path template** (`{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/Staging/store##0001##ddl##add-company-table.sql` with the following content:
 
 ```sql
 CREATE TABLE company (
@@ -43,7 +43,7 @@ A YAML manifest follows the same file path convention as defined by the **File p
 +bytebase/Staging/store##0003##dml##insert-companies.yml
 ```
 
-Below is the file content for adding a new table for the database "supermarket":
+Below is the file content for adding a new table for the database `supermarket`:
 
 ```yml
 databases:
@@ -52,7 +52,7 @@ statement: |
   INSERT INTO company (id, name, address) VALUES (1, 'Bytebase', '1 DevOps street');
 ```
 
-Please be noted that the database name in the file path ("store") is now completely ignored.
+Please be noted that the database name in the file path (`store`) is now completely ignored.
 
 Both SQL files and YAML manifests can co-exist and be used on per-migration basis depending on your needs. After several migrations, your VCS repository for storing migration scripts could look like follows:
 
