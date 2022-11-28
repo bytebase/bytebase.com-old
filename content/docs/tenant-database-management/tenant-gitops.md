@@ -59,6 +59,6 @@ Both SQL files and YAML manifests can co-exist and be used on per-migration basi
 ```
 bytebase/Staging/store##0001##ddl##add-company-table.sql
 bytebase/Staging/store##0002##ddl##add-payout-table.sql
-bytebase/Staging/store##0003##ddl##insert-companies.yml
+bytebase/Staging/store##0003##dml##insert-companies.yml
 bytebase/Staging/store##0003##ddl##insert-payouts.sql
 ```
