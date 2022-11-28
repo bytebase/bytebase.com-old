@@ -43,7 +43,7 @@ A YAML manifest follows the same file path convention as defined by the **File p
 +bytebase/Staging/store##0003##dml##insert-companies.yml
 ```
 
-Below is the file content for adding a new table for the database `supermarket`:
+Below is the file content for inserting a new row to the database `supermarket`:
 
 ```yml
 databases:
