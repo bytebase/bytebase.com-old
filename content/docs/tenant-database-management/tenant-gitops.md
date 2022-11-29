@@ -29,12 +29,12 @@ Where `bytebase/` is the **Base directory**, depending on [your configuration](/
 <hint-block type="warning">
 
 1. This feature is currently experimental, behaviors are subject to change, please only use with guidance from our technical support.
-1. The **File path template** must use `.sql` as the file extension for migration scripts.
+1. The **File path template** must use `.sql` as the file extension for migration scripts, both SQL files and YAML manifest share the same setting of the **File path template**.
 1. Only data change (DML) is supported.
 
 </hint-block>
 
-Using SQL files as migration scripts has the limitation of only being able to target a single database, to make a data change across an arbitrary set of databases, you can use a YAML manifest without any configuration change on the UI.
+Using SQL files as migration scripts has the limitation of only being able to target a single database, to make a data change across an arbitrary set of databases.
 
 A YAML manifest follows the same file path convention as defined by the **File path template** but using `.yml` instead of `.sql` as the file extension:
 
@@ -62,3 +62,15 @@ bytebase/Staging/store##0002##ddl##add-payout-table.sql
 bytebase/Staging/store##0003##dml##insert-companies.yml
 bytebase/Staging/store##0003##ddl##insert-payouts.sql
 ```
+
+To target multiple databases, add more entries to the `databases` section:
+
+```yml
+databases:
+  - name: supermarket
+  - name: supermarket_east
+  - name: supermarket_west
+statement: |
+  INSERT INTO company (id, name, address) VALUES (1, 'Bytebase', '1 DevOps street');
+```
+
