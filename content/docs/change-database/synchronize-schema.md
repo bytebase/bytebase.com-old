@@ -4,7 +4,9 @@ title: Synchronize Schema
 
 <hint-block type="warning">
 
-This feature is in beta and only available for MySQL.
+This feature is in beta and only available for MySQL and PostgreSQL.
+
+The feature PostgreSQL Synchronize Schema now only supports to synchronize `Schema`, `Table`, `Constraint` and `Sequence` objects.
 
 </hint-block>
 
