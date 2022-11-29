@@ -45,21 +45,21 @@ There are many dependencies between database objects, like constraints depending
 4. Index
 5. Constraint
 
-Function, trigger, and procedure will be not validated at creation time, so we can create them anywhere after deleting the origin one.
+Function, trigger, and procedure will not be validated at creation time, so we can create them anywhere after deleting the origin one.
 
 #### Dependencies between different operation types
 
-Also, we should sort dependencies among operation types. Below lists the ordering:
+Also, we should sort dependencies among operation types. Below lists the order:
 
 1. New node creation, like adding a new column.
 2. In-place node updates, like changing an existing table definition.
-3. Deletion triggered destruction node updates. Because we cannot update some nodes in place like indexes, we should drop the original one and create the new one instead.
+3. Deletion triggered destruction node updates. Because we cannot update some nodes in places like indexes, we should drop the original one and create the new one instead.
 4. Addition triggered destructive node updates.
 5. Node deletion.
 
 ### Deparse
 
-After, we get the processed ASTs, we convert them back to SQLs.
+After we get the processed ASTs, we convert them back to SQLs.
 
 ### Recap
 
