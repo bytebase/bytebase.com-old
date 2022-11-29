@@ -51,6 +51,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
+### [Work with Terraform](/get-started/work-with-terraform/overview)
+
 ---
 
 ## Concepts
@@ -140,6 +142,8 @@ expand_section_list: ["Introduction", "Get Started"]
 ## [Tenant Database Management](/tenant-database-management/overview)
 
 ### [Tenant Project](/tenant-database-management/tenant-project)
+
+### [Tenant GitOps](/tenant-database-management/tenant-gitops)
 
 ## Disaster Recovery
 
