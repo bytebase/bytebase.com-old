@@ -12,17 +12,27 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 
 1. Install [Terraform](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
 
-2. Start Bytebase to get the OpenAPI server running. The OpenAPI endpoint is at `/v1` under [external-url](/docs/get-started/install/external-url).
-
-3. Create a Bytebase account with **Owner** or **DBA** role. You can register a new account from Bytebase UI.
+2. Start Bytebase to get the server running.
 
 ## Configuration
 
+### Create service account
+
+Redirect to Bytebase member management page (/setting/member).
+
+Give a specific name to identifier your service account, and grant the **Owner** or **DBA** role to it.
+
+![create-service-account](/docs/get-started/work-with-terraform/create-service-account.webp)
+
+After creation, you can copy the service key as `service_key` and the email as `service_account` to initialize the Bytbase provider in next step.
+
+![service-account](/docs/get-started/work-with-terraform/service-account.webp)
+
 ### Config options
 
-- `bytebase_url`: Required. The OpenAPI full URL for your Bytebase server. Alternatively, you can set `BYTEBASE_URL` environment variable. The URL should like `<external url>/v1`
-- `email`: Required. The Bytebase user account email. The user must have **Owner** or **DBA** role. Alternatively, you can set `BYTEBASE_USER_EMAIL` environment variable.
-- `password`: Required. The Bytebase user account password. Alternatively, you can set `BYTEBASE_USER_PASSWORD` environment variable.
+- `url`: Required. The [external URL](/docs/get-started/install/external-url) for your Bytebase server. Alternatively, you can set `BYTEBASE_URL` environment variable.
+- `service_account`: Required. The Bytebase service account email. The user must have **Owner** or **DBA** role. Alternatively, you can set `BYTEBASE_SERVICE_ACCOUNT` environment variable.
+- `service_key`: Required. The Bytebase service account key. Alternatively, you can set `BYTEBASE_SERVICE_KEY` environment variable.
 
 ### Config examples
 
@@ -33,15 +43,15 @@ terraform {
   required_providers {
     bytebase = {
       source = "bytebase/bytebase"
-      version = "0.0.2"
+      version = "0.0.3"
     }
   }
 }
 
 provider "bytebase" {
-  email        = "<Your Bytebase account email>"
-  password     = "<Your Bytebase account password>"
-  bytebase_url = "<Your Bytebase OpenAPI full URL, like <external url>/v1>"
+  service_account = "<Your Bytebase service account email>"
+  service_key     = "<Your Bytebase service account key>"
+  url             = "<Your Bytebase external URL>"
 }
 ```
 
@@ -54,7 +64,7 @@ terraform {
   required_providers {
     bytebase = {
       source = "bytebase/bytebase"
-      version = "0.0.2"
+      version = "0.0.3"
     }
   }
 }
@@ -63,7 +73,7 @@ provider "bytebase" {}
 ```
 
 ```bash
-export BYTEBASE_URL=<Your Bytebase OpenAPI URL> BYTEBASE_USER_EMAIL=<Your Bytebase account email> BYTEBASE_USER_PASSWORD=<Your Bytebase account password>
+export BYTEBASE_URL=<Your Bytebase EXTERNAL URL> BYTEBASE_SERVICE_ACCOUNT=<Your Bytebase service account email> BYTEBASE_SERVICE_KEY=<Your Bytebase service account key>
 
 terraform init && terraform plan
 ```
