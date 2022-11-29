@@ -143,6 +143,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Tenant Project](/tenant-database-management/tenant-project)
 
+### [Tenant GitOps](/tenant-database-management/tenant-gitops)
+
 ## Disaster Recovery
 
 ### [Backup and Restore Database](/disaster-recovery/backup-restore-database/overview)

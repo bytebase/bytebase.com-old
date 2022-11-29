@@ -30,12 +30,6 @@ Visit Supabase SQL Editor and create a database user and grants it SUPERUSER rol
 
 ![supabase-sql-editor](/docs/how-to/integrations/supabase-sql-editor.webp)
 
-<hint-block type="info">
-
-If you stick with the default postgres user provided by Supabase, you will need to execute "ALTER ROLE postgres SUPERUSER" from the SQL Editor as well. See [GitHub Issue](https://github.com/supabase/supabase/issues/1856#issuecomment-1165894044).
-
-</hint-block>
-
 ### Step 3 - Add the Supabase database instance to Bytebase
 
 Choose `PostgreSQL`, and copy the `Host`, `Port`, `User` and `Password` from the last two steps to the form and click "Create". See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for more details.
