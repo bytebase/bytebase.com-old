@@ -47,7 +47,7 @@ By default, the first registered user is granted the `Owner` role, all following
 |                             Edit environment |                           | ✔️  |  ✔️   |
 |                          Reorder environment |                           | ✔️  |  ✔️   |
 |                          Archive environment |                           | ✔️  |  ✔️   |
-|                           View all instances |            ✔️             | ✔️  |  ✔️   |
+|                           View all instances |                           | ✔️  |  ✔️   |
 |                                 Add instance |                           | ✔️  |  ✔️   |
 |                                Edit instance |                           | ✔️  |  ✔️   |
 |                             Archive instance |                           | ✔️  |  ✔️   |

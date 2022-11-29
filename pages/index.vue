@@ -447,13 +447,13 @@ export default defineComponent({
     };
   },
   head: {
-    title: "Bytebase | Database DevOps",
+    title: "Database CI/CD | Database DevOps | Bytebase",
     meta: [
       {
         hid: "bytebase",
-        name: "Bytebase | Database DevOps",
+        name: "Database CI/CD | Database DevOps | Bytebase",
         content:
-          "Bytebase is a database change and version control tool for the DevOps team. It provides a collaboration workspace to help Developers and DBAs manage the database development lifecycle.",
+          "Bytebase is a Database CI/CD tool for DevOps teams. It provides a collaboration workspace to help Developers and DBAs manage the database development lifecycle.",
       },
       {
         hid: "og:image",
