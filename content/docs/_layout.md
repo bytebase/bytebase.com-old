@@ -45,13 +45,14 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Customize the Logo](/get-started/configure-workspace/customize-the-logo)
 
+#### [Configure with Terraform](/get-started/configure-workspace/configure-with-terraform)
+
 ### [Work with a Project](/get-started/work-with-a-project/overview)
 
 #### [Create a Project](/get-started/work-with-a-project/create-a-project)
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
-### [Work with Terraform](/get-started/work-with-terraform/overview)
 
 ---
 
