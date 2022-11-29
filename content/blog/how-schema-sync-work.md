@@ -53,13 +53,13 @@ Also, we should sort dependencies among operation types. Below lists the order:
 
 1. New node creation, like adding a new column.
 2. In-place node updates, like changing an existing table definition.
-3. Deletion triggered destruction node updates. Because we cannot update some nodes in places like indexes, we should drop the original one and create the new one instead.
+3. Deletion triggered destruction node updates. Because we cannot update some nodes in-place like indexes, we should drop the original one and create the new one instead.
 4. Addition triggered destructive node updates.
 5. Node deletion.
 
 ### Deparse
 
-After we get the processed ASTs, we convert them back to SQLs.
+Finally, we get the processed ASTs, we convert them back to SQLs.
 
 ### Recap
 
