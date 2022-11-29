@@ -62,7 +62,7 @@ Users sometimes also connect to the database directly and perform schema changes
 
 The DBA connects to the database to perform admin operations, such as terminating SQL statements that take too long to execute.
 
-For any of the above interactions, **Connecting directly to the database manually to perform operations is a high-risk behavior**, so usually, the company sets up a bastion or jump server. This way, organizations can have some oversight and control of the database operations. However, setting up a jump server also brings inconveniences to users and introduces additional management burdens. For example, you need to consider whether to set up a separate jump server for database access or to reuse the shared jump server for accessing other production systems.
+For any of the above interactions, **connecting directly to the database manually to perform operations is a high-risk behavior**, so usually, the company sets up a bastion or jump server. This way, organizations can have some oversight and control of the database operations. However, setting up a jump server also brings inconveniences to users and introduces additional management burdens. For example, you need to consider whether to set up a separate jump server for database access or to reuse the shared jump server for accessing other production systems.
 
 ## Solutions
 
