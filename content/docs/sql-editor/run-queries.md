@@ -6,6 +6,8 @@ title: Run and EXPLAIN Query
 
 Please note that SQL Editor only supports running SELECT queries now. SQL will detect your SQL queries. If you are running DDL or DML change queries, it will prompt you to create a new issue to start the SQL review process.
 
+Workspace owners and DBAs are allowed to execute any SQL statements in [Admin Mode](/docs/sql-editor/admin-mode).
+
 </hint-block>
 
 ## Run query
