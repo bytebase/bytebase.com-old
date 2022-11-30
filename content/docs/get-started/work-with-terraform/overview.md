@@ -20,7 +20,7 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 
 Redirect to Bytebase member management page (/setting/member).
 
-Give a specific name to identifier your service account, and grant the **Owner** or **DBA** role to it.
+Name your service account, and grant the **Owner** or **DBA** role to it.
 
 ![create-service-account](/docs/get-started/work-with-terraform/create-service-account.webp)
 
