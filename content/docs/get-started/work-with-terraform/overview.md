@@ -26,6 +26,12 @@ Name your service account, and grant the **Owner** or **DBA** role to it.
 
 After creation, you can copy the service key as `service_key` and the email as `service_account` to initialize the Bytbase provider in next step.
 
+<hint-block type="warning">
+
+Please copy the service key once you have created the service account. The key will disappear if you refresh the page.
+
+</hint-block>
+
 ![service-account](/docs/get-started/work-with-terraform/service-account.webp)
 
 ### Config options
