@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: {
     // "bg-", "text-" are used by tag.
@@ -14,6 +16,7 @@ module.exports = {
         main: "var(--color-main)",
         "main-hover": "var(--color-main-hover)",
         "main-text": "var(--color-main-text)",
+        fuchsia: colors.fuchsia,
       },
       spacing: {
         112: "28rem",

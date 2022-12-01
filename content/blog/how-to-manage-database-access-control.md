@@ -3,7 +3,7 @@ title: "How to Manage Database Access Control"
 author: Tianzhou
 published_at: 2022/11/24 17:21:21
 feature_image: /static/blog/how-to-manage-database-access-control/freedom-control.webp
-tags: Education
+tags: How-To
 featured: true
 description: Database access control can be a headache for DBAs and engineering teams. In this post, we explore database access control scenarios, and how Bytebase helps you to centralize database access control.
 ---

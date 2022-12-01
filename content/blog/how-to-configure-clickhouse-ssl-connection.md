@@ -3,7 +3,7 @@ title: How to Configure ClickHouse SSL Connection
 author: Zipeng
 published_at: 2022/07/20 10:37:00
 feature_image: /static/blog/how-to-configure-clickhouse-ssl-connection/lock.webp
-tags: Education
+tags: How-To
 description: Configure ClickHouse SSL connection and test it by using self-signed CA.
 ---
 
@@ -289,32 +289,32 @@ Congratulations, you have now successfully connected to your ClickHouse server u
 
 1. Install ClickHouse and OpenSSL
 2. Generate SSL related file
-    a. Set up OpenSSL config  
-    b. Root CA key and certificate  
-    c. Server key and certificate  
-    d.  Client key and certificate  
+   a. Set up OpenSSL config  
+   b. Root CA key and certificate  
+   c. Server key and certificate  
+   d. Client key and certificate
 3. Configure ClickHouse  
-    a. Generate dhparams  
-    b. Set up SSL related files path in ClickHouse Server config  
-    c. Enable SSL related port listened by ClickHouse  
-    d. Enable remote login on ClickHouse
+   a. Generate dhparams  
+   b. Set up SSL related files path in ClickHouse Server config  
+   c. Enable SSL related port listened by ClickHouse  
+   d. Enable remote login on ClickHouse
 4. Test SSL Connection from Client  
-    a. Copy SSL files to the Client  
-    b. Set-up ClickHouse Client config  
-    c. Use ClickHouse Client to connect to ClickHouse Server  
-    d. Use MySQL Client to connect to ClickHouse Server
+   a. Copy SSL files to the Client  
+   b. Set-up ClickHouse Client config  
+   c. Use ClickHouse Client to connect to ClickHouse Server  
+   d. Use MySQL Client to connect to ClickHouse Server
 
-| Step | File(s) you create | File(s) you use |
-| :-- | :---------------- | :------------- |
-| 2.a - Set up OpenSSL config | req.conf | None |
-| 2.b - Generate Root CA key and certificate | ca.key ca.pem ca.srl | req.conf |
-| 2.c - Generate Server key and certificate | server.key server.pem server.csr | ca.pem |
-| 2.d - Generate Client key and certificate | client.key client.pem client.csr | ca.pem |
-| 3.a - Generate dhparams | dhparam.pem | None |
-| 3.b - Set up related file path in ClickHouse Server config | None | ca.pem server.key server.pem dhparam.pem |
-| 4.a - Copy SSL files to the Client | None | ca.pem client.key client.pem |
-| 4.b - Set-up ClickHouse Client config | None | None |
-| 4.c - Use ClickHouse Client to connect to ClickHouse Server | None | None |
-| 4.d - Use MySQL Client to connect to ClickHouse Server | None | ca.pem client.key client.pem |  
+| Step                                                        | File(s) you create               | File(s) you use                          |
+| :---------------------------------------------------------- | :------------------------------- | :--------------------------------------- |
+| 2.a - Set up OpenSSL config                                 | req.conf                         | None                                     |
+| 2.b - Generate Root CA key and certificate                  | ca.key ca.pem ca.srl             | req.conf                                 |
+| 2.c - Generate Server key and certificate                   | server.key server.pem server.csr | ca.pem                                   |
+| 2.d - Generate Client key and certificate                   | client.key client.pem client.csr | ca.pem                                   |
+| 3.a - Generate dhparams                                     | dhparam.pem                      | None                                     |
+| 3.b - Set up related file path in ClickHouse Server config  | None                             | ca.pem server.key server.pem dhparam.pem |
+| 4.a - Copy SSL files to the Client                          | None                             | ca.pem client.key client.pem             |
+| 4.b - Set-up ClickHouse Client config                       | None                             | None                                     |
+| 4.c - Use ClickHouse Client to connect to ClickHouse Server | None                             | None                                     |
+| 4.d - Use MySQL Client to connect to ClickHouse Server      | None                             | ca.pem client.key client.pem             |
 
 If you find this tutorial helpful, you might also be interested in our product [Bytebase](https://bytebase.com/), an open-source, web-based schema change management tool, which helps your data team or DevOps team manage ClickHouse schema change with UI-based or VCS-based (GitOps) schema change workflow.

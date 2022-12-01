@@ -3,11 +3,10 @@ title: How a Data Team Uses Bytebase to Manage Schema Change for ClickHouse
 author: Ningjing
 published_at: 2022/09/25 09:42:58
 feature_image: /static/blog/how-a-data-team-uses-bytebase-to-manage-schema-change-for-clickhouse/bytebase-for-feature-development.webp
-tags: Education
+tags: How-To
 featured: true
 description: We are a data team within a 500-person company. The company has several customer-facing products, and we are a group of data scientists analyzing data to uncover customer, product, and operational insights.
 ---
-
 
 ## Context
 
@@ -75,8 +74,8 @@ We have achieved the following goals by adopting Bytebase:
 
 - Remove the manual migration process. Manually making production database schema change is always a stressful and risky task.
 - Detailed migration history. We find Bytebase records a very detailed migration timeline:
-    - When the migration happens - the start time, finish time.
-    - Why the migration happens - in our GitOps setup, Bytebase links back to the commit page from GitLab.
-    - What’s the exact migration - the migration script and the before/after full schema snapshot.
-    - How the migration happens - there are activities recording every state change and writing back to the lastest schema file.
+  - When the migration happens - the start time, finish time.
+  - Why the migration happens - in our GitOps setup, Bytebase links back to the commit page from GitLab.
+  - What’s the exact migration - the migration script and the before/after full schema snapshot.
+  - How the migration happens - there are activities recording every state change and writing back to the lastest schema file.
 - Also, a nice UI to oversee the process.
