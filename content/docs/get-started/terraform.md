@@ -1,5 +1,5 @@
 ---
-title: Work with Terraform
+title: Manage Bytebase with Terraform
 ---
 
 Bytebase provides the [Terraform Provider](https://registry.terraform.io/providers/bytebase/bytebase) to let you manage your Bytebase resources via Terraform. Users can use Terraform provider to manage following Bytebase resources:

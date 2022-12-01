@@ -433,14 +433,10 @@
                       <template v-else>
                         <CheckIcon
                           v-if="tier.value === true"
-                          class="mx-auto h-5 w-5"
+                          class="h-5 w-5"
                           aria-hidden="true"
                         />
-                        <XIcon
-                          v-else
-                          class="mx-auto h-5 w-5"
-                          aria-hidden="true"
-                        />
+                        <XIcon v-else class="h-5 w-5" aria-hidden="true" />
                         <span class="sr-only">
                           {{ tier.value === true ? "Yes" : "No" }}
                         </span>
