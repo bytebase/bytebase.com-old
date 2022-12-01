@@ -52,6 +52,7 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
 ### [Manage with Terraform](/get-started/terraform)
+
 ---
 
 ## Concepts
@@ -108,21 +109,21 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [State-based Migration](/change-database/state-based-migration)
 
-## [SQL Editor](/sql-editor/overview)
+## SQL Editor
 
-### [Compose a Query](/sql-editor/writing-a-query)
+### [Overview](/sql-editor/overview)
 
 ### [Run and EXPLAIN Query](/sql-editor/run-queries)
 
 ### [Query Results](/sql-editor/query-results)
 
-### [Explore the Schema](/sql-editor/explore-the-schema)
+### [Anonymize Data](/sql-editor/anonymize-data)
 
 ### [Admin Mode](/sql-editor/admin-mode)
 
-### [Saved Sheet and Query History](/sql-editor/never-miss-your-works)
+### [Explore Schema](/sql-editor/explore-schema)
 
-### [Share Sheet with Teammates](/sql-editor/share-sheet-with-teammates)
+### [Manage SQL Scripts](/sql-editor/manage-sql-scripts)
 
 ## [VCS Integration (GitOps)](/vcs-integration/overview)
 
@@ -180,7 +181,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
-### [Sensitive Data](/administration/sensitive-data)
+### [Anonymize Data](/administration/anonymize-data)
 
 ### [Webhook Integration](/administration/webhook-integration/overview)
 
