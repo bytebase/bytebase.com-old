@@ -10,7 +10,7 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 
 ## Prerequisites
 
-1. Install [Terraform](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
+1. Install [Terraform](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform).
 
 2. Start Bytebase to get the server running.
 
@@ -18,7 +18,7 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 
 ### Create service account
 
-Redirect to Bytebase member management page (/setting/member).
+Redirect to Bytebase member management page (Click **Settings** on the navigation bar, and then click **Workspace > Members**).
 
 Name your service account, and grant the **Owner** or **DBA** role to it.
 
