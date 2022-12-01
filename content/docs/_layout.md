@@ -51,8 +51,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
-### [Work with Terraform](/get-started/work-with-terraform/overview)
-
+### [Manage with Terraform](/get-started/terraform)
 ---
 
 ## Concepts
