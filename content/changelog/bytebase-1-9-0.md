@@ -7,7 +7,7 @@ description: "- Support managing with environment and instance via Terraform pro
 
 ## 🚀 New Features
 
-- Support managing with environment and instance via Terraform provider: [https://bytebase.com/docs/get-started/terraform](/docs/get-started/terraform)
+- Support managing environment and instance via Terraform provider: [https://bytebase.com/docs/get-started/terraform](/docs/get-started/terraform)
 - Support synchronizing schema for PostgreSQL🐘 Currently in beta, we support Schema, Table, Index, Constraint, and Sequence so far.
 - Support masking column-level sensitive data.
 - New UI for Admin mode of SQL Editor.
