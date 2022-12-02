@@ -3,7 +3,7 @@ title: The SQL Review Tool for Developers
 author: Changyu
 published_at: 2022/10/28 18:00
 feature_image: /static/blog/sql-review-tool-for-devs/dev-fighting-dba.webp
-tags: Education
+tags: Industry
 featured: true
 description: Reviewing SQL can be somewhat tedious, yet is essential to keep your database fleet reliable. At Bytebase, we are building a developer-first SQL review tool to empower the DevOps system.
 ---
@@ -22,7 +22,7 @@ From the tooling’s point of view, what can be done to help the development tea
 
 ## Customizable Capability
 
-For most developers, databases seem too complex and mysterious.  For example, they know all about the business logic yet lack understanding of whether specific changes affect performance and maintainability. Fortunately, many tools have built-in policies for common issues and can give recommendations automatically. But database types are diverse, and database engines are advancing rapidly, policies for a specific database, and a specific version may become outdated. Using the set of policies meant for the last MySQL version on the newest version may seriously affect the efficiency of application development, which is a source of conflict between the development team and the DBAs. When the reviewer's ability is limited, it puts higher requirements on the review tool. An excellent SQL review tool should have a more refined capability of being able to:
+For most developers, databases seem too complex and mysterious. For example, they know all about the business logic yet lack understanding of whether specific changes affect performance and maintainability. Fortunately, many tools have built-in policies for common issues and can give recommendations automatically. But database types are diverse, and database engines are advancing rapidly, policies for a specific database, and a specific version may become outdated. Using the set of policies meant for the last MySQL version on the newest version may seriously affect the efficiency of application development, which is a source of conflict between the development team and the DBAs. When the reviewer's ability is limited, it puts higher requirements on the review tool. An excellent SQL review tool should have a more refined capability of being able to:
 
 - Apply to different database types;
 - Apply to different workload types, such as OLTP, OLAP, or HTAP;
@@ -31,7 +31,7 @@ For most developers, databases seem too complex and mysterious.  For example, th
 
 ## A Coherent Development Experience: the Shift-left Approach
 
-A developer-friendly tool needs to integrate as much as possible into the working habits of the developers. For example, if SQL scripts are managed on a VCS (version control system), it's not pleasant to log into there and paste SQL for review in a different place. It should be integrated into the existing developer workflow: the support for GitHub and GitLab is a no-brainer. This [shift-left approach](https://devopedia.org/shift-left) makes it possible for the SQL scripts to be reviewed as they are submitted to VCS, rather than at the end of the development cycle, right before the deployment of a new application. 
+A developer-friendly tool needs to integrate as much as possible into the working habits of the developers. For example, if SQL scripts are managed on a VCS (version control system), it's not pleasant to log into there and paste SQL for review in a different place. It should be integrated into the existing developer workflow: the support for GitHub and GitLab is a no-brainer. This [shift-left approach](https://devopedia.org/shift-left) makes it possible for the SQL scripts to be reviewed as they are submitted to VCS, rather than at the end of the development cycle, right before the deployment of a new application.
 
 ## End-to-End CI/CD Workflow
 

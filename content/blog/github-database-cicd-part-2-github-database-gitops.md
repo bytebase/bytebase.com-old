@@ -3,7 +3,7 @@ title: "How to Setup Database CI/CD with GitHub, Part 2: GitHub.com Database Git
 author: Ningjing
 published_at: 2022/9/6 13:00:00
 feature_image: /static/blog/github-database-cicd-part-2-github-database-gitops/howto-github-2.webp
-tags: Education
+tags: How-To
 description: This second part will guide you through configuring GitHub.com database GitOps with Bytebase. After following these steps, you can trigger database changes by merging sql files into your GitHub repository.
 ---
 

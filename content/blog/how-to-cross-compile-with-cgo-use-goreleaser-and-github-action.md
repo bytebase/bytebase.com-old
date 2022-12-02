@@ -3,8 +3,8 @@ title: How to cross compile with CGO using GoReleaser and GitHub Actions
 author: Junyi
 published_at: 2022/08/24 15:17
 feature_image: /static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/banner.webp
-tags: Education
-description: We meet some trouble using goreleaser and cgo at the same time. This blog tells how we found the best practices. 
+tags: How-To
+description: We meet some trouble using goreleaser and cgo at the same time. This blog tells how we found the best practices.
 ---
 
 ## Background
@@ -14,6 +14,7 @@ When implementing [SQL Review for PostgreSQL](/docs/sql-review/review-rules/supp
 In the [1.2.1 release](/changelog/bytebase-1-2-1), we found that the [GoReleaser](https://github.com/goreleaser/goreleaser) did not work correctly, and the error message pointed to pg_query_go. Fortunately, this version did not use pg_query_go. So we first added the "!release" Golang tag to ensure a successful release. Then we started the long road to fight against GoReleaser and CGO.
 
 ## Clue One
+
 ![exclude-all-go-files-error](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/exclude-all-go-files-error.webp)
 
 ```
@@ -52,7 +53,7 @@ So why do we need this here? You may have noticed that we have specified four ta
 
 Our build environment is Ubuntu x64 on GitHub Actions. Before turning on CGO, we only need to handle the parameters for cross-platform Go compilation. And this step is handled by the Go compiler and GoReleaser. But after CGO is introduced, we also need to compile C/C++ code, so we need the corresponding C/C++ cross-compilation toolchain.
 
-In other words, we may need four compilation toolchains for the target platform. Fortunately,  goreleaser-cross supports them all.
+In other words, we may need four compilation toolchains for the target platform. Fortunately, goreleaser-cross supports them all.
 ![goreleaser-cross-supported-platforms](/static/blog/how-we-explored-the-best-practices-of-goreleaser-x-cgo/goreleaser-cross-supported-platforms.webp)
 
 Now it looks like the problem is solved, but it is not perfect. The goreleaser/goreleaser-cross repo has only 26 stars, while goreleaser/goreleaser has 10k+ stars. It could mean that using goeleaser-cross have some risks.
@@ -75,6 +76,7 @@ For the Linux platform
 
 - Compiling from x64 to x64 requires a gcc/g++ toolchain, which we usually use.
 - Compiling from x64 to arm64 requires a well-maintained toolchain, "aarch64-linux-gnu-gcc". You can get it directly from the Ubuntu package manager:
+
 ```shell
 sudo apt-get -y install gcc-aarch64-linux-gnu
 ```

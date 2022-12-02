@@ -3,7 +3,7 @@ title: Dev, SRE, Operations, DevOps - What’s the Difference?
 author: Tianzhou
 published_at: 2022/07/15 08:00:00
 feature_image: /static/blog/dev-sre-ops-devops-difference/dev-sre-ops.webp
-tags: Education
+tags: Explanation
 description: Explain and address the confusion between Developer (Dev), Site Reliability Engineer (SRE), (Operations) Ops and DevOps.
 ---
 
