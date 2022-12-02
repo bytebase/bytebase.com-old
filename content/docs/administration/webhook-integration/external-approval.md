@@ -87,7 +87,9 @@ Get the **App ID** and **App Secret** in the General info section of Credentials
 
 <hint-block type="warning">
 
-The registered Bytebase account must have an **identical** email at Feishu to receive Approval requests.
+Bytebase uses account emails to find users at Feishu.
+
+Specifically, the issue assignee must have an **identical** email at Feishu to receive Approval requests. In Feishu Approvals, Bytebase bot will represent the issue creator if she can't be found at Feishu.
 
 </hint-block>
 

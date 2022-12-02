@@ -3,7 +3,7 @@ title: The Database CI/CD Best Practice with GitHub
 author: Changyu
 published_at: 2022/08/31 15:15
 feature_image: /static/blog/database-cicd-best-practice-with-github/database-cicd-best-practice-with-github.webp
-tags: Education
+tags: How-To
 description: We already have CI/CD for code delivery, why not the database? Imagine applying and deploying database changes the same way you would application code.
 ---
 
