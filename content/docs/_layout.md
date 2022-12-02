@@ -109,9 +109,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [State-based Migration](/change-database/state-based-migration)
 
-## SQL Editor
-
-### [Overview](/sql-editor/overview)
+## [SQL Editor](/sql-editor/overview)
 
 ### [Run and EXPLAIN Query](/sql-editor/run-queries)
 

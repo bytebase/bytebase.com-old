@@ -2,7 +2,7 @@
 title: Manage SQL Scripts
 ---
 
-Sheet allows you to store the SQL statements, run them and share them with your teammates.
+**Sheet** allows you to store, run and share the SQL statements with your teammates.
 
 ## How to save the sheet
 
