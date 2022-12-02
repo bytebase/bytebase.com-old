@@ -51,6 +51,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Run a UI Workflow](/get-started/work-with-a-project/run-a-ui-workflow)
 
+### [Manage with Terraform](/get-started/terraform)
 ---
 
 ## Concepts
@@ -141,6 +142,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Tenant Project](/tenant-database-management/tenant-project)
 
+### [Tenant GitOps](/tenant-database-management/tenant-gitops)
+
 ## Disaster Recovery
 
 ### [Backup and Restore Database](/disaster-recovery/backup-restore-database/overview)
@@ -176,6 +179,8 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [Approval Policy](/administration/environment-policy/approval-policy)
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
+
+### [Sensitive Data](/administration/sensitive-data)
 
 ### [Webhook Integration](/administration/webhook-integration/overview)
 
