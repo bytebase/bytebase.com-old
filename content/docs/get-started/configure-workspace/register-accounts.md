@@ -16,7 +16,7 @@ After the admin account is created, you can register a regular account and will 
 
 ![normal-account](/docs/get-started/configure-workspace/register-accounts/normal-account.webp)
 
-## Login with GitLab
+## Login with GitLab / GitHub
 
 <hint-block type="info">
 
@@ -24,12 +24,18 @@ This feature is only available in the **Team** or **Enterprise** plan.
 
 </hint-block>
 
-In order to log in with GitLab:
+User can login Bytebase directly with her GitLab / GitHub, below shows the GitLab login process,
+GitHub works in a similar way:
+
+In order to log in with GitLab,
 
 1. In Bytebase, the **Workspace Owner** completes [VCS configuration](/docs/vcs-integration/add-git-provider).
-2. In GitLab, set the public email the same as the registered email in Bytebase.
+2. When a user tries to use the GitLab Login, Bytebase will first try to match the GitLab public email with the existing member in Bytebase. In GitLab, the public email can be set here.
 
    ![gitlab-public-email](/docs/get-started/configure-workspace/register-accounts/gitlab-public-email.webp)
+
+   If a matching member is found, then that user will login as that existing Bytebase member. Otherwise, Bytebase will create a new member with an unguessable random password, and allow the user to login as that created member. Later, user can visit her profile page to change the
+   password, which enables her to login using password as well.
 
 ## Update password
 
