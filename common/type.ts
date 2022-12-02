@@ -1,5 +1,6 @@
 export type PostTag =
   | "Announcement"
+  | "Case Study"
   | "Engineering"
   | "Explanation"
   | "How-To"
@@ -9,6 +10,8 @@ export function postTagStyle(tag: PostTag): string {
   switch (tag) {
     case "Announcement":
       return "bg-indigo-100 text-indigo-800";
+    case "Case Study":
+      return "bg-cyan-100 text-cyan-800";
     case "Engineering":
       return "bg-gray-100 text-gray-800";
     case "Explanation":

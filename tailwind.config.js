@@ -17,6 +17,7 @@ module.exports = {
         "main-hover": "var(--color-main-hover)",
         "main-text": "var(--color-main-text)",
         fuchsia: colors.fuchsia,
+        cyan: colors.cyan,
       },
       spacing: {
         112: "28rem",
