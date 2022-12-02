@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-![SQL Editor Preview](/static/docs/sql-editor-preview.webp)
+![SQL Editor Preview](/static/docs/sql-editor/preview.webp)
 
 SQL Editor provides an all-in-one interface to perform interactive database operations:
 
