@@ -38,7 +38,7 @@ output=(
 for (( i=0; i<${#input[@]}; i++ ));
 do
     echo "Start to fetch the SQL Review config file from ${input[$i]} to ${output[$i]}."
-    response=$(curl -w "%{http_code}" -o ${output[$i]} ${input[$i]})
+    response=$(curl -w "%{http_code}" -o ${output[$i]} ${input[$i]} --retry 3 --retry-all-errors)
     http_code=$(tail -n1 <<< "$response")
 
     if [ $http_code != 200 ]
