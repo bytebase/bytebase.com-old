@@ -6,8 +6,8 @@ title: Overview
 
 SQL Editor provides an all-in-one interface to perform interactive database operations:
 
+- [Manage SQL scripts](/docs/sql-editor/manage-sql-scripts)
 - [Run and EXPLAIN queries](/docs/sql-editor/run-queries)
-- [Export query results](/docs/sql-editor/query-results) with [data anonymization](/docs/sql-editor/anonymize-data)
+- [Data anonymization](/docs/sql-editor/anonymize-data)
 - [Perform admin operations](/docs/sql-editor/admin-mode)
 - [Explore schemas](/docs/sql-editor/explore-schema)
-- [Manage SQL scripts](/docs/sql-editor/sheet)

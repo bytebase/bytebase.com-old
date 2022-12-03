@@ -111,17 +111,15 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ## [SQL Editor](/sql-editor/overview)
 
-### [Run and EXPLAIN Query](/sql-editor/run-queries)
+### [Manage SQL Scripts with Sheet](/sql-editor/manage-sql-scripts)
 
-### [Query Results](/sql-editor/query-results)
+### [Run and EXPLAIN Query](/sql-editor/run-queries)
 
 ### [Anonymize Data](/sql-editor/anonymize-data)
 
 ### [Admin Mode](/sql-editor/admin-mode)
 
 ### [Explore Schema](/sql-editor/explore-schema)
-
-### [Manage SQL Scripts](/sql-editor/manage-sql-scripts)
 
 ## [VCS Integration (GitOps)](/vcs-integration/overview)
 

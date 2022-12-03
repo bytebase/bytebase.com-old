@@ -1,20 +1,22 @@
 ---
-title: Manage SQL Scripts
+title: Manage SQL Scripts with Sheet
 ---
 
-**Sheet** allows you to store, run and share the SQL statements with your teammates.
+**Sheet** is the medium for you to interact inside SQL Editor. Sheet is the entity where you store,
+run and share the SQL scripts with your teammates.
 
-## How to save the sheet
+## Save sheet
 
-Click the `Save` button on the upper right of the Editor or use the shortcut key `(⌘ + S)` to save your SQL queries for later reference. You can find them in the `Sheets` panel on the left.
+Click the `Save` button on the upper right of the Editor or use the shortcut key `(⌘ + S)` to save
+your SQL queries for later reference. SQL Editor will also automatically record SQL queries which
+have run successfully. You can find them in the History panel on the left.
 
-![Sheets](/static/docs/sql-editor/sheets.webp)
+![History](/static/docs/sql-editor/save-and-history.webp)
 
 ## Query history
 
-SQL Editor will automatically record SQL queries which have run successfully. You can find them in the `History` panel on the left.
-
-![History](/static/docs/sql-editor/history.webp)
+SQL Editor will automatically record SQL queries which have run successfully. You can find them in
+the `History` panel on the left.
 
 Click the `Share` button on the upper right of the Editor to share SQL queries in the current tab with your teammates.
 
@@ -28,8 +30,13 @@ You can configure the sheet with one of the following access levels:
 
 ![Configure access](/static/docs/sql-editor/share-link-access.webp)
 
-## Copy the share link
-
-Click the `Copy` button to copy the sharing link to the clipboard.
+To share a sheet, click the `Copy` button to copy the sharing link to the clipboard.
 
 ![Copy the share link](/static/docs/sql-editor/share-popover.webp)
+
+## Manage sheet
+
+You can manage sheets in the `Sheets` panel on the top left side of the page. You can find all
+created sheets, sheets others shared with you and star sheets.
+
+![Sheets](/static/docs/sql-editor/sheet-panel.webp)
