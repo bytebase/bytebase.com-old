@@ -10,7 +10,7 @@ This feature is only available in the Enterprise plan.
 
 Workspace Owners and DBAs can mark table columns as `Sensitive` to anonymize the data.
 
-See the following example, the `salary` column is marked as `Sensitive`.
+See the following example, the `amount` column is marked as `Sensitive`.
 
 ![setting](/static/docs/administration/anonymize-data/anonymize-data-setting.webp)
 
