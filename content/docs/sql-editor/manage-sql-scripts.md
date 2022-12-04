@@ -16,7 +16,7 @@ have run successfully. You can find them in the History panel on the left.
 ## Query history
 
 SQL Editor will automatically record SQL queries which have run successfully. You can find them in
-the `History` panel on the left.
+the **History** panel on the left.
 
 Click **Share** on the upper right of the Editor to share SQL queries in the current tab with your
 teammates.
@@ -37,7 +37,7 @@ To share a sheet, click **Copy** button to copy the sharing link to the clipboar
 
 ## Manage sheet
 
-You can manage sheets in the `Sheets` panel on the top left side of the page. You can find all
+You can manage sheets in the **Sheets** panel on the top left side of the page. You can find all
 created sheets, sheets others shared with you and star sheets.
 
 ![Sheets](/static/docs/sql-editor/sheet-panel.webp)
