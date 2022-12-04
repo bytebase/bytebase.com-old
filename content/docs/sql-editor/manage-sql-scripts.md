@@ -2,12 +2,12 @@
 title: Manage SQL Scripts with Sheet
 ---
 
-**Sheet** is the medium for you to interact inside SQL Editor. Sheet is the entity where you store,
+`Sheet` is the medium for you to interact inside SQL Editor. Sheet is the entity where you store,
 run and share the SQL scripts with your teammates.
 
 ## Save sheet
 
-Click the `Save` button on the upper right of the Editor or use the shortcut key `(⌘ + S)` to save
+Click **Save** on the upper right of the Editor or use the shortcut key `(⌘ + S)` to save
 your SQL queries for later reference. SQL Editor will also automatically record SQL queries which
 have run successfully. You can find them in the History panel on the left.
 
@@ -18,7 +18,8 @@ have run successfully. You can find them in the History panel on the left.
 SQL Editor will automatically record SQL queries which have run successfully. You can find them in
 the `History` panel on the left.
 
-Click the `Share` button on the upper right of the Editor to share SQL queries in the current tab with your teammates.
+Click **Share** on the upper right of the Editor to share SQL queries in the current tab with your
+teammates.
 
 ## Configure sheet access
 
@@ -30,7 +31,7 @@ You can configure the sheet with one of the following access levels:
 
 ![Configure access](/static/docs/sql-editor/share-link-access.webp)
 
-To share a sheet, click the `Copy` button to copy the sharing link to the clipboard.
+To share a sheet, click **Copy** button to copy the sharing link to the clipboard.
 
 ![Copy the share link](/static/docs/sql-editor/share-popover.webp)
 
