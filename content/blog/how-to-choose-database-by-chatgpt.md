@@ -223,13 +223,13 @@ I am impressed.
 
 ChatGPT can understand and engage the conversation like a real human. For such a
 technical question, ChatGPT's answer is mostly sane, albeit a bit out-dated. e.g. When asking for
-the HTAP databases, it mentions MemSQL (which has already been rebranded to [SingleStore](https://www.singlestore.com/blog/revolution/)) and dissolved NuoDB, ClustrixDB, but ignores the starlet like [TiDB](https://www.vldb.org/pvldb/vol13/p3072-huang.pdf). This is understandable as ChatGPT confesses that its knowledge cutoff is September 2021
-when I ask it to brief about the AWS re:Invent 2022 happened just days ago.
+the HTAP databases, it mentions MemSQL (which has already been rebranded to [SingleStore](https://www.singlestore.com/blog/revolution/)) and dissolved NuoDB, ClustrixDB, but ignores the starlet like [TiDB](https://www.vldb.org/pvldb/vol13/p3072-huang.pdf). This is understandable as ChatGPT confesses that its knowledge cutoff is September 2021,
+after I ask it to brief the AWS re:Invent 2022 happened just days ago.
 
 ![_](/static/blog/how-you-choose-database-by-chatgpt/aws-reinvent.webp)
 
 I believe the knowledge freshness gap will be shortened dramatically in the coming years, just like
-the data analysis industry, where those analysis taking days and weeks before now just take minitues
+the data analysis industry, where those analysis taking days and weeks before now just take minutes
 if not instant.
 
 ChatGPT's tone is also convincing and diplomatic. e.g. When talking about MongoDB, it says
@@ -240,7 +240,8 @@ ChatGPT's tone is also convincing and diplomatic. e.g. When talking about MongoD
 It didn't say MongoDB doesn't support ACID (which would be incorrect). In real database debate,
 such subtle mistake will cost the whole battle.
 
-As ChatGPT progresses, I expect it could give database suggestions as good as any database veterans. And we may all retire at that point regardless of whether willingfully or not.
+As ChatGPT progresses, I expect it could give database suggestions as good as any database veterans.
+And we may all retire at that point regardless of whether willingly or not.
 
 ---
 
