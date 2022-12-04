@@ -10,7 +10,7 @@ Please note that you should be really carefully using Admin Mode, since you are 
 
 ## Run query in Admin Mode
 
-![Admin Mode](/static/docs/sql-editor-admin-mode.webp)
+![Admin Mode](/static/docs/sql-editor/admin-mode.webp)
 
 Click the mode selector to switch to Admin Mode. Note that this is only available for DBAs and Workspace Owners.
 
