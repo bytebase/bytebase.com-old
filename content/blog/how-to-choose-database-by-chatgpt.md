@@ -8,7 +8,7 @@ description: A conversation with ChatGPT consulting which database to pick for y
 ---
 
 Last week, OpenAI revealed their new toy [ChatGPT](https://openai.com/blog/chatgpt/).
-Suddenly, my social network is overwhelmed with all sorts of ChatGPT convensations. Regardless of
+Suddenly, my social network is overwhelmed with all sorts of ChatGPT conversations. Regardless of
 how weird the questions are, ChatGPT always sounds convincing, even though sometimes it's just
 nonsense. Below I start a conversation asking ChatGPT the database I should choose for my next
 software project. I picked this topic because:
@@ -73,7 +73,7 @@ warehousing.
 
 GCP offers a fully managed version of PostgreSQL called Cloud SOL for PostgreSQL, which makes it
 easy to set up, operate, and scale a PostgreSQL database in the cloud. GCP also offers a range of
-other services and tools that can be used with PostgreSQL, such as Bigquery for data analytics and
+other services and tools that can be used with PostgreSQL, such as BigQuery for data analytics and
 Cloud Pub/Sub for event-driven architecture.
 
 Microsoft Azure offers a fully managed version of PostgreSQL called Azure Database for PostgreSQL,
@@ -89,10 +89,10 @@ each provider carefully before making a decision.
 
 **Me:** What are the available regions and respective prices for each cloud vendor?
 
-**ChatGPT:** I'm sorry, but I am not able to browse the intemet, so I cannot provide you with
+**ChatGPT:** I'm sorry, but I am not able to browse the internet, so I cannot provide you with
 information about the available regions and prices for each cloud provider. I am a large language
 model trained by OpenAl, and my knowledge is based on the text that has been fed to me. I am not
-able to access real-time information or browse the intemet like a human.
+able to access real-time information or browse the internet like a human.
 
 _Luckily, ChatGPT is not capable of answering this, otherwise, our [DB Cost](https://dbcost.com) website would be wasted_.
 
@@ -109,7 +109,7 @@ combine the performance and scalability of in-memory architectures with the reli
 durability of disk-based storage, making them well-suited for applications that require real-time
 analytics on high-volume, transactional data.
 
-Another option is to use a data warehousing solution, such as Amazon Redshift, Google Bigquery, or
+Another option is to use a data warehousing solution, such as Amazon Redshift, Google BigQuery, or
 Microsoft Azure Synapse Analytics. These solutions allow you to load and store your transactional
 data in a separate, optimized environment for analytics, while still providing real-time access to
 the data for reporting and other business intelligence needs.
@@ -184,9 +184,9 @@ research and compare different solutions carefully before making a decision.
 
 **Me:** But those are for OLTP, while I ask for an HTAP, serverless database. (_Keep pressing again_)
 
-**ChatGPT:** I'm sorry, but the cloud-based database solutions Intentioned earlier, such as Amazon
+**ChatGPT:** I'm sorry, but the cloud-based database solutions mentioned earlier, such as Amazon
 Web Services (AWS) Aurora, Google Cloud SQL, and Microsoft Azure Database for MySQL or PostgreSQL,
-are not hybrid transactionaVanalytical processing (HTAP) databases. They are designed to support
+are not hybrid transactional and analytical processing (HTAP) databases. They are designed to support
 online transaction processing (OLTP) workloads, and they do not support online analytical
 processing (OLAP) workloads.
 
@@ -213,7 +213,7 @@ using a commercial HTAP database solution instead.
 
 **ChatGPT:** Thank you for your understanding. As a large language model trained by OpenAl, my goal
 is to provide accurate and helpful information to the best of my ability. I am not able to browse
-the intemet or access real-time information, so I may not always be able to provide detailed or
+the internet or access real-time information, so I may not always be able to provide detailed or
 up-to-date answers to your questions. If you have any further questions, please don't hesitate to
 ask. I will do my best to help.
 
