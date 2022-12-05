@@ -1,5 +1,5 @@
 ---
-title: Ask ChatGPT - How to Choose Database for Your Next Project
+title: Ask ChatGPT - How to Choose the Right Database for Your Next Project
 author: Tianzhou
 published_at: 2022/12/04 08:40:00
 feature_image: /static/blog/how-you-choose-database-by-chatgpt/choice.webp
@@ -11,11 +11,11 @@ Last week, OpenAI revealed their new toy [ChatGPT](https://openai.com/blog/chatg
 Suddenly, my social network is overwhelmed with all sorts of ChatGPT convensations. Regardless of
 how weird the questions are, ChatGPT always sounds convincing, even though sometimes it's just
 nonsense. Below I start a conversation asking ChatGPT the database I should choose for my next
-software project. I pick this topic because:
+software project. I picked this topic because:
 
 1. Comparing different databases always causes [heated debate](https://www.bytebase.com/blog/database-review-2021).
    I am curious how the state-of-the-art AI handles this.
-1. I know this domain decently well, so I could escape from ChatGPT persuasive trap (hopefully).
+1. I know this domain decently well, so I could escape from the ChatGPT persuasive trap (hopefully).
 
 ## Scripts
 
@@ -245,6 +245,6 @@ And we may all retire at that point regardless of whether willingly or not.
 
 ---
 
-Full image script
+Attached: my full conversation with ChatGPT.
 
 ![_](/static/blog/how-you-choose-database-by-chatgpt/full-script.webp)
