@@ -69,8 +69,6 @@ another set of SQL statements to rollback the schema in case bad things happen. 
 are bundled with the application release, and are executed right before the new code binary starts
 the next time.
 
-### Decoupled Database Schema Change from Application Deployment
-
 While coupled approach is straightforward, it does have several limitations:
 
 1. Very little control when schema change goes wrong. Application would not start and it requires
@@ -86,8 +84,11 @@ While coupled approach is straightforward, it does have several limitations:
    one of the instances is malfunctioning, and then spend a lot of effort to trace down it's
    caused by a reckless schema change made by an application team.
 
-[Sourcegaph RFC](https://docs.google.com/document/d/1_wqvNbEGhMzu45CHZNrLQYys7gl0AtVpLluGp4cbQKk/edit#heading=h.ddeuyk4t99yx) lists the typical issues with the coupled approach. And their solution is to decouple
-the schema change from code deployments.
+[Sourcegaph RFC](https://docs.google.com/document/d/1_wqvNbEGhMzu45CHZNrLQYys7gl0AtVpLluGp4cbQKk/edit#heading=h.ddeuyk4t99yx)
+lists the typical issues with the coupled approach. And their solution is to decouple the schema
+change from code deployments.
+
+### Decoupled Database Schema Change from Application Deployment
 
 The core idea of decoupled solution is to move schema change into a separate process. The typical
 workflow is first performing the schema change needed for the new release. If schema
