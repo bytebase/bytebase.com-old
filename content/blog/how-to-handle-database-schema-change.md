@@ -15,7 +15,7 @@ This is a series of articles about database schema change (aka schema migration)
 
 ---
 
-## What is a Datbase Schema Change
+## What is a Database Schema Change
 
 A database schema is the structure of a database, which describes the relationships between the
 different tables and fields in the database. A schema change refers to any alteration to this
@@ -23,7 +23,7 @@ structure, such as adding a new table, modifying the data type of a field, or ch
 relationships between tables.
 
 Database schema changes are typically necessary when a database needs to be updated to support new
-features or functionality, or to improve the performance or security of the system. In some cases,
+features or functionality, or to improve system performance or security. In some cases,
 schema changes may also be required to fix bugs or other issues with the database.
 
 Making a schema change can be a complex and risky process, as it can affect the entire database and
@@ -75,8 +75,8 @@ While coupled approach is straightforward, it does have several limitations:
 
 1. Very little control when schema change goes wrong. Application would not start and it requires
    manual intervention.
-1. Some schema changes may take a long time to finish, which means down time when deploying the new
-   releaes versions.
+1. Some schema changes may take a long time to finish, which means downtime when deploying the new
+   version releases.
 1. Not suitable for applications where there are multiple server instances accessing the same
    database. Since any of the server instance may perform the schema change, and it requires extra
    locking mechanism to coordinate the change.
@@ -87,7 +87,7 @@ While coupled approach is straightforward, it does have several limitations:
    caused by a reckless schema change made by an application team.
 
 [Sourcegaph RFC](https://docs.google.com/document/d/1_wqvNbEGhMzu45CHZNrLQYys7gl0AtVpLluGp4cbQKk/edit#heading=h.ddeuyk4t99yx) lists the typical issues with the coupled approach. And their solution is to decouple
-the schema change from code deployments
+the schema change from code deployments.
 
 The core idea of decoupled solution is to move schema change into a separate process. The typical
 workflow is first performing the schema change needed for the new release. If schema
