@@ -33,7 +33,7 @@ You will be redirected to your GitLab repository and see that an MR has been gen
 
 ![_](/static/blog/how-to-integrate-sql-review-into-gitlab-github-ci/gitlab-mr.webp)
 
-## Step 2 - SQL Review is Triggered Automatically
+## Step 2 - Create an MR/PR to Trigger SQL Review
 
 Once you've set up the CI, the SQL review policy will be automatically triggered to check against each MR that contains SQL script files.
 
