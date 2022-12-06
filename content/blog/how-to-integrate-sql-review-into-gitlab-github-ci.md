@@ -49,7 +49,7 @@ Follow [this doc](/docs/sql-review/review-rules/create-schema-review-policy) to 
 
 ## Summary
 
-Bytebase now supports integrating SQL review CI into your preferred code repository, whether it be GitHub or GitLab. In addition, for GitHub, Bytebase provides [additional ways](/docs/sql-review/sql-advisor/overview) through:
+Bytebase now supports integrating SQL review CI into your preferred code repository, whether it be GitHub or GitLab. In addition, for GitHub, Bytebase provides [additional ways](/docs/sql-review/sql-advisor/overview) to integrate SQL Review through:
 
 - [GitHub App](https://github.com/marketplace/bytebase): Zero code configuration.
 - GitHub Action: you will need to write a simple YAML file, learn how in the [Database CI/CD with GitHub tutorial series](/blog/github-database-cicd-part-1-sql-review-github-actions).
