@@ -2,7 +2,7 @@
 title: Data Model
 ---
 
-![Bytebase data model](/static/docs/data-model_v1.png)
+![Bytebase data model](/static/docs/data-model-v2.webp)
 
 ## Workspace
 
@@ -49,3 +49,9 @@ Most of the time, `Developers` work with the `Project`.
 In Bytebase, `Issue` is optimized for **database domain**. An `Issue` always belongs to a `Project`. A single `Issue` is only dealing with a particular `Database Instance` (e.g. creating a database on a database instance). Except for creating database issue, most other issues are also associated with an existing `Database` (e.g. altering a table on a database).
 
 Internally, the issue progression is represented by a `Pipeline`. A `Pipeline` contains multiple `Stages`, each usually corresponds to an `Environment`. A `Stage` contains multiple `Tasks` dealing with a specific database operation such as altering table. A single `Task` can run multiple times (e.g. failed first and then retry). Each run is represented by a `Task Run`.
+
+## Sheet
+
+`Sheet` is the entity where users store, run and share the SQL scripts. A paritcular sheet belongs
+to a project and may or may not attach a database context. Users interacts with the Sheet from
+[SQL Editor](/docs/sql-editor/manage-sql-scripts).

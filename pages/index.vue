@@ -379,7 +379,7 @@
       <div class="pt-12">
         <img
           class="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
-          src="~/static/docs/sql-editor-preview.webp"
+          src="~/static/docs/sql-editor/preview.webp"
           alt="All-in-one SQL Editor"
         />
       </div>

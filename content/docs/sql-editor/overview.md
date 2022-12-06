@@ -1,11 +1,13 @@
 ---
-title: SQL Editor
+title: Overview
 ---
 
-Your All-in-one SQL Editor, easy-to-use query interface to SELECT database records.
+![SQL Editor Preview](/static/docs/sql-editor/preview.webp)
 
-> Inspect records, explore schema, sharing SQL scripts, and more.
+SQL Editor provides an all-in-one interface to perform interactive database operations:
 
----
-
-![SQL Editor Preview](/static/docs/sql-editor-preview.webp)
+- [Manage SQL scripts](/docs/sql-editor/manage-sql-scripts)
+- [Run and EXPLAIN queries](/docs/sql-editor/run-queries)
+- [Data anonymization](/docs/sql-editor/anonymize-data)
+- [Perform admin operations](/docs/sql-editor/admin-mode)
+- [Explore schemas](/docs/sql-editor/explore-schema)

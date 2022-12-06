@@ -7,12 +7,10 @@ tags: Explanation
 description: The database schema describes the logical structure of the database data and is the most critical information of a relational database system.
 ---
 
-This is a series of articles about Database Schema
+This is a series of articles about database schema change (aka schema migration):
 
 - What is a Database Schema? (this one)
-- What is a Database Schema Change
-- Common Database Schema Change Mistakes
-- How to Handle Database Schema Change
+- [How to Handle Database Schema Change?](/blog/how-to-handle-database-schema-change)
 - Top Database Schema Change Tools
 
 ---
@@ -45,4 +43,4 @@ In the formal definition, a database schema is a set of formulas called integrit
 
 Above is a database schema for a database storing the employee data. The database schema is the **most critical** information because it’s the blueprint of how the database data is organized. A DBMS can have a database schema with empty data, but not vice versa. The database data is meaningless without the database schema.
 
-Database schema evolves as the business evolves. In the next post, we will explain the evolution process, the database schema change.
+Database schema evolves as the business evolves. In the next post [How to Handle Database Schema Change](/blog/how-to-handle-database-schema-change), we will cover the evoluation of database schema, the common mistakes during schema changes, and the best practice of applying database schema changes properly.
