@@ -35,11 +35,11 @@ You will be redirected to your GitLab repository and see that an MR has been gen
 
 ## Step 2 - Create an MR/PR to Trigger SQL Review
 
-Once you've set up the CI, the SQL review policy will be automatically triggered to check against each MR that contains SQL script files.
+Once you've set up the CI, if you create a GitLab MR / GitHub PR that contains the files matching [the file path template](/docs/vcs-integration/name-and-organize-schema-files#file-path-template), the SQL review policy will be automatically triggered to check against the changes.
 
 ![_](/static/blog/how-to-integrate-sql-review-into-gitlab-github-ci/gitlab-sql-review.webp)
 
-Similarly, in GitHub repos, SQL review will check for changes that match [the file path template](/docs/vcs-integration/name-and-organize-schema-files#file-path-template) through GitHub Actions.
+Similarly, in GitHub repos, SQL review will check against the changes through GitHub Actions.
 
 The following image shows the detailed results of a SQL review via GitHub Actions.
 
