@@ -6,7 +6,7 @@ description: This section shows the steps of contributing documentation.
 Before getting started, please make sure that you are familiar with 
 
 - [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Bytebase Technical Writing Guide](https://github.com/bytebase/bytebase/blob/main/docs/writing-guide.md)
+- [Bytebase Technical Writing Style Guide](https://github.com/bytebase/bytebase/blob/main/docs/writing-guide.md)
 
 ## The structure of a document `.md` file
 
