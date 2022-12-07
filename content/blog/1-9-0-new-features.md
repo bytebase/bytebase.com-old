@@ -19,27 +19,27 @@ GitHub’s [Octoverse 2022](https://octoverse.github.com/) mentioned that HCL is
 
 ![_](/static/blog/1-9-0-new-features/octoverse-2022.webp)
 
-Whether you're a public cloud powerhouse or a SaaS newcomer, developing a Terraform Provider for your service has become a standard. As a toolset to manage your infra, Bytebase has received requests from users who wish to use Terraform to manage Bytebase resources. 
+Whether you're a public cloud powerhouse or a SaaS newcomer, developing a Terraform Provider for your service has become a standard. As part of the toolset to manage your infra, Bytebase has received requests from users who wish to use Terraform to manage Bytebase resources.
 
 ![_](/static/blog/1-9-0-new-features/bytebase-terraform-provider.webp)
 
-We present the first preview to manage your Bytebase **Environment** and **Database Instance**. Terraform and Bytebase are a natural pair, as Terraform creates the environment and database and then passes the information to the Bytebase Terraform Provider. A few HCL files are all it takes to automate the entire database development environment setup.
+We present the first preview to manage your Bytebase **Environment** and **Database Instance**. Terraform and Bytebase are a natural pair, as Terraform provisions the database environment and then passes the information to the Bytebase Terraform Provider. A few HCL files are all it takes to automate the entire database development environment setup.
 
 A few more iterations, and we will have a killer solution.🔥
 
 ## Schema Sync for PostgreSQL
 
-After introducing [schema sync for MySQL](/blog/how-schema-sync-work) library table synchronization some time ago, we bring you [schema sync for PostgreSQL](/docs/change-database/synchronize-schema), which is based on [TiDB's Parser](https://github.com/pingcap/parser). PostgreSQL doesn't have a decent parser, so we made one ourselves.
+After introducing [schema sync for MySQL](/blog/how-schema-sync-work) library table synchronization some time ago, we now bring you [schema sync for PostgreSQL](/docs/change-database/synchronize-schema).
 
 We are confident that Bytebase's schema sync for PostgreSQL solution is the best in the industry because we have the best PG Parser on the market (and is also a constant WIP to perfect it).
 
-There is a lot more that a good parser can do. We have invested a lot of hard work in the research and development in the early stages, and now we can implement the product features elegantly.
+There is a lot more that a good parser can do. We have invested a lot of R&D work upfront and now we start to receive dividends to implement features like schema synchronization elegantly.
 
 ![_](/static/blog/1-9-0-new-features/pg-schema-sync.webp)
 
 ## Data Anonymization
 
-Previously, Bytebase was focused on the safety of database change. The other focus of database security is data security. This release is also our first small step in data security, with the ability to [anonymize database fields by tagging them](/docs/administration/anonymize-data). 
+Previously, Bytebase was focused on database change management (DCM). And another critical piece is data security. This release is our first footstep into this territory, with the ability to [anonymize database fields by tagging them](/docs/administration/anonymize-data). 
 
 There's not much to say about the feature alone, after all, many of our friends have them too. The difference is that Bytebase is only here now because we have just laid the groundwork for the system.
 
@@ -57,7 +57,7 @@ Auditors, wait for it.
 
 For the finale, we present [SQL Editor Admin mode](/docs/sql-editor/admin-mode) with a completely fresh look.
 
-The last release introduced Admin mode, which allows DBAs to execute admin commands. After two weeks of iteration, we have upgraded the Admin mode, from the interface to the interaction to a more command line-like form. 
+The last release introduced Admin mode, which allows DBAs to execute admin commands. After two weeks of iteration, we have upgraded the Admin mode, to a more command line-like user experience.
 
 A picture is worth a thousand words. I'll bet $1,000 that of the 4 features introduced today, this must be DBAs’ favorite. 
 
@@ -65,7 +65,7 @@ A picture is worth a thousand words. I'll bet $1,000 that of the 4 features intr
 
 ## Summary
 
-It’s already Dec. 2022, and we still have two releases left. Except for the team building last month, we have maintained a steady two-week delivery rhythm this year. Naturally, the remaining two releases will be delivered on time (just in time for my turn to be the release manager again). 
+It’s already Dec. 2022, except for the team building last month, we have maintained a steady two-week delivery rhythm this year.
 
 Looking back at the roadmap I set for Bytebase at the beginning of this year, I think we are mostly on track. There are some regrets, but there are also a lot of surprises from the team and our users. 
 
@@ -73,4 +73,4 @@ When I finished Bytebase's core modeling over a year ago, I was a bit insecure, 
 
 In 2023, we'll release a cloud version, returning to our team's old roots of cloud services. ☁️
 
-Stay young, be simple, sometimes naive.
+See you next time.
