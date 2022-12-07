@@ -74,7 +74,7 @@ Let’s clarify a few things first:
 
 3. It is unavoidable for the applications to access the databases (otherwise, they won’t run). However, database schema changes can be decoupled from the new application version deployment. Moreover, decoupling these two actions allows you to better control the change process and deal with possible rollbacks.
 
-Bytebase](https://www.bytebase.com/) can cover all manual database access scenarios and unify schema changes into a controlled process.
+[Bytebase](https://www.bytebase.com/) can cover all manual database access scenarios and unify schema changes into a controlled process.
 
 ![_](/static/blog/how-to-manage-database-access-control/machine-to-db-human-to-db-via-bb.webp)
 
