@@ -67,27 +67,27 @@ file.
 
 ### Pros and Cons
 
-✅ Free. Users can use the GitHub Action for free.
+✅ **Free.** Users can use the GitHub Action for free.
 
-✅ Lightweight. Users don't need to deploy any additional components, just generate a single file
+✅ **Lightweight.** Users don't need to deploy any additional components, just generate a single file
 in the code repository and activate it.
 
-✅ Multiple database types are supported at the same time. You need to explicitly specify the
+✅ **Multiple database types are supported at the same time.** You need to explicitly specify the
 database type by file path to support multiple database SQL Review at the same time.
 
-❌ More complex configuration. Initial configuration or updating SQL Review rules is more complex
+❌ **More complex configuration.** Initial configuration or updating SQL Review rules is more complex
 due to the need to manually edit YAML.
 
-❌ Basic SQL Review capability. Due to the inability to connect to a database, this mode can only
+❌ **Basic SQL Review capability.** Due to the inability to connect to a database, this mode can only
 review SQL text based on static rules.
 
-❌ Single active SQL Review policy. Only one set of SQL Review rules are allowed to be active at
+❌ **Single active SQL Review policy.** Only one set of SQL Review rules are allowed to be active at
 the same time.
 
-❌ Single presentation. SQL Review results can only be viewed in the file being reviewed and
+❌ **Single presentation.** SQL Review results can only be viewed in the file being reviewed and
 there is no overview of SQL Review results.
 
-❌ CI-only. This mode only covers SQL Review and is not integrated with the subsequent SQL
+❌ **CI-only.** This mode only covers SQL Review and is not integrated with the subsequent SQL
 deployment processes.
 
 ## GitHub App
@@ -119,26 +119,26 @@ Per file detailed review results will also be displayed inline in the file.
 
 ### Pros and Cons
 
-✅ Free. Users can use the APP for free.
+✅ **Free.** Users can use the APP for free.
 
-✅ Lightweight. Users don't need to deploy any additional components, just one click to deploy the
+✅ **Lightweight.** Users don't need to deploy any additional components, just one click to deploy the
 GitHub App and activate it.
 
-✅ Easy to configure. Point-and-Click configuration.
+✅ **Easy to configure.** Point-and-Click configuration.
 
-✅ Comprehensive presentation. You can view the SQL Review results in both the PR overview and
+✅ **Comprehensive presentation.** You can view the SQL Review results in both the PR overview and
 per-file page.
 
-❌ Basic SQL Review capability. Due to the inability to connect to a database, this mode can only
+❌ **Basic SQL Review capability.** Due to the inability to connect to a database, this mode can only
 review SQL text based on static rules.
 
-❌ Explicitly specify the database type. Due to the inability to connect to a database, this schema
+❌ **Explicitly specify the database type.** Due to the inability to connect to a database, this schema
 can only be explicitly configured to take effect on one of the supported database types.
 
-❌ Single active SQL Review policy. Only one set of SQL Review rules are allowed to be active at
+❌ **Single active SQL Review policy.** Only one set of SQL Review rules are allowed to be active at
 the same time.
 
-❌ CI-only. This mode only covers SQL Review and is not integrated with the subsequent SQL
+❌ **CI-only.** This mode only covers SQL Review and is not integrated with the subsequent SQL
 deployment processes.
 
 ## GitOps CI
@@ -175,26 +175,26 @@ submitted PR.
 
 ### Pros and Cons
 
-✅ Easy to configure. Point-and-Click configuration.
+✅ **Easy to configure.** Point-and-Click configuration.
 
-✅ Advanced SQL Review capabilities. Because Bytebase can connect to the database to fetch the
+✅ **Advanced SQL Review capabilities.** Because Bytebase can connect to the database to fetch the
 structure and statistic, it can provide more advanced SQL Review capabilities.
 
-✅ Multiple SQL Review policies in effect at the same time. Multiple SQL Review policies can be
+✅ **Multiple SQL Review policies in effect at the same time.** Multiple SQL Review policies can be
 configured, associated with specific environments (Test, Prod).
 
-✅ Integration with CD, which automatically triggers the subsequent SQL deployment process after
+✅ **Integration with CD.** Automatically triggers the subsequent SQL deployment process after
 the SQL Review passes and the code is merged, enabling a streamlined database CI/CD experience.
 This unifies the SQL Review standards between the application developer and DBA teams.
 
-✅ No need to specify database type. Bytebase can connect to the database to determine the database
+✅ **No need to specify database type.** Bytebase can connect to the database to determine the database
 type automatically.
 
-❌ Paid subscription. Bytebase Enterprise subscription is required.
+❌ **Paid subscription.** Bytebase Enterprise subscription is required.
 
-❌ More setup. Users need to deploy Bytebase Console and prepare the database environment.
+❌ **More setup.** Users need to deploy Bytebase Console and prepare the database environment.
 
-❌ Single presentation. SQL Review results can only be viewed in the file being reviewed and
+❌ **Single presentation.** SQL Review results can only be viewed in the file being reviewed and
 there is no overview of SQL Review results.
 
 ## Comparison Table
