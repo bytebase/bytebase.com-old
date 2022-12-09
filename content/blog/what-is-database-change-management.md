@@ -14,7 +14,7 @@ Database Change Management (DCM) is a critical part of maintaining and managing 
 tracking and controlling changes to the database, including both the structure of the database (such
 as the tables, columns, and relationships between data) and the data itself. For the relational
 database systems (RDBMS), SQL is the medium to instruct database changes. The structure change
-is dictated via Data Definition Langnuage (DDL), while the data change is dictated via Data
+is dictated via Data Definition Language (DDL), while the data change is dictated via Data
 Manipulation Language (DML).
 
 ## Ideal Process
