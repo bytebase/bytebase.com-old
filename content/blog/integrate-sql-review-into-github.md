@@ -204,7 +204,7 @@ there is no overview of SQL Review results.
 
 |                       | GitHub Action                 | GitHub App                                    | GitOps CI                                                          |
 | --------------------- | ----------------------------- | --------------------------------------------- | ------------------------------------------------------------------ |
-| For                   | **Personal and small teams**  | **Personal and small teams**                  | **Teams needing complete database change management**              |
+| For                   | **Individual and small teams**  | **Individual and small teams**                  | **Teams needing complete database change management**              |
 | Pricing               | Free                          | Free                                          | Enterprise subscription                                            |
 | Setup                 | Deploy GitHub Action          | Deploy GitHub App                             | Deploy Bytebase Concole and prepare database environment           |
 | Configuration         | Code-based with UI assistance | Point-and-Click                               | Point-and-Click                                                    |
