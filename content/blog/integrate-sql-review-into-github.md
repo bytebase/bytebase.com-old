@@ -12,7 +12,7 @@ description: The three ways to integrate Bytebase SQL Review with GitHub. GitHub
 
 The review of SQL change scripts is a critical part of the database change process, which used to be
 the sole responsibility of the DBA. Developers often submitted the SQL scripts to the DBA just before
-going live, making it difficult to ensure the quality of changes.
+the changes go live, leaving the DBAs minimal time to review the scripts (or request changes), making it difficult to ensure the quality of changes.
 
 Bytebase is a database CI/CD tool for developers to make sane database changes with powerful
 automatic SQL Review capabilities. To better accommodate developers' workflow, Bytebase integrates
@@ -34,19 +34,19 @@ In this article, we will introduce the differences between the three modes in de
 ## GitHub Action
 
 Bytebase automates GitHub Action-based SQL Review by simply putting pre-generated workflow files
-into the .github directory to integrate SQL Review rules into the CI process.
+into the `.github` directory to integrate SQL Review rules into the CI process.
 
 ### Setup
 
-1. Obtatin the GitHub Action workflow file
+1. Obtain the GitHub Action workflow file
 
    Visit the [Bytebase GitHub Action](https://github.com/marketplace/actions/sql-review) to fetch
    the appropriate configuration file.
 
 1. Manually create a workflow file to activate the default SQL Review rules
 
-   You need to manually create the wrokflow file .github/workflows/sql-review.yml in your repository
-   and modify a few key parameters based on the provided template to cater to your needs
+   You need to manually create the workflow file `.github/workflows/sql-review.yml` in your repository
+   and modify a few key parameters based on the provided template to cater to your needs.
 
 1. Customize the SQL Review template
 
@@ -67,13 +67,13 @@ file.
 
 ### Pros and Cons
 
-✅ **Free.** Users can use the GitHub Action for free.
+✅ **Free.** Users can use GitHub Action for free.
 
 ✅ **Lightweight.** Users don't need to deploy any additional components, just generate a single file
 in the code repository and activate it.
 
 ✅ **Multiple database types are supported at the same time.** You need to explicitly specify the
-database type by file path to support multiple database SQL Review at the same time.
+database type by file path to support SQL Review for multiple databases at the same time.
 
 ❌ **More complex configuration.** Initial configuration or updating SQL Review rules is more complex
 due to the need to manually edit YAML.
@@ -107,7 +107,7 @@ into the CI.
 ### Result
 
 Once configured, the review process will be triggered automatically when SQL is detected in the
-submitted PR submitted.
+submitted PR.
 
 You can see the overview of the SQL Review results in the PR overview.
 
@@ -151,16 +151,19 @@ The Bytebase Console-based integration mode provides more powerful functionality
 ### Setup
 
 1. Deploy Bytebase Console and complete the basic configuration
-   This mode requires the deployment of Bytebase Console and import the database enviornment into it.
+
+   This mode requires the deployment of Bytebase Console, and you need to import your database environment into Bytebase.
    Please refer to [Bytebase Installation Guide](https://www.bytebase.com/docs/get-started/install/overview)
    for the detailed process.
 
 1. Activate SQL Review CI with one click
+
    The GitHub Action can be configured automatically by configuring GitOps Workflow in the Project
    Configuration page from Bytebase Console.
 
 1. Customizing SQL Review rules
-   If you are not satisfied with the default SQL Review rules, you can configure it visually in the
+
+   If you are not satisfied with the default SQL Review rules, you can configure it visually from the
    Bytebase Console and all changes will take effect immediately.
 
    See the [GitOps CI documentation](https://www.bytebase.com/docs/sql-review/sql-advisor/gitops-ci)
