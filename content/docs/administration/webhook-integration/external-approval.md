@@ -97,3 +97,15 @@ Specifically, the issue assignee must have an **identical** email at Feishu to r
 
 1. Go to Bytebase Settings, click on IM Integration.
 1. Fill in Application ID and Secret from the previous section. Click on Enable and Create button.
+
+## How to Use
+
+### UI workflow
+
+The issue creator needs to click on the bell button near the assignee to send the Feishu approval.
+
+![issue detail page with the bell icon near the assignee highlighted](/static/docs/external-approval-feishu-bell.webp)
+
+### GitOps workflow
+
+The Feishu approval is sent automatically.
