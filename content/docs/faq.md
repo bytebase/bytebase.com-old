@@ -67,4 +67,5 @@ If you are an OWNER or DBA, you can also toggle debug mode at runtime. The toggl
 
 ## Which data does Bytebase collect?
 
-Bytebase does not collect any personal data (PII). It only collects Bytebase instance-wide anonymised usage data to help improving the product.
+- Instance-wide anonymised usage data.
+- The registered email and name of the first member in the workspace.
