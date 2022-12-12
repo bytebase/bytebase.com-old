@@ -109,6 +109,6 @@ The issue creator needs to click on the bell button near the assignee to send th
 ### GitOps workflow
 
 The Feishu approval is sent automatically when either of the following happens:
-- Arrive at a new stage.
-- Assignee has changed.
-- SQL statement has changed.
+- Issue arrives at a new stage.
+- Issue assignee has changed.
+- Task SQL statement has changed.
