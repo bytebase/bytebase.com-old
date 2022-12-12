@@ -22,11 +22,11 @@ To create a new table:
 
 1. Click the **New Table** on the top of table list in database tab.
    ![create-table-button](/static/docs/change-database/ui-based-schema-editor/create-table-button.webp)
-2. Enter the table name.
-3. Add new column by clicking the **Add Column** on the top of column list.
+1. Enter the table name.
+1. Add new column by clicking the **Add Column** on the top of column list.
    ![add-column-button](/static/docs/change-database/ui-based-schema-editor/add-column-button.webp)
-4. Specify the column's attributes: name, datatype, default, comment, nullable.
-5. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
+1. Specify the column's attributes: name, datatype, default, comment, nullable.
+1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
 
 ### Alter table
 
@@ -45,7 +45,5 @@ To alter a table:
 To drop an existing table:
 
 1. Hover and click the **Drop Table** dropdown item in database item, or the **Drop Table** in database tab.
-
    ![drop-table-button](/static/docs/change-database/ui-based-schema-editor/drop-table-button.webp)
-
-2. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
+1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
