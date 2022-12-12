@@ -102,7 +102,7 @@ Specifically, the issue assignee must have an **identical** email at Feishu to r
 
 ### UI workflow
 
-The issue creator needs to click on the bell button near the assignee to send the Feishu approval.
+The issue creator needs to click on the bell button near the assignee to send the Feishu approval request.
 
 ![issue detail page with the bell icon near the assignee highlighted](/static/docs/external-approval-feishu-bell.webp)
 
