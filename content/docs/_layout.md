@@ -129,7 +129,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [GitHub.com](/vcs-integration/github-com)
 
-### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
+### [Enable GitOps Workflow in Project](/vcs-integration/enable-version-control-workflow)
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 

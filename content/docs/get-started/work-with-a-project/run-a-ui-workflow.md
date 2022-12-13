@@ -36,4 +36,4 @@ Only the **Assignee** or the **Project Owner** can approve an issue that require
 
 ## Summary
 
-Now you have completed the basic UI workflow in Bytebase. There is another more advanced workflow - version control workflow. If you want to try **Database-as-Code** - [Run a Version Control Workflow (GitOps)](/docs/vcs-integration/overview).
+Now you have completed the basic UI workflow in Bytebase. There is another more advanced workflow - version control workflow. If you want to try **Database-as-Code** - [Run a GitOps Workflow](/docs/vcs-integration/overview).
