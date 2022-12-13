@@ -33,7 +33,7 @@ To create a new table:
 To alter a table:
 
 1. Open the table editor tab by clicking the table list.
-1. Rename the table name by clicking the **Rename** dropdown item in table tree node, if needed.
+1. Rename the table name by clicking the **Rename** dropdown item in table tree node.
    ![table-rename-button](/static/docs/change-database/ui-based-schema-editor/table-rename-button.webp)
 1. Add new column by clicking on the **Add Column**.
 1. Specify the new column's attributes: name, datatype, default, comment, nullable.
