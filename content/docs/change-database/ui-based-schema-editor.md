@@ -20,7 +20,7 @@ By clicking on **Alter Schema** in the Quick Action panel and selecting the data
 
 To create a new table:
 
-1. Click the **New Table** on the top of table list in database tab.
+1. Select a database and click the **New Table** on the top of the table list tab.
    ![create-table-button](/static/docs/change-database/ui-based-schema-editor/create-table-button.webp)
 1. Enter the table name.
 1. Add new column by clicking the **Add Column** on the top of column list.
