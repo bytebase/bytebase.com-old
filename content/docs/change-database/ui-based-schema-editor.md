@@ -8,7 +8,7 @@ This feature is in beta and only available for MySQL.
 
 </hint-block>
 
-Bytebase's UI Editor is a modern, friendly tool with an elegant UI that allows you to view and edit database structure in a simple and clean spreadsheet-like editor. Any changes in UI Editor will not be executed into database directly but transform into SQL statement for creating Bytebase issue.
+Bytebase's Schema Editor provides a spreadsheet-like editor to view and edit database structure. Users first use the Schema Editor to prepare the schema changes, then those changes will be converted into SQL statements and go through the change workflow.
 
 ## How to use
 
