@@ -107,8 +107,6 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
-### [State-based Migration](/change-database/state-based-migration)
-
 ## [SQL Editor](/sql-editor/overview)
 
 ### [Manage SQL Scripts with Sheet](/sql-editor/manage-sql-scripts)
