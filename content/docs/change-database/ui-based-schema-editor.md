@@ -23,7 +23,7 @@ To create a new table:
 1. Select a database and click the **New Table** on the top of the table list tab.
    ![create-table-button](/static/docs/change-database/ui-based-schema-editor/create-table-button.webp)
 1. Enter the table name.
-1. Add new column by clicking the **Add Column** on the top of column list.
+1. Add new column by clicking the **Add Column** on the top of column list tab.
    ![add-column-button](/static/docs/change-database/ui-based-schema-editor/add-column-button.webp)
 1. Specify the column's attributes: name, datatype, default, comment, nullable.
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
