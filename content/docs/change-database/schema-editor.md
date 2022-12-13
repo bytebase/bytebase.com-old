@@ -14,17 +14,17 @@ Bytebase's Schema Editor provides a spreadsheet-like editor to view and edit dat
 
 By clicking on **Alter Schema** in the Quick Action panel and selecting the database, you will see the Schema Editor dialog.
 
-![ui-based-schema-editor-dialog](/static/docs/change-database/ui-based-schema-editor/ui-based-schema-editor-dialog.webp)
+![schema-editor-dialog](/static/docs/change-database/schema-editor/schema-editor-dialog.webp)
 
 ### Create table
 
 To create a new table:
 
 1. Select a database and click the **New Table** on the top of the table list tab.
-   ![create-table-button](/static/docs/change-database/ui-based-schema-editor/create-table-button.webp)
+   ![create-table-button](/static/docs/change-database/schema-editor/create-table-button.webp)
 1. Enter the table name.
 1. Add new column by clicking the **Add Column** on the top of column list tab.
-   ![add-column-button](/static/docs/change-database/ui-based-schema-editor/add-column-button.webp)
+   ![add-column-button](/static/docs/change-database/schema-editor/add-column-button.webp)
 1. Specify the column's attributes: name, datatype, default, comment, nullable.
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
 
@@ -34,7 +34,7 @@ To alter a table:
 
 1. Open the table editor tab by clicking the table list.
 1. Rename the table name by clicking the **Rename** dropdown item in table tree node.
-   ![table-rename-button](/static/docs/change-database/ui-based-schema-editor/table-rename-button.webp)
+   ![table-rename-button](/static/docs/change-database/schema-editor/table-rename-button.webp)
 1. Add new column by clicking on the **Add Column**.
 1. Specify the new column's attributes: name, datatype, default, comment, nullable.
 1. Alter the existing column's attributes, if needed.
@@ -45,5 +45,5 @@ To alter a table:
 To drop an existing table:
 
 1. Hover to the table and click the **Drop Table** dropdown item, or the **Trash** button for the table row.
-   ![drop-table-button](/static/docs/change-database/ui-based-schema-editor/drop-table-button.webp)
+   ![drop-table-button](/static/docs/change-database/schema-editor/drop-table-button.webp)
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
