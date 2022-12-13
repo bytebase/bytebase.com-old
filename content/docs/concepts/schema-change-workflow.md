@@ -2,7 +2,7 @@
 title: Schema Change Workflow
 ---
 
-There are 2 typical workflows employed by the team to deal with database schema changes. [UI workflow](#ui-workflow) and [version control workflow (GitOps)](#gitops-workflow).
+There are 2 typical workflows employed by the team to deal with database schema changes. [UI workflow](#ui-workflow) and [GitOps workflow (GitOps)](#gitops-workflow).
 
 ## UI workflow
 
@@ -10,7 +10,7 @@ Classic SQL Review workflow where the developer submits a SQL review ticket dire
 
 ![workflow-ui](/static/docs/workflow-ui.png)
 
-## Version control workflow (GitOps)
+## GitOps Workflow
 
 Aka `Database-as-Code`. Database migration scripts are stored in a git repository. To make schema changes, a developer would create a migration script and submit for review in the corresponding VCS such as GitLab. After the script is approved and merged into the configured branch, Bytebase will automatically kicks off the task to apply the new schema change.
 

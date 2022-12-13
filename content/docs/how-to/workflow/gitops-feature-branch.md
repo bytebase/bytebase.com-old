@@ -29,7 +29,7 @@ In a Git feature branch workflow, all feature development takes place in a dedic
 
 1. Click **Projects** > **New Project** and enter `Dev Project` in **Project Name**.
 2. In `Dev Project`, click **Transfer in DB** and choose `db_dev` database.
-3. Click **Version Control** on the project tab bar, and choose **GitOps workflow** and [enable version control workflow](/docs/vcs-integration/enable-version-control-workflow).
+3. Click **Version Control** on the project tab bar, and choose **GitOps workflow** and [enable GitOps workflow](/docs/vcs-integration/enable-version-control-workflow).
    ![feature-branch-setup](/docs/how-to/workflow/gitops-feature-branch/branch-setting.webp)
 
 ### Step 3 - Create `Prod Project`

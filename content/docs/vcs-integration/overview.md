@@ -14,9 +14,9 @@ The VCS Integration is a 3-step setup. You can check this [demo issue](https://d
 
 This can only be performed by the "**Workspace Owner" with the help of the selected Git provider instance admin.** It only needs to be configured once for each Git provider.
 
-### [Step 2 - Enable Version Control Workflow in Project](/docs/vcs-integration/enable-version-control-workflow)
+### [Step 2 - Enable GitOps Workflow in Project](/docs/vcs-integration/enable-version-control-workflow)
 
-Configure project to use "Version control workflow" and link the project with a repository from the Git provider configured in Step 1. This can only be performed by the "**Project Owner"**.
+Configure project to use "GitOps workflow" and link the project with a repository from the Git provider configured in Step 1. This can only be performed by the "**Project Owner"**.
 
 ### [Step 3 - Name and Organize Schema Files](/docs/vcs-integration/name-and-organize-schema-files)
 

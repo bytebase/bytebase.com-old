@@ -92,7 +92,7 @@ Any user can create project. By default, the project creator is granted the `Pro
 |                   Change project role |                   |      ✔️       |      ✔️       |       ✔️        |
 |                          Edit project |                   |      ✔️       |      ✔️       |       ✔️        |
 |                       Archive project |                   |      ✔️       |      ✔️       |       ✔️        |
-| Configure UI/Version control workflow |                   |      ✔️       |      ✔️       |       ✔️        |
+| Configure UI/GitOps workflow |                   |      ✔️       |      ✔️       |       ✔️        |
 
 ## Database permissions
 
