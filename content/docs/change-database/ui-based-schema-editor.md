@@ -12,7 +12,7 @@ Bytebase's Schema Editor provides a spreadsheet-like editor to view and edit dat
 
 ## How to use
 
-By clicking on **Alter Schema** in the Quick Action panel and selecting the database, you will see the UI Editor dialog.
+By clicking on **Alter Schema** in the Quick Action panel and selecting the database, you will see the Schema Editor dialog.
 
 ![ui-based-schema-editor-dialog](/static/docs/change-database/ui-based-schema-editor/ui-based-schema-editor-dialog.webp)
 
