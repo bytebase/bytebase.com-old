@@ -2,10 +2,10 @@
 title: Enable GitOps Workflow in Project
 ---
 
-> To enable version control workflow, project owner needs to link one of their Git repositories with their Bytebase project.
+> To enable GitOps workflow, project owner needs to link one of their Git repositories with their Bytebase project.
 
 Estimate setup time: 15 minutes.
-This guide will walk you through how to enable the version control workflow for a project in Bytebase. This is a [reference setup](https://demo.bytebase.com/project/blog-git-3003#version-control) showing what it will look like after the setup.
+This guide will walk you through how to enable the GitOps workflow for a project in Bytebase. This is a [reference setup](https://demo.bytebase.com/project/blog-git-3003#version-control) showing what it will look like after the setup.
 
 <hint-block type="info">
 
@@ -15,11 +15,11 @@ One project has to choose between the **UI workflow** and the **GitOps workflow*
 
 ## Prerequisites
 
-- You should be the **Project Owner** to enable version control workflow in the project.
+- You should be the **Project Owner** to enable GitOps workflow in the project.
 
 ## Procedure
 
-Go to the project you wish to enable version control workflow for. Choose "**Version Control**" and click "**Configure version control**".
+Go to the project you wish to enable GitOps workflow for. Choose "**Version Control**" and click "**Configure version control**".
 
 ![project-vcs-step](/static/docs/vcs-integration/enable-version-control-workflow/project-vcs-step1.webp)
 
@@ -126,6 +126,6 @@ You can follow [GitOps SQL Review CI](/docs/sql-review/sql-advisor/gitops-ci) to
 
 ---
 
-You have now enabled the version control workflow for your project. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
+You have now enabled the GitOps workflow for your project. Bytebase will start observe SQL file changes from the linked repository. The last task is to [name and organize the schema files](/docs/vcs-integration/name-and-organize-schema-files) in the linked repository directory so that Bytebase can figure out for a given SQL file change, which database it should apply to.
 
 ![project-vcs-step](/static/docs/vcs-integration/enable-version-control-workflow/project-vcs-step5.webp)
