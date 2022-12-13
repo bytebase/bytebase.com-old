@@ -1,5 +1,5 @@
 ---
-title: UI Editor
+title: Schema Editor
 ---
 
 <hint-block type="warning">
