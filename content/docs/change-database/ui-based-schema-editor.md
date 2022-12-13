@@ -44,6 +44,6 @@ To alter a table:
 
 To drop an existing table:
 
-1. Hover and click the **Drop Table** dropdown item in database item, or the **Drop Table** in database tab.
+1. Hover to the table and click the **Drop Table** dropdown item, or the **Trash** button for the table row.
    ![drop-table-button](/static/docs/change-database/ui-based-schema-editor/drop-table-button.webp)
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
