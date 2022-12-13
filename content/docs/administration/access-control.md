@@ -14,6 +14,10 @@ By default, instances and databases in a [protected environment](/docs/administr
 
 Workspace owners and DBAs can configure some databases in a [protected environment](/docs/administration/environment-policy/tier) as accessible to developers via **Settings / Workspace / Access Control**.
 
+Click **Add rule**, search and select databases in protected environments.
+
+![setting-add-rule](/static/docs/administration//access-control/access-control-add-rule.webp)
+
 See the following example, the `employee` database is configured as accessible to developers even if it is in a protected environment.
 
 ![setting](/static/docs/administration/access-control/access-control-settings.webp)
