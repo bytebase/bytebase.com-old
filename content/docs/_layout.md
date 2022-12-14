@@ -101,6 +101,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Change Workflow](/change-database/change-workflow)
 
+### [Schema Editor](/change-database/schema-editor)
+
 ### [Migration History](/change-database/migration-history)
 
 ### [Synchronize Schema](/change-database/synchronize-schema)
