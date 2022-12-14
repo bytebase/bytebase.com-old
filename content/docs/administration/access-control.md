@@ -8,7 +8,7 @@ This feature is only available in the Enterprise plan.
 
 </hint-block>
 
-By default, instances and databases in a [protected environment](/docs/administration/environment-policy/tier) will be inaccessible to developers from the [SQL Editor](/docs/sql-editor/overview).
+By default, instances and databases in a [protected environment](/docs/administration/environment-policy/tier) will be inaccessible to users with Workspace Developer role from the [SQL Editor](/docs/sql-editor/overview).
 
 ![editor-inaccessible](/static/docs/administration//access-control/access-control-editor-inaccessible.webp)
 
