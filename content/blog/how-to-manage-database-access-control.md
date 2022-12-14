@@ -46,17 +46,17 @@ Such as data cleanup/migration/revision involving complex business logic. These 
 
 ### Human to Database
 
-**Interactive query**
+**Offline schema change**
 
-Connect directly to the database and query the data.
+Users sometimes also connect to the database directly and perform schema changes. Wrongly executed DROP TABLE / DATABASE schema change operation can result in serious or even irreparable damage.
 
 **Ad-hoc data correction**
 
 Connect directly to the database and perform DML/DDL.
 
-**Offline schema change**
+**Interactive query**
 
-Users sometimes also connect to the database directly and perform schema changes. Wrongly executed DROP TABLE / DATABASE schema change operation can result in serious or even irreparable damage.
+Connect directly to the database and query the data.
 
 **Admin operations**
 
@@ -75,6 +75,15 @@ Let’s clarify a few things first:
 3. It is unavoidable for the applications to access the databases (otherwise, they won’t run). However, database schema changes can be decoupled from the new application version deployment. Moreover, decoupling these two actions allows you to better control the change process and deal with possible rollbacks.
 
 [Bytebase](https://www.bytebase.com/) can cover all manual database access scenarios and unify schema changes into a controlled process.
+
+Below table shows how each Human to Database scenario is covered by the corresponding Bytebase feature:
+
+| Scenario               | Targeting Role    | Bytebase Feature                                                |
+| ---------------------- | ----------------- | --------------------------------------------------------------- |
+| Offline Schema Change  | Developer and DBA | [Schema Change Workflow](/docs/change-database/change-workflow) |
+| Ad-hoc Data Correction | Developer and DBA | [Data Change Workflow](/docs/change-database/change-workflow)   |
+| Interactive Query      | Developer and DBA | [SQL Editor Read-Only mode](/docs/sql-editor/run-queries)       |
+| Admin Operations       | DBA               | [SQL Editor Admin mode](/docs/sql-editor/admin-mode)            |
 
 ![_](/static/blog/how-to-manage-database-access-control/machine-to-db-human-to-db-via-bb.webp)
 
