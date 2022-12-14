@@ -177,7 +177,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
-### [Access Control](/administration/access-control)
+### [Database Access Control](/administration/database-access-control)
 
 ### [Anonymize Data](/administration/anonymize-data)
 
