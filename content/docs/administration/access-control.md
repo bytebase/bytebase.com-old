@@ -12,7 +12,7 @@ By default, instances and databases in a [protected environment](/docs/administr
 
 ![editor-inaccessible](/static/docs/administration//access-control/access-control-editor-inaccessible.webp)
 
-Workspace owners and DBAs can configure some databases in a [protected environment](/docs/administration/environment-policy/tier) as accessible to developers via **Settings / Workspace / Access Control**.
+For databases in the [protected environment](/docs/administration/environment-policy/tier), workspace owners and DBAs can grant database access to workspace developers via **Settings / Workspace / Access Control**.
 
 Click **Add rule**, search and select databases in the protected environments.
 
