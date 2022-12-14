@@ -8,7 +8,7 @@ This feature is in beta and only available for MySQL and PostgreSQL.
 
 Synchronize Schema for MySQL currently supports synchronizing `Table`, `Index`, `Constraint`, `View`, `Event`, `Trigger`, and `Function` objects.
 
-Synchronize Schema for PostgreSQL currently supports synchronizing `Schema`, `Table`, `Index`, `Constraint`, and `Sequence` objects.
+Synchronize Schema for PostgreSQL currently supports synchronizing `Schema`, `Table`, `Index`, `Constraint`, `Sequence`, `Extension`, `Function`, `Trigger`, and `Enum Type` objects.
 
 </hint-block>
 

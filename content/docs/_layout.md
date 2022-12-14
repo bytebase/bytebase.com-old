@@ -109,8 +109,6 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
-### [State-based Migration](/change-database/state-based-migration)
-
 ## [SQL Editor](/sql-editor/overview)
 
 ### [Manage SQL Scripts with Sheet](/sql-editor/manage-sql-scripts)
@@ -131,7 +129,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [GitHub.com](/vcs-integration/github-com)
 
-### [Enable Version Control Workflow (GitOps) in Project](/vcs-integration/enable-version-control-workflow)
+### [Enable GitOps Workflow in Project](/vcs-integration/enable-version-control-workflow)
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
@@ -178,6 +176,8 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [Approval Policy](/administration/environment-policy/approval-policy)
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
+
+### [Database Access Control](/administration/database-access-control)
 
 ### [Anonymize Data](/administration/anonymize-data)
 

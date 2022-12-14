@@ -10,7 +10,7 @@ This feature requires Enterprise Plan.
 
 ## Set up SQL Review CI
 
-This feature requires **Version Control Workflow**. You can follow [VCS Integration (GitOps)](/docs/vcs-integration/overview) to set up.
+This feature requires the **GitOps Workflow**. You can follow [GitOps Workflow](/docs/vcs-integration/overview) to set up.
 
 ![vcs-sql-review](/static/docs/vcs-integration/enable-version-control-workflow/vcs-sql-review.webp)
 
