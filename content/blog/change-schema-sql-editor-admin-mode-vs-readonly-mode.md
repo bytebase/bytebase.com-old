@@ -7,7 +7,7 @@ tags: How-To
 description: This article will give you step-by-step guidance for SQL Editor, to change schema using Admin Mode and Read-only Mode. 5 mins is more than enough.
 ---
 
-Bytebase introduced the **Admin Mode** for SQL Editor in version 1.8.0.
+Bytebase introduced the **Admin Mode** for SQL Editor in version 1.8.0. This article will give you step-by-step guidance for SQL Editor, to change schema using Admin Mode and Read-only Mode. 5 mins is more than enough.
 
 Before that release, developers could perform database changes and queries on Bytebase. However, DBAs or DevOps teams who are experts and responsible for database maintenance need to perform higher privileged operations, and the Admin Mode meets this need.
 
