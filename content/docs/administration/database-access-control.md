@@ -10,8 +10,6 @@ This feature is only available in the Enterprise plan.
 
 By default, instances and databases in a [protected environment](/docs/administration/environment-policy/tier) will be inaccessible to users with Workspace Developer role from the [SQL Editor](/docs/sql-editor/overview).
 
-![editor-inaccessible](/static/docs/administration/database-access-control/access-control-editor-inaccessible.webp)
-
 For databases in the [protected environment](/docs/administration/environment-policy/tier), workspace owners and DBAs can grant database access to workspace developers via **Settings / Workspace / Access Control**.
 
 Click **Add rule**, search and select databases in the protected environments.
@@ -23,5 +21,3 @@ See the following example, the `employee` database is configured as accessible t
 ![setting](/static/docs/administration/database-access-control/access-control-settings.webp)
 
 Then, developers are allowed to query the `employee` database from the [SQL Editor](/docs/sql-editor/overview). 
-
-![editor-accessible](/static/docs/administration/database-access-control/access-control-editor-accessible.webp)
