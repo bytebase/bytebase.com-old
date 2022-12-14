@@ -21,3 +21,5 @@ See the following example, the environment “Prod” is marked as a protected e
 A caution notice will also appear at the top of the SQL Editor when you connect to an instance in a protected environment.
 
 ![tier-editor](/static/docs/administration/tier/env-tier-editor.webp)
+
+By default, instances and databases in a protected environment will be inaccessible to workspace developers. Workspace owners and DBAs can configure some databases as accessible to developers via [Database Access Control](/docs/administration/database-access-control).
