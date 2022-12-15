@@ -8,7 +8,7 @@ This feature is only available in the Enterprise plan.
 
 </hint-block>
 
-Workspace Owners and DBAs can mark table columns as `Sensitive` to anonymize the data.
+For MySQL instances, Workspace Owners and DBAs can mark table columns as `Sensitive` to anonymize the data.
 
 See the following example, the `amount` column is marked as `Sensitive`.
 
