@@ -102,13 +102,14 @@ Specifically, the issue assignee must have an **identical** email at Feishu to r
 
 ### UI workflow
 
-The issue creator needs to click on the bell button near the assignee to send the Feishu approval request.
+The issue creator needs to click on the [bell button](/docs/change-database/change-workflow/issue-need-attention) near the assignee to send the Feishu approval request.
 
 ![issue detail page with the bell icon near the assignee highlighted](/static/docs/external-approval-feishu-bell.webp)
 
 ### GitOps workflow
 
 The Feishu approval is sent automatically when either of the following happens:
+
 - Issue arrives at a new stage.
 - Issue assignee has changed.
 - Task SQL statement has changed.

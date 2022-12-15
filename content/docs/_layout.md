@@ -87,7 +87,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
 
-#### [Schema Reivew Check in the Issue](/sql-review/review-rules/schema-review-check-in-the-issue)
+#### [Schema Review Check in the Issue](/sql-review/review-rules/schema-review-check-in-the-issue)
 
 #### [View Schema Review Policy](/sql-review/review-rules/view-schema-review-policy)
 
@@ -99,7 +99,11 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ## Change Database
 
-### [Change Workflow](/change-database/change-workflow)
+### [Change Workflow](/change-database/change-workflow/overview)
+
+#### [LGTM Check](/change-database/change-workflow/lgtm)
+
+#### [Issue Need Attention](/change-database/change-workflow/issue-need-attention)
 
 ### [Schema Editor](/change-database/schema-editor)
 
