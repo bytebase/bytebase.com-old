@@ -11,18 +11,18 @@ A task can only be approved if there is a "LGTM" comment from the designated per
 
 The LGTM setting is in the project setting page.
 
-![the location of the lgtm setting](/static/docs/change-database/change-workflow/lgtm/setting.png)
+![the location of the lgtm setting](/static/docs/change-database/change-workflow/lgtm/setting.webp)
 
 The LGTM check takes effect if the [approval policy](/docs/administration/environment-policy/approval-policy) is "Require manual approval".
 
 The LGTM check fails if there isn't a valid LGTM comment, and therefore the task cannot be approved.
 
-![the issue page without lgtm](/static/docs/change-database/change-workflow/lgtm/no-lgtm.png)
+![the issue page without lgtm](/static/docs/change-database/change-workflow/lgtm/no-lgtm.webp)
 
 The project member or owner clicks the LGTM button in the comment area to send a "LGTM" comment.
 
-![the position of the lgtm button](/static/docs/change-database/change-workflow/lgtm/position.png)
+![the position of the lgtm button](/static/docs/change-database/change-workflow/lgtm/position.webp)
 
 The LGTM check passes if there is a "LGTM" comment from the required persons.
 
-![the issue page with lgtm](/static/docs/change-database/change-workflow/lgtm/has-lgtm.png)
+![the issue page with lgtm](/static/docs/change-database/change-workflow/lgtm/has-lgtm.webp)
