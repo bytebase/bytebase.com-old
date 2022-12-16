@@ -11,6 +11,8 @@ expand_section_list: ["Workflow", "Integrations", "ClickHouse"]
 
 ### [Supabase](/how-to/integrations/supabase)
 
+### [Render](/how-to/integrations/render)
+
 ## ClickHouse
 
 ### [How to Run ClickHouse with Docker](/how-to/clickhouse/how-to-run-clickhouse-docker)
