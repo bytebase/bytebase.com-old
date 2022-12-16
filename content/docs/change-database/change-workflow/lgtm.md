@@ -2,7 +2,7 @@
 title: LGTM check
 ---
 
-You can leverage LGTM check if you want multi-stage approval.
+You can leverage LGTM check if you want multi-level approval.
 
 The LGTM check requires a "LGTM" comment from project members or owners depending on the setting.
 A task can only be approved if there is a "LGTM" comment from the designated person (project member or owner).

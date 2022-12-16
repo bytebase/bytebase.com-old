@@ -10,4 +10,4 @@ On the issue page, the issue creator can click the bell button to mark the issue
 
 ![the highlighted attention-needed issues](/static/docs/change-database/change-workflow/issue-need-attention/highlighted.webp)
 
-- If [external approval](/docs/administration/webhook-integration/external-approval#ui-workflow) is enabled, it will also send the external approval.
+- If [external approval](/docs/administration/webhook-integration/external-approval#ui-workflow) is enabled, it will also send out the external approval request.

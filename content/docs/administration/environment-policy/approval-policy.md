@@ -10,7 +10,7 @@ This setting will affect projects using either [UI workflow or GitOps workflow](
 
 <hint-block type="info">
 
-If you want multi-stage approval, take a look at [LGTM setting](/docs/change-database/change-workflow/lgtm)
+If you want multi-level approval, take a look at [LGTM setting](/docs/change-database/change-workflow/lgtm)
 
 </hint-block>
 
