@@ -22,7 +22,7 @@ Go to your Render dashboard and click on the database you created. We will need 
 
 ![render-database-connections](/docs/how-to/integrations/render-database-connections.webp)
 
-From your Bytebase **Create Instance** page, choose **Add Instance**.
+From your Bytebase **Create Instance** page, choose **Add Instance**, fill in the details to create the connection as follows:
 
 - Database: `PostgreSQL`.
 - Instance Name: any name of your choosing, e.g. `render-db`.
@@ -33,9 +33,9 @@ From your Bytebase **Create Instance** page, choose **Add Instance**.
 - Password: copy the **Password** from your Render database page.
 - Database: copy the **Database** name from your Render database page.
 
-See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for more details.
-
 ![render-bytebase-create-instance](/docs/how-to/integrations/render-bytebase-create-instance.webp)
+
+See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for more details.
 
 ### Step 2 - Check if the database instance is properly imported
 
