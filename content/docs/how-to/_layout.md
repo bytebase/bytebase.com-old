@@ -13,6 +13,8 @@ expand_section_list: ["Workflow", "Integrations", "ClickHouse"]
 
 ### [Render](/how-to/integrations/render)
 
+### [Neon](/how-to/integrations/neon)
+
 ## ClickHouse
 
 ### [How to Run ClickHouse with Docker](/how-to/clickhouse/how-to-run-clickhouse-docker)
