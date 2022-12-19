@@ -39,7 +39,7 @@ See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for
 
 ### Step 2 - Check if the database instance is properly imported
 
-All databases should be sycned properly. Expect some delay if the database instance is large.
+All databases should be synced properly. Expect some delay if the database instance is large.
 
 ![render-bytebase-instance](/docs/how-to/integrations/render-bytebase-instance.webp)
 
