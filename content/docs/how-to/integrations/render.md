@@ -18,20 +18,20 @@ You can create PostgreSQL databases on Render and use Bytebase to manage the dat
 
 ### Step 1 - Add Render database instance to Bytebase
 
-Go to your Render dashboard and click on the database you created. We will need the connection details from this page.
+Visit your Render dashboard and click on the database you created. We will need the connection details from this page.
 
 ![render-database-connections](/docs/how-to/integrations/render-database-connections.webp)
 
 From your Bytebase **Create Instance** page, choose **Add Instance**, fill in the details to create the connection as follows:
 
-- Database: `PostgreSQL`.
-- Instance Name: any name of your choosing, e.g. `render-db`.
-- Environment: `Prod` or `Test` (select the environment you want to add the instance to).
-- Host or Socket: from your Render database page, copy the **External Database URL** to your text editor. The URL will look like `postgres://<username>:<password>@<host>:<port>/<database>`. Copy the `<host>:<port>` part to the Host or Socket field.
-- Port: 5432 (Render uses the default PostgreSQL port of 5432 to connect)
-- Username: copy the **Username** from your Render database page.
-- Password: copy the **Password** from your Render database page.
-- Database: copy the **Database** name from your Render database page.
+1. **Database:** `PostgreSQL`.
+2. **Instance Name:** any name of your choosing, e.g. `render-db`.
+3. **Environment:** `Prod` or `Test` (select the environment you want to add the instance to).
+4. **Host or Socket:** from your Render database page, copy the **External Database URL** to your text editor. The URL will look like `postgres://<username>:<password>@<host>:<port>/<database>`. Copy the `<host>:<port>` part to the Host or Socket field.
+5. **Port:** 5432 (Render uses the default PostgreSQL port of 5432 to connect)
+6. **Username:** copy the **Username** from your Render database page.
+7. **Password:** copy the **Password** from your Render database page.
+8. **Database:** copy the **Database** name from your Render database page.
 
 ![render-bytebase-create-instance](/docs/how-to/integrations/render-bytebase-create-instance.webp)
 
