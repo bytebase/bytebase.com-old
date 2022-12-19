@@ -7,7 +7,9 @@ description: Tutorial on how to manage Neon PostgreSQL database
 
 [Neon](https://neon.tech/) is a fully managed serverless PostgreSQL that offers cool features such as [database branching](https://neon.tech/docs/introduction/branching/), and bottomless storage.
 
-You can create a branch of your PostgreSQL database on Neon and use Bytebase to manage the database development lifecycle for those databases.
+You can create a PostgreSQL instance on Neon and use Bytebase to manage the database development lifecycle for those databases.
+
+While Neon already has developer-oriented features like branching, Bytebase adds extra value to offer a systematic database development and change workflow. This is especially useful for cross-functional teams requiring collaboration (e.g. having dedicated DBA or platform engineering team apart from the application development teams).
 
 ## Prerequisites
 
@@ -45,7 +47,7 @@ See [Add an Instance](/docs/get-started/configure-workspace/add-an-instance) for
 
 ### Step 3 - Check if the database instance is properly imported
 
-All databases should be sycned properly. Expect some delay if the database instance is large.
+All databases should be synced properly. Expect some delay if the database instance is large.
 
 ![neon-bytebase-instance](/docs/how-to/integrations/neon-bytebase-instance.webp)
 
