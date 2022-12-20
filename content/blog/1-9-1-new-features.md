@@ -2,7 +2,7 @@
 title: "Bytebase 1.9.1 Deep Dive"
 author: Tianzhou
 published_at: 2022/12/20 17:21:21
-feature_image: /static/blog/1-9-1-new-features/fishie-banner.webp
+feature_image: /static/blog/1-9-1-new-features/1.9.1-banner.webp
 tags: Explanation
 description: Last week, we released Bytebase 1.9.1. Let's take a deeper look into the new features - schema editor, mark issues as Need Attention, database access control, and data anonymization.
 ---
