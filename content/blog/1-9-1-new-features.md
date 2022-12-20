@@ -71,11 +71,11 @@ Well, that’s it for this release. The next one in two weeks will also be the l
 
 Our 2021 goal was to cover the basic capabilities needed in database development. From my recent communication with users, I can tell that this piece is pretty much achieved: when they ask if we have a particular feature, most of the time, we can answer YES.
 
-Next year, our task will move from satisfying users’ pain points to gradually bringing them delights. Frankly speaking, compared with the coding tools, the database tools are still relatively primitive. Although existing database tools inherit DBA’s expertise, they lack an understanding of DevTools and the overall R&D development workflow.
+Next year, our task will move from satisfying users’ pain points to gradually bringing them delights. Frankly speaking, compared with the coding tools, the database tools are still relatively primitive. Although existing database tools inherit DBA’s expertise, they lack an understanding of DevTools and the overall developer workflow.
 
-At AWS re:Invent 2022, Amazon released its one-stop R&D platform, CodeCatalyst, joining GitHub, GitLab, and JetBrains. All of these claims to be one-stop, but let’s be honest, none of them is, because they haven’t scratched the surface of database development. The R&D process is not a complete process without database development.
+At AWS re:Invent 2022, Amazon released its one-stop developer platform, CodeCatalyst, joining GitHub, GitLab, and JetBrains. All of these claim to be one-stop, but let’s be honest, none of them really is, because they haven’t scratched the surface of database development. The developer workflow is not self-contained without including the database development activity.
 
-After all, databases a re indispensable to most applications.
+After all, databases are indispensable to most applications.
 
 ![_](/static/blog/1-9-1-new-features/amazon-codecatalyst.webp)
 
