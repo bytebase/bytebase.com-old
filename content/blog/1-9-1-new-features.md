@@ -31,21 +31,21 @@ The issue creator might want to remind the reviewer during the review process. W
 
 The overall interaction took inspiration from Google’s internal Code Review tool. I remember clearly the day I first saw a bold entry in my review list. I’ve used it ever since, and I think it can improve the process’s efficiency.
 
-Regarding how to nudge people, some collaborative tools choose to ping others, others choose to use bolded font. Direct or restrained, the design concept of the tool is also included in these interaction details.
+Regarding how to nudge people, some collaborative tools choose to ping others, others choose to use bolded font. Direct or restrained, the design philosophy is just included in these interaction details.
 
 ## Database Access Control
 
 Now, let’s chat about Bytebase’s security capabilities.
 
-We introduced [Database Access Control](/docs/administration/database-access-control) with this release, a combination of Access Control Policy and Environment Tier within Bytebase.
+We introduced [Database Access Control](/docs/administration/database-access-control) with this release, leveraging Access Control Policy and Environment Tier.
 
-Some users suggested that they don’t want developers to access all databases in the production environment by default. This can be achieved by the DBA setting the `Environment Tier` to `Protected`. But at the same time, the user wants to open access to some databases in this environment, and it is possible to whitelist those databases.
+Some users suggested that they don’t want developers to access all databases in the production environment by default. This can be achieved by the DBA setting the `Environment Tier` to `Protected`. But at the same time, the user wants to open access to some databases in this environment, which is possible by whitelisting those databases.
 
 ![_](/static/blog/1-9-1-new-features/protected-env.webp)
 
 ![_](/static/blog/1-9-1-new-features/accesss-control-env.webp)
 
-The overall design of Bytebase follows the same security practice of default blacklisting and separate whitelisting. This is yet another feature focusing on data security after [Data Anonymization](/docs/administration/anonymize-data).
+The overall Bytebase design follows the same security practice of default blacklisting. This is yet another feature focusing on data security after [Data Anonymization](/docs/administration/anonymize-data).
 
 ## Data Anonymization
 
@@ -69,13 +69,13 @@ And unlike goInception, which only supports MySQL, we will soon bring full data 
 
 Well, that’s it for this release. The next one in two weeks will also be the last of 2022.
 
-The task in 2021 was to complete the basic capabilities needed in database development. From my recent communication with customers, I can tell that this piece is pretty much finished: when they ask if we have a particular feature, most of the time, we can answer YES.
+Our 2021 goal was to cover the basic capabilities needed in database development. From my recent communication with users, I can tell that this piece is pretty much achieved: when they ask if we have a particular feature, most of the time, we can answer YES.
 
-Next year, our task will move from satisfying users’ pain points to gradually bringing them surprises. Frankly speaking, compared with the coding tools, the database tools are still relatively primitive. Although we have DBA’s expertise, we lack an understanding of DevTools and the overall R&D collaboration system.
+Next year, our task will move from satisfying users’ pain points to gradually bringing them delights. Frankly speaking, compared with the coding tools, the database tools are still relatively primitive. Although existing database tools inherit DBA’s expertise, they lack an understanding of DevTools and the overall R&D development workflow.
 
-At AWS re:Invent 2022, Amazon released its one-stop R&D platform, CodeCatalyst, joining GitHub, GitLab, and JetBrains. All of these claims to be one-stop, but let’s be honest, none of them is, because they haven’t scratched the surface of database development. The R&D process is not a complete process without database development. After all, the majority of applications are inseparable from the database.
+At AWS re:Invent 2022, Amazon released its one-stop R&D platform, CodeCatalyst, joining GitHub, GitLab, and JetBrains. All of these claims to be one-stop, but let’s be honest, none of them is, because they haven’t scratched the surface of database development. The R&D process is not a complete process without database development.
 
-But it’s good to see them up fighting first, making time for Bytebase to grow, and helping them make up the missing 🧩.
+After all, databases a re indispensable to most applications.
 
 ![_](/static/blog/1-9-1-new-features/amazon-codecatalyst.webp)
 
