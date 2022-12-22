@@ -148,7 +148,7 @@ The Anomaly Center also surfaces the drift
 3. Click **View diff**, you will see the exact drift.
 ![bb-view-drift](/static/blog/database-change-management-with-snowflake/bb-view-drift.webp)
 
-4. Go to DB_DEMO_BB > **Migration History** and click **Establish new baseline**.
+4. Use baseline to reconcile the schema state from the live database schema. Go to DB_DEMO_BB > **Migration History** and click **Establish new baseline**.
 ![bb-db-establish-new-baseline](/static/blog/database-change-management-with-snowflake/bb-db-establish-new-baseline.webp)
 
 5. It will create an issue. Click **Resolve** to make it done.
