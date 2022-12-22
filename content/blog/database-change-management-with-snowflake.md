@@ -139,8 +139,7 @@ In this section, you’ll be guided through this process.
 1. Go to Snowflake, and add a COLUMN there. Make sure the new column is added.
 ![sf-alter-add-age](/static/blog/database-change-management-with-snowflake/sf-alter-add-age.webp)
 
-2. Wait for 10 mins or more. Go back to Bytebase, and you can find the Schema Drift on
-database DB_DEMO_BB
+2. Wait for 10 mins or more. Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
 ![bb-db-schema-drift](/static/blog/database-change-management-with-snowflake/bb-db-schema-drift.webp)
 
 Anomaly Center
