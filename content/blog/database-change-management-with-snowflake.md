@@ -162,4 +162,4 @@ The Anomaly Center also surfaces the drift
 
 Now you have connected snowflake with Bytebase, and tried out the UI workflow to do schema change. Bytebase will record the full migration history for you. With **Team or Enterprise Plan**, you can even have drift detection.
 
-In the next article, you’ll try out GitOps workflow, which will store your Snowflake schema in GitHub and trigger the change upon committing the change to the repository, to bring your Snowflake change workflow to the next level of Database DevOps - Database as Code.
+In the next article, you’ll try out GitOps workflow, which will store your Snowflake schema in GitHub and trigger the change upon committing the change to the repository, to bring your Snowflake change workflow to the next level of Database DevOps - [Database as Code](/blog/database-as-code).
