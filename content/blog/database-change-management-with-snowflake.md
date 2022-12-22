@@ -64,7 +64,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 ![bb-create-instance](/static/blog/database-change-management-with-snowflake/bb-create-instance.webp)
 **Environment**: choose `Test`, if you choose `Prod`, it will wait for approval by default. In this tutorial, we try to keep it simple. However, it’s all configurable.
 
-**Account name**: Go to your Snowflake account, you can find it in the URL, or as locator (but lower case).
+**Account name**: Go to your Snowflake account, you can find it in the URL, or from the locator field (but lower case).
 ![sf-locator](/static/blog/database-change-management-with-snowflake/sf-locator.webp)
 
 **Username and password**: The ones you use to log into Snowflake.
