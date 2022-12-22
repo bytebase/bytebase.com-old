@@ -86,7 +86,7 @@ In Bytebase, **Project** is the container to group logically related **Databases
 
 ## Step 4 - Create a database in Snowflake via Bytebase
 
-In Bytebase, a **Database** is the one created by `CREATE DATABASE xxx`. A database always belongs to a single **Project**.**Issue** represents a specific collaboration activity between Developer and DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
+In Bytebase, a **Database** is the one created by `CREATE DATABASE xxx`. A database always belongs to a single **Project**. **Issue** represents a specific collaboration activity between Developer and DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
 
 1. After the project is created. Follow the onboarding guide if it’s your first time using Bytebase. If not, click **New DB** on the top bar.
 ![bb-new-db](/static/blog/database-change-management-with-snowflake/bb-new-db.webp)
