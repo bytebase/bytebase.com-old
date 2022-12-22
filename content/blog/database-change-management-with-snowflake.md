@@ -142,7 +142,7 @@ In this section, you’ll be guided through this process.
 2. Wait for 10 mins or more. Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
 ![bb-db-schema-drift](/static/blog/database-change-management-with-snowflake/bb-db-schema-drift.webp)
 
-Anomaly Center
+The Anomaly Center also surfaces the drift
 ![bb-ac-drift](/static/blog/database-change-management-with-snowflake/bb-ac-drift.webp)
 
 3. Click **View diff**, you will see the exact drift.
