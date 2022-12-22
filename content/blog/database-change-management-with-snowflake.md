@@ -18,7 +18,7 @@ This tutorial will guide you step-by-step to set up database change management f
 
 Here we have to mention the informative blog post [Embracing Agile Software Delivery and DevOps with Snowflake](https://www.snowflake.com/blog/embracing-agile-software-delivery-and-devops-with-snowflake/), which provided valuable insights and inspired us to implement similar processes in our product.
 
-You’ll have a GUI and the full migration history. You can use Bytebase **Free Plan** to finish the tutorial. There is also a bonus section about drift detection for those advanced users if needed.
+You’ll have a GUI and the full migration history. You can use Bytebase **Free Plan** to finish the tutorial. There is also a bonus section about schema drift detection for those advanced users if needed.
 
 ## Prerequisites
 
