@@ -4,7 +4,7 @@ author: Changyu
 published_at: 2022/12/21 19:21:21
 feature_image: /static/blog/database-cicd-best-practice/database-cicd-best-practice-banner.webp
 tags: How-To
-description: If we can come up with a complete Database CI/CD process, and blur the boundary between developers and DBAs, will it improve release efficiency?
+description: If we can develop a complete Database CI/CD workflow, and break the wall between developers and DBAs, will it improve release efficiency?
 ---
 
 ## Let’s chat about the cumbersome database change process
@@ -14,26 +14,26 @@ Database change has long been the most critical step in a release. If you do it 
 - SQL scripts are scattered in various computers, and any modification needs repeated manual confirmation.
 - Change requests need to be submitted in multiple systems, which can easily be missed.
 - DBA only intervenes to review the SQL right before execution: blocking the problematic SQL will delay the release while passing it will create long-term hidden problems.
-- Change requests are complex: imagine n slightly different SQL scripts for multiple application versions. If SQL scripts are stored in standard document folders,  that’s just recipe for disastrous consequences.
+- Change requests are complex: imagine n slightly different SQL scripts for multiple application versions or different tenants. If SQL scripts are stored in standard document folders,  that’s just a recipe for disaster.
 - There is no way to archive and audit the change scripts afterward.
 
 They may not sound so bad if you only need to manage one or two databases, but when you face as few as a dozen to 1,000+ instances, this will be torture. We have a platform to manage code, a variety of issue trackers, and multiple SQL review tools, but why is this process still such a pain in the ass?
 
-All inefficient collaboration can be backtracked to fragmented processes and unshared information, if we can come up with [a complete Database CI/CD process](/blog/database-cicd-best-practice-with-github), and blur the boundary between developers and DBAs, will it improve efficiency?
+All inefficient collaboration can be backtracked to fragmented processes and unshared information, if we can develop [a complete Database CI/CD workflow](/blog/database-cicd-best-practice-with-github), and break the wall between developers and DBAs, will it improve efficiency?
 
 ![](/static/blog/database-cicd-best-practice/complete-cicd-workflow.webp)
 
-In this article, we will cut through the lens of R&D management and explore how to design a genuinely landable VCS integration solution.
+In this article, we will cut through the lens of developer workflow and explore how to design a pragmatic VCS integration solution.
 
 ## Define your organization's iteration process
 
-Organizations are influenced by department division, tech stack, and business divisions, and eventually form their release process, which is difficult to change. There are many ways to classify the release process. Since our goal is to optimize change management, let’s divide it into two by application iteration.
+Organizations are influenced by department divisions and tech stack. These eventually form their release process, which is difficult to change. There are many ways to categorize the release process. Since our goal is to optimize change management, let’s divide it into two by application iteration.
 
 **Centralized iteration**: couple multiple applications together, release one version at a time, and manage them by batch. This works for functions that are tightly coupled together, so changes need to be planned holistically for up and downstream businesses. This development process is commonly found in traditional industries with high business complexity, such as finance.
 
-**Decentralized iteration**: to improve business iteration efficiency, organizations try to decouple applications as much as possible, with each team independently responsible for the development and release of its application or module. Some emerging IT and SaaS companies are adopting this model, of which microservices are a typical representative.
+**Decentralized iteration**: to improve business iteration efficiency, organizations try to decouple applications as much as possible, with each team independently responsible for the development and release of its application or module. Some emerging IT and SaaS companies are adopting this model, of which microservices are a typical practice.
 
-However, most companies (huge ones, at least) will not fully adopt only one form: they usually adopt different iteration models in different departments, between old and new business, core and edge functions. We must combine different models and design the most suitable Database CI/CD solution for different models.
+However, most companies (huge ones, at least) will not fully adopt only one form: they usually adopt different iteration models in different departments, between core and sideline business, critical and supporting functions. We must combine different models and design the most suitable Database CI/CD solution for different models.
 
 ## Define database management boundary
 
@@ -45,7 +45,7 @@ With a defined iteration process, it is natural to derive different ways of data
 
 ![](/static/blog/database-cicd-best-practice/database-management.webp)
 
-In an organization aiming at Database DevOps, the development team should be encouraged to participate more in the database change work, while the DBA should take a higher perspective and work with infra and SRE teams to develop a database management framework. This includes tools selection, review policy development, and automated CI/CD process implementation to improve overall efficiency by empowering the devs Instead of dealing with trivial work alone. After all, for most organizations, a DBA often faces hundreds of devs. With this goal in mind, we recommend the third model in which the DBA (or underlying platform engineering team) works with the development team to build the database management framework and allows the development team to have controlled access to the database.
+In an organization aiming at Database DevOps, the development team should be encouraged to participate more in the database change work, while the DBA should work with infra and SRE teams to develop a database management framework. This includes tools selection, review policy development, and automated CI/CD process implementation to improve overall efficiency by empowering the devs instead of dealing with mundane work alone. After all, for most organizations, a single DBA often faces hundreds of devs. With this goal in mind, we recommend the third model in which the DBA (or underlying platform engineering team) works with the development team to build the database management framework and allows the development team to have controlled access to the database.
 
 Of course, different organizations should be more specific in deciding which tasks to give autonomy to the development team, considering their own R&D and business processes.
 
@@ -56,17 +56,17 @@ Of course, different organizations should be more specific in deciding which tas
 
 Once you’ve defined your organization’s R&D processes, it’s time to get down to business.
 
-### Introducing VCS for Script Change Management
+### Introducing VCS for Change Script Management #GitOps
 
 The first thing is to get your SQL scripts in order - SQL is code, too. And it makes sense to use a version control system (VCS) such as GitLab or GitHub to manage SQL. To ensure manageability, we need to structure the SQL scripts in the VCS in a way that makes sense.
 
 **By project**
 
-For organizations using decentralized iteration, most of the time, each database belongs to a specific application, which can be seen as the management boundary. Bytebase uses this model, i.e. managing the database by application project, which is in line with the habits of most organizations. A good practice to categorize change scripts is by application project name, as the root directory. These scripts can be stored in their respective application code repositories or in a single code repository, depending on the organization’s management habits.
+For organizations using decentralized iteration, most of the time, each database belongs to a specific application, which can be seen as the management boundary. Bytebase uses this model, i.e. managing the database by application project, which is in line with the habits of most organizations. A good practice to group change scripts is by application project name, as the root directory. These scripts can be stored in their respective application code repositories or in a single code repository, depending on the organization’s management habits.
 
 **By change batch**
 
-For organizations with centralized iterations, since each batch of changes may involve multiple applications and these scripts are interrelated and affect each other, it’s better to store change scripts categorized by batch in VCS rather than by application, which means that each batch directory contains change scripts for multiple databases. For easy management, it is recommended to categorize scripts by environment or database name. In Bytebase, it is recommended to group the scripts by application to manage database review access.
+For organizations with centralized iterations, since each batch of changes may involve multiple applications and these scripts are interrelated and affect each other, it’s better to store change scripts grouped by batch in VCS rather than by application, which means that each batch directory contains change scripts for multiple databases. For easy management, it is recommended to group scripts by environment or database name. In Bytebase, it is recommended to group the scripts by application to manage database review access.
 
 ![](/static/blog/database-cicd-best-practice/script-change-management.webp)
 
