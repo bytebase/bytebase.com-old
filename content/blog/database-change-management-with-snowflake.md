@@ -2,7 +2,7 @@
 title: Database Change Management with Snowflake
 author: Ningjing
 published_at: 2022/12/22 21:15
-feature_image: /static/blog/database-change-management-with-snowflake/snowflake-db-management.webp
+feature_image: /static/blog/database-change-management-with-snowflake/db-change-snowflake.webp
 tags: How-To
 description: This tutorial will guide you step-by-step to set up database change management for Snowflake in Bytebase. 
 ---
@@ -14,7 +14,7 @@ This is a series of articles about Database Change Management with Snowflake
 
 ---
 
-This tutorial will guide you step-by-step to set up database change management for Snowflake in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make Snowflake schema change and data change.
+This tutorial will guide you step-by-step to set up database change management for [Snowflake](https://www.snowflake.com/en/) in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make Snowflake schema change and data change.
 
 Here we have to mention the informative blog post [Embracing Agile Software Delivery and DevOps with Snowflake](https://www.snowflake.com/blog/embracing-agile-software-delivery-and-devops-with-snowflake/), which provided valuable insights and inspired us to implement similar processes in our product.
 
@@ -57,7 +57,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 1. Visit `localhost:5678` and login as Workspace Owner.
 ![bb-login](/static/blog/database-change-management-with-snowflake/bb-login.webp)
 
-2. Follow the onboarding guide if it’s your first time running Bytebase, otherwise, simply click **Add Instance**.
+2. Follow the onboarding guide if it’s your first time running Bytebase, otherwise, click **Add Instance**.
 ![bb-add-instance](/static/blog/database-change-management-with-snowflake/bb-add-instance.webp)
 
 3. Add a Snowflake instance. You need to pay attention to some fields:
@@ -113,22 +113,22 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 3. Input title, SQL, and Assignee, and click **Create**.
 ![bb-is-new-create-table](/static/blog/database-change-management-with-snowflake/bb-is-new-create-table.webp)
 
-4.Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
+4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
 ![bb-is-create-table-run](/static/blog/database-change-management-with-snowflake/bb-is-create-table-run.webp)
 
-4. The issue status will become Done.
+5. The issue status will become Done.
 ![bb-is-create-table-done](/static/blog/database-change-management-with-snowflake/bb-is-create-table-done.webp)
 
-5. On the issue page, click **view migration**. You will see diff for each migration.
+6. On the issue page, click **view migration**. You will see diff for each migration.
 ![bb-view-migration](/static/blog/database-change-management-with-snowflake/bb-view-migration.webp)
 
-6. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
+7. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
 ## Bonus Section - Drift Detect
 
-This section requires you to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
+To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 
 Now you can see the full migration history of DB_DEMO_BB. However, what is **Establish new baseline**? When should it be used?
 
@@ -139,7 +139,7 @@ In this section, you’ll be guided through this process.
 1. Go to Snowflake, and add a COLUMN there. Make sure the new column is added.
 ![sf-alter-add-age](/static/blog/database-change-management-with-snowflake/sf-alter-add-age.webp)
 
-2. Wait for 10 mins or more. Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
+2. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
 ![bb-db-schema-drift](/static/blog/database-change-management-with-snowflake/bb-db-schema-drift.webp)
 
 The Anomaly Center also surfaces the drift
@@ -160,6 +160,6 @@ The Anomaly Center also surfaces the drift
 
 ## Summary and Next
 
-Now you have connected snowflake with Bytebase, and tried out the UI workflow to do schema change. Bytebase will record the full migration history for you. With **Team or Enterprise Plan**, you can even have drift detection.
+Now you have connected Snowflake with Bytebase, and tried out the UI workflow to do schema change. Bytebase will record the full migration history for you. With **Team or Enterprise Plan**, you can even have schema drift detection.
 
 In the next article, you’ll try out GitOps workflow, which will store your Snowflake schema in GitHub and trigger the change upon committing the change to the repository, to bring your Snowflake change workflow to the next level of Database DevOps - [Database as Code](/blog/database-as-code).
