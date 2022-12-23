@@ -94,7 +94,7 @@ In Bytebase, a **Database** is the one created by `CREATE DATABASE xxx`. A datab
 2. Fill the form with Name - `DB_DEMO_BB` (BB is short for Bytebase), Environment - `Test`, and Instance - `Snowflake instance`. Click **Create**.
 ![bb-create-db](/static/blog/database-change-management-with-snowflake/bb-create-db.webp)
 
-3. It will create an issue “CREATE DATABASE ….” automatically. Because it’s for `Test` environment, the issue will run without waiting for your approval by default. Click **Resolve**, and the issue is Done. The database is created.
+3. Bytebase will create an issue “CREATE DATABASE ….” automatically. Because it’s for the `Test` environment, the issue will run without waiting for your approval by default. Click **Resolve**, and the issue is Done. The database is created.
 ![bb-go-home](/static/blog/database-change-management-with-snowflake/bb-go-home.webp)
 
 4. Go back to the home page by clicking **Home** on the left sidebar. If it’s the first time you use Bytebase, it’ll show a celebration. On the home page, you can see the project, the database, and the issue you just resolved.
