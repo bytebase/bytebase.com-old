@@ -57,7 +57,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 1. Visit `localhost:5678` and login as Workspace Owner.
 ![bb-login](/static/blog/database-change-management-with-snowflake/bb-login.webp)
 
-2. Follow the onboarding guide if it’s your first time running Bytebase, if not click **Add Instance**.
+2. Follow the onboarding guide if it’s your first time running Bytebase, otherwise, simply click **Add Instance**.
 ![bb-add-instance](/static/blog/database-change-management-with-snowflake/bb-add-instance.webp)
 
 3. Add a Snowflake instance. You need to pay attention to some fields:
