@@ -126,7 +126,7 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
-## Bonus Section - Drift Detect
+## Bonus Section - Schema Drift Detection
 
 To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 
