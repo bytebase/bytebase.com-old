@@ -62,7 +62,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 
 3. Add a Snowflake instance. You need to pay attention to some fields:
 ![bb-create-instance](/static/blog/database-change-management-with-snowflake/bb-create-instance.webp)
-**Environment**: choose `Test`, if you choose `Prod`, it will wait for approval by default. In this tutorial, we try to keep it simple. However, it’s all configurable.
+**Environment**: choose `Test`, if you choose `Prod`, you will need approval for all future change requests. In this tutorial, let's try to keep it simple. (However, it’s all configurable later.)
 
 **Account name**: Go to your Snowflake account, you can find it in the URL, or from the locator field (but lower case).
 ![sf-locator](/static/blog/database-change-management-with-snowflake/sf-locator.webp)
