@@ -67,7 +67,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 **Account name**: Go to your Snowflake account, you can find it in the URL, or from the locator field (but lower case).
 ![sf-locator](/static/blog/database-change-management-with-snowflake/sf-locator.webp)
 
-**Username and password**: The ones you use to log into Snowflake.
+**Username and password**: The ones you use to log into your Snowflake account.
 ![sf-login](/static/blog/database-change-management-with-snowflake/sf-login.webp)
 
 Regarding the **Connection info**,  make sure your account has `DEFAULT_ROLE=ACCOUNTADMIN` and `DEFAULT_WAREHOUSE` set in Snowflake, as shown below.
