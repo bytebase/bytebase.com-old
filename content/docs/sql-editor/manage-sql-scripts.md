@@ -52,7 +52,7 @@ In the **Sheets** panel of SQL Editor, there will be a **Sync Sheet from VCS** a
 
 ![Sync from VCS](/static/docs/sql-editor/manage-sql-scripts/sync-from-vcs-button.webp)
 
-When you click it, Bytebase will fetch files with pathnames matching the template pattern relative to the base directory and save them to the sheet. If there is already a sheet with the same name, the content will be overwritten with the script content in the VCS.
+When you click it, Bytebase will fetch files with pathnames matching the template pattern and save them to the sheet. If there is already a sheet with the same name, the content will be overwritten with the script content in the VCS.
 
 ![VCS directory](/static/docs/sql-editor/manage-sql-scripts/vcs-directory.webp)
 
