@@ -10,7 +10,7 @@ description: This tutorial will guide you step-by-step to set up database change
 This is a series of articles about Database Change Management with Snowflake
 
 - Database Change Management with Snowflake (this one)
-- Database Change Management with Snowflake and GitHub
+- [Database Change Management with Snowflake and GitHub](/blog/database-change-management-with-snowflake-and-github)
 
 ---
 
@@ -42,7 +42,7 @@ docker run --init \
   --volume ~/.bytebase/data:/var/opt/bytebase \
   bytebase/bytebase:1.9.1 \
   --data /var/opt/bytebase \
-  --port 8080 \
+  --port 8080
 ````
 
 2. Bytebase is running successfully in Docker, and you can visit it via `localhost:5678`.
