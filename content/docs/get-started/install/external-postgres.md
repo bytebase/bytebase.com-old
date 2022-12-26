@@ -8,7 +8,7 @@ Alternatively, you can supply [--pg](/docs/reference/command-line#--pg-string) o
 
 ## Prerequisites
 
-1. PostgreSQL 12 or above.
+1. PostgreSQL 14 or above.
 1. All privileges on the [database object](https://www.postgresql.org/docs/current/sql-grant.html) including:
    - SELECT
    - INSERT
