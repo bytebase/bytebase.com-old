@@ -43,12 +43,7 @@ docker run --init \
   --volume ~/.bytebase/data:/var/opt/bytebase \
   bytebase/bytebase:1.9.1 \
   --data /var/opt/bytebase \
-<<<<<<< HEAD
   --port 8080
-=======
-  --port 8080 \
->>>>>>> main
-````
 
 2. Bytebase is running successfully in Docker, and you can visit it via `localhost:5678`.
 ![docker](/static/blog/database-change-management-with-snowflake/docker.webp)
