@@ -138,7 +138,7 @@ FIRST_NAME VARCHAR
 ![prj-push-event02](/static/blog/database-change-management-with-snowflake-and-github/prj-push-event02.webp)
 4. Click issue/102 and go the issue page, you’ll see:
 - The issue is created via github.com.
-- The issue is completed without manual approval because it’s on Test stage where no manual approval is required.
+- The issue is completed without manual approval because it applies the schema change to a database from the Test environment. And our Test environment is configured with no manual approval required.
 - The SQL is exactly the one we have committed to the GitHub repository.
 - The Assignee is Bytebase, because it’s automatic. If the github user you use to commit the change has the same email address found in the bytebase member list, we will use that member as the assignee.
 ![is-create-table-done](/static/blog/database-change-management-with-snowflake-and-github/is-create-table-done.webp)
