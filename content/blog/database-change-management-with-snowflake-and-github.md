@@ -112,7 +112,7 @@ bytebase/bytebase:1.9.1 \
 
 ## Step 5 - Change schema for Snowflake by pushing SQL schema change files to GitHub
 
-1. In your GitHub repository `snowflake-test-bb-local`, create a folder `bytebase`, then create a subfolder `test`, and create an SQL file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting under project version control, you can do customization if needed.
+1. In your GitHub repository `snowflake-test-bb-local`, create a folder `bytebase`, then create a subfolder `test`, and create an SQL file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting when you configure the project version control previously.
 
 - `DB_DEMO_BB##202212152000#ddl#create_hello_world.sql`
 - `Test` corresponds to {{ENV_NAME}}
