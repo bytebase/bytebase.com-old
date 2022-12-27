@@ -160,6 +160,8 @@ ALTER TABLE HELLO_WORLD ADD COLUMN AGE NUMBER;
 ![github-LATEST-add-age](/static/blog/database-change-management-with-snowflake-and-github/github-LATEST-add-age.webp)
 
 ## Summary and Next
-Now you have tried out **GitOps workflow**, which will store your Snowflake schema in GitHub and trigger the change upon committing the change to the repository, to bring your Snowflake change workflow to the next level of Database DevOps - **Database as Code**.
+Now you have tried out **GitOps workflow**, which will store your Snowflake schema in GitHub and trigger the change upon committing the change to the repository, to bring your Snowflake change workflow to the next level of Database DevOps - [**Database as Code**](/blog/database-as-code).
+
+You can check out our [GitOps docs](docs/vcs-integration/overview) to learn more configuration details.
 
 In real world scenario, you might have separate features and main branches corresponding to your dev and production environment, you can check out [GitOps with Feature Branch Workflow](/docs/how-to/workflow/gitops-feature-branch) to learn the setup. Have a try and look forward to your feedback!
