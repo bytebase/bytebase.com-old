@@ -43,6 +43,7 @@ docker run --init \
   bytebase/bytebase:1.9.1 \
   --data /var/opt/bytebase \
   --port 8080
+````
 
 2. Bytebase is running successfully in Docker, and you can visit it via `localhost:5678`.
 ![docker](/static/blog/database-change-management-with-snowflake/docker.webp)
@@ -110,18 +111,26 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 ![bb-alter-schema-test](/static/blog/database-change-management-with-snowflake/bb-alter-schema-test.webp)
 
 3. Input title, SQL, and Assignee, and click **Create**.
+````sql
+CREATE SCHEMA DEMO_UI;
+CREATE TABLE HELLO_WORLD
+(
+  FIRST_NAME VARCHAR
+  ,LAST_NAME VARCHAR
+);
+````
 ![bb-is-new-create-table](/static/blog/database-change-management-with-snowflake/bb-is-new-create-table.webp)
 
-4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
+1. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
 ![bb-is-create-table-run](/static/blog/database-change-management-with-snowflake/bb-is-create-table-run.webp)
 
-5. The issue status will become Done.
+1. The issue status will become Done.
 ![bb-is-create-table-done](/static/blog/database-change-management-with-snowflake/bb-is-create-table-done.webp)
 
-6. On the issue page, click **view migration**. You will see diff for each migration.
+1. On the issue page, click **view migration**. You will see diff for each migration.
 ![bb-view-migration](/static/blog/database-change-management-with-snowflake/bb-view-migration.webp)
 
-7. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
+1. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
