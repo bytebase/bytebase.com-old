@@ -91,7 +91,7 @@ bytebase/bytebase:1.9.1 \
 ![sts-vs-step2-unfilled](/static/blog/database-change-management-with-snowflake-and-github/sts-vs-step2-unfilled.webp) 
 ![github-new-oauth](/static/blog/database-change-management-with-snowflake-and-github/github-new-oauth.webp)
 
-7. After the OAuth application is created successfully. Click **Generate a new client secret**. Copy **Client ID** and this newly generated **Client Secret** and paste them back into Bytebase.
+7. After the OAuth application is created successfully. Click **Generate a new client secret**. Copy **Client ID** and this newly generated **Client Secret**, then paste them back into Bytebase.
 ![github-ds-client-id](/static/blog/database-change-management-with-snowflake-and-github/github-ds-client-id.webp)
 ![sts-vs-step2-filled](/static/blog/database-change-management-with-snowflake-and-github/sts-vs-step2-filled.webp)
 
