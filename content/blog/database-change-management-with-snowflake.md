@@ -12,7 +12,6 @@ This is a series of articles about Database Change Management with Snowflake
 - Database Change Management with Snowflake (this one)
 - [Database Change Management with Snowflake and GitHub](/blog/database-change-management-with-snowflake-and-github)
 
-
 ---
 
 This tutorial will guide you step-by-step to set up database change management for [Snowflake](https://www.snowflake.com/en/) in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make Snowflake schema change and data change.
@@ -126,11 +125,7 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
-<<<<<<< HEAD
-## Bonus Section - Drift Detect
-=======
 ## Bonus Section - Schema Drift Detection
->>>>>>> main
 
 To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 
