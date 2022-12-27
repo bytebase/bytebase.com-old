@@ -145,7 +145,7 @@ FIRST_NAME VARCHAR
 5. Go to GitHub repository, you will see besides your committed SQL, there is a .DB_DEMO_BB##LATEST.sql file. Because you have configured `Schema path template` before, Bytebase will write back the latest schema to that specified path after completing the schema change. Thus you have access to an update-to-date full schema at any time.
 ![github-LATEST-list](/static/blog/database-change-management-with-snowflake-and-github/github-LATEST-list.webp)
 ![github-LATEST-create-table](/static/blog/database-change-management-with-snowflake-and-github/github-LATEST-create-table.webp)
-6. Let’s create another SQL file `DB_DEMO_BB##202212152040#ddl#add_age.sql`. Paste the SQL script in it.
+6. Let’s create another SQL file `DB_DEMO_BB##202212152040#ddl#add_age.sql` to see how that latest schema file will be updated after applying a new schema change. Paste the SQL script in it.
 
 ````SQL
 USE SCHEMA DEMO;
