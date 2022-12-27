@@ -121,16 +121,16 @@ CREATE TABLE HELLO_WORLD
 ````
 ![bb-is-new-create-table](/static/blog/database-change-management-with-snowflake/bb-is-new-create-table.webp)
 
-1. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
+4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
 ![bb-is-create-table-run](/static/blog/database-change-management-with-snowflake/bb-is-create-table-run.webp)
 
-1. The issue status will become Done.
+5. The issue status will become Done.
 ![bb-is-create-table-done](/static/blog/database-change-management-with-snowflake/bb-is-create-table-done.webp)
 
-1. On the issue page, click **view migration**. You will see diff for each migration.
+6. On the issue page, click **view migration**. You will see diff for each migration.
 ![bb-view-migration](/static/blog/database-change-management-with-snowflake/bb-view-migration.webp)
 
-1. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
+7. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
