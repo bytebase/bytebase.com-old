@@ -10,7 +10,7 @@ description: This tutorial will bring your Snowflake schema change to the next l
 This is a series of articles about Database Change Management with Snowflake
 
 - [Database Change Management with Snowflake](/blog/database-change-management-with-snowflake)
-- Database Change Management with Snowflake and GitHub(this one)
+- Database Change Management with Snowflake and GitHub (this one)
 
 ---
 
