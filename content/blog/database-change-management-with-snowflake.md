@@ -115,10 +115,9 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 CREATE SCHEMA DEMO_UI;
 CREATE TABLE HELLO_WORLD
 (
-  FIRST_NAME VARCHAR
-  ,LAST_NAME VARCHAR
+  FIRST_NAME VARCHAR,
+  LAST_NAME VARCHAR
 );
-````
 ![bb-is-new-create-table](/static/blog/database-change-management-with-snowflake/bb-is-new-create-table.webp)
 
 4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
