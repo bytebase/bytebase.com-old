@@ -29,9 +29,9 @@
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
           :to="localePath(`/blog/${latestFeaturedBlog.slug}`)"
         >
-          <p class="mt-4 text-2xl sm:text-6xl font-semibold text-gray-900">
+          <h2 class="mt-4 text-2xl sm:text-6xl font-semibold text-gray-900">
             {{ latestFeaturedBlog.title }}
-          </p>
+          </h2>
           <p class="mt-6 text-base text-gray-500">
             {{ latestFeaturedBlog.description }}
           </p>
@@ -66,9 +66,9 @@
         class="w-full py-2 flex flex-col justify-start items-start hover:opacity-80"
         :to="localePath(`/blog/${blog.slug}`)"
       >
-        <p class="text-lg py-2 font-semibold text-gray-700">
+        <h2 class="text-lg py-2 font-semibold text-gray-700">
           {{ blog.title }}
-        </p>
+        </h2>
         <div class="flex flex-wrap mb-3 gap-2">
           <span
             v-for="(tag, tagIndex) in blog.tags"
@@ -94,8 +94,13 @@
     </div>
 
     <!-- Other post list section -->
+    <h1
+      class="w-full max-w-full flex mx-auto justify-center mt-8 mb-8 lg:max-w-7xl text-xl sm:text-4xl font-semibold text-gray-900"
+    >
+      Bytebase Blog
+    </h1>
     <div
-      class="relative w-full mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl mt-8 mb-8 grid grid-cols-1 p-4 gap-6 md:grid-cols-2 lg:grid-cols-3"
+      class="relative w-full mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl grid grid-cols-1 p-4 gap-6 md:grid-cols-2 lg:grid-cols-3"
     >
       <div
         v-for="(blog, index) in blogList"
@@ -122,9 +127,9 @@
               :to="localePath(`/blog/${blog.slug}`)"
               class="block mt-2 no-underline"
             >
-              <p class="text-xl font-semibold text-gray-900">
+              <h2 class="text-xl font-semibold text-gray-900">
                 {{ blog.title }}
-              </p>
+              </h2>
               <p class="mt-3 text-base text-gray-500">
                 {{ blog.description }}
               </p>
@@ -180,7 +185,7 @@ export default {
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
       )
       .map((blog: any) => {
-        let author: any = {
+        const author: any = {
           name: blog.author,
         };
         const teammate = getTeammateByName(author.name) as any;

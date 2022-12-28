@@ -3,7 +3,7 @@
     <div class="relative">
       <i18n
         path="index-page.a-complete-rethink-to-deliver-experience.title"
-        tag="h2"
+        tag="h1"
         class="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-center text-gray-900 tracking-tight mb-8"
       >
         <template #deliver-experience>
@@ -17,22 +17,22 @@
           >
         </template>
       </i18n>
-      <h3 class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
+      <p class="mt-4 max-w-3xl mx-auto text-left text-xl text-gray-500">
         {{
           $t("index-page.a-complete-rethink-to-deliver-experience.description")
         }}
-      </h3>
+      </p>
     </div>
 
     <div
       class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
     >
       <div class="relative">
-        <h3
+        <h2
           class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
         >
           {{ $t("index-page.modern-collaborative-dev-tool.title") }}
-        </h3>
+        </h2>
         <i18n
           path="index-page.modern-collaborative-dev-tool.description"
           tag="p"
@@ -247,11 +247,11 @@
         class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center"
       >
         <div class="lg:col-start-2">
-          <h3
+          <h2
             class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
           >
             {{ $t("index-page.single-binary-with-curated-tech-stack.title") }}
-          </h3>
+          </h2>
           <i18n
             path="index-page.single-binary-with-curated-tech-stack.description"
             tag="p"

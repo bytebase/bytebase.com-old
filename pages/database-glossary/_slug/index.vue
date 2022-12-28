@@ -43,7 +43,7 @@
       </ol>
     </nav>
     <div class="prose sm:prose-xl prose-indigo mx-auto">
-      <h1>📕 What is {{ glossary.name }}?</h1>
+      <h1>What is {{ glossary.name }}?</h1>
       <div class="justify-between flex">
         <div>
           <div
