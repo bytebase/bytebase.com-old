@@ -9,7 +9,7 @@ description: "- Workspace owner and DBA can now view audit logs. - Support CRUD 
 
 - Workspace owner and DBA can now view audit logs.
 - Support CRUD database role (only for PostgreSQL) via Terraform Provider. Read the [docs](https://registry.terraform.io/providers/bytebase/bytebase/latest/docs/resources/database_role).
-- Support viewing and editing primary keys and foreign keys in the Schema editor for MySQL.
+- Support viewing and editing primary keys and foreign keys in the Schema Editor for MySQL.
 - Support MySQL/TiDB SSL connection.
 - Support DML with large SQL (up to 100M).
 - Support online migration for UI workflow under tenant mode.
