@@ -183,6 +183,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Database Access Control](/administration/database-access-control)
 
+### [Audit Log](/administration/audit-log)
+
 ### [Anonymize Data](/administration/anonymize-data)
 
 ### [Webhook Integration](/administration/webhook-integration/overview)
