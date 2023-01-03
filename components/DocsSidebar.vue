@@ -73,38 +73,38 @@
         </nuxt-link>
       </div>
       <div
-        v-for="subnode in node.children"
+        v-for="subNode in node.children"
         v-show="node.displayChildren"
-        :key="subnode.title"
+        :key="subNode.title"
         class="w-full flex flex-col justify-start items-start"
       >
-        <!-- subnode which can toggle leaf children nodes -->
+        <!-- subnode -->
         <div
           class="pl-6 w-full"
           @click="
-            subnode.displayChildren = !subnode.displayChildren;
+            subNode.displayChildren = !subNode.displayChildren;
             handleLinkClick();
           "
         >
           <nuxt-link
             :to="
-              subnode.type === 'page-link'
-                ? localePath(`/docs${subnode.path}`)
-                : { hash: subnode.path }
+              subNode.type === 'page-link'
+                ? localePath(`/docs${subNode.path}`)
+                : { hash: subNode.path }
             "
             class="pl-3 pr-1 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
-            <span>{{ subnode.title }}</span>
+            <span>{{ subNode.title }}</span>
             <span
-              v-if="subnode.children.length !== 0"
+              v-if="subNode.children.length !== 0"
               class="flex-shrink-0 mr-4"
               @click.prevent.stop="
-                subnode.displayChildren = !subnode.displayChildren
+                subNode.displayChildren = !subNode.displayChildren
               "
             >
               <img
                 class="relative w-4 h-auto transition-all opacity-60"
-                :class="subnode.displayChildren ? 'rotate-90-arrow' : ''"
+                :class="subNode.displayChildren ? 'rotate-90-arrow' : ''"
                 src="~/assets/svg/chevron-right.svg"
                 alt="toggle"
               />
@@ -113,8 +113,8 @@
         </div>
         <!-- childnode -->
         <div
-          v-for="childNode in subnode.children"
-          v-show="subnode.displayChildren"
+          v-for="childNode in subNode.children"
+          v-show="subNode.displayChildren"
           :key="childNode.title"
           class="w-full"
           @click="handleLinkClick"
@@ -153,21 +153,21 @@
           </div>
           <!-- leaf nodes -->
           <div
-            v-for="leafnode in childNode.children"
+            v-for="leafNode in childNode.children"
             v-show="childNode.displayChildren"
-            :key="leafnode.title"
+            :key="leafNode.title"
             class="pl-12 w-full"
             @click="handleLinkClick"
           >
             <nuxt-link
               :to="
-                leafnode.type === 'page-link'
-                  ? localePath(`/docs${leafnode.path}`)
-                  : { hash: leafnode.path }
+                leafNode.type === 'page-link'
+                  ? localePath(`/docs${leafNode.path}`)
+                  : { hash: leafNode.path }
               "
               class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
             >
-              <span>{{ leafnode.title }}</span>
+              <span>{{ leafNode.title }}</span>
             </nuxt-link>
           </div>
         </div>
