@@ -12,7 +12,7 @@
     >
       <span>← back to main docs</span>
     </a>
-    <!-- Render document tree. We only support 3 level folder. -->
+    <!-- Render document tree. We only support 4 level folder. -->
     <div
       v-for="(node, index) in documentTreeRoot.children"
       :key="index"
@@ -22,7 +22,7 @@
       <hr v-if="node.type === 'hr'" class="w-full my-1 mt-4" />
       <!-- root node -->
       <div
-        v-if="node.type !== 'hr'"
+        v-else
         class="pl-3 mt-3 w-full flex flex-row justify-between cursor-pointer items-start"
         @click="
           node.displayChildren = !node.displayChildren;
@@ -111,24 +111,65 @@
             </span>
           </nuxt-link>
         </div>
-        <!-- leaf nodes -->
+        <!-- childnode -->
         <div
-          v-for="leafnode in subnode.children"
+          v-for="childNode in subnode.children"
           v-show="subnode.displayChildren"
-          :key="leafnode.title"
-          class="pl-9 w-full"
+          :key="childNode.title"
+          class="w-full"
           @click="handleLinkClick"
         >
-          <nuxt-link
-            :to="
-              leafnode.type === 'page-link'
-                ? localePath(`/docs${leafnode.path}`)
-                : { hash: leafnode.path }
+          <div
+            class="pl-9 w-full"
+            @click="
+              childNode.displayChildren = !childNode.displayChildren;
+              handleLinkClick();
             "
-            class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
           >
-            <span>{{ leafnode.title }}</span>
-          </nuxt-link>
+            <nuxt-link
+              :to="
+                childNode.type === 'page-link'
+                  ? localePath(`/docs${childNode.path}`)
+                  : { hash: childNode.path }
+              "
+              class="pl-3 pr-1 py-2 flex flex-row justify-between items-center flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+            >
+              <span>{{ childNode.title }}</span>
+              <span
+                v-if="childNode.children.length !== 0"
+                class="flex-shrink-0 mr-4"
+                @click.prevent.stop="
+                  childNode.displayChildren = !childNode.displayChildren
+                "
+              >
+                <img
+                  class="relative w-4 h-auto transition-all opacity-60"
+                  :class="childNode.displayChildren ? 'rotate-90-arrow' : ''"
+                  src="~/assets/svg/chevron-right.svg"
+                  alt="toggle"
+                />
+              </span>
+            </nuxt-link>
+          </div>
+          <!-- leaf nodes -->
+          <div
+            v-for="leafnode in childNode.children"
+            v-show="childNode.displayChildren"
+            :key="leafnode.title"
+            class="pl-12 w-full"
+            @click="handleLinkClick"
+          >
+            <nuxt-link
+              :to="
+                leafnode.type === 'page-link'
+                  ? localePath(`/docs${leafnode.path}`)
+                  : { hash: leafnode.path }
+              "
+              class="pl-3 pr-1 py-2 block flex-shrink-0 text-gray-500 w-full text-sm border border-transparent border-r-0 whitespace-pre-wrap hover:text-gray-700"
+            >
+              <span>{{ leafnode.title }}</span>
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -199,6 +240,19 @@ const getDocumentTreeRoot = (documentList: any[]): DocumentTreeNode => {
           displayChildren: false,
         });
       }
+    } else if (document.level === 4) {
+      const parentNode = last(
+        last(last(documentTreeRoot.children)?.children)?.children
+      );
+      if (parentNode) {
+        parentNode.children.push({
+          title: document.title,
+          path: document.path,
+          type: document.type,
+          children: [],
+          displayChildren: false,
+        });
+      }
     }
   }
 
@@ -235,7 +289,11 @@ export default defineComponent({
       const nodes = layout.body.children
         .filter(
           (n) =>
-            n.tag === "h2" || n.tag === "h3" || n.tag === "h4" || n.tag === "hr"
+            n.tag === "h2" ||
+            n.tag === "h3" ||
+            n.tag === "h4" ||
+            n.tag === "h5" ||
+            n.tag === "hr"
         )
         .map((n) => {
           let level = 1;
@@ -243,6 +301,8 @@ export default defineComponent({
             level = 2;
           } else if (n.tag === "h4") {
             level = 3;
+          } else if (n.tag === "h5") {
+            level = 4;
           } else if (n.tag === "hr") {
             return {
               level: 1,
@@ -294,15 +354,23 @@ export default defineComponent({
 
       if (documentTreeRoot.value) {
         for (const rootNode of documentTreeRoot.value.children) {
-          for (const childNode of rootNode.children) {
-            for (const leafNode of childNode.children) {
-              if (pathname.includes(`/docs${leafNode.path}`)) {
+          for (const subNode of rootNode.children) {
+            for (const childNode of subNode.children) {
+              for (const leafNode of childNode.children) {
+                if (pathname.includes(`/docs${leafNode.path}`)) {
+                  rootNode.displayChildren = true;
+                  subNode.displayChildren = true;
+                  childNode.displayChildren = true;
+                  break;
+                }
+              }
+              if (pathname.includes(`/docs${childNode.path}`)) {
                 rootNode.displayChildren = true;
-                childNode.displayChildren = true;
+                subNode.displayChildren = true;
                 break;
               }
             }
-            if (pathname.includes(`/docs${childNode.path}`)) {
+            if (pathname.includes(`/docs${subNode.path}`)) {
               rootNode.displayChildren = true;
               break;
             }
