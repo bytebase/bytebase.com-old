@@ -9,6 +9,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Use Cases](/introduction/use-cases)
 
+### [Supported Databases](/introduction/supported-databases)
+
 ## Get Started
 
 ### [5 Mins Quick Start](/get-started/quick-start)

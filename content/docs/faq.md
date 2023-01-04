@@ -17,17 +17,7 @@ Bytebase is lightweight and has no external dependency. For normal workload, it 
 
 ### Supported database versions
 
-Bytebase officially supports the following major versions for each supported database engine:
-
-- MySQL - 5.7 and 8.0
-- PostgreSQL - 12.0, 13.0, 14.0
-- TiDB - 5.0
-- Snowflake
-- ClickHouse - 21.0
-
-Bytebase usually works fine with older database versions, we just won't support features specific to those older versions. We may add other open source databases in the future.
-
-On the other hand, we do not plan to support any commercial databases such as Oracle, SQL Server.
+See [Supported Databases](/docs/introduction/supported-databases).
 
 ### Supported version control systems (VCS) and providers
 
