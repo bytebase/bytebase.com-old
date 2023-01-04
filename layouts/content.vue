@@ -27,7 +27,9 @@
           >API</a
         >
         <a
-          :href="localePath('/docs/how-to/workflow/gitops-feature-branch')"
+          :href="
+            localePath('/docs/how-to/sql-review/postgres-sql-review-guide')
+          "
           class="header-link"
           @click="track('database-how-to.header')"
           >How-To</a

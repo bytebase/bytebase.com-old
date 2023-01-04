@@ -3,6 +3,10 @@
 expand_section_list: ["Workflow", "Integrations", "ClickHouse"]
 ---
 
+## SQL Review Guide
+
+### [PostgreSQL](/how-to/sql-review/postgres-sql-review-guide)
+
 ## Workflow
 
 ### [GitOps with Feature Branch](/how-to/workflow/gitops-feature-branch)

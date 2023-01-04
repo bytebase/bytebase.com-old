@@ -9,6 +9,11 @@
       <h2 class="mt-3 mx-auto text-2xl sm:text-3xl text-gray-500 sm:mt-4">
         {{ $t("sql-review-guide.description") }}
       </h2>
+      <nuxt-link
+        to="/docs/how-to/sql-review/postgres-sql-review-guide"
+        class="mt-6 inline-flex space-x-1 text-xl font-medium text-indigo-700 hover:underline"
+        >{{ $t("sql-review-guide.postgres") }}</nuxt-link
+      >
     </div>
     <div
       class="flex flex-col sm:flex-row justify-center items-center mt-10 gap-x-10 gap-y-10"
