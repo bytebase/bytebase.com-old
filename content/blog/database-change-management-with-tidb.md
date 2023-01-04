@@ -18,7 +18,7 @@ This is a series of articles about Database Change Management with TiDB
 
 This tutorial will guide you step-by-step to set up database change management for TiDB in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make TiDB schema change and data change.
 
-Bytebase provides a GUI for teams to **perform database changes** and **retain the full migration history**. You can use Bytebase **Free Plan** to finish the tutorial.
+Bytebase provides a GUI for teams to **perform database changes** and **retain the full migration history**. You can use Bytebase free version to finish the tutorial.
 
 There is also a bonus section about **drift detection** for those advanced users if needed.
 
