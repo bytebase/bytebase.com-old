@@ -14,7 +14,7 @@ This is a series of articles about Database Change Management with TiDB
 
 ---
 
-[TiDB](https://www.pingcap.com/tidb/) is an open-source NewSQL database that supports Hybrid Transactional and Analytical Processing workloads. It is **MySQL compatible** and can provide horizontal scalability, strong consistency, and high availability.
+[TiDB](https://www.pingcap.com/tidb/) is an open-source NewSQL database that supports Hybrid Transactional and Analytical Processing (HTAP) workloads. It is **MySQL compatible** and can provide horizontal scalability, strong consistency, and high availability.
 
 This tutorial will guide you step-by-step to set up database change management for TiDB in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make TiDB schema change and data change.
 
