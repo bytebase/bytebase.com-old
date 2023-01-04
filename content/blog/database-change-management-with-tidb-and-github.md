@@ -68,7 +68,7 @@ bytebase/bytebase:1.10.0 \
 1. Visit [https://df8d-154-9-204-36.ap.ngrok.io](https://df8d-154-9-204-36.ap.ngrok.io) in your browser, and log in using your `Workspace Owner` account created from the previous article.
 ![login](/static/blog/database-change-management-with-tidb-and-github/login.webp)
 
-2. If you have followed the last article, you should have a Project `TestTiDB` and a database `demo`.
+2. If you have followed the last tutorial, you should have a Project `TestTiDB` and a database `demo`.
 ![home-testtidb-demo](/static/blog/database-change-management-with-tidb-and-github/home-testtidb-demo.webp)
 
 ## Step 3 - Connect Bytebase with GitHub.com
