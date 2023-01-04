@@ -37,6 +37,14 @@ Bytebase usually works fine with older database versions, we just won't support 
 | [Sheet Management](/docs/sql-editor/manage-sql-scripts) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
 |   [Data Anonymization](/docs/sql-editor/anonymize-data) |  ✔️   |            |      |            |           |
 
+### Security
+
+|                                                                 Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake |
+| ----------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: |
+|                            [RBAC](/docs/concepts/roles-and-permissions) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
+| [Database Access Control](/docs/administration/database-access-control) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
+|                             [Audit Log](/docs/administration/audit-log) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
+
 ### Disaster Recovery
 
 |                                                                                   Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake |
