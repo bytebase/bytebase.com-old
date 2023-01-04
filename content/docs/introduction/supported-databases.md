@@ -35,7 +35,6 @@ Bytebase usually works fine with older database versions, we just won't support 
 |              [Query Mode](/docs/sql-editor/run-queries) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
 |               [Admin Mode](/docs/sql-editor/admin-mode) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
 | [Sheet Management](/docs/sql-editor/manage-sql-scripts) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
-|   [Data Anonymization](/docs/sql-editor/anonymize-data) |  ✔️   |            |      |            |           |
 
 ### Security
 
@@ -44,6 +43,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 |                            [RBAC](/docs/concepts/roles-and-permissions) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
 | [Database Access Control](/docs/administration/database-access-control) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
 |                             [Audit Log](/docs/administration/audit-log) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |
+|               [Data Anonymization](/docs/administration/anonymize-data) |  ✔️   |            |      |            |           |
 
 ### Disaster Recovery
 
