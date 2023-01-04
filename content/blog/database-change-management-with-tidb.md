@@ -68,7 +68,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 - **Account name** / **Port**: host.docker.internal / 4000
 - **Username and password**: root / (leave it empty)
 
-## Step 3 - Create a Project with TiDB instance
+## Step 3 - Create a Project
 
 In Bytebase, **Project** is the container to group logically related **Databases, Issues** and **Users** together, which is similar to the project concept in other dev tools such as Jira, GitLab. So before you deal with the database, a project must be created.
 
