@@ -78,7 +78,7 @@ bytebase/bytebase:1.10.0 \
 
 2. Choose GitHub.com and Click **Next**.
 
-3. Follow the instructions within **STEP 2**, and in this tutorial, we will use a personal account instead of an organization account. The configuration is similar.
+3. Follow the instructions within **STEP 2 - OAuth application info**, and in this tutorial, we will use a GitHub personal account instead of an organization account. The configuration is similar.
 ![settings-vc-step2](/static/blog/database-change-management-with-tidb-and-github/settings-vc-step2.webp)
 
 4. Go to your GitHub account. Click **Settings** on the dropdown menu.
