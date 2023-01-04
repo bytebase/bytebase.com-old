@@ -10,7 +10,7 @@ description: TiDB is an open-source NewSQL database that supports Hybrid Transac
 This is a series of articles about Database Change Management with TiDB
 
 - Database Change Management with TiDB (this one)
-- Database Change Management with TiDB and GitHub
+- [Database Change Management with TiDB and GitHub](/blog/database-change-management-with-tidb-and-github)
 
 ---
 
