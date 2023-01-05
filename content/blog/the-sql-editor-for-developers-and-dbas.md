@@ -31,22 +31,22 @@ Bytebase v1.9.1 releases a new SQL Editor with the following highlights:
 ### Admin Mode
 
 When users want to connect to databases to run admin commands, they can do it in SQL Editor Admin mode with a DBA account like the screenshot below. You can take a look at the document [Admin Mode](/docs/sql-editor/admin-mode) to learn more details.
-![admin-mode](/static/blog/the-sql-editor-for-developers-and-dbasadmin-mode.webp)
+![admin-mode](/static/blog/the-sql-editor-for-developers-and-dbas/admin-mode.webp)
 
 ### Database-based Access Control
 
-When users want to allow developers to access some databases in the production environment, they can mark the production environment as a protected environment and configure an allowlist. You can get more details from the document [Database Access Control](https://www.bytebase.com/docs/administration/database-access-control).
-![access-control](/static/blog/the-sql-editor-for-developers-and-dbasaccess-control.webp)
+When users want to allow developers to access some databases in the production environment, they can mark the production environment as a protected environment and configure an allowlist. You can get more details from the document [Database Access Control](/docs/administration/database-access-control).
+![access-control](/static/blog/the-sql-editor-for-developers-and-dbas/access-control.webp)
 
 ### Data Anonymization
 
-When developers query tables containing sensitive columns in SQL Editor, the result of these columns will display as "**\*\***". You can learn the configuration details from the document [Anonymize Data](https://www.bytebase.com/docs/administration/anonymize-data).
-![anonymize-data](/static/blog/the-sql-editor-for-developers-and-dbasanonymize-data.webp)
+When developers query tables containing sensitive columns in SQL Editor, the result of these columns will display as "**\*\***". You can learn the configuration details from the document [Anonymize Data](/docs/administration/anonymize-data).
+![anonymize-data](/static/blog/the-sql-editor-for-developers-and-dbas/anonymize-data.webp)
 
 ### Collaborative Sheets
 
-For commonly-used SQL statements, you can save them as sheets and set up a public SQL script library in your team. For large SQL scripts (up to 100M), you can use them in issues after uploading them as sheets (see the screenshot below). You can explore the document [Manage SQL Scripts with Sheet](https://www.bytebase.com/docs/sql-editor/manage-sql-scripts) to get additional details.
-![large-script](/static/blog/the-sql-editor-for-developers-and-dbaslarge-script.webp)
+For commonly-used SQL statements, you can save them as sheets and set up a public SQL script library in your team. For large SQL scripts (up to 100M), you can use them in issues after uploading them as sheets (see the screenshot below). You can explore the document [Manage SQL Scripts with Sheet](/docs/sql-editor/manage-sql-scripts) to get additional details.
+![large-script](/static/blog/the-sql-editor-for-developers-and-dbas/large-script.webp)
 
 ## Try it Out
 
