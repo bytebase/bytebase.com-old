@@ -13,7 +13,7 @@ Both database access control and data anonymization are **Enterprise Plan** only
 
 ## Preparation phase
 
-This phase will guide you configure and prepare testing data in Bytebase. You can adjust to your needs if you’re familiar with the system. If you already have set up the Bytebase environment, you can skip this part and start from Test phase.
+This phase will guide you configure and prepare testing data in Bytebase. You can adjust to your needs if you’re familiar with the system. If you already have set up the Bytebase environment, you can skip this part and start from [Test phase](#test-phase).
 
 During this phase, you’ll run one Bytebase and two MySQL instances, add the corresponding database instance to Bytebase’s Test and Prod environments, create tables, and populate them with data.
 
