@@ -13,6 +13,6 @@ export const validDocsCategoryList = [
   {
     category: "how-to",
     name: "How-To",
-    path: "/how-to/workflow/gitops-feature-branch",
+    path: "/how-to/sql-review/postgres-sql-review-guide",
   },
 ];
