@@ -75,17 +75,18 @@
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-28 gap-y-1">
                   <div class="mt-3 flex items-baseline">
-                    <p v-if="plan.pricePrefix" class="text-gray-400 mr-2">
-                      {{ $t(plan.pricePrefix) }}
-                    </p>
-                    <p class="text-5xl font-extrabold tracking-tight">
-                      ${{ plan.pricePerInstancePerMonth }}
-                    </p>
-                    <p v-if="plan.priceSuffix" class="text-gray-400 ml-2">
-                      {{ $t(plan.priceSuffix) }}
+                    <p
+                      :class="[
+                        'tracking-tight',
+                        plan.type == 2
+                          ? 'text-4xl font-semibold'
+                          : 'text-5xl font-extrabold',
+                      ]"
+                    >
+                      {{ plan.pricing }}
                     </p>
                   </div>
-                  <p class="text-gray-400">
+                  <p class="text-gray-400" v-if="plan.type != 2">
                     {{ $t("subscription.per-instance") }}
                     {{ $t("subscription.per-month") }}
                   </p>
@@ -526,8 +527,7 @@ interface LocalPlan extends Plan {
   label?: string;
   featured: boolean;
   buttonText: string;
-  pricePrefix: string;
-  priceSuffix: string;
+  pricing: string;
 }
 
 interface LocalFeatureTier {
@@ -574,12 +574,10 @@ export default defineComponent({
       label: app.i18n.t(`subscription.plan.${plan.title}.label`) as string,
       featured: plan.type === PlanType.TEAM,
       buttonText: getButtonText(plan),
-      pricePrefix:
-        plan.type === PlanType.ENTERPRISE ? "subscription.start-from" : "",
-      priceSuffix:
+      pricing:
         plan.type === PlanType.ENTERPRISE
-          ? "pricing.price-suffix-for-enterprise"
-          : "",
+          ? (app.i18n.t("subscription.contact-us") as string)
+          : `$${plan.pricePerInstancePerMonth}`,
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
