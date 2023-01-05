@@ -56,6 +56,6 @@ For commonly-used SQL statements, you can save them as sheets and set up a publi
 
 ## Try it Out
 
-With the new SQL Editor in Bytebase Console, you can run database admin commands in Admin mode, anonymize sensitive data when executing queries, configure a database allowlist to manage database access permission, and save commonly-used SQL scripts to collaborate with team members. We hope you can find the SQL Editor to be a useful tool.
+With the new SQL Editor in Bytebase Console, you can run database admin commands in Admin mode, anonymize sensitive data when executing queries, configure a database allowlist to manage database access permission, and save commonly-used SQL scripts to collaborate with team members. Besides that, you can view all queries in SQL Editor with the audit logs. We hope you can find the SQL Editor to be a useful tool.
 
 If you have any comments or questions, don’t hesitate to let us know. You can join our discord at https://discord.gg/Fac9nmZ95j to learn more about Bytebase.
