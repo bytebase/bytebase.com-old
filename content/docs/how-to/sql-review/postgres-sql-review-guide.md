@@ -607,7 +607,10 @@ $function$;
 
 - Use `EXISTS` clause instead of the `IN` operator for better performance.
 
-- Use `= ANY(ARRAY[1,2,3,4])` instead of `IN (1,2,3,4)` for better performance.
+- For singular value comparision, use `= ANY(ARRAY[1,2,3,4])` instead of `IN (1,2,3,4)` for better performance.
+
+- For row value type comparison, still use `IN`. Because clause like `WHERE (a, b) = ANY(ARRAY[(1, 2), (2, 3)])` won't hit index.
+  Similar if the array is generated from a function like `= ANY (call_function())`.
 
 ### Avoid Left Fuzzy Search
 
