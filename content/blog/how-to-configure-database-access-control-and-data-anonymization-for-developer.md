@@ -4,11 +4,11 @@ author: Ningjing
 published_at: 2023/01/05 21:15
 feature_image: /static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/ac-feature.webp
 tags: How-To
-description: This tutorial will walk you through how database access control and data anonymization works in Bytebase. You’ll have two Bytebase accounts –  one DBA and one Developer.  
+description: This tutorial will walk you through how database access control and data anonymization works in Bytebase. You’ll need two Bytebase accounts – one DBA and one Developer.  
 ---
-This tutorial will walk you through how **database access control** and **data anonymization** works in Bytebase. You’ll have two Bytebase accounts –  one **DBA** and one **Developer**. DBA is the one who configures the settings and Developer is the one who should only see information based on the configuration.
+This tutorial will walk you through how **database access control** and **data anonymization** works in Bytebase. You’ll need two Bytebase accounts –  one **DBA** and one **Developer**. DBA is the one who configures the settings and Developer is the one who should only see information based on the configuration.
 
-Both database access control and data anonymization are **Enterprise Plan** only Features. However, you can start a **14-day trial of the Enterprise Plan** with one click without providing additional information (no credit card required).
+Both database access control and data anonymization are **Enterprise Plan** only features. However, you can start a **14-day trial of the Enterprise Plan** with one click without providing additional information (no credit card required).
 
 
 ## Preparation phase
@@ -55,7 +55,7 @@ docker run --name mysqldprod \
 mysql/mysql-server:8.0
 ````
 
-3. Register admin account DBA - we’ll refer to it as DBA. This account will be granted `Workspace Owner` role. [https://www.bytebase.com/docs/concepts/roles-and-permissions](https://www.bytebase.com/docs/concepts/roles-and-permissions)
+1. Register admin account DBA - we’ll refer to it as DBA. This account will be granted `Workspace Owner` role. [https://www.bytebase.com/docs/concepts/roles-and-permissions](/docs/concepts/roles-and-permissions)
 
 ![admin-register](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/admin-register.webp)
 
@@ -79,20 +79,22 @@ mysql/mysql-server:8.0
 
 ![create-project](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/create-project.webp)
 
-4. Follow the onboard guidance or Click New DB on the project `TestAccess` page.
+4. Follow the onboard guidance or Click **New DB** on the project `TestAccess` page.
 ![new-db.webp](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/new-db.webp)
 
-5. Create a database `demo`, and click **Next**. This will take you to the issue page, and an issue is created. Since it’s for `Test` environment, it will execute without approval from you. Click **Resolve issue**, and the issue will be done.
+5. Create a database `demo`, and click **Next**.
 
 ![create-db](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/create-db.webp)
 
+6. You'll be redirected to the issue page, and an issue is created. Since it’s for `Test` environment, it will execute without approval from you. Click **Resolve issue**, and the issue will be done.
+
 ![issue-create-demo](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-create-demo.webp)
 
-6. Repeat 1 and 2 to add another instance `MySQL Prod` for `Prod` environment. The adjustments are environment should be `Prod` instead of `Test`,  and port number should be `3308` instead of `3307`.
+7. Repeat 1 and 2 to add another instance `MySQL Prod` for `Prod` environment. The adjustments are environment should be `Prod` instead of `Test`,  and port number should be `3308` instead of `3307`.
 
 ![2-instances](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/2-instances.webp)
 
-7. Repeat 4 and 5 to create another database `demo` but for `Prod` environment. Since it’s for `Prod` environment, the `Assignee` should click **Approve** to allow it to execute. After it’s execution, click **Resolve issue**, and the issue will be done.
+8. Repeat 4 and 5 to create another database `demo` but for `Prod` environment. Since it’s for `Prod` environment, the `Assignee` should click **Approve** to allow it to execute. After its execution, click **Resolve issue**, and the issue will be done.
 
 ![issue-create-demo-waiting](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-create-demo-waiting.webp)
 
@@ -120,7 +122,7 @@ mysql/mysql-server:8.0
 
 ![issue-alter-schema-waiting](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-alter-schema-waiting.webp)
 
-6. Click **Resolve issue** and the issue is marked Done.
+6. Click **Resolve issue** and the issue will be done.
 
 ![issue-alter-schema-done](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-alter-schema-done.webp)
 
@@ -145,13 +147,13 @@ and click **Apply to other tasks**. Click **Create** and the issue will be creat
 
 ![issue-change-data-preview](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-change-data-preview.webp)
 
-10. Repeat 5 and 6, and the issue is Done.
+10. Repeat 5 and 6, and the issue is done.
 
 ![issue-change-data-waiting](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-change-data-waiting.webp)
 
 ![issue-change-data-done](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/issue-change-data-done.webp)
 
-## Upgrade Phase
+## Upgrade phase
 
 With the preparation from the previous phase, you’re almost ready for testing. However, since access control and data anonymization are only available in the **Enterprise Plan**, you need to request a **free 14-day Enterprise Plan trial**.
 
@@ -183,7 +185,8 @@ Go to project `TestAccess` > **Settings** > **Manage members** to add Developer 
 
 ![add-dev](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/add-dev.webp)
 
-## Test Database Access Control Phase
+## Test phase
+### Test Database Access Control
 
 1. Log in as DBA, and click **Environments** on the top navigation bar. Click **Prod**, and make sure the **Mark as protected environment** is unchecked. It means the prod environment is not protected.
 
@@ -213,7 +216,7 @@ Go to project `TestAccess` > **Settings** > **Manage members** to add Developer 
 
 ![add-rule-popup](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/add-rule-popup.webp)
 
-1. Log in as Developer, and go to SQL Editor. You can see database `demo` under protected `Prod` environment because of the Access rule DBA just granted.
+8. Log in as Developer, and go to SQL Editor. You can see database `demo` under protected `Prod` environment because of the Access rule DBA just granted.
 
 ![sql-editor-protected](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/sql-editor-protected.webp)
 
@@ -221,7 +224,7 @@ Go to project `TestAccess` > **Settings** > **Manage members** to add Developer 
 
 ![settings-ac-rule-list](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/settings-ac-rule-list.webp)
 
-## Test Data Anonymization
+### Test Data Anonymization
 
 1. Log in as Developer, and go to SQL Editor. Currently, you can view all the information. We want to anonymize the `mobile` column.
 
