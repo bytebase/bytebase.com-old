@@ -607,7 +607,7 @@ $function$;
 
 - Use `EXISTS` clause instead of the `IN` operator for better performance.
 
-- Use `ANY(ARRAY[1,2,3,4])` instead of `IN (1,2,3,4)` for better performance.
+- Use `= ANY(ARRAY[1,2,3,4])` instead of `IN (1,2,3,4)` for better performance.
 
 ### Avoid Left Fuzzy Search
 
@@ -619,7 +619,7 @@ $function$;
 
 **Recommended**
 
-- Consider using an array instead of a temporary table, for example when fetching the corresponding records for a series of IDs. `ANY(ARRAY[1,2,3])` is better than the temporary table JOIN.
+- Consider using an array instead of a temporary table, for example when fetching the corresponding records for a series of IDs. `= ANY(ARRAY[1,2,3])` is better than the temporary table JOIN.
 
 ## Deployment Process
 
