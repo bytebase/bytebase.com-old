@@ -29,6 +29,6 @@ Finally, it is worth mentioning the newly added support for large SQL files, up 
 
 That’s it for the 1.10.0 deep dive. Looking back over the past year, at a 2-week release frequency, team Bytebase submitted ~4,000 PRs and released 25 versions.
 
-Some features comes naturally, such as the Audit Log; some were inspired by our users, such as the Terraform Bytebase Provider; and some have been foreshadowed at the beginning of 2022, such as the introduction of the worksheet model. We are thrilled to see that the worksheet model works perfectly with large SQL files.
+Some features come naturally, such as the Audit Log; some were inspired by our users, such as the Terraform Bytebase Provider; and some have been foreshadowed at the beginning of 2022, such as the introduction of the sheet model. We are thrilled to see that the sheet model works perfectly with large SQL files.
 
-In 2023, Bytebase will continue to bring value to our users.
+In 2023, Bytebase will continue to bring value to our users, and we are also looking forward to inspiration from our users.
