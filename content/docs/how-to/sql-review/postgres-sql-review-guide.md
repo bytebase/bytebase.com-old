@@ -63,7 +63,7 @@ In this article, we have compiled best practices for using PostgreSQL, which we 
 **Required**
 
 - Businesses use `<*>` as the schema name, and `<*>` is the business name. The schema name must be set to the first element of search_path.
-- `dba`, `monitor`, `trash are` reserved schema names.
+- `dba`, `monitor`, `trash` are reserved schema names.
 - The partition schema naming rule follows: `rel_<partition_total_num>_<partition_index>`.
 - Unless excepted, objects should not be created in other schemas.
 
