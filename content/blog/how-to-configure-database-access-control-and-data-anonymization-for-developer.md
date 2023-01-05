@@ -55,7 +55,7 @@ docker run --name mysqldprod \
 mysql/mysql-server:8.0
 ````
 
-1. Register admin account DBA - we’ll refer to it as DBA. This account will be granted `Workspace Owner` role. [https://www.bytebase.com/docs/concepts/roles-and-permissions](/docs/concepts/roles-and-permissions)
+1. Register admin account DBA - we’ll refer to it as DBA. This account will be granted `Workspace Owner` role. Check [Roles and Permissions (RBAC)](/docs/concepts/roles-and-permissions).
 
 ![admin-register](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/admin-register.webp)
 
