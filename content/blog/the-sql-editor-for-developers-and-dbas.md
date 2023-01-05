@@ -5,7 +5,7 @@ published_at: 2023/01/06 12:37:17
 feature_image: /static/blog/the-sql-editor-for-developers-and-dbascover.webp
 tags: Announcement
 featured: true
-description: Introduce the new SQL Editor in Bytebase Console with five highlights - Admin mode, database-based access control, data anonymization, collaborative sheets and easy to use.
+description: Introduce the new SQL Editor in Bytebase Console with six highlights - Admin mode, database-based access control, data anonymization, audit logs, collaborative sheets and easy to use.
 ---
 
 ## Key features of Advanced SQL Editor
@@ -25,6 +25,7 @@ Bytebase v1.9.1 releases a new SQL Editor with the following highlights:
 - [Admin mode](#admin-mode): Bytebase provides Admin mode in SQL Editor to allow DBAs to execute database admin commands.
 - [Database-based access control](#database-based-access-control): All databases in the protected environments can not be queried by developers in SQL Editor. DBAs can configure a database allowlist to grant developers the ability to query some of databases.
 - [Data anonymization](#data-anonymization): The query result of sensitive columns will be masked when developers run a query in SQL Editor. It is applicable to all query types, such as subquery, JOIN, Common Table Expression (CTE).
+- [Audit logs](#audit-logs): Bytebase Audit Log records all queries in SQL Editor which is accessible to DBAs.
 - [Collaborative sheets](#collaborative-sheets): DBAs and developers can save SQL statements as sheets to share with others in SQL Editor. Moreover, this release supports saving the uploaded SQL scripts as sheets to be used in issues to apply database changes, a single sheet can hold up to 100MB sized SQL statements.
 - Good user experience: This release presents SQL Editor with a fresh look and improves the code auto-completion.
 
@@ -42,6 +43,11 @@ When users want to allow developers to access some databases in the production e
 
 When developers query tables containing sensitive columns in SQL Editor, the result of these columns will display as "**\*\***". You can learn the configuration details from the document [Anonymize Data](/docs/administration/anonymize-data).
 ![anonymize-data](/static/blog/the-sql-editor-for-developers-and-dbas/anonymize-data.webp)
+
+### Audit Logs
+
+DBAs can browse all queries executed in SQL Editor with the audit logs. You can check out the document [Audit Log](/docs/administration/audit-log) to get more details.
+![audit-log](/static/blog/the-sql-editor-for-developers-and-dbas/audit-log.webp)
 
 ### Collaborative Sheets
 
