@@ -19,7 +19,10 @@ This document describes how to add an instance in order to synchronize databases
 1. Click **Add Instance**.
 1. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
 1. Enter connection info: **Username** and **Password**, and click **Test Connection**.
-1. Choose one instance, scroll down and see all the databases for that instance. You can click **Sync now** to synchronize its databases.
+1. (Optional) Enter SSL connection info:
+   1. Choose **None** to not use SSL connection.
+   1. Choose **CA Certificate** to use SSL connection with CA certificate only.
+   1. Choose **CA Certificate + Client Key + Client Certificate** to use a full SSL connection.
 
 ![create-an-instance](/docs/get-started/configure-workspace/add-an-instance/add-an-instance.webp)
 
@@ -27,10 +30,11 @@ This document describes how to add an instance in order to synchronize databases
 
 1. Environment can not be changed once the Instance has been created.
 1. The screenshot assumes you run Bytebase inside Docker and try to connect to a database instance on the same host. Thus it uses `host.docker.internal`. If Bytebase is not running inside Docker, you should supply the normal `127.0.0.1` to connect the instance on the same host [(detailed explanation)](https://stackoverflow.com/a/24326540/235983).
+1. The SSL connection configuration only supports MySQL, TiDB and ClickHouse for now. You can also configure the SSL connection on the instance details page.
 
 </hint-block>
 
-After adding an instance and syncing the schema, click **Databases** on the navigation bar. You can find the table is still empty. It’s because you haven’t created any project yet. In Bytebase, only databases belong to a user project will show up on the Databases page.
+After adding an instance, click **Databases** on the navigation bar. You can find the table is still empty. It’s because you haven’t created any project yet. In Bytebase, only databases belong to a user project will show up on the Databases page.
 
 ## Configure read-only connection
 
