@@ -19,7 +19,7 @@ This document describes how to add an instance in order to synchronize databases
 1. Click **Add Instance**.
 1. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
 1. Enter connection info: **Username** and **Password**, and click **Test Connection**.
-1. Enter SSL connection info:
+1. (Optional) Enter SSL connection info:
    1. Choose **None** to not use SSL connection.
    1. Choose **CA Certificate** to use SSL connection with CA certificate only.
    1. Choose **CA Certificate + Client Key + Client Certificate** to use a full SSL connection.
