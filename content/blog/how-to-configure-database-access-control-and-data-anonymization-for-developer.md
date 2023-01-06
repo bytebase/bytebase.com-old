@@ -159,23 +159,13 @@ With the preparation from the previous phase, you’re almost ready for testing.
 
 ### Step 1 - Upgrade to a 14-day Enterprise Plan trial
 
-1. Log in as DBA, and click **Start free trial** on the bottom left. Click **Start 14 days trial** on the popup.
+1. Log in as DBA, click **Environments** on the top navigation bar.  Check **Mark as protected environment** under `Test` environment. Click **Update**, and click **Upgrade trial**.
 
-![free-trial](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/free-trial.webp)
-
-![start-14-days-popup](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/start-14-days-popup.webp)
-
-2. Now it’s Team Plan.
-
-![team-plan](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/team-plan.webp)
-
-3. To upgrade to Enterprise Plan, click **Environments** on the top navigation bar.  Check **Mark as protected environment** under `Test` environment. Click **Update**, and click **Upgrade trial**.
-
-![env-test-mark](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/env-test-mark.webp)
+![env-test-mark](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/env-test-free-to-enterprise.webp)
 
 ![upgrade-trial-popup](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/upgrade-trial-popup.webp)
 
-4. Now it’s Enterprise Plan. Uncheck **Mark as protected environment** and click **Update**.
+2. Now it’s Enterprise Plan. Uncheck **Mark as protected environment** and click **Update**.
 
 ![enterprise-plan](/static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/enterprise-plan.webp)
 
