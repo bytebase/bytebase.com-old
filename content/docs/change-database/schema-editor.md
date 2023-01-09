@@ -4,7 +4,11 @@ title: Schema Editor
 
 <hint-block type="info">
 
-This feature is in beta and only available for MySQL.
+This feature is in beta and only available for MySQL and PostgreSQL.
+
+Schema Editor for MySQL currently supports editing `Table` and `Column` objects.
+
+Schema Editor for PostgreSQL currently supports editing `Schema`, `Table` and `Column` objects.
 
 </hint-block>
 
@@ -25,7 +29,7 @@ To create a new table:
 1. Enter the table name.
 1. Add new column by clicking the **Add Column** on the top of column list tab.
    ![add-column-button](/static/docs/change-database/schema-editor/add-column-button.webp)
-1. Specify the column's attributes: name, datatype, default, comment, nullable.
+1. Specify the column's attributes: name, data type, default, comment, nullable, primary key and foreign key.
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
 
 ### Alter table
@@ -36,7 +40,7 @@ To alter a table:
 1. Rename the table name by clicking the **Rename** dropdown item in table tree node.
    ![table-rename-button](/static/docs/change-database/schema-editor/table-rename-button.webp)
 1. Add new column by clicking on the **Add Column**.
-1. Specify the new column's attributes: name, datatype, default, comment, nullable.
+1. Specify the new column's attributes: name, data type, default, comment, nullable, primary key and foreign key.
 1. Alter the existing column's attributes, if needed.
 1. Click **Preview Issue**, then Bytebase will go to the issue creating page with the generated SQL statement.
 
