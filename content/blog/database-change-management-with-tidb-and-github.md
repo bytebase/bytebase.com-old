@@ -2,7 +2,7 @@
 title: Database Change Management with TiDB and GitHub
 author: Ningjing
 published_at: 2023/01/04 21:15
-feature_image: /static/blog/database-change-management-with-tidb-and-github/db-change-tidb-github.webp
+feature_image: /static/blog/database-change-management-with-tidb-and-github/feature.jpeg
 tags: How-To
 description: This tutorial will bring your TiDB schema change to the next level by introducing the GitOps workflow, where you commit the schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.
 ---
