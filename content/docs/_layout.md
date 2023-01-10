@@ -109,6 +109,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Schema Editor](/change-database/schema-editor)
 
+### [Schema Diagram](/change-database/schema-diagram)
+
 ### [Migration History](/change-database/migration-history)
 
 ### [Synchronize Schema](/change-database/synchronize-schema)
