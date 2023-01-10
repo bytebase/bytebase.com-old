@@ -4,7 +4,7 @@ title: Schema Diagram
 
 <hint-block type="info">
 
-This feature is in beta and only available for MySQL and PostgreSQL.
+This feature is in beta.
 
 </hint-block>
 
