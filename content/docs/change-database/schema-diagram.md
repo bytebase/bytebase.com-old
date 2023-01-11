@@ -8,7 +8,7 @@ This feature is in beta.
 
 </hint-block>
 
-Bytebase's Schema Diagram provides a [Entity-Relation Diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) of databases.
+Bytebase's Schema Diagram provides a database [Entity-Relation Diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model).
 
 ## View Database Schema Diagram
 
