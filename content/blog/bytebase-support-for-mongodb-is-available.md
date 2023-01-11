@@ -8,7 +8,7 @@ featured: true
 description: Bytebase 1.11.0 brings MongoDB support. This blog post walks you through managing MongoDB with Bytebase. 
 ---
 
-## Why Add MongoDB Support
+## Why MongoDB
 
 MongoDB is a popular document-oriented database with the scalability and flexibility that you want with the querying and indexing that you need. MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A database stores one or more collections of documents.
 
