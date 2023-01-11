@@ -17,7 +17,7 @@ As the [DB-Engines](https://db-engines.com/en/ranking) ranking shows, MongoDB is
 
 What’s more, our customers say that they wanted to use Bytebase to manage MongoDB, just like they manage database changes to MySQL and PostgreSQL with Bytebase. As you know, Bytebase constantly listens to customers to deliver what they need. So, we support connecting to MongoDB and managing their database changes.
 
-## How does it work
+## Manage MongoDB Changes
 
 With [Bytebase 1.11.0](https://www.bytebase.com/changelog/bytebase-1-11-0), you can add an instance to connect to a MongoDB deployment, then you can: 
 
