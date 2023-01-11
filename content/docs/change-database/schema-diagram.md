@@ -34,6 +34,6 @@ Your temporary changes in Schema Editor will be highlighted and colorized to hel
 
 ![preview-schema-change](/static/docs/change-database/schema-diagram/preview-schema-change.webp)
 
-Clicking on the **column name**, **column type** and **the pencil icon** beside table name will navigate you to the editable parts in Schema Editor correspondingly.
+Clicking on the **column name**, **column type** and **the pencil icon** beside the table name will navigate you to the corresponding editing interface in Schema Editor.
 
 ![edit](/static/docs/change-database/schema-diagram/edit.webp)
