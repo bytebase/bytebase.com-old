@@ -10,7 +10,7 @@ Please note that you should be really carefully using Admin Mode, since you are 
 
 ## Run query in Admin Mode
 
-Click **Admin Mode** button to create an Admin Mode tab. Note that this is only available for DBAs and Workspace Owners.
+Click **Admin Mode** button to open a separate Admin Mode tab. Note that this is only available for DBAs and Workspace Owners.
 
 ![Admin Mode Button](/static/docs/sql-editor/admin-mode-button.webp)
 
