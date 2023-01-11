@@ -19,7 +19,7 @@ What’s more, our customers say that they wanted to use Bytebase to manage Mong
 
 ## How does it work
 
-With Bytebase v1.11.0, you can add an instance to connect to a MongoDB deployment, then you can: 
+With [Bytebase 1.11.0](https://www.bytebase.com/changelog/bytebase-1-11-0), you can add an instance to connect to a MongoDB deployment, then you can: 
 
 - Create an issue to create, update and delete documents in UI workflow and GitOps workflow. See the screenshot below to insert documents into the collection “student”.
 ![insert-doc](/static/blog/bytebase-support-for-mongodb-is-available/insert-doc.webp)
