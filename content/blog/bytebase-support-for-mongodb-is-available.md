@@ -30,6 +30,6 @@ With [Bytebase 1.11.0](https://www.bytebase.com/changelog/bytebase-1-11-0), you 
 - Run mongosh commands in SQL Editor admin mode.
 ![admin-mode](/static/blog/bytebase-support-for-mongodb-is-available/admin-mode.webp)
 
-## Want to try it Out
+## Try MongoDB Yourself
 
 Bytebase supports MongoDB 4.0, 5.0, and 6.0. Please try it out and find that it's missing something or stumbled upon a bug,  do not hesitate to let us know. We invite you to join our [discord](https://discord.gg/Fac9nmZ95j)) where you can discuss all things Bytebase, share your feedback, and get help from the community.
