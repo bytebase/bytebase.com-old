@@ -58,7 +58,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 
 |                                                                                   Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
 | ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
+|                                                               Database Connection Failure |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
 |                                [Drift Detection](/docs/anomaly-detection/drift-detection) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 | [Backup Policy Violation](/docs/administration/environment-policy/backup-schedule-policy) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 |                  [Backup Missing](/docs/disaster-recovery/backup-restore-database/backup) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
-|                                                               Database Connection Failure |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
