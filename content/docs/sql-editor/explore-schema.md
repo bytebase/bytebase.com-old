@@ -6,7 +6,7 @@ SQL Editor displays the database connections in a tree view. This allows users t
 
 <hint-block type="info">
 
-This is not available in MongoDB because MongoDB is the schemaless.
+This is not available in MongoDB because MongoDB is schemaless.
 
 </hint-block>
 
