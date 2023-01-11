@@ -11,6 +11,8 @@ to run DDL or DML change queries, SQL Editor will prompt you to create a new iss
 Workspace Owners and DBAs are allowed to execute any SQL statements in
 [Admin Mode](/docs/sql-editor/admin-mode).
 
+The read-only mode is not available for MongoDB, but you also can execute the statements in [Admin Mode](/docs/sql-editor/admin-mode).
+
 </hint-block>
 
 ## Run query
