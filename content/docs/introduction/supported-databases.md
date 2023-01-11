@@ -33,7 +33,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 
 |                                                 Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
 | ------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
-|              [Query Mode](/docs/sql-editor/run-queries) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
+|          [Read-only Mode](/docs/sql-editor/run-queries) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 |               [Admin Mode](/docs/sql-editor/admin-mode) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
 | [Sheet Management](/docs/sql-editor/manage-sql-scripts) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
 
