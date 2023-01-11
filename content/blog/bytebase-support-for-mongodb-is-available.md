@@ -15,7 +15,7 @@ MongoDB is a popular document-oriented database with the scalability and flexibi
 As the [DB-Engines](https://db-engines.com/en/ranking) ranking shows, MongoDB is the only NoSQL database in the top 5.
 ![db-rank-3](/static/blog/bytebase-support-for-mongodb-is-available/db-rank-3.webp)
 
-What’s more, our customers say that they wanted to use Bytebase to manage MongoDB, just like they manage database changes to MySQL and PostgreSQL with Bytebase. As you know, Bytebase constantly listens to customers to deliver what they need. So, we support connecting to MongoDB and managing their database changes.
+Some Bytebase customers also have MongoDB besides MySQL/PostgreSQL, and they ask us if Bytebase can support MongoDB so they can manage all transactional database changes via Bytebase. Before MongoDB, Bytebase only supports databases having SQL interface. But the customers' request is reasonable, so the Bytebase team accepts the challenge and today we are excited to announce the MongoDB support.
 
 ## Manage MongoDB Changes
 
