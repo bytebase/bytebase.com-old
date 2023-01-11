@@ -32,24 +32,24 @@ Bytebase usually works fine with older database versions, we just won't support 
 ### SQL Editor
 
 |                                                 Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
-| ------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
+| ------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | :-----: |
 |          [Read-only Mode](/docs/sql-editor/run-queries) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
-|               [Admin Mode](/docs/sql-editor/admin-mode) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
-| [Sheet Management](/docs/sql-editor/manage-sql-scripts) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
+|               [Admin Mode](/docs/sql-editor/admin-mode) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    |
+| [Sheet Management](/docs/sql-editor/manage-sql-scripts) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    |
 
 ### Security
 
 |                                                                 Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
-| ----------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
-|                            [RBAC](/docs/concepts/roles-and-permissions) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
+| ----------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | :-----: |
+|                            [RBAC](/docs/concepts/roles-and-permissions) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    |
 | [Database Access Control](/docs/administration/database-access-control) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
-|                             [Audit Log](/docs/administration/audit-log) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
+|                             [Audit Log](/docs/administration/audit-log) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    |
 |               [Data Anonymization](/docs/administration/anonymize-data) |  ✔️   |            |      |            |           |         |
 
 ### Disaster Recovery
 
 |                                                                                   Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
-| ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
+| ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | :-----: |
 |      [Local Backup and Restore](/docs/disaster-recovery/backup-restore-database/overview) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 |              [Cloud Backup](/docs/disaster-recovery/backup-restore-database/cloud-backup) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 | [Point-in-time Recovery (PITR)](/docs/disaster-recovery/point-in-time-recovery-for-mysql) |  ✔️   |            |      |            |           |         |
@@ -57,8 +57,8 @@ Bytebase usually works fine with older database versions, we just won't support 
 ### Anomaly Detection
 
 |                                                                                   Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB |
-| ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | ------- |
-|                                                               Database Connection Failure |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     | ✔️      |
+| ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | :-----: |
+|                                                               Database Connection Failure |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    |
 |                                [Drift Detection](/docs/anomaly-detection/drift-detection) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 | [Backup Policy Violation](/docs/administration/environment-policy/backup-schedule-policy) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
 |                  [Backup Missing](/docs/disaster-recovery/backup-restore-database/backup) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |         |
