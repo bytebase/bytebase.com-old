@@ -5,7 +5,7 @@ published_at: 2023/01/12 13:37:17
 feature_image: /static/blog/bytebase-support-for-mongodb-is-available/cover.webp
 tags: Announcement
 featured: true
-description: Bytebase v1.11.0 brings support for MongoDB. This blog post walks you through managing MongoDB with Bytebase. 
+description: Bytebase 1.11.0 brings MongoDB support. This blog post walks you through managing MongoDB with Bytebase. 
 ---
 
 ## Why Add MongoDB Support
