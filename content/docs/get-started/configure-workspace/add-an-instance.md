@@ -16,8 +16,8 @@ This document describes how to add an instance in order to synchronize databases
 ## Add an instance
 
 1. Click **Instances** on the top bar.
-1. Select an **Instance Type** on the top.
 1. Click **Add Instance**.
+1. Select an **Instance Type** on the top.
 1. Enter **Instance name**, select **Environment**, enter **Host or Socket** and **Port**.
 1. Enter connection info: **Username** and **Password**, and click **Test Connection**.
 1. (Optional) Enter SSL connection info:
