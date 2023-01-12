@@ -13,7 +13,7 @@ TL;DR Navicat is a great single-user SQL client. However, it has a serious limit
 
 ![_](/static/blog/stop-using-navicat/navicat.webp)
 
-Navicat is a long-established database GUI. The first version was launched in 2001 and started with support for MySQL, and later added support for MariaDB, MongoDB, Oracle, SQLite, PostgreSQL, and Microsoft SQL Server. Navicat can run on Windows, Mac, and Linux simultaneously. However, as you can see from the interface, Navicat is developed using desktop technology rather than the  modern web-based technology.
+Navicat is a long-established database GUI. The first version was launched in 2001 and started with support for MySQL, and later added support for MariaDB, MongoDB, Oracle, SQLite, PostgreSQL, and Microsoft SQL Server. Navicat can run on Windows, Mac, and Linux simultaneously. However, as you can see from the interface, Navicat is developed using desktop technology rather than the modern web-based technology.
 
 ![_](/static/blog/stop-using-navicat/navicat-interface.webp)
 
@@ -23,23 +23,23 @@ After 20+ years, Navicat is one of the best products for operating databases alo
 
 ### Need to distribute database credentials
 
-As a client-side software, Navicat needs the username and password to access the database.  In a team environment, for developers to use their databases, DBAs must distribute the database credentials. This resulted in database access privileges being scattered all over the place, which is a receipt for data leaks and database outages.
+As a client-side software, Navicat needs the username and password to access the database.  In a team environment, for developers to use their databases, DBAs must distribute the database credentials. This resulted in database access privileges being scattered all over the place, which is a recipe for data leaks and database outages.
 
 ### No fine-grained data access control
 
-Since database credentials are handed over directly, there is no finer access control, such as accessing certain databases under one instance, but not the rest.
+Since database credentials are distributed directly to individuals, there is no finer access control, such as granting access to certain databases under one instance, but not the rest.
 
 ### No data anonymization
 
-Again, all data is visible because the database credentials are handed over directly.
+Similarly, since database credentials are distributed directly to individuals, all data is exposed in the original text form.
 
-### Lack of Audit Trail
+### Lack of audit trail
 
-Again, as a client-side software, the DBA has no way of knowing who did what. If the DBA assigns a separate account to each user, we can locate the person, but in reality, the database accounts are usually shared (the infamous user `root` for MySQL and user `postgres` from Postgres).
+Again, as a client-side software, DBAs need to know who did what. If DBAs assign a separate account to each user, they can locate the person, but in reality, the database accounts are usually shared (the infamous user `root` for MySQL and user `postgres` for Postgres).
 
-### Lack of  controlled peer-reviewed change flow
+### Lack of controlled peer-reviewed change flow
 
-Navicat makes it easy to make database changes: by writing an UPDATE, ALTER TABLE statement in its SQL editor. However,  the convenience has a flipside, if you connect to the wrong database or commit the wrong SQL statement (e.g. forgetting the WHERE), it will bring disastrous consequences.
+Navicat makes it easy to make database changes: by writing an UPDATE, ALTER TABLE statement in its SQL editor. However, the convenience has a flipside, if you connect to the wrong database or commit the wrong SQL statement (e.g. forgetting the WHERE), it will bring disastrous consequences.
 
 ### The proliferation of pirated versions
 
@@ -47,7 +47,7 @@ Navicat is not cheap, the relatively comprehensive Navicat Premium costs $699.99
 
 ![_](/static/blog/stop-using-navicat/navicat-premium-cost.webp)
 
-Even a lite version of the perpetual version costs $349.
+Even a lite version costs $349.
 
 ![_](/static/blog/stop-using-navicat/navicat-lite-version.webp)
 
@@ -57,11 +57,11 @@ The relatively high price entails Navicat a serious piracy problem.
 
 ### It’s your database security
 
-In addition to the legal concern that piracy brings to companies, there is also the issue of software supply chain security. Some cracked versions of Navicat on the Internet are hacked. Once a user uses such a Navicat to access a database, the database is compromised.  We have seen people using pirated Navicat copy, then one day their entire data is erased, the only thing left is a Bitcoin address to pay the ransom.
+In addition to the legal concern that piracy brings to companies, there is also the issue of software supply chain security. Some Navicat distributions on the web are hacked. Once a user uses such a Navicat to access a database, the database is compromised.  We have seen people using pirated Navicat, then one day their entire data is erased, and the only thing left is a blockchain address to pay the ransom.
 
 Navicat is an excellent database tool, but because of its own client-side limitations and lack of centralized control, it cannot meet the requirements for security control when operating databases in enterprises. At the same time, Navicat’s pricing strategy has led to widespread piracy, posing legal and database security risks to enterprises.
 
-## Bytebase’s Solution
+## Bytebase’s solution
 
 Bytebase is a web-based product with server-side capabilities that can fill the gap for Navicat in enterprise collaboration.
 
@@ -120,4 +120,4 @@ In addition, Bytebase is [open-source](https://github.com/bytebase/bytebase), an
 
 The key difference, of course, is in the use case.
 
-Navicat is for individuals, and Bytebase is for teams. Navicat is a pure client software with comprehensive capability and smooth experience if you need to operate a database for a personal project. However, when it comes to team use cases, where DBAs and developers need to collaborate, and DBAs need to control the database access, queries, changes, and other operations, products like Bytebase are desired to centralize the control and secure your orgnization’s most valuable asset, database data.
+**Navicat is for individuals, and Bytebase is for teams**. Navicat is a pure client software with comprehensive capability and smooth experience if you need to operate a database for a personal project. However, when it comes to team use cases, where DBAs and developers need to collaborate, and DBAs need to control the database access, queries, changes, and other operations, products like Bytebase are desired to centralize the control and secure your orgnization’s most valuable asset, the database data.
