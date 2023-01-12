@@ -6,7 +6,12 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 
 - Environment
 - Instance
+- Instance Role
 - More to come
+
+<hint-block type="info">
+The Bytebase Provider itself is free to use. The operation for the resource depends on your subscription plan.
+</hint-block>
 
 ## Create service account
 
@@ -30,4 +35,6 @@ You can only copy the key right after creating the service account. The key will
 
 ## Configure Bytebase Terraform Provider
 
-Follow https://registry.terraform.io/providers/bytebase/bytebase/latest/docs.
+Check https://registry.terraform.io/providers/bytebase/bytebase/latest/docs for the provider docs.
+
+Check https://github.com/bytebase/terraform-provider-bytebase/tree/main/examples for the usage examples.
