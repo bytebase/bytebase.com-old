@@ -1,6 +1,6 @@
 ---
 # expand_section_list is the list of default expanded sections.
-expand_section_list: ["Workflow", "Integrations", "ClickHouse"]
+expand_section_list: ["Workflow", "Integrations", "ClickHouse", "Spanner"]
 ---
 
 ## SQL Review Guide
