@@ -8,6 +8,7 @@ title: Project Webhook
 
 - `Issue creation` - Post message when issue belonging to the configured project has been created.
 - `Issue status change` - Post message when the status of the issue belonging to the configured project has been changed.
+- `Issue stage status change` - Post message when issue's enclosing stage status has been changed.
 - `Issue task status change` - Post message when issue's enclosing task status has been changed.
 - `Issue info change` - Post message when issue's basic info such as assignee, title, description has been changed.
 - `Issue comment creation` - Post message when new comment added to the issue.

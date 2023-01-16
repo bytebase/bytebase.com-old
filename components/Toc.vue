@@ -4,6 +4,9 @@
     v-show="tocList.length > 0"
     class="hidden xl:flex flex-col justify-start items-start sticky w-52 top-0 pb-36 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm"
   >
+    <div class="border-l">
+      <BytebaseFixedBanner />
+    </div>
     <span class="text-black pb-2 pl-4 border-l border-gray-200 truncate"
       >Table of Contents</span
     >
@@ -36,6 +39,7 @@ import {
   ref,
 } from "@nuxtjs/composition-api";
 import { sortedIndex, throttle } from "lodash";
+import BytebaseFixedBanner from "./BytebaseFixedBanner.vue";
 
 interface TOC {
   id: string;
@@ -43,17 +47,18 @@ interface TOC {
   text: string;
 }
 
-const ACTIVE_TITLE_OFFSET = 4
+const ACTIVE_TITLE_OFFSET = 4;
 const TITLE_HEIGHT = 28;
 
 export default defineComponent({
+  components: { BytebaseFixedBanner },
   props: {
     content: { type: Object, required: true },
     scrollOffset: { type: Number, required: true },
   },
   setup(props: { content: any; scrollOffset: number }) {
     const activeHashId = ref("");
-    const container = ref<HTMLElement>()
+    const container = ref<HTMLElement>();
     const tocList = computed(() =>
       (props.content.toc as TOC[]).filter((t) => t.depth >= 2 && t.depth <= 3)
     );
@@ -75,19 +80,19 @@ export default defineComponent({
             activeHashId.value = titleElementList[activeIndex].id;
             container.value?.scrollTo({
               top: (activeIndex - ACTIVE_TITLE_OFFSET) * TITLE_HEIGHT,
-              behavior: "smooth"
-            })
+              behavior: "smooth",
+            });
           }
         };
         // Manually trigger onScroll on mount.
-        onScroll()
+        onScroll();
         contentContainer?.addEventListener("scroll", throttle(onScroll, 100));
       }
     });
     return {
       activeHashId,
       tocList,
-      container
+      container,
     };
   },
 });
