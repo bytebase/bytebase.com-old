@@ -29,7 +29,7 @@
     "better-way": "Bytebase 不是一个更好的数据库变更工具，它是一套更好的数据库变更方法"
   },
   "pricing": {
-    "price-suffix-for-enterprise": "起"
+    "billed-annually": "按年付费"
   },
   "features": {
     "sql-review": {

@@ -73,25 +73,27 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-28 gap-y-1">
+                <div class="flex flex-col items-center h-24 gap-y-1">
                   <div class="mt-3 flex items-baseline">
-                    <p
+                    <div
                       :class="[
-                        'tracking-tight',
+                        'tracking-tight flex items-baseline',
                         plan.type == 2
                           ? 'text-4xl font-semibold'
                           : 'text-5xl font-extrabold',
                       ]"
                     >
                       {{ plan.pricing }}
-                    </p>
+                      <p
+                        class="text-gray-400 text-base font-normal"
+                        v-if="plan.type != 2"
+                      >
+                        {{ $t("subscription.per-month") }}
+                      </p>
+                    </div>
                   </div>
-                  <p class="text-gray-400" v-if="plan.type != 2">
-                    {{ $t("subscription.per-instance") }}
-                    {{ $t("subscription.per-month") }}
-                  </p>
-                  <p class="text-gray-400">
-                    {{ $t(`subscription.${plan.title}-price-intro`) }}
+                  <p class="text-gray-400" v-if="plan.type != 0">
+                    {{ $t("pricing.billed-annually") }}
                   </p>
                 </div>
                 <nuxt-link

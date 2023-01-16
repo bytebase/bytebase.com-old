@@ -29,7 +29,7 @@
     "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes."
   },
   "pricing": {
-    "price-suffix-for-enterprise": ""
+    "billed-annually": "Billed annually"
   },
   "features": {
     "sql-review": {
