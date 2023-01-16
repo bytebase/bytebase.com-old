@@ -4,9 +4,6 @@
     v-show="tocList.length > 0"
     class="hidden xl:flex flex-col justify-start items-start sticky w-52 top-0 pb-36 right-6 2xl:right-10 pr-4 h-full max-h-screen flex-shrink-0 overflow-x-hidden overflow-y-auto text-sm"
   >
-    <div class="border-l">
-      <BytebaseFixedBanner />
-    </div>
     <span class="text-black pb-2 pl-4 border-l border-gray-200 truncate"
       >Table of Contents</span
     >
@@ -39,7 +36,6 @@ import {
   ref,
 } from "@nuxtjs/composition-api";
 import { sortedIndex, throttle } from "lodash";
-import BytebaseFixedBanner from "./BytebaseFixedBanner.vue";
 
 interface TOC {
   id: string;
@@ -51,7 +47,6 @@ const ACTIVE_TITLE_OFFSET = 4;
 const TITLE_HEIGHT = 28;
 
 export default defineComponent({
-  components: { BytebaseFixedBanner },
   props: {
     content: { type: Object, required: true },
     scrollOffset: { type: Number, required: true },
