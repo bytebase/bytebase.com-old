@@ -28,9 +28,6 @@
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase",
     "better-way": "Bytebase 不是一个更好的数据库变更工具，它是一套更好的数据库变更方法"
   },
-  "pricing": {
-    "billed-annually": "按年付费"
-  },
   "features": {
     "sql-review": {
       "title": "SQL 审核"
