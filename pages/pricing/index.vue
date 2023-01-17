@@ -92,8 +92,8 @@
                       </p>
                     </div>
                   </div>
-                  <p class="text-gray-400" v-if="plan.type != 0">
-                    {{ $t("pricing.billed-annually") }}
+                  <p class="text-gray-400">
+                    {{ plan.priceInfo }}
                   </p>
                 </div>
                 <nuxt-link
@@ -530,6 +530,7 @@ interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
   pricing: string;
+  priceInfo: string;
 }
 
 interface LocalFeatureTier {
@@ -579,7 +580,8 @@ export default defineComponent({
       pricing:
         plan.type === PlanType.ENTERPRISE
           ? (app.i18n.t("subscription.contact-us") as string)
-          : `$${plan.pricePerInstancePerMonth}`,
+          : `$${plan.pricePerSeatPerMonth}`,
+      priceInfo: app.i18n.t(`subscription.${plan.title}-price-intro`) as string,
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {

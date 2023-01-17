@@ -12,8 +12,7 @@ export interface Plan {
   trialDays: number;
   unitPrice: number;
   trialPrice: number;
-  freeInstanceCount: number;
-  pricePerInstancePerMonth: number;
+  pricePerSeatPerMonth: number;
   // Plan desc and feature
   title: string;
   featureList: {
