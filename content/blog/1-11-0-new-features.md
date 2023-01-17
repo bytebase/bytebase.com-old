@@ -20,7 +20,7 @@ First of all, Bytebase unveils the first NoSQL support in its history, MongoDB, 
 
 The next one is the Schema Diagram, which is a feature that many users have wished for, since it is more intuitive to see the diagram.
 
-Our Schema Diagram is automatically laid out, which took us some effort. The last diagram below is Bytebase's own complex Schema, which looks quite well. The one on the far right is our `Principal` table, which stores user information. Really human-centric :P
+Our Schema Diagram is automatically laid out, which took us some effort. The last diagram below is Bytebase's own complex Schema, which looks quite well. The one on the far right is our `Principal` table, which stores user information, user-centric :P
 
 ![diagram-employee](/static/blog/1-11-0-new-features/diagram-employee.webp)
 
