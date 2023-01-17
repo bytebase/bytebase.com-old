@@ -48,7 +48,7 @@ Today is also the second anniversary of Bytebase. The initial idea from day one 
 
 We have been working towards this goal for two years, and last year we were accepted by **CNCF Landscape** as the only product in the [**database CI/CD category**](https://landscape.cncf.io/?selected=bytebase), and we started to get enterprise-paying customers.
 
-It took us two years to get the product ready, and this year we can officially blow the trumpet and kill in all directions.
+Last year, we kept a bi-weekly release cadence and announced 25 releases (never missed a beat). We will keep the momentum this year and drive more innovations to delight our customers:
 
 - **Different** database development tasks
 - **Multiple** database systems
