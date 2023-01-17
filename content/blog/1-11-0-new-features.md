@@ -46,7 +46,7 @@ That's all for this deep dive.
 
 Today is also the second anniversary of Bytebase. The initial idea from day one was to create a developer tool that covers the **entire database development lifecycle of change, query, management, and security**, and to create a new category of **Database Development Platform** in the industry.
 
-We have been working towards this goal for two years, and last year we were accepted by **CNCF Landscape** as the only product in the **database CI/CD category**, and we started to get enterprise-paying customers.
+We have been working towards this goal for two years, and last year we were accepted by **CNCF Landscape** as the only product in the [**database CI/CD category**](https://landscape.cncf.io/?selected=bytebase), and we started to get enterprise-paying customers.
 
 It took us two years to get the product ready, and this year we can officially blow the trumpet and kill in all directions.
 
