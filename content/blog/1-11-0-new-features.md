@@ -54,5 +54,4 @@ It took us two years to get the product ready, and this year we can officially b
 - **Multiple** database systems
 - **Unified** process
 - **Single** tool
-- **Global**
 ![new-world](/static/blog/1-11-0-new-features/new-world.webp)
