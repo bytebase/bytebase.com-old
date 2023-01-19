@@ -56,6 +56,7 @@ const teammateList = [
   {
     name: "Elon",
     role: "team.roles.engineering",
+    emeritus: true,
   },
   {
     name: "Lucy",
@@ -90,6 +91,7 @@ const teammateList = [
   {
     name: "Xiong",
     role: "team.roles.engineering-intern",
+    emeritus: true,
   },
   {
     name: "Grace",
