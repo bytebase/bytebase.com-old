@@ -14,6 +14,7 @@ On our doc site, we have a few pages with instructions on installing Bytebase, l
 ```shell
 docker run --init \
  --name bytebase \
+ --platform linux/amd64 \
  --restart always \
  --add-host host.docker.internal:host-gateway \
  --publish 8080:8080 \
@@ -70,6 +71,7 @@ Run the following command to start Bytebase on [https://bytebase.example.com](ht
 <pre>
 docker run --init \
   --name bytebase \
+  --platform linux/amd64 \
   --restart always \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
@@ -191,6 +193,7 @@ Run the following command to start Bytebase on [https://bytebase.example.com](ht
 ```bash
 docker run --init \
   --name bytebase \
+  --platform linux/amd64 \
   --restart always \
   --add-host host.docker.internal:host-gateway \
   --publish 80:80 \
