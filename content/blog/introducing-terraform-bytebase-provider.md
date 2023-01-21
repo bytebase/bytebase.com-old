@@ -5,7 +5,7 @@ published_at: 2023/01/20 13:37:17
 feature_image: /static/blog/introducing-terraform-bytebase-provider/cover.webp
 tags: Announcement
 featured: true
-description: In this article, we just introduced a new feature, Terraform Bytebase Provider, that provides you a convenient way to manage Bytebase resources, including environments, database instances, roles, and policies. 
+description: With Terraform Bytebase Provider, teams can codify Bytebase resource configurations, including environments, database instances, roles, and policies via Terraform.
 ---
 
 ## Why Terraform
