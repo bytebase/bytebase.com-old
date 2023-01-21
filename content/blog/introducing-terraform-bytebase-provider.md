@@ -10,7 +10,7 @@ description: With Terraform Bytebase Provider, teams can codify Bytebase resourc
 
 ## Why Terraform
 
-Terraform is an open-source tool that allows you to manage and provision infrastructure using code. It is commonly used for infrastructure as code (IaC) and is known for its ability to work across multiple cloud providers, reusability, versioning, flexibility, and its active community. Terraform providers are plugins that enable Terraform to communicate and manage resources on various cloud platforms such as AWS, Google Cloud, and others.
+[Terraform](https://www.terraform.io/) is an open-source tool that allows you to manage and provision infrastructure using code. It is commonly used for infrastructure as code (IaC) and is known for its ability to work across multiple cloud providers, reusability, versioning, flexibility, and its active community. Terraform providers are plugins that enable Terraform to communicate and manage resources on various cloud platforms such as AWS, Google Cloud, Azure, as well as SaaS vendors like DataDog, MongoDB, Elastic, and etc.
 
 Some Bytebase customers from overseas use Terraform to manage their infrastructure resources, and they want to use it to manage their Bytebase resources such as environments, database instances, and policies. Previously, we offered customers Bytebase Console (a web-based GUI tool) and OpenAPI to create, update and archive Bytebase resources. However, we are excited to reveal our latest feature, Terraform Bytebase Provider, which enables you to manage Bytebase resources through Terraform. This is a great opportunity for you to simplify and streamline your infrastructure management.
 Terraform Bytebase Provider
