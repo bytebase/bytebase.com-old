@@ -38,7 +38,7 @@ The code block below demonstrates how to grant developers access permission to t
 Run `terraform init`, `terraform plan` and `terraform apply` in the terminal. The output is as follows.
 ![run-terraform](/static/blog/introducing-terraform-bytebase-provider/run-terraform.webp)
 
-After running the Terraform commands, you can check the access permissions via the Bytebase Console, where you will find that developers can execute queries on the database "employee".
+After running the Terraform commands, you can check the access permissions via the Bytebase Console, where you will find that developers can execute queries on the database `employee`.
 ![after-terraform](/static/blog/introducing-terraform-bytebase-provider/after-terraform.webp)
 
 ## Conclusion
