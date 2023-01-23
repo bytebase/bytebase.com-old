@@ -10,7 +10,10 @@ description: With Terraform Bytebase Provider, teams can codify Bytebase resourc
 
 ## Why Terraform
 
-[Terraform](https://www.terraform.io/) is an open-source tool that allows you to manage and provision infrastructure using code. It is commonly used for infrastructure as code (IaC) and is known for its ability to work across multiple cloud providers, reusability, versioning, flexibility, and its active community. Terraform providers are plugins that enable Terraform to communicate and manage resources on various cloud platforms such as AWS, Google Cloud, Azure, as well as SaaS vendors like DataDog, MongoDB, Elastic, and etc.
+According to a report from [Firefly](https://www.gofirefly.io/), the use of multi-cloud providers is becoming the norm, and more companies are using multiple cloud accounts to simplify their projects or departments. Only 8% of respondents have a single cloud account. In such complex cloud environments, using Infrastructure as Code (IaC) is becoming a strategic imperative, and Terraform is the most widely used IaC tool for mamaging cloud resources.
+![lac-tools](/static/blog/introducing-terraform-bytebase-provider/lac-tools.webp)
+
+[Terraform](https://www.terraform.io/) is an open-source tool that allows you to manage and provision infrastructure using code. It is known for its ability to work across multiple cloud providers, reusability, versioning, flexibility, and its active community. [Terraform providers](https://developer.hashicorp.com/terraform/language/providers) are plugins that enable Terraform to communicate and manage resources on various cloud platforms such as AWS, Google Cloud, Azure, as well as SaaS vendors like DataDog, MongoDB, Elastic, and etc.
 
 Some Bytebase customers use Terraform to manage their infrastructure resources, and they want to use it to manage their Bytebase resources such as environments, database instances, and policies. Previously, we offered customers Bytebase Console (a web-based GUI tool) and OpenAPI to create, update and archive Bytebase resources. Today, we are excited to reveal our latest feature, [Terraform Bytebase Provider](https://registry.terraform.io/providers/bytebase/bytebase/latest/docs), which enables you to manage Bytebase resources through Terraform. This is a great opportunity for you to simplify and streamline your infrastructure management.
 
@@ -37,7 +40,7 @@ The code block below demonstrates how to grant developers access permission to t
 Run `terraform init`, `terraform plan` and `terraform apply` in the terminal. The output is as follows.
 ![run-terraform](/static/blog/introducing-terraform-bytebase-provider/run-terraform.webp)
 
-After running the Terraform commands, you can check the access permissions via the Bytebase Console, where you will find that developers can execute queries on the database `employee`.
+After running the Terraform commands, you can verify the "access control" configuration via the Bytebase Console, where you will observe the database "employee" listed in the database allowlist.
 ![after-terraform](/static/blog/introducing-terraform-bytebase-provider/after-terraform.webp)
 
 ## Conclusion
