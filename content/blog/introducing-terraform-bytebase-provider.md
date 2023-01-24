@@ -18,20 +18,20 @@ Some Bytebase customers use Terraform to manage their infrastructure resources, 
 
 The latest Terraform Bytebase Provider allows you to easily manage the following Bytebase resources.
 
-- Environments: They are modeled after different stages in the development pipeline, such as dev, test, and prod.
-- Database instances: They are modeled after a single database instance and can be accessed using an address such as host:port.
-- Instance roles: At this time, it is only compatible with PostgreSQL. We are working on supporting for MySQL.
-- Policies:
-  - Approval: It determines whether database migration tasks in a particular environment are performed automatically or require manual approval before execution.
-  - Database backup schedule: It allows you to configure the database backup plan to be weekly, daily, or no backup plan, and also specify the backup data retention duration.
-  - SQL review: It enables you to customize SQL lint to check for common issues before execution. Currently, we have 48 SQL review rules for MySQL and 14 rules for PostgreSQL (more rules will come in the future).
-  - Sensitive data: It allows you to mark specific table columns as sensitive to anonymize the data.
-  - Database access control: It offers the ability to grant developers database access permission.
+- **Environments**: They are modeled after different stages in the development pipeline, such as dev, test, and prod.
+- **Database instances**: They are modeled after a single database instance and can be accessed using an address such as host:port.
+- **Instance roles**: At this time, it is only compatible with PostgreSQL. We are working on supporting for MySQL.
+- **Policies**:
+  - **Approval**: It determines whether database migration tasks in a particular environment are performed automatically or require manual approval before execution.
+  - **Database backup schedul**e: It allows you to configure the database backup plan to be weekly, daily, or no backup plan, and also specify the backup data retention duration.
+  - **SQL review**: It enables you to customize SQL lint to check for common issues before execution. Currently, we have 48 SQL review rules for MySQL and 14 rules for PostgreSQL (more rules will come in the future).
+  - **Sensitive data**: It allows you to mark specific table columns as sensitive to anonymize the data.
+  - **Database access control**: It offers the ability to grant developers database access permission.
 
-Take the database access control policy as an example; we can grant developers access permission to the database “employee” in the environment “prod”. Currently, developers are not able to query databases using SQL Editor.
-![before-terraform](/static/blog/introducing-terraform-bytebase-provider/before-terraform.webp)
+Taking the database access control policy as an example, we can grant developers access permission to the database `employee` in the environment `prod` by modifying the `access control` configuration. Currently, the database allowlist is empty.
+![before-terraform-config](/static/blog/introducing-terraform-bytebase-provider/before-terraform-config.webp)
 
-The code block below demonstrates how to grant developers access permission to the database "employee" in the environment "prod":
+The code block below demonstrates how to grant developers access permission to the database `employee` in the environment `prod`:
 - The first `access_control_all` policy resource defines that by default no database access is allowed in the `prod` environment.
 - The second `access_control_database` policy resource defines that database `employee` under the `prod` environment is granted the database access specifically.
 ![access-control-code](/static/blog/introducing-terraform-bytebase-provider/access-control-code.webp)
@@ -39,7 +39,7 @@ The code block below demonstrates how to grant developers access permission to t
 Run `terraform init`, `terraform plan` and `terraform apply` in the terminal. The output is as follows.
 ![run-terraform](/static/blog/introducing-terraform-bytebase-provider/run-terraform.webp)
 
-After running the Terraform commands, you can verify the "access control" configuration via the Bytebase Console, where you will observe the database "employee" listed in the database allowlist.
+After running the Terraform commands, you can verify the `access control` configuration via the Bytebase Console, where you will observe the database `employee` listed in the database allowlist.
 ![after-terraform](/static/blog/introducing-terraform-bytebase-provider/after-terraform.webp)
 
 ## Conclusion
