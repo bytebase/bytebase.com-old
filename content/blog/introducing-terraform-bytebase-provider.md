@@ -34,7 +34,9 @@ The latest Terraform Bytebase Provider allows you to easily manage the following
 Take the database access control policy as an example; we can grant developers access permission to the database “employee” in the environment “prod”. Currently, developers are not able to query databases using SQL Editor.
 ![before-terraform](/static/blog/introducing-terraform-bytebase-provider/before-terraform.webp)
 
-The code block below demonstrates how to grant developers access permission to the database "employee" in the environment "prod".
+The code block below demonstrates how to grant developers access permission to the database "employee" in the environment "prod":
+- The first `access_control_all` policy resource defines that by default no database access is allowed in the `prod` environment.
+- The second `access_control_database` policy resource defines that database `employee` under the `prod` environment is granted the database access specifically.
 ![access-control-code](/static/blog/introducing-terraform-bytebase-provider/access-control-code.webp)
 
 Run `terraform init`, `terraform plan` and `terraform apply` in the terminal. The output is as follows.
