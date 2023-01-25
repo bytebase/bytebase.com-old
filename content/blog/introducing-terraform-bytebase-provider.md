@@ -28,7 +28,7 @@ The latest Terraform Bytebase Provider allows you to easily manage the following
   - **Sensitive data**: It allows you to mark specific table columns as sensitive to anonymize the data.
   - **Database access control**: It offers the ability to grant developers database access permission.
 
-Taking the database access control policy as an example, we can grant developers access permission to the database `employee` in the environment `prod` by modifying the `access control` configuration. Currently, the database allowlist is empty.
+Taking the database access control policy as an example, the environment `prod` is marked as a protected environment, all databases in this environment are disallowed to developers via SQL Editor. we can grant developers access permission to the database `employee` in the environment `prod` by Terraform Bytebase Provider. Currently, the database allowlist is empty.
 ![before-terraform-config](/static/blog/introducing-terraform-bytebase-provider/before-terraform-config.webp)
 
 The code block below demonstrates how to grant developers access permission to the database `employee` in the environment `prod`:
