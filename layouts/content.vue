@@ -74,7 +74,7 @@
             :to="localePath('/docs/get-started/install/deploy-with-docker')"
             class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-8 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
             @click.native="track('deploy.header')"
-            >{{ $t("common.deploy-now") }}</nuxt-link
+            >{{ $t("common.deploy") }}</nuxt-link
           >
         </div>
         <div id="algolia-search-container" class="ml-2"></div>
