@@ -175,6 +175,10 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Production Setup](/administration/production-setup)
 
+### [Single sign-on (SSO)](/administration/sso/overview)
+
+#### [OAuth 2.0](/administration/sso/oauth2)
+
 ### [Back up Data Directory](/administration/back-up-data-directory)
 
 ### [Environment Policy](/administration/environment-policy/overview)
