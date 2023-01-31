@@ -42,10 +42,11 @@ In this tutorial, you’ll run Bytebase locally using Docker.
 ```bash
 docker run --init \
 --name bytebase-github \
+--platform linux/amd64 \
 --restart always \
 --publish 8080:8080 \
 --volume ~/.bytebase/data:/var/opt/bytebase \
-bytebase/bytebase:1.3.0 \
+bytebase/bytebase:%%bb_version%% \
 --data /var/opt/bytebase \
 --external-url https://03f1-103-102-7-52.ngrok.io \
 --port 8080 \
