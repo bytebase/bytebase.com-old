@@ -147,14 +147,19 @@ export default defineComponent({
 
     const subscribe = (e: any) => {
       trackEvent("demo");
-      analytics.newsletter.identify(email.value, {
-        category: "request-demo",
-        integrations: {
-          MailChimp: {
-            subscriptionStatus: "subscribed",
-          },
+      analytics.newsletter.identify(
+        email.value,
+        {
+          category: "request-demo",
         },
-      });
+        {
+          integrations: {
+            MailChimp: {
+              subscriptionStatus: "subscribed",
+            },
+          },
+        }
+      );
       subscribed.value = true;
       e.preventDefault();
     };
