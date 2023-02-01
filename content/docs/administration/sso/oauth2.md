@@ -42,7 +42,7 @@ OAuth 2.0 requires an authorization callback url in the configuration. Please ma
 
 ## Create OAuth 2.0 provider with templates
 
-Bytebase provides some popular OAuth 2.0 provider templates including GitHub, GitLab and Google.
+Bytebase provides templates for configuring built-in OAuth providers.
 
 ### GitHub
 
