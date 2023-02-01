@@ -21,6 +21,9 @@
   - [Limit the inserted rows](/docs/sql-review/review-rules/supported-rules#statement.insert.row-limit)
   - [Limit affected rows](/docs/sql-review/review-rules/supported-rules#statement.affected-row-limit)
   - [Dry run DML statements](/docs/sql-review/review-rules/supported-rules#statement.dml-dry-run)
+  - [Disallow add column with default](/docs/sql-review/review-rules/supported-rules#statement.disallow-add-column-with-default)
+  - [Add CHECK constraints with NOT VALID option](/docs/sql-review/review-rules/supported-rules#statement.add-check-not-valid)
+  - [Disallow add NOT NULL constraints to an existing column](/docs/sql-review/review-rules/supported-rules#statement.disallow-add-not-null)
 - Table
   - [Require primary key](/docs/sql-review/review-rules/supported-rules#table.require-pk)
   - [Disallow foreign key](/docs/sql-review/review-rules/supported-rules#table.no-foreign-key)
@@ -51,8 +54,11 @@
   - [Limit key type for primary keys](/docs/sql-review/review-rules/supported-rules#index.pk-type-limit)
   - [Disallow BLOB and TEXT for index keys](/docs/sql-review/review-rules/supported-rules#index.type-no-blob)
   - [Index count limit](/docs/sql-review/review-rules/supported-rules#index.total-number-limit)
+  - [Primary key type allowlist](/docs/sql-review/review-rules/supported-rules#index.primary-key-type-allowlist)
+  - [Create index concurrently](/docs/sql-review/review-rules/supported-rules#index.create-concurrently)
 - Database
   - [Drop database restriction](/docs/sql-review/review-rules/supported-rules#database.drop-empty-database)
 - System
   - [Charset allow list](/docs/sql-review/review-rules/supported-rules#system.charset.allowlist)
   - [Collation allow list](/docs/sql-review/review-rules/supported-rules#system.collation.allowlist)
+  - [Comment length limit](/docs/sql-review/review-rules/supported-rules#system.comment.length)
