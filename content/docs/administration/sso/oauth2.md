@@ -2,7 +2,7 @@
 title: OAuth 2.0
 ---
 
-OAuth (Open Authorization) is an open standard for token-based authentication and authorization which is used to provide single sign-on (SSO). Bytebase supports to create popular OAuth 2.0 providers(GitHub, Google, GitLab) and custom providers.
+OAuth is an open standard for token-based authentication and authorization which is used to provide Single Sign-On (SSO). Bytebase supports popular OAuth 2.0 providers (GitHub, Google, GitLab) and custom providers.
 
 ![create-sso-dialog](/static/docs/administration/sso/create-sso-dialog.webp)
 
