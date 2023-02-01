@@ -18,4 +18,4 @@ In Admin Mode, you are not limited to run SELECT, DDL and DML change queries, bu
 
 ![Admin Mode](/static/docs/sql-editor/admin-mode.webp)
 
-In Admin Mode, you can press <kbd>⌘ + Up / Down</kbd> or <kbd>Ctrl + Up / Down</kbd> to explore history statements backward or forward. Click the **Clear screen** button or use its keyboard shortcut <kbd>⇧ + ⌥ + C</kbd> to clear history queries on the screen.
+In Admin Mode, click the **Clear screen** button or use its keyboard shortcut <kbd>⇧ + ⌥ + C</kbd> to clear the screen. You can also press <kbd>⌘ + Up / Down</kbd> or <kbd>Ctrl + Up / Down</kbd> to explore history statements backward or forward. 
