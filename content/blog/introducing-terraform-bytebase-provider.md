@@ -22,7 +22,7 @@ The latest Terraform Bytebase Provider allows you to easily manage the following
 - **Database instances**: They are modeled after a single database instance and can be accessed using an address such as host:port.
 - **Instance roles**: At this time, it is only compatible with PostgreSQL. We are working on supporting for MySQL.
 - **Policies**:
-  - **Approval**: It determines whether database migration tasks in a particular environment are performed automatically or require manual approval before execution.
+  - **Approval**: It determines whether database change tasks in a particular environment are performed automatically or require manual approval before execution.
   - **Database backup schedule**: It allows you to configure the database backup plan to be weekly, daily, or none, and also specify the backup data retention period.
   - **SQL Review**: It enables you to customize SQL lint to check for common issues before execution. Currently, we have 48 SQL Review rules for MySQL and 14 rules for PostgreSQL (more rules are coming).
   - **Sensitive data**: It allows you to mark specific table columns as sensitive to anonymize the data.
