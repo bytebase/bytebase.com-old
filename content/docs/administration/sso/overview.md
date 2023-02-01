@@ -2,7 +2,7 @@
 title: Single sign-on (SSO)
 ---
 
-Single sign-on (SSO) is an authentication method that enables users to securely authenticate with multiple applications and websites by using just one set of credentials.
+Single Sign-On (SSO) is an authentication method that enables users to securely authenticate with multiple applications and websites by using just one set of credentials.
 
 Bytebase supports the following standard protocols that provide SSO:
 
