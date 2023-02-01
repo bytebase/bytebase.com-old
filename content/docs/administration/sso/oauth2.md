@@ -11,7 +11,7 @@ In the creating SSO dialog, you need to fill following fields:
 - Basic information:
 
   - **Name** is the display name of your SSO item;
-  - **ResourceID** should be an unique string about this resource;
+  - **Resource ID** should be a unique string identifying this resource by Bytebase;
   - **Domain** is a SSO domain name;
 
 - Identity provider information: The information is the base concept of [OAuth 2.0](https://oauth.net/2/) and comes from your provider.
