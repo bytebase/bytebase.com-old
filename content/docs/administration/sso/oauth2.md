@@ -19,7 +19,7 @@ In the creating SSO dialog, you need to fill following fields:
   - **Client ID** is a public identifier of the custom provider;
   - **Client Secret** is the OAuth2 client secret from identity provider;
   - **Auth URL** is the custom provider's OAuth2 login page address;
-  - **Scopes** is the scope parameter carried when accessing the OAuth2 URL, which is filled in according to the requirements of the custom provider;
+  - **Scopes** is the scope parameter carried when accessing the OAuth2 URL, which is filled in according to the custom provider;
   - **Token URL** is the API address for obtaining accessToken;
   - **User information URL** is the API address for obtaining user information by accessToken;
 
