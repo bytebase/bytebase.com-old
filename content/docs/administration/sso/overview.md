@@ -23,6 +23,6 @@ As a **Workspace Owner**, you can create a SSO provider with the following steps
 
 ## Sign in with SSO
 
-Once a valid SSO has been created, the user can quickly log in via the button in sign in page.
+Once a valid SSO has been created, the user can choose the configured SSO provider to sign in.
 
 ![sign-in-with-github](/static/docs/administration/sso/sign-in-with-github.webp)
