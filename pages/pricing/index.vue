@@ -73,9 +73,12 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-24 gap-y-1">
-                  <div class="mt-3 flex items-baseline">
-                    <div
+                <div class="flex flex-col items-center h-32 gap-y-1">
+                  <div class="my-3 flex items-baseline">
+                    <span v-if="plan.pricePrefix" class="text-3xl">
+                      {{ plan.pricePrefix }}
+                    </span>
+                    <span
                       :class="[
                         'tracking-tight flex items-baseline',
                         plan.type == 2
@@ -84,17 +87,17 @@
                       ]"
                     >
                       {{ plan.pricing }}
-                      <p
-                        class="text-gray-400 text-base font-normal"
-                        v-if="plan.type != 2"
-                      >
-                        {{ $t("subscription.per-month") }}
-                      </p>
-                    </div>
+                    </span>
+                    {{ plan.priceSuffix }}
                   </div>
-                  <p class="text-gray-400">
-                    {{ plan.priceInfo }}
-                  </p>
+                  <div
+                    :class="[
+                      'text-gray-600 h-12',
+                      plan.type == 1 ? 'font-bold' : '',
+                    ]"
+                  >
+                    {{ $t(`subscription.${plan.title}-price-intro`) }}
+                  </div>
                 </div>
                 <nuxt-link
                   v-if="plan.type == 0"
@@ -530,7 +533,8 @@ interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
   pricing: string;
-  priceInfo: string;
+  pricePrefix: string;
+  priceSuffix: string;
 }
 
 interface LocalFeatureTier {
@@ -580,8 +584,17 @@ export default defineComponent({
       pricing:
         plan.type === PlanType.ENTERPRISE
           ? (app.i18n.t("subscription.contact-us") as string)
-          : `$${plan.pricePerSeatPerMonth}`,
-      priceInfo: app.i18n.t(`subscription.${plan.title}-price-intro`) as string,
+          : `$${plan.unitPrice}`,
+      pricePrefix:
+        plan.type === PlanType.TEAM
+          ? (app.i18n.t("subscription.start-from") as string)
+          : "",
+      priceSuffix:
+        plan.type === PlanType.TEAM
+          ? (app.i18n.t("subscription.price-unit-for-team") as string)
+          : plan.type === PlanType.ENTERPRISE
+          ? ""
+          : (app.i18n.t("subscription.per-month") as string),
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {
