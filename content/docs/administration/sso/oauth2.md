@@ -6,7 +6,7 @@ OAuth is an open standard for token-based authentication and authorization which
 
 ![create-sso-dialog](/static/docs/administration/sso/create-sso-dialog.webp)
 
-In the creating SSO dialog, you need to fill in most of required fields. Including:
+In the creating SSO dialog, you need to fill following fields:
 
 - Basic information:
 
