@@ -33,9 +33,9 @@ Alternatively, you can also pass PG_URL environment variable.
 
 Supported format:
 
-- _postgresql://user:secret@host:port/dbname_
+- _postgresql://\<\<user>>:\<\<secret>>@\<\<host>>:\<\<port>>/\<\<dbname>\>_
 
-- _postgresql://user:secret@host:port/dbname?sslrootcert=root.pem_
+- _postgresql://\<\<user>>:\<\<secret>>@\<\<host>>:\<\<port>>/\<\<dbname>>?sslrootcert=\<\<root.pem>\>_
 
 Example:
 
