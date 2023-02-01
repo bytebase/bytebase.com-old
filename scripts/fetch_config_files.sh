@@ -9,14 +9,14 @@ mkdir -p "$LOCALIZATION_FOLDER/subscription"
 
 # TODO(ed): use main to take effect the pricing change immediately. We can revert the change here after the new version of console is released.
 CONSOLE_VERSION_FOR_PRICING="main"
-CONSOLE_VERSION_FOR_SQL_REVIEW=`cat ./VERSION`
+CONSOLE_VERSION_FOR_SQL_REVIEW="main"
 URL="https://raw.githubusercontent.com/bytebase/bytebase"
 
 input=(
     # SQL review files
     "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/types/$SCHEMA_FILE"
-    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/plugin/advisor/config/$PROD_TEMPLATE"
-    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/plugin/advisor/config/$DEV_TEMPLATE"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/backend/plugin/advisor/config/$PROD_TEMPLATE"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/backend/plugin/advisor/config/$DEV_TEMPLATE"
     "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/locales/sql-review/en-US.json"
     "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/locales/sql-review/zh-CN.json"
     # subscription files
