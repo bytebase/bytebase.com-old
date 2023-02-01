@@ -175,7 +175,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Production Setup](/administration/production-setup)
 
-### [Single sign-on](/administration/sso/overview)
+### [Single Sign-On](/administration/sso/overview)
 
 #### [OAuth 2.0](/administration/sso/oauth2)
 
