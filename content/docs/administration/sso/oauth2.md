@@ -63,9 +63,6 @@ Bytebase provides templates for configuring built-in OAuth providers.
    ![github-oauth-app-config](/static/docs/administration/sso/github-oauth-app-config.webp)
 
 2. Open creating SSO dialog and select the **GitHub** template.
-
-   ![oauth2-github](/static/docs/administration/sso/oauth2-github.webp)
-
 3. Update the **Client ID** and **Client secret** fields with the GitHub OAuth App you just created.
 4. After filling in all the required fields, try to click **Test connection**.
 5. If everything is OK, click the **Create** button.
