@@ -75,7 +75,7 @@
               <div class="flex flex-col items-center">
                 <div class="flex flex-col items-center h-32 gap-y-1">
                   <div class="my-3 flex items-baseline">
-                    <span v-if="plan.pricePrefix" class="text-3xl">
+                    <span v-if="plan.pricePrefix" class="text-3xl mr-1">
                       {{ plan.pricePrefix }}
                     </span>
                     <span
