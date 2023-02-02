@@ -21,13 +21,13 @@ description: "- Added support for gh-ost. - Updated the way help tips are displa
 
  ![schema-review-naming-table](/static/changelog/1.2.2/schema-review-naming-table.webp)
 
-- Added [a new rule](https://www.bytebase.com/docs/sql-review/review-rules/table-no-fk) to disallow foreign keys on a table.
+- Added [a new rule](https://www.bytebase.com/docs/sql-review/review-policy/table-no-fk) to disallow foreign keys on a table.
   
  ![fk-check](/static/changelog/1.2.2/fk-check.webp)
 
  ![schema-review-table-no-fk](/static/changelog/1.2.2/schema-review-table-no-fk.webp)
 
-- Added [a new rule](https://www.bytebase.com/docs/sql-review/review-rules/table-drop-naming) for naming convention when dropping a table.
+- Added [a new rule](https://www.bytebase.com/docs/sql-review/review-policy/table-drop-naming) for naming convention when dropping a table.
   
  ![drop-table-naming-convention](/static/changelog/1.2.2/drop-table-naming-convention.webp)
 

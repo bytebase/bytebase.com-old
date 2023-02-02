@@ -10,7 +10,7 @@ This OpenAPI is in **Alpha** stage, we may change it in the future.
 
 The SQL Advise API provides SQL checks based on your schema review policy.
 
-> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/sql-review/review-rules/overview) for more information.
+> Before you start, you should configure the schema review policy on a specific environment. Please check [Schema Review](/docs/sql-review/review-policy/overview) for more information.
 
 ### Endpoint
 
@@ -54,7 +54,7 @@ You can also create the instance and database in the UX, then call the API with 
 - `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details.
 - `content`: The error message.
 - `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
-- `title`: The schema review rule type. See the [list of supported rules](/docs/sql-review/review-rules/supported-rules).
+- `title`: The schema review rule type. See the [list of supported rules](/docs/sql-review/review-policy/supported-rules).
   - `OK`: No errors.
 
 ### Response Codes

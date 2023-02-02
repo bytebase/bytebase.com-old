@@ -25,7 +25,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 |                        [GitOps Change Workflow](/docs/vcs-integration/overview) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    | ✔️ |
 |         [Tenant Database Management](/docs/tenant-database-management/overview) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    | ✔️ |
 |                    [Migration History](/docs/change-database/migration-history) |  ✔️   |     ✔️     |  ✔️  |     ✔️     |    ✔️     |   ✔️    | ✔️ |
-|                      [SQL Review Rules](/docs/sql-review/review-rules/overview) |  ✔️   |     ✔️     |  ✔️  |            |           |
+|          [SQL Review Policy and Rules](/docs/sql-review/review-policy/overview) |  ✔️   |     ✔️     |  ✔️  |            |           |
 |              [Schema Synchronization](/docs/change-database/synchronize-schema) |  ✔️   |     ✔️     |      |            |           |
 |                            [Schema Editor](/docs/change-database/schema-editor) |  ✔️   |            |      |            |           |
 | [Online Schema Change](/docs/change-database/online-schema-migration-for-mysql) |  ✔️   |            |      |            |           |

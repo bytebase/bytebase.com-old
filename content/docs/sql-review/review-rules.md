@@ -1,6 +1,78 @@
 ---
-title: Supported Rules
+title: Review Rules
 ---
+<hint-block type="warning">
+
+Review rules only supports SQL checks in **Issue** now. Support for **SQL Editor** is coming soon.
+
+</hint-block>
+
+Bytebase provides customizable SQL lint rules to check common issues in schema change process.
+
+Different sets of rules can form different [SQL Review Policies](/docs/sql-review/review-policy/overview) for the respective environment.
+
+## Supported rules
+
+It currently supports following SQL review rules and see [Supported Rules](/docs/sql-review/review-policy/supported-rules) for details:
+
+- Engine
+  - [Require InnoDB](#engine.mysql.use-innodb)
+- Naming
+  - [Table naming convention](#naming.table)
+  - [Column naming convention](#naming.column)
+  - [Auto-increment column naming convention](#naming.column.auto-increment)
+  - [Index naming convention](#naming.index.idx)
+  - [Primary key naming convention](#naming.index.pk)
+  - [Unique key naming convention](#naming.index.uk)
+  - [Foreign key naming convention](#naming.index.fk)
+- Statement
+  - [Disallow SELECT \*](#statement.select.no-select-all)
+  - [Require WHERE](#statement.where.require)
+  - [Disallow leading % in LIKE](#statement.where.no-leading-wildcard-like)
+  - [Disallow COMMIT](#statement.disallow-commit)
+  - [Disallow LIMIT](#statement.disallow-limit)
+  - [Disallow ORDER BY](#statement.disallow-order-by)
+  - [Merge ALTER TABLE](#statement.merge-alter-table)
+  - [INSERT statements must specify columns](#statement.insert.must-specify-column)
+  - [Disallow ORDER BY RAND in INSERT statements](#statement.insert.disallow-order-by-rand)
+  - [Limit the inserted rows](#statement.insert.row-limit)
+  - [Limit affected rows](#statement.affected-row-limit)
+  - [Dry run DML statements](#statement.dml-dry-run)
+- Table
+  - [Require primary key](#table.require-pk)
+  - [Disallow foreign key](#table.no-foreign-key)
+  - [Drop naming convention](#table.drop-naming-convention)
+  - [Disallow partition table](#table.disallow-partition)
+  - [Table comment convention](#table.comment)
+- Schema
+  - [Backward incompatible schema change](#schema.backward-compatibility)
+- Column
+  - [Enforce the required columns in each table](#column.required)
+  - [Column type disallow list](#column.disallow-list)
+  - [Columns no NULL value](#column.no-null)
+  - [Disallow changing column type](#column.disallow-change-type)
+  - [Set DEFAULT value for NOT NULL columns](#column.set-default-for-not-null)
+  - [Disallow ALTER TABLE CHANGE COLUMN statements](#column.disallow-change)
+  - [Disallow changing column order](#column.disallow-changing-order)
+  - [Use integer for auto-increment columns](#column.auto-increment-must-integer)
+  - [Disallow set charset for columns](#column.disallow-set-charset)
+  - [Set unsigned attribute on auto-increment columns](#column.auto-increment-must-unsigned)
+  - [Column comment convention](#column.comment)
+  - [Maximum CHAR length](#column.maximum-character-length)
+  - [Auto-increment initial value](#column.auto-increment-initial-value)
+  - [Limit the count of current time columns](#column.current-time-count-limit)
+  - [Require column default value](#column.require-default)
+- Index
+  - [Disallow duplicate column in index keys](#index.no-duplicate-column)
+  - [Limit the count of index keys](#index.key-number-limit)
+  - [Limit key type for primary keys](#index.pk-type-limit)
+  - [Disallow BLOB and TEXT for index keys](#index.type-no-blob)
+  - [Index count limit](#index.total-number-limit)
+- Database
+  - [Drop database restriction](#database.drop-empty-database)
+- System
+  - [Charset allow list](#system.charset.allowlist)
+  - [Collation allow list](#system.collation.allowlist)
 
 ## Engine
 

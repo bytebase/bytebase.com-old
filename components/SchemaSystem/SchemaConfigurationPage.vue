@@ -418,7 +418,7 @@ export default defineComponent({
       ];
 
       for (const rule of props.selectedRuleList) {
-        const type = `  - type: ${rule.type} # Doc: https://www.bytebase.com/docs/sql-review/review-rules/supported-rules#${rule.type}`;
+        const type = `  - type: ${rule.type} # Doc: https://www.bytebase.com/docs/sql-review/review-policy/supported-rules#${rule.type}`;
         const level = `    level: ${rule.level}`;
         content.push(type, level);
 

@@ -44,23 +44,23 @@ There are currently three types of rules that need to be configured.
 
 #### Regular expression
 
-The rule [Table Naming Convention](/docs/sql-review/review-rules/naming-table) and [Column Naming Convention](/docs/sql-review/review-rules/naming-column) use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as format.
+The rule [Table Naming Convention](/docs/sql-review/review-policy/naming-table) and [Column Naming Convention](/docs/sql-review/review-policy/naming-column) use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) as format.
 
 ![schema-review-change-regex](/static/docs/schema-review-change-regex.gif)
 
 #### Template
 
-The rule [Index Naming Convention](/docs/sql-review/review-rules/naming-index-idx), [Unique Key Naming Convention](/docs/sql-review/review-rules/naming-index-uk) and [Foreign Key Naming Convention](/docs/sql-review/review-rules/naming-index-fk) use `Template` as format.
+The rule [Index Naming Convention](/docs/sql-review/review-policy/naming-index-idx), [Unique Key Naming Convention](/docs/sql-review/review-policy/naming-index-uk) and [Foreign Key Naming Convention](/docs/sql-review/review-policy/naming-index-fk) use `Template` as format.
 
 ![schema-review-change-template](/static/docs/schema-review-change-template.gif)
 
 #### Column list
 
-The rule [Enforce the Required Columns in Each Table](/docs/sql-review/review-rules/column-required) needs `Column List`.
+The rule [Enforce the Required Columns in Each Table](/docs/sql-review/review-policy/column-required) needs `Column List`.
 
 ![schema-review-change-column-list](/static/docs/schema-review-change-column-list.gif)
 
-Details of the rules can be found [here](/docs/sql-review/review-rules/overview).
+Details of the rules can be found [here](/docs/sql-review/review-policy/overview).
 
 ## Step 3
 

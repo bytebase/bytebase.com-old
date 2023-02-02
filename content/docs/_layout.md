@@ -87,19 +87,19 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [GitOps CI](/sql-review/sql-advisor/gitops-ci)
 
-### [Review Rules](/sql-review/review-rules/overview)
+### [Review Policy](/sql-review/review-policy/overview)
 
-#### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
+#### [Create Schema Review Policy](/sql-review/review-policy/create-schema-review-policy)
 
-#### [Schema Review Check in the Issue](/sql-review/review-rules/schema-review-check-in-the-issue)
+#### [Schema Review Check in the Issue](/sql-review/review-policy/schema-review-check-in-the-issue)
 
-#### [View Schema Review Policy](/sql-review/review-rules/view-schema-review-policy)
+#### [View Schema Review Policy](/sql-review/review-policy/view-schema-review-policy)
 
-#### [Edit Schema Review Policy](/sql-review/review-rules/edit-schema-review-policy)
+#### [Edit Schema Review Policy](/sql-review/review-policy/edit-schema-review-policy)
 
-#### [Disable and Delete Schema Review Policy](/sql-review/review-rules/disable-delete-policy)
+#### [Disable and Delete Schema Review Policy](/sql-review/review-policy/disable-delete-policy)
 
-#### [Supported Rules](/sql-review/review-rules/supported-rules)
+### [Review Rules](/sql-review/review-rules)
 
 ## Change Database
 

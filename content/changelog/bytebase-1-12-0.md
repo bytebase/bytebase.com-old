@@ -12,7 +12,7 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 
 ## 🎄 Enhancements
 
-- Added [21 SQL Review rules](/docs/sql-review/review-rules/supported-rules) for PostgreSQL.
+- Added [21 SQL Review rules](/docs/sql-review/review-policy/supported-rules) for PostgreSQL.
 - [SQL Editor](/docs/sql-editor/overview) Enhancements.
   - Press cmd (Mac) / ctrl (Windows) + PageUp / PageDown to navigate through history statements in Admin Mode.
   - Clear screen output in Admin Mode.
