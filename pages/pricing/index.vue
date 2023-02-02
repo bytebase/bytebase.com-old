@@ -52,7 +52,7 @@
               plan.featured
                 ? 'ring-2 ring-indigo-700 shadow-md'
                 : 'lg:bg-transparent',
-              'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12',
+              'pt-6 px-6 pb-12 rounded-lg lg:px-8 lg:pt-12',
             ]"
           >
             <div>
@@ -80,22 +80,14 @@
                     </span>
                     <span
                       :class="[
-                        'tracking-tight flex items-baseline',
-                        plan.type == 2
-                          ? 'text-4xl font-semibold'
-                          : 'text-5xl font-extrabold',
+                        'tracking-tight flex items-baseline text-5xl font-semibold',
                       ]"
                     >
                       {{ plan.pricing }}
                     </span>
                     {{ plan.priceSuffix }}
                   </div>
-                  <div
-                    :class="[
-                      'text-gray-600 h-12',
-                      plan.type == 1 ? 'font-bold' : '',
-                    ]"
-                  >
+                  <div :class="['text-gray-600 h-12']">
                     {{ $t(`subscription.${plan.title}-price-intro`) }}
                   </div>
                 </div>

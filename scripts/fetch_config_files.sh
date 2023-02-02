@@ -7,7 +7,6 @@ LOCALIZATION_FOLDER="./locales"
 mkdir -p "$LOCALIZATION_FOLDER/sql-review"
 mkdir -p "$LOCALIZATION_FOLDER/subscription"
 
-# TODO(ed): use main to take effect the pricing change immediately. We can revert the change here after the new version of console is released.
 CONSOLE_VERSION_FOR_PRICING="main"
 CONSOLE_VERSION_FOR_SQL_REVIEW="main"
 URL="https://raw.githubusercontent.com/bytebase/bytebase"
