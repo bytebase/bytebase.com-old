@@ -29,20 +29,20 @@ If [--pg](/docs/reference/command-line#--pg-string) is specified, the metadata w
 pg_dump -h <<host>> -p <<port>> -U <<user>> -d metadb > metadb.sql
 ```
 
-### Option 1 - Restore the backup to the same `metadb`
+### Restore Option 1 - Restore to the same `metadb`
 
 #### Step 1 - Restore metadata to a temporary db
 
 Create a new db `metadb_new`:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> metadb -c "CREATE DATABASE metadb_new"
+psql -h <<host>> -p <<port>> -U <<user>> metadb -c "CREATE DATABASE metadb_new"
 ```
 
 Restore metdata to the new db:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> metadb < metadb.sql
+psql -h <<host>> -p <<port>> -U <<user>> metadb_new < metadb.sql
 ```
 
 #### Step 2 - Swap the existing metadata db with the temporary db
@@ -58,13 +58,13 @@ Also, you can not rename the connecting database so you need to connect to the P
 Rename existing `metadb` to `metadb_old`:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> postgres -c "ALTER DATABASE metadb RENAME TO metadb_old"
+psql -h <<host>> -p <<port>> -U <<user>> postgres -c "ALTER DATABASE metadb RENAME TO metadb_old"
 ```
 
 Rename `metadb_new` to the `metadb`, which will serve as the new metadata db:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> postgres -c "ALTER DATABASE metadb_new RENAME TO metadb"
+psql -h <<host>> -p <<port>> -U <<user>> postgres -c "ALTER DATABASE metadb_new RENAME TO metadb"
 ```
 
 #### Step 3 - Drop the old metadata db
@@ -72,15 +72,16 @@ psql -h <<host>> -p <<port>> -U <<user> postgres -c "ALTER DATABASE metadb_new R
 Restart Bytebase and verify the metadata is restored properly. Afterwards, you can drop the old database:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> postgres -c "DROP DATABASE metadb_old"
+psql -h <<host>> -p <<port>> -U <<user>> postgres -c "DROP DATABASE metadb_old"
 ```
 
-### Option 2 - Restore the backup to a different database `metadb2`
+### Restore Option 2 - Restore to a different database `metadb2`
 
 #### Step 1 - Modify the dump file
 
 The dump file records the Bytebase metadata schema change history, and it's database specific. So we
-need to change the existing record value from `metadb` to `metadb2` first.
+need to change the existing record value from `metadb` to `metadb2` first, which means to transfer
+the change history to `metadb2`.
 
 Locate the `migration_history` table in the dump file, and for each record, find the value `metadb`
 which corresponds to the `namespace` column, change each occurrence from `metadb` to `metadb2`.
@@ -92,13 +93,13 @@ which corresponds to the `namespace` column, change each occurrence from `metadb
 Create a new db `metadb2`:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> metadb -c "CREATE DATABASE metadb2"
+psql -h <<host>> -p <<port>> -U <<user>> metadb -c "CREATE DATABASE metadb2"
 ```
 
 Restore metdata to the new db:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> metadb2 < metadb.sql
+psql -h <<host>> -p <<port>> -U <<user>> metadb2 < metadb.sql
 ```
 
 #### Step 3 - Drop the old metadata db
@@ -106,7 +107,7 @@ psql -h <<host>> -p <<port>> -U <<user> metadb2 < metadb.sql
 Restart Bytebase and verify the metadata is restored properly. Afterwards, you can drop the old database:
 
 ```bash
-psql -h <<host>> -p <<port>> -U <<user> postgres -c "DROP DATABASE metadb"
+psql -h <<host>> -p <<port>> -U <<user>> postgres -c "DROP DATABASE metadb"
 ```
 
 ## Database Backup
