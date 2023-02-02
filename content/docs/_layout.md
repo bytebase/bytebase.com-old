@@ -179,7 +179,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [OAuth 2.0](/administration/sso/oauth2)
 
-### [Back up Data Directory](/administration/back-up-data-directory)
+### [Back up Data](/administration/back-up-data)
 
 ### [Environment Policy](/administration/environment-policy/overview)
 
