@@ -587,7 +587,7 @@ export default defineComponent({
           : `$${plan.unitPrice}`,
       pricePrefix:
         plan.type === PlanType.TEAM
-          ? (app.i18n.t("subscription.start-from") as string)
+          ? (app.i18n.t("subscription.start-at") as string)
           : "",
       priceSuffix:
         plan.type === PlanType.TEAM
