@@ -343,8 +343,7 @@ Bytebase alerts users if there exists COMMIT statement.
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.disallow-limit">Disallow LIMIT</h3>
 
@@ -404,8 +403,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.must-specify-column">INSERT statements must specify columns</h3>
 
@@ -423,8 +421,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.disallow-order-by-rand">Disallow ORDER BY RAND in INSERT statements</h3>
 
@@ -442,8 +439,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.row-limit">Limit the inserted rows</h3>
 
@@ -459,6 +455,7 @@ Alert users if the inserted rows exceed the limit.
 #### Support database engine
 
 - MySQL
+- PostgreSQL
 
 <h3 id="statement.affected-row-limit">Limit affected row limit</h3>
 
@@ -473,6 +470,7 @@ For `UPDATE` and `DELETE` statements, Bytebase runs `EXPLAIN` statements for the
 #### Support database engine
 
 - MySQL
+- PostgreSQL
 
 <h3 id="statement.dml-dry-run">Dry run DML statements</h3>
 
@@ -491,6 +489,49 @@ Dry run DML statements by `EXPLAIN` statements. Specifically, Bytebase checks:
 #### Support database engine
 
 - MySQL
+- PostgreSQL
+
+<h3 id="statement.disallow-add-column-with-default">Disallow add column with default</h3>
+
+The PostgreSQL will lock the table and rewrite the whole table when you adding column with default value. You can separate the adding column, setting default value and backfilling all existing rows.
+
+![sql-review-statement-disallow-add-column-with-default](/static/docs/sql-review-statement-disallow-add-column-with-default.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD COLUMN` statements.
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="statement.add-check-not-valid">Add CHECK constraints with NOT VALID option</h3>
+
+Adding CHECK constraints without NOT VALID can cause downtime because it blocks reads and writes. You can manually verify all rows and validate the constraint after creating.
+
+![sql-review-statement-add-check-not-valid](/static/docs/sql-review-statement-add-check-not-valid.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD CONSTRAINT` statements.
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="statement.disallow-add-not-null">Disallow add NOT NULL constraints to an existing column</h3>
+
+It can cause downtime because it blocks reads and writes. You can add CHECK(column IS NOT NULL) constraints with NOT VALID option to avoid this.
+
+![sql-review-statement-disallow-add-not-null](/static/docs/sql-review-statement-disallow-add-not-null.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD CONSTRAINT` statements.
+
+#### Support database engine
+
+- PostgreSQL
 
 ## Table
 
@@ -556,8 +597,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="table.disallow-partition">Disallow partition table</h3>
 
@@ -576,8 +616,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="table.comment">Table comment convention</h3>
 
@@ -669,8 +708,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.no-null">Columns no NULL value</h3>
 
@@ -707,8 +745,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.set-default-for-not-null">Set DEFAULT value for NOT NULL columns</h3>
 
@@ -868,8 +905,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.auto-increment-initial-value">Auto-increment initial value</h3>
 
@@ -939,8 +975,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 ## Index
 
@@ -962,8 +997,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="index.key-number-limit">Limit the count of index keys</h3>
 
@@ -985,8 +1019,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="index.pk-type-limit">Limit key type for primary keys</h3>
 
@@ -1053,8 +1086,42 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
+<h3 id="index.primary-key-type-allowlist">Primary key type allowlist</h3>
+
+Limit the data type for primary key.
+
+![sql-review-index-primary-key-type-allowlist](/static/docs/sql-review-index-primary-key-type-allowlist.webp)
+
+#### How the rule works
+
+Bytebase checks the data type for each primary key.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE ADD CONSTRAINT` statements
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="index.create-concurrently">Create index concurrently</h3>
+
+Creating indexes blocks writes (but not reads) on the table until it's done. Use CONCURRENTLY when creates indexes can allow writes to continue.
+
+![sql-review-index-create-concurrently](/static/docs/sql-review-index-create-concurrently.webp)
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- PostgreSQL
 
 ## Database
 
@@ -1099,8 +1166,8 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
 
 <h3 id="system.collation.allowlist">Collation allow list</h3>
 
@@ -1119,5 +1186,17 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
+
+<h3 id="system.comment.length">Comment length limit</h3>
+
+![sql-review-system-comment-length](/static/docs/sql-review-system-comment-length.webp)
+
+#### How the rule works
+
+Bytebase checks all `COMMENT ON` statements.
+
+#### Support database engine
+
+- PostgreSQL
