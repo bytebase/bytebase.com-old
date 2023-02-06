@@ -7,7 +7,7 @@ description: "- Support SQL review for PostgreSQL. - GitHub.com VCS integration 
 
 ## 🚀 New Features
 
-- Support SQL review for PostgreSQL with 13 rules: [SQL Review](https://www.bytebase.com/docs/sql-review/review-rules/overview)
+- Support SQL review for PostgreSQL with 13 rules: [SQL Review](https://www.bytebase.com/docs/sql-review/review-policy/overview)
 ![sql-review-for-pg](/static/changelog/1.3.0/sql-review-for-pg.webp)
 
 - Support using GitHub.com both as the VCS integration to manage database schemas and as the authentication provider to allow users to use their GitHub.com accounts to log in to Bytebase.

@@ -32,4 +32,4 @@ After the setup, in every MR, the SQL review policy will check against changed f
 
 ![vcs-sql-review-gitlab](/static/docs/vcs-integration/enable-version-control-workflow/vcs-sql-review-gitlab.webp)
 
-And you can follow the doc [Create Schema Review Policy](/docs/sql-review/review-rules/create-schema-review-policy) to create the SQL review policy.
+And you can follow the doc [Create Schema Review Policy](/docs/sql-review/review-policy/create-schema-review-policy) to create the SQL review policy.
