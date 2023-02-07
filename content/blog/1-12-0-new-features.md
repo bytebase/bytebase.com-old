@@ -26,7 +26,7 @@ It's been a while since we began our SQL Review journey about a year ago. From t
 
 1. First-grade MySQL / TiDB SQL reviewing capability on the market.
 2. The only PostgreSQL reviewing capability on the market.
-3. The unique product-level integration capabilities on the market, whether it's integration with Bytebase itself, or integration with GitHub Action, GitHub App, GitLab CI and API.
+3. The fully integrated experience, from integration with Bytebase itself, to the integration with GitHub Action, GitHub App, GitLab CI, and API.
 
 Of course, this is only the first phase of SQL Review, we will optimize the configuration and experience of Bytebase SQL Review rules, and then we will move on to the second phase, the development of indexing suggestions with database statistics.
 
