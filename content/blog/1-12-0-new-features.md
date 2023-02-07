@@ -48,7 +48,7 @@ The main change in the pricing this time is the Team Plan. Originally the cheape
 
 Since one of the core value propositions of Bytebase is collaboration between application developers and DBAs, and the collaboration-related features are mainly in the Team and Enterprise Plans, this pricing adjustment is also to allow more users to experience the collaboration capabilities provided by Bytebase.
 
-For an R&D team with a complete organizational system, we still recommend the Enterprise Plan. The capabilities of the Enterprise Plan have also been greatly enhanced in the past year. Attached is a comparison overview of the features of the Enterprise Plan in 22 and 23 years ⬇️
+For a formal engineering team developing serious products, we still recommend the Enterprise Plan. The capabilities of the Enterprise Plan have also been greatly enhanced in the past year. Attached is a feature comparison of the Enterprise Plan between 2022 and 2023 ⬇️
 
 ![enterprise-plan](/static/blog/1-12-0-new-features/enterprise-plan.webp)
 
