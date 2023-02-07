@@ -20,7 +20,7 @@ But PostgreSQL has been blank because of the lack of parser support. To fill thi
 
 At first glance, it looks like it is still a bit far from MySQL. In fact, this is not the case, because there are some strange syntax in MySQL, you can add ORDER BY to Insert / Update statements, which needs to be prevented the rule level. PG itself does not allow such syntax, so no additional rules are needed.
 
-In addition to the rule engine enhancements, we have integrated SQL audit rules in the SQL editor to return violated rules in real time.
+In addition to the rule engine enhancements, we have integrated SQL Review rules in the SQL editor to return violated rules in real time.
 
 So far, the function of SQL Review rules, which lasted for nearly a year, has also come to an end. From the beginning we built a SQL Review Guide, to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in PG Parser, to the integration of these rules into the product, we have:
 
