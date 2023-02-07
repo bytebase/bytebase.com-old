@@ -46,7 +46,7 @@ Finally, let’s talk about pricing updates. Bytebase launched a commercial vers
 
 The main change in the pricing this time is the Team Plan. Originally the cheapest plan also required an annual subscription of $4740. Under the new model, users can start from $19 / month and a monthly subscription.
 
-Since one of the core value propositions of Bytebase is collaboration between application developers and DBAs, and the collaboration-related features are mainly in the Team and Enterprise Plans, this pricing adjustment is also to allow more users to experience the collaboration capabilities provided by Bytebase.
+Since one of the core value propositions of Bytebase is the collaboration between application developers and DBAs, and the collaboration-related features are mainly in the Team and Enterprise Plans, this pricing adjustment will enable more users to experience the collaboration capabilities provided by Bytebase.
 
 For a formal engineering team developing serious products, we still recommend the Enterprise Plan. The capabilities of the Enterprise Plan have also been greatly enhanced in the past year. Attached is a feature comparison of the Enterprise Plan between 2022 and 2023 ⬇️
 
