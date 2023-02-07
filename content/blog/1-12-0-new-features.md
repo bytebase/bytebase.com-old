@@ -52,4 +52,4 @@ For an R&D team with a complete organizational system, we still recommend the En
 
 ![enterprise-plan](/static/blog/1-12-0-new-features/enterprise-plan.webp)
 
-Well, that's it for this feature reading. See you!
+Well, that's it for the feature deep dive. You can also read [1.12.0 full changelog](/changelog/bytebase-1-12-0). See you!
