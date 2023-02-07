@@ -1,0 +1,68 @@
+---
+title: "Bytebase 1.12.0 Deep Dive"
+author: Tianzhou
+published_at: 2023/02/07 13:21:21
+feature_image: /static/blog/1-12-0-new-features/1-12-0-banner.webp
+tags: Explanation
+description: First release of the Year of Rabbit 🐰 is out, the version number was upgraded from 1.11.0 to 1.12.0. - SQL Review Policy - Terraform Bytebase Provider - Price Plan Update.
+---
+
+First release of the Year of Rabbit 🐰 is out, the version number was upgraded from 1.11.0 to 1.12.0. The release cycle was 3 weeks because of the Chinese New Year. There were 264 code commits, a bit more than the normal bi-weekly release. Let's see what new capabilities are included 👇
+![github-commits](/static/blog/1-12-0-new-features/github-commits.webp)
+
+## SQL Review Policy
+
+The first is the enhancement of SQL Review audit rules.
+
+We have nearly 50 rules on MySQL and TiDB to detect various non-compliant SQL statements, and there are goInception-based tools in the MySQL industry with similar capabilities.
+
+But PostgreSQL has been blank because of the lack of Parser support. To fill this gap, Bytebase developed PG Parser and added 21 review rules based on Parser's capability. This brings the total number of PG SQL Review rules to 37.
+
+At first glance, it looks like it is still a bit far from MySQL. In fact, this is not the case, because there are some strange syntaxes in MySQL, such as Insert / Update statements can add ORDER BY, which needs to be removed at the rule level. PG itself does not allow such syntax, so no additional rules are needed.
+
+In addition to the rule engine enhancements, we have integrated SQL audit rules in the SQL editor to return violated rules in real time.
+
+So far, the function of SQL Review rules, which lasted for nearly a year, has also come to an end. From the beginning we built a SQL Review Guide, to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in PG Parser, to the integration of these rules into the product, we have:
+
+1. The first-tier MySQL / TiDB SQL auditing capability in the market.
+2. The unique PostgreSQL auditing capability in the market.
+3. The unique product-level integration capabilities in the market, whether it's integration with Bytebase itself, or integration with GitHub Action, GitHub App, GitLab CI and API.
+
+Of course, this is only the first phase of SQL Review, we will optimize the configuration and experience of Bytebase SQL Review rules, and then we will move on to the second phase, the development of indexing suggestions with database statistics.
+
+![bytebase-stage-prod](/static/blog/1-12-0-new-features/bytebase-stage-prod.webp)
+
+![hub-create-sql-review-policy](/static/blog/1-12-0-new-features/hub-create-sql-review-policy.webp)
+
+![sql-review-result](/static/blog/1-12-0-new-features/sql-review-result.webp)
+
+![github-sql-review](/static/blog/1-12-0-new-features/github-sql-review.webp)
+
+![gitlab-merge-request](/static/blog/1-12-0-new-features/gitlab-merge-request.webp)
+
+## Terraform Bytebase Provider
+
+The second is to continue the enhancement of Terraform Bytebase Provider. Previously, the environment and database instance configuration, as well as the database user permission configuration have been introduced. This time we have added policy configurations as well, which include
+
+1. Approval policy
+2. Backup policy
+3. Sensitive field setting policy
+4. Database access policy
+5. The aforementioned database audit rules, 49 for MySQL, 45 for TiDB and 37 for PG
+
+Take a look at the resource list of Terraform Bytebase Provider, it's kind of primitive.
+![terraform-bytebase-provider](/static/blog/1-12-0-new-features/terraform-bytebase-provider.webp)
+
+## Price Plan Update
+
+Finally, let’s talk about pricing updates. Bytebase launched a commercial version in April last year. After a year of exploration and iteration of the product itself, we decided to make a pricing adjustment in the new year.
+
+The main change in the pricing this time is the Team Plan. Originally the cheapest plan also required an annual subscription of $4740. This time we changed it to a minimum of $19 and a monthly subscription.
+
+Since one of the core value propositions of Bytebase is collaboration between application developers and DBAs, and the collaboration-related features are mainly in the Team and Enterprise Plans, this pricing adjustment is also to allow more users to experience the collaboration capabilities provided by Bytebase.
+
+For an R&D team with a complete organizational system, we still recommend the Enterprise Plan. The capabilities of the Enterprise Plan have also been greatly enhanced in the past year. Attached is a comparison overview of the features of the Enterprise Plan in 22 and 23 years ⬇️
+
+![enterprise-plan](/static/blog/1-12-0-new-features/enterprise-plan.webp)
+
+Well, that's it for this feature reading. See you!
