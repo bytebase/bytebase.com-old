@@ -25,7 +25,7 @@ In addition to the rule engine enhancements, we have integrated SQL Review rules
 It's been a while since we began our SQL Review journey about a year ago. From the beginning we built a [SQL Review Guide](/sql-review-guide), to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in our homebrew PG Parser, to the integration of these rules into the product, we have:
 
 1. First-grade MySQL / TiDB SQL reviewing capability on the market.
-2. The one and only PostgreSQL reviewing capability on the market.
+2. The only PostgreSQL reviewing capability on the market.
 3. The unique product-level integration capabilities on the market, whether it's integration with Bytebase itself, or integration with GitHub Action, GitHub App, GitLab CI and API.
 
 Of course, this is only the first phase of SQL Review, we will optimize the configuration and experience of Bytebase SQL Review rules, and then we will move on to the second phase, the development of indexing suggestions with database statistics.
