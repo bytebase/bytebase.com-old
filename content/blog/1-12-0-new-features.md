@@ -44,7 +44,7 @@ Of course, this is only the first phase of SQL Review, we will optimize the conf
 
 Finally, let’s talk about pricing updates. Bytebase launched a commercial version in April last year. After a year of exploration and iteration of the product itself, we decided to make a pricing adjustment in the new year.
 
-The main change in the pricing this time is the Team Plan. Originally the cheapest plan also required an annual subscription of $4740. This time we changed it to a minimum of $19 and a monthly subscription.
+The main change in the pricing this time is the Team Plan. Originally the cheapest plan also required an annual subscription of $4740. Under the new model, users can start from $19 / month and a monthly subscription.
 
 Since one of the core value propositions of Bytebase is collaboration between application developers and DBAs, and the collaboration-related features are mainly in the Team and Enterprise Plans, this pricing adjustment is also to allow more users to experience the collaboration capabilities provided by Bytebase.
 
