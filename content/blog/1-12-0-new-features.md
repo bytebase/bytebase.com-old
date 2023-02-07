@@ -28,7 +28,7 @@ It's been a while since we began our SQL Review journey about a year ago. From t
 2. The only PostgreSQL reviewing capability on the market.
 3. The fully integrated experience, from integration with Bytebase itself, to the integration with GitHub Action, GitHub App, GitLab CI, and API.
 
-Of course, this is only the first phase of SQL Review, we will optimize the configuration and experience of Bytebase SQL Review rules, and then we will move on to the second phase, the development of indexing suggestions with database statistics.
+Of course, this is only the first phase of SQL Review, we will optimize the configuration and experience of Bytebase SQL Review rules, and then we will move on to the next phase, index optimization suggestions with the help of database statistics.
 
 ![bytebase-stage-prod](/static/blog/1-12-0-new-features/bytebase-stage-prod.webp)
 
