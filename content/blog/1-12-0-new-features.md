@@ -22,7 +22,7 @@ At first glance, it looks like it is still a bit far from MySQL. In fact, this i
 
 In addition to the rule engine enhancements, we have integrated SQL Review rules in the SQL editor to return violated rules in real time.
 
-So far, the function of SQL Review rules, which lasted for nearly a year, has also come to an end. From the beginning we built a SQL Review Guide, to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in PG Parser, to the integration of these rules into the product, we have:
+It's been a while since we began our SQL Review journey about a year ago. From the beginning we built a [SQL Review Guide](/sql-review-guide), to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in our homebrew PG Parser, to the integration of these rules into the product, we have:
 
 1. The first-tier MySQL / TiDB SQL reviewing capability on the market.
 2. The one and only PostgreSQL reviewing capability on the market.
