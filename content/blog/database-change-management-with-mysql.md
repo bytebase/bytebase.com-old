@@ -68,7 +68,7 @@ In this tutorial, ​an **Instance** is your on-premises MySQL instance.
 ![create-instance](/static/blog/database-change-management-with-mysql/create-instance.webp)
 
 - **Environment**: choose `Test`, if you choose `Prod`, you'll need approval for all future change requests, let's keep it simple for the sake of this tutorial.
-- **Username and password**: root / (leave it empty)
+- **Username and password**: your MySQL username and password.
 
 ## Step 3 - Create a Project
 
