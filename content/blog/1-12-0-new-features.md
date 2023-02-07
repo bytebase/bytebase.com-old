@@ -24,7 +24,7 @@ In addition to the rule engine enhancements, we have integrated SQL audit rules 
 
 So far, the function of SQL Review rules, which lasted for nearly a year, has also come to an end. From the beginning we built a SQL Review Guide, to the implementation of MySQL-based review rules in the product based on the existing TiDB Parser, to the implementation of PG review rules in PG Parser, to the integration of these rules into the product, we have:
 
-1. The first-tier MySQL / TiDB SQL auditing capability in the market.
+1. The first-tier MySQL / TiDB SQL reviewing capability on the market.
 2. The one and only PostgreSQL reviewing capability on the market.
 3. The unique product-level integration capabilities on the market, whether it's integration with Bytebase itself, or integration with GitHub Action, GitHub App, GitLab CI and API.
 
