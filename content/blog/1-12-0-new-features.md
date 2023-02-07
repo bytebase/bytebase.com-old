@@ -16,7 +16,7 @@ The first is the enhancement of SQL Review policies.
 
 We have nearly 50 rules on MySQL and TiDB to detect various non-compliant SQL statements, and there are goInception-based tools in the MySQL industry with similar capabilities.
 
-But PostgreSQL has been blank because of the lack of Parser support. To fill this gap, Bytebase developed PG Parser and added 21 review rules based on Parser's capability. This brings the total number of PG SQL Review rules to 37.
+But PostgreSQL has been blank because of the lack of parser support. To fill this gap, Bytebase developed PG parser and added 21 review rules based on parser capability. This brings the total number of PG SQL Review rules to 37.
 
 At first glance, it looks like it is still a bit far from MySQL. In fact, this is not the case, because there are some strange syntaxes in MySQL, you can add ORDER BY to Insert / Update statements, which needs to be removed at the rule level. PG itself does not allow such syntax, so no additional rules are needed.
 
