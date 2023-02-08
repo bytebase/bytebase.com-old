@@ -12,7 +12,7 @@ OpenID Connect (OIDC) is a simple identity layer on top of the OAuth 2.0 protoco
    
    If your start Bytebase with `--external-url https://bytebase.example.com`, then your application redirect URL should be `https://bytebase.example.com/oidc/callback`.
 
-2. If you're unsure about the **Issuer** of your IdP, you can always use the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) endpoint to find the correct value, e.g. `https://dev-10086.okta.com/.well-known/openid-configuration`.
+2. If you're unsure about the **Issuer** of your IdP, you can always use the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) endpoint to find the correct value, e.g. `https://acme.okta.com/.well-known/openid-configuration`.
 
 </hint-block>
 
