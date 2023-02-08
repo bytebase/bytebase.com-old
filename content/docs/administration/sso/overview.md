@@ -7,7 +7,7 @@ Single Sign-On (SSO) is an authentication method that enables users to securely 
 Bytebase supports the following standard protocols that provide SSO:
 
 - [OAuth 2.0](/docs/administration/sso/oauth2)
-- [OpenID Connect](/docs/administration/sso/oidc)
+- [OpenID Connect (OIDC)](/docs/administration/sso/oidc)
 
 ## Create SSO provider
 
