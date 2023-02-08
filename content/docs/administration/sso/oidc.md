@@ -16,7 +16,7 @@ If your start Bytebase with `--external-url https://bytebase.example.com`, then 
 
 Basic information:
 
-- **Name**: the display name shwon to your users (e.g. "Google" will be shown as "Sign in with Google")
+- **Name**: the display name shown to your users (e.g. "Google" will be shown as "Sign in with Google")
 - **Resource ID**: a human-readable unique string, only lower-case alphabets and hyphens are allowed (e.g. "google")
 - **Domain**: the domain name to scope associated users (e.g. "google.com")
 
