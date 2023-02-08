@@ -52,7 +52,7 @@
               plan.featured
                 ? 'ring-2 ring-indigo-700 shadow-md'
                 : 'lg:bg-transparent',
-              'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12',
+              'pt-6 px-6 pb-12 rounded-lg lg:px-8 lg:pt-12',
             ]"
           >
             <div>
@@ -73,26 +73,23 @@
                 class="hidden lg:block w-2/3 m-auto"
               />
               <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center h-28 gap-y-1">
-                  <div class="mt-3 flex items-baseline">
-                    <p
+                <div class="flex flex-col items-center h-32 gap-y-1">
+                  <div class="my-3 flex items-baseline">
+                    <span v-if="plan.pricePrefix" class="text-3xl mr-1">
+                      {{ plan.pricePrefix }}
+                    </span>
+                    <span
                       :class="[
-                        'tracking-tight',
-                        plan.type == 2
-                          ? 'text-4xl font-semibold'
-                          : 'text-5xl font-extrabold',
+                        'tracking-tight flex items-baseline text-5xl font-semibold',
                       ]"
                     >
                       {{ plan.pricing }}
-                    </p>
+                    </span>
+                    {{ plan.priceSuffix }}
                   </div>
-                  <p class="text-gray-400" v-if="plan.type != 2">
-                    {{ $t("subscription.per-instance") }}
-                    {{ $t("subscription.per-month") }}
-                  </p>
-                  <p class="text-gray-400">
+                  <div :class="['text-gray-600 h-12']">
                     {{ $t(`subscription.${plan.title}-price-intro`) }}
-                  </p>
+                  </div>
                 </div>
                 <nuxt-link
                   v-if="plan.type == 0"
@@ -528,6 +525,8 @@ interface LocalPlan extends Plan {
   featured: boolean;
   buttonText: string;
   pricing: string;
+  pricePrefix: string;
+  priceSuffix: string;
 }
 
 interface LocalFeatureTier {
@@ -560,7 +559,7 @@ export default defineComponent({
 
     const getButtonText = (plan: Plan): string => {
       if (plan.type === PlanType.FREE)
-        return app.i18n.t("common.deploy-now") as string;
+        return app.i18n.t("common.deploy") as string;
       if (plan.type === PlanType.ENTERPRISE)
         return app.i18n.t("subscription.contact-us") as string;
       if (plan.trialDays) {
@@ -577,7 +576,17 @@ export default defineComponent({
       pricing:
         plan.type === PlanType.ENTERPRISE
           ? (app.i18n.t("subscription.contact-us") as string)
-          : `$${plan.pricePerInstancePerMonth}`,
+          : `$${plan.unitPrice}`,
+      pricePrefix:
+        plan.type === PlanType.TEAM
+          ? (app.i18n.t("subscription.start-at") as string)
+          : "",
+      priceSuffix:
+        plan.type === PlanType.TEAM
+          ? (app.i18n.t("subscription.price-unit-for-team") as string)
+          : plan.type === PlanType.ENTERPRISE
+          ? ""
+          : (app.i18n.t("subscription.per-month") as string),
     }));
 
     const sections: LocalFeatureSection[] = FEATURE_SECTIONS.map((section) => {

@@ -28,8 +28,7 @@ Flags:
       --backup-region string       region of the backup bucket, e.g., us-west-2 for AWS S3.
       --data string                directory where Bytebase stores data. If relative path is supplied, then the path is relative to the directory where Bytebase is under (default ".")
       --debug                      whether to enable debug level logging
-      --demo                       whether to run using demo data
-      --demo-name string           name of the demo to use when running in demo mode
+      --demo string                name of the demo to use. If specified, Bytebase will run in demo mode
       --external-url string        the external URL where user visits Bytebase, must start with http:// or https:// (default "https://www.bytebase.com/docs/get-started/install/external-url")
   -h, --help                       help for bytebase
       --pg string                  optional external PostgreSQL instance connection url(must provide dbname); for example postgresql://user:secret@masterhost:5432/dbname?sslrootcert=cert
@@ -69,19 +68,16 @@ default: **false**
 
 If specified, Bytebase will emit more logs, this is only used when troubleshooting Bytebase issues.
 
-## --demo
-
-default: **false**
-
-If specified, Bytebase will load the demo data instead of the real data. The data is the same used by [https://demo.bytebase.com](https://demo.bytebase.com). This is a quick way to test the product yourself or demonstrate it to your peers. When Bytebase is started with --demo, it stores the data in a separate file, which means the demo data and real data never interferes with each other.
-
-## --demo-name <\<string>>
+## --demo <\<string>>
 
 default: **""**
 
-If not specified, the demo name will be "dev".
+The demo name. If specified, Bytebase will load the demo data instead of the real data. The data is the same used by [https://demo.bytebase.com](https://demo.bytebase.com). This is a quick way to test the product yourself or demonstrate it to your peers. When Bytebase is started with --demo, it stores the data in a separate location, which means the demo data and real data never interferes with each other.
 
-The current available demo names are "dev", "prod", and "schema-migration-history".
+The current available demo names are:
+
+- default
+- schema-migration-history
 
 ## --external-url <\<string>>
 

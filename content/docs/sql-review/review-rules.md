@@ -1,6 +1,82 @@
 ---
-title: Supported Rules
+title: Review Rules
 ---
+<hint-block type="warning">
+
+Review rules only supports SQL checks in **Issue** now. Support for **SQL Editor** is coming soon.
+
+</hint-block>
+
+Bytebase provides customizable SQL lint rules to check common issues in schema change process.
+
+Different sets of rules can form different [SQL Review Policies](/docs/sql-review/review-policy/overview) for the respective environment.
+
+## Supported rules
+
+- Engine
+  - [Require InnoDB](/docs/sql-review/review-rules#engine.mysql.use-innodb)
+- Naming
+  - [Table naming convention](/docs/sql-review/review-rules#naming.table)
+  - [Column naming convention](/docs/sql-review/review-rules#naming.column)
+  - [Auto-increment column naming convention](/docs/sql-review/review-rules#naming.column.auto-increment)
+  - [Index naming convention](/docs/sql-review/review-rules#naming.index.idx)
+  - [Primary key naming convention](/docs/sql-review/review-rules#naming.index.pk)
+  - [Unique key naming convention](/docs/sql-review/review-rules#naming.index.uk)
+  - [Foreign key naming convention](/docs/sql-review/review-rules#naming.index.fk)
+- Statement
+  - [Disallow SELECT \*](/docs/sql-review/review-rules#statement.select.no-select-all)
+  - [Require WHERE](/docs/sql-review/review-rules#statement.where.require)
+  - [Disallow leading % in LIKE](/docs/sql-review/review-rules#statement.where.no-leading-wildcard-like)
+  - [Disallow COMMIT](/docs/sql-review/review-rules#statement.disallow-commit)
+  - [Disallow LIMIT](/docs/sql-review/review-rules#statement.disallow-limit)
+  - [Disallow ORDER BY](/docs/sql-review/review-rules#statement.disallow-order-by)
+  - [Merge ALTER TABLE](/docs/sql-review/review-rules#statement.merge-alter-table)
+  - [INSERT statements must specify columns](/docs/sql-review/review-rules#statement.insert.must-specify-column)
+  - [Disallow ORDER BY RAND in INSERT statements](/docs/sql-review/review-rules#statement.insert.disallow-order-by-rand)
+  - [Limit the inserted rows](/docs/sql-review/review-rules#statement.insert.row-limit)
+  - [Limit affected rows](/docs/sql-review/review-rules#statement.affected-row-limit)
+  - [Dry run DML statements](/docs/sql-review/review-rules#statement.dml-dry-run)
+  - [Disallow add column with default](/docs/sql-review/review-rules#statement.disallow-add-column-with-default)
+  - [Add CHECK constraints with NOT VALID option](/docs/sql-review/review-rules#statement.add-check-not-valid)
+  - [Disallow add NOT NULL constraints to an existing column](/docs/sql-review/review-rules#statement.disallow-add-not-null)
+- Table
+  - [Require primary key](/docs/sql-review/review-rules#table.require-pk)
+  - [Disallow foreign key](/docs/sql-review/review-rules#table.no-foreign-key)
+  - [Drop naming convention](/docs/sql-review/review-rules#table.drop-naming-convention)
+  - [Disallow partition table](/docs/sql-review/review-rules#table.disallow-partition)
+  - [Table comment convention](/docs/sql-review/review-rules#table.comment)
+- Schema
+  - [Backward incompatible schema change](/docs/sql-review/review-rules#schema.backward-compatibility)
+- Column
+  - [Enforce the required columns in each table](/docs/sql-review/review-rules#column.required)
+  - [Column type disallow list](/docs/sql-review/review-rules#column.disallow-list)
+  - [Columns no NULL value](/docs/sql-review/review-rules#column.no-null)
+  - [Disallow changing column type](/docs/sql-review/review-rules#column.disallow-change-type)
+  - [Set DEFAULT value for NOT NULL columns](/docs/sql-review/review-rules#column.set-default-for-not-null)
+  - [Disallow ALTER TABLE CHANGE COLUMN statements](/docs/sql-review/review-rules#column.disallow-change)
+  - [Disallow changing column order](/docs/sql-review/review-rules#column.disallow-changing-order)
+  - [Use integer for auto-increment columns](/docs/sql-review/review-rules#column.auto-increment-must-integer)
+  - [Disallow set charset for columns](/docs/sql-review/review-rules#column.disallow-set-charset)
+  - [Set unsigned attribute on auto-increment columns](/docs/sql-review/review-rules#column.auto-increment-must-unsigned)
+  - [Column comment convention](/docs/sql-review/review-rules#column.comment)
+  - [Maximum CHAR length](/docs/sql-review/review-rules#column.maximum-character-length)
+  - [Auto-increment initial value](/docs/sql-review/review-rules#column.auto-increment-initial-value)
+  - [Limit the count of current time columns](/docs/sql-review/review-rules#column.current-time-count-limit)
+  - [Require column default value](/docs/sql-review/review-rules#column.require-default)
+- Index
+  - [Disallow duplicate column in index keys](/docs/sql-review/review-rules#index.no-duplicate-column)
+  - [Limit the count of index keys](/docs/sql-review/review-rules#index.key-number-limit)
+  - [Limit key type for primary keys](/docs/sql-review/review-rules#index.pk-type-limit)
+  - [Disallow BLOB and TEXT for index keys](/docs/sql-review/review-rules#index.type-no-blob)
+  - [Index count limit](/docs/sql-review/review-rules#index.total-number-limit)
+  - [Primary key type allowlist](/docs/sql-review/review-rules#index.primary-key-type-allowlist)
+  - [Create index concurrently](/docs/sql-review/review-rules#index.create-concurrently)
+- Database
+  - [Drop database restriction](/docs/sql-review/review-rules#database.drop-empty-database)
+- System
+  - [Charset allow list](/docs/sql-review/review-rules#system.charset.allowlist)
+  - [Collation allow list](/docs/sql-review/review-rules#system.collation.allowlist)
+  - [Comment length limit](/docs/sql-review/review-rules#system.comment.length)
 
 ## Engine
 
@@ -343,8 +419,7 @@ Bytebase alerts users if there exists COMMIT statement.
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.disallow-limit">Disallow LIMIT</h3>
 
@@ -404,8 +479,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.must-specify-column">INSERT statements must specify columns</h3>
 
@@ -423,8 +497,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.disallow-order-by-rand">Disallow ORDER BY RAND in INSERT statements</h3>
 
@@ -442,8 +515,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="statement.insert.row-limit">Limit the inserted rows</h3>
 
@@ -459,6 +531,7 @@ Alert users if the inserted rows exceed the limit.
 #### Support database engine
 
 - MySQL
+- PostgreSQL
 
 <h3 id="statement.affected-row-limit">Limit affected row limit</h3>
 
@@ -473,6 +546,7 @@ For `UPDATE` and `DELETE` statements, Bytebase runs `EXPLAIN` statements for the
 #### Support database engine
 
 - MySQL
+- PostgreSQL
 
 <h3 id="statement.dml-dry-run">Dry run DML statements</h3>
 
@@ -491,6 +565,49 @@ Dry run DML statements by `EXPLAIN` statements. Specifically, Bytebase checks:
 #### Support database engine
 
 - MySQL
+- PostgreSQL
+
+<h3 id="statement.disallow-add-column-with-default">Disallow add column with default</h3>
+
+The PostgreSQL will lock the table and rewrite the whole table when you adding column with default value. You can separate the adding column, setting default value and backfilling all existing rows.
+
+![sql-review-statement-disallow-add-column-with-default](/static/docs/sql-review-statement-disallow-add-column-with-default.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD COLUMN` statements.
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="statement.add-check-not-valid">Add CHECK constraints with NOT VALID option</h3>
+
+Adding CHECK constraints without NOT VALID can cause downtime because it blocks reads and writes. You can manually verify all rows and validate the constraint after creating.
+
+![sql-review-statement-add-check-not-valid](/static/docs/sql-review-statement-add-check-not-valid.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD CONSTRAINT` statements.
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="statement.disallow-add-not-null">Disallow add NOT NULL constraints to an existing column</h3>
+
+It can cause downtime because it blocks reads and writes. You can add CHECK(column IS NOT NULL) constraints with NOT VALID option to avoid this.
+
+![sql-review-statement-disallow-add-not-null](/static/docs/sql-review-statement-disallow-add-not-null.webp)
+
+#### How the rule works
+
+Bytebase checks all `ALTER TABLE ADD CONSTRAINT` statements.
+
+#### Support database engine
+
+- PostgreSQL
 
 ## Table
 
@@ -556,8 +673,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="table.disallow-partition">Disallow partition table</h3>
 
@@ -576,8 +692,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="table.comment">Table comment convention</h3>
 
@@ -669,8 +784,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.no-null">Columns no NULL value</h3>
 
@@ -707,8 +821,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.set-default-for-not-null">Set DEFAULT value for NOT NULL columns</h3>
 
@@ -868,8 +981,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="column.auto-increment-initial-value">Auto-increment initial value</h3>
 
@@ -939,8 +1051,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 ## Index
 
@@ -962,8 +1073,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="index.key-number-limit">Limit the count of index keys</h3>
 
@@ -985,8 +1095,7 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
-
-Support for PostgreSQL is coming soon.
+- PostgreSQL
 
 <h3 id="index.pk-type-limit">Limit key type for primary keys</h3>
 
@@ -1053,8 +1162,42 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
+<h3 id="index.primary-key-type-allowlist">Primary key type allowlist</h3>
+
+Limit the data type for primary key.
+
+![sql-review-index-primary-key-type-allowlist](/static/docs/sql-review-index-primary-key-type-allowlist.webp)
+
+#### How the rule works
+
+Bytebase checks the data type for each primary key.
+
+Specifically, Bytebase checks:
+
+- `CREATE TABLE` statements
+- `ALTER TABLE ADD CONSTRAINT` statements
+
+#### Support database engine
+
+- PostgreSQL
+
+<h3 id="index.create-concurrently">Create index concurrently</h3>
+
+Creating indexes blocks writes (but not reads) on the table until it's done. Use CONCURRENTLY when creates indexes can allow writes to continue.
+
+![sql-review-index-create-concurrently](/static/docs/sql-review-index-create-concurrently.webp)
+
+#### How the rule works
+
+Specifically, Bytebase checks:
+
+- `CREATE INDEX` statements
+
+#### Support database engine
+
+- PostgreSQL
 
 ## Database
 
@@ -1099,8 +1242,8 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
 
 <h3 id="system.collation.allowlist">Collation allow list</h3>
 
@@ -1119,5 +1262,17 @@ Specifically, Bytebase checks:
 
 - MySQL
 - TiDB
+- PostgreSQL
 
-Support for PostgreSQL is coming soon.
+
+<h3 id="system.comment.length">Comment length limit</h3>
+
+![sql-review-system-comment-length](/static/docs/sql-review-system-comment-length.webp)
+
+#### How the rule works
+
+Bytebase checks all `COMMENT ON` statements.
+
+#### Support database engine
+
+- PostgreSQL

@@ -324,7 +324,7 @@ export default defineComponent({
         ...state.selectedRule,
         componentList: state.selectedRule.componentList.reduce(
           (list, component, index) => {
-            let val = data[index];
+            const val = data[index];
             switch (component.payload.type) {
               case "STRING_ARRAY":
                 list.push({
@@ -395,7 +395,7 @@ export default defineComponent({
         domtoimage
           .toPng(node, { bgcolor: "#fff" })
           .then((dataUrl) => {
-            var link = document.createElement("a");
+            const link = document.createElement("a");
             link.download = `${props.title}.png`;
             link.href = dataUrl;
             link.click();
@@ -418,7 +418,7 @@ export default defineComponent({
       ];
 
       for (const rule of props.selectedRuleList) {
-        const type = `  - type: ${rule.type} # Doc: https://www.bytebase.com/docs/sql-review/review-rules/supported-rules#${rule.type}`;
+        const type = `  - type: ${rule.type} # Doc: https://www.bytebase.com/docs/sql-review/review-rules#${rule.type}`;
         const level = `    level: ${rule.level}`;
         content.push(type, level);
 
@@ -438,7 +438,7 @@ export default defineComponent({
         }
       }
 
-      var element = document.createElement("a");
+      const element = document.createElement("a");
       element.setAttribute(
         "href",
         "data:text/plain;charset=utf-8," +

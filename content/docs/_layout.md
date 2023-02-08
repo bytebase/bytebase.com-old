@@ -21,13 +21,15 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Option 2 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
 
-#### [Option 3 Deploy to render](/get-started/install/deploy-to-render)
+#### [Option 3 Deploy to sealos](/get-started/install/deploy-to-sealos)
 
 #### [Option 4 Deploy to Rainbond](/get-started/install/deploy-to-rainbond)
 
-#### [Option 5 Installation Script](/get-started/install/installation-script)
+#### [Option 5 Deploy to render](/get-started/install/deploy-to-render)
 
-#### [Option 6 Build from Source Code](/get-started/install/build-from-source-code)
+#### [Option 6 Installation Script](/get-started/install/installation-script)
+
+#### [Option 7 Build from Source Code](/get-started/install/build-from-source-code)
 
 #### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
@@ -85,19 +87,19 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [GitOps CI](/sql-review/sql-advisor/gitops-ci)
 
-### [Review Rules](/sql-review/review-rules/overview)
+### [Review Policy](/sql-review/review-policy/overview)
 
-#### [Create Schema Review Policy](/sql-review/review-rules/create-schema-review-policy)
+#### [Create Schema Review Policy](/sql-review/review-policy/create-schema-review-policy)
 
-#### [Schema Review Check in the Issue](/sql-review/review-rules/schema-review-check-in-the-issue)
+#### [Schema Review Check in the Issue](/sql-review/review-policy/schema-review-check-in-the-issue)
 
-#### [View Schema Review Policy](/sql-review/review-rules/view-schema-review-policy)
+#### [View Schema Review Policy](/sql-review/review-policy/view-schema-review-policy)
 
-#### [Edit Schema Review Policy](/sql-review/review-rules/edit-schema-review-policy)
+#### [Edit Schema Review Policy](/sql-review/review-policy/edit-schema-review-policy)
 
-#### [Disable and Delete Schema Review Policy](/sql-review/review-rules/disable-delete-policy)
+#### [Disable and Delete Schema Review Policy](/sql-review/review-policy/disable-delete-policy)
 
-#### [Supported Rules](/sql-review/review-rules/supported-rules)
+### [Review Rules](/sql-review/review-rules)
 
 ## Change Database
 
@@ -175,7 +177,13 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Production Setup](/administration/production-setup)
 
-### [Back up Data Directory](/administration/back-up-data-directory)
+### [Single Sign-On](/administration/sso/overview)
+
+#### [OAuth 2.0](/administration/sso/oauth2)
+
+#### [OpenID Connect (OIDC)](/administration/sso/oidc)
+
+### [Back up Data](/administration/back-up-data)
 
 ### [Environment Policy](/administration/environment-policy/overview)
 

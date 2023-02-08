@@ -7,20 +7,21 @@ LOCALIZATION_FOLDER="./locales"
 mkdir -p "$LOCALIZATION_FOLDER/sql-review"
 mkdir -p "$LOCALIZATION_FOLDER/subscription"
 
-CONSOLE_VERSION=`cat ./VERSION`
+CONSOLE_VERSION_FOR_PRICING="main"
+CONSOLE_VERSION_FOR_SQL_REVIEW="main"
 URL="https://raw.githubusercontent.com/bytebase/bytebase"
 
 input=(
     # SQL review files
-    "$URL/$CONSOLE_VERSION/frontend/src/types/$SCHEMA_FILE"
-    "$URL/$CONSOLE_VERSION/plugin/advisor/config/$PROD_TEMPLATE"
-    "$URL/$CONSOLE_VERSION/plugin/advisor/config/$DEV_TEMPLATE"
-    "$URL/$CONSOLE_VERSION/frontend/src/locales/sql-review/en-US.json"
-    "$URL/$CONSOLE_VERSION/frontend/src/locales/sql-review/zh-CN.json"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/types/$SCHEMA_FILE"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/backend/plugin/advisor/config/$PROD_TEMPLATE"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/backend/plugin/advisor/config/$DEV_TEMPLATE"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/locales/sql-review/en-US.json"
+    "$URL/$CONSOLE_VERSION_FOR_SQL_REVIEW/frontend/src/locales/sql-review/zh-CN.json"
     # subscription files
-    "$URL/$CONSOLE_VERSION/frontend/src/types/plan.yaml"
-    "$URL/$CONSOLE_VERSION/frontend/src/locales/subscription/en-US.json"
-    "$URL/$CONSOLE_VERSION/frontend/src/locales/subscription/zh-CN.json"
+    "$URL/$CONSOLE_VERSION_FOR_PRICING/frontend/src/types/plan.yaml"
+    "$URL/$CONSOLE_VERSION_FOR_PRICING/frontend/src/locales/subscription/en-US.json"
+    "$URL/$CONSOLE_VERSION_FOR_PRICING/frontend/src/locales/subscription/zh-CN.json"
 )
 output=(
     # SQL review files

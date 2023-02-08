@@ -6,7 +6,7 @@
     "documentation": "Documentation",
     "demo": "Demo",
     "live-demo": "Live demo",
-    "deploy-now": "Deploy now",
+    "deploy": "Free Deploy",
     "about": "About",
     "changelog": "Changelog",
     "company": "Company",
@@ -27,9 +27,6 @@
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds",
     "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes."
-  },
-  "pricing": {
-    "price-suffix-for-enterprise": ""
   },
   "features": {
     "sql-review": {

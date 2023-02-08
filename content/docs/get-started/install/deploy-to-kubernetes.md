@@ -40,7 +40,7 @@ spec:
               "--port",
               "8080",
               "--pg",
-              "postgresql://user:secret@host:port/dbname",
+              "postgresql://<<user>>:<<secret>>@<<host>>:<<port>>/<<dbname>>",
             ]
           ports:
             - containerPort: 8080
@@ -64,6 +64,7 @@ metadata:
   name: bytebase-entrypoint
   namespace: default
 spec:
+  # Optional
   type: LoadBalancer
   selector:
     app: bytebase
