@@ -57,8 +57,8 @@ User information field mapping:
 1. In Bytebase, go to **Settings > SSO** to create a new OIDC provider (all values are examples):
    - **Name**: `GitLab`
    - **Resource ID**: `gitlab`
-   - **Domain**: `gitlab.example.com`
-   - **Issuer**: `https://gitlab.example.com`
+   - **Domain**: `gitlab.acme.com`
+   - **Issuer**: `https://gitlab.acme.com`
    - **Client ID**: the application ID of your application
    - **Client secret**: the secret of your application
    - **Identifier**: `nickname`
@@ -67,7 +67,7 @@ User information field mapping:
 
 <hint-block type="info">
 
-In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.example.com` (HTTP) instead of `https://gitlab.example.com` (HTTPS) despite the latter being the URL used to access the instance.
+In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.acme.com` (HTTP) instead of `https://gitlab.acme.com` (HTTPS) despite the latter being the URL used to access the instance.
 
 </hint-block>
 
@@ -78,8 +78,8 @@ In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.example.com`
 1. In Bytebase, go to **Settings > SSO** to create a new OIDC provider (all values are examples):
    - **Name**: `Okta`
    - **Resource ID**: `okta`
-   - **Domain**: `bytebase.okta.com`
-   - **Issuer**: `https://bytebase.okta.com`
+   - **Domain**: `acme.okta.com`
+   - **Issuer**: `https://acme.okta.com`
    - **Client ID**: the client ID of your application
    - **Client secret**: the client secret of your application
    - **Identifier**: `preferred_username`
@@ -96,7 +96,7 @@ In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.example.com`
 1. In Bytebase, go to **Settings > SSO** to create a new OIDC provider (all values are examples):
    - **Name**: `Keycloak`
    - **Resource ID**: `keycloak`
-   - **Domain**: `keycloak.example.com`
+   - **Domain**: `keycloak.acme.com`
    - **Issuer**: `https://bytebase.okta.com/auth/realms/master`
    - **Client ID**: `bytebase`
    - **Client secret**: the client secret of your application
