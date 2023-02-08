@@ -97,7 +97,7 @@ In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.acme.com` (H
    - **Name**: `Keycloak`
    - **Resource ID**: `keycloak`
    - **Domain**: `keycloak.acme.com`
-   - **Issuer**: `https://bytebase.okta.com/auth/realms/master`
+   - **Issuer**: `https://keycloak.acme.com/auth/realms/master`
    - **Client ID**: `bytebase`
    - **Client secret**: the client secret of your application
    - **Identifier**: `preferred_username`
