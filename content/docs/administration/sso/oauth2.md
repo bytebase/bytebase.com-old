@@ -69,7 +69,7 @@ Bytebase provides templates for configuring built-in OAuth providers.
 
 ### GitLab
 
-1. Follow the [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to create an OAuth 2 application in GitLab.
+1. Follow the [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.gitlab.com/ee/integration/oauth_provider.html) to create an OAuth 2 application in GitLab.
 
    ![gitlab-oauth-app-config](/static/docs/administration/sso/gitlab-oauth-app-config.webp)
 
