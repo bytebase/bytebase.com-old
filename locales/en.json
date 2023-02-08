@@ -122,9 +122,9 @@
         "description": "Point-and-click GitHub and GitLab integration to enable GitOps workflow for changing database.",
         "see-guide": "See Setup Guide"
       },
-      "tenant-mode": {
-        "title": "Multi-Tenant Rollout",
-        "description": "Help SaaS provider to manage database changes across all tenants.",
+      "batch-change": {
+        "title": "Batch Change",
+        "description": "Batch change databases from different environments, different geographic locations and different SaaS tenants.",
         "see-guide": "See Setup Guide"
       },
       "sql-review": {
