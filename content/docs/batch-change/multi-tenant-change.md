@@ -2,7 +2,7 @@
 title: Change Databases from Multiple Tenants
 ---
 
-Bytebase allows your to change **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
+Bytebase allows you to change **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
 
 Typical scenarios of tenant databases are:
 
