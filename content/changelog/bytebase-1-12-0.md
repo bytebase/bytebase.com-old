@@ -33,7 +33,7 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 | :------------------------------ | :---: | :--------: | :--: |
 | **Seat Count** | Up to 10 | Up to 10 | Unlimited |
 | **Task count in an issue** | Unlimited | Unlimited | Unlimited |
-| **Instance count** | Up to 3 | Up to 10 | Customized |
+| **Instance count** | Up to 10 | Up to 10 | Customized |
 | **Environment count** | Unlimited | Unlimited | Unlimited |
 | **Subsription** |Free<br>(You can start a 14-day free trial for the Enterprise Plan - no credit card required)|Billed monthly: $19/seat/month<br>Billed annually: $190/seat/year<br>*$79/instance/month, first 3 FREE| Contact us at support@bytebase.com |
 
