@@ -248,12 +248,12 @@
                 <h3
                   class="text-5xl font-extrabold tracking-tight text-gray-900"
                 >
-                  {{ $t("index-page.features.tenant-mode.title") }}
+                  {{ $t("index-page.features.batch-change.title") }}
                 </h3>
               </div>
               <div class="mt-6">
                 <div class="mt-4 lg:text-right text-xl text-gray-500">
-                  {{ $t("index-page.features.tenant-mode.description") }}
+                  {{ $t("index-page.features.batch-change.description") }}
                 </div>
                 <div class="mt-6 lg:text-right">
                   <nuxt-link
