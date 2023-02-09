@@ -19,7 +19,7 @@ One project has to choose between the **UI workflow** and the **GitOps workflow*
 
 ## Procedure
 
-Go to the project you wish to enable GitOps workflow for. Choose "**Version Control**" and click "**Configure version control**".
+Go to the project you wish to enable GitOps workflow for. Choose **GitOps** and click **Configure GitOps**.
 
 ![project-vcs-step](/static/docs/vcs-integration/enable-gitops-workflow/project-vcs-step1.webp)
 
