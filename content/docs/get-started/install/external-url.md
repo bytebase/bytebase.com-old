@@ -4,7 +4,7 @@ title: Configure External URL
 
 <hint-block type="warning">
 
-You must configure the correct --external-url before configuring [VCS integration](/docs/vcs-integration/overview).
+You must configure the correct --external-url before configuring [VCS integration](/docs/vcs-integration/overview) or [SSO](/docs/administration/sso/overview).
 
 </hint-block>
 
