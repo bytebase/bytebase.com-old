@@ -122,9 +122,9 @@
         "description": "点击式配置 GitHub 和 GitLab 集成。使用 GitOps 工作流进行数据库变更。",
         "see-guide": "查看配置指南"
       },
-      "tenant-mode": {
-        "title": "多租户变更",
-        "description": "帮助 SaaS 提供商统一管理所有租户的数据库变更。",
+      "batch-change": {
+        "title": "批量变更",
+        "description": "批量变更属于不同环境，不同地域，不同 SaaS 租户的数据库。",
         "see-guide": "查看配置指南"
       },
       "sql-review": {
