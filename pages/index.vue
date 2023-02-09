@@ -257,9 +257,7 @@
                 </div>
                 <div class="mt-6 lg:text-right">
                   <nuxt-link
-                    :to="
-                      localePath('/docs/tenant-database-management/overview')
-                    "
+                    :to="localePath('/docs/batch-change/overview')"
                     class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
                     @click="track('docs.tenant-mode')"
                     >{{
