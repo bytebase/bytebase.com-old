@@ -4,12 +4,12 @@ title: GitHub.com
 
 ## Prerequisites
 
-- You should be the **Workspace Owner** to be able to see the "**Version Control**" sidebar item and add Git Provider.
+- You should be the **Workspace Owner** to be able to see the **GitOps** sidebar item and add Git Provider.
 - You should have a repository created on GitHub.com.
 
 ## Step 1 - Setting up
 
-Go to "**Settings**" from the top nav bar, select "**Version Control**" under "**Workspace**", and then click on the "**Add a Git provider**" button.
+Go to **Settings** from the top nav bar, select **GitOps** under **Workspace**, and then click **Add a Git provider**.
 
 ![add-git-provider](/static/docs/vcs-integration/add-git-provider/add-git-provider.webp)
 
