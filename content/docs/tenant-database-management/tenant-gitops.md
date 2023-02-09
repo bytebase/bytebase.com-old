@@ -22,7 +22,7 @@ CREATE TABLE company (
 );
 ```
 
-Where `bytebase/` is the **Base directory**, depending on [your configuration](/docs/vcs-integration/enable-version-control-workflow#step-3---configure-deploy).
+Where `bytebase/` is the **Base directory**, depending on [your configuration](/docs/vcs-integration/enable-gitops-workflow#step-3---configure-deploy).
 
 ### Use YAML manifest
 
@@ -73,4 +73,3 @@ databases:
 statement: |
   INSERT INTO company (id, name, address) VALUES (1, 'Bytebase', '1 DevOps street');
 ```
-

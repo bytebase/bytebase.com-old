@@ -4,7 +4,7 @@ title: State-based Migration
 
 <hint-block type="warning">
 
-This feature is in beta and only available for projects that have enabled [GitOps workflow](/docs/vcs-integration/enable-version-control-workflow).
+This feature is in beta and only available for projects that have enabled [GitOps workflow](/docs/vcs-integration/enable-gitops-workflow).
 
 </hint-block>
 
@@ -20,7 +20,7 @@ It is a better and future-proof approach to manage schema changes for being repe
 
 ### Step 1 - Enable the setting
 
-Once enabled [GitOps workflow](/docs/vcs-integration/enable-version-control-workflow), in the project's **Version Control > Schema change type** option, select **State-based**.
+Once enabled [GitOps workflow](/docs/vcs-integration/enable-gitops-workflow), in the project's **Version Control > Schema change type** option, select **State-based**.
 
 ![select-schema-change-type](/static/docs/change-database/state-based-migration/select-schema-change-type.webp)
 
