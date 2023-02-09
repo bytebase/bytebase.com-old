@@ -4,7 +4,8 @@ name: Compress
 
 on:
   schedule:
-    - cron: "0 0 0 8 ? * MON *"
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    - cron: "0 8 * * 1"
   workflow_dispatch:
 
 jobs:
