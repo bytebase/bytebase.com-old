@@ -96,7 +96,7 @@
                   :to="
                     localePath('/docs/get-started/install/deploy-with-docker')
                   "
-                  class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium"
+                  class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg lg:text-base xl:text-xl font-medium"
                   @click="track('deploy')"
                   >{{ plan.buttonText }}</nuxt-link
                 >
@@ -106,7 +106,7 @@
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                       : 'ring-2 ring-indigo-600',
-                    'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm lg:text-base xl:text-xl font-medium',
+                    'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg lg:text-base xl:text-xl font-medium',
                   ]"
                   @click="onTeamOrEnterpriseButtonClick(plan)"
                 >
@@ -172,7 +172,7 @@
             <h3
               :class="[
                 plan.featured ? 'text-indigo-600' : 'text-gray-900',
-                'text-sm font-bold',
+                'text-lg font-bold',
               ]"
             >
               {{ $t(`subscription.plan.${plan.title}.title`) }}
@@ -183,7 +183,7 @@
             <nuxt-link
               v-if="plan.type == 0"
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
-              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-lg font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
             <button
@@ -192,7 +192,7 @@
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
-                'mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-sm font-medium',
+                'mt-6 w-full inline-block py-2 px-2 rounded-md shadow-sm text-center text-lg font-medium',
               ]"
               @click="onTeamOrEnterpriseButtonClick(plan)"
             >
@@ -201,7 +201,7 @@
           </div>
 
           <div v-for="section in sections" :key="section.title">
-            <h4 class="mt-10 text-sm font-bold text-gray-900">
+            <h4 class="mt-10 text-lg font-bold text-gray-900">
               {{ $t(`subscription.feature-sections.${section.title}.title`) }}
             </h4>
 
@@ -233,7 +233,7 @@
                     :key="feature.title"
                     class="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
                   >
-                    <dt class="pr-4 text-sm font-medium text-gray-600">
+                    <dt class="pr-4 text-lg font-normal text-gray-600">
                       {{
                         $t(
                           `subscription.feature-sections.${section.title}.features.${feature.title}`
@@ -249,7 +249,7 @@
                           feature.tiers[index].featured
                             ? 'text-indigo-600'
                             : 'text-gray-900',
-                          'text-sm font-medium',
+                          'text-lg font-normal',
                         ]"
                         >{{ $t(`${feature.tiers[index].content}`) }}</span
                       >
@@ -301,14 +301,14 @@
 
       <div class="max-w-7xl mx-auto px-8">
         <div class="w-full border-t border-gray-200 flex items-stretch">
-          <div class="-mt-px w-1/4 py-6 pr-4 flex items-end"></div>
+          <div class="-mt-px w-2/5 py-6 pr-4 flex items-end"></div>
           <div
             v-for="(plan, planIdx) in plans"
             :key="plan.title"
             aria-hidden="true"
             :class="[
               planIdx === plans.length - 1 ? '' : 'pr-4',
-              '-mt-px pl-4 w-1/4',
+              '-mt-px pl-4 w-1/5',
             ]"
           >
             <div
@@ -321,14 +321,14 @@
                 <p
                   :class="[
                     plan.featured ? 'text-indigo-600' : 'text-gray-900',
-                    'text-sm font-bold',
+                    'text-lg font-bold',
                   ]"
                 >
                   {{ $t(`subscription.plan.${plan.title}.title`) }}
                 </p>
                 <span
                   v-if="plan.label"
-                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-sm bg-indigo-100 text-indigo-800"
+                  class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-lg font-sm bg-indigo-100 text-indigo-800"
                   >{{ $t(plan.label) }}</span
                 >
               </div>
@@ -338,7 +338,7 @@
               <nuxt-link
                 v-if="plan.type == 0"
                 :to="localePath('/docs/get-started/install/deploy-with-docker')"
-                class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+                class="ring-2 ring-indigo-600 mt-10 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg font-medium"
                 >{{ plan.buttonText }}</nuxt-link
               >
               <button
@@ -347,7 +347,7 @@
                   plan.featured
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                     : 'ring-2 ring-indigo-600',
-                  'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
+                  'mt-10 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg font-medium',
                 ]"
                 @click="onTeamOrEnterpriseButtonClick(plan)"
               >
@@ -373,14 +373,14 @@
               class="absolute inset-0 flex items-stretch pointer-events-none"
               aria-hidden="true"
             >
-              <div class="w-1/4 pr-4"></div>
-              <div class="w-1/4 px-4">
+              <div class="w-2/5 pr-4"></div>
+              <div class="w-1/5 px-4">
                 <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
-              <div class="w-1/4 px-4">
+              <div class="w-1/5 px-4">
                 <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
-              <div class="w-1/4 pl-4">
+              <div class="w-1/5 pl-4">
                 <div class="w-full h-full bg-white rounded-lg"></div>
               </div>
             </div>
@@ -405,7 +405,7 @@
                 <tr v-for="feature in section.features" :key="feature.title">
                   <th
                     scope="row"
-                    class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
+                    class="w-2/5 py-3 pr-4 text-left text-lg font-normal text-gray-600"
                   >
                     {{
                       $t(
@@ -419,13 +419,15 @@
                     :class="[
                       tierIdx === feature.tiers.length - 1 ? 'pl-4' : 'px-4',
                       tier.featured ? 'text-indigo-600' : 'text-gray-900',
-                      'relative w-1/4 py-0 text-center',
+                      'relative w-1/5 py-0 text-center',
                     ]"
                   >
-                    <span class="w-full h-full py-3 flex justify-center">
+                    <span
+                      class="w-full h-full py-3 flex justify-center items-center"
+                    >
                       <span
                         v-if="tier.content"
-                        :class="['text-sm font-medium']"
+                        :class="['text-lg font-normal']"
                         >{{ $t(tier.content) }}</span
                       >
                       <template v-else>
@@ -455,19 +457,19 @@
         </div>
 
         <div class="flex">
-          <div class="w-1/4 pr-4"></div>
+          <div class="w-2/5 pr-4"></div>
           <div
             v-for="(plan, planIndex) in plans"
             :key="plan.title"
             :class="[
               planIndex === plans.length - 1 ? 'pl-4' : 'px-4',
-              'relative w-1/4 py-0 text-center',
+              'relative w-1/5 py-0 text-center',
             ]"
           >
             <nuxt-link
               v-if="plan.type == 0"
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
-              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium"
+              class="ring-2 ring-indigo-600 mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg font-medium"
               >{{ plan.buttonText }}</nuxt-link
             >
             <button
@@ -476,7 +478,7 @@
                 plan.featured
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent'
                   : 'ring-2 ring-indigo-600',
-                'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-sm font-medium',
+                'mt-6 w-full inline-block py-4 px-2 rounded-md shadow-sm text-center text-lg font-medium',
               ]"
               @click="onTeamOrEnterpriseButtonClick(plan)"
             >
