@@ -103,3 +103,19 @@ In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.acme.com` (H
    - **Identifier**: `preferred_username`
    - **Display name**: `name`
    - **Email**: `email`
+
+### Authing
+
+1. Follow the Authing [创建自建应用](https://docs.authing.cn/v2/guides/app-new/create-app/create-app.html) to create a new "标准 Web 应用" as "自建应用".
+   1. In **应用配置**, configure the **登录回调 URL** to be `{EXTERNAL_URL}/oidc/callback`.
+   1. In **协议配置**, configure the **id_token 签名算法** to be `RS256`.
+1. In Bytebase, go to **Settings > SSO** to create a new OIDC provider (all values are examples):
+   - **Name**: `Authing`
+   - **Resource ID**: `authing`
+   - **Domain**: `acme.authing.cn`
+   - **Issuer**: `https://acme.authing.cn/oidc`
+   - **Client ID**: the app ID of your application
+   - **Client secret**: the app secret of your application
+   - **Identifier**: `username`
+   - **Display name**: `name`
+   - **Email**: `email`
