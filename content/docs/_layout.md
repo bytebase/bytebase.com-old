@@ -119,6 +119,12 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
+## [Batch Change](/batch-change/overview)
+
+### [Change Multiple Environments](/batch-change/multi-environment-change)
+
+### [Change Multiple Tenants](/batch-change/multi-tenant-change)
+
 ## [SQL Editor](/sql-editor/overview)
 
 ### [Manage SQL Scripts with Sheet](/sql-editor/manage-sql-scripts)
@@ -143,13 +149,9 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
 
+### [Batch Change Tenant Databases](/vcs-integration/tenant-gitops)
+
 ### [Troubleshoot](/vcs-integration/troubleshoot)
-
-## [Tenant Database Management](/tenant-database-management/overview)
-
-### [Tenant Project](/tenant-database-management/tenant-project)
-
-### [Tenant GitOps](/tenant-database-management/tenant-gitops)
 
 ## Disaster Recovery
 

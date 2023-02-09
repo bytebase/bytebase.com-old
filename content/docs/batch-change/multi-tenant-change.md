@@ -1,8 +1,8 @@
 ---
-title: Tenant Database Management
+title: Change Databases from Multiple Tenants
 ---
 
-Tenant Database Management allows database administrators to manage **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
+Bytebase allows your to change **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
 
 Typical scenarios of tenant databases are:
 
@@ -10,8 +10,6 @@ Typical scenarios of tenant databases are:
 - An internal platform team provides multi-region database deployments (e.g. US, EU), and have separate database instances in different deployment environments (e.g. Staging, Prod).
 
 It is often desired to apply schema changes to databases across all tenants since these databases are homogeneous, but in a staged rollout fashion (aka. canary deployment) to minimize the risk of breaking all deployments.
-
-You can easily manage your tenant databases through [tenant projects](/docs/tenant-database-management/tenant-project) in Bytebase, either for different customer deployments, or different stages for a single team.
 
 You should consider using tenant databases when there are multiple database instances alongside multiple deployments for the same application.
 For example, a software company offers medical record storage services for its customers, hospitals. Each hospital is considered as a tenant, and each tenant has to store their patient data in its own database for regulation or privacy purposes. This feature allows updating database schema for all tenants in a simple and consistent way. Other use cases include multi-location databases for supporting highly-available services where each location is a tenant.
@@ -22,13 +20,16 @@ Let's take the hospital example to follow the steps below.
 
 A label is a key-value pair that helps you identify the tenant for a database. The supported label keys are location and tenant currently. Workspace owner needs to predefine label values (tenant names) in the Workspace Label tab.
 
-![Tenant Labels](/static/docs/tntdbmngmt-tenant-labels.png)
+![Tenant Labels](/static/docs/batch-change/tntdbmngmt-tenant-labels.webp)
 
 ## **Projects in Tenant Mode**
 
-Project can be created in Tenant Mode which supports tenant database management.
+Project can be created in Tenant Mode which supports tenant database management. Tenant projects empowers you to:
 
-![Create Project in Tenant Mode](/static/docs/tntdbmngmt-create-project-in-tenant-mode.png)
+1. Roll out schema changes and data updates to mutiple tenant databases by their environments, tenant labels or geolocations, or any combination of them.
+1. Progressively roll out through different stages, and only proceed to the next stage when all of rollouts in the current stage are successful.
+
+![Create Project in Tenant Mode](/static/docs/batch-change/tntdbmngmt-create-project-in-tenant-mode.webp)
 
 ## **Deployment Configuration**
 
@@ -42,31 +43,31 @@ You need to define deployment configuration for a project in Tenant Mode before 
 
 This provides a reliable sequence of updating schema for all tenants.
 
-![Deployment Config](/static/docs/tntdbmngmt-deployment-config.png)
+![Deployment Config](/static/docs/batch-change/tntdbmngmt-deployment-config.webp)
 
 ## **Databases with tenant labels**
 
 You can create databases with labels in tenant mode projects. The labels come from predefined label keys and values in the Workspace. You can also transfer an existing database from another project if its database name and schema follows the existing tenant pattern.
 
-![Create Database with Tenant Label](/static/docs/tntdbmngmt-create-database-with-tenant-label.png)
+![Create Database with Tenant Label](/static/docs/batch-change/tntdbmngmt-create-database-with-tenant-label.webp)
 
 The project overview tab shows all tenant databases for databases named lab_test. Staging environment has a database for hospital1. There are three databases in the Prod environment for hospital1, hospital2, and hospital3.
 
-![Tenant Databases](/static/docs/tntdbmngmt-tenant-databases.png)
+![Tenant Databases](/static/docs/batch-change/tntdbmngmt-tenant-databases.webp)
 
 ## **Schema Update for tenant databases**
 
 There is a preview dialog showing the plan of deployment before the schema is altered.
 
-![Alter Schema](/static/docs/tntdbmngmt-alter-schema.png)
+![Alter Schema](/static/docs/batch-change/tntdbmngmt-alter-schema.webp)
 
 Issue can be created to update schema for all tenants by following the deployment configuration. The database names should be the same or follow the same database name template described in the section below. For example, the first two stages have been completed, and the issue is pending approval for the last stage.
 
-![Issue Alter Schema](/static/docs/tntdbmngmt-issue-alter-schema.png)
+![Issue Alter Schema](/static/docs/batch-change/tntdbmngmt-issue-alter-schema.webp)
 
 Once the issue is completed, all tenant databases will have the same updated version of schema.
 
-![After Issue Complete](/static/docs/tntdbmngmt-after-issue-complete.png)
+![After Issue Complete](/static/docs/batch-change/tntdbmngmt-after-issue-complete.webp)
 
 ## Database Name Template
 
@@ -74,12 +75,18 @@ Typically, all tenant databases should have the same database name and will be p
 
 A project in Tenant Mode can be created with a database name template.
 
-![Create Project with Template](/static/docs/tntdbmngmt-create-project-with-template.png)
+![Create Project with Template](/static/docs/batch-change/tntdbmngmt-create-project-with-template.webp)
 
 The name of the database being created will be generated based on a base \{{DB_NAME\}} and the name of a tenant.
 
-![Create Database](/static/docs/tntdbmngmt-create-database-with-template.png)
+![Create Database](/static/docs/batch-change/tntdbmngmt-create-database-with-template.webp)
 
 The project database overview page will look like in the following.
 
-![Project Overview](/static/docs/tntdbmngmt-project-overview.png)
+![Project Overview](/static/docs/batch-change/tntdbmngmt-project-overview.webp)
+
+## GitOps
+
+You can further adopt GitOps to batch change tenant databases.
+
+<doc-link-block url="/docs/vcs-integration/tenant-gitops" title="Batch Change Tenant Databases"></doc-link-block>

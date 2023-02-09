@@ -1,8 +1,8 @@
 ---
-title: Tenant GitOps
+title: Batch Change Tenant Databases
 ---
 
-To practice GitOps with a [tenant project](/docs/tenant-database-management/tenant-project), you need to enable the [VCS Integration](/docs/vcs-integration/overview) for your selected project, then use the VCS repository instead of our UI to organize and propose schema and data changes.
+To practice GitOps with [tenant databases](/docs/batch-change/multi-tenant-change), you need to enable the [VCS Integration](/docs/vcs-integration/overview) for your selected project, then use the VCS repository instead of our UI to organize and propose schema and data changes.
 
 ## Migration scripts
 
