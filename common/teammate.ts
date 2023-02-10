@@ -11,15 +11,15 @@ const teammateList = [
   },
   {
     name: "Ningjing",
-    role: "team.roles.community-manager",
+    role: "team.roles.developer-advocate",
   },
   {
     name: "Zhe",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
   },
   {
     name: "Zilong",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
   {
@@ -41,16 +41,16 @@ const teammateList = [
   },
   {
     name: "Steven",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
   },
   {
     name: "Ray",
-    role: "team.roles.community-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
   {
     name: "Qiaosheng",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
   {
@@ -60,7 +60,7 @@ const teammateList = [
   },
   {
     name: "Lucy",
-    role: "team.roles.community-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
   {
@@ -73,7 +73,7 @@ const teammateList = [
   },
   {
     name: "Zipeng",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
   },
   {
     name: "Candy",
@@ -81,7 +81,7 @@ const teammateList = [
   },
   {
     name: "Mila",
-    role: "team.roles.community-manager",
+    role: "team.roles.product-marketing",
   },
   {
     name: "Queeny",
@@ -90,12 +90,12 @@ const teammateList = [
   },
   {
     name: "Xiong",
-    role: "team.roles.engineering-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
   {
     name: "Grace",
-    role: "team.roles.community-intern",
+    role: "team.roles.intern",
     emeritus: true,
   },
 ];
