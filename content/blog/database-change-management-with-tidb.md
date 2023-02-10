@@ -55,12 +55,12 @@ docker run --init \
 ![register](/static/blog/database-change-management-with-tidb/register.webp)
 
 ## Step 2 - Add a TiDB cluster in Bytebase
-In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, a Snowflake account.
+In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, a TiDB account.
 
 1. Visit `localhost:5678` and login as `Workspace Owner`.
 ![login](/static/blog/database-change-management-with-tidb/login.webp)
 
-2. Follow the onboarding guide if it’s your first time running Bytebase, otherwise, click **Add Instance**.
+2. Click **Add Instance**.
 ![add-instance](/static/blog/database-change-management-with-tidb/add-instance.webp)
 
 3. Add a TiDB instance. You need to pay attention to some fields:
@@ -73,7 +73,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 
 In Bytebase, **Project** is the container to group logically related **Databases, Issues** and **Users** together, which is similar to the project concept in other dev tools such as Jira, GitLab. So before you deal with the database, a project must be created.
 
-1. After the instance is created, follow the onboarding guide if it’s your first time using Bytebase. If not, click **Projects** on the top bar.
+1. After the instance is created, click **Projects** on the top bar.
 
 2. Click **New Project** to create a new project `TestTiDB`, key is `TT`, mode is `standard`. Click **Create**.
 ![proj-new-project](/static/blog/database-change-management-with-tidb/proj-new-proj.webp)
@@ -82,9 +82,10 @@ In Bytebase, **Project** is the container to group logically related **Databases
 
 In Bytebase, a **Database** is the one created by `CREATE DATABASE xxx`. A database always belongs to a single **Project**. **Issue** represents a specific collaboration activity between Developer and DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
 
-1. After the project is created. Follow the onboarding guide if it’s your first time using Bytebase. If not, click **New DB** on the top bar.
+1. After the project is created, go to the project and click **New DB**.
+![new-db](/static/blog/database-change-management-with-tidb/new-db.webp)
 
-2. Fill the form with Name - `demo`, Environment - `Test`, and Instance - `TiDB instance`. Click **Create**.
+2. Fill the form with **Name** - `demo`, **Environment** - `Test`, and **Instance** - `TiDB instance`. Click **Create**.
 ![create-db](/static/blog/database-change-management-with-tidb/create-db.webp)
 
 3. Bytebase will create an issue “CREATE DATABASE ….” automatically. Because it’s for the `Test` environment, the issue will run without waiting for your approval by default. Click **Resolve**, and the issue is Done. The database is created.
@@ -99,10 +100,8 @@ In Step 4, you actually created an issue in UI workflow and then executed it. Le
 
 1. Go to project `TestTiDB`, and click **Alter Schema**.
 ![proj-testtidb-alter-schema](/static/blog/database-change-management-with-tidb/proj-testtidb-alter-schema.webp)
-
 2. Choose `demo` and click **Next**.
 ![alter-schema](/static/blog/database-change-management-with-tidb/alter-schema.webp)
-
 3. Input title, SQL, and Assignee, and click **Create**.
 ````sql
 CREATE TABLE t1 (
@@ -126,6 +125,7 @@ CREATE TABLE t1 (
 ## Bonus Section - Schema Drift Detection
 
 To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
+![trial-14-days](/static/blog/database-change-management-with-tidb/trial-14-days.webp)
 
 Now you can see the full migration history of database `demo`. However, what is **Establish new baseline**? When should it be used?
 
