@@ -111,7 +111,7 @@ bytebase/bytebase:%%bb_version%% \
 
 ## Step 5 - Change schema for TiDB by pushing SQL schema change files to GitHub
 
-1. In your GitHub repository `tidb-test-bb-local`, create a folder `bytebase`, and create an SQL file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting when you configure the project version control previously. the full file path is `bytebase/test/demo##202212302000#ddl#create_t2.sql`:
+1. In your GitHub repository `tidb-test-bb-local`, create a folder `bytebase`, and create an SQL file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting when you configure the project version control previously. the full file path is `bytebase/test/demo##202212302000##ddl##create_t2.sql`:
 
 - `test` corresponds to {{ENV_NAME}}
 - `demo` corresponds to {{DB_NAME}}
@@ -146,7 +146,7 @@ CREATE TABLE t2
 ![github-test-folder](/static/blog/database-change-management-with-tidb-and-github/github-test-folder.webp)
 ![github-latest](/static/blog/database-change-management-with-tidb-and-github/github-latest.webp)
 
-7. Let’s create another SQL file `demo##202212302040#ddl#add_age.sql` to see how that latest schema file will be updated after applying a new schema change. Paste the SQL script in it.
+7. Let’s create another SQL file `demo##202212302040##ddl##add_age.sql` to see how that latest schema file will be updated after applying a new schema change. Paste the SQL script in it.
 
 ````sql
 ALTER TABLE t2 ADD age INT;

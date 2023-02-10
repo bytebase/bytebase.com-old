@@ -58,7 +58,7 @@ In Bytebase, ​​an **Instance** could be your on-premises MySQL instance, an 
 1. Visit `localhost:5678` and login as Workspace Owner.
 ![bb-login](/static/blog/database-change-management-with-snowflake/bb-login.webp)
 
-2. Follow the onboarding guide if it’s your first time running Bytebase, otherwise, click **Add Instance**.
+2. Click **Add Instance**.
 ![bb-add-instance](/static/blog/database-change-management-with-snowflake/bb-add-instance.webp)
 
 3. Add a Snowflake instance. You need to pay attention to some fields:
@@ -79,8 +79,7 @@ Regarding the **Connection info**,  make sure your account has `DEFAULT_ROLE=ACC
 
 In Bytebase, **Project** is the container to group logically related **Databases, Issues** and **Users** together, which is similar to the project concept in other dev tools such as Jira, GitLab. So before you deal with the database, a project must be created.
 
-1. After the instance is created, follow the onboarding guide if it’s your first time using Bytebase. If not, click **Projects** on the top bar.
-![bb-sf-created](/static/blog/database-change-management-with-snowflake/bb-sf-created.webp)
+1. After the instance is created, click **Projects** on the top bar.
 
 2. Click **New Project** to create a new project `TestSnowflake`, key is `TS`, mode is `standard`. Click **Create**.
 ![bb-new-project](/static/blog/database-change-management-with-snowflake/bb-new-project.webp)
@@ -89,16 +88,16 @@ In Bytebase, **Project** is the container to group logically related **Databases
 
 In Bytebase, a **Database** is the one created by `CREATE DATABASE xxx`. A database always belongs to a single **Project**. **Issue** represents a specific collaboration activity between Developer and DBA such as creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
 
-1. After the project is created. Follow the onboarding guide if it’s your first time using Bytebase. If not, click **New DB** on the top bar.
+1. After the project is created, go to the project and click **New DB**.
 ![bb-new-db](/static/blog/database-change-management-with-snowflake/bb-new-db.webp)
 
-2. Fill the form with Name - `DB_DEMO_BB` (BB is short for Bytebase), Environment - `Test`, and Instance - `Snowflake instance`. Click **Create**.
+1. Fill the form with Name - `DB_DEMO_BB` (BB is short for Bytebase), Environment - `Test`, and Instance - `Snowflake instance`. Click **Create**.
 ![bb-create-db](/static/blog/database-change-management-with-snowflake/bb-create-db.webp)
 
-3. Bytebase will create an issue “CREATE DATABASE ….” automatically. Because it’s for the `Test` environment, the issue will run without waiting for your approval by default. Click **Resolve**, and the issue is Done. The database is created.
+1. Bytebase will create an issue “CREATE DATABASE ….” automatically. Because it’s for the `Test` environment, the issue will run without waiting for your approval by default. Click **Resolve**, and the issue is Done. The database is created.
 ![bb-go-home](/static/blog/database-change-management-with-snowflake/bb-go-home.webp)
 
-4. Go back to the home page by clicking **Home** on the left sidebar. If it’s the first time you use Bytebase, it’ll show a celebration. On the home page, you can see the project, the database, and the issue you just resolved.
+1. Go back to the home page by clicking **Home** on the left sidebar. If it’s the first time you use Bytebase, it’ll show a celebration. On the home page, you can see the project, the database, and the issue you just resolved.
 ![bb-created-database](/static/blog/database-change-management-with-snowflake/bb-created-database.webp)
 
 ## Step 5 - Create a table in Snowflake via Bytebase
@@ -138,8 +137,9 @@ CREATE TABLE HELLO_WORLD
 ## Bonus Section - Schema Drift Detection
 
 To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
+![trial-14-days](/static/blog/database-change-management-with-snowflake/trial-14-days.webp)
 
-Now you can see the full migration history of DB_DEMO_BB. However, what is **Establish new baseline**? When should it be used?
+Now you can see the full migration history of `DB_DEMO_BB`. However, what is **Establish new baseline**? When should it be used?
 
 By adopting Bytebase, we expect teams to use Bytebase exclusively for all schema changes. Meanwhile, if someone has made Snowflake schema change outside of Bytebase, obviously Bytebase won’t know it. And because Bytebase has recorded its own copy of schema, when Bytebase compares that with the live schema having that out-of-band schema change, it will notice a discrepancy and surface a schema drift anomaly. If that change is intended, then you should use baseline to reconcile the schema state again.
 
