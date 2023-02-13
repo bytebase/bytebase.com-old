@@ -20,7 +20,7 @@ Click **Schema Diagram** in the database detail page, you will see the Schema Di
 
 **Drag the canvas** to move. Use **mouse wheel**, **trackpad** or **click the -/+ buttons** to zoom in and out.
 
-Use the search box to filter databases by names.
+Use the **search box** to filter databases by name.
 
 ![filter-databases](/static/docs/change-database/schema-diagram/filter-databases.webp)
 
