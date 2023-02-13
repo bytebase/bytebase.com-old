@@ -20,9 +20,21 @@ Click **Schema Diagram** in the database detail page, you will see the Schema Di
 
 **Drag the canvas** to move. Use **mouse wheel**, **trackpad** or **click the -/+ buttons** to zoom in and out.
 
+Use the **search box** to filter databases by name.
+
+![filter-databases](/static/docs/change-database/schema-diagram/filter-databases.webp)
+
+Click the **Focus** button in the schema tree or the table header to toggle table highlighting.
+
+![focus-tables](/static/docs/change-database/schema-diagram/focus-tables.webp)
+
 Click the **Fit content within view** button to restore the initial position and zoom.
 
 ![fit-content-within-view](/static/docs/change-database/schema-diagram/fit-content-within-view.webp)
+
+Click the **Screenshot** button to export current view as a PNG file.
+
+![screenshot-button](/static/docs/change-database/schema-diagram/screenshot-button.webp)
 
 ## Working with Schema Editor
 
