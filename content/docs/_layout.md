@@ -201,6 +201,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Anonymize Data](/administration/anonymize-data)
 
+### [Watermark](/administration/watermark)
+
 ### [Webhook Integration](/administration/webhook-integration/overview)
 
 #### [Project Webhook](/administration/webhook-integration/project-webhook)
