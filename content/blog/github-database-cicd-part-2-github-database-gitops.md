@@ -33,7 +33,7 @@ In this tutorial, you’ll run Bytebase locally using Docker.
 ![ngrok-reverse-proxy](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok-reverse-proxy.webp)
 
 1. Login to [ngrok Dashboard](https://dashboard.ngrok.com/get-started/setup) and follow its **Getting Started** steps to install and configure.
-2. Run `ngrok http 8080` and obtain the public URL:
+2. Run `ngrok http 5678` and obtain the public URL:
 
 ![ngrok](/static/blog/github-database-cicd-part-2-github-database-gitops/ngrok.webp)
 
@@ -44,13 +44,15 @@ docker run --init \
 --name bytebase-github \
 --platform linux/amd64 \
 --restart always \
---publish 8080:8080 \
+--publish 5678:8080 \
+--health-cmd "curl --fail http://localhost:5678/healthz || exit 1" \
+--health-interval 5m \
+--health-timeout 60s \
 --volume ~/.bytebase/data:/var/opt/bytebase \
 bytebase/bytebase:%%bb_version%% \
 --data /var/opt/bytebase \
---external-url https://03f1-103-102-7-52.ngrok.io \
 --port 8080 \
---frontend-port 80
+--external-url https://03f1-103-102-7-52.ngrok.io \
 ```
 
 4. Bytebase is running successfully in Docker, and you can visit it via [https://03f1-103-102-7-52.ngrok.io](https://03f1-103-102-7-52.ngrok.io/)
