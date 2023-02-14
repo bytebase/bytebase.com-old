@@ -66,7 +66,7 @@ In Bytebase, ​​an Instance could be your on-premises PostgreSQL instance, an
 1. Visit `localhost:5678` and log in.
 ![login](/static/blog/database-change-management-with-postgresql/login.webp)
 
-2. Click **Instances** on the top bar you’ll see there is a sample PostgreSQL instance that is embedded. If you want to use your own instance, click **Add instance**. To keep it simple, we’ll use the sample one for this tutorial.
+2. Click **Instances** on the top bar you’ll see there is a sample PostgreSQL instance that is embedded. If you want to use your own instance, click **Add instance**. To keep it simple, we’ll use the built-in sample instance for this tutorial.
 ![bb-instances](/static/blog/database-change-management-with-postgresql/bb-instances.webp)
 
 ## Step 3 - Create a Project with PostgreSQL instance
