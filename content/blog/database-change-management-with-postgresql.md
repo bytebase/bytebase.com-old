@@ -188,6 +188,6 @@ Admin mode skips Bytebase system and works as an external input. The change will
 ![bb-anomaly-center-0-drift](/static/blog/database-change-management-with-postgresql/bb-anomaly-center-0-drift.webp)
 
 ## Summary and Next
-Now you have connected PostgreSQL with Bytebase, and tried out the UI workflow to do schema change. Bytebase will record the full migration history for you. With **Team** or **Enterprise Plan**, you can even have drift detection.
+Now you have connected PostgreSQL with Bytebase, and tried out the UI workflow to do schema change. Bytebase will record the full change history for you. With **Enterprise Plan**, you can even have schema drift detection.
 
 In the next article, you’ll try out GitOps workflow, which will store your PostgreSQL schema in GitHub and trigger the change upon committing the change to the repository, to bring your PostgreSQL change workflow to the next level of Database DevOps - [Database as Code](/blog/database-as-code).
