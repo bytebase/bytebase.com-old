@@ -61,7 +61,7 @@ docker run --init \
 
 ## Step 2 - Add PostgreSQL in Bytebase
 
-In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, a PostgreSQL instance.
+In Bytebase, ​​an Instance could be your on-premises PostgreSQL instance, an AWS RDS instance etc, in this tutorial.
 
 1. Visit `localhost:5678` and log in.
 ![login](/static/blog/database-change-management-with-postgresql/login.webp)
