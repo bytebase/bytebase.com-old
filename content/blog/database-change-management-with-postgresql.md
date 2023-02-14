@@ -177,7 +177,7 @@ Admin mode skips Bytebase system and works as an external input. The change will
 6. You may also find the drift by clicking **Databases** > **demo**.
 ![bb-databases-demo-1-drift](/static/blog/database-change-management-with-postgresql/bb-databases-demo-1-drift.webp)
 
-7. Go to **Databases** > **demo** > **Migration History** and click **Establish new baseline**.
+7. Go to **Databases** > **demo** > **Change History** and click **Establish new baseline**.
 ![bb-databases-demo-new-baseline](/static/blog/database-change-management-with-postgresql/bb-databases-demo-new-baseline.webp)
 
 8. It will create an issue. Click **Approve** and **Resolve** to make it `Done`.
