@@ -18,7 +18,7 @@ This is a series of articles about Database Change Management with PostgreSQL.
 
 This tutorial is a step-by-step guide to setting up **Database Change Management** for PostgreSQL in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make PostgreSQL database schema change and data change.
 
-Bytebase provides a GUI for teams to perform **Database Changes** and retain full **Migration History**. Bytebase **Free Plan** is sufficient for this tutorial.
+Bytebase provides a GUI for teams to perform **Database Changes** and retain full **Change History**. Bytebase **Free Plan** is sufficient for this tutorial.
 
 In the end, there is a bonus section about **Schema Drift Detection** for those advanced users.
 
