@@ -44,7 +44,7 @@
       <!-- An empty block on the left side for layout -->
       <aside class="w-52 hidden xl:flex" />
       <nuxt-content
-        class="w-full px-4 py-6 prose prose-indigo prose-xl 2xl:prose-2xl mx-auto"
+        class="w-full px-4 py-6 prose md:prose-lg 2xl:prose-xl prose-indigo mx-auto"
         :document="blog"
       />
       <Toc :content="blog" :scroll-offset="200" />
