@@ -135,7 +135,7 @@ In Step 4, you actually created an issue in **UI workflow** and then executed it
 This section requires you to have **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 ![bb-start-14-days-trial](/static/blog/database-change-management-with-postgresql/bb-start-14-days-trial.webp)
 
-Now you can see the full migration history of `demo`. However, what is Establish new baseline? When should it be used?
+Now you can see the full change history of `demo`. However, what is Establish new baseline? When should it be used?
 
 By adopting Bytebase, we expect teams to use Bytebase exclusively for all schema changes. Meanwhile, if someone has made PostgreSQL schema change **outside of Bytebase**, obviously Bytebase won’t know it. And because Bytebase has recorded its own copy of schema, when Bytebase compares that with the live schema having that out-of-band schema change, it will notice a discrepancy and surface a schema drift anomaly. If that change is intended, then you should use baseline the schema state again to reconcile.
 
