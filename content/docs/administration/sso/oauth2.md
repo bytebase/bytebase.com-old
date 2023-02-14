@@ -2,7 +2,7 @@
 title: OAuth 2.0
 ---
 
-OAuth is an open standard for token-based authentication and authorization which is used to provide Single Sign-On (SSO). Bytebase supports to create popular OAuth 2.0 providers (GitHub, Google, GitLab) and custom providers.
+OAuth is an open standard for token-based authentication and authorization which is used to provide Single Sign-On (SSO). Bytebase supports popular OAuth 2.0 providers (GitHub, Google, GitLab) and custom providers.
 
 ## Overview
 
@@ -16,7 +16,7 @@ In the creating SSO dialog, you need to fill following fields:
 
 - **Name** is the display name of your SSO item;
 - **Resource ID** should be a unique string identifying this resource by Bytebase;
-- **Domain** is a SSO domain name;
+- **Domain** is an SSO domain name;
 
 ### Identity provider information
 
@@ -31,12 +31,12 @@ The information is the base concept of [OAuth 2.0](https://oauth.net/2/) and com
 - **Token URL** is the API address for obtaining access token;
 - **User information URL** is the API address for obtaining user information by access token;
 
-### User information field mapping
+### User information mapping
 
-For different providers, the structure returned by their user information API usually not the same. The information we need to know about an OAuth2 service is how to map the user information into Bytebase user fields. To extract the information we need from the different OAuth2 provider user information API, you need to fill the user information fields mapping form.
+For different providers, the structures returned by their user information API are usually not the same. In order to know how to map the user information from an provider into Bytebase user fields, you need to fill the user information mapping form.
 
-Bytebase will use this information to import the user profile fields when creating new accounts.
-The most important user field mapping is the identifier which are used to identify the Bytebase account associated with the OAuth 2.0 login.
+Bytebase will use the mapping to import the user profile fields when creating new accounts.
+The most important user field mapping is the identifier which is used to identify the Bytebase account associated with the OAuth 2.0 login.
 
 ![oauth2-user-information-field-mapping](/static/docs/administration/sso/oauth2-user-information-field-mapping.webp)
 
@@ -50,7 +50,7 @@ The most important user field mapping is the identifier which are used to identi
 
 OAuth 2.0 usually requires an authorization callback url in the configuration. Please make sure the [--external-url](/docs/get-started/install/external-url) is set correctly. See more in [Configure External URL](/docs/get-started/install/external-url).
 
-If your start Bytebase with `--external-url https://bytebase.example.com`, then **Authorization callback URL** will be `https://bytebase.example.com/oauth/callback`.
+If you start Bytebase with `--external-url https://bytebase.example.com`, then the **authorization callback URL** will be `https://bytebase.example.com/oauth/callback`.
 
 </hint-block>
 
@@ -58,7 +58,7 @@ Bytebase provides templates for configuring built-in OAuth providers.
 
 ### GitHub
 
-1. Follow the [Creating an OAuth App in GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to create an OAuth app in GitHub.
+1. Follow [Creating an OAuth App in GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to create an OAuth app in GitHub.
 
    ![github-oauth-app-config](/static/docs/administration/sso/github-oauth-app-config.webp)
 
@@ -69,7 +69,7 @@ Bytebase provides templates for configuring built-in OAuth providers.
 
 ### GitLab
 
-1. Follow the [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.gitlab.com/ee/integration/oauth_provider.html) to create an OAuth 2 application in GitLab.
+1. Follow [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.gitlab.com/ee/integration/oauth_provider.html) to create an OAuth 2 application in GitLab.
 
    ![gitlab-oauth-app-config](/static/docs/administration/sso/gitlab-oauth-app-config.webp)
 
