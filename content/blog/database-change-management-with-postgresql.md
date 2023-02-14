@@ -69,7 +69,7 @@ In Bytebase, ​​an Instance could be your on-premises PostgreSQL instance, an
 2. Click **Instances** on the top bar you’ll see there is a sample PostgreSQL instance that is embedded. If you want to use your own instance, click **Add instance**. To keep it simple, we’ll use the built-in sample instance for this tutorial.
 ![bb-instances](/static/blog/database-change-management-with-postgresql/bb-instances.webp)
 
-## Step 3 - Create a Project with PostgreSQL instance
+## Step 3 - Create a Project
 
 In Bytebase, **Project** is the container to group logically related **Databases**, **Issues** and **Users** together, which is similar to the project concept in other dev tools such as Jira, GitLab. So before you deal with the database, a project must be created.
 
