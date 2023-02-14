@@ -130,7 +130,7 @@ In Step 4, you actually created an issue in **UI workflow** and then executed it
 
 ![bb-db-demo-change-history](/static/blog/database-change-management-with-postgresql/bb-db-demo-change-history.webp)
 
-## Bonus Section - Drift Detect
+## Bonus Section - Schema Drift Detection
 
 This section requires you to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 ![bb-start-14-days-trial](/static/blog/database-change-management-with-postgresql/bb-start-14-days-trial.webp)
