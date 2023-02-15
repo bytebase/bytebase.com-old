@@ -1,6 +1,6 @@
 ---
-title: Streamline database change management for TiDB Cloud with Bytebase
-author: Mila
+title: Streamline Database Change Management for TiDB Cloud with Bytebase
+author: Changyu
 published_at: 2023/02/15 11:37:27
 feature_image: /static/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase/feature-image.webp
 tags: Announcement
@@ -16,14 +16,14 @@ We are proud to announce our partnership with [PingCAP](https://www.pingcap.com/
 
 However, provisioning an instance of a cloud database is only the beginning of the lifecycle. As your business grows and changes, you need to modify the database schema (CREATE TABLE, CREATE INDEX) or change data (INSERT, UPDATE, DELETE). If this type of work is sidelined, it affects database performance. Worse, if a wrong statement is issued, such as accidentally using the DROP TABLE statement, the business will be interrupted for a long time.
 
-Bytebase is a DevOps tool that gives you a unified web portal to change, query, secure, and administrates the database throughout the application development lifecycle.
+Bytebase is a DevOps tool that gives you a unified web portal to change, query, secure, and administrate the database throughout the application development lifecycle.
 
 The following is a streamlined database change management flow for TiDB Cloud with Bytebase:
 
 ![dcm-flow-tidb-bytebase](/static/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase/dcm-flow-tidb-bytebase.webp)
 
 1. DBA, platform, or self-service DevOps engineers provision the database instance on TiDB Cloud.
-2. They then ad the instance into Bytebase. Bytebase will then automatically synchronize all the database schema information from the instance.
+2. They then add the instance into Bytebase. Bytebase will then automatically synchronize all the database schema information from the instance.
 ![add-tidb-instance](/static/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase/add-tidb-instance.webp)
 
 3. Each database is transferred to the specific Bytebase project owned by the application team. At this point, the database joins the software development lifecycle (SDLC) and is ready to be used by application developers. This way, application development teams can collaborate and be involved in database change management.
@@ -32,7 +32,7 @@ The following is a streamlined database change management flow for TiDB Cloud wi
 
 Terraform is an Infrastructure-as-Code tool that defines and configures infra resources in a repeatable and predictable manner. This reduces human error, especially for large-scale infra management. Since both TiDB Cloud and Bytebase are verified Terraform providers, the workflow described above can be more streamlined with code (GitOps).
 
-![terraform-workflow](/static/blog/streamline-database-change-management-for-tidb-cloud-with-*bytebase*/terraform-workflow.webp)
+![terraform-workflow](/static/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase/terraform-workflow.webp)
 
 1. Provision and configure TiDB Cloud instances with TiDB Cloud Terraform Provider.  For more details, see [TiDB Cloud Terraform Integration Overview](https://docs.pingcap.com/tidbcloud/terraform-tidbcloud-provider-overview).
 
@@ -60,7 +60,7 @@ provider "tidbcloud" {
 }
 ```
 
-2. Integrate TiDB Instances into the Bytebase change management process with the  Bytebase Terraform provider. For more details, see [Manage Bytebase with Terraform](https://www.bytebase.com/docs/get-started/terraform#configure-bytebase-terraform-provider).
+1. Integrate TiDB Instances into the Bytebase change management process with the  Bytebase Terraform provider. For more details, see [Manage Bytebase with Terraform](/docs/get-started/terraform#configure-bytebase-terraform-provider).
 
 For example, the following code adds the specified TiDB Cloud instance into Bytebase:
 
