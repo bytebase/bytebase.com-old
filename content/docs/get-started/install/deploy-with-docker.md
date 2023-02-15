@@ -43,7 +43,7 @@ rm -rf ~/.bytebase/data
 
 Check [Server Startup Options](/docs/reference/command-line) for other startup options.
 
-## Allow external access via URL (e.g. bytebase.example.com)
+## Allow external access via URL
 
 <hint-block type="info">
 
