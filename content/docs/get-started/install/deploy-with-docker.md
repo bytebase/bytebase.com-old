@@ -16,7 +16,7 @@ If you run Bytebase inside Docker on Linux and want to connect the database inta
 
 </hint-block>
 
-## Run on localhost:5678
+## Run locally (e.g. localhost:5678)
 
 Run the following command to start Bytebase on container port 8080 and bind to localhost:5678.
 
@@ -43,7 +43,13 @@ rm -rf ~/.bytebase/data
 
 Check [Server Startup Options](/docs/reference/command-line) for other startup options.
 
-## Run on [https://bytebase.example.com](https://bytebase.example.com/)
+## Allow external access via URL (e.g. bytebase.example.com)
+
+<hint-block type="info">
+
+For your setup, you need to replace https://bytebase.example.com with the actual URL your users would visit Bytebase from. See [Configure External URL](/docs/get-started/install/external-url).
+
+</hint-block>
 
 Run the following command to start Bytebase on port 80 and visit Bytebase from https://bytebase.example.com
 
@@ -62,12 +68,6 @@ docker run --init \
   --external-url https://bytebase.example.com \
   --port 8080
 ```
-
-<hint-block type="info">
-
-For production setup, you would replace https://bytebase.example.com with the actual URL your users would visit Bytebase from. See [Configure External URL](/docs/get-started/install/external-url).
-
-</hint-block>
 
 ## Troubleshoot
 
