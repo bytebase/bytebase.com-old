@@ -10,7 +10,7 @@ description: MySQL is the most popular open-source relational database managemen
 This is a series of articles about Database Change Management with MySQL.
 
 - Database Change Management with MySQL (this one)
-- Database Change Management with MySQL and GitHub
+- [Database Change Management with MySQL and GitHub](/blog/database-change-management-with-mysql-and-github)
 
 ---
 
