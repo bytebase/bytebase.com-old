@@ -15,6 +15,7 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 
 ## 🎄 Enhancements
 - For projects with GitOps workflow enabled, schema and data changes are also supported through UI.
+- Supports executing statements in PostgreSQL that cannot be executed in a transaction, such as CREATE/DROP INDEX CONCURRENTLY.
 - Improved onboarding flow.
 - Start a 14-day trial of the Enterprise Plan by default.
 - Improved Schema Editor's UX.
