@@ -27,14 +27,13 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 - Fixed: Change history detail in MongoDB collection pages doesn't work correctly.
 
 ## 🎠 Community
-- Thanks to [@gandergo](https://github.com/gandergo) for fix: allow postgres user name with hyphen [\#4236](https://github.com/bytebase/bytebase/pull/4236)
 - Thanks to [@alexey-milovidov](https://github.com/alexey-milovidov) for PR: Change ClickHouse Docker repository. [\#4648](https://github.com/bytebase/bytebase/pull/4648)
 
 ## 📰 Fresh off the press
-- We introduced the MongoDB support in the last release. This is a milestone for us as it's also the first NoSQL database supported by Bytebase, [learn more](/blog/introducing-mongodb-support-in-bytebase)!
-
+- We are proud to announce:
+  - Technology Partnership with the world's leading software development platform GitHub, to provide developers with a smooth database development experience. [Announcing Partnership with GitHub to Automate Database Development](/blog/bytebase-github-technology-partner)
+  - Partnership with PingCAP, the company building TiDB, which provides scaling database infrastructure solutions via an open-source platform. [Streamline Database Change Management for TiDB Cloud with Bytebase](/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase)
 - We officially announced [Terraform Bytebase Provider](/blog/introducing-terraform-bytebase-provider), which will allow you to codify the database configuration and consolidate your workflow. 
-- We are proud to announce our partnership with PingCAP, the company building TiDB, which provides scaling database infrastructure solutions via an open-source platform. [Streamline Database Change Management for TiDB Cloud with Bytebase](/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase)
 - Ready to bring your MySQL schema change to the next level? The Database Change Management tutorial series continues!
   - Step 1 - [Database Change Management with MySQL](/blog/database-change-management-with-mysql)
   - Step 2 - [Database Change Management with MySQL and GitHub](/blog/database-change-management-with-mysql-and-github)
