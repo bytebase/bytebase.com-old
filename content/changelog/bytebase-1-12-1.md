@@ -24,7 +24,7 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 - Add an icon to identify sensitive data columns in the query result of SQL editor.
 
 ## 🐞 Notable Bug Fixes
-- Fixed: Migration history detail in MongoDB collection pages doesn't work correctly.
+- Fixed: Change history detail in MongoDB collection pages doesn't work correctly.
 
 ## 🎠 Community
 - Thanks to [@gandergo](https://github.com/gandergo) for fix: allow postgres user name with hyphen [\#4236](https://github.com/bytebase/bytebase/pull/4236)
