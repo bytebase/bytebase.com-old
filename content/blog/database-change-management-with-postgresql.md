@@ -10,7 +10,7 @@ description: PostgreSQL is the world's most advanced open-source relational data
 This is a series of articles about Database Change Management with PostgreSQL.
 
 - Database Change Management with PostgreSQL (this one)
-- Database Change Management with PostgreSQL and GitHub
+- [Database Change Management with PostgreSQL and GitHub](/blog/database-change-management-with-postgresql-and-github/)
 
 ---
 
