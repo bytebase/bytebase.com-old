@@ -3,7 +3,7 @@ title: Bytebase 1.12.1
 author: Ningjing
 published_at: 2023/02/16 17:00:00
 feature_image: /static/changelog/1-12-1-banner.webp
-description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL Review Rules for PostgreSQL. - Updated pricing plan."
+description: "- Support OAuth 2.0 for Single Sign-On (SSO). - Support change and query for Spanner. - Support watermark. - Mask sensitive fields for PostgreSQL "
 ---
 
 ## 🚀 New Features
