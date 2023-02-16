@@ -13,6 +13,8 @@ This is a series of articles about Database Change Management with PostgreSQL
 - Database Change Management with PostgreSQL and GitHub (this one)
 
 ---
+
+//TODO review again
 ## Overview
 
 In the last article [Database Change Management with PostgreSQL](/blog/database-change-management-with-postgresql), you have tried UI workflow in Bytebase.
