@@ -21,7 +21,7 @@ description: "- Configure policy via Terraform Bytebase Provider. - 21 new SQL R
 - Improved Schema Diagram: filtering, navigation, focusing and export PNG files. [www.bytebase.com/docs/change-database/schema-diagram](/docs/change-database/schema-diagram)
 - Rename "Protected environment" to "Production environment". [www.bytebase.com/docs/administration/environment-policy/tier](/docs/administration/environment-policy/tier)
 - Improved schema viewing and editing experience in SQL Editor.
-- Add an icon to identify sensitive data columns in the query result of SQL editor.
+- Add an icon to identify sensitive data columns in the query result of SQL Editor.
 
 ## 🐞 Notable Bug Fixes
 - Fixed: Change history detail in MongoDB collection pages doesn't work correctly.
