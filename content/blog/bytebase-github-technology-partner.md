@@ -1,14 +1,14 @@
 ---
-title: Bytebase Joins GitHub Technology Partner Program to Simplify Database Development
+title: Announcing Partnership with GitHub to Automate Database Development
 author: Mila
 published_at: 2023/02/16 15:21:21
 feature_image: /static/blog/bytebase-github-technology-partner/feature-image.webp
 tags: Announcement
 featured: true
-description: We are proud to announce the Technology Partner agreement with GitHub to provide developers with a smooth database development experience.
+description: We are proud to announce the Technology Partnership with GitHub to provide developers with a smooth database development experience.
 ---
 
-We are proud to announce the Technology Partner agreement with GitHub to provide developers with a smooth database development experience. As the world's leading software development platform, [GitHub](https://github.com/) brings together the world's largest developer community to make it easy for developers to discover, share, and build better software. Bytebase is a Database CI/CD tool for DevOps teams, and is [the only Database CI/CD solution](/blog/cncf-landscape) to be included in the CNCF Landscape.
+We are proud to announce the Technology Partnership with GitHub to provide developers with a smooth database development experience. As the world's leading software development platform, [GitHub](https://github.com/) brings together the world's largest developer community to make it easy for developers to discover, share, and build better software. Bytebase is a Database CI/CD tool for DevOps teams, and is [the only Database CI/CD solution](/blog/cncf-landscape) to be included in the CNCF Landscape.
 
 ## Bytebase x GitHub: bridging code repos and database changes
 
@@ -28,4 +28,4 @@ In addition, you can take database management one step further by configuring th
 
 ![gitops-bytebase](/static/blog/bytebase-github-technology-partner/gitops-bytebase.webp)
 
-Bytebase and GitHub will continue to work together to provide the ultimate database development experience for developers.
+To learn how to leverage version control system like GitHub to codify the entire database development workflow, please check out [Streamline Database Change Management for TiDB Cloud with Bytebase](/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase).
