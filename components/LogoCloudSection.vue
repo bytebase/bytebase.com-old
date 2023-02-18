@@ -15,7 +15,7 @@
     <img
       class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
       src="~/assets/logo/evermos-logo.webp"
-      alt="kakao"
+      alt="evermos"
     />
     <img
       class="col-span-2 max-h-16 -mt-2 w-full object-contain lg:col-span-1"
