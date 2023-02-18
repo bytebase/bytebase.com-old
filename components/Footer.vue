@@ -3,8 +3,12 @@
     class="w-full relative bg-white px-4 pb-8"
     aria-labelledby="footer-heading"
   >
-    <div class="max-w-7xl w-full mx-auto mt-16">
-      <ActionSectionBottom class="sm:justify-center" :module-name="'footer'" />
+    <div class="max-w-7xl w-full mx-auto mt-8">
+      <LogoCloudSection />
+      <ActionSectionBottom
+        class="mt-8 sm:justify-center"
+        :module-name="'footer'"
+      />
     </div>
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="max-w-7xl w-full mx-auto pt-12 pb-8 lg:pt-16 lg:px-0">

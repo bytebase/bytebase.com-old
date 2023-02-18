@@ -22,10 +22,11 @@
   "slogan": {
     "reliable": "可靠的",
     "mission": "为 DevOps 和 DBA 团队打造的数据库变更工具",
-    "review-change-version-rollback": "审核，变更，留档，回滚。",
+    "change-query-secure-one-place": "变更，查询，安全，在一处操作不同的数据库。",
     "database-devops-best-practice": "源自 Google 的数据库 DevOps 最佳实践。",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase",
+    "book-demo": "预约演示",
     "better-way": "Bytebase 不是一个更好的数据库变更工具，它是一套更好的数据库变更方法"
   },
   "features": {
@@ -39,10 +40,10 @@
       "title": "SQL 编辑器"
     },
     "gitops": {
-      "title": "Database-as-Code"
+      "title": "GitOps 工作流"
     },
-    "tenent-mode": {
-      "title": "多租户变更"
+    "batch-change": {
+      "title": "批量变更"
     },
     "online-schema-change": {
       "title": "大表变更"
@@ -53,8 +54,8 @@
     "backup-restore": {
       "title": "备份恢复"
     },
-    "role-based-access-control": {
-      "title": "RBAC"
+    "rbac-and-sso": {
+      "title": "RBAC & SSO"
     }
   },
   "banner": {
@@ -111,7 +112,7 @@
   "index-page": {
     "title": "面向{developers}{br}{slogan}{br}数据库 CI/CD",
     "gitlab-for-database-devops": "GitLab 所没有的 {database-devops} ",
-    "accelerate-software-release": "引入 database CI/CD 来加快软件发布",
+    "no-more-database-outages": "彻底告别周五晚上的数据库故障和数据链路中断",
     "database-devops": "Database DevOps",
     "features": {
       "review-board": {
@@ -130,7 +131,7 @@
       },
       "sql-review": {
         "title": "SQL Review 规则",
-        "description": "自动检查 SQL 语句规范。额外提供 GitHub Action 和 API 接入方式。",
+        "description": "自动检查 100+ SQL 语句规范。额外提供 GitHub Action 和 API 接入方式。",
         "see-guide": "查看配置指南"
       },
       "all-in-one-sql-editor": {

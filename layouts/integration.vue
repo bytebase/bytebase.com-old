@@ -23,6 +23,7 @@
         </h2>
         <FeatureSection />
       </main>
+      <hr class="block my-4" />
       <Footer />
     </div>
   </div>

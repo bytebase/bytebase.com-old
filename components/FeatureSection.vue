@@ -2,7 +2,10 @@
   <div class="mt-12 text-center">
     <div class="grid grid-cols-1 gap-24 sm:grid-cols-2 lg:grid-cols-3">
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/change-database/change-workflow/overview')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -32,11 +35,14 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.sql-review.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/sql-review/sql-advisor/overview')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -60,11 +66,14 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.sql-advisor.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/sql-editor/overview')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -88,11 +97,14 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.sql-editor.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/vcs-integration/overview')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -116,11 +128,14 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.gitops.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/batch-change/overview')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -142,13 +157,20 @@
             </span>
           </div>
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
-            {{ $t("features.tenent-mode.title") }}
+            {{ $t("features.batch-change.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="
+            localePath(
+              '/docs/change-database/online-schema-migration-for-mysql'
+            )
+          "
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -172,11 +194,18 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.online-schema-change.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="
+            localePath(
+              '/docs/disaster-recovery/point-in-time-recovery-for-mysql'
+            )
+          "
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -200,11 +229,18 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.pitr.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="
+            localePath(
+              '/docs/disaster-recovery/backup-restore-database/overview'
+            )
+          "
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -228,11 +264,14 @@
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
             {{ $t("features.backup-restore.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="pt-6">
-        <div class="flow-root bg-gray-50 rounded-lg px-6 py-6">
+        <nuxt-link
+          :to="localePath('/docs/concepts/roles-and-permissions')"
+          class="flow-root bg-gray-50 rounded-lg px-6 py-6"
+        >
           <div class="-mt-12">
             <span
               class="inline-flex items-center justify-center p-3 bg-white border-2 border-gray-900 rounded-md shadow-lg"
@@ -254,9 +293,9 @@
             </span>
           </div>
           <h3 class="mt-4 text-4xl font-medium text-gray-900 tracking-tight">
-            {{ $t("features.role-based-access-control.title") }}
+            {{ $t("features.rbac-and-sso.title") }}
           </h3>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>

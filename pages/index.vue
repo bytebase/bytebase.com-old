@@ -81,11 +81,7 @@
       </div>
     </div>
 
-    <div class="max-w-7xl w-full mx-auto px-4 mt-8">
-      <BookDemoSection />
-    </div>
-
-    <div class="max-w-7xl mt-12 sm:mt-24 mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <i18n
           path="index-page.gitlab-for-database-devops"
@@ -100,11 +96,11 @@
           </template>
         </i18n>
         <h3 class="mt-4 text-xl lg:text-3xl text-gray-500 mx-auto">
-          {{ $t("index-page.accelerate-software-release") }}
+          {{ $t("index-page.no-more-database-outages") }}
         </h3>
       </div>
 
-      <div class="mt-12">
+      <div class="mt-12 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5">
         <img src="~/assets/screenshot.webp" alt="App screenshot" />
       </div>
     </div>
@@ -147,6 +143,20 @@
               <div class="mt-6">
                 <div class="mt-4 lg:text-right text-xl text-gray-500">
                   {{ $t("index-page.features.review-board.description") }}
+                </div>
+                <div class="mt-6 lg:text-right">
+                  <nuxt-link
+                    :to="
+                      localePath(
+                        '/docs/change-database/change-workflow/overview'
+                      )
+                    "
+                    class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
+                    @click="track('docs.review-board')"
+                    >{{
+                      $t("index-page.features.sql-review.see-guide")
+                    }}</nuxt-link
+                  >
                 </div>
               </div>
             </div>
@@ -259,7 +269,7 @@
                   <nuxt-link
                     :to="localePath('/docs/batch-change/overview')"
                     class="inline-flex px-4 py-2 border-2 border-gray-900 text-xl font-medium rounded-md shadow-sm text-gray-900 bg-white"
-                    @click="track('docs.tenant-mode')"
+                    @click="track('docs.batch-change')"
                     >{{
                       $t("index-page.features.sql-review.see-guide")
                     }}</nuxt-link
