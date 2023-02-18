@@ -23,6 +23,7 @@
       class="w-full pt-8 h-auto overflow-y-auto overflow-x-hidden"
     >
       <Nuxt />
+      <hr class="block my-4" />
       <Footer />
     </div>
   </div>

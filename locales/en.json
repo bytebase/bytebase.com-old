@@ -22,10 +22,11 @@
   "slogan": {
     "reliable": "Reliable",
     "mission": "Database change for DevOps and DBA teams",
-    "review-change-version-rollback": "Review, Change, Version and Rollback.",
-    "database-devops-best-practice": "The Database DevOps Best Practice {br}from Google.",
+    "change-query-secure-one-place": "Change, Query, Secure all Databases in One Place.",
+    "database-devops-best-practice": "The Database DevOps Best Practice from Google.",
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds",
+    "book-demo": "Book a Demo",
     "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes."
   },
   "features": {
@@ -39,10 +40,10 @@
       "title": "SQL Editor"
     },
     "gitops": {
-      "title": "Database-as-Code"
+      "title": "GitOps"
     },
-    "tenent-mode": {
-      "title": "Multi-Tenant Change"
+    "batch-change": {
+      "title": "Batch Change"
     },
     "online-schema-change": {
       "title": "Online Schema Change"
@@ -53,8 +54,8 @@
     "backup-restore": {
       "title": "Backup & Restore"
     },
-    "role-based-access-control": {
-      "title": "RBAC"
+    "rbac-and-sso": {
+      "title": "RBAC & SSO"
     }
   },
   "banner": {
@@ -111,7 +112,7 @@
   "index-page": {
     "title": "{slogan} {br}Database {br}CI/CD for {br}{developers}",
     "gitlab-for-database-devops": "The GitLab for {database-devops}",
-    "accelerate-software-release": "Accelerate software release by adopting database CI/CD",
+    "no-more-database-outages": "No more database outages and broken data pipeline on Friday night",
     "database-devops": "Database DevOps",
     "features": {
       "review-board": {
@@ -130,7 +131,7 @@
       },
       "sql-review": {
         "title": "SQL Review Lint",
-        "description": "Automatically check SQL anti-patterns. Also available as GitHub Action and API.",
+        "description": "Automatically check SQL 100+ anti-patterns. Also available as GitHub Action and API.",
         "see-guide": "See Setup Guide"
       },
       "all-in-one-sql-editor": {

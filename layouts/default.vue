@@ -11,7 +11,10 @@
     >
       <QrcodeBlock />
       <Nuxt />
-      <Footer />
+      <hr class="block mt-8" />
+      <div class="mt-8">
+        <Footer />
+      </div>
     </div>
   </div>
 </template>

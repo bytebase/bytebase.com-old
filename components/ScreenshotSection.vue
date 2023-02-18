@@ -1,9 +1,14 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <div class="max-w-7xl space-y-8 mx-auto px-4 sm:px-6">
     <img
       class="shadow-lg"
       src="~/assets/screenshot.webp"
       alt="App screenshot"
+    />
+    <img
+      class="shadow-lg"
+      src="~/static/docs/sql-editor/preview.webp"
+      alt="SQL Editor"
     />
   </div>
 </template>
