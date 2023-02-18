@@ -11,6 +11,9 @@
             >{{ $t("team.meet-our-crew") }}</a
           >
         </div>
+        <div class="flex justify-center">
+          <PastCompanyBar />
+        </div>
         <div class="mx-auto max-w-5xl">
           <ul role="list" class="space-y-6">
             <li v-for="person in founder" :key="person.name">

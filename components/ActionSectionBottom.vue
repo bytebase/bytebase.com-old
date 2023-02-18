@@ -7,15 +7,9 @@
         <span class="block">{{
           $t("slogan.change-query-secure-one-place")
         }}</span>
-        <i18n
-          path="slogan.database-devops-best-practice"
-          tag="h2"
-          class="block"
-        >
-          <template #br>
-            <br />
-          </template>
-        </i18n>
+        <span class="block pt-1">{{
+          $t("slogan.database-devops-best-practice")
+        }}</span>
       </h2>
       <div class="mt-8 flex space-x-4">
         <nuxt-link

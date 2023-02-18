@@ -32,7 +32,7 @@
       />
     </div>
     <div
-      class="flex flex-row space-x-3 sm:space-x-6 items-center justify-center"
+      class="flex flex-row space-x-3 sm:space-x-6 items-center justify-start"
     >
       <img
         class="h-10 sm:h-16"
