@@ -4,6 +4,7 @@ author: Changyu
 published_at: 2023/02/15 11:37:27
 feature_image: /static/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase/feature-image.webp
 tags: Announcement
+integrations: TiDB, Terraform
 featured: true
 description: We are proud to announce our partnership with PingCAP, which will help developers and DBAs to more efficiently and safely manage the lifecycle of application database schemas.
 ---

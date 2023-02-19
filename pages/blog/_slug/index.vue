@@ -8,18 +8,28 @@
       />
     </div>
     <div class="prose prose-xl mx-auto px-4">
-      <div
-        v-for="(tag, tagIndex) in blog.tags"
-        :key="tagIndex"
-        class="mb-4 inline-flex"
-      >
-        <span
-          v-if="getTagStyle(tag)"
-          class="items-center px-3 py-0.5 mr-2 rounded-full text-base font-medium"
-          :class="getTagStyle(tag)"
+      <div class="flex h-8 items-center justify-between">
+        <div
+          v-for="(tag, tagIndex) in blog.tags"
+          :key="tagIndex"
+          class="mb-4 inline-flex"
         >
-          {{ tag }}
-        </span>
+          <span
+            v-if="getTagStyle(tag)"
+            class="items-center px-3 py-0.5 mr-2 rounded-full text-base font-medium"
+            :class="getTagStyle(tag)"
+          >
+            {{ tag }}
+          </span>
+        </div>
+        <div class="flex space-x-2">
+          <img
+            v-for="(integration, integrationIndex) in blog.integrations"
+            :key="integrationIndex"
+            :src="require(`~/assets/logo/${getIntegrationLogo(integration)}`)"
+            class="h-8 w-auto"
+          />
+        </div>
       </div>
       <h1>{{ blog.title }}</h1>
     </div>
@@ -57,7 +67,12 @@ import Toc from "~/components/Toc.vue";
 import { startsWith } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
-import { PostTag, postTagStyle } from "../../../common/type";
+import {
+  PostTag,
+  postTagStyle,
+  Integration,
+  integrationLogo,
+} from "../../../common/type";
 
 export default {
   components: { Toc },
@@ -144,6 +159,9 @@ export default {
   methods: {
     getTagStyle(tag: PostTag): string {
       return postTagStyle(tag);
+    },
+    getIntegrationLogo(integration: Integration): string {
+      return integrationLogo(integration);
     },
   },
 };

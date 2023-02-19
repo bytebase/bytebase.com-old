@@ -4,6 +4,7 @@ author: Candy
 published_at: 2023/02/08 11:37:27
 feature_image: /static/blog/introducing-terraform-bytebase-provider/cover.webp
 tags: Announcement
+integrations: Terraform
 featured: true
 description: With Terraform Bytebase Provider, teams can codify Bytebase resource configurations, including environments, database instances, and roles via Terraform.
 ---

@@ -4,6 +4,7 @@ author: Zipeng
 published_at: 2022/07/20 10:37:00
 feature_image: /static/blog/how-to-configure-clickhouse-ssl-connection/lock.webp
 tags: How-To
+integrations: ClickHouse
 description: Configure ClickHouse SSL connection and test it by using self-signed CA.
 ---
 

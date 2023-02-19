@@ -4,6 +4,7 @@ author: Tianzhou
 published_at: 2021/12/15 08:29:42
 feature_image: /static/blog/upgrade-gitlab-enterprise-edition-major-version-13-14/gitlab-13-to-14.webp
 tags: How-To
+integrations: GitLab
 description: GitLab upgrade from 13 to 14
 ---
 

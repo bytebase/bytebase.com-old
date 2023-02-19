@@ -354,6 +354,10 @@ export default {
           document.tags = tags;
         }
 
+        if (document.integrations) {
+          document.integrations = document.integrations.split(", ");
+        }
+
         for (const key of Object.keys(document)) {
           if (key !== camelCase(key)) {
             document[camelCase(key)] = document[key];

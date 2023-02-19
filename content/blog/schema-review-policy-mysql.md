@@ -4,6 +4,7 @@ author: Candy
 published_at: 2022/06/15 10:39:19
 feature_image: /static/blog/schema-review-policy-mysql/schema-review-policy-cover.webp
 tags: Announcement
+integrations: MySQL
 description: This post introduces a new feature - schema review policy, which help DBAs and application developers compose better schema change statements.
 ---
 

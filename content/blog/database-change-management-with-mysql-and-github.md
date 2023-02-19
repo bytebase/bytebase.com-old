@@ -3,7 +3,8 @@ title: Database Change Management with MySQL and GitHub
 author: Mila
 published_at: 2023/02/08 11:15
 feature_image: /static/blog/database-change-management-with-mysql-and-github/feature-image.webp
-tags: How-To
+tags: Tutorial
+integrations: MySQL, GitHub
 description: This tutorial will bring your MySQL schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.
 ---
 

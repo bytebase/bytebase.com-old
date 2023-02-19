@@ -4,6 +4,7 @@ author: Candy
 published_at: 2022/08/09 16:37:17
 feature_image: /static/blog/gh-ost-based-online-schema-migration-for-mysql/cover.webp
 tags: Announcement
+integrations: MySQL
 featured: true
 description: Introduce gh-ost based online schema migration and how to perform an online schema migration without downtime in Bytebase.
 ---

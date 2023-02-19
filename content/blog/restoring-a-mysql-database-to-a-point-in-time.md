@@ -4,6 +4,7 @@ author: Candy
 published_at: 2022/07/11 16:30:17
 feature_image: /static/blog/restoring-a-mysql-database-to-a-point-in-time/pitr-cover.webp
 tags: How-To
+integrations: MySQL
 description: This article describes how Point-in-Time-Recovery (PITR) works in Bytebase and the steps to restore a database using this feature.
 ---
 
