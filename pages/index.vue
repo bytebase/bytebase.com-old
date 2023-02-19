@@ -82,6 +82,10 @@
     </div>
 
     <div class="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
+      <WithBytebaseSection />
+    </div>
+
+    <div class="max-w-7xl mt-12 md:mt-24 mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <i18n
           path="index-page.gitlab-for-database-devops"
@@ -412,12 +416,13 @@ import {
   onMounted,
 } from "@nuxtjs/composition-api";
 import Plausible from "plausible-tracker";
+import WithBytebaseSection from "~/components/WithBytebaseSection.vue";
 import { useStore } from "~/store";
 
 const { trackEvent } = Plausible();
 
 export default defineComponent({
-  components: {},
+  components: { WithBytebaseSection },
   setup() {
     const { app } = useContext();
     const store = useStore();

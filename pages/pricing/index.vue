@@ -7,7 +7,7 @@
         <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
           <div class="relative">
             <svg
-              class="absolute top-0 left-0 h-36 w-36 -translate-x-8 -translate-y-24 transform text-indigo-200 opacity-50"
+              class="absolute top-0 left-0 h-24 w-24 -translate-y-16 transform text-indigo-200 opacity-50"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 144 144"
@@ -25,10 +25,10 @@
             </h1>
           </div>
         </blockquote>
-      </div>
 
-      <div class="flex justify-center">
-        <PastCompanyBar />
+        <div class="mt-8 flex justify-center">
+          <LogoCloudSection />
+        </div>
       </div>
 
       <h2 class="sr-only">Plans</h2>
@@ -521,6 +521,7 @@ import CheckIcon from "~/components/CheckIcon.vue";
 import QuestionIcon from "~/components/QuestionIcon.vue";
 import { useAuth0, IAtuhPlugin } from "~/plugin/auth0";
 import { useCookie } from "~/plugin/cookie";
+import LogoCloudSection from "~/components/LogoCloudSection.vue";
 
 interface LocalPlan extends Plan {
   label?: string;
@@ -553,6 +554,7 @@ export default defineComponent({
     CheckIcon,
     QuestionIcon,
     XIcon,
+    LogoCloudSection,
   },
   setup() {
     const { app } = useContext();
