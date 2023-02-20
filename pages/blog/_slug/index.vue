@@ -72,7 +72,7 @@ import {
   postTagStyle,
   Integration,
   integrationLogo,
-} from "../../../common/type";
+} from "~/common/type";
 
 export default {
   components: { Toc },
