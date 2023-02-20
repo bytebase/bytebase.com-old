@@ -115,6 +115,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Migration History](/change-database/migration-history)
 
+### [Rollback Data Changes](/change-database/rollback-data-changes)
+
 ### [Synchronize Schema](/change-database/synchronize-schema)
 
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)

@@ -1,0 +1,65 @@
+---
+title: Rollback Data Changes
+---
+
+<hint-block type="warning">
+
+This feature is currently in beta.
+
+</hint-block>
+
+Bytebase can parse MySQL binary logs and build rollback SQL statements from the logs. This can help you rollback data changes.
+
+## Requirements and limitations
+
+- MySQL version is 5.7 or greater
+- MySQL has row-based logging enabled.
+- Bytebase cannot generate rollback statements that are bigger than 8MB currently.
+
+## How to use
+
+### Step 1 - Check if row-based logging is enabled
+
+Connect to your MySQL instance and execute the following commands.
+
+``` sql
+SHOW VARIABLES LIKE 'log_bin';
+```
+
+The value should be `ON`.
+
+``` sql
+SHOW VARIABLES LIKE 'binlog_format';
+```
+
+The value should be `ROW`.
+
+### Step 2 - Check binlog retention time
+
+Bytebase needs your MySQL binlog to generate rollback SQL statements. Your binlog retention time should be at least 1 hour (3600 seconds).
+
+The following commands returns the binary log expiration period in seconds.
+
+``` sql
+SHOW VARIABLES LIKE 'binlog_expire_logs_seconds';
+```
+
+<hint-block type="info">
+
+If you are using a managed MySQL, please refer to your provider's documentation on querying binlog retention time.
+
+</hint-block>
+
+<hint-block type="warning">
+
+Bytebase cannot build rollback statements for a task from the distant past because the corresponding binlog may have already been purged and the generation will fail.
+
+</hint-block>
+
+### Step 3 - Enable rollback SQL generation
+
+Click "SQL Rollback" switch to enable rollback SQL generation.
+
+### Step 4 - Rollback
+
+Click "Preview rollback issue".
