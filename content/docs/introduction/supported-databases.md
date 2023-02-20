@@ -28,6 +28,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 |          [SQL Review Policy and Rules](/docs/sql-review/review-policy/overview) |  ✔️   |     ✔️     |  ✔️  |            |           |
 |              [Schema Synchronization](/docs/change-database/synchronize-schema) |  ✔️   |     ✔️     |      |            |           |
 |                            [Schema Editor](/docs/change-database/schema-editor) |  ✔️   |            |      |            |           |
+| [Rollback Data Changes](/docs/change-database/rollback-data-changes) |  ✔️   |            |      |            |           |
 | [Online Schema Change](/docs/change-database/online-schema-migration-for-mysql) |  ✔️   |            |      |            |           |
 
 ### SQL Editor
