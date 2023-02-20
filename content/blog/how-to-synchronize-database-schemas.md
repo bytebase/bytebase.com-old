@@ -3,7 +3,7 @@ title: How to Synchronize Database Schemas
 author: Ningjing
 published_at: 2022/11/24 18:00
 feature_image: /static/blog/how-to-synchronize-database-schemas/sync-schema.webp
-tags: How-To
+tags: Tutorial
 description: This article briefly describes the general scenarios of database schema synchronization and how to use this feature smoothly in Bytebase with pure UI operations.
 ---
 

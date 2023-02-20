@@ -4,6 +4,7 @@ author: Mila
 published_at: 2023/02/16 15:21:21
 feature_image: /static/blog/bytebase-github-technology-partner/feature-image.webp
 tags: Announcement
+integrations: GitHub
 featured: true
 description: We are proud to announce the Technology Partnership with GitHub to provide developers with a smooth database development experience.
 ---

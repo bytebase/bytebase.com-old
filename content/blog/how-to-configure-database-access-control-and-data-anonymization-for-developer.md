@@ -3,7 +3,7 @@ title: How to Configure Database Access Control and Data Anonymization for Devel
 author: Ningjing
 published_at: 2023/01/05 21:15
 feature_image: /static/blog/how-to-configure-database-access-control-and-data-anonymization-for-developer/ac-feature.webp
-tags: How-To
+tags: Tutorial
 description: This tutorial will walk you through how database access control and data anonymization works in Bytebase. You’ll need two Bytebase accounts – one DBA and one Developer.  
 ---
 This tutorial will walk you through how **database access control** and **data anonymization** works in Bytebase. You’ll need two Bytebase accounts –  one **DBA** and one **Developer**. DBA is the one who configures the settings and Developer is the one who should only see information based on the configuration.

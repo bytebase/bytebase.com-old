@@ -3,31 +3,31 @@
     <div
       class="flex flex-row space-x-3 sm:space-x-6 items-center justify-center"
     >
-      <img class="h-10 sm:h-16" src="~/assets/logo/db-mysql.png" alt="mysql" />
+      <img class="h-10 sm:h-16" src="~/assets/logo/db-mysql.webp" alt="mysql" />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/db-postgres.png"
+        src="~/assets/logo/db-postgres.webp"
         alt="postgresql"
       />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/db-clickhouse.png"
+        src="~/assets/logo/db-clickhouse.webp"
         alt="clickhouse"
       />
-      <img class="h-10 sm:h-16" src="~/assets/logo/db-tidb.png" alt="tidb" />
+      <img class="h-10 sm:h-16" src="~/assets/logo/db-tidb.webp" alt="tidb" />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/db-snowflake.png"
+        src="~/assets/logo/db-snowflake.webp"
         alt="snowflake"
       />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/db-mongodb.png"
+        src="~/assets/logo/db-mongodb.webp"
         alt="mongodb"
       />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/db-spanner.png"
+        src="~/assets/logo/db-spanner.webp"
         alt="spanner"
       />
     </div>
@@ -36,17 +36,17 @@
     >
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/gitlab-logo.svg"
+        src="~/assets/logo/gitlab-logo.webp"
         alt="gitlab"
       />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/github-logo.svg"
+        src="~/assets/logo/github-logo.webp"
         alt="github"
       />
       <img
         class="h-10 sm:h-16"
-        src="~/assets/logo/terraform-logo.svg"
+        src="~/assets/logo/terraform-logo.webp"
         alt="terraform"
       />
     </div>

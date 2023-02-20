@@ -4,6 +4,7 @@ author: Ningjing
 published_at: 2022/09/25 09:42:58
 feature_image: /static/blog/how-a-data-team-uses-bytebase-to-manage-schema-change-for-clickhouse/bytebase-for-feature-development.webp
 tags: Case Study
+integrations: ClickHouse
 featured: true
 description: We are a data team within a 500-person company. The company has several customer-facing products, and we are a group of data scientists analyzing data to uncover customer, product, and operational insights.
 ---

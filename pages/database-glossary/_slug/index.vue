@@ -52,7 +52,6 @@
             class="inline-flex"
           >
             <span
-              v-if="getTagStyle(tag)"
               class="items-center px-3 py-1.5 mr-2 rounded-full text-base font-medium"
               :class="getTagStyle(tag)"
             >

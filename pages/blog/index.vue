@@ -24,6 +24,16 @@
             :class="getTagStyle(tag)"
             >{{ tag }}</span
           >
+          <div class="flex space-x-2">
+            <img
+              v-for="(
+                integration, integrationIndex
+              ) in latestFeaturedBlog.integrations"
+              :key="integrationIndex"
+              :src="require(`~/assets/logo/${getIntegrationLogo(integration)}`)"
+              class="h-6 w-auto"
+            />
+          </div>
         </div>
         <nuxt-link
           class="w-full flex flex-col justify-start items-start py-2 hover:opacity-80"
@@ -69,7 +79,7 @@
         <h2 class="text-lg py-2 font-semibold text-gray-700">
           {{ blog.title }}
         </h2>
-        <div class="flex flex-wrap mb-3 gap-2">
+        <div class="flex w-full mb-3 gap-2 justify-between">
           <span
             v-for="(tag, tagIndex) in blog.tags"
             :key="tagIndex"
@@ -77,6 +87,14 @@
             :class="getTagStyle(tag)"
             >{{ tag }}</span
           >
+          <div class="flex space-x-2">
+            <img
+              v-for="(integration, integrationIndex) in blog.integrations"
+              :key="integrationIndex"
+              :src="require(`~/assets/logo/${getIntegrationLogo(integration)}`)"
+              class="h-6 w-auto"
+            />
+          </div>
         </div>
         <p class="flex space-x-1 text-sm text-gray-500">
           <time :datetime="blog.published_at">
@@ -112,16 +130,28 @@
         </nuxt-link>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
-            <div
-              v-for="(tag, tagIndex) in blog.tags"
-              :key="tagIndex"
-              class="inline-flex"
-            >
-              <span
-                class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
-                :class="getTagStyle(tag)"
-                >{{ tag }}</span
+            <div class="flex justify-between">
+              <div
+                v-for="(tag, tagIndex) in blog.tags"
+                :key="tagIndex"
+                class="inline-flex"
               >
+                <span
+                  class="items-center px-3 py-0.5 mr-2 rounded-full text-sm font-medium"
+                  :class="getTagStyle(tag)"
+                  >{{ tag }}</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <img
+                  v-for="(integration, integrationIndex) in blog.integrations"
+                  :key="integrationIndex"
+                  :src="
+                    require(`~/assets/logo/${getIntegrationLogo(integration)}`)
+                  "
+                  class="h-6 w-auto"
+                />
+              </div>
             </div>
             <nuxt-link
               :to="localePath(`/blog/${blog.slug}`)"
@@ -168,7 +198,12 @@
 import { first } from "lodash";
 import { getTeammateByName } from "~/common/teammate";
 import { calcReadingTime } from "~/common/utils";
-import { PostTag, postTagStyle } from "../../common/type";
+import {
+  PostTag,
+  postTagStyle,
+  Integration,
+  integrationLogo,
+} from "~/common/type";
 
 export default {
   layout: "blog",
@@ -235,6 +270,9 @@ export default {
   methods: {
     getTagStyle(tag: PostTag): string {
       return postTagStyle(tag);
+    },
+    getIntegrationLogo(integration: Integration): string {
+      return integrationLogo(integration);
     },
   },
 };

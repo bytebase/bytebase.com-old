@@ -4,6 +4,7 @@ author: Changyu
 published_at: 2022/12/08 09:00
 feature_image: /static/blog/integrate-sql-review-into-github/overview.webp
 tags: Explanation
+integrations: GitHub
 featured: true
 description: The three ways to integrate Bytebase SQL Review with GitHub. GitHub Action, GitHub App, and GitOps CI
 ---
