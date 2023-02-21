@@ -50,7 +50,6 @@ Well, that's it for this update, there are a lot of UX optimizations in this ver
 
 In addition, we also announced a technical partnership with GitHub and PingCAP for this release cycle, and will continue to build product integrations with more talented peers in the industry.
 
-Bytebase has a good position to integrate with all parties to create a 1 + 1 > 2 effect. This week ClickHouse CTO also came to our GitHub and contributed a PR, I'll contribute a PR to them someday.
 
 ![gh-ch](/static/blog/1-12-1-new-features/gh-ch.webp)
 ![gh-bb](/static/blog/1-12-1-new-features/gh-bb.webp)
