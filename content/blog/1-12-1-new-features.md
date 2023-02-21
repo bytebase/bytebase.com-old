@@ -13,7 +13,7 @@ The second release of the 🐰  year, the version number was upgraded from 1.12.
 
 ## Single Sign-On (SSO)
 
-The first is support for Single Sign-On (SSO), which should come standard at the enterprise level. What I regret is that this feature was made too late. Because the previous preview version is still stumbling, our customers can't wait to go with it, it's a lesson.
+Bytebase now supports Single Sign-On (SSO). As a hindsight, it was a bit late to add this feature. We released a preview version in the last release, and our customers can’t wait to try it out. Anyway, better late than never.
 
 ![SSO](/static/blog/1-12-1-new-features/SSO.webp)
 
