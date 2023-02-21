@@ -30,19 +30,6 @@ We also redesigned our onboarding guide. The previous one forced the user to com
 - From the change process, you can experience the whole change review collaborative workflow, the pre-configured auto SQL review strategy, and see the change history after the change completes.
 - Then you enter SQL Editor, also pre-configured with query statements and anonymized data, to experience the data query and check the data anonymization in effect.
 
-In line with this new onboarding guide, we also recruited a group of product experience officers to test. We'll review their reports next week and see what needs to be optimized.
-
-To tell a good story, it is important to have a clear storyline, and every detail of each scene should be in place to help users quickly understand the core value of the product and build up their initial trust in the product. The new process is almost exactly nine sub-screens, making up a full nine frames.
-
-![onboarding1](/static/blog/1-12-1-new-features/onboarding1.webp)
-![onboarding2](/static/blog/1-12-1-new-features/onboarding2.webp)
-![onboarding3](/static/blog/1-12-1-new-features/onboarding3.webp)
-![onboarding4](/static/blog/1-12-1-new-features/onboarding4.webp)
-![onboarding5](/static/blog/1-12-1-new-features/onboarding5.webp)
-![onboarding6](/static/blog/1-12-1-new-features/onboarding6.webp)
-![onboarding7](/static/blog/1-12-1-new-features/onboarding7.webp)
-![onboarding8](/static/blog/1-12-1-new-features/onboarding8.webp)
-![onboarding9](/static/blog/1-12-1-new-features/onboarding9.webp)
 
 Well, that's it for this update, there are a lot of UX optimizations in this version, as the features become more comprehensive, we also start to do UX upgrades for the existing features, this onboarding guide optimization is an example. We expect to upgrade the entire SQL Review 100+ rule configuration experience to the release in two weeks.
 
