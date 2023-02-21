@@ -31,7 +31,7 @@ We also redesigned our onboarding guide. The previous one forced the user to com
 - Then you enter SQL Editor, also pre-configured with query statements and anonymized data, to experience the data query and check the data anonymization in effect.
 
 
-Well, that's it for this update, there are a lot of UX optimizations in this version, as the features become more comprehensive, we also start to do UX upgrades for the existing features, this onboarding guide optimization is an example. We expect to upgrade the entire SQL Review 100+ rule configuration experience to the release in two weeks.
+Well, that's it for this update, there are a lot of UX optimizations in this version, as the features become more comprehensive, we also start to upgrade our existing UX, this onboarding guide refresh is the beginning. Next, we plan to upgrade the entire SQL Review 100+ rule configuration experience.
 
 ## Partnership Announcement
 
