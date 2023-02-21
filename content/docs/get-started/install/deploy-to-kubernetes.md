@@ -31,6 +31,9 @@ spec:
         - name: bytebase
           image: bytebase/bytebase:%%bb_version%%
           imagePullPolicy: Always
+          env:
+          - name: PG_URL
+            value: "postgresql://<<user>>:<<secret>>@<<host>>:<<port>>/<<dbname>>"
           args:
             [
               "--data",
@@ -39,8 +42,6 @@ spec:
               "https://bytebase.example.com",
               "--port",
               "8080",
-              "--pg",
-              "postgresql://<<user>>:<<secret>>@<<host>>:<<port>>/<<dbname>>",
             ]
           ports:
             - containerPort: 8080
@@ -186,6 +187,27 @@ helm -n <YOUR_NAMESPACE> \
 --set "bytebase.version"={NEW_VERSION} \
 upgrade bytebase-release bytebase-repo/bytebase
 ```
+
+## External PostgreSQL
+
+Instead of specify PostgreSQL connection string in helm or Kubernetes yaml file, we allows users to using Kubernetes secrets resources.
+
+### Kubernetes
+
+Using the following yaml section to replace the `spec.templates.spec.containers.env` section:
+
+```yaml
+          env:
+            - name: PG_URL
+              valueFrom:
+                secretKeyRef:
+                  name: secret_name
+                  key: secrete_key
+```
+
+### Helm
+
+Using `--set bytebase.option.existingPgURLSecret` and `--set bytebase.option.existingPgURLSecretKey` to specify the secret key and secret name instead of `--set "bytebase.option.external-url"={NEW_EXTERNAL_URL}`. See more details in [Bytebase - Artifact Hub](https://artifacthub.io/packages/helm/bytebase/bytebase).
 
 ## Persistent Volume
 
