@@ -8,7 +8,7 @@ This feature is currently in beta.
 
 </hint-block>
 
-Bytebase can parse MySQL binary logs and build rollback SQL statements from the logs. This can help you rollback data changes.
+After a data change completes, Bytebase can parse MySQL binary logs and build rollback SQL statements from the logs. This allows you to revert that data change if needed.
 
 ## Requirements and limitations
 
@@ -52,13 +52,13 @@ If you are using a managed MySQL, please refer to your provider's documentation 
 
 <hint-block type="warning">
 
-Bytebase cannot build rollback statements for a task from the distant past because the corresponding binlog may have already been purged and the generation will fail.
+Bytebase cannot build rollback statements for a task from the distant past because the corresponding binlog may have already been purged.
 
 </hint-block>
 
 ### Step 3 - Enable rollback SQL generation
 
-Click "SQL Rollback" switch to enable rollback SQL generation.
+Click "SQL Rollback" switch to request Bytebase to generate rollback SQL after data changes are completed.
 
 ### Step 4 - Rollback
 
