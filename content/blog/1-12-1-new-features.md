@@ -19,7 +19,7 @@ Bytebase now supports Single Sign-On (SSO). As a hindsight, it was a bit late to
 
 ## Google Cloud Spanner
 
-Then there is the support for Google Cloud Spanner. It's worth mentioning that Bytebase be is the only database change management tool on the market that supports Spanner.
+We also extend our database engine support to include Google Cloud Spanner. AFAIK, Bytebase is the only database change management tool on the market that supports Spanner.
 
 ![gcp](/static/blog/1-12-1-new-features/gcp.webp)
 
