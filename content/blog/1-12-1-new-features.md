@@ -25,7 +25,7 @@ We also extend our database engine support to include Google Cloud Spanner. AFAI
 
 ## Onboarding Guide
 
-This is the second version of our onboarding guide. The previous one forced the user to complete the whole guide - users were required to add a database instance, and if that failed, a dialog box popped up asking whether to create a Sample Instance. Then you have to create a project and transfer the database to the project before you can start making any changes. The pre-configuration involves too many steps, so for the new version, an instance and a project are prepared. Once the user registers, he/she can immediately experience the integration of Bytebase's two core capabilities change and query.
+We also redesigned our onboarding guide. The previous one forced the user to complete the whole guide - users were required to add a database instance, and if that failed, a dialog box popped up asking whether to create a Sample Instance. Then users have to create a project and transfer the database to the project before they can start making any changes. The pre-configuration involves too many steps. To solve this issue, the new version prepares an instance and a project in advance. Once the user registers, he/she can immediately experience the integration of Bytebase's two core capabilities, `change` and `query`.
 
 - From the change process, you can experience the whole review collaborative workflow and the pre-configured auto SQL review strategy; the change history after the change is completed.
 - Then you enter SQL Editor, also pre-configured with query statements and anonymized data, to experience the thrill of fast data query and also perceive the data security features of data anonymization.
