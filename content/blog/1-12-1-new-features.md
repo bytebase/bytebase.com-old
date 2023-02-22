@@ -35,7 +35,7 @@ Well, that's it for this update, there are a lot of UX optimizations in this ver
 
 ## Partnership Announcement
 
-In addition, we also announced a technical partnership with GitHub and PingCAP for this release cycle, and will continue to build product integrations with more talented peers in the industry.
+In addition, we also announced technical partnership with [GitHub](/blog/bytebase-github-technology-partner) and [PingCAP](/blog/streamline-database-change-management-for-tidb-cloud-with-bytebase) during this release cycle, and will continue to build product integrations with more talented peers in the industry.
 
 ![gh-ch](/static/blog/1-12-1-new-features/gh-ch.webp)
 ![gh-bb](/static/blog/1-12-1-new-features/gh-bb.webp)
