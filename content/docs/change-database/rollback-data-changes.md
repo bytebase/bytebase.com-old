@@ -14,6 +14,7 @@ After a data change completes, Bytebase can parse MySQL binary logs and build ro
 
 - MySQL version is 5.7 or greater
 - MySQL has row-based logging enabled.
+- The affected tables should have `PRIMARY KEY` or `UNIQUE` constraints.
 - Bytebase cannot generate rollback statements that are bigger than 8MB currently.
 
 ## How to use
@@ -63,3 +64,9 @@ Click "SQL Rollback" switch to request Bytebase to generate rollback SQL after d
 ### Step 4 - Rollback
 
 Click "Preview rollback issue".
+
+<hint-block type="warning">
+
+The tables to perform rollbacks should have a `PRIMARY KEY` or `UNIQUE` constraint.
+
+</hint-block>
