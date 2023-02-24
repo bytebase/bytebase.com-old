@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+    class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none"
   >
     <img
       class="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
@@ -26,6 +26,11 @@
       class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
       src="~/assets/logo/kakao-logo.webp"
       alt="kakao"
+    />
+    <img
+      class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
+      src="~/assets/logo/kingsoft-logo.webp"
+      alt="kingsoft"
     />
   </div>
 </template>

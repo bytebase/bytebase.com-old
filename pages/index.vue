@@ -81,6 +81,10 @@
       </div>
     </div>
 
+    <div class="max-w-7xl mx-auto mt-8">
+      <LogoCloudSection />
+    </div>
+
     <div class="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
       <WithBytebaseSection />
     </div>
