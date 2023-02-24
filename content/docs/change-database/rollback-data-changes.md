@@ -23,6 +23,8 @@ After a data change completes, Bytebase can parse MySQL binary logs and build ro
 
 Connect to your MySQL instance and execute the following commands.
 
+A convenient way is to use the [SQL Editor Admin Mode](/docs/sql-editor/admin-mode).
+
 ``` sql
 SHOW VARIABLES LIKE 'log_bin';
 ```
