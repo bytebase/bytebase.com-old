@@ -29,10 +29,10 @@ curl http://localhost:8080/v1/sql/advise \
 | -------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | `environment`  | **Required** | The environment name for your schema review policy. **Case sensitive**                                                              | Dev                      |
 | `statement`    | **Required** | The SQL statement.                                                                                                                  | SELECT \* FROM \`table\` |
-| `host`         | **Optional** | The instance host. Available values : `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 127.0.0.1                |
-| `port`         | **Optional** | The instance port. Available values : `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 3306                     |
+| `host`         | **Optional** | The instance host. Available values: `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 127.0.0.1                |
+| `port`         | **Optional** | The instance port. Available values: `MySQL`, `PostgreSQL`, `TiDB`.                                                                | 3306                     |
 | `databaseName` | **Optional** | The database name in the instance.                                                                                                  | DB Name                  |
-| `databaseType` | **Optional** | The database type. Required if the port, host and database name is not specified. Available values : `MySQL`, `PostgreSQL`, `TiDB`. | MySQL                    |
+| `databaseType` | **Optional** | The database type. Required if `port`, `host`, and `databaseName` are not specified. Available values: `MySQL`, `PostgreSQL`, `TiDB`. | MySQL                    |
 
 Once you have created the schema review policy in the Bytebase UX, you can call the SQL Advise API with `environment`, `statement`, and `databaseType` parameters. This will conduct the SQL check against statements without database catalog information.
 
@@ -54,10 +54,9 @@ You can also create the instance and database in the UX, then call the API with 
 - `code`: The error code. Check [error code for advisor](/docs/reference/error-code/advisor) for details.
 - `content`: The error message.
 - `status`: The SQL check status, should be `SUCCESS`, `WARN` or `ERROR`.
-- `title`: The schema review rule type. See the [list of supported rules](/docs/sql-review/review-rules).
-  - `OK`: No errors.
+- `title`: The schema review rule type. See the [list of supported rules](/docs/sql-review/review-rules#supported-rules).
 
-### Response Codes
+### Response codes
 
 | Code  | Description                                                 |
 | ----- | ----------------------------------------------------------- |
