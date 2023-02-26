@@ -12,6 +12,8 @@
     "company": "Company",
     "features": "Features",
     "pricing": "Pricing",
+    "tutorials": "Tutorials",
+    "solutions": "Solutions",
     "subscribe": "Subscribe",
     "databases": "Databases",
     "for": "for",
@@ -92,9 +94,6 @@
     },
     "backed-by-the-best": "Backed by the best",
     "join-us": "Join us"
-  },
-  "header": {
-    "solutions": "Solutions"
   },
   "footer": {
     "brand": "Brand",
