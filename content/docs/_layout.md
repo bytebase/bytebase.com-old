@@ -143,6 +143,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Self-host GitLab EE/CE](/vcs-integration/self-host-gitlab)
 
+#### [GitLab.com](/vcs-integration/gitlab-com)
+
 #### [GitHub.com](/vcs-integration/github-com)
 
 ### [Enable GitOps Workflow in Project](/vcs-integration/enable-gitops-workflow)

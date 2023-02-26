@@ -24,12 +24,12 @@ See [Supported Databases](/docs/introduction/supported-databases).
 Bytebase only supports Git-based VCS. It currently supports:
 
 - Self-host GitLab EE/CE
+- GitLab.com
 - GitHub.com
 
 We plan to support more Git providers roughly in the following order:
 
 - GitHub Enterprise
-- GitLab.com
 
 ## How to enable https
 
