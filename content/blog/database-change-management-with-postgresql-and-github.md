@@ -5,6 +5,7 @@ published_at: 2023/02/16 11:45
 feature_image: /static/blog/database-change-management-with-postgresql-and-github/feature-image.webp
 tags: Tutorial
 integrations: PostgreSQL, GitHub
+level: Intermediate
 description: This tutorial will bring your PostgreSQL schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.
 ---
 

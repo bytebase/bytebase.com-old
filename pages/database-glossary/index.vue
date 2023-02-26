@@ -356,7 +356,7 @@ const FILTER_LIST: FilterItem[] = [
 
 interface LocalState {
   filterList: FilterItem[];
-  showSidebar: false;
+  showSidebar: boolean;
 }
 
 export default defineComponent({

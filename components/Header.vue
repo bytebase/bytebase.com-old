@@ -58,16 +58,16 @@
             >{{ $t("common.tutorials") }}</nuxt-link
           >
           <nuxt-link
-            :to="localePath('/blog')"
-            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</nuxt-link
-          >
-          <nuxt-link
             :to="localePath('/docs/introduction/what-is-bytebase')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
             >{{ $t("common.docs") }}</nuxt-link
+          >
+          <nuxt-link
+            :to="localePath('/blog')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('blog.header')"
+            >{{ $t("common.blog") }}</nuxt-link
           >
           <nuxt-link
             :to="localePath('/pricing')"

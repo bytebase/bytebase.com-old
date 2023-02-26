@@ -100,3 +100,16 @@ export function glossaryTagStyle(tag: GlossaryTag): string {
       return "bg-yellow-100 text-yellow-800";
   }
 }
+
+export type TutorialLevel = "Beginner" | "Intermediate" | "Advanced";
+
+export function tutorialTagStyle(level: TutorialLevel): string {
+  switch (level) {
+    case "Beginner":
+      return "bg-blue-100 text-blue-800";
+    case "Intermediate":
+      return "bg-green-100 text-green-800";
+    case "Advanced":
+      return "bg-yellow-100 text-yellow-800";
+  }
+}

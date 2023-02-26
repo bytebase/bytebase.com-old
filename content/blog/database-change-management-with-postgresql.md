@@ -5,6 +5,7 @@ published_at: 2023/02/14 12:15
 feature_image: /static/blog/database-change-management-with-postgresql/feature-image.webp
 tags: Tutorial
 integrations: PostgreSQL
+level: Beginner
 description: PostgreSQL is the world's most advanced open-source relational database management system. This tutorial will guide you step-by-step to set up database change management for PostgreSQL in Bytebase.
 ---
 

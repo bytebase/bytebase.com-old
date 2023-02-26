@@ -5,6 +5,7 @@ published_at: 2022/12/26 21:15
 feature_image: /static/blog/database-change-management-with-snowflake-and-github/db-change-snowflake-github.webp
 tags: Tutorial
 integrations: Snowflake, GitHub
+level: Intermediate
 description: This tutorial will bring your Snowflake schema change to the next level by introducing the GitOps workflow, where you commit the schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.
 ---
 

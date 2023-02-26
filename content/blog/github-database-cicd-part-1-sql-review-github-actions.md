@@ -5,6 +5,7 @@ published_at: 2022/9/2 13:00:00
 feature_image: /static/blog/github-database-cicd-part-1-sql-review-github-actions/howto-github-1.webp
 tags: Tutorial
 integrations: GitHub
+level: Intermediate
 description: This first article will guide you to enable SQL Review GitHub actions (developed by Bytebase) when there is a pull request in your repository.
 ---
 

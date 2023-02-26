@@ -5,6 +5,7 @@ published_at: 2022/9/9 13:00:00
 feature_image: /static/blog/github-database-cicd-part-3-put-them-together/github-howto-3.webp
 tags: Tutorial
 integrations: GitHub
+level: Intermediate
 description: Now that you have finished Part 1 SQL Review GitHub Actions and Part 2 GitOps workflow, this final part will guide you through putting them together to run the whole process.
 ---
 
