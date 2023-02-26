@@ -32,54 +32,6 @@ const emojiList = [
     name: "666",
     imageUrl: require(`~/assets/emoji/666.gif`),
   },
-  // {
-  //     name: "baba",
-  //     imageUrl: require(`~/assets/emoji/baba.gif`),
-  // },
-  // {
-  //     name: "badhaha",
-  //     imageUrl: require(`~/assets/emoji/badhaha.gif`),
-  // },
-  // {
-  //     name: "cheat",
-  //     imageUrl: require(`~/assets/emoji/cheat.gif`),
-  // },
-  // {
-  //     name: "cheerup",
-  //     imageUrl: require(`~/assets/emoji/cheerup.gif`),
-  // },
-  // {
-  //     name: "chigua",
-  //     imageUrl: require(`~/assets/emoji/chigua.gif`),
-  // },
-  // {
-  //     name: "cry",
-  //     imageUrl: require(`~/assets/emoji/cry.gif`),
-  // },
-  // {
-  //     name: "dog",
-  //     imageUrl: require(`~/assets/emoji/dog.gif`),
-  // },
-  // {
-  //     name: "launch",
-  //     imageUrl: require(`~/assets/emoji/launch.gif`),
-  // },
-  // {
-  //     name: "puzzle",
-  //     imageUrl: require(`~/assets/emoji/puzzle.gif`),
-  // },
-  // {
-  //     name: "run",
-  //     imageUrl: require(`~/assets/emoji/run.gif`),
-  // },
-  // {
-  //     name: "split",
-  //     imageUrl: require(`~/assets/emoji/split.gif`),
-  // },
-  // {
-  //     name: "thank",
-  //     imageUrl: require(`~/assets/emoji/thank.gif`),
-  // },
 ];
 
 export default defineComponent({
