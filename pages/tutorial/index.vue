@@ -309,7 +309,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive } from "@nuxtjs/composition-api";
+import {
+  computed,
+  defineComponent,
+  reactive,
+  ref,
+  useContext,
+  useFetch,
+} from "@nuxtjs/composition-api";
 import slug from "slug";
 import {
   Integration,
@@ -410,156 +417,6 @@ type Tutorial = {
   level: TutorialLevel;
 };
 
-const TUTORIAL_LIST: Tutorial[] = [
-  {
-    title: "Database Change Management with PostgreSQL and GitHub",
-    description:
-      "This tutorial will bring your PostgreSQL schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.",
-    slug: "database-change-management-with-postgresql-and-github",
-    integrations: ["PostgreSQL", "GitHub"],
-    publishedAt: "2023/02/16 11:45",
-    level: "Intermediate",
-  },
-  {
-    title: "Database Change Management with PostgreSQL",
-    description:
-      "PostgreSQL is the world's most advanced open-source relational database management system. This tutorial will guide you step-by-step to set up database change management for PostgreSQL in Bytebase.",
-    slug: "database-change-management-with-postgresql",
-    integrations: ["PostgreSQL"],
-    publishedAt: "2023/02/14 12:15",
-    level: "Beginner",
-  },
-  {
-    title: "Database Change Management with MySQL and GitHub",
-    description:
-      "This tutorial will bring your MySQL schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.",
-    slug: "database-change-management-with-mysql-and-github",
-    integrations: ["MySQL", "GitHub"],
-    publishedAt: "2023/02/08 11:15",
-    level: "Intermediate",
-  },
-  {
-    title: "Database Change Management with MySQL",
-    description:
-      "MySQL is the most popular open-source relational database management system. This tutorial will guide you step-by-step to set up database change management for MySQL in Bytebase.",
-    slug: "database-change-management-with-mysql",
-    integrations: ["MySQL"],
-    publishedAt: "2023/02/07 11:15",
-    level: "Beginner",
-  },
-  {
-    title: "Manage Databases in Bytebase with Terraform",
-    description:
-      "This tutorial will guide you to use Terraform Bytebase Provider to manage your databases via Terraform.",
-    slug: "manage-databases-in-bytebase-with-terraform",
-    integrations: ["Terraform"],
-    publishedAt: "2023/01/16 21:15",
-    level: "Intermediate",
-  },
-  {
-    title:
-      "How to Configure Database Access Control and Data Anonymization for Developer",
-    description:
-      "This tutorial will walk you through how database access control and data anonymization works in Bytebase. You’ll need two Bytebase accounts – one DBA and one Developer.",
-    slug: "how-to-configure-database-access-control-and-data-anonymization-for-developer",
-    integrations: [],
-    publishedAt: "2023/01/05 21:15",
-    level: "Intermediate",
-  },
-  {
-    title: "Database Change Management with TiDB and GitHub",
-    description:
-      "This tutorial will bring your TiDB schema change to the next level by introducing the GitOps workflow, where you commit the schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.",
-    slug: "database-change-management-with-tidb-and-github",
-    integrations: ["TiDB", "GitHub"],
-    publishedAt: "2023/01/04 21:15",
-    level: "Intermediate",
-  },
-  {
-    title: "Database Change Management with TiDB",
-    description:
-      "TiDB is an open-source NewSQL database that supports Hybrid Transactional and Analytical Processing workloads. This tutorial will guide you step-by-step to set up database change management for TiDB in Bytebase.",
-    slug: "database-change-management-with-tidb",
-    integrations: ["TiDB"],
-    publishedAt: "2023/01/03 21:15",
-    level: "Beginner",
-  },
-  {
-    title: "Database Change Management with Snowflake and GitHub",
-    description:
-      "This tutorial will bring your Snowflake schema change to the next level by introducing the GitOps workflow, where you commit the schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase.",
-    slug: "database-change-management-with-snowflake-and-github",
-    integrations: ["Snowflake", "GitHub"],
-    publishedAt: "2022/12/26 21:15",
-    level: "Intermediate",
-  },
-  {
-    title: "Database Change Management with Snowflake",
-    description:
-      "This tutorial will guide you step-by-step to set up database change management for Snowflake in Bytebase.",
-    slug: "database-change-management-with-snowflake",
-    integrations: ["Snowflake"],
-    publishedAt: "2022/12/22 21:15",
-    level: "Beginner",
-  },
-  {
-    title: "How to integrate SQL Review into Your GitLab or GitHub CI/CD",
-    description:
-      "This is a tutorial on how to integrate SQL Review into your GitLab & GitHub CI/CD, so that SQL review is automatically triggered before SQL scripts are merged into your repos.",
-    slug: "how-to-integrate-sql-review-into-gitlab-github-ci",
-    integrations: ["GitHub", "GitLab"],
-    publishedAt: "2022/12/2 21:21:21",
-    level: "Intermediate",
-  },
-  {
-    title: "How to Synchronize Database Schemas",
-    description:
-      "This article briefly describes the general scenarios of database schema synchronization and how to use this feature smoothly in Bytebase with pure UI operations.",
-    slug: "how-to-synchronize-database-schemas",
-    integrations: [],
-    publishedAt: "2022/11/24 18:00",
-    level: "Beginner",
-  },
-  {
-    title: "How to Setup Database CI/CD with GitHub, Part 3: Put Them Together",
-    description:
-      "Now that you have finished Part 1 SQL Review GitHub Actions and Part 2 GitOps workflow, this final part will guide you through putting them together to run the whole process.",
-    slug: "github-database-cicd-part-3-put-them-together",
-    integrations: ["GitHub"],
-    publishedAt: "2022/9/9 13:00:00",
-    level: "Intermediate",
-  },
-  {
-    title:
-      "How to Setup Database CI/CD with GitHub, Part 2: GitHub.com Database GitOps",
-    description:
-      "This second part will guide you through configuring GitHub.com database GitOps with Bytebase. After following these steps, you can trigger database changes by merging sql files into your GitHub repository.",
-    slug: "github-database-cicd-part-2-github-database-gitops",
-    integrations: ["GitHub"],
-    publishedAt: "2022/9/6 13:00:00",
-    level: "Intermediate",
-  },
-  {
-    title:
-      "How to Setup Database CI/CD with GitHub, Part 1: Enable SQL Review with GitHub Actions",
-    description:
-      "This first article will guide you to enable SQL Review GitHub actions (developed by Bytebase) when there is a pull request in your repository.",
-    slug: "github-database-cicd-part-1-sql-review-github-actions",
-    integrations: ["GitHub"],
-    publishedAt: "2022/9/2 13:00:00",
-    level: "Intermediate",
-  },
-  {
-    title: "The Database CI/CD Best Practice with GitHub",
-    description:
-      "We already have CI/CD for code delivery, why not the database? Imagine applying and deploying database changes the same way you would application code.",
-    slug: "database-cicd-best-practice-with-github",
-    integrations: ["GitHub"],
-    publishedAt: "2022/08/31 15:15",
-    level: "Intermediate",
-  },
-];
-
 interface LocalState {
   levelFilterList: LevelFilterItem[];
   integrationFilterList: IntegrationFilterItem[];
@@ -568,15 +425,28 @@ interface LocalState {
 
 export default defineComponent({
   setup() {
+    const { $content } = useContext();
     const state = reactive<LocalState>({
       levelFilterList: LEVEL_FILTER_LIST,
       integrationFilterList: INTEGRATION_FILTER_LIST,
       showSidebar: false,
     });
+    const tutorialList = ref<Tutorial[]>([]);
+
+    const { fetch } = useFetch(async () => {
+      const blogs = (await $content("blog", {
+        deep: true,
+      }).fetch()) as any[];
+      tutorialList.value = blogs.filter((blog) =>
+        blog.tags?.includes("Tutorial")
+      );
+    });
+
+    fetch();
 
     const levelTagItemCount = (level: TutorialLevel): number => {
       let count = 0;
-      for (const tutorial of TUTORIAL_LIST) {
+      for (const tutorial of tutorialList.value) {
         if (tutorial.level == level) {
           count++;
         }
@@ -586,8 +456,11 @@ export default defineComponent({
 
     const integrationTagItemCount = (tag: Integration): number => {
       let count = 0;
-      for (const tutorial of TUTORIAL_LIST) {
-        if (tutorial.integrations.includes(tag)) {
+      for (const tutorial of tutorialList.value) {
+        if (
+          Array.isArray(tutorial.integrations) &&
+          tutorial.integrations.includes(tag)
+        ) {
           count++;
         }
       }
@@ -610,7 +483,7 @@ export default defineComponent({
       }
 
       const list: any[] = [];
-      for (const tutorial of TUTORIAL_LIST) {
+      for (const tutorial of tutorialList.value) {
         if (levelFilterTagList.length > 0) {
           if (!levelFilterTagList.includes(tutorial.level)) {
             continue;
@@ -620,7 +493,10 @@ export default defineComponent({
         if (integrationFilterTagList.length > 0) {
           let found = false;
           for (const tag of integrationFilterTagList) {
-            if (tutorial.integrations.includes(tag)) {
+            if (
+              Array.isArray(tutorial.integrations) &&
+              tutorial.integrations.includes(tag)
+            ) {
               found = true;
               break;
             }
@@ -629,6 +505,7 @@ export default defineComponent({
             continue;
           }
         }
+
         list.push(tutorial);
       }
 
