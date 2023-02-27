@@ -214,7 +214,10 @@ export default {
       .sortBy("publishedAt", "desc")
       .fetch();
     const blogList = data
-      .filter((blog: any) => !blog.tags.includes("Hidden"))
+      .filter(
+        (blog: any) =>
+          !blog.tags.includes("Hidden") && !blog.tags.includes("Tutorial")
+      )
       .sort(
         (a: any, b: any) =>
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()

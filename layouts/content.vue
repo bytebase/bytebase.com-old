@@ -26,6 +26,12 @@
           @click="track('api.header')"
           >API</a
         >
+        <nuxt-link
+          to="/tutorial"
+          class="header-link hidden sm:block"
+          @click.native="track('tutorial.header')"
+          >Tutorial</nuxt-link
+        >
         <a
           :href="
             localePath('/docs/how-to/sql-review/postgres-sql-review-guide')

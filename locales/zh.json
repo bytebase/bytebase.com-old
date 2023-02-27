@@ -12,7 +12,9 @@
     "company": "公司",
     "features": "功能点",
     "pricing": "价格",
+    "tutorials": "教程",
     "subscribe": "订阅",
+    "solutions": "解决方案",
     "databases": "数据库",
     "for": "专为",
     "teams": "团队",
@@ -92,9 +94,6 @@
     },
     "backed-by-the-best": "背后最好的支持",
     "join-us": "加入我们"
-  },
-  "header": {
-    "solutions": "解决方案"
   },
   "footer": {
     "brand": "品牌",
