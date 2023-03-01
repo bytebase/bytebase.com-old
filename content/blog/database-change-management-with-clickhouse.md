@@ -17,7 +17,7 @@ This is a series of articles about Database Change Management with ClickHouse.
 ---
 [ClickHouse](https://clickhouse.com/) is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
 
-This tutorial will guide you step-by-step to set up database change management for ClickHouse (Cloud and Self-managed) in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make ClickHouse schema change and data change.
+This tutorial will guide you step-by-step to set up database change management for ClickHouse (Cloud and self-managed) in Bytebase. With Bytebase, a team can have a formalized review and rollout process to make ClickHouse schema change and data change.
 
 You’ll have a GUI and the full change history. You can use Bytebase free version to finish the tutorial.
 
