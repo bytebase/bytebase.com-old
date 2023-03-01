@@ -95,7 +95,7 @@ Choose `CA Certificate` for SSL Connection, if you use macOS, open the file `/et
 
 ![bb-instance-ch-cloud](/static/blog/database-change-management-with-clickhouse/bb-instance-ch-cloud.webp)
 
-4. If you use Self-managed version of ClickHouse, fill in instance form as the following image and click **Create**.
+4. If you use self-managed version of ClickHouse, fill in instance form as the following image and click **Create**.
 ![bb-instance-ch-self-managed](/static/blog/database-change-management-with-clickhouse/bb-instance-ch-self-managed.webp)
 
 ## Step 3 - Create a project with ClickHouse instance
