@@ -125,7 +125,7 @@ In Bytebase, a **Database** is the one created by 'CREATE DATABASE xxx'. A datab
 
 ## Step 5 - Create a table in ClickHouse via Bytebase
 
-In Step 4, you actually created an issue in UI workflow and then executed it. Let’s make it more explicit.
+In Step 4, you created an issue to create a database via UI workflow and then executed it. Let’s try to create another issue to alter that database.
 
 1. Go to project `TestClickHouse`, and click **Alter Schema**.
 ![bb-project-alter-schema](/static/blog/database-change-management-with-clickhouse/bb-project-alter-schema.webp)
