@@ -156,7 +156,7 @@ This section requires you to have **Enterprise Plan** (you can start 14 days tri
 
 Now you can see the full change history of `db_demo`. However, what is **Establish new baseline**? When should it be used?
 
-By adopting Bytebase, we expect teams to use Bytebase exclusively for all schema changes. Meanwhile, if someone has made ClickHouse schema change out side of Bytebase, obviously Bytebase won’t know it. And because Bytebase has recorded its own copy of schema, when Bytebase compares that with the live schema having that out-of-band schema change, it will notice a discrepancy and surface a schema drift anomaly. If that change is intended, then you should use baseline the schema state again to reconcile.
+By adopting Bytebase, we expect teams to use Bytebase exclusively for all schema changes. Meanwhile, if someone has made ClickHouse schema change out side of Bytebase, obviously Bytebase won’t know it. And because Bytebase has recorded its own copy of schema, when Bytebase compares that with the live schema having that out-of-band schema change, it will notice a discrepancy and surface a schema drift anomaly. If that change is intended, then you should baseline the schema state again to reconcile.
 
 In this section, you’ll be guided through this process.
 
