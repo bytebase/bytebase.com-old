@@ -35,7 +35,7 @@ Before you start this tutorial, make sure:
 
 - You have either of 
   - a [ClickHouse Cloud](https://clickhouse.cloud/) account
-  - a self-managed ClickHouse running
+  - a self-managed ClickHouse running. You can follow [How to Run ClickHouse with Docker](https://www.bytebase.com/blog/how-to-run-clickhouse-with-docker-and-connect-using-mysql-client).
 - You have [Docker](https://www.docker.com/) installed locally.
 
 ## Step 1 - Start Bytebase in Docker
