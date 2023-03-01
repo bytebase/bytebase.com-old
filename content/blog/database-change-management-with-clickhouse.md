@@ -166,7 +166,7 @@ ALTER TABLE t1 ADD COLUMN age UInt8;
 ```
 ![ch-cloud-dbdemo-add-age](/static/blog/database-change-management-with-clickhouse/ch-cloud-dbdemo-add-age.webp)
 
-2. Wait for 10 mins or more. Go back to Bytebase, and you can find the **Schema Drift** on
+2. Wait for about 10 mins for Bytebase to detect the drift. Go back to Bytebase, and you can find the **Schema Drift** on:
 
 database db_demo
 ![bb-drift-dbdemo](/static/blog/database-change-management-with-clickhouse/bb-drift-dbdemo.webp)
