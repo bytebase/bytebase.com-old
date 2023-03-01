@@ -42,7 +42,7 @@
             <div class="flex items-center space-x-2">
               <img
                 v-for="engine in rule.engineList"
-                :kewebpy="engine"
+                :key="engine"
                 class="h-4 w-auto"
                 :src="require(`~/assets/logo/db-${engine.toLowerCase()}.webp`)"
               />
