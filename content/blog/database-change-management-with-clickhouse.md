@@ -180,7 +180,7 @@ Anomaly Center
 4. Go to `db_demo` > **Change History** and click **Establish new baseline** to reconcile the schema.
 ![bb-dbdemo-create-new-baseline](/static/blog/database-change-management-with-clickhouse/bb-dbdemo-create-new-baseline.webp)
 
-5. It will create an issue. Click **Resolve** to make it done.
+5. It will create a baseline issue. Click **Resolve** to mark it done.
 ![bb-issue-dbdemo-baseline-done](/static/blog/database-change-management-with-clickhouse/bb-issue-dbdemo-baseline-done.webp)
 
 6. Go back to `db_demo` or Anomaly Center, and you will find the drift is gone.
