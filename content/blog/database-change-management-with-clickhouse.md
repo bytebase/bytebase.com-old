@@ -35,7 +35,7 @@ Before you start this tutorial, make sure:
 
 - You have either of 
   - a [ClickHouse Cloud](https://clickhouse.cloud/) account
-  - a Self-managed ClickHouse running
+  - a self-managed ClickHouse running
 - You have [Docker](https://www.docker.com/) installed locally.
 
 ## Step 1 - Start Bytebase in Docker
