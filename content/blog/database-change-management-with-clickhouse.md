@@ -177,7 +177,7 @@ Anomaly Center
 3. Click **View diff**, you will see the exact drift.
 ![bb-view-drift-diff](/static/blog/database-change-management-with-clickhouse/bb-view-drift-diff.webp)
 
-4. Go to `db_demo` > **Change History** and click **Establish new baseline**.
+4. Go to `db_demo` > **Change History** and click **Establish new baseline** to reconcile the schema.
 ![bb-dbdemo-create-new-baseline](/static/blog/database-change-management-with-clickhouse/bb-dbdemo-create-new-baseline.webp)
 
 5. It will create an issue. Click **Resolve** to make it done.
