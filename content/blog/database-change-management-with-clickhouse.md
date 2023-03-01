@@ -143,7 +143,7 @@ ORDER BY id;
 4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**, and the issue status will become `Done`.
 ![bb-issue-create-table-done](/static/blog/database-change-management-with-clickhouse/bb-issue-create-table-done.webp)
 
-5. On the issue page, click **View change**. You will see diff for each change.
+5. On the issue page, click **View change**. You will see diff for the change.
 ![bb-dbdemo-change-diff](/static/blog/database-change-management-with-clickhouse/bb-dbdemo-change-diff.webp)
 
 6. You can also go to **Change History** under the project to view the full history. Or go into a specific database to view its history.
