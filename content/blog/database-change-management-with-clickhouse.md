@@ -65,7 +65,7 @@ docker run --init \
 
 ## Step 2 - Add ClickHouse in Bytebase
 
-In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, a ClickHouse Cloud account or a Self-managed instance.
+In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, a ClickHouse Cloud account or a self-managed instance.
 
 1. Visit `localhost:5678` and log in as `Workspace Owner`.
 ![login](/static/blog/database-change-management-with-clickhouse/login.webp)
