@@ -77,7 +77,7 @@ In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS 
 
 Pay attention to some fields:
 
-Environment: choose `Test`, if you choose `Prod`,  issues will wait for approval by default. In this tutorial, we try to keep it simple. However, it’s all configurable.
+**Environment**: choose `Test`, if you choose `Prod`,  issues will wait for approval by default. In this tutorial, we try to keep it simple. However, it’s all configurable.
 
 If you use Cloud version. Go to your ClickHouse Cloud account, and click **View connection string**.
 
