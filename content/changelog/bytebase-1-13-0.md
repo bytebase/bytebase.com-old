@@ -16,6 +16,7 @@ description: "- Generate SQL statements to rollback DML for MySQL. - Support Sin
 - Support executing multiple statements for PostgreSQL in SQL Editor Admin mode.
 
 ## 🎠 Community
+- We just crossed 5K [GitHub stars](https://github.com/bytebase/bytebase) 🥳!
 - Add a tutorial page to include all Bytebase tutorials. [www.bytebase.com/tutorial](/tutorial)
 - Thanks to [@piglig](https://github.com/piglig) for PRs
   - [\#4874](https://github.com/bytebase/bytebase/pull/4874) chore: adjust plugin names to conform to conventions  
