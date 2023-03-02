@@ -12,7 +12,7 @@ description: ClickHouse is an open-source column-oriented DBMS for online analyt
 This is a series of articles about Database Change Management with ClickHouse.
 
 - Database Change Management with ClickHouse (this one)
-- Database Change Management with ClickHouse and GitHub
+- [Database Change Management with ClickHouse and GitHub](/blog/database-change-management-with-clickhouse-and-github)
 
 ---
 [ClickHouse](https://clickhouse.com/) is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
