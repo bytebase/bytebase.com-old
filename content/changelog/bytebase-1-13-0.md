@@ -16,14 +16,12 @@ description: "- Generate SQL statements to rollback DML for MySQL. - Support Sin
 - Support executing multiple statements for PostgreSQL in SQL Editor Admin mode.
 
 ## 🎠 Community
+- We just crossed 5K [GitHub stars](https://github.com/bytebase/bytebase) 🥳!
 - Add a tutorial page to include all Bytebase tutorials. [www.bytebase.com/tutorial](/tutorial)
 - Thanks to [@piglig](https://github.com/piglig) for PRs
   - [\#4874](https://github.com/bytebase/bytebase/pull/4874) chore: adjust plugin names to conform to conventions  
   - [\#4875](https://github.com/bytebase/bytebase/pull/4875) docs: update the reference of the plugin generator doc
   - [\#4878](https://github.com/bytebase/bytebase/pull/4878) fix: wrong dir path when generating MySQL Advisor
-
-## 📰 Fresh off the press
-- We are proud to announce the [Technology Partnership with GitHub to Automate Database Development](/blog/bytebase-github-technology-partner). Bytebase and GitHub work together to bridge code repos and database changes!
 
 ## 📕 Installation and Upgrade
 Follow [Installation](/docs/get-started/install/overview). If you are upgrading from a previous version, restart after obtaining the latest release binary.
