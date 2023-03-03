@@ -509,7 +509,9 @@ export default defineComponent({
         list.push(tutorial);
       }
 
-      return list;
+      return list.sort((a, b) => {
+        return a.publishedAt < b.publishedAt ? 1 : -1;
+      });
     });
 
     return {
