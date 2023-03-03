@@ -151,7 +151,7 @@ ORDER BY id;
 5. Click **View change**, and you could view the schema diff.
 ![bb-db-change-diff](/static/blog/database-change-management-with-clickhouse-and-github/bb-db-change-diff.webp)
 
-6. Go to GitHub repository, and you will see besides your committed sql, there is a `.db_demo##LATEST.sql` file. Because you have configured `Schema path template` before, Bytebase will write back the latest schema to that specified path after completing the schema change. Thus you have access to an update-to-date full schema at any time.
+6. Go to GitHub repository, and you will see besides your committed sql, there is a `.db_demo##LATEST.sql` file. Because you have configured `[Schema path template](/docs/vcs-integration/name-and-organize-schema-files#schema-path-template)` before, Bytebase will write back the latest schema to that specified path after completing the schema change. Thus you have access to an update-to-date full schema at any time.
 ![gh-LATEST](/static/blog/database-change-management-with-clickhouse-and-github/gh-LATEST.webp)
 
 ## Summary and Next
