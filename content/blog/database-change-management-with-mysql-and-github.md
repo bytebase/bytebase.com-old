@@ -110,7 +110,7 @@ bytebase/bytebase:%%bb_version%% \
 ## Step 5 - Change schema for MySQL by pushing SQL schema change files to GitHub
 
 1. In your GitHub repository `MySQL-test-bb-local`, create a folder `bytebase`, and create a SQL file using the naming convention `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting in the last step. 
-The full file path is `bytebase/test/uni##202302071000##create_table.sql`:
+The full file path is `bytebase/test/uni##202302071000##ddl##create_table.sql`:
 
 - `test` corresponds to {{ENV_NAME}}
 - `uni` corresponds to {{DB_NAME}}
