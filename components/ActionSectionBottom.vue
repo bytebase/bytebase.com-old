@@ -11,10 +11,12 @@
           $t("slogan.database-devops-best-practice")
         }}</span>
       </h2>
-      <div class="mt-8 flex space-x-4">
+      <div
+        class="mt-8 flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4"
+      >
         <nuxt-link
           :to="localePath('/docs/get-started/install/deploy-with-docker')"
-          class="flex items-center justify-center px-8 py-2 border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
+          class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
           @click="track('deploy')"
         >
           {{ actionSentence1 }}
@@ -39,7 +41,7 @@
         <a
           href="https://cal.com/adela-bytebase/30min"
           target="__blank"
-          class="flex items-center justify-center px-8 py-2 border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
+          class="w-full sm:w-auto flex items-center justify-center px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
           @click="track('book-demo')"
         >
           {{ actionSentence2 }}

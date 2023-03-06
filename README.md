@@ -35,6 +35,6 @@ If you are interested in contributing, you may take a look at [our online databa
 
 This will fetch the SQL review configuration files before starting the nuxt service, you can check the script [fetch_config_files.sh](./scripts/fetch_config_files.sh) for details.
 
-If you have any problems fetching these files, you could download them manually on the [Bytebase repository](https://github.com/bytebase/bytebase)
+If you have any problems fetching these files, you could download them manually on the [Bytebase repository](https://github.com/bytebase/bytebase).
 
-The SQL review rules are based on the [rule configuration file](https://github.com/bytebase/bytebase/blob/main/frontend/src/types/sqlReviewConfig.yaml) from the Bytebase repository. We need to update that configuration if we want to update the rules.
+The SQL review rules are based on the [rule configuration file](https://github.com/bytebase/bytebase/blob/main/frontend/src/types/sql-review-schema.yaml) from the Bytebase repository. We need to update that configuration if we want to update the rules.

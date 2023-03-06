@@ -44,7 +44,7 @@
                 v-for="engine in rule.engineList"
                 :key="engine"
                 class="h-4 w-auto"
-                :src="require(`~/assets/logo/db-${engine.toLowerCase()}.png`)"
+                :src="require(`~/assets/logo/db-${engine.toLowerCase()}.webp`)"
               />
             </div>
             <a

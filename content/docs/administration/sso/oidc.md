@@ -74,7 +74,8 @@ In some GitLab self-hosted setups, the **Issuer** is `http://gitlab.acme.com` (H
 ### Okta
 
 1. Follow the Okta [create OIDC app integrations documentation](https://help.okta.com/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_OIDC.htm) to create a new OIDC app integration with "Web Application" as the **Application type**.
-1. Configure the **Sign-in redirect URIs** to be `{EXTERNAL_URL}/oidc/callback`.
+   1. Configure the **Sign-in redirect URIs** to be `{EXTERNAL_URL}/oidc/callback`.
+   1. Configure the **Assignments > Controlled access** to be **Allow everyone in your organization to access**.
 1. In Bytebase, go to **Settings > SSO** to create a new OIDC provider (all values are examples):
    - **Name**: `Okta`
    - **Resource ID**: `okta`

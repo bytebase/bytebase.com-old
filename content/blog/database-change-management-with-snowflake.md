@@ -5,6 +5,7 @@ published_at: 2022/12/22 21:15
 feature_image: /static/blog/database-change-management-with-snowflake/db-change-snowflake.webp
 tags: Tutorial
 integrations: Snowflake
+level: Beginner
 description: This tutorial will guide you step-by-step to set up database change management for Snowflake in Bytebase. 
 ---
 

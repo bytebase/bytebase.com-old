@@ -117,6 +117,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Synchronize Schema](/change-database/synchronize-schema)
 
+### [Rollback Data Changes](/change-database/rollback-data-changes)
+
 ### [Online Schema Migration for MySQL](/change-database/online-schema-migration-for-mysql)
 
 ## [Batch Change](/batch-change/overview)
@@ -142,6 +144,8 @@ expand_section_list: ["Introduction", "Get Started"]
 ### [Add Git Provider](/vcs-integration/add-git-provider)
 
 #### [Self-host GitLab EE/CE](/vcs-integration/self-host-gitlab)
+
+#### [GitLab.com](/vcs-integration/gitlab-com)
 
 #### [GitHub.com](/vcs-integration/github-com)
 

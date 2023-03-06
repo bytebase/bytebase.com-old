@@ -51,51 +51,23 @@
         <div
           class="flex flex-row items-center justify-center text-sm sm:text-xl font-semibold space-x-2 sm:space-x-6"
         >
-          <div
-            class="relative flyout-menu-trigger hidden text-gray-700 hover:text-gray-500 sm:flex"
-          >
-            <div
-              class="flex flex-row justify-start items-center flex-nowrap cursor-pointer"
-            >
-              <span class="whitespace-nowrap">{{
-                $t("header.solutions")
-              }}</span>
-            </div>
-            <div
-              class="flyout-menu-wrapper hidden absolute top-4 -left-4 pt-4 w-auto h-auto"
-            >
-              <div
-                class="flyout-menu-container bg-white w-auto h-auto p-3 px-5 shadow-lg rounded flex-col justify-start items-start"
-              >
-                <nuxt-link
-                  :to="localePath('/usecase/dba')"
-                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For DBA</nuxt-link
-                >
-                <nuxt-link
-                  :to="localePath('/usecase/techlead')"
-                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For Tech Lead</nuxt-link
-                >
-                <nuxt-link
-                  :to="localePath('/usecase/developer')"
-                  class="text-base font-normal whitespace-nowrap leading-8 text-gray-700 hover:text-gray-500 hover:underline"
-                  >For Developer</nuxt-link
-                >
-              </div>
-            </div>
-          </div>
           <nuxt-link
-            :to="localePath('/blog')"
+            :to="localePath('/tutorial')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
-            @click.native="track('blog.header')"
-            >{{ $t("common.blog") }}</nuxt-link
+            @click.native="track('tutorial.header')"
+            >{{ $t("common.tutorials") }}</nuxt-link
           >
           <nuxt-link
             :to="localePath('/docs/introduction/what-is-bytebase')"
             class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
             @click.native="track('docs.header')"
             >{{ $t("common.docs") }}</nuxt-link
+          >
+          <nuxt-link
+            :to="localePath('/blog')"
+            class="text-gray-700 hover:text-gray-500 hover:underline whitespace-nowrap"
+            @click.native="track('blog.header')"
+            >{{ $t("common.blog") }}</nuxt-link
           >
           <nuxt-link
             :to="localePath('/pricing')"
@@ -139,7 +111,7 @@
               v-else
               href="https://demo.bytebase.com?ref=bytebase.com"
               target="_blank"
-              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+              class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
               @click="track('demo.header')"
               >{{ $t("common.live-demo") }}</a
             >
