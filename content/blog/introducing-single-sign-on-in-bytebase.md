@@ -10,7 +10,7 @@ description: This article demonstrates the Single Sign-On (SSO) protocols suppor
 
 ## What’s Single Sign-On?
 
-Single Sign-On (SSO) is a user authentication service that allows users to access multiple applications or services with one set of login credentials. There are several benefits to supporting SSO:
+Single Sign-On (SSO) is a user authentication service allowing users to access multiple applications or services with one login credential. There are several benefits to supporting SSO:
 
 * Enhanced security: SSO can improve security by reducing the likelihood of users reusing the same password across multiple applications or services, minimizing the risk of data breaches and unauthorized access.
 * Improved user experience: SSO enables users to authenticate just once and then smoothly access all authorized services without re-entering their login credentials.
