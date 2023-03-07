@@ -14,7 +14,7 @@ Single Sign-On (SSO) is a user authentication service that allows users to acces
 
 * Enhanced security: SSO can improve security by reducing the likelihood of users reusing the same password across multiple applications or services, minimizing the risk of data breaches and unauthorized access.
 * Improved user experience: SSO enables users to authenticate just once and then smoothly access all authorized services without re-entering their login credentials.
-* Increased Flexibility: With support for different authentication protocols, SSO allows organizations to configure different SSO methods for different domains, providing a highly flexible and customizable solution.
+* Increased flexibility: With support for different authentication protocols, SSO allows organizations to configure different SSO methods for different domains, providing a highly flexible and customizable solution.
 
 ## Supported Protocols in Bytebase
 
