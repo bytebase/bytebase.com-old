@@ -37,7 +37,7 @@ For details information on how to configure SSO using OAuth 2.0, you can refer t
 
 OIDC is an open standard for authentication and authorization that is built on top of OAuth 2.0. It provides a secure and reliable way for users to authenticate to an application using their existing online accounts.
 
-Like OAuth 2.0, OIDC relies on identity providers to authenticate users. These identity providers can be third-party services or self-hosted solutions. Byteabase provides the following identity providers for OIDC:
+Like OAuth 2.0, OIDC relies on identity providers to authenticate users. These identity providers can be third-party services or self-hosted solutions including:
 
 * Google
 * GitLab
