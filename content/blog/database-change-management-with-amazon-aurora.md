@@ -63,14 +63,14 @@ docker run --init \
 ![docker](/static/blog/database-change-management-with-amazon-aurora/docker.webp)
 
 1. Visit `localhost:5678` in your browser. Register the first admin account which will be granted [`Workspace Owner`](/docs/concepts/roles-and-permissions).
-![register](/static/blog/database-change-management-with-amazon-aurora/register.webp)
+![bb-register](/static/blog/database-change-management-with-amazon-aurora/bb-register.webp)
 
 ## Step 2 - Add an Amazon Aurora Instance to Bytebase
 
 In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS RDS instance etc, in this tutorial, ​an **Instance** is your `Amazon Aurora MySQL instance`.
 
 1. Visit `localhost:5678` and log in as `Workspace Owner`.
-![login](/static/blog/database-change-management-with-amazon-aurora/login.webp)
+![bb-login](/static/blog/database-change-management-with-amazon-aurora/bb-login.webp)
 
 2. Click **Add Instance**.
 ![bb-home-add-instance](/static/blog/database-change-management-with-amazon-aurora/bb-home-add-instance.webp)
