@@ -153,7 +153,7 @@ After a data change completes, Bytebase can parse MySQL binary logs and build ro
 1. Go back to the issue, turn the **SQL Rollback** on.
 ![bb-issue-before-rollback](/static/blog/database-change-management-with-amazon-aurora/bb-issue-before-rollback.webp)
 
-2. It failed because you lack some configuration.
+2. It may fail if the instance hasn't set `binlog_format = ROW`.
 ![bb-issue-rollback-fail](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-fail.webp)
 
 3. Go to Amazon RDS, click **Parameter groups** to create a new parameter group and set **binlog_format** to `ROW`.
