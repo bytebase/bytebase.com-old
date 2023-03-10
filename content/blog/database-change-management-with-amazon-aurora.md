@@ -184,7 +184,7 @@ CALL mysql.rds_show_configuration;
 ![bb-issue-before-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-before-rollback-preview.webp)
 ![bb-issue-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-preview.webp)
 
-10.  There is an **Approve** there even it's `Test`  environment. Since the rollback issue is a special case.
+10.  Rollback always requires explicit approval.
 ![bb-issue-rollback-to-approve](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-to-approve.webp)
 
 11.  Before approving rollback, let's go to **SQL Editor** and query. `Bella` is there.
