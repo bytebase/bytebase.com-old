@@ -20,7 +20,7 @@ This is a series of articles about Database Change Management with Amazon Aurora
 
 This tutorial is a step-by-step guide to set up Database Change Management for Amazon Aurora MySQL in [Bytebase](https://bytebase.com). With Bytebase, a team can have a formalized review and rollout process to make Amazon Aurora database schema change and data change.
 
-Bytebase provides a GUI for teams to **perform database changes** and **retain full migration history**. You can use Bytebase free version to finish the tutorial.
+Bytebase provides a GUI for teams to **perform database changes** and **retain full change history**. You can use Bytebase free version to finish the tutorial.
 
 At the end, there is a bonus section about **Schema Drift Detection** for those advanced users.
 
@@ -144,7 +144,7 @@ VALUES
 5. Click **SQL Editor** on the left side bar. Input the query and click **Run**. You can see the new row is there.
 ![bb-sql-editor-select-1](/static/blog/database-change-management-with-amazon-aurora/bb-sql-editor-select-1.webp)
 
-# Step 7 - Rollback the Data Change
+## Step 7 - Rollback the Data Change
 
 Bytebase support [Rollback for MySQL](https://www.bytebase.com/docs/change-database/rollback-data-changes).
 
@@ -180,7 +180,7 @@ CALL mysql.rds_show_configuration;
 8. Reboot the Aurora MySQL instance.
 ![aws-reboot](/static/blog/database-change-management-with-amazon-aurora/aws-reboot.webp)
 
-9. Repeat the Step 6, but this time, we can see the **Preview rollback issue**. Click **Create**.
+9. Repeat the Step 6, but this time, we can see the **Preview rollback issue**. Click it and then click **Create** on the issue page.
 ![bb-issue-before-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-before-rollback-preview.webp)
 ![bb-issue-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-preview.webp)
 
@@ -200,7 +200,7 @@ CALL mysql.rds_show_configuration;
 
 To follow this section, you need to activate the **Enterprise Plan** (you can start a 14-day trial directly, no credit card required).
 
-Now you can see the full migration history of database `db_demo`. However, what is **Establish new baseline**? When to use it?
+Now you can see the full change history of database `db_demo`. However, what is **Establish new baseline**? When to use it?
 
 By adopting Bytebase, we expect teams to use Bytebase exclusively for all schema changes. Meanwhile, if someone has made Amazon Aurora schema change out side of Bytebase, obviously Bytebase won’t know it. And because Bytebase has recorded its own copy of schema, when Bytebase compares that with the live schema having that out-of-band schema change, it will notice a discrepancy and surface a schema drift anomaly. If that change is intended, then you should establish new baseline to reconcile the schema state again.
 
@@ -251,6 +251,6 @@ WHERE
 
 ## Summary and What's Next
 
-Now you have connected Amazon Aurora with Bytebase, and used the UI workflow to accomplish schema change. Bytebase will record the full migration history for you. Furthermore, the **Enterprise Plan** is equipped with Schema Drift Detection to detect out-of-band schema changes performed outside of Bytebase.
+Now you have connected Amazon Aurora with Bytebase, and used the UI workflow to accomplish schema change and data change. Bytebase will record the full change history for you. Furthermore, the **Enterprise Plan** is equipped with **Schema Drift Detection** to detect out-of-band schema changes performed outside of Bytebase.
 
 In the next post, you’ll try out GitOps workflow: store your Amazon Aurora schema in GitHub and Bytebase will pick up the changes to the repo, bringing your Amazon Aurora change workflow to the next level, aka **Database DevOps** - [Database as Code](https://www.bytebase.com/blog/database-as-code).
