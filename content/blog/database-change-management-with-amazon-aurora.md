@@ -116,7 +116,7 @@ In Step 4, you created an issue to create a database using UI workflow and then 
 4. Click **Preview issue**, and Bytebase will automatically preview an issue with the corresponding SQL statement. Verify it's right, and click **Create**.
 ![bb-issue-create-t1](/static/blog/database-change-management-with-amazon-aurora/bb-issue-create-t1.webp)
 
-5. Since it’s for the `Test` environment, the issue is automatically approved by default. However, there are several tasks auto running before the SQL execution. For SQL review, You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview).
+5. The issue is automatically approved by default since it’s for the `Test` environment. Meanwhile, Bytebase has  run several task checks before executing the SQL, and one such task check is called SQL Reivew. You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview).
 ![bb-task-checks](/static/blog/database-change-management-with-amazon-aurora/bb-task-checks.webp)
 
 6. Click **Resolve issue**. The issue will become `Done` .
