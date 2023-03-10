@@ -103,7 +103,7 @@ In Bytebase, a **Database** is created by `CREATE DATABASE xxx`. A database alwa
 
 ## Step 5 - Create a Table in Amazon Aurora MySQL
 
-In Step 4, you actually created an issue using UI workflow and then executed it. Let’s make it more explicit.
+In Step 4, you created an issue to create a database using UI workflow and then executed it. Let’s continue to create a table.
 
 1. Visit your project, and click on **Alter Schema**.
 
