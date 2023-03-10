@@ -12,7 +12,7 @@ description: Amazon Aurora MySQL is a fully managed relational database engine t
 This is a series of articles about Database Change Management with Amazon Aurora.
 
 - Database Change Management with Amazon Aurora (this one)
-- Database Change Management with Amazon Aurora and GitHub
+- [Database Change Management with Amazon Aurora and GitHub](/blog/database-change-management-with-amazon-aurora-and-github)
 
 ---
 
