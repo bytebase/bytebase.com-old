@@ -78,7 +78,7 @@ In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS 
 3. Fill in the fields and click **Create**. Pay attention to these fields:
 
 **Type**: `MySQL`, if you use Aurora PostgreSQL, choose `PostgreSQL` instead.
-**Environment**: choose `Test`, if you choose `Prod`, you'll need manual approval for all future change requests by default, let's keep it simple for this tutorial. However, it's all configurable.
+**Environment**: choose `Test`, if you choose `Prod`, you'll need manual approval for all future change requests by default, let's keep it simple for this tutorial.
 ![bb-create-instance](/static/blog/database-change-management-with-amazon-aurora/bb-create-instance.webp)
 
 ## Step 3 - Create a Project
