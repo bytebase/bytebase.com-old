@@ -37,7 +37,7 @@ Before you start this tutorial, make sure you have the following ready:
 - A GitHub account.
 - A public GitHub repository, e.g  `aurora-test-bb-local`.
 - [Docker](https://www.docker.com/) installed locally.
-- An [ngrok](http://ngrok.com/) account. (ngrok is a reverse proxy tunnel, and in our case, we need it for a public network address in order to receive webhooks from GitHub. We use ngrok here for demonstration purposes. For production use, we recommend using [Caddy](https://caddyserver.com/).)
+- An [ngrok](http://ngrok.com/) account (ngrok is a reverse proxy tunnel, and in our case, we need it for a public network address in order to receive webhooks from GitHub. We use ngrok here for demonstration purposes. For production use, we recommend using [Caddy](https://caddyserver.com/)).
 
 ![ngrok](/static/blog/database-change-management-with-amazon-aurora-and-github/ngrok.webp)
 
@@ -147,7 +147,7 @@ CREATE TABLE t2
 3. Go to Bytebase, and go into project `TestAurora`. You’ll find there is a new `Push Event` and a new `issue 107` created.
 ![bb-project-push-event](/static/blog/database-change-management-with-amazon-aurora-and-github/bb-project-push-event.webp)
 
-4. Click `issue/107` and go the issue page. Click **Resolve issue**, and the issue will be `Done`. You’ll see:
+4. Click `issue/107` and go to the issue page. Click **Resolve issue**, and the issue will be `Done`. You’ll see:
    - The issue is created via GitHub.com
    - The issue is executed without approval because it’s on `Test` environment where manual approval is skipped by default. The Assignee is `Bytebase`, because the execution is automatic, and requires no manual approval.
    - The SQL is exactly the one we have committed to the GitHub repository.
@@ -165,6 +165,6 @@ CREATE TABLE t2
 
 Now that you have tried the **GitOps workflow**, which stores your Amazon Aurora schema in GitHub and triggers the change upon committing change to the repository, to bring your Amazon Aurora change workflow to the next level of Database DevOps - [Database as Code](/blog/database-as-code).
 
-You can check out [GitOps docs](docs/vcs-integration/overview) to learn more configuration details.
+You can check out [GitOps docs](/docs/vcs-integration/overview) to learn more configuration details.
 
 In the real world, you might have separated feature and main branches corresponding to your development and production environment, you can check out [GitOps with Feature Branch Workflow](/docs/how-to/workflow/gitops-feature-branch) to learn the setup. Have a try and look forward to your feedback!
