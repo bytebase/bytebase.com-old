@@ -62,7 +62,7 @@ docker run --init \
 2. Bytebase is now running via Docker, and you can access it via `localhost:5678`.
 ![docker](/static/blog/database-change-management-with-amazon-aurora/docker.webp)
 
-1. Visit `localhost:5678` in your browser. Register the first admin account which will be granted [`Workspace Owner`](/docs/concepts/roles-and-permissions).
+3. Visit `localhost:5678` in your browser. Register the first admin account which will be granted [`Workspace Owner`](/docs/concepts/roles-and-permissions).
 ![bb-register](/static/blog/database-change-management-with-amazon-aurora/bb-register.webp)
 
 ## Step 2 - Add an Amazon Aurora Instance to Bytebase
@@ -125,9 +125,7 @@ In Step 4, you created an issue to create a database using UI workflow and then 
 7. From the issue page, click **View change**, and you can see schema diff.
 ![bb-change-diff-t1](/static/blog/database-change-management-with-amazon-aurora/bb-change-diff-t1.webp)
 
-## Step 6 - Add Some Data and Query
-
-Bytebase support [Rollback for MySQL](https://www.bytebase.com/docs/change-database/rollback-data-changes).
+## Step 6 - Add Some Data and Query via SQL Editor
 
 1. Go to the project `TestAurora` , and click **Change Data**.
 2. Choose `db_demo`  and click **Next**.
@@ -147,6 +145,8 @@ VALUES
 ![bb-sql-editor-select-1](/static/blog/database-change-management-with-amazon-aurora/bb-sql-editor-select-1.webp)
 
 # Step 7 - Rollback the Data Change
+
+Bytebase support [Rollback for MySQL](https://www.bytebase.com/docs/change-database/rollback-data-changes).
 
 After a data change completes, Bytebase can parse MySQL binary logs and build rollback SQL statements from the logs. This allows you to revert that data change if needed.
 
@@ -184,16 +184,16 @@ CALL mysql.rds_show_configuration;
 ![bb-issue-before-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-before-rollback-preview.webp)
 ![bb-issue-rollback-preview](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-preview.webp)
 
-10.  Rollback always requires explicit approval.
+10. Rollback always requires explicit approval.
 ![bb-issue-rollback-to-approve](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-to-approve.webp)
 
-11.  Before approving rollback, let's go to **SQL Editor** and query. `Bella` is there.
+11. Before approving rollback, let's go to **SQL Editor** and query. `Bella` is there.
 ![bb-sql-editor-query-2](/blog/database-change-management-with-amazon-aurora/bb-sql-editor-query-2.webp)
 
-1.  Go back to the issue page and click **Approve**. The rollback SQL will execute.
+12. Go back to the issue page and click **Approve**. The rollback SQL will execute.
 ![bb-issue-rollback-executed](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-executed.webp)
 
-1.  Go to **SQL Editor** and query again. `Bella` is no longer there - The rollback is successful. You may rollback the rollback too, and yes, rollback the rollback for rollback... As long as the binlog is within the 24-hour retention period.
+13. Go to **SQL Editor** and query again. `Bella` is no longer there - The rollback is successful. You may rollback the rollback too, and yes, rollback the rollback for rollback... As long as the binlog is within the 24-hour retention period.
 ![bb-sql-editor-query-3](/static/blog/database-change-management-with-amazon-aurora/bb-sql-editor-query-3.webp)
 
 ## Bonus Section - Schema Drift Detection
@@ -247,7 +247,7 @@ WHERE
 
 8. Bytebase will create an issue to establish the new baseline, click **Create**, and then **Resolve** to mark it done.
    
-9.  Go back to **Databases** > **db_demo** or **Anomaly Center**, and you will find the drift is gone.
+9. Go back to **Databases** > **db_demo** or **Anomaly Center**, and you will find the drift is gone.
 
 ## Summary and What's Next
 
