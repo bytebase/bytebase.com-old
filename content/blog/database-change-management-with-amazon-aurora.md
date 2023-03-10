@@ -193,7 +193,7 @@ CALL mysql.rds_show_configuration;
 1.  Go back to the issue page and click **Approve**. The rollback SQL will execute.
 ![bb-issue-rollback-executed](/static/blog/database-change-management-with-amazon-aurora/bb-issue-rollback-executed.webp)
 
-1.  Go to **SQL Editor** and query again. `Bella` is not there any longer - The rollback for data insert is done. You may rollback the rollback too, and yes, rollback the rollback for rollback... As long as it's within the binlog retention 24-hour.
+1.  Go to **SQL Editor** and query again. `Bella` is no longer there - The rollback is successful. You may rollback the rollback too, and yes, rollback the rollback for rollback... As long as the binlog is within the 24-hour retention period.
 ![bb-sql-editor-query-3](/static/blog/database-change-management-with-amazon-aurora/bb-sql-editor-query-3.webp)
 
 ## Bonus Section - Schema Drift Detection
