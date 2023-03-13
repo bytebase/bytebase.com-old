@@ -189,7 +189,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [OpenID Connect (OIDC)](/administration/sso/oidc)
 
-### [Two-factor authentication](/administration/2fa)
+### [Two-Factor Authentication](/administration/2fa)
 
 ### [Back up Data](/administration/back-up-data)
 
