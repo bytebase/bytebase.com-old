@@ -31,7 +31,7 @@ If you can't scan the QR code, click **enter the text** to see a code that you c
 
 ### Step 4 - Download the recovery codes
 
-After verified your TOTP app, you will be prompted to download your recovery codes.
+After verifying your TOTP app, you will be prompted to download your recovery codes.
 
 Under "Download your recovery codes", click **Download** to download your recovery codes to your device. Save them to a secure location because your recovery codes can help you get back into your account if you lose access.
 
