@@ -219,6 +219,12 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ---
 
+## Authentication
+
+### [2FA](/authentication/2fa)
+
+---
+
 ## Reference
 
 ### [Server Startup Options](/reference/command-line)
