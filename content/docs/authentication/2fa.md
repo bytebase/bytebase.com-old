@@ -17,7 +17,7 @@ A time-based one-time password (TOTP) application automatically generates an aut
 
 ### Step 2 - Enable "Two-factor authentication"
 
-In the user's profile dashboard page, click the "Two-factor authentication" enable switch to enable 2FA for your account.
+In the user's profile dashboard page, turn on the "Two-factor authentication" switch to enable 2FA for your account.
 
 ![enable-2fa](/static/docs/authentication/2fa/enable-2fa.webp)
 
