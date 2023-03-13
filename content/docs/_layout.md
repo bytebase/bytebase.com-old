@@ -189,6 +189,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [OpenID Connect (OIDC)](/administration/sso/oidc)
 
+### [Two-factor authentication](/administration/2fa)
+
 ### [Back up Data](/administration/back-up-data)
 
 ### [Environment Policy](/administration/environment-policy/overview)
@@ -216,12 +218,6 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [External Approval](/administration/webhook-integration/external-approval)
 
 ### [Archive](/administration/archive)
-
----
-
-## Authentication
-
-### [2FA](/authentication/2fa)
 
 ---
 
