@@ -11,9 +11,9 @@ Two-factor authentication (2FA) provides an extra layer of security for member a
 A time-based one-time password (TOTP) application automatically generates an authentication code that changes after a certain period of time. We recommend using cloud-based TOTP apps such as:
 
 - [Google Authenticator](https://googleauthenticator.net/)
+- [Authy](https://authy.com/)
 - [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app/)
 - [1Password](https://support.1password.com/one-time-passwords/)
-- [Authy](https://authy.com/)
 
 ### Step 2 - Enable "Two-factor authentication"
 
