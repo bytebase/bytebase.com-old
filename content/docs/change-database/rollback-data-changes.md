@@ -71,6 +71,8 @@ Click "Preview rollback issue".
 
 The tables to perform rollbacks should have a `PRIMARY KEY` or `UNIQUE` constraint.
 
+</hint-block>
+
 ## FAQ
 
 ### Why I get "The rollback statement is empty"?
@@ -79,6 +81,3 @@ Some common reasons might lead to empty rollback statement.
 
 - The task didn't change any row.
 - The binlog has been purged. You may need to extend your binlog retention time.
-
-
-</hint-block>
