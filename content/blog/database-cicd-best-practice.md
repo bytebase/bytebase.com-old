@@ -93,12 +93,12 @@ Bytebase has ~100 standard built-in SQL Lint and supports configuring review rul
 
 ## Defining an automated deployment workflow
 
-Bytebase aims to fully automate the change release process. This is achieved by identifying script paths under a given code repository, so that each script can be associated with a given database. Let's look at an example of Bytebase's path matching template: `Base_DIR/{{{ENV_NAME}}/**/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
+Bytebase aims to fully automate the change release process. This is achieved by identifying script paths under a given code repository, so that each script can be associated with a given database. Let's look at an example of Bytebase's path matching template: `Base_DIR/{{{ENV_ID}}/**/{{DB_NAME}}__{{VERSION}}__{{TYPE}}__{{DESCRIPTION}}.sql`
 
 In this directory structure,
 
 - Base_DIR is the specified root directory (can be multi-level).
-- {{ENV_NAME}} should match the destined environment name of the database.
+- {{ENV_ID}} should match the destined environment identifier of the database.
 - ** is a wildcard to match one or more directories.
 - {{DB_NAME}} is the database name to be changed.
 - {{VERSION}} is the version number of this change.

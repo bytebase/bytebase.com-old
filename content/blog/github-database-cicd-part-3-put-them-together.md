@@ -42,7 +42,7 @@ Repeat the steps in [Part 1- Enable SQL Review GitHub Action](/blog/github-datab
 ## Step 2 - Create a PR, and add your SQL scripts
 
 1. Create a new branch `testboth`.
-2. Add a migration script under `bytebase/test` folder following the name convention `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. Here we name it `employeeGitHub##202208211500##ddl##add_nickname.sql`.
+2. Add a migration script under `bytebase/test` folder following the name convention `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. Here we name it `employeeGitHub##202208211500##ddl##add_nickname.sql`.
 
 ![add-script](/static/blog/github-database-cicd-part-3-put-them-together/add-script.webp)
 

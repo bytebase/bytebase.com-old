@@ -81,7 +81,7 @@ Click "Finish" button to complete the setup. Under the hood, this will create a 
 
 #### File path template - Required
 
-Default: `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`
+Default: `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`
 
 The file path template allows user to customize the file path format of the migration file. This path is relative to the base directory set above. The template supports following placeholders:
 
@@ -93,14 +93,14 @@ Required placeholders (must present in the template):
 
 Optional placeholders
 
-- {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
+- {{ENV_ID}} - Specify the lower-case environment identifier. This is useful to disambiguate the specified database if databases share the same name across different environments.
 - {{DESCRIPTION}} - Specify a description for the migration.
 
 Check [name and organize schema files](/docs/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
 
 #### Schema path template - Optional
 
-Default: `{{ENV_NAME}}/.{{DB_NAME}}##LATEST.sql`
+Default: `{{ENV_ID}}/.{{DB_NAME}}##LATEST.sql`
 
 When specified, after each migration, Bytebase will write the latest schema to this schema path relative to the base directory in the same branch as the original commit triggering the migration. Leave empty if you don't want Bytebase to do this.
 
@@ -118,7 +118,7 @@ Required placeholders (must present in the template if specified):
 
 Optional placeholders
 
-- {{ENV_NAME}} - Specify the environment name. This is useful to disambiguate the specified database if databases share the same name across different environments.
+- {{ENV_ID}} - Specify the lower-case environment identifier. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
 #### Enable SQL Review CI - Optional
 
