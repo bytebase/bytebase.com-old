@@ -27,7 +27,7 @@ In the "Two-factor authentication" page, you will be prompted to scan the QR cod
 
 ![2fa-setup-step1](/static/docs/administration/2fa/2fa-setup-step1.webp)
 
-If you can't scan the QR code, click **enter the text** to see the secret. Then you can manually enter it in your TOTP app and get the authentication code.
+If you can't scan the QR code, click **enter the text** to see the secret. You can then manually enter it in your TOTP application to get the authentication code.
 
 ![enter-your-secret](/static/docs/administration/2fa/enter-your-secret.webp)
 
