@@ -123,9 +123,9 @@ bytebase/bytebase:%%bb_version%% \
 
 ![bytebase-folder](/static/blog/github-database-cicd-part-2-github-database-gitops/bytebase-folder.webp)
 
-7. Create a sql script following the name convention `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`, and here we create `employeeGitHub##202208171630##ddl##add_nickname.sql` under the `test` directory.
+7. Create a sql script following the name convention `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`, and here we create `employeeGitHub##202208171630##ddl##add_nickname.sql` under the `test` directory.
 
-- `test` corresponds to {{ENV_NAME}}
+- `test` corresponds to {{ENV_ID}}
 - `employeeGitHub` corresponds to {{DB_NAME}}
 - `202208171630` corresponds to {{VERSION}}
 - `ddl` corresponds to {{TYPE}}

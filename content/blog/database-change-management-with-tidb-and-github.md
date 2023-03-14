@@ -113,9 +113,9 @@ bytebase/bytebase:%%bb_version%% \
 
 ## Step 5 - Change schema for TiDB by pushing SQL schema change files to GitHub
 
-1. In your GitHub repository `tidb-test-bb-local`, create a folder `bytebase`, and create an SQL file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting when you configure the project version control previously. the full file path is `bytebase/test/demo##202212302000##ddl##create_t2.sql`:
+1. In your GitHub repository `tidb-test-bb-local`, create a folder `bytebase`, and create an SQL file following the pattern `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting when you configure the project version control previously. the full file path is `bytebase/test/demo##202212302000##ddl##create_t2.sql`:
 
-- `test` corresponds to {{ENV_NAME}}
+- `test` corresponds to {{ENV_ID}}
 - `demo` corresponds to {{DB_NAME}}
 - `202212302000` corresponds to {{VERSION}}
 - `ddl` corresponds to {{TYPE}}

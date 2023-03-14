@@ -112,10 +112,10 @@ bytebase/bytebase:%%bb_version%% \
 ![bb-project-vc-gitops-enabled](/static/blog/database-change-management-with-postgresql-and-github/bb-project-vc-gitops-enabled.webp)
 
 ## Step 5 - Change schema for PostgreSQL by pushing SQL schema change files to GitHub
-1. In your GitHub repository `pg-test-bb-local`, create a folder `bytebase`, then create a subfolder `Prod`, and create an sql file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting under project version control.
+1. In your GitHub repository `pg-test-bb-local`, create a folder `bytebase`, then create a subfolder `Prod`, and create an sql file following the pattern `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting under project version control.
    
-   `demo##202316410000##ddl##create_t2.sql`
-   - `Prod` corresponds to {{ENV_NAME}}
+   `prod/demo##202316410000##ddl##create_t2.sql`
+   - `prod` corresponds to {{ENV_ID}}
    - `demo` corresponds to {{DB_NAME}}
    - `202316410000` corresponds to {{VERSION}}
    - `ddl` corresponds to {{TYPE}}

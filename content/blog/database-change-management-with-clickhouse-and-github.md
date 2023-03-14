@@ -117,10 +117,10 @@ bytebase/bytebase:%%bb_version%% \
 3. Keep the default setting, and click **Finish**.
 
 ## Step 5 - Change schema for ClickHouse by pushing SQL schema change files to GitHub
-1. In your GitHub repository `clickhouse-test-bb-local`, create a folder `bytebase`, then create a subfolder `Test`, and create an sql file following the pattern `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting under project GitOps.
+1. In your GitHub repository `clickhouse-test-bb-local`, create a folder `bytebase`, then create a subfolder `Test`, and create an sql file following the pattern `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for file path template setting under project GitOps.
    
-   `db_demo##202303020000##ddl##create_t2.sql`
-   - `Test` corresponds to {{ENV_NAME}}
+   `test/db_demo##202303020000##ddl##create_t2.sql`
+   - `test` corresponds to {{ENV_ID}}
    - `db_demo` corresponds to {{DB_NAME}}
    - `202303020000` corresponds to {{VERSION}}
    - `ddl` corresponds to {{TYPE}}
