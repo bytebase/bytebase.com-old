@@ -72,9 +72,9 @@ Let's say the base directory is `bytebase`
 
 Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
-#### Environment Name (Optional)
+#### Environment Identifier (Optional)
 
-Environment name should exactly match the destined environment name of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+Environment identifier should exactly match the destined environment identifier of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
 #### Supported Placeholders
 
