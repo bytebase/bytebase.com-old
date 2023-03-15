@@ -93,7 +93,7 @@ Required placeholders (must present in the template):
 
 Optional placeholders
 
-- {{ENV_ID}} - Specify the environment id. This is useful to disambiguate the specified database if databases share the same name across different environments.
+- {{ENV_ID}} - Specify the lower-case environment identifier. This is useful to disambiguate the specified database if databases share the same name across different environments.
 - {{DESCRIPTION}} - Specify a description for the migration.
 
 Check [name and organize schema files](/docs/vcs-integration/name-and-organize-schema-files) for the recommended file path template.
@@ -118,7 +118,7 @@ Required placeholders (must present in the template if specified):
 
 Optional placeholders
 
-- {{ENV_ID}} - Specify the environment id. This is useful to disambiguate the specified database if databases share the same name across different environments.
+- {{ENV_ID}} - Specify the lower-case environment identifier. This is useful to disambiguate the specified database if databases share the same name across different environments.
 
 #### Enable SQL Review CI - Optional
 

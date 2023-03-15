@@ -12,7 +12,7 @@ Migration scripts are stored in the VCS repository for a GitOps-enabled tenant p
 
 Typically, SQL files are used as migration scripts for both schema (DDL) and data (DML) changes.
 
-For example, to add a new table in the `Staging` envrionment for the database `store` using the default **File path template** (`{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/staging/store##0001##ddl##add-company-table.sql` with the following content:
+For example, to add a new table for all databases in the project, you can use the default **File path template** (`{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/0001##ddl##add-company-table.sql` with the following content:
 
 ```sql
 CREATE TABLE company (
@@ -39,8 +39,8 @@ Using SQL files as migration scripts has the limitation of only being able to ta
 A YAML manifest follows the same file path convention as defined by the **File path template** but using `.yml` instead of `.sql` as the file extension:
 
 ```diff
--bytebase/Staging/store##0003##dml##insert-companies.sql
-+bytebase/Staging/store##0003##dml##insert-companies.yml
+-bytebase/0003##dml##insert-companies.sql
++bytebase/0003##dml##insert-companies.yml
 ```
 
 Below is the file content for inserting a new row to the database `supermarket`:
@@ -52,15 +52,13 @@ statement: |
   INSERT INTO company (id, name, address) VALUES (1, 'Bytebase', '1 DevOps street');
 ```
 
-Please be noted that the database name in the file path (`store`) is now completely ignored.
-
 Both SQL files and YAML manifests can co-exist and be used on per-migration basis depending on your needs. After several migrations, your VCS repository for storing migration scripts could look like follows:
 
 ```
-bytebase/Staging/store##0001##ddl##add-company-table.sql
-bytebase/Staging/store##0002##ddl##add-payout-table.sql
-bytebase/Staging/store##0003##dml##insert-companies.yml
-bytebase/Staging/store##0003##ddl##insert-payouts.sql
+bytebase/0001##ddl##add-company-table.sql
+bytebase/0002##ddl##add-payout-table.sql
+bytebase/0003##dml##insert-companies.yml
+bytebase/0003##ddl##insert-payouts.sql
 ```
 
 To target multiple databases, add more entries to the `databases` section:

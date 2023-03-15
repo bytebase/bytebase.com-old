@@ -121,10 +121,10 @@ bytebase/bytebase:%%bb_version%% \
 
 ## Step 5 - Change schema for Amazon Aurora by pushing SQL schema change files to GitHub
 
-1. In your GitHub repository `aurora-mysql-test-bb-local`, create a folder `bytebase`, then create a subfolder `Test`, and create a SQL file using the naming convention `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting under project `TestAurora` > **GitOps**.
+1. In your GitHub repository `aurora-mysql-test-bb-local`, create a folder `bytebase`, then create a subfolder `Test`, and create a SQL file using the naming convention `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`. It is the default configuration for the file path template setting under project `TestAurora` > **GitOps**.
    
-   `db_demo##202303100000##ddl##create_t2.sql`
-   - `Test` corresponds to {{ENV_NAME}}
+   `test/db_demo##202303100000##ddl##create_t2.sql`
+   - `test` corresponds to {{ENV_ID}}
    - `db_demo` corresponds to {{DB_NAME}}
    - `202303100000` corresponds to {{VERSION}}
    - `ddl` corresponds to {{TYPE}}

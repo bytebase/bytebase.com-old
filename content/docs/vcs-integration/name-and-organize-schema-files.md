@@ -36,9 +36,10 @@ Bytebase currently supports following migration types:
 - [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `ddl` as the keyword.
 - [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `dml` as the keyword.
 
-#### Environment ID (Optional)
+#### Environment Identifier (Optional)
 
-Environment id should match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+Environment identifier should match the destined environment identifier of the database. Unlike database name matching rule, the environment identifier match is lower-case and **case-sensitive**. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+>>>>>>> main
 
 #### Description (Optional)
 
@@ -52,9 +53,9 @@ An optional description string can be included in the file name. If provided, By
 #### Supported wildcard
 
 - Use '*' to match one directory. For example:
-`{{ENV_ID}}/*/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
+`{{ENV_ID}}/*/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql` matches `env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
 - Use '**' to match one or more directories. For example:
-`{{ENV_ID}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
+`{{ENV_ID}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql` matches `env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
 
 ## Schema Path Template
 
