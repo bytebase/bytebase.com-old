@@ -39,7 +39,6 @@ Bytebase currently supports following migration types:
 #### Environment Identifier (Optional)
 
 Environment identifier should match the destined environment identifier of the database. Unlike database name matching rule, the environment identifier match is lower-case and **case-sensitive**. This is useful to disambiguate the database if multiple databases have the same name across the environments.
->>>>>>> main
 
 #### Description (Optional)
 
@@ -47,7 +46,7 @@ An optional description string can be included in the file name. If provided, By
 
 #### Supported Placeholders
 
-- All placeholder can contain one or more UTF-8 characters in UTF-8 **except** character in \[/?%\*:|"<>\\] (whitespace allowed).
+- All placeholder can contain one or more UTF-8 characters in UTF-8 **except** character in \[/?%*:|"<>\\] (whitespace allowed).
 - To improve readability, we recommend to use separator between different placeholders and one common separator is `## (two pound signs).`
 
 #### Supported wildcard
@@ -73,9 +72,9 @@ Let's say the base directory is `bytebase`
 
 Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
-#### Environment ID (Optional)
+#### Environment Identifier (Optional)
 
-Environment id should exactly match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+Environment identifier should exactly match the destined environment identifier of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
 #### Supported Placeholders
 
