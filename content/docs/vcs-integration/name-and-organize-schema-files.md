@@ -8,7 +8,7 @@ If you have enabled the GitOps workflow for a project, Bytebase will observe fil
 
 Bytebase allows user to customize the file path of the schema file. This file path is relative to the base directory.
 
-The default file path template is `{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`.
+The default file path template is `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`.
 
 <hint-block type="info">
 
@@ -36,9 +36,9 @@ Bytebase currently supports following migration types:
 - [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `ddl` as the keyword.
 - [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `dml` as the keyword.
 
-#### Environment Name (Optional)
+#### Environment Id (Optional)
 
-Environment name should match the destined environment name of the database. Unlike database name matching rule, the environment name match is **case-insensitive**. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+Environment id should match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
 #### Description (Optional)
 
@@ -46,15 +46,15 @@ An optional description string can be included in the file name. If provided, By
 
 #### Supported Placeholders
 
-- All placeholder can contain one or more UTF-8 characters in UTF-8 **except** character in \[/?%*:|"<>\\] (whitespace allowed).
+- All placeholder can contain one or more UTF-8 characters in UTF-8 **except** character in \[/?%\*:|"<>\\] (whitespace allowed).
 - To improve readability, we recommend to use separator between different placeholders and one common separator is `## (two pound signs).`
 
 #### Supported wildcard
 
-- Use '*' to match one directory. For example:
-`{{ENV_NAME}}/*/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql` matches `env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
+- Use '_' to match one directory. For example:
+  `{{ENV_ID}}/_/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
 - Use '**' to match one or more directories. For example:
-`{{ENV_NAME}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql` matches `env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
+  `{{ENV_ID}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
 
 ## Schema Path Template
 
@@ -62,7 +62,7 @@ An optional description string can be included in the file name. If provided, By
 
 Bytebase allows user to customize the schema path of the schema file. This path is relative to the base directory. When specified, after each migration, Bytebase will write the latest schema to this schema path relative to the base directory in the same branch as the original commit triggering the migration. Leave empty if you don't want Bytebase to do this.
 
-The default schema path template is `{{ENV_NAME}}/.{{DB_NAME}}##LATEST.sql`
+The default schema path template is `{{ENV_ID}}/.{{DB_NAME}}##LATEST.sql`
 
 Let's say the base directory is `bytebase`
 
@@ -72,9 +72,9 @@ Let's say the base directory is `bytebase`
 
 Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
-#### Environment Name (Optional)
+#### Environment Id (Optional)
 
-Environment name should exactly match the destined environment name of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
+Environment id should exactly match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
 #### Supported Placeholders
 

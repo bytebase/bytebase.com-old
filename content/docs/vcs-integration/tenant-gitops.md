@@ -12,7 +12,7 @@ Migration scripts are stored in the VCS repository for a GitOps-enabled tenant p
 
 Typically, SQL files are used as migration scripts for both schema (DDL) and data (DML) changes.
 
-For example, to add a new table in the `Staging` envrionment for the database `store` using the default **File path template** (`{{ENV_NAME}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/Staging/store##0001##ddl##add-company-table.sql` with the following content:
+For example, to add a new table in the `Staging` envrionment for the database `store` using the default **File path template** (`{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`), the file path of the SQL file would look like `bytebase/staging/store##0001##ddl##add-company-table.sql` with the following content:
 
 ```sql
 CREATE TABLE company (
