@@ -36,7 +36,7 @@ Bytebase currently supports following migration types:
 - [Schema migration](/docs/concepts/migration-types#schema-migration) - in this case, the file needs to use `ddl` as the keyword.
 - [Data change](/docs/concepts/migration-types#data-migration) - in this case, the file needs to use `dml` as the keyword.
 
-#### Environment Id (Optional)
+#### Environment ID (Optional)
 
 Environment id should match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
@@ -51,10 +51,10 @@ An optional description string can be included in the file name. If provided, By
 
 #### Supported wildcard
 
-- Use '_' to match one directory. For example:
-  `{{ENV_ID}}/_/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
+- Use '*' to match one directory. For example:
+`{{ENV_ID}}/*/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/db1##202101131000##ddl##create_tablefoo_for_bar.sql`.
 - Use '**' to match one or more directories. For example:
-  `{{ENV_ID}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
+`{{ENV_ID}}/**/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`matches`env1/foo/bar/db1##202101131000##ddl##create_tablefoo_for_bar.sql`
 
 ## Schema Path Template
 
@@ -72,7 +72,7 @@ Let's say the base directory is `bytebase`
 
 Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
 
-#### Environment Id (Optional)
+#### Environment ID (Optional)
 
 Environment id should exactly match the destined environment id of the database. This is useful to disambiguate the database if multiple databases have the same name across the environments.
 
