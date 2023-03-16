@@ -2,7 +2,10 @@
 title: One-click to Dump SDL Schema
 ---
 
-Dumping an SDL format of the database schema from Bytebase to GitOps configuration's LATEST file can save time and improve efficiency, as it eliminates the need to manually write the schema. You may use it when initializing the LATEST file or when the LATEST file needs to be updated due to being outdated.
+You will baseline the SDL schema in the following cases:
+
+1. Initialize the LATEST file in the linked repository.
+1. Update the LATEST file to reconcile the actual database schema.
 
 ## How to Baseline
 
