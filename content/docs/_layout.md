@@ -113,7 +113,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Schema Definition Language](/change-database/state-based-migration/schema-definition-language)
 
-#### [One-click to Dump SDL Schema](/change-database/state-based-migration/one-click-to-dump-sdl-schema)
+#### [Baseline SDL Schema](/change-database/state-based-migration/baseline-sdl-schema)
 
 ### [Schema Editor](/change-database/schema-editor)
 
