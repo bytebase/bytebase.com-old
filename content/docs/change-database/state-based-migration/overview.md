@@ -48,7 +48,7 @@ The `Full schema` tab shows the full LATEST file from version control system, su
 
 ![new-migration-issue-full-text](/static/docs/change-database/state-based-migration/overview/new-migration-issue-full-text.webp)
 
-Subsequent updates to the schema file without actually changing the database schema will not generate new migration issues.
+Subsequent updates to the LATEST schema file without actually changing the database schema will not generate new migration issues.
 
 On the other hand, if you have an existing database and want Bytebase to initialize the LATEST file instead of writing the schema in SDL format manually, you can refer to [One-click to dump SDL schema](/docs/change-database/state-based-migration/one-click-to-dump-sdl-schema).
 
