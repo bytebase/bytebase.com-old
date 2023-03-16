@@ -40,7 +40,7 @@ The `Schema change` tab shows the schema change between the actual database sche
 
 ![new-migration-issue-diff](/static/docs/change-database/state-based-migration/overview/new-migration-issue-diff.webp)
 
-The `Generated DDL statements` tab previews the DDL that will be executed, which is calculated in real-time based on the differences between the actual schema on the database engine and the LATEST file.
+The `Generated DDL statements` tab previews the DDL that will be executed, which is calculated in real-time based on the differences between the actual database schema and the LATEST file.
 
 ![new-migration-issue-ddl](/static/docs/change-database/state-based-migration/overview/new-migration-issue-ddl.webp)
 
