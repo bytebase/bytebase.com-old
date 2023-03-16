@@ -100,8 +100,7 @@ In Bytebase, database always belongs to an instance, and an instance always belo
 
 #### Cons:
 
-1. Changing environment identifier will break the integration.
-2. More files to manage, it will be `database * number of environments.`
+1. More files to manage, it will be `database * number of environments.`
 
 ### Approach 2 - Single directory
 
