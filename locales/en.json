@@ -6,6 +6,8 @@
     "documentation": "Documentation",
     "demo": "Demo",
     "live-demo": "Live demo",
+    "self-host": "Self Host",
+    "signup-for-cloud": "Sign Up for Cloud",
     "deploy": "Free Deploy",
     "about": "About",
     "changelog": "Changelog",
@@ -29,7 +31,8 @@
     "deploy-now-in-5-seconds": "Deploy now in 5 seconds",
     "deploy-bytebase-in-5-seconds": "Deploy Bytebase in 5 seconds",
     "book-demo": "Book a Demo",
-    "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes."
+    "better-way": "Bytebase is not a better tool to manage database changes. It's a better way to manage database changes.",
+    "free-signup-for-cloud": "Free Sign Up for Cloud"
   },
   "features": {
     "sql-review": {
