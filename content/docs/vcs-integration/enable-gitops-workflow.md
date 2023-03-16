@@ -79,6 +79,21 @@ Bytebase only observes migration file changes under this directory and all its s
 
 Click "Finish" button to complete the setup. Under the hood, this will create a webhook in the linked repository so that Bytebase can observe code changes.
 
+
+### Schema change type - Required
+
+Default: `Migration-based`
+
+Bytebase provides two schema change type:
+
+- Migration-based
+- State-based (Beta)
+
+Migration-based schema change type allows user to apply schema change by DDL.
+State-based schema change type provides a declarative way to describe the desired state of the schema.
+
+<doc-link-block url="/docs/change-database/state-based-migration/overview" title="State-based Migration"></doc-link-block>
+
 #### File path template - Required
 
 Default: `{{ENV_ID}}/{{DB_NAME}}##{{VERSION}}##{{TYPE}}##{{DESCRIPTION}}.sql`

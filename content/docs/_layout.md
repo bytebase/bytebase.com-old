@@ -109,6 +109,12 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Issue Need Attention](/change-database/change-workflow/issue-need-attention)
 
+### [State-based Migration](/change-database/state-based-migration/overview)
+
+#### [Schema Definition Language](/change-database/state-based-migration/schema-definition-language)
+
+#### [Baseline SDL Schema](/change-database/state-based-migration/baseline-sdl-schema)
+
 ### [Schema Editor](/change-database/schema-editor)
 
 ### [Schema Diagram](/change-database/schema-diagram)
