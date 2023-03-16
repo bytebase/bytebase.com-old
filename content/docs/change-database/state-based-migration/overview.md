@@ -16,7 +16,7 @@ It is a better and future-proof approach to manage schema changes for being repe
 - Avoid stepping on toes which often happens with migration-based/imperative schema change, no need to deal with executions that have complex dependency relations.
 - Nothing will happen if everything is aligned, and only discrepancies will be fixed.
 
-## Schema Definition Language(SDL)
+## Schema Definition Language (SDL)
 
 State-based migration requires the use of Schema Definition Language(SDL). SDL is a subset of SQL used to define database Schema. Currently, state-based migration only supports MySQL, you can check the [MySQL SDL syntax here](/docs/change-database/state-based-migration/schema-definition-language).
 
