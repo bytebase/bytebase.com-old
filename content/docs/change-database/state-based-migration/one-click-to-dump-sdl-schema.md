@@ -4,7 +4,7 @@ title: One-click to Dump SDL Schema
 
 Dumping an SDL format of the database schema from Bytebase to GitOps configuration's LATEST file can save time and improve efficiency, as it eliminates the need to manually write the schema. You may use it when initializing the LATEST file or when the LATEST file needs to be updated due to being outdated.
 
-## How to Dump
+## How to Baseline
 
 1. Click the `Databases` tab in `Project` details page.
 ![step-1](/static/docs/change-database/state-based-migration/one-click-to-dum-sdl-schema/step-1.webp)
