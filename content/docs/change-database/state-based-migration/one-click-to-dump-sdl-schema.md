@@ -22,5 +22,5 @@ Dumping an SDL format of the database schema from Bytebase to GitOps configurati
 ![step-7](/static/docs/change-database/state-based-migration/one-click-to-dum-sdl-schema/step-7.webp)
 8. Click the `Approve` button to approve the baseline issue again.
 ![step-8](/static/docs/change-database/state-based-migration/one-click-to-dum-sdl-schema/step-8.webp)
-9. When finish, you can click `View commit` to see the Git commit in version control system(such as GitLab, GitHub).
+9. When finish, you can click `View commit` to see the Git commit and the baselined LATEST file in the linked repository.
 ![step-9](/static/docs/change-database/state-based-migration/one-click-to-dum-sdl-schema/step-9.webp)
