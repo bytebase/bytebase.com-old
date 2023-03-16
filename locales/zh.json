@@ -7,6 +7,8 @@
     "demo": "Demo",
     "live-demo": "体验 Demo",
     "deploy": "免费部署",
+    "self-host": "自托管部署",
+    "signup-for-cloud": "注册云服务",
     "about": "关于",
     "changelog": "更新日志",
     "company": "公司",
@@ -29,7 +31,8 @@
     "deploy-now-in-5-seconds": "5 秒内立即部署",
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase",
     "book-demo": "预约演示",
-    "better-way": "Bytebase 不是一个更好的数据库变更工具，它是一套更好的数据库变更方法"
+    "better-way": "Bytebase 不是一个更好的数据库变更工具，它是一套更好的数据库变更方法",
+    "free-signup-for-cloud": "免费注册云服务"
   },
   "features": {
     "sql-review": {
