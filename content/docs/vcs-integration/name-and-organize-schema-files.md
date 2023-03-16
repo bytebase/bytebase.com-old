@@ -27,7 +27,7 @@ Version can be an arbitrary string as long as it's unique among all SQL files. B
 
 #### Database Name (Required)
 
-Database name should exactly match the destined database name. The match is **case-sensitive.** However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
+Database name should exactly match the destined database name. The match is **case-sensitive.** However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include **Environment Identifier** in the template.
 
 #### Migration Type (Required)
 
@@ -70,7 +70,7 @@ Let's say the base directory is `bytebase`
 
 #### Database Name (Required)
 
-Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include [Environment Name](#environment-name-optional) in the template.
+Database name should exactly match the destined database name. However, this may still cause ambiguity if the project contains multiple databases with the same name (this is not uncommon in practice, e.g. you give the same database name across all environments). In such case, include **Environment Identifier** in the template.
 
 #### Environment Identifier (Optional)
 
@@ -87,7 +87,7 @@ Environment identifier should exactly match the destined environment identifier 
 
 This is a [reference directory structure ](https://gitlab.bytebase.com/bytebase-demo/blog/-/tree/master/bytebase) using this approach, and the corresponding [commit](https://gitlab.bytebase.com/bytebase-demo/blog/-/commit/d7f3b88b93c4d7f57b710980cdf92f72dcc4cd1e) and [generated issue](https://demo.bytebase.com/issue/create-user-post-comment-table-for-dev-environment-13004) observing the commit.
 
-In Bytebase, database always belongs to an instance, and an instance always belongs to an environment. Thus a database also belongs to an environment. One way to organize files is to create a directory for each environment by using the environment name as the directory name and put migration files under the corresponding environment directory. For example:
+In Bytebase, database always belongs to an instance, and an instance always belongs to an environment. Thus a database also belongs to an environment. One way to organize files is to create a directory for each environment by using the environment identifier as the directory name and put migration files under the corresponding environment directory. For example:
 
 ![Directory per environment, each file corresponds to a single database under an environment](/static/docs/vcs-integration/name-and-organize-schema-files/organize-schema-files-step1.webp)
 
@@ -100,7 +100,7 @@ In Bytebase, database always belongs to an instance, and an instance always belo
 
 #### Cons:
 
-1. Changing environment name will break the integration.
+1. Changing environment identifier will break the integration.
 2. More files to manage, it will be `database * number of environments.`
 
 ### Approach 2 - Single directory
