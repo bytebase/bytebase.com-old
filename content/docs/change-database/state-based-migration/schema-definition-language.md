@@ -71,8 +71,8 @@ index_option: {
   | WITH PARSER parser_name
   | COMMENT 'string'
   | {VISIBLE | INVISIBLE}
-  |ENGINE_ATTRIBUTE [=] 'string'
-  |SECONDARY_ENGINE_ATTRIBUTE [=] 'string'
+  | ENGINE_ATTRIBUTE [=] 'string'
+  | SECONDARY_ENGINE_ATTRIBUTE [=] 'string'
 }
 ```
 
