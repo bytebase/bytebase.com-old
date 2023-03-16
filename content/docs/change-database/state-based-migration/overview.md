@@ -36,7 +36,7 @@ In our example with GitLab self-hosted as our VCS, we create a new schema file i
 
 Once committed the schema file to the target branch `main`, a new migration issue is created automatically with only the differentiate part of the schema.
 
-The `Schema change` tab shows the schema change between database schema from engine and LATEST file. They are all in SDL syntax format.
+The `Schema change` tab shows the schema change between the actual database schema and the LATEST file. They are all in SDL syntax format.
 
 ![new-migration-issue-diff](/static/docs/change-database/state-based-migration/overview/new-migration-issue-diff.webp)
 
