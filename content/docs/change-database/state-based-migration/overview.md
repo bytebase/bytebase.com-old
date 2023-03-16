@@ -57,4 +57,4 @@ On the other hand, if you have an existing database and want Bytebase to initial
 As the state-based migration is in beta stage, there are still few things to watch out:
 
 - Typical migration-based schema change is disallowed, where you would have each file containing DDL statements for imperative migrations.
-- Only support MySQL tables and indexes currently.
+- Only support MySQL tables and indexes.
