@@ -102,7 +102,7 @@
           <div class="transition-all flex flex-row">
             <nuxt-link
               :to="localePath('/docs/get-started/install/deploy-with-docker')"
-              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+              class="hidden sm:flex ml-2 items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
               @click.native="track('deploy.header')"
               >{{ $t("common.self-host") }}</nuxt-link
             >
