@@ -74,13 +74,12 @@
             @click.native="track('deploy.header')"
             >{{ $t("common.self-host") }}</nuxt-link
           >
-          <a
-            href="https://hub.bytebase.com?ref=bytebase.com"
-            target="_blank"
+          <button
             class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
-            @click="track('saas')"
-            >{{ $t("common.signup-for-cloud") }}</a
+            @click="loginToHub"
           >
+            {{ $t("common.signup-for-cloud") }}
+          </button>
         </div>
         <div id="algolia-search-container" class="ml-2"></div>
       </div>
@@ -109,6 +108,7 @@ import {
 import Plausible from "plausible-tracker";
 import { useCookie } from "../plugin/cookie";
 import { useSegment } from "~/plugin/segment";
+import { useAuth0 } from "~/plugin/auth0";
 
 const { trackEvent } = Plausible();
 
@@ -183,9 +183,17 @@ export default defineComponent({
       }
     };
 
+    const loginToHub = () => {
+      track("saas");
+      useAuth0().loginWithRedirect({
+        redirectUrl: `https://hub.bytebase.com?ref=${window.location.href}`,
+      });
+    };
+
     return {
       state,
       track,
+      loginToHub,
       toggleSidebar,
       handleSidebarClick,
     };
