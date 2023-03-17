@@ -14,15 +14,13 @@
       <div
         class="mt-8 flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4"
       >
-        <a
-          href="https://hub.bytebase.com?ref=bytebase.com"
-          target="_blank"
+        <button
           class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
-          @click="track('saas')"
+          @click="loginToHub"
         >
           {{ actionSentence1 }}
           <Cloud class="ml-2 w-8 h-8" />
-        </a>
+        </button>
         <a
           href="https://cal.com/adela-bytebase/30min"
           target="__blank"
@@ -61,6 +59,7 @@ import {
 import Plausible from "plausible-tracker";
 import { Metric, useSegment } from "~/plugin/segment";
 import Cloud from "./Icons/Cloud.vue";
+import { useAuth0 } from "~/plugin/auth0";
 
 const { trackEvent } = Plausible();
 
@@ -98,7 +97,14 @@ export default defineComponent({
       return app.i18n.t("slogan.book-demo");
     });
 
-    return { track, actionSentence1, actionSentence2 };
+    const loginToHub = () => {
+      track("saas");
+      useAuth0().loginWithRedirect({
+        redirectUrl: `https://hub.bytebase.com?ref=${window.location.href}`,
+      });
+    };
+
+    return { track, actionSentence1, actionSentence2, loginToHub };
   },
 });
 </script>

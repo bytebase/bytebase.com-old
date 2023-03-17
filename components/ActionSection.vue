@@ -3,15 +3,13 @@
     <div
       class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center whitespace-nowrap"
     >
-      <a
-        href="https://hub.bytebase.com?ref=bytebase.com"
-        target="_blank"
+      <button
         class="w-full flex items-center justify-center px-8 py-2 border border-transparent text-sm font-medium rounded-md border-indigo-700 text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-2xl md:px-8"
-        @click="track('saas')"
+        @click="loginToHub"
       >
         {{ actionSentence }}
         <Cloud class="ml-2 w-8 h-8" />
-      </a>
+      </button>
       <nuxt-link
         v-if="currentLocale === 'zh'"
         :to="localePath('/demo')"
@@ -44,6 +42,7 @@ import {
 import Plausible from "plausible-tracker";
 import { Metric, useSegment } from "~/plugin/segment";
 import Cloud from "./Icons/Cloud.vue";
+import { useAuth0 } from "~/plugin/auth0";
 
 const { trackEvent } = Plausible();
 
@@ -79,7 +78,14 @@ export default defineComponent({
       return app.i18n.t("slogan.free-signup-for-cloud");
     });
 
-    return { track, actionSentence, currentLocale };
+    const loginToHub = () => {
+      track("saas");
+      useAuth0().loginWithRedirect({
+        redirectUrl: `https://hub.bytebase.com?ref=${window.location.href}`,
+      });
+    };
+
+    return { track, actionSentence, currentLocale, loginToHub };
   },
 });
 </script>
