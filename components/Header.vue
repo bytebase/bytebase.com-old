@@ -101,10 +101,19 @@
           </div>
           <div class="transition-all flex flex-row">
             <nuxt-link
-              :to="localePath('/docs/get-started/install/deploy-with-docker')"
-              class="hidden sm:flex ml-2 items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
-              @click.native="track('deploy.header')"
-              >{{ $t("common.self-host") }}</nuxt-link
+              v-if="currentLocale === 'zh'"
+              :to="localePath('/demo')"
+              class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+              @click.native="track('demo.header')"
+              >{{ $t("common.live-demo") }}</nuxt-link
+            >
+            <a
+              v-else
+              href="https://demo.bytebase.com?ref=bytebase.com"
+              target="_blank"
+              class="ml-2 hidden sm:flex items-center justify-center whitespace-nowrap px-3 h-7 border border-transparent text-sm font-medium rounded border-gray-200 text-gray-700 bg-gray-100 hover:bg-gray-300"
+              @click="track('demo.header')"
+              >{{ $t("common.live-demo") }}</a
             >
             <button
               class="ml-2 flex items-center justify-center whitespace-nowrap px-3 h-7 text-sm font-medium rounded text-white bg-green-500 hover:bg-green-600"
