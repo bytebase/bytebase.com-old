@@ -34,6 +34,7 @@ export type Integration =
   | "GitLab"
   | "MongoDB"
   | "MySQL"
+  | "Redis"
   | "PostgreSQL"
   | "Snowflake"
   | "Spanner"
@@ -54,6 +55,8 @@ export function integrationLogo(integration: Integration): string {
       return "db-mysql.webp";
     case "PostgreSQL":
       return "db-postgres.webp";
+    case "Redis":
+      return "db-redis.webp";
     case "Snowflake":
       return "db-snowflake.webp";
     case "Spanner":

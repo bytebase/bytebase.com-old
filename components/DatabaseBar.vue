@@ -25,6 +25,7 @@
         src="~/assets/logo/db-mongodb.webp"
         alt="mongodb"
       />
+      <img class="h-10 sm:h-16" src="~/assets/logo/db-redis.webp" alt="redis" />
       <img
         class="h-10 sm:h-16"
         src="~/assets/logo/db-spanner.webp"
