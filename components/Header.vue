@@ -171,7 +171,7 @@ export default defineComponent({
     const loginToHub = () => {
       track("saas");
       useAuth0().loginWithRedirect({
-        redirectUrl: `https://hub.bytebase.com?ref=${window.location.href}`,
+        redirectUrl: `https://hub.bytebase.com/workspace?ref=${window.location.href}`,
       });
     };
 
