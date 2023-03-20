@@ -13,7 +13,7 @@ title: FAQ
 
 ### System requirements
 
-Bytebase is lightweight and has no external dependency. For normal workload, it consumes 10MB ~ 20MB memory and can run on the lowest tier machine from any cloud provider.
+Bytebase is lightweight and has no external dependency. For normal workload, 1 CPU core and 2 GB RAM are sufficient.
 
 ### Supported database versions
 
