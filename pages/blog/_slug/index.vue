@@ -8,11 +8,11 @@
       />
     </div>
     <div class="prose prose-xl mx-auto px-4">
-      <div class="flex h-8 items-center justify-between">
+      <div class="flex mb-4 h-8 items-center justify-between">
         <div
           v-for="(tag, tagIndex) in blog.tags"
           :key="tagIndex"
-          class="mb-4 inline-flex"
+          class="inline-flex"
         >
           <span
             v-if="getTagStyle(tag)"
@@ -22,12 +22,12 @@
             {{ tag }}
           </span>
         </div>
-        <div class="flex space-x-2">
+        <div class="flex space-x-2 h-8 w-8">
           <img
             v-for="(integration, integrationIndex) in blog.integrations"
             :key="integrationIndex"
             :src="require(`~/assets/logo/${getIntegrationLogo(integration)}`)"
-            class="h-8 w-auto"
+            class="h-8 w-8"
           />
         </div>
       </div>
