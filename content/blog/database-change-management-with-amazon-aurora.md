@@ -94,7 +94,7 @@ In Bytebase, **Project** groups logically-related **Databases, Issues** and **Us
 
 In Bytebase, a **Database** is created by `CREATE DATABASE xxx`. A database always belongs to a single **Project**. An **Issue** represents a specific collaboration activity between Developer and DBA for when creating a database, altering a schema. It's similar to the issue concept in other issue management tools.
 
-1. Click **Projects** > `TestAurora` on the left sidebar. Click **New DB** to create a new database. You can transfer your existing 
+1. Click **Projects** > `TestAurora` on the left sidebar. Click **New DB** to create a new database. You can click **Transfer in DB** to transfer in your existing databases.
    
 2. Fill the form with **Name** - `db_demo`, **Environment** - `Test`, and **Instance** - `Amazon Aurora MySQL`. Click **Create**.
    
@@ -116,13 +116,12 @@ In Step 4, you created an issue to create a database using UI workflow and then 
 4. Click **Preview issue**, and Bytebase will automatically preview an issue with the corresponding SQL statement. Verify it's right, and click **Create**.
 ![bb-issue-create-t1](/static/blog/database-change-management-with-amazon-aurora/bb-issue-create-t1.webp)
 
-5. The issue is automatically approved by default since it’s for the `Test` environment. Meanwhile, Bytebase has  run several task checks before executing the SQL, and one such task check is called SQL Reivew. You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview).
-![bb-task-checks](/static/blog/database-change-management-with-amazon-aurora/bb-task-checks.webp)
+1. The issue is automatically approved by default since it’s for the `Test` environment. Meanwhile, Bytebase has  run several task checks before executing the SQL, and one such task check is called SQL Reivew. You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview).
 
-6. Click **Resolve issue**. The issue will become `Done` .
+2. Click **Resolve issue**. The issue will become `Done` .
 ![bb-issue-t1-done](/static/blog/database-change-management-with-amazon-aurora/bb-issue-t1-done.webp)
 
-7. From the issue page, click **View change**, and you can see schema diff.
+1. From the issue page, click **View change**, and you can see schema diff.
 ![bb-change-diff-t1](/static/blog/database-change-management-with-amazon-aurora/bb-change-diff-t1.webp)
 
 ## Step 6 - Add Some Data and Query via SQL Editor
