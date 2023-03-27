@@ -49,7 +49,7 @@ Fill in the **Application ID** and **Secret** onto the corresponding fields on t
 
 ![vcs-bitbucket-step](/static/docs/vcs-integration/add-git-provider/vcs-bitbucket-step4.webp)
 
-After you click "**Next**", Bytebase will kick off an OAuth flow to verify the setup. If you are not currently logged on GitHub.com. You will be prompted to login to complete the OAuth.
+After you click "**Next**", Bytebase will kick off an OAuth flow to verify the setup. If you are not currently logged on Bitbucket.org. You will be prompted to login to complete the OAuth.
 
 <hint-block type="info">
 
