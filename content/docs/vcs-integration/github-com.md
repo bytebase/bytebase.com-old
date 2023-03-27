@@ -21,7 +21,7 @@ Both the instance URL and Display name are pre-populated for you.
 
 <hint-block type="warning">
 
-In this step, you need to register "Bytebase" as a [GitHub organization-wide OAuth application](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app). This can only be done by an **organization admin on GitHub.com.** If you are not, you will need to ask the admin to follow [**Step 2.1** ](#step-21---register-github-organization-wide-oauth-application-performed-by-organization-admin)to register the application and provide the Client ID and Client secret. Then you may continue onwards from [**Step 2.2**](#step-22---verify-setup-1).
+In this step, you need to register "Bytebase" as a [GitHub organization-wide OAuth application](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app). This can only be done by an **organization admin on GitHub.com.** If you are not, you will need to ask the admin to follow [**Step 2.1** ](#step-21---register-github-organization-wide-oauth-application-performed-by-organization-admin) to register the application and provide the Client ID and Client secret. Then you may continue onwards from [**Step 2.2**](#step-22---verify-setup).
 
 </hint-block>
 

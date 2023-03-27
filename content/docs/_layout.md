@@ -155,6 +155,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [GitHub.com](/vcs-integration/github-com)
 
+#### [Bitbucket.org](/vcs-integration/bitbucket-org)
+
 ### [Enable GitOps Workflow in Project](/vcs-integration/enable-gitops-workflow)
 
 ### [Name and Organize Schema Files](/vcs-integration/name-and-organize-schema-files)
