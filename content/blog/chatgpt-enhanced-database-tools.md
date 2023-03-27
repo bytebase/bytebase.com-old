@@ -30,13 +30,13 @@ When it comes to databases, the first thing that comes to mind is whether ChatGP
 
 ## Bytebase
 
-Bytebase is a database CI/CD tool that covers the entire life cycle of database development, and its SQL editor has also incorporated OpenAI's gpt-3.5-turbo in [its recent release](https://www.bytebase.com/changelog/bytebase-1-14-0), where you input natural language and have it converted to SQL. Stay tuned for a more advanced version chat bot 🤖️!
+Bytebase is a database CI/CD tool that covers the entire life cycle of database development, and its SQL editor has also incorporated OpenAI's gpt-3.5-turbo in [its recent release](/changelog/bytebase-1-14-0), where you input natural language and have it converted to SQL. Stay tuned for a more advanced version chat bot 🤖️!
 
 ![_](/static/blog/chatgpt-enhanced-database-tools/bytebase-sqleditor.webp)
 
 ## DBeaver
 
-As a veteran SQL client, in addition to visualization and management capabilities, [DBeaver](https://dbeaver.com/) also has a SQL editor, along with data & schema migration capabilities, and database connection monitoring. In early February, DBeaver also incorporated GPT-3 to have AI convert natural language to SQL. For instance, you can askfor "all invoices from Germany with a total of more than 4," or in German, "Zeig alle Rechnungen aus Deutschland mit der Gesamtsumme über 4," and it will automatically convert the request into a query.
+As a veteran SQL client, in addition to visualization and management capabilities, [DBeaver](https://dbeaver.com/) also has a SQL editor, along with data & schema migration capabilities, and database connection monitoring. In early February, DBeaver also incorporated GPT-3 to have AI convert natural language to SQL. For instance, you can ask for "all invoices from Germany with a total of more than 4", or in German, "Zeig alle Rechnungen aus Deutschland mit der Gesamtsumme über 4," and it will automatically convert the request into a query.
 
 ![_](/static/blog/chatgpt-enhanced-database-tools/dbeaver.webp)
 
@@ -60,6 +60,6 @@ The database behind OSSInsight is TiDB, and TiDB Cloud recently also launched an
 
 ## To wrap up
 
-It looks like using ChatGPT to enhance data management and analysis for your databases is gonna be an SOP in the database industry. Of course, these tools are just the tip of the iceberg, and their integration with ChatGPT is still in its early stages. However, it is clear that the benefits of combining ChatGPT with database management tools are enormous. Moreover, besides text2sql, ChatGPT can be used in many other database-related fields, such as customer support, query assistance, database management, and data analysis(you can also consult ChatGPT about what else it's capable of).
+It looks like using ChatGPT to enhance data management and analysis for your databases is gonna be an SOP in the database industry. Of course, these tools are just the tip of the iceberg, and their integration with ChatGPT is still in its early stages. However, it is clear that the benefits of combining ChatGPT with database management tools are enormous. Moreover, besides text2sql, ChatGPT can be used in many other database-related fields, such as customer support, query assistance, database management, and data analysis (you can also consult ChatGPT about what else it's capable of).
 
-DBAs: get ready to retire officially. (Just kidding, but perhaps the long-established SQL clients such as Navicat are already feeling a vague sense of crisis.)
+DBAs: get ready to retire officially. Just kidding, but perhaps the long-established SQL clients such as Navicat are already feeling a bit nervous.
