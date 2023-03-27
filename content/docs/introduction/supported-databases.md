@@ -12,7 +12,10 @@ Bytebase officially supports the following major versions for each supported dat
 - Snowflake
 - MongoDB - 4.0, 5.0, 6.0
 - Spanner
-- Redis 6.0, 6.2, 7.0
+- Redis - 6.0, 6.2, 7.0
+- Oracle - 21c at least
+- Microsoft SQL Server - 2019 at least
+- MariaDB - 10.7 at least
 
 Bytebase usually works fine with older database versions, we just won't support features specific to those older versions. We may add other open source databases in the future.
 
