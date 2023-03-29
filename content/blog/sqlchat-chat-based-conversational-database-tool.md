@@ -1,5 +1,5 @@
 ---
-title: Tools for Thought | Chat-based Conversational Database Tool
+title: Tools for Thought, A Chat-based Database Tool
 author: Tianzhou
 published_at: 2023/03/29 21:21:21
 feature_image: /static/blog/sqlchat-chat-based-conversational-database-tool/sqlchat.webp
@@ -42,7 +42,7 @@ Database tools are also a subclass of DevTools. We contended whether to develop 
 
 ![_](/static/blog/sqlchat-chat-based-conversational-database-tool/supported-dbs.webp)
 
-✨ 100% open source, give us a star at: [https://github.com/bytebase/sqlchat=](https://github.com/bytebase/sqlchat=)
+✨ 100% open source, give us a star at: [https://github.com/bytebase/sqlchat](https://github.com/bytebase/sqlchat)
 
 ---
 
