@@ -17,7 +17,7 @@
       >
         <div class="qrcode">
           <img src="~/assets/bb-helper-wechat-qrcode.webp" alt="qrcode" />
-          <span class="w-full text-white">加入社区，领取周边</span>
+          <span class="w-full text-white">加入用户交流群</span>
         </div>
       </div>
     </Transition>
