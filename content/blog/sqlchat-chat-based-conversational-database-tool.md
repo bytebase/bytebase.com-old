@@ -1,11 +1,11 @@
 ---
-title: Tools for Thought: Chat-based Conversational Database Tool
+title: Tools for Thought | Chat-based Conversational Database Tool
 author: Tianzhou
 published_at: 2023/03/29 21:21:21
 feature_image: /static/blog/sqlchat-chat-based-conversational-database-tool/sqlchat.webp
 tags: Announcement
 featured: true
-description: We wonder if ChatGPT can help us in the field of database administration, and we dug deep into some toolings that have incorporated ChatGPT to make our life easier.
+description: The arrival of Generative AI completely overturns the existing interface interaction paradigm, bringing everyone back to the starting line. How to make the most of this once-in-a-lifetime oppurtunity?
 ---
 
 The first software I was involved in after graduation provided a complete set of components from database to GUI controls, and then to custom scripting language, allowing users to build an app purely by dragging and dropping. Today, it is known as the so-called no-code/low-code platform. The software I helped develop was created way back in 1985 and is still being worked on, now at version 19.
