@@ -8,7 +8,7 @@ description: "- SaaS version - GitOps supports Bitbucket Cloud - SQL Chat"
 
 ## 🚀 New Features
 
-- Bytebase now offers a SaaS version [https://hub.bytebase.com/](https://hub.bytebase.com/)
+- Bytebase now offers a SaaS version [https://hub.bytebase.com/](https://hub.bytebase.com/).
 
 - GitOps supports Bitbucket Cloud ([bitbucket.org](https://bitbucket.org)) as the Git provider.[https://www.bytebase.com/docs/vcs-integration/bitbucket-org](/docs/vcs-integration/bitbucket-org)
 
@@ -23,8 +23,8 @@ description: "- SaaS version - GitOps supports Bitbucket Cloud - SQL Chat"
 
 ## 📰 Fresh off the press
 
-- Boost your productivity with ChatGPT's enhanced database tools!  Read a (non-exhaustive) summary [https://www.bytebase.com/blog/chatgpt-enhanced-database-tools](/blog/chatgpt-enhanced-database-tools)
-- Say goodbye to tedious SQL queries with SQL Chat, making database management a breeze with natural language processing [https://www.bytebase.com/blog/sql-chat](/blog/sql-chat)
+- Boost your productivity with ChatGPT's enhanced database tools! Read a (non-exhaustive) summary [https://www.bytebase.com/blog/chatgpt-enhanced-database-tools](/blog/chatgpt-enhanced-database-tools).
+- Say goodbye to tedious SQL queries with SQL Chat, making database management a breeze with natural language processing [https://www.bytebase.com/blog/sql-chat](/blog/sql-chat).
 
 ## 📕 Installation and Upgrade
 
