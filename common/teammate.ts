@@ -101,7 +101,7 @@ const teammateList = [
   {
     name: "Cathy",
     role: "team.roles.intern",
-    emeritus: false,
+    emeritus: true,
   },
 ];
 
