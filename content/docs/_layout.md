@@ -13,27 +13,29 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ## Get Started
 
-### [5 Mins Quick Start](/get-started/quick-start)
+### [SaaS](/get-started/saas)
+### [Self-Hosted](/get-started/self-hosted)
 
-### [Install](/get-started/install/overview)
+#### [5 Mins Quick Start](/get-started/quick-start)
+#### [Installation](/get-started/install/overview)
 
-#### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
+##### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
 
-#### [Option 2 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
+##### [Option 2 Deploy to Kubernetes](/get-started/install/deploy-to-kubernetes)
 
-#### [Option 3 Deploy to sealos](/get-started/install/deploy-to-sealos)
+##### [Option 3 Deploy to sealos](/get-started/install/deploy-to-sealos)
 
-#### [Option 4 Deploy to Rainbond](/get-started/install/deploy-to-rainbond)
+##### [Option 4 Deploy to Rainbond](/get-started/install/deploy-to-rainbond)
 
-#### [Option 5 Deploy to render](/get-started/install/deploy-to-render)
+##### [Option 5 Deploy to render](/get-started/install/deploy-to-render)
 
-#### [Option 6 Installation Script](/get-started/install/installation-script)
+##### [Option 6 Installation Script](/get-started/install/installation-script)
 
-#### [Option 7 Build from Source Code](/get-started/install/build-from-source-code)
+##### [Option 7 Build from Source Code](/get-started/install/build-from-source-code)
 
-#### [Configure External PostgreSQL](/get-started/install/external-postgres)
+##### [Configure External PostgreSQL](/get-started/install/external-postgres)
 
-#### [Configure External URL](/get-started/install/external-url)
+##### [Configure External URL](/get-started/install/external-url)
 
 #### [Configure Testing MySQL Instance](/get-started/install/local-mysql-instance)
 
