@@ -18,7 +18,7 @@ Before starting, make sure you have either of
    
   ![hub-workspace](/static/docs/get-started/saas/hub-workspace.webp)
 
-4. Wait for the workspace to be provisioned, and then check your email for the login link, email, and password.
+4. Wait several minutes for the workspace to be provisioned, and then check your email for the login link, email, and password.
 
 ## Log in to the workspace
 1. Click the **Login to your workspace** link in the email, you'll be redirect to the Bytebase console login page.
