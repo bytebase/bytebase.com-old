@@ -14,7 +14,7 @@ Before starting, make sure you have either of
 
 1. Visit `https://www.bytebase.com/`, and click **Sign Up for Cloud** on the top right corner.
 2. Log in to Bytebase hub via a Google or GitHub account.
-3. You'll be redirected to the hub workspace page, click **Create workspace**. Note that only one workspace is allowed per person.
+3. You'll be redirected to the hub workspace page, click **Create workspace**. Note that only one workspace is allowed per account.
    
   ![hub-workspace](/static/docs/get-started/saas/hub-workspace.webp)
 
