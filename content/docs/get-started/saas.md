@@ -21,7 +21,7 @@ Before starting, make sure you have either of
 4. Wait several minutes for the workspace to be provisioned, and then check your email for the login link, email, and password.
 
 ## Log in to the workspace
-1. Click the **Login to your workspace** link in the email, you'll be redirect to the Bytebase console login page.
+1. Click the **Login to your workspace** link in the email, you'll be redirected to the Bytebase console login page.
 
   ![bb-login](/static/docs/get-started/saas/bb-login.webp)
 
