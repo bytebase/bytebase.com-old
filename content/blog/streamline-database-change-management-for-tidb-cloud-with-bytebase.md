@@ -17,7 +17,7 @@ We are proud to announce our partnership with [PingCAP](https://www.pingcap.com/
 
 However, provisioning an instance of a cloud database is only the beginning of the lifecycle. As your business grows and changes, you need to modify the database schema (CREATE TABLE, CREATE INDEX) or change data (INSERT, UPDATE, DELETE). If this type of work is sidelined, it affects database performance. Worse, if a wrong statement is issued, such as accidentally using the DROP TABLE statement, the business will be interrupted for a long time.
 
-Bytebase is a DevOps tool that gives you a unified web portal to change, query, secure, and administrate the database throughout the application development lifecycle.
+Bytebase is a DevOps tool that gives you a unified web portal to change, query, secure, and govern the database throughout the application development lifecycle.
 
 The following is a streamlined database change management flow for TiDB Cloud with Bytebase:
 

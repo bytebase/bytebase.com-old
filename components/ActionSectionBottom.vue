@@ -2,7 +2,7 @@
   <div class="bg-indigo-700 rounded-3xl">
     <div class="max-w-7xl mx-auto py-8 sm:py-12 px-8 sm:px-12">
       <h2
-        class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+        class="space-y-1 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
       >
         <span class="block">{{
           $t("slogan.change-query-secure-one-place")
@@ -15,7 +15,7 @@
         class="mt-8 flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4"
       >
         <button
-          class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
+          class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
           @click="loginToHub"
         >
           {{ actionSentence1 }}
@@ -24,7 +24,7 @@
         <a
           href="https://cal.com/adela-bytebase/30min"
           target="__blank"
-          class="w-full sm:w-auto flex items-center justify-center px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80 md:py-4 md:text-2xl md:px-8"
+          class="w-full sm:w-auto flex items-center justify-center px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
           @click="track('book-demo')"
         >
           {{ actionSentence2 }}
@@ -64,14 +64,14 @@ import { useAuth0 } from "~/plugin/auth0";
 const { trackEvent } = Plausible();
 
 export default defineComponent({
+  components: {
+    Cloud,
+  },
   props: {
     moduleName: {
       required: true,
       type: String,
     },
-  },
-  components: {
-    Cloud,
   },
   setup(props) {
     const { app } = useContext();

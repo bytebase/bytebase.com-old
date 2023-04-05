@@ -26,7 +26,7 @@
   "slogan": {
     "reliable": "可靠的",
     "mission": "为 DevOps 和 DBA 团队打造的数据库变更工具",
-    "change-query-secure-one-place": "变更，查询，安全，统一在一处操作不同的数据库",
+    "change-query-secure-one-place": "变更，查询，安全，治理，统一管理所有的数据库",
     "database-devops-best-practice": "源自 Google 的数据库 DevOps 最佳实践",
     "deploy-now-in-5-seconds": "5 秒内立即部署",
     "deploy-bytebase-in-5-seconds": "5 秒部署 Bytebase",
