@@ -2,6 +2,12 @@
 title: Webhook Integration
 ---
 
+<hint-block type="warning">
+
+Please make sure the [--external-url](/docs/get-started/install/external-url) is set correctly.
+
+</hint-block>
+
 ## Project webhook
 User can configure project-level webhooks to let Bytebase post messages to the configured webhook endpoint upon various events.
 
