@@ -34,15 +34,15 @@ Database tools are also a subclass of DevTools. At Bytebase, We debated whether 
 
 ![_](/static/blog/sql-chat/sqlchat.webp)
 
-💬 SQL Chat is built from scratch, using chat-based inteface, instead of the traditional GUI-based SQL client.
+💬 SQL Chat is built with a chat-based interface in mind, rather than the traditional GUI-based SQL client.
 
 ![_](/static/blog/sql-chat/sqlchat-ui.webp)
 
-🚀 Built with the popular React + Next.js framework, you can deploy to Vercel with one click, private deployment is also supported.
+🚀 Built with the popular React + Next.js framework, you can deploy to Vercel in just one click, there will also be an option to self-host.
 
 ![_](/static/blog/sql-chat/vercel.webp)
 
-🦁️ Currently supports MySQL and PostgreSQL, and we plan to support more databases soon.
+🦁️ Currently supports MySQL and PostgreSQL, we plan to support more databases soon.
 
 ![_](/static/blog/sql-chat/supported-dbs.webp)
 
@@ -55,4 +55,4 @@ And SQL Chat is Bytebase's brick to pave the remaining path.
 
 ---
 
-Please try [https://sqlchat.ai](https://sqlchat.ai) online. You can also join our [Discord](https://discord.gg/6R3qb32h) and let us know your thoughts!
+Try [https://sqlchat.ai](https://sqlchat.ai) online. You can also join our [Discord](https://discord.gg/6R3qb32h) and let us know your thoughts!
