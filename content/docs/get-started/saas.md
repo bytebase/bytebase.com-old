@@ -26,5 +26,8 @@ Before starting, make sure you have either of
   ![bb-login](/static/docs/get-started/saas/bb-login.webp)
 
 2. Fill in the **Email** and **Password**, and click **Sign in**.
-3. A sample PostgreSQL instance is already available. If you want to add your own, make sure to whitelist the Bytebase SaaS IP `34.27.188.162` first.
+3. A sample PostgreSQL instance is already available. 
+   
+## Whitelist Bytebase SaaS IP
+- If you want to add your own instance, make sure to whitelist the Bytebase SaaS IP `34.27.188.162`.
 
