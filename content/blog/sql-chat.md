@@ -55,4 +55,4 @@ And SQL Chat is Bytebase's brick to pave the remaining path.
 
 ---
 
-Try [https://sqlchat.ai](https://sqlchat.ai) online. You can also join our [Discord](https://discord.gg/6R3qb32h) and let us know your thoughts!
+Try [https://sqlchat.ai](https://sqlchat.ai) online. You can also join our [Discord](https://discord.gg/z6kakemDjm) and let us know your thoughts!
