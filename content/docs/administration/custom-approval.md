@@ -7,7 +7,7 @@ In **Settings > Custom Approval**, you can choose which approval flow to use for
 ## Rules
 
 To choose the approval flow for a risk level, click the **Rules** tab.
-Choose the preset "Skip manual approval" approval flow for a risk if you don't need an approval flow at all.
+Choose the preset "Skip manual approval" approval flow for a risk if you don't want an approval flow at all.
 
 ## Approval flows
 
