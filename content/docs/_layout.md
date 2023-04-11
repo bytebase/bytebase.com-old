@@ -203,6 +203,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Back up Data](/administration/back-up-data)
 
+### [Risk Center](/administration/risk-center)
+
 ### [Custom Approval](/administration/custom-approval)
 
 ### [Environment Policy](/administration/environment-policy/overview)
