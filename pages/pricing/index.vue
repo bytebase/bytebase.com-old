@@ -580,7 +580,7 @@ export default defineComponent({
       pricing:
         plan.type === PlanType.ENTERPRISE
           ? (app.i18n.t("subscription.contact-us") as string)
-          : `$${plan.unitPrice}`,
+          : `$${plan.pricePerInstancePerMonth}`,
       pricePrefix: "",
       priceSuffix:
         plan.type === PlanType.TEAM
