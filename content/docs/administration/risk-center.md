@@ -13,7 +13,7 @@ You can configure different [custom approval flows](/docs/administration/custom-
 
 Click **Add rule** to create a new risk rule.
 
-#### Basics
+#### General information
 
 Name the rule so that you may know what it cares about. Select the operation type of rule. The **Risk** can be defined as **High**, **Moderate** or **Low**.
 
