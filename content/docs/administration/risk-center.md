@@ -32,6 +32,6 @@ Configure the condition of the rule. You may use a combination of conditions and
 
 A template is a system preset example of useful conditions that might be frequently used.
 
-Click **View** to view the detailed condition of a template. And click **Load** to load the template to your rule.
+Click **View** to view the detailed condition template. And click **Load** to load the template into your rule.
 
 ![templates](/static/docs/administration/risk-center/templates.webp)
