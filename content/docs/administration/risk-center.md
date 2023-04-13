@@ -4,7 +4,7 @@ title: Risk Center
 
 In **Settings > Risk Center**, you can define different risk levels for each operation types (DML, DDL and Create Database) with custom rules.
 
-Once an issue matches the risk conditions, it will be recognized as the risk levels you've defined.
+Once an issue matches the risk conditions, it will be assigned to the corresponding risk level you've defined.
  If an issue matches more than one risk levels, the highest level will be used.
 
 You can configure different [custom approval flows](/docs/administration/custom-approval) for each operation types and risk levels.
