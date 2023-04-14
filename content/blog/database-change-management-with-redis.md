@@ -24,8 +24,8 @@ You’ll have a GUI and You can use Bytebase free version to finish the tutorial
 ## Features included
 
 - Change Workflow
-- Change History
 - SQL Editor Admin Mode
+- Change History
 
 ## Prerequisites
 
@@ -111,6 +111,10 @@ In Bytebase, a **Database** always belongs to a single **Project**. **Issue** re
 
 2. Switch to Admin mode, input `get name`, and click **Run**. You'll see the result.
 ![bb-sql-editor-query-name](/static/blog/database-change-management-with-redis/bb-sql-editor-query-name.webp)
+
+## Step 7 - View change history
+1. Go back to project and click **Change History**, you'll see the list of all data changes.
+![bb-project-change-history](/static/blog/database-change-management-with-redis/bb-project-change-history.webp)
 
 ## Summary and Next
 
