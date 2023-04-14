@@ -1,7 +1,7 @@
 ---
 title: Database Change Management with Redis and GitHub
 author: Ningjing
-published_at: 2023/03/22 11:45
+published_at: 2023/04/14 11:45
 feature_image: /static/blog/database-change-management-with-redis-and-github/feature-image.webp
 tags: Tutorial
 integrations: Redis, GitHub
