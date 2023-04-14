@@ -2,7 +2,7 @@
 title: Custom Approval
 ---
 
-In **Settings > Custom Approval**, you can choose which approval flow to use for a risk level and define approval flows.
+In **Settings > Custom Approval**, you can choose which approval flow to use for a [risk level](/docs/administration/risk-center) and define approval flows.
 
 ## Rules
 
