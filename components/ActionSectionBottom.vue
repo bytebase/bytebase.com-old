@@ -12,15 +12,37 @@
         }}</span>
       </h2>
       <div
-        class="mt-8 flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4"
+        class="mt-8 flex flex-col sm:flex-row justify-between sm:space-y-0 space-y-4"
       >
-        <button
-          class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
-          @click="loginToHub"
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4"
         >
-          {{ actionSentence1 }}
-          <Cloud class="ml-2 w-8 h-8" />
-        </button>
+          <button
+            class="flex items-center justify-center px-2 sm:px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
+            @click="loginToHub"
+          >
+            {{ actionSentence1 }}
+            <Cloud class="ml-2 w-8 h-8" />
+          </button>
+          <nuxt-link
+            :to="localePath('/docs/get-started/install/deploy-with-docker')"
+            class="w-full sm:w-auto flex items-center justify-center px-8 py-2 border border-transparent text-base sm:text-xl font-medium rounded-md text-gray-900 bg-white hover:opacity-80"
+            >{{ $t("common.self-host") }}
+            <svg
+              class="ml-2 w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+          </nuxt-link>
+        </div>
         <a
           href="https://cal.com/adela-bytebase/30min"
           target="__blank"
