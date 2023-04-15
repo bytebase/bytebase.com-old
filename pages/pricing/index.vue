@@ -659,7 +659,7 @@ export default defineComponent({
       } else if (plan.type === PlanType.ENTERPRISE) {
         analytics.value?.track(PRICING_EVENT.ENTERPRISE_PLAN_CLICK);
         window.open(
-          "mailto:support@bytebase.com?subject=Request for enterprise plan"
+          "https://docs.google.com/forms/d/e/1FAIpQLSfe1JvroV4ckBMJo8hDXBYGeuzN0Sn1Ylg1lIUamN2jqu9Fcw/viewform"
         );
       }
     };
