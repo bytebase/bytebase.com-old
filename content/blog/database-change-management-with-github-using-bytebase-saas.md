@@ -6,7 +6,7 @@ feature_image: /static/blog/database-change-management-with-github-using-bytebas
 tags: Tutorial
 integrations: MySQL, GitHub
 level: Intermediate
-description: This tutorial will bring your schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase SaaS.
+description: Bytebase provide its SaaS version since 1.15.0, this tutorial will bring your schema change to the next level by introducing the GitOps workflow, where you commit schema change script to the GitHub repository, which will in turn trigger the schema deployment pipeline in Bytebase SaaS.
 ---
 This is a series of articles about Database Change Management using Bytebase SaaS. We take Amazon Aurora MySQL as an example and is also applicable to Amazon Aurora Serverless.
 

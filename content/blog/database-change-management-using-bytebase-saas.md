@@ -6,7 +6,7 @@ feature_image: /static/blog/database-change-management-using-bytebase-saas/featu
 tags: Tutorial
 integrations: MySQL
 level: Beginner
-description: Bytebase provide its SaaS version since 1.15.0, This tutorial is a step-by-step guide to set up Database Change Management for Amazon Aurora MySQL using Bytebase SaaS. 
+description: Bytebase provide its SaaS version since 1.15.0, this tutorial is a step-by-step guide to set up Database Change Management for Amazon Aurora MySQL using Bytebase SaaS. 
 ---
 This is a series of articles about Database Change Management using Bytebase SaaS. We take Amazon Aurora MySQL as an example and is also applicable to Amazon Aurora Serverless.
 
