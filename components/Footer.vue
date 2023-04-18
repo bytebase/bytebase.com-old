@@ -461,7 +461,7 @@
         </a>
 
         <a
-          href="https://discord.gg/huyw7gRsyA"
+          href="https://discord.gg/Fac9nmZ95j"
           target="__blank"
           class="text-gray-800 hover:text-gray-600"
         >
