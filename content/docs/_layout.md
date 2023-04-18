@@ -13,7 +13,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ## Get Started
 
-### [SaaS](/get-started/saas)
+### [Cloud](/get-started/cloud)
 ### [Self-Hosted](/get-started/self-hosted)
 
 #### [5 Mins Quick Start](/get-started/quick-start)
