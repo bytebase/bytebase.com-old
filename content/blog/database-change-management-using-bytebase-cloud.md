@@ -58,7 +58,7 @@ In Bytebase, ​​an Instance could be your on-premises MySQL instance, an AWS 
 1. Before adding your Amazon Aurora MySQL instance, go to your Amazon and find the instance. Click **Connectivity & Security**, and click the belonging **VPC security groups**.
 ![aws-security-groups](/static/blog/database-change-management-using-bytebase-cloud/aws-security-groups.webp)
 
-2. Click **Edit inbound rules**, choose `Custom TCP` as **Type**, and fill **Source** with [SaaS IP](/docs/get-started/saas#whitelist-bytebase-saas-ip), which is `34.27.188.162/32`.
+2. Click **Edit inbound rules**, choose `Custom TCP` as **Type**, and fill **Source** with [Bytebase Cloud IP](/docs/get-started/cloud#whitelist-bytebase-cloud-ip), which is `34.27.188.162/32` as of writing.
 ![aws-inbound-rules](/static/blog/database-change-management-using-bytebase-cloud/aws-inbound-rules.webp)
 ![aws-edit-inbound-rules](/static/blog/database-change-management-using-bytebase-cloud/aws-edit-inbound-rules.webp)
 
