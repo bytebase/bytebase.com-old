@@ -250,6 +250,6 @@ WHERE
 
 ## Summary and What's Next
 
-Now you have connected Amazon Aurora with Bytebase SaaS, and used the UI workflow to accomplish schema change and data change. Bytebase will record the full change history for you. Furthermore, the **Enterprise Plan** is equipped with **Schema Drift Detection** to detect out-of-band schema changes performed outside of Bytebase.
+Now you have connected Amazon Aurora with Bytebase, and used the UI workflow to accomplish schema change and data change. Bytebase will record the full change history for you. Furthermore, the **Enterprise Plan** is equipped with **Schema Drift Detection** to detect out-of-band schema changes performed outside of Bytebase.
 
-In the next post, you’ll try out GitOps workflow: store your Amazon Aurora schema in GitHub and Bytebase will pick up the changes to the repo, bringing your Amazon Aurora change workflow to the next level, aka **Database DevOps** - [Database as Code](https://www.bytebase.com/blog/database-as-code).
+In the [next post](/blog/database-change-management-with-amazon-aurora-and-github), you’ll try out GitOps workflow: store your Amazon Aurora schema in GitHub and Bytebase will pick up the changes to the repo, bringing your Amazon Aurora change workflow to the next level, aka **Database DevOps** - [Database as Code](https://www.bytebase.com/blog/database-as-code).
