@@ -4,7 +4,7 @@ author: Mila
 published_at: 2023/04/07 21:21:21
 feature_image: /static/blog/is-sql-review-necessary/banner.webp
 tags: Industry
-featured: true
+featured: false
 description: Real talk, are strict requirements on database schema really necessary? 
 ---
 
