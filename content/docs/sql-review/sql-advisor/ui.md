@@ -2,7 +2,7 @@
 title: SQL Advisor UI
 ---
 
-Bytebase provides automatic SQL advisor in two processes:
+SQL advisor runs automatic SQL checks when:
 
 - Schema or data change process
 - Data query process
