@@ -2,7 +2,7 @@
 title: Schema Editor
 ---
 
-<hint-block type="info">
+<hint-block type="warning">
 
 This feature is in beta and only available for MySQL and PostgreSQL.
 

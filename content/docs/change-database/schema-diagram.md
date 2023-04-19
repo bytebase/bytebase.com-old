@@ -2,7 +2,7 @@
 title: Schema Diagram
 ---
 
-<hint-block type="info">
+<hint-block type="warning">
 
 This feature is in beta.
 

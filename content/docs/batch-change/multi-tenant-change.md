@@ -2,6 +2,12 @@
 title: Change Databases from Multiple Tenants
 ---
 
+<hint-block type="info">
+
+This feature is only available in the Enterprise Plan.
+
+</hint-block>
+
 Bytebase allows you to change **a collection of databases with identical schemas**, these databases are often referred as [tenant databases](/docs/concepts/tenant-database).
 
 Typical scenarios of tenant databases are:
