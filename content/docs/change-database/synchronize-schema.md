@@ -2,6 +2,13 @@
 title: Synchronize Schema
 ---
 
+<hint-block type="info">
+
+For the Free Plan, you can only sync from the latest schema version.
+Syncing from arbitrary schema versions is available in the Pro Plan and Enterprise Plan.
+
+</hint-block>
+
 <hint-block type="warning">
 
 This feature is in beta and only available for MySQL and PostgreSQL.

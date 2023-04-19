@@ -4,7 +4,7 @@ title: Rollback Data Changes
 
 <hint-block type="warning">
 
-This feature is currently in beta.
+This feature is in beta.
 
 </hint-block>
 

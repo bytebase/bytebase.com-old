@@ -2,13 +2,21 @@
 title: External Approval
 ---
 
-Users can configure Bytebase issues to be approved by external systems. Feishu (Lark) is the only supported external systems at the moment, but stay tuned for more.
 
 <hint-block type="info">
+
+This feature is only available in the Enterprise Plan.
+
+</hint-block>
+
+<hint-block type="warning">
 
 Bytebase will approve the **whole stage of tasks** instead of a single task if it is approved on the IM side.
 
 </hint-block>
+
+
+Users can configure Bytebase issues to be approved by external systems. Feishu (Lark) is the only supported external systems at the moment, but stay tuned for more.
 
 ## Setup Feishu Custom App
 

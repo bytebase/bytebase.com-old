@@ -39,6 +39,11 @@ This document describes how to add an instance in order to synchronize databases
 After adding an instance, click **Databases** on the navigation bar. You can find the table is still empty. It’s because you haven’t created any project yet. In Bytebase, only databases belong to a user project will show up on the Databases page.
 
 ## Configure read-only connection
+<hint-block type="info">
+
+This feature is only available in the Enterprise Plan.
+
+</hint-block>
 
 To separate from admin connection, you can configure a read-only connection used by SQL Editor once an instance is added. This separation can be configured at the database user/role access control level or replication instance level.
 

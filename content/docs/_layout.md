@@ -75,7 +75,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ---
 
-## SQL Review
+## [SQL Review](/sql-review/overview)
 
 ### [SQL Advisor](/sql-review/sql-advisor/overview)
 

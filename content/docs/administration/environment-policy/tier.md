@@ -4,7 +4,7 @@ title: Environment Tier
 
 <hint-block type="info">
 
-This feature is only available in the Enterprise plan.
+This feature is only available in the Enterprise Plan.
 
 </hint-block>
 
