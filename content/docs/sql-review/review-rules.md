@@ -1,13 +1,8 @@
 ---
 title: Review Rules
 ---
-<hint-block type="warning">
 
-Review rules only supports SQL checks in **Issue** now. Support for **SQL Editor** is coming soon.
-
-</hint-block>
-
-Bytebase provides customizable SQL lint rules to check common issues in schema change process.
+Bytebase provides customizable SQL lint rules to check common issues in database change and query process.
 
 Different sets of rules can form different [SQL Review Policies](/docs/sql-review/review-policy/overview) for the respective environment.
 
