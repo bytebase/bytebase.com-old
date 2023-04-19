@@ -2,12 +2,6 @@
 title: GitOps SQL Review CI
 ---
 
-<hint-block type="warning">
-
-This feature requires Enterprise Plan.
-
-</hint-block>
-
 ## Set up SQL Review CI
 
 This feature requires the **GitOps Workflow**. You can follow [GitOps Workflow](/docs/vcs-integration/overview) to set up.
