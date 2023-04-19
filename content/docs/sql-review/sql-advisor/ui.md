@@ -4,8 +4,8 @@ title: SQL Advisor UI
 
 SQL advisor runs automatic SQL checks when:
 
-- Schema or data change process
-- Data query process
+- Schema or data change
+- Data query
 
 
 ## Schema or data change process
