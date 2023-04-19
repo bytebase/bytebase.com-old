@@ -1,6 +1,11 @@
 ---
 title: Customize the workspace with your own logo
 ---
+<hint-block type="info">
+
+This feature is only available in the Enterprise Plan.
+
+</hint-block>
 
 This document shows you how to add a logo to your workspace.
 

@@ -2,6 +2,12 @@
 title: Batch Change Tenant Databases
 ---
 
+<hint-block type="info">
+
+This feature is only available in the Enterprise Plan.
+
+</hint-block>
+
 To practice GitOps with [tenant databases](/docs/batch-change/multi-tenant-change), you need to enable the [VCS Integration](/docs/vcs-integration/overview) for your selected project, then use the VCS repository instead of our UI to organize and propose schema and data changes.
 
 ## Migration scripts

@@ -10,7 +10,8 @@ Bytebase provides the [Terraform Provider](https://registry.terraform.io/provide
 - More to come
 
 <hint-block type="info">
-The Bytebase Provider itself is free to use. Some advanced resource operations require TEAM or ENTERPRISE plan.
+The Bytebase Provider itself is free to use. Some advanced resource operations require Pro or Enterprise Plan.
+
 </hint-block>
 
 ## Create service account
