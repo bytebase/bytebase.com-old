@@ -203,7 +203,7 @@ In this section, you’ll be guided through this process.
 1. Go to your Terminal, connect to MySQL or use **SQL Editor Admin Mode** and add a column `age` to table `student`.
 ![mysql-add-column](/static/blog/database-change-management-with-mysql/mysql-add-column.webp)
 
-2. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database `student`
+1. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database `student`
 3. 
 ![schema-drift](/static/blog/database-change-management-with-mysql/schema-drift.webp)
 
