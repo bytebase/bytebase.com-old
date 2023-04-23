@@ -24,7 +24,7 @@ Bytebase provides a GUI for teams to **perform database changes** and **retain f
 
 At the end, there is a bonus section about **Schema Drift Detection** for those advanced users.
 
-## Features included
+## Features Covered in This Turtorial
 
 - Change Workflow
 - Schema Editor
