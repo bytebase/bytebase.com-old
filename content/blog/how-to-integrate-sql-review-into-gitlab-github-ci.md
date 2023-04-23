@@ -17,7 +17,7 @@ For the sake of this tutorial, we will use GitLab as an example, GitHub works si
 
 ## Prerequisites
 
-This feature requires the [Enterprise Plan](/pricing). (Starting from v1.8.0, you can start a 14-day team plan trial without registration!)
+You can use **Free Plan** to finish this tutorial.
 
 Please enable the [VCS workflow](/docs/vcs-integration/overview) for your Bytebase workspace and project.
 

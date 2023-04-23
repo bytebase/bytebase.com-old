@@ -1,13 +1,6 @@
 ---
 title: Roles and Permissions (RBAC)
 ---
-
-<hint-block type="info">
-
-RBAC is only available in Team and Enterprise plan. In Free plan, Bytebase does not enforce RBAC and every user has full permissions.
-
-</hint-block>
-
 ## Overview
 
 Bytebase employs RBAC (Role-Based-Access-Control) and provides two role sets at the workspace and project level:
