@@ -129,16 +129,16 @@ CREATE TABLE HELLO_WORLD
 5. The issue status will become Done.
 ![bb-is-create-table-done](/static/blog/database-change-management-with-snowflake/bb-is-create-table-done.webp)
 
-6. On the issue page, click **view migration**. You will see diff for each migration.
+6. On the issue page, click **view change**. You will see diff for each migration.
 ![bb-view-migration](/static/blog/database-change-management-with-snowflake/bb-view-migration.webp)
 
-7. You can also go to **Migration History** under the project to view the full history. Or go into a specific database to view its history.
+7. You can also go to **Change History** under the project to view the full history. Or go into a specific database to view its history.
 ![bb-prj-mh](/static/blog/database-change-management-with-snowflake/bb-prj-mh.webp)
 ![bb-db-mh](/static/blog/database-change-management-with-snowflake/bb-db-mh.webp)
 
 ## Bonus Section - Schema Drift Detection
 
-To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
+To follow this section, you need to have **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 ![trial-14-days](/static/blog/database-change-management-with-snowflake/trial-14-days.webp)
 
 Now you can see the full migration history of `DB_DEMO_BB`. However, what is **Establish new baseline**? When should it be used?
@@ -150,7 +150,7 @@ In this section, you’ll be guided through this process.
 1. Go to Snowflake, and add a COLUMN there. Make sure the new column is added.
 ![sf-alter-add-age](/static/blog/database-change-management-with-snowflake/sf-alter-add-age.webp)
 
-2. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
+1. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database DB_DEMO_BB
 ![bb-db-schema-drift](/static/blog/database-change-management-with-snowflake/bb-db-schema-drift.webp)
 
 The Anomaly Center also surfaces the drift

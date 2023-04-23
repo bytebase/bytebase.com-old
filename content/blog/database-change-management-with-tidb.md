@@ -111,7 +111,8 @@ CREATE TABLE t1 (
   nickname VARCHAR(255)
 );
 ````
-4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Click **Resolve issue**.
+4. Bytebase will do some basic checks and then execute the SQL. Since it’s for `Test` environment, the issue is automatically approved by default. Meanwhile, Bytebase has run several task checks before executing the SQL, and one such task check is called SQL Reivew. You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview). Click **Resolve issue**. 
+
 ![issue-create-t1](/static/blog/database-change-management-with-tidb/issue-create-t1.webp)
 
 5. The issue status will become Done.
@@ -126,7 +127,7 @@ CREATE TABLE t1 (
 
 ## Bonus Section - Schema Drift Detection
 
-To follow this section, you need to have **Team Plan** or **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
+To follow this section, you need to have **Enterprise Plan** (you can start 14 days trial directly in the product without credit card).
 ![trial-14-days](/static/blog/database-change-management-with-tidb/trial-14-days.webp)
 
 Now you can see the full migration history of database `demo`. However, what is **Establish new baseline**? When should it be used?
@@ -140,7 +141,7 @@ In this section, you’ll be guided through this process.
 and add a COLUMN there. Make sure the new column is added.
 ![terminal-t1](/static/blog/database-change-management-with-tidb/terminal-t1.webp)
 
-2. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database `demo`:
+1. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database `demo`:
 ![db-demo-schema-drift](/static/blog/database-change-management-with-tidb/db-demo-schema-drift.webp)
 
 The Anomaly Center also surfaces the drift:

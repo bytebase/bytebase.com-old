@@ -63,7 +63,7 @@ docker run --init \
 
 ## Step 2 - Add PostgreSQL in Bytebase
 
-In Bytebase, ​​an Instance could be your on-premises PostgreSQL instance, an AWS RDS instance etc, in this tutorial.
+In Bytebase, ​​an **Instance ** could be your on-premises PostgreSQL instance, an AWS RDS instance and etc, in this tutorial, it's an on-premises PostgreSQL instance.
 
 1. Visit `localhost:5678` and log in.
 ![login](/static/blog/database-change-management-with-postgresql/login.webp)
@@ -115,19 +115,19 @@ In Step 4, you actually created an issue in **UI workflow** and then executed it
 3. There are two options **Schema Editor** and **Raw SQL**, here we choose **Schema Editor** to create a table `t1` via UI. Click **Add Column** to add a `name` column. Click **Preview issue**.
 ![bb-schema-editor](/static/blog/database-change-management-with-postgresql/bb-schema-editor.webp)
 
-3. **Title** and **SQL** will be filled automatically. You can select the **Assignee** to review the issue and then click **Create**.
+4. **Title** and **SQL** will be filled automatically. You can select the **Assignee** to review the issue and then click **Create**.
 ![bb-issue-new-t1](/static/blog/database-change-management-with-postgresql/bb-issue-new-t1.webp)
 
-4. Bytebase will run some basic checks and wait for the **Assignee** to approve.
+5. Bytebase will run some basic checks and wait for the **Assignee** to approve. One such task check is called SQL Reivew. You may [customize your own SQL Review policies](/docs/sql-review/review-policy/overview).
 ![bb-issue-checks-approve](/static/blog/database-change-management-with-postgresql/bb-issue-checks-approve.webp)
 
-5. Click **Approve** and the SQL will execute. Click **Resolve issue** and the issue status will become `Done`.
+6. Click **Approve** and the SQL will execute. Click **Resolve issue** and the issue status will become `Done`.
 ![bb-issue-t1-resolve](/static/blog/database-change-management-with-postgresql/bb-issue-t1-resolve.webp)
 
-6. On the issue page, click **View change**. You will see the database difference.
+7. On the issue page, click **View change**. You will see the database difference.
 ![bb-view-change](/static/blog/database-change-management-with-postgresql/bb-view-change.webp)
 
-7. You can also go to **Change History** under the project to view the full history. Or go into a specific database to view its history.
+8. You can also go to **Change History** under the project to view the full history. Or go into a specific database to view its history.
 ![bb-project-change-history](/static/blog/database-change-management-with-postgresql/bb-project-change-history.webp)
 
 ![bb-db-demo-change-history](/static/blog/database-change-management-with-postgresql/bb-db-demo-change-history.webp)
