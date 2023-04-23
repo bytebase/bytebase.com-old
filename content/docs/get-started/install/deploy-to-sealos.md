@@ -51,6 +51,9 @@ spec:
               memory: 32Mi
           image: bytebase/bytebase:1.11.0
           imagePullPolicy: Always
+          env:
+          - name: PG_URL
+            value: "postgresql://test:2pk5Ra2FdqiF8idERi5Tn5yTbvqPslZaYSgw1Qh2y4MljWBkb2OTvpvK4lwmTVXM@acid-test.ns-8b66134e-5294-480f-b6c4-00243fc2488e.svc.cluster.local:5432/sealos"
           args:
             [
               "--data",
@@ -59,8 +62,6 @@ spec:
               "https://bytebase.cloud.sealos.io",
               "--port",
               "8080",
-              "--pg",
-              "postgresql://test:2pk5Ra2FdqiF8idERi5Tn5yTbvqPslZaYSgw1Qh2y4MljWBkb2OTvpvK4lwmTVXM@acid-test.ns-8b66134e-5294-480f-b6c4-00243fc2488e.svc.cluster.local:5432/sealos",
             ]
           ports:
             - containerPort: 8080
