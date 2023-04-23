@@ -33,6 +33,7 @@ At the end, there is a bonus section about **Schema Drift Detection** for those 
 - Change History
 - DML Rollback
 - Drift Detection
+
 ## Prerequisites
 Before you start, make sure you have [Docker](https://www.docker.com/) installed.
 
