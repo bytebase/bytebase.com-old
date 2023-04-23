@@ -204,7 +204,7 @@ In this section, you’ll be guided through this process.
 ![mysql-add-column](/static/blog/database-change-management-with-mysql/mysql-add-column.webp)
 
 1. Wait for 10 mins (as Bytebase does the check roughly every 10 mins). Go back to Bytebase, and you can find the Schema Drift on database `student`
-3. 
+1. 
 ![schema-drift](/static/blog/database-change-management-with-mysql/schema-drift.webp)
 
 1. Click on **View diff**, you will see the exact drift. 
