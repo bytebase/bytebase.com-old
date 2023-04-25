@@ -207,6 +207,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Custom Approval](/administration/custom-approval)
 
+### [Custom Roles](/administration/custom-roles)
+
 ### [Environment Policy](/administration/environment-policy/overview)
 
 #### [Environment Tier](/administration/environment-policy/tier)
