@@ -266,7 +266,7 @@ The table already exists. Found in Bytebase's pre-execution checks, please confi
 
 Create table partition. Check [Disallow partition table](/docs/sql-review/review-rules#table.disallow-partition) for details.
 
-<h3 id="609">609 - Table is referenced by view</h3>
+<h3 id="609">609 - Table is referenced by views</h3>
 
 The table is referenced by views. Found in Bytebase's pre-execution checks, please confirm if there is a problem with the SQL.
 
