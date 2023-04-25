@@ -19,3 +19,7 @@ Choose the preset "Skip manual approval" approval flow for a risk if you don't w
 
 To create or update approval flows, click the **Approval Flows** tab.
 An approval flow must have at least one approval node.
+
+## Custom roles
+
+Sometimes, the predefined project roles might not fit your needs. In that case, you can use [custom roles](/docs/administration/custom-roles).
