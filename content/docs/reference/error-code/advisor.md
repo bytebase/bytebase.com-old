@@ -94,7 +94,7 @@ The SQL has redundant `ALTER TABLE`. Check [Merge ALTER TABLE](/docs/sql-review/
 
 The SQL dry-run failed. Check [Dry run DML statements](/docs/sql-review/review-rules#statement.dml-dry-run) for details.
 
-<h3 id="209">209 - Statement affected row exceeds limit</h3>
+<h3 id="209">209 - Statement affected rows exceed limit</h3>
 
 The SQL affected row exceeds the limit. Check [Limit affected rows](/docs/sql-review/review-rules#statement.affected-row-limit) for details.
 
