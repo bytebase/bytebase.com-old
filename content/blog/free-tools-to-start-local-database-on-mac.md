@@ -8,7 +8,7 @@ featured: true
 description: To manually spin up several different kinds (and versions) of database instances for testing can be gruesome. Here are some free tools to help you start a local database instance on Mac.
 ---
 
-Bytebase is a Database CI/CD tool for DevOps teams. It currently supports 10+ databases including MySQL, PostgreSQL, Redis, and MariaDB. From development to testing, we need to deploy several different kinds of database instances, which can be rather time-consuming and labor-intensive if deployed one by one.
+Bytebase is a Database CI/CD tool for DevOps teams. It currently supports 10+ databases including MySQL, PostgreSQL, Redis. From development to testing, we need to deploy several different kinds of database instances, which can be rather time-consuming and labor-intensive if deployed one by one.
 
 There are a handful of tools on the market to spin up local database instances quickly, and folks on my team have recommended several free tools, so I thought I'd do a round-up.
 
@@ -38,7 +38,7 @@ Postgres.app is also [open source](https://github.com/PostgresApp/PostgresApp) w
 
 ## StackBricks
 
-[StackBricks](https://stackbricks.app/) supports MariaDB (the only tool mentioned today that supports this database!), MySQL, PostgreSQL and Redis, and supports a wide range of versions, as well as the ability to start multiple local databases on multiple ports.
+[StackBricks](https://stackbricks.app/) supports MariaDB (points for being the only tool in this roundup that supports this database!), MySQL, PostgreSQL and Redis, and that includes a wide range of versions, as well as the ability to start multiple local databases on multiple ports.
 
 ![stackbricks](/static/blog/local-db/stackbricks.webp)
 
