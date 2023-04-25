@@ -1177,7 +1177,7 @@ Specifically, Bytebase checks:
 #### Support database engine
 
 - PostgreSQL
-- MySQl
+- MySQL
 - TiDB
 
 <h3 id="index.create-concurrently">Create index concurrently</h3>
