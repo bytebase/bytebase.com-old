@@ -92,7 +92,7 @@ The SQL has redundant `ALTER TABLE`. Check [Merge ALTER TABLE](/docs/sql-review/
 
 <h3 id="208">208 - Statement dry run failed</h3>
 
-The SQL dry run failed. Check [Dry run DML statements](/docs/sql-review/review-rules#statement.dml-dry-run) for details.
+The SQL dry-run failed. Check [Dry run DML statements](/docs/sql-review/review-rules#statement.dml-dry-run) for details.
 
 <h3 id="209">209 - Statement affected row exceeds limit</h3>
 
