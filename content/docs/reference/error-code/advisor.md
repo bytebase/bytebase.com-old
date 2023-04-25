@@ -96,7 +96,7 @@ The SQL dry-run failed. Check [Dry run DML statements](/docs/sql-review/review-r
 
 <h3 id="209">209 - Statement affected rows exceed limit</h3>
 
-The SQL affected row exceeds the limit. Check [Limit affected rows](/docs/sql-review/review-rules#statement.affected-row-limit) for details.
+The SQL affected rows exceed the limit. Check [Limit affected rows](/docs/sql-review/review-rules#statement.affected-row-limit) for details.
 
 <h3 id="210">210 - Statement add column with default</h3>
 
