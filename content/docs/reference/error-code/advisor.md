@@ -180,7 +180,7 @@ The column comment is too long. Check [Column comment convention](/docs/sql-revi
 
 <h3 id="410">410 - Auto-increment column is not integer</h3>
 
-The auto-increment column is not integer. Check [Use integer for auto-increment columns](/docs/sql-review/review-rules#column.auto-increment-must-integer) for details.
+The auto-increment column is not an integer. Check [Use integer for auto-increment columns](/docs/sql-review/review-rules#column.auto-increment-must-integer) for details.
 
 <h3 id="411">411 - Disabled column type</h3>
 
