@@ -107,8 +107,6 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Change Workflow](/change-database/change-workflow/overview)
 
-#### [LGTM Check](/change-database/change-workflow/lgtm)
-
 #### [Issue Need Attention](/change-database/change-workflow/issue-need-attention)
 
 ### [State-based Migration](/change-database/state-based-migration/overview)
@@ -211,7 +209,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Environment Tier](/administration/environment-policy/tier)
 
-#### [Approval Policy](/administration/environment-policy/approval-policy)
+#### [Rollout Policy](/administration/environment-policy/rollout-policy)
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
