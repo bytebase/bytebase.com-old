@@ -268,7 +268,7 @@ Create table partition. Check [Disallow partition table](/docs/sql-review/review
 
 <h3 id="609">609 - Table is referenced by view</h3>
 
-The table is referenced by view. Found in Bytebase's pre-execution checks, please confirm if there is a problem with the SQL.
+The table is referenced by views. Found in Bytebase's pre-execution checks, please confirm if there is a problem with the SQL.
 
 ## Database
 
