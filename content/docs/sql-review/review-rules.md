@@ -809,7 +809,6 @@ Bytebase checks if the SQL statement will change the column type.
 
 Specifically, Bytebase checks:
 
-- `CREATE TABLE` statements
 - `ALTER TABLE` statements
 
 #### Support database engine
