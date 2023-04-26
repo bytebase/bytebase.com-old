@@ -167,6 +167,12 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Troubleshoot](/vcs-integration/troubleshoot)
 
+## [Slow Query](/slow-query/overview)
+
+### [Enable slow query log for MySQL](/slow-query/enable-slow-query-log-for-mysql)
+
+### [Enable pg_stat_statements for PostgreSQL](/slow-query/enable-pg-stat-statements-for-postgresql)
+
 ## Disaster Recovery
 
 ### [Backup and Restore Database](/disaster-recovery/backup-restore-database/overview)
