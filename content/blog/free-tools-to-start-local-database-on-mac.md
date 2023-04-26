@@ -34,8 +34,6 @@ It's actually a complete PostgreSQL installer that packages Postgres into a stan
 
 Postgres.app is also [open source](https://github.com/PostgresApp/PostgresApp) with active development.
 
-![postgresapp](/static/blog/local-db/postgresapp.webp)
-
 ## StackBricks
 
 [StackBricks](https://stackbricks.app/) supports MariaDB (points for being the only tool in this round-up that supports MariaDB!), MySQL, PostgreSQL and Redis, and a wide range of their versions, as well as the ability to start multiple local databases on multiple ports.
