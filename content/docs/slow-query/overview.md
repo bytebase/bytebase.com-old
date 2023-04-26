@@ -50,7 +50,7 @@ Specifically, you can view the **Slow Query Detail** for each MySQL slow query.
 
 ## Slow Query Weekly Summary Report
 
-Bytebase will send a weekly summary report to the workspace owner, DBA, and project owner. This feature requires configuring the SMTP server in the workspace settings. Currently, Bytebase will send the weekly summary report every Saturday at 0:00 ~ 1:00 AM.
+Bytebase will send a weekly summary report to the workspace owner, DBA, and project owner. This feature requires configuring the [SMTP server](/docs/administration/mail-delivery) in the workspace settings. Currently, Bytebase will send the weekly summary report every Saturday at 0:00 ~ 1:00 AM.
 
 The weekly summary report for workspace owner and DBA includes the following information:
 
