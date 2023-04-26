@@ -14,9 +14,11 @@ expand_section_list: ["Introduction", "Get Started"]
 ## Get Started
 
 ### [Cloud](/get-started/cloud)
+
 ### [Self-Hosted](/get-started/self-hosted)
 
 #### [5 Mins Quick Start](/get-started/quick-start)
+
 #### [Installation](/get-started/install/overview)
 
 ##### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
@@ -232,6 +234,8 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [External Approval](/administration/webhook-integration/external-approval)
 
 ### [Archive](/administration/archive)
+
+### [Mail Delivery](/administration/mail-delivery)
 
 ---
 
