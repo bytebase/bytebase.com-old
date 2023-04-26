@@ -14,9 +14,11 @@ expand_section_list: ["Introduction", "Get Started"]
 ## Get Started
 
 ### [Cloud](/get-started/cloud)
+
 ### [Self-Hosted](/get-started/self-hosted)
 
 #### [5 Mins Quick Start](/get-started/quick-start)
+
 #### [Installation](/get-started/install/overview)
 
 ##### [Option 1 Docker (5 seconds)](/get-started/install/deploy-with-docker)
@@ -106,8 +108,6 @@ expand_section_list: ["Introduction", "Get Started"]
 ## Change Database
 
 ### [Change Workflow](/change-database/change-workflow/overview)
-
-#### [LGTM Check](/change-database/change-workflow/lgtm)
 
 #### [Issue Need Attention](/change-database/change-workflow/issue-need-attention)
 
@@ -219,7 +219,7 @@ expand_section_list: ["Introduction", "Get Started"]
 
 #### [Environment Tier](/administration/environment-policy/tier)
 
-#### [Approval Policy](/administration/environment-policy/approval-policy)
+#### [Rollout Policy](/administration/environment-policy/rollout-policy)
 
 #### [Backup Schedule Policy](/administration/environment-policy/backup-schedule-policy)
 
@@ -240,6 +240,8 @@ expand_section_list: ["Introduction", "Get Started"]
 #### [External Approval](/administration/webhook-integration/external-approval)
 
 ### [Archive](/administration/archive)
+
+### [Mail Delivery](/administration/mail-delivery)
 
 ---
 

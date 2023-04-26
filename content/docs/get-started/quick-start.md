@@ -86,7 +86,7 @@ Each MySQL instance has a copy of the sample dataset in it. It’s the dataset_s
 
 - Click **Environments** on the top bar and you will see **Test** and **Prod** environments. You can keep the default settings or adjust them based on your needs.
 
-Prod environment requires manual approval while Test environment skips that.
+Prod environment requires manual rolling out while Test environment skips that.
 
 #### 2.2 Add instances
 
@@ -150,7 +150,7 @@ Now you are ready to manage these two `employee` databases in your project. Your
 
 6. Click **Apply to other stages**, the SQL will be applied to **Prod** as well.
 7. Click **Create**, and you will see the **SQL Advisor** kicks off automatically — checks the SQL statements against various rules.
-8. As the Test environment doesn't require manual approval, the SQL will be applied to the database on Test environment automatically after passing those advisor checks. Then you are waiting for approval for the Prod environment.
+8. As the Test environment doesn't require manual rolling out, the SQL will be applied to the database on Test environment automatically after passing those advisor checks. Then you are waiting for rollout for the Prod environment.
 
 #### 3.3 Review the SQL issue
 

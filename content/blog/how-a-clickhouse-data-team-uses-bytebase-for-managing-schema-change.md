@@ -49,7 +49,7 @@ We found out Bytebase last November from the [ClickHouse third-party page](https
 - It has a modern UI which makes it easier for all the team members to get started.
 - It’s the only tool supporting the Database GitOps workflow.
 
-According to our understanding, if we integrate Bytebase into our workflow, most people in the team only need to work with GitLab commit/push/merge; Bytebase will automatically create a workflow to apply the migration script upon the commit push event. And we can configure the workflow approval policy deciding whether the deployment requires manual approval.
+According to our understanding, if we integrate Bytebase into our workflow, most people in the team only need to work with GitLab commit/push/merge; Bytebase will automatically create a workflow to apply the migration script upon the commit push event. And we can configure the workflow approval policy deciding whether the deployment requires manual rolling out.
 
 We tried the GitOps integration in the development environment, and it worked as advertised. The entire process is streamlined between GitLab and Bytebase. Bytebase also keeps track of every migration history and the diffs in between.
 

@@ -19,19 +19,19 @@ Synchronize Schema for PostgreSQL currently supports synchronizing `Schema`, `Ta
 
 </hint-block>
 
-Bytebase supports synchronizing a specified schema version of one database to another. To provide a better user experience, Bytebase displays the schema differences between the two selected databases and generates the suggested DDL statements (e.g. ALTER TABLE).
+Bytebase supports synchronizing a specified schema version of one database to others. To provide a better user experience, Bytebase displays the schema differences between the two selected databases and generates the suggested DDL statements (e.g. ALTER TABLE).
 
 ## How to use
 
-The entry of `Sync Schema` is in the quick action button group on the home page and project detail page. After clicking, you will see the following dialog.
+### Step 1 - Go to the "Sync schema" page
 
-![sync-schema-dialog](/static/docs/change-database/synchronize-schema/sync-schema-dialog.webp)
+Click the "Sync schema" button in the left navigation bar.
 
-### Step 1 - Select project
+### Step 2 - Select source schema
 
-### Step 2 - Select schema version
+You need to select the project and source database schema version that you want to synchronize.
 
-The schema version is selected from the database's migration history.
+![select-source-schema](/static/docs/change-database/synchronize-schema/select-source-schema.webp)
 
 <hint-block type="info">
 
@@ -39,11 +39,15 @@ In the Enterprise Plan, you can select an arbitrary schema version from the migr
 
 </hint-block>
 
-### Step 3 - Apply to database
+### Step 3 - Select target databases
 
-Select the database that will be synchronized with the chosen schema version in the previous step.
+Select the target databases that will be synchronized with the chosen schema version in the previous step.
 
-After you have selected a schema and database, Bytebase will show a schema diff between the two databases and generate the DDL statements. And you can further edit the generated content.
+![select-target-databases](/static/docs/change-database/synchronize-schema/select-target-databases.webp)
+
+After you have selected a target database, Bytebase will show a schema diff between the two databases and generate the DDL statements. And you can further edit the generated content.
+
+![diff-preview](/static/docs/change-database/synchronize-schema/diff-preview.webp)
 
 ### Step 4 - Preview issue
 
