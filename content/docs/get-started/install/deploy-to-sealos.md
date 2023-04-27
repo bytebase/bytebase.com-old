@@ -49,7 +49,7 @@ spec:
             limits:
               cpu: 0.5
               memory: 32Mi
-          image: bytebase/bytebase:1.11.0
+          image: bytebase/bytebase:%%bb_version%%
           imagePullPolicy: Always
           env:
           - name: PG_URL
