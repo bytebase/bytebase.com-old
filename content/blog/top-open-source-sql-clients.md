@@ -26,7 +26,7 @@ SQL Chat launched on [Product Hunt](https://www.producthunt.com/posts/sql-chat-2
 
 ![dbeaver](/static/blog/os-sql-clients/dbeaver.webp)
 
-It's worth noting that DBeaver just [announced](https://techcrunch.com/2023/04/11/dbeaver-takes-6m-seed-investment-to-build-on-growing-popularity/) a $6M seed round two weeks ago (the press release also mentions that DBeaver has over 8M users and 5,000+ paying subscribers), and the first since the company was founded in 2017.
+It's worth noting that DBeaver just [announced](https://techcrunch.com/2023/04/11/dbeaver-takes-6m-seed-investment-to-build-on-growing-popularity/) a $6M seed round two weeks ago (the press release also mentions that DBeaver has over 8M users and 5,000+ paying subscribers), and the first since the author built it in 2013.
 
 ## Beekeeper Studio
 
