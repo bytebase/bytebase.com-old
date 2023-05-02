@@ -2,7 +2,6 @@
 title: ChatSQL
 ---
 Input your natural language and Bytebase will convert it into SQL.
-Bytebase is not affiliated with the OpenAI company. We just use public API to integrate with GPT-3.5.
 
 ## Prerequisites
 
