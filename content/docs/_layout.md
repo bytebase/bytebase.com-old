@@ -146,6 +146,7 @@ expand_section_list: ["Introduction", "Get Started"]
 ### [Admin Mode](/sql-editor/admin-mode)
 
 ### [Explore Schema](/sql-editor/explore-schema)
+### [ChatSQL](/sql-editor/chatsql)
 
 ## [VCS Integration (GitOps)](/vcs-integration/overview)
 
