@@ -88,3 +88,14 @@ Bytebase provides templates for configuring built-in OAuth providers.
 3. Update the **Client ID** and **Client secret** fields with the OAuth 2.0 client credential you just created.
 4. After filling in all the required fields, try to click **Test connection**.
 5. If everything is OK, click the **Create** button.
+
+### Casdoor
+
+1. Follow the [Using Casdoor to support oauth2.0](https://casdoor.org/docs/how-to-connect/oauth) to create an OAuth 2 application in Casdoor.
+
+   ![casdoor-oauth-app-config](/static/docs/administration/sso/casdoor-oauth-app-config.webp)
+
+2. Open creating SSO dialog and select the **custom** template.
+3. Update the **Client ID** and **Client secret** fields with the Casdoor OAuth 2 application you just created.
+4. After filling in all the required fields, try to click **Test connection**.
+5. If everything is OK, click the **Create** button.
