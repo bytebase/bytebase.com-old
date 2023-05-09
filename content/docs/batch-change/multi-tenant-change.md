@@ -99,6 +99,15 @@ PRIMARY KEY (`id`)
 
 ![cmt-after-alter-schema](/static/docs/batch-change/cmt-after-alter-schema.webp)
 
+## Add a New Database
+
+Within a tenant project, if you add a new database, it will automatically inherit the identical schemas from others.
+
+1. Click **New DB**, and create `hospital_prod_4` for `Prod` environment with `h4` in **Tenant** field.
+2. Go to view database `hospital_prod_4`, you'll see the `tm1` table is already there.
+
+![cmt-db-h4-table](/static/docs/batch-change/cmt-db-h4-table.webp)
+
 ## Specify Database Name Template
 
 Typically, all tenant databases should have the same database name and will be placed on different database instances. For some use cases, tenant databases need to have different database names and may be on the same or a fixed number of database instances. Users can define a database name template where the database name should include the tenant name. For example, a database name template can be `{{DB_NAME}}__{{TENANT}}`. The database name for all tenants can be db1_hospital1, db1_hospital2, db1_hospital3 with the same schema. If all tenants need a different collection of databases for other purposes of usage, databases can be created with names of db2_hospital1, db2_hospital2, db2_hospital3.
