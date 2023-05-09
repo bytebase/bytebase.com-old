@@ -52,10 +52,3 @@ If a secret has not been set, Bytebase will not replace the expression with secr
 </hint-block>
 
 ![using-secret-in-dml-issue](/static/docs/administration/secret/using-secret-in-dml-issue.webp)
-
-
-
-
-
-
-
