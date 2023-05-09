@@ -43,7 +43,9 @@ Click `New Secret` and fill in the related fields, then click `Save`.
 
 ## Using Secrets in Change Workflow
 
-You can use secrets in SQL in the change workflow with zero burden. Using `${{ secrets.SECRET_NAME }}` in SQL, and Bytebase will rendering while executing.
+
+Use `${{ secrets.SECRET_NAME }}` in the change script, and Bytebase will replace it with the actual secret value while executing the change.
+
 
 <hint-block type="info">
 
