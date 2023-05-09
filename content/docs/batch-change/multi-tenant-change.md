@@ -38,14 +38,14 @@ Tenant projects empowers you to:
 2. Progressively roll out through different stages, and only proceed to the next stage when all of rollouts in the current stage are successful.
 3. When there is a new tenant database created, it will inherit the same schema structures.
 
-<img src="/static/docs/batch-change/cmt-create-project.png" width="50%" style="margin:1% 0;" alt="cmt-create-project" />
+<img src="/static/docs/batch-change/cmt-create-project.webp" width="50%" style="margin:1% 0;" alt="cmt-create-project" />
 
 
 ## Create Databases with Tenant Labels
 
 Within the project, click **New DB** to create four databases as following and then click **Rollout** and **Resolve** one by one:
 
-![cmt-create-4-db](/static/docs/batch-change/cmt-create-4-db.png)
+![cmt-create-4-db](/static/docs/batch-change/cmt-create-4-db.webp)
 - `hospital_test` for `Test` environment with empty **Tenant** field
 - `hospital_prod_1` for `Prod` environment with `h1` in **Tenant** field
 - `hospital_prod_2` for `Prod` environment with `h2` in **Tenant** field
@@ -53,31 +53,31 @@ Within the project, click **New DB** to create four databases as following and t
 
 In real life case, another way is to click **Transfer in DB** to transfer in your existing databases and then go into a specific database to edit the **Tenant**.
 
-<img src="/static/docs/batch-change/cmt-db-edit-tenant.png" width="65%" style="margin:1% 0;" alt="cmt-db-edit-tenant" />
+<img src="/static/docs/batch-change/cmt-db-edit-tenant.webp" width="65%" style="margin:1% 0;" alt="cmt-db-edit-tenant" />
 
 ## Adjust Deployment Configuration
 
 Within the project, click **Databases** tab and you'll see the default deployment pipeline preview.
 
-![cmt-db-default-tenant](/static/docs/batch-change/cmt-db-default-tenant.png)
+![cmt-db-default-tenant](/static/docs/batch-change/cmt-db-default-tenant.webp)
 
 Scroll down and you will see the default deployment config.
 
-![cmt-db-default-tenant-config](/static/docs/batch-change/cmt-db-default-tenant-config.png)
+![cmt-db-default-tenant-config](/static/docs/batch-change/cmt-db-default-tenant-config.webp)
 
 Adjust the config deployment to the following by specifying Tenant. Besides the two default stages by environments, an extra stage for canary testing is added.
 
-![cmt-db-after-config-tenant-config](/static/docs/batch-change/cmt-db-after-config-tenant-config.png)
+![cmt-db-after-config-tenant-config](/static/docs/batch-change/cmt-db-after-config-tenant-config.webp)
 
 Scroll up and you will see the new pipeline preview.
 
-![cmt-db-after-config-tenant](/static/docs/batch-change/cmt-db-after-config-tenant.png)
+![cmt-db-after-config-tenant](/static/docs/batch-change/cmt-db-after-config-tenant.webp)
 
 ## Alter Schema for Tenant Databases
 
 1. Within the project, click **Alter Schema**. You'll see the popup.
 
-![cmt-alter-schema](/static/docs/batch-change/cmt-alter-schema.png)
+![cmt-alter-schema](/static/docs/batch-change/cmt-alter-schema.webp)
 
 2. Paste the following scripts into the **Raw SQL**, and click **Preview issue**.
 
@@ -90,25 +90,25 @@ PRIMARY KEY (`id`)
 ```
 
 3. You'll be redirect to new issue preview page. Click **Create**, the issue with the configured pipeline will be created. SQL will be the same for all the tenant databases. Click **Approve** and **Rollout** if needed one database after another.
-![cmt-create-issue](/static/docs/batch-change/cmt-create-issue.png)
+![cmt-create-issue](/static/docs/batch-change/cmt-create-issue.webp)
 
 4. When it comes to stage with multiple databases, you may choose to **Rollout current stage**. 
-![cmt-rollout-batch](/static/docs/batch-change/cmt-rollout-batch.png)
+![cmt-rollout-batch](/static/docs/batch-change/cmt-rollout-batch.webp)
 
 5. Once the issue is completed, all tenant databases will have the same updated version of schema.
 
-![cmt-after-alter-schema](/static/docs/batch-change/cmt-after-alter-schema.png)
+![cmt-after-alter-schema](/static/docs/batch-change/cmt-after-alter-schema.webp)
 
 ## Specify Database Name Template
 
 Typically, all tenant databases should have the same database name and will be placed on different database instances. For some use cases, tenant databases need to have different database names and may be on the same or a fixed number of database instances. Users can define a database name template where the database name should include the tenant name. For example, a database name template can be `{{DB_NAME}}__{{TENANT}}`. The database name for all tenants can be db1_hospital1, db1_hospital2, db1_hospital3 with the same schema. If all tenants need a different collection of databases for other purposes of usage, databases can be created with names of db2_hospital1, db2_hospital2, db2_hospital3.
 
 1. Within the project, click **Databases** tab and you'll see the **Tenant Database Name Template** section. Click **Edit**, input `{{DB_NAME}}__{{TENANT}}` and click **Update**.
-![cmt-db-naming-template-update](/static/docs/batch-change/cmt-db-naming-template-update.png)
+![cmt-db-naming-template-update](/static/docs/batch-change/cmt-db-naming-template-update.webp)
 
 2. click **New DB**, if the database name doesn't match the template, there will be error.
 
-<img src="/static/docs/batch-change/cmt-naming-error.png" width="50%" style="margin:1% 0;" alt="cmt-naming-error" />
+<img src="/static/docs/batch-change/cmt-naming-error.webp" width="50%" style="margin:1% 0;" alt="cmt-naming-error" />
 
 
 ## GitOps
