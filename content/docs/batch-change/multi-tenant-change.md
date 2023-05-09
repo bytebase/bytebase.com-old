@@ -115,7 +115,7 @@ Typically, all tenant databases should have the same database name and will be p
 1. Within the project, click **Databases** tab and you'll see the **Tenant Database Name Template** section. Click **Edit**, input `{{DB_NAME}}__{{TENANT}}` and click **Update**.
 ![cmt-db-naming-template-update](/static/docs/batch-change/cmt-db-naming-template-update.webp)
 
-2. click **New DB**, if the database name doesn't match the template, there will be error.
+2. Click **New DB**, if the database name doesn't match the template, there will be error.
 
 <img src="/static/docs/batch-change/cmt-naming-error.webp" width="50%" style="margin:1% 0;" alt="cmt-naming-error" />
 
