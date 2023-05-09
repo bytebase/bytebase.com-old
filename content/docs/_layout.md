@@ -244,6 +244,8 @@ expand_section_list: ["Introduction", "Get Started"]
 
 ### [Mail Delivery](/administration/mail-delivery)
 
+### [Secret](/administration/secret)
+
 ---
 
 ## Reference
