@@ -7,7 +7,7 @@ This feature is only available in the Pro Plan and Enterprise Plan.
 
 </hint-block>
 
-Secrets are variables that you create in database. The secrets that you create are available to use in SQL change workflow.
+To hide sensitive information in your change script, you can configure secret variables at the database level.
 
 ## Naming your secrets
 
