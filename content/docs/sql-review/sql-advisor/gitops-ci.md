@@ -30,6 +30,6 @@ And you can follow the doc [Create Schema Review Policy](/docs/sql-review/review
 
 ## MyBatis3 Mapper SQL Review CI - Beta
 
-After enabling SQL-Review CI, Bytebase will attempt to review MyBatis 3 mapper files. When the changed file includes a MyBatis 3 mapper files, Bytebase will search for a MyBatis3 config files in the same and parent directories and apply the SQL-Review policy from the Bytebase environment with the same name as the environment id in the config file to review the mapper file.
+After enabling SQL-Review CI, Bytebase will attempt to review MyBatis 3 mapper files. When the changed file includes a MyBatis 3 mapper files, Bytebase will search for a MyBatis3 config files in the same and parent directories. Once found, Bytebase will match the **environment id** in the config file with the *environment name** in Bytebase. If there is a matching environment, Bytebase will apply that environment's SQL Review policy.
 
 ![mybatis3-sql-review-github](/static/docs/vcs-integration/enable-gitops-workflow/mybatis-github-ci-example.webp)
