@@ -31,7 +31,7 @@ To create secretes for a database, you must be the Workspace Owner or Workspace 
 
 ### Step 1 - Navigate to Database
 
-In the Bytebase, navigate to detail page of the bytebase. Click `Settings` tab and you will see the Secret block.
+Navigate to the database detail page. Click `Settings` tab and you will see the Secret block.
 
 ![database-setting-tab-secret-block](/static/docs/administration/secret/database-setting-tab.webp)
 
