@@ -49,7 +49,7 @@ Use `${{ secrets.SECRET_NAME }}` in the change script, and Bytebase will replace
 
 <hint-block type="info">
 
-If a secret has not been set, Bytebase will not replace the expression with secret value. This means that expressions are retained at execution time, which may cause some errors.
+If a secret has not been set, Bytebase will not replace the ${{ secrets.SECRET_NAME }} with a secret value. This means that expressions are retained as is upon execution.
 
 </hint-block>
 
