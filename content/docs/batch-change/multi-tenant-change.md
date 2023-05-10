@@ -110,12 +110,12 @@ Within a tenant project, if you add a new database, it will automatically inheri
 
 ## Specify Database Name Template
 
-Typically, all tenant databases should have the same database name and will be placed on different database instances. For some use cases, tenant databases need to have different database names and may be on the same or different database instances. Users can define a database name template where the database name should include the tenant name. For example, a database name template can be `{{DB_NAME}}__{{TENANT}}`. The database name for all tenants can be `hospital_prod__h1`, `hospital_prod__h2`, `hospital_prod__h3` with the same schema.
+Typically, all tenant databases should have the same database name and will be placed on different database instances. For some use cases, tenant databases need to have different database names and may be on the same or different database instances. Users can define a database name template where the database name should include the tenant name. For example, a database name template can be `{{DB_NAME}}__{{TENANT}}`. If the database name is `hospital_prod`, and there are 3 tenants `h1`, `h2`, `h3`, the database name for the respective tenants are `hospital_prod__h1`, `hospital_prod__h2`, `hospital_prod__h3` having the same schema. 
 
 1. Within the project, click **Databases** tab and you'll see the **Tenant Database Name Template** section. Click **Edit**, input `{{DB_NAME}}__{{TENANT}}` and click **Update**.
 ![cmt-db-naming-template-update](/static/docs/batch-change/cmt-db-naming-template-update.webp)
 
-2. Click **New DB**, if the database name doesn't match the template `{{DB_NAME}}__{{TENANT}}`, there will be an error. You need to name it `hospital_prod__h5` instead of `hospital_prod_5` or `hospital_prod__5`.
+2. Click **New DB**, if the database name doesn't match the template `{{DB_NAME}}__{{TENANT}}`, there will be an error. You need to name it `hospital_prod__h5`. Both `hospital_prod_h5`(separator should have two underscores instead of one) `hospital_prod__5` (tenant name should be h5 instead of 5) will cause error.
 ![cmt-db-name-error](/static/docs/batch-change/cmt-db-name-error.webp)
 
 ## GitOps
