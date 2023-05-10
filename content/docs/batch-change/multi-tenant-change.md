@@ -95,7 +95,7 @@ PRIMARY KEY (`id`)
 4. When it comes to stage with multiple databases, you may choose to **Rollout current stage** to rollout all databases under that stage. 
 ![cmt-rollout-batch](/static/docs/batch-change/cmt-rollout-batch.webp)
 
-5. Once the issue is completed, all tenant databases will have the same updated version of schema.
+5. Once the issue is completed, all tenant databases will have the same updated schema version.
 
 ![cmt-after-alter-schema](/static/docs/batch-change/cmt-after-alter-schema.webp)
 
