@@ -16,7 +16,7 @@ Bytebase officially supports the following major versions for each supported dat
 - Oracle - 21c at least
 - Microsoft SQL Server - 2019 at least
 - MariaDB - 10.7 at least
-- OceanBase
+- OceanBase - 3.x and 4.x, MySQL tenant
 
 Bytebase usually works fine with older database versions, we just won't support features specific to those older versions. We may add other open source databases in the future.
 
@@ -66,7 +66,7 @@ Bytebase usually works fine with older database versions, we just won't support 
 
 |                                                                                   Feature | MySQL | PostgreSQL | TiDB | ClickHouse | Snowflake | MongoDB | Spanner | Redis | Oracle | SQL Server | MariaDB  | OceanBase  |
 | ----------------------------------------------------------------------------------------: | :---: | :--------: | :--: | :--------: | :-------: | :-----: | :-----: | :---: | :----: | :--------: | :------: | :--------: |
-|                                                               Database Connection Failure |   ✔️   |      ✔️     |   ✔️  |      ✔️     |     ✔️     |    ✔️    |    ✔️    |   ✔️   |        |            |          |            |
+|                                                               Database Connection Failure |   ✔️   |      ✔️     |   ✔️  |      ✔️     |     ✔️     |    ✔️    |    ✔️    |   ✔️   |   ✔️    |     ✔️      |     ✔️    |      ✔️     |
 |                                [Drift Detection](/docs/anomaly-detection/drift-detection) |   ✔️   |      ✔️     |   ✔️  |      ✔️     |     ✔️     |         |    ✔️    |       |        |            |          |            |
 | [Backup Policy Violation](/docs/administration/environment-policy/backup-schedule-policy) |   ✔️   |      ✔️     |   ✔️  |      ✔️     |     ✔️     |         |         |       |        |            |          |            |
 |                  [Backup Missing](/docs/disaster-recovery/backup-restore-database/backup) |   ✔️   |      ✔️     |   ✔️  |      ✔️     |     ✔️     |         |         |       |        |            |          |            |
