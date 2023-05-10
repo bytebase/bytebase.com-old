@@ -92,7 +92,7 @@ PRIMARY KEY (`id`)
 3. You'll be redirect to new issue preview page. Click **Create**, the issue with the configured pipeline will be created. SQL will be the same for all the tenant databases. Click **Approve** and **Rollout** if needed one database after another.
 ![cmt-create-issue](/static/docs/batch-change/cmt-create-issue.webp)
 
-4. When it comes to stage with multiple databases, you may choose to **Rollout current stage**. 
+4. When it comes to stage with multiple databases, you may choose to **Rollout current stage** to rollout all databases under that stage. 
 ![cmt-rollout-batch](/static/docs/batch-change/cmt-rollout-batch.webp)
 
 5. Once the issue is completed, all tenant databases will have the same updated version of schema.
