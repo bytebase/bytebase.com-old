@@ -258,7 +258,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["vue-plausible", "@nuxt/content", "@nuxtjs/i18n"],
+  modules: ["@nuxt/content", "@nuxtjs/i18n"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -272,7 +272,7 @@ export default {
 
   plausible: {
     // see configuration section
-    domain: "www.bytebase.com",
+    domain: "old.bytebase.com",
   },
 
   googleAnalytics: {
