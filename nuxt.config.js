@@ -239,7 +239,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // Plugin for vue-gtag
-    "~/plugin/vue-gtag",
+    // "~/plugin/vue-gtag",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -275,14 +275,14 @@ export default {
     domain: "old.bytebase.com",
   },
 
-  googleAnalytics: {
-    id: "UA-202806916-1",
-  },
+  // googleAnalytics: {
+  //   id: "UA-202806916-1",
+  // },
 
   env: {
     // GA4 stream id. https://analytics.google.com/analytics/web/#/a202806916p295313050/admin/streams/table/3080936169
-    gtagKey: "G-4BZ4JH7449",
-    hostname: "https://www.bytebase.com",
+    // gtagKey: "G-4BZ4JH7449",
+    hostname: "https://old.bytebase.com",
     version: VERSION,
   },
 
